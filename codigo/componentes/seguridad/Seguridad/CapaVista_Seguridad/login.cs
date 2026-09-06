@@ -50,7 +50,7 @@ namespace CapaVista_Seguridad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAsignacionAppPerf frmPerfil = new FrmAsignacionAppPerf();
+            MDIseguridad frmPerfil = new MDIseguridad();
             this.Hide();
             frmPerfil.ShowDialog();
             this.Show();
