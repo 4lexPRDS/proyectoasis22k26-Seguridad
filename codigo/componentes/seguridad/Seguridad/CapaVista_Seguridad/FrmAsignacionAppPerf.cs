@@ -30,10 +30,7 @@ namespace proyecto2k26
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAsignacionAplicacionUsuario frmasigusu = new FrmAsignacionAplicacionUsuario();
-            this.Hide();
-            frmasigusu.ShowDialog();
-            this.Show();
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

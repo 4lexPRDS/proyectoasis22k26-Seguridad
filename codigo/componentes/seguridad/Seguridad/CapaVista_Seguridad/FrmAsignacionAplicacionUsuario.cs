@@ -21,10 +21,7 @@ namespace CapaVista_Seguridad
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FrmBitacora frmbita = new FrmBitacora();
-            this.Hide();
-            frmbita.ShowDialog();
-            this.Show();
+            
         }
     }
 }
