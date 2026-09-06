@@ -37,6 +37,7 @@
             // 
             // agrupar_Ordenar1
             // 
+            this.agrupar_Ordenar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.agrupar_Ordenar1.Location = new System.Drawing.Point(15, 14);
             this.agrupar_Ordenar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agrupar_Ordenar1.Name = "agrupar_Ordenar1";
@@ -45,6 +46,7 @@
             // 
             // tablaSimple1
             // 
+            this.tablaSimple1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tablaSimple1.Location = new System.Drawing.Point(15, 126);
             this.tablaSimple1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tablaSimple1.Name = "tablaSimple1";
@@ -54,7 +56,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(816, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 63);
             this.button1.TabIndex = 3;
@@ -64,7 +66,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(967, 65);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 37);
             this.button2.TabIndex = 4;
@@ -74,7 +76,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(980, 457);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 63);
             this.button3.TabIndex = 5;
