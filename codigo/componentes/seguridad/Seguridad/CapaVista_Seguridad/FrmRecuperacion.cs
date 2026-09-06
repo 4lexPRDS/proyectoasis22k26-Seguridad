@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyectosisk26
 {
-    public partial class Recuperacion : Form
+    public partial class FrmRecuperacion : Form
     {
-        public Recuperacion()
+        public FrmRecuperacion()
         {
             InitializeComponent();
         }

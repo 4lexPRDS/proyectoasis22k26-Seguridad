@@ -46,7 +46,7 @@ namespace CapaVista_Seguridad
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Recuperacion formRecuperacion = new Recuperacion();
+            FrmRecuperacion formRecuperacion = new FrmRecuperacion();
 
             this.Hide();
 
