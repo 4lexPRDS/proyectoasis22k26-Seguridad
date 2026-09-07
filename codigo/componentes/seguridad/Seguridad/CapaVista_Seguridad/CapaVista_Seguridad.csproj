@@ -73,6 +73,12 @@
     <Compile Include="FrmBitacora.Designer.cs">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoPerfiles.Designer.cs">
+      <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRecuperacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoPerfiles.resx">
+      <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperacion.resx">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
@@ -161,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconAsignacionPerfiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_mantenimiento.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
