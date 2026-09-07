@@ -58,13 +58,13 @@ namespace CapaVista_Seguridad
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Recuperacion formRecuperacion = new Recuperacion();
+ /*         Recuperacion formRecuperacion = new Recuperacion();
 
             this.Hide();
 
             formRecuperacion.ShowDialog();
 
-            this.Show();
+            this.Show();*/
         }
     }
 }
