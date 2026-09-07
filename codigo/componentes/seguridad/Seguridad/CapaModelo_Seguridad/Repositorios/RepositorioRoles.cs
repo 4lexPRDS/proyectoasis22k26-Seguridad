@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CapaModelo_Seguridad.Repositorios
 {
-    internal class RepositorioRoles : Sentencias, IRepositorioRoles
+    public class RepositorioRoles : Sentencias, IRepositorioRoles
     {
         private string selectAll;
         private string Insert;
