@@ -4,7 +4,6 @@ COLLATE utf8mb4_unicode_ci;
 
 USE dbSistemaEmbutidos;
 
-
 -- tabla de empleados
 
 CREATE TABLE tblEmpleado (
