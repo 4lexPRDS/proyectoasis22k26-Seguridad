@@ -4,6 +4,7 @@ COLLATE utf8mb4_unicode_ci;
 
 USE dbSistemaEmbutidos;
 
+
 -- tabla de empleados
 
 CREATE TABLE tblEmpleado (
@@ -56,7 +57,49 @@ CONSTRAINT Pk_Modulo PRIMARY KEY (idModulo),
 CONSTRAINT uqNombreModulo UNIQUE (nombreModulo)
 ) ENGINE=InnoDB;
 
+ALTER TABLE tblModulo
+ADD COLUMN descripcionModulo VARCHAR(255) NULL AFTER nombreModulo;
 
+
+
+
+SET FOREIGN_KEY_CHECKS = 0;
+SET SQL_SAFE_UPDATES = 0;
+
+
+TRUNCATE TABLE tblmodulo;
+
+ALTER TABLE tblmodulo AUTO_INCREMENT = 1;
+
+SET SQL_SAFE_UPDATES = 1;
+SET FOREIGN_KEY_CHECKS = 1;
+
+COMMIT;
+
+SELECT * FROM tblmodulo;
+
+
+
+-- 1. Vaciar la tabla y reiniciar el AUTO_INCREMENT a 1
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE tblModulo;
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- 2. Insertar catálogo inicial de módulos (Iniciando estrictamente en ID = 1)
+INSERT INTO tblModulo (nombreModulo, descripcionModulo, is_active) VALUES
+('Seguridad', 'Gestión de usuarios, roles, perfiles y permisos del sistema', 1),
+('Contabilidad', 'Módulo de contabilidad general, libro mayor y estados financieros', 1),
+('Bancos', 'Gestión de cuentas bancarias, cheques y conciliaciones', 1),
+('Cuentas por Cobrar', 'Administración de clientes, facturación y cobros', 1),
+('Cuentas por Pagar', 'Gestión de proveedores, facturas de compra y pagos', 1),
+('Inventarios', 'Control de existencias, bodegas y movimientos de productos', 1),
+('Ventas', 'Control de pedidos, cotizaciones y facturación de venta', 1),
+('Compras', 'Gestión de órdenes de compra y recepción de mercadería', 1),
+('Nómina', 'Administración de empleados, sueldos, horas extras y planilla', 1),
+('Administración', 'Parámetros generales del sistema y configuración global', 1);
+
+
+SELECT * FROM tblModulo;
 -- tabla de aplicacion
 
 CREATE TABLE tblAplicacion (
