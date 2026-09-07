@@ -88,7 +88,7 @@
             this.SeguridadPnlFondo.Controls.Add(this.SeguridadPnlNavegador);
             this.SeguridadPnlFondo.Controls.Add(this.SeguridadPnlDashboard);
             this.SeguridadPnlFondo.Location = new System.Drawing.Point(0, 0);
-            this.SeguridadPnlFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlFondo.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlFondo.Name = "SeguridadPnlFondo";
             this.SeguridadPnlFondo.Size = new System.Drawing.Size(2053, 1265);
             this.SeguridadPnlFondo.TabIndex = 0;
@@ -99,11 +99,12 @@
             this.SeguridadBtnBurger.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.burguer1;
             this.SeguridadBtnBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnBurger.Location = new System.Drawing.Point(428, 10);
-            this.SeguridadBtnBurger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnBurger.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnBurger.Name = "SeguridadBtnBurger";
             this.SeguridadBtnBurger.Size = new System.Drawing.Size(60, 42);
             this.SeguridadBtnBurger.TabIndex = 5;
             this.SeguridadBtnBurger.UseVisualStyleBackColor = false;
+            this.SeguridadBtnBurger.Click += new System.EventHandler(this.SeguridadBtnBurger_Click);
             // 
             // SeguridadLblUsuariosRol
             // 
@@ -134,7 +135,7 @@
             this.SeguridadPnlNavegador.Controls.Add(this.SeguridadBtnEmpleados);
             this.SeguridadPnlNavegador.Controls.Add(this.SeguridadPbLogo);
             this.SeguridadPnlNavegador.Location = new System.Drawing.Point(28, 17);
-            this.SeguridadPnlNavegador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlNavegador.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlNavegador.Name = "SeguridadPnlNavegador";
             this.SeguridadPnlNavegador.Size = new System.Drawing.Size(360, 917);
             this.SeguridadPnlNavegador.TabIndex = 0;
@@ -146,7 +147,7 @@
             this.SeguridadBtnBitacora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnBitacora.Location = new System.Drawing.Point(4, 688);
-            this.SeguridadBtnBitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnBitacora.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnBitacora.Name = "SeguridadBtnBitacora";
             this.SeguridadBtnBitacora.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnBitacora.TabIndex = 9;
@@ -160,7 +161,7 @@
             this.SeguridadBtnAplicaUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAplicaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnAplicaUsuario.Location = new System.Drawing.Point(4, 623);
-            this.SeguridadBtnAplicaUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAplicaUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAplicaUsuario.Name = "SeguridadBtnAplicaUsuario";
             this.SeguridadBtnAplicaUsuario.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnAplicaUsuario.TabIndex = 8;
@@ -174,7 +175,7 @@
             this.SeguridadBtnAplicaPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAplicaPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnAplicaPerfiles.Location = new System.Drawing.Point(4, 558);
-            this.SeguridadBtnAplicaPerfiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAplicaPerfiles.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAplicaPerfiles.Name = "SeguridadBtnAplicaPerfiles";
             this.SeguridadBtnAplicaPerfiles.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnAplicaPerfiles.TabIndex = 7;
@@ -188,7 +189,7 @@
             this.SeguridadBtnAsignaPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAsignaPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnAsignaPerfiles.Location = new System.Drawing.Point(4, 492);
-            this.SeguridadBtnAsignaPerfiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAsignaPerfiles.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAsignaPerfiles.Name = "SeguridadBtnAsignaPerfiles";
             this.SeguridadBtnAsignaPerfiles.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnAsignaPerfiles.TabIndex = 6;
@@ -202,7 +203,7 @@
             this.SeguridadBtnPerfiles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnPerfiles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnPerfiles.Location = new System.Drawing.Point(4, 427);
-            this.SeguridadBtnPerfiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnPerfiles.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnPerfiles.Name = "SeguridadBtnPerfiles";
             this.SeguridadBtnPerfiles.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnPerfiles.TabIndex = 5;
@@ -216,7 +217,7 @@
             this.SeguridadBtnAplicaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAplicaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnAplicaciones.Location = new System.Drawing.Point(4, 362);
-            this.SeguridadBtnAplicaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAplicaciones.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAplicaciones.Name = "SeguridadBtnAplicaciones";
             this.SeguridadBtnAplicaciones.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnAplicaciones.TabIndex = 4;
@@ -229,7 +230,7 @@
             this.SeguridadBtnModulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnModulos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnModulos.Location = new System.Drawing.Point(4, 297);
-            this.SeguridadBtnModulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnModulos.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnModulos.Name = "SeguridadBtnModulos";
             this.SeguridadBtnModulos.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnModulos.TabIndex = 3;
@@ -244,7 +245,7 @@
             this.SeguridadBtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnUsuarios.ForeColor = System.Drawing.Color.Transparent;
             this.SeguridadBtnUsuarios.Location = new System.Drawing.Point(4, 231);
-            this.SeguridadBtnUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnUsuarios.Name = "SeguridadBtnUsuarios";
             this.SeguridadBtnUsuarios.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnUsuarios.TabIndex = 2;
@@ -258,7 +259,7 @@
             this.SeguridadBtnEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnEmpleados.Location = new System.Drawing.Point(4, 166);
-            this.SeguridadBtnEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnEmpleados.Name = "SeguridadBtnEmpleados";
             this.SeguridadBtnEmpleados.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnEmpleados.TabIndex = 1;
@@ -270,7 +271,7 @@
             this.SeguridadPbLogo.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.logo;
             this.SeguridadPbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadPbLogo.Location = new System.Drawing.Point(93, 11);
-            this.SeguridadPbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPbLogo.Name = "SeguridadPbLogo";
             this.SeguridadPbLogo.Size = new System.Drawing.Size(177, 156);
             this.SeguridadPbLogo.TabIndex = 0;
@@ -293,7 +294,7 @@
             this.SeguridadPnlDashboard.Controls.Add(this.SeguridadLblBienvenido);
             this.SeguridadPnlDashboard.Controls.Add(this.SeguridadPbButti);
             this.SeguridadPnlDashboard.Location = new System.Drawing.Point(412, 59);
-            this.SeguridadPnlDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlDashboard.Name = "SeguridadPnlDashboard";
             this.SeguridadPnlDashboard.Size = new System.Drawing.Size(1611, 875);
             this.SeguridadPnlDashboard.TabIndex = 1;
@@ -304,7 +305,7 @@
             this.SeguridadBtnAyudas.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayuda2;
             this.SeguridadBtnAyudas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAyudas.Location = new System.Drawing.Point(69, 321);
-            this.SeguridadBtnAyudas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAyudas.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAyudas.Name = "SeguridadBtnAyudas";
             this.SeguridadBtnAyudas.Size = new System.Drawing.Size(112, 97);
             this.SeguridadBtnAyudas.TabIndex = 12;
@@ -318,7 +319,7 @@
             this.SeguridadPnlKPI6.Controls.Add(this.SeguridadLblKPIResp6);
             this.SeguridadPnlKPI6.Controls.Add(this.SeguridadLblKPI6);
             this.SeguridadPnlKPI6.Location = new System.Drawing.Point(1312, 534);
-            this.SeguridadPnlKPI6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI6.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI6.Name = "SeguridadPnlKPI6";
             this.SeguridadPnlKPI6.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI6.TabIndex = 11;
@@ -357,7 +358,7 @@
             this.SeguridadPnlKPI5.Controls.Add(this.SeguridadLblKPIResp5);
             this.SeguridadPnlKPI5.Controls.Add(this.SeguridadLblKPI5);
             this.SeguridadPnlKPI5.Location = new System.Drawing.Point(1061, 534);
-            this.SeguridadPnlKPI5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI5.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI5.Name = "SeguridadPnlKPI5";
             this.SeguridadPnlKPI5.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI5.TabIndex = 10;
@@ -396,7 +397,7 @@
             this.SeguridadPnlKPI4.Controls.Add(this.SeguridadLblKPIResp4);
             this.SeguridadPnlKPI4.Controls.Add(this.SeguridadLblKPI4);
             this.SeguridadPnlKPI4.Location = new System.Drawing.Point(812, 534);
-            this.SeguridadPnlKPI4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI4.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI4.Name = "SeguridadPnlKPI4";
             this.SeguridadPnlKPI4.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI4.TabIndex = 5;
@@ -435,7 +436,7 @@
             this.SeguridadPnlKPI3.Controls.Add(this.SeguridadLblKPIResp3);
             this.SeguridadPnlKPI3.Controls.Add(this.SeguridadLblKPI3);
             this.SeguridadPnlKPI3.Location = new System.Drawing.Point(563, 534);
-            this.SeguridadPnlKPI3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI3.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI3.Name = "SeguridadPnlKPI3";
             this.SeguridadPnlKPI3.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI3.TabIndex = 5;
@@ -474,7 +475,7 @@
             this.SeguridadPnlKPI2.Controls.Add(this.SeguridadLblKPIResp2);
             this.SeguridadPnlKPI2.Controls.Add(this.SeguridadLblKPI2);
             this.SeguridadPnlKPI2.Location = new System.Drawing.Point(311, 534);
-            this.SeguridadPnlKPI2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI2.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI2.Name = "SeguridadPnlKPI2";
             this.SeguridadPnlKPI2.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI2.TabIndex = 5;
@@ -513,7 +514,7 @@
             this.SeguridadPnlKPI1.Controls.Add(this.SeguridadLblKPIResp1);
             this.SeguridadPnlKPI1.Controls.Add(this.SeguridadLblKPI1);
             this.SeguridadPnlKPI1.Location = new System.Drawing.Point(59, 534);
-            this.SeguridadPnlKPI1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPnlKPI1.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPnlKPI1.Name = "SeguridadPnlKPI1";
             this.SeguridadPnlKPI1.Size = new System.Drawing.Size(229, 233);
             this.SeguridadPnlKPI1.TabIndex = 4;
@@ -592,7 +593,7 @@
             this.SeguridadPbButti.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources._8;
             this.SeguridadPbButti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadPbButti.Location = new System.Drawing.Point(699, 16);
-            this.SeguridadPbButti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadPbButti.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadPbButti.Name = "SeguridadPbButti";
             this.SeguridadPbButti.Size = new System.Drawing.Size(417, 511);
             this.SeguridadPbButti.TabIndex = 0;
@@ -602,10 +603,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2051, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.SeguridadPnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MDIseguridad";
             this.Text = "2000 - MDI Principal de Seguridad";
             this.SeguridadPnlFondo.ResumeLayout(false);
