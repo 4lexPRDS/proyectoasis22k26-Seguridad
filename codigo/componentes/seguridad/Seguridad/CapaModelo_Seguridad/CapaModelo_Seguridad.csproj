@@ -46,11 +46,13 @@
     <Compile Include="Contratos\IRepositorioRoles.cs" />
     <Compile Include="Contratos\IRepositorioUsuarios.cs" />
     <Compile Include="Entidades\AsigAppPerf.cs" />
+    <Compile Include="Entidades\Modulo.cs" />
     <Compile Include="Entidades\Roles.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Conexion.cs" />
     <Compile Include="Repositorios\RepositorioAsigAppPerf.cs" />
+    <Compile Include="Repositorios\RepositorioModulo.cs" />
     <Compile Include="Repositorios\RepositorioRoles.cs" />
     <Compile Include="Repositorios\RepositorioUsuarios.cs" />
     <Compile Include="Repositorios\Sentencias.cs" />

@@ -235,6 +235,7 @@
             this.SeguridadBtnModulos.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnModulos.TabIndex = 3;
             this.SeguridadBtnModulos.UseVisualStyleBackColor = false;
+            this.SeguridadBtnModulos.Click += new System.EventHandler(this.SeguridadBtnModulos_Click);
             // 
             // SeguridadBtnUsuarios
             // 

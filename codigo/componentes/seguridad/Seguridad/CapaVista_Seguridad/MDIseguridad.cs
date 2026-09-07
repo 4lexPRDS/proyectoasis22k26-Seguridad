@@ -129,5 +129,11 @@ namespace CapaVista_Seguridad
                 SeguridadLblUsuariosRol.Location = new Point(390, 19);
             }
         }
+
+        private void SeguridadBtnModulos_Click(object sender, EventArgs e)
+        {
+            FrmModulo frmasigusu = new FrmModulo();
+            frmasigusu.ShowDialog();
+        }
     }
 }
