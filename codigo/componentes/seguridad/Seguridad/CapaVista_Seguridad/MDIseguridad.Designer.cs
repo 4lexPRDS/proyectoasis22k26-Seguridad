@@ -114,7 +114,7 @@
             this.SeguridadLblUsuariosRol.Location = new System.Drawing.Point(513, 17);
             this.SeguridadLblUsuariosRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblUsuariosRol.Name = "SeguridadLblUsuariosRol";
-            this.SeguridadLblUsuariosRol.Size = new System.Drawing.Size(312, 20);
+            this.SeguridadLblUsuariosRol.Size = new System.Drawing.Size(377, 25);
             this.SeguridadLblUsuariosRol.TabIndex = 4;
             this.SeguridadLblUsuariosRol.Text = "Usuario:                                Rol:\r\n";
             // 
@@ -207,6 +207,7 @@
             this.SeguridadBtnPerfiles.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnPerfiles.TabIndex = 5;
             this.SeguridadBtnPerfiles.UseVisualStyleBackColor = false;
+            this.SeguridadBtnPerfiles.Click += new System.EventHandler(this.SeguridadBtnPerfiles_Click);
             // 
             // SeguridadBtnAplicaciones
             // 
@@ -331,7 +332,7 @@
             this.SeguridadLblKPIResp6.Location = new System.Drawing.Point(17, 117);
             this.SeguridadLblKPIResp6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp6.Name = "SeguridadLblKPIResp6";
-            this.SeguridadLblKPIResp6.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp6.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp6.TabIndex = 14;
             this.SeguridadLblKPIResp6.Text = "0";
             // 
@@ -344,7 +345,7 @@
             this.SeguridadLblKPI6.Location = new System.Drawing.Point(23, 170);
             this.SeguridadLblKPI6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI6.Name = "SeguridadLblKPI6";
-            this.SeguridadLblKPI6.Size = new System.Drawing.Size(130, 40);
+            this.SeguridadLblKPI6.Size = new System.Drawing.Size(166, 50);
             this.SeguridadLblKPI6.TabIndex = 13;
             this.SeguridadLblKPI6.Text = "Asignaciones\r\nActivas";
             // 
@@ -370,7 +371,7 @@
             this.SeguridadLblKPIResp5.Location = new System.Drawing.Point(20, 117);
             this.SeguridadLblKPIResp5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp5.Name = "SeguridadLblKPIResp5";
-            this.SeguridadLblKPIResp5.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp5.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp5.TabIndex = 16;
             this.SeguridadLblKPIResp5.Text = "0";
             // 
@@ -383,7 +384,7 @@
             this.SeguridadLblKPI5.Location = new System.Drawing.Point(25, 170);
             this.SeguridadLblKPI5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI5.Name = "SeguridadLblKPI5";
-            this.SeguridadLblKPI5.Size = new System.Drawing.Size(122, 40);
+            this.SeguridadLblKPI5.Size = new System.Drawing.Size(156, 50);
             this.SeguridadLblKPI5.TabIndex = 13;
             this.SeguridadLblKPI5.Text = "Registros en\r\nBitácora";
             // 
@@ -409,7 +410,7 @@
             this.SeguridadLblKPIResp4.Location = new System.Drawing.Point(21, 117);
             this.SeguridadLblKPIResp4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp4.Name = "SeguridadLblKPIResp4";
-            this.SeguridadLblKPIResp4.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp4.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp4.TabIndex = 15;
             this.SeguridadLblKPIResp4.Text = "0";
             // 
@@ -422,7 +423,7 @@
             this.SeguridadLblKPI4.Location = new System.Drawing.Point(27, 170);
             this.SeguridadLblKPI4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI4.Name = "SeguridadLblKPI4";
-            this.SeguridadLblKPI4.Size = new System.Drawing.Size(117, 40);
+            this.SeguridadLblKPI4.Size = new System.Drawing.Size(150, 50);
             this.SeguridadLblKPI4.TabIndex = 13;
             this.SeguridadLblKPI4.Text = "Módulos\r\nDisponibles";
             // 
@@ -448,7 +449,7 @@
             this.SeguridadLblKPIResp3.Location = new System.Drawing.Point(20, 117);
             this.SeguridadLblKPIResp3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp3.Name = "SeguridadLblKPIResp3";
-            this.SeguridadLblKPIResp3.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp3.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp3.TabIndex = 14;
             this.SeguridadLblKPIResp3.Text = "0";
             // 
@@ -461,7 +462,7 @@
             this.SeguridadLblKPI3.Location = new System.Drawing.Point(25, 170);
             this.SeguridadLblKPI3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI3.Name = "SeguridadLblKPI3";
-            this.SeguridadLblKPI3.Size = new System.Drawing.Size(132, 40);
+            this.SeguridadLblKPI3.Size = new System.Drawing.Size(169, 50);
             this.SeguridadLblKPI3.TabIndex = 13;
             this.SeguridadLblKPI3.Text = "Perfiles\r\nConfigurados";
             // 
@@ -487,7 +488,7 @@
             this.SeguridadLblKPIResp2.Location = new System.Drawing.Point(16, 117);
             this.SeguridadLblKPIResp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp2.Name = "SeguridadLblKPIResp2";
-            this.SeguridadLblKPIResp2.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp2.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp2.TabIndex = 14;
             this.SeguridadLblKPIResp2.Text = "0";
             // 
@@ -500,7 +501,7 @@
             this.SeguridadLblKPI2.Location = new System.Drawing.Point(21, 170);
             this.SeguridadLblKPI2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI2.Name = "SeguridadLblKPI2";
-            this.SeguridadLblKPI2.Size = new System.Drawing.Size(129, 40);
+            this.SeguridadLblKPI2.Size = new System.Drawing.Size(164, 50);
             this.SeguridadLblKPI2.TabIndex = 13;
             this.SeguridadLblKPI2.Text = "Aplicaciones\r\nen el Sistema";
             // 
@@ -526,7 +527,7 @@
             this.SeguridadLblKPIResp1.Location = new System.Drawing.Point(19, 117);
             this.SeguridadLblKPIResp1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPIResp1.Name = "SeguridadLblKPIResp1";
-            this.SeguridadLblKPIResp1.Size = new System.Drawing.Size(44, 43);
+            this.SeguridadLblKPIResp1.Size = new System.Drawing.Size(54, 54);
             this.SeguridadLblKPIResp1.TabIndex = 13;
             this.SeguridadLblKPIResp1.Text = "0";
             this.SeguridadLblKPIResp1.Click += new System.EventHandler(this.label11_Click);
@@ -540,7 +541,7 @@
             this.SeguridadLblKPI1.Location = new System.Drawing.Point(24, 170);
             this.SeguridadLblKPI1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPI1.Name = "SeguridadLblKPI1";
-            this.SeguridadLblKPI1.Size = new System.Drawing.Size(112, 40);
+            this.SeguridadLblKPI1.Size = new System.Drawing.Size(144, 50);
             this.SeguridadLblKPI1.TabIndex = 12;
             this.SeguridadLblKPI1.Text = "Usuarios\r\nregistrados";
             // 
@@ -553,7 +554,7 @@
             this.SeguridadLblResumen.Location = new System.Drawing.Point(51, 457);
             this.SeguridadLblResumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblResumen.Name = "SeguridadLblResumen";
-            this.SeguridadLblResumen.Size = new System.Drawing.Size(319, 32);
+            this.SeguridadLblResumen.Size = new System.Drawing.Size(395, 40);
             this.SeguridadLblResumen.TabIndex = 3;
             this.SeguridadLblResumen.Text = "Resumen del Sistema";
             // 
@@ -566,7 +567,7 @@
             this.SeguridadLblParrafo.Location = new System.Drawing.Point(64, 210);
             this.SeguridadLblParrafo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblParrafo.Name = "SeguridadLblParrafo";
-            this.SeguridadLblParrafo.Size = new System.Drawing.Size(435, 60);
+            this.SeguridadLblParrafo.Size = new System.Drawing.Size(551, 75);
             this.SeguridadLblParrafo.TabIndex = 2;
             this.SeguridadLblParrafo.Text = "Gestiona y Controla el acceso de los usuarios, \r\nperfiles y aplicaciones del sist" +
     "ema de forma \r\nsegura y eficiente.";
@@ -581,7 +582,7 @@
             this.SeguridadLblBienvenido.Location = new System.Drawing.Point(53, 94);
             this.SeguridadLblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblBienvenido.Name = "SeguridadLblBienvenido";
-            this.SeguridadLblBienvenido.Size = new System.Drawing.Size(418, 68);
+            this.SeguridadLblBienvenido.Size = new System.Drawing.Size(524, 85);
             this.SeguridadLblBienvenido.TabIndex = 1;
             this.SeguridadLblBienvenido.Text = "¡Bienvenido!";
             // 
