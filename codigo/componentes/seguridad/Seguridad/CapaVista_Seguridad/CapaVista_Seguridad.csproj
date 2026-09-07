@@ -79,6 +79,12 @@
     <Compile Include="FrmMantenimientoPerfiles.Designer.cs">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModulo.Designer.cs">
+      <DependentUpon>FrmModulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRecuperacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoPerfiles.resx">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModulo.resx">
+      <DependentUpon>FrmModulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperacion.resx">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
@@ -182,6 +191,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_mantenimiento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_anteriorN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cancelarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_consultarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_finN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_imprimirN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ingresarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_inicioN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_modificarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_refrescarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_siguienteN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
