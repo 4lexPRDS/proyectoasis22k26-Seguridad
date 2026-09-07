@@ -249,6 +249,7 @@
             this.SeguridadBtnUsuarios.Size = new System.Drawing.Size(352, 52);
             this.SeguridadBtnUsuarios.TabIndex = 2;
             this.SeguridadBtnUsuarios.UseVisualStyleBackColor = false;
+            this.SeguridadBtnUsuarios.Click += new System.EventHandler(this.SeguridadBtnUsuarios_Click);
             // 
             // SeguridadBtnEmpleados
             // 
@@ -601,7 +602,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2051, 1258);
+            this.ClientSize = new System.Drawing.Size(2051, 1061);
             this.Controls.Add(this.SeguridadPnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
