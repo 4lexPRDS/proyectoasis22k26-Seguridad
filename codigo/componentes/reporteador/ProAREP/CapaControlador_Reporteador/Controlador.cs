@@ -11,8 +11,8 @@ namespace CapaControlador_Reporteador
 {
     public class Controlador
     {
-
         Sentencias sentencias = new Sentencias();
+
         public DataTable llenarDgv(string nombreTabla)
         {
             OdbcDataAdapter daControlador = sentencias.llenarTbl(nombreTabla);
@@ -21,5 +21,40 @@ namespace CapaControlador_Reporteador
             return dtControlador;
         }
 
+        // FILTRO SOLO POR NOMBRE
+        public DataTable filtrarNombre(string nombre)
+        {
+            OdbcDataAdapter daControlador =
+                sentencias.filtrarPorNombre(nombre);
+
+            DataTable dtControlador = new DataTable();
+            daControlador.Fill(dtControlador);
+
+            return dtControlador;
+        }
+
+        // FILTRO SOLO POR FECHA
+        public DataTable filtrarFecha(DateTime fecha)
+        {
+            OdbcDataAdapter daControlador =
+                sentencias.filtrarPorFecha(fecha);
+
+            DataTable dtControlador = new DataTable();
+            daControlador.Fill(dtControlador);
+
+            return dtControlador;
+        }
+
+        // FILTRO POR NOMBRE Y FECHA
+        public DataTable filtrarNombreYFecha(string nombre, DateTime fecha)
+        {
+            OdbcDataAdapter daControlador =
+                sentencias.filtrarPorNombreYFecha(nombre, fecha);
+
+            DataTable dtControlador = new DataTable();
+            daControlador.Fill(dtControlador);
+
+            return dtControlador;
+        }
     }
 }
