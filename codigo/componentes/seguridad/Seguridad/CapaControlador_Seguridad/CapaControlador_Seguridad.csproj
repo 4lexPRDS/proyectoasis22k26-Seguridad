@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos de controladores\ModeloAsigAppPerf.cs" />
+    <Compile Include="Modelos de controladores\ModeloEmpleado.cs" />
     <Compile Include="Modelos de controladores\ModeloMantenimientoApp.cs" />
     <Compile Include="Modelos de controladores\ModeloModulo.cs" />
     <Compile Include="Modelos de controladores\ModeloRoles.cs" />
