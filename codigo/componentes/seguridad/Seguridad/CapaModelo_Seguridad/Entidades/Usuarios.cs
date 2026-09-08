@@ -11,7 +11,7 @@ namespace CapaModelo_Seguridad.Entidades
         public int idUsuario { get; set; }
         public int idEmpleado { get; set; }
         public string usuarioUsuario { get; set; }
-       
+        public int is_active { get; set; }
         public string contrasenaUsuario { get; set; }
         public DateTime ultimoAccesoUsuario { get; set; }
     }
