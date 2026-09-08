@@ -2,6 +2,11 @@
 {
     partial class frmRep
     {
+
+        // ============================================
+        // MODIFICADO POR VELVETH CHAVEZ - 8 SEP 2026
+        // ============================================
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
