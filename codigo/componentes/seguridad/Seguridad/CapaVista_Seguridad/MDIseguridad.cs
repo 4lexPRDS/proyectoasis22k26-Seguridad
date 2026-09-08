@@ -141,5 +141,11 @@ namespace CapaVista_Seguridad
             FrmMantenimientoEmpleado frmEmpleados = new FrmMantenimientoEmpleado();
             frmEmpleados.ShowDialog();
         }
+
+        private void SeguridadBtnAplicaciones_Click(object sender, EventArgs e)
+        {
+            FrmMantenimientoAplicacion frmAplicaciones = new FrmMantenimientoAplicacion();
+            frmAplicaciones.ShowDialog();
+        }
     }
 }
