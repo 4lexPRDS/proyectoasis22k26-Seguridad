@@ -133,5 +133,10 @@ namespace CapaControlador_Seguridad
         {
             return RepositorioAsigAppPerf.GetAplicaciones();
         }
+
+        public IEnumerable<ModeloAsigAppPerf> FindByRol(int idRol)
+        {
+            return ListaAsigAppPerf.FindAll(e => e._idRol == idRol);
+        }
     }
 }

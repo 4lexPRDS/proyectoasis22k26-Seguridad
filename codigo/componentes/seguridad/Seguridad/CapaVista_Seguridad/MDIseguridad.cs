@@ -111,5 +111,35 @@ namespace CapaVista_Seguridad
             FrmUsuarios frmasigusu = new FrmUsuarios();
             frmasigusu.ShowDialog();
         }
+
+        private void SeguridadBtnBurger_Click(object sender, EventArgs e)
+        {
+            if (SeguridadPnlNavegador.Width == 270)
+            {
+                SeguridadPnlNavegador.Width = 64;
+                SeguridadPnlDashboard.Location = new Point(200, 52);
+                SeguridadBtnBurger.Location = new Point(220, 13);
+                SeguridadLblUsuariosRol.Location = new Point(285, 19);
+            }
+            else
+            {
+                SeguridadPnlNavegador.Width = 270;
+                SeguridadPnlDashboard.Location = new Point(307, 52);
+                SeguridadBtnBurger.Location = new Point(323, 13);
+                SeguridadLblUsuariosRol.Location = new Point(390, 19);
+            }
+        }
+
+        private void SeguridadBtnModulos_Click(object sender, EventArgs e)
+        {
+            FrmModulo frmasigusu = new FrmModulo();
+            frmasigusu.ShowDialog();
+        }
+
+        private void SeguridadBtnEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmMantenimientoEmpleado frmEmpleados = new FrmMantenimientoEmpleado();
+            frmEmpleados.ShowDialog();
+        }
     }
 }

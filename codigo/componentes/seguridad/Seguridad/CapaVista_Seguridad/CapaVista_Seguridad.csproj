@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaControlador_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -69,11 +73,29 @@
     <Compile Include="FrmBitacora.Designer.cs">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoAplicacion.Designer.cs">
+      <DependentUpon>FrmMantenimientoAplicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoEmpleado.Designer.cs">
+      <DependentUpon>FrmMantenimientoEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantenimientoPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMantenimientoPerfiles.Designer.cs">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModulo.Designer.cs">
+      <DependentUpon>FrmModulo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRecuperacion.cs">
       <SubType>Form</SubType>
@@ -119,8 +141,17 @@
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoAplicacion.resx">
+      <DependentUpon>FrmMantenimientoAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
+      <DependentUpon>FrmMantenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoPerfiles.resx">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModulo.resx">
+      <DependentUpon>FrmModulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperacion.resx">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
@@ -137,7 +168,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -180,10 +211,79 @@
     <None Include="Resources\icon_mantenimiento.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaControlador_Seguridad\CapaControlador_Seguridad.csproj">
-      <Project>{1b52c554-a105-4583-b9e2-d96f342ad1d8}</Project>
-      <Name>CapaControlador_Seguridad</Name>
-    </ProjectReference>
+    <None Include="Resources\btn_anteriorN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cancelarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_consultarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_finN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_imprimirN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_ingresarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_inicioN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_modificarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_refrescarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_consultar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_refrescar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_siguienteN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoSeguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reporte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -101,41 +101,38 @@ namespace proyecto2k26
 
         private void BtnSeguridadAgregar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                asigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                asigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                asigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
-                asigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
-                asigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
-                asigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
-                asigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
-                asigAppPerf.Estado = EstadoEntidad.Added;
+            CboSeguridadPerfiles.SelectedIndex = -1;
+            CboSeguridadModulos.SelectedIndex = -1;
+            CboSeguridadAplicaciones.SelectedIndex = -1;
 
-                bool valido = new ValidacionDatos(asigAppPerf).Validar();
-                if (valido)
-                {
-                    string resultado = asigAppPerf.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaAsigAppPerf();
-                    Reinicio();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            chkSeguridadInsertar.Checked = false;
+            chkSeguridadEditar.Checked = false;
+            chkSeguridadeliminar.Checked = false;
+            chkSeguridadImprimir.Checked = false;
+
+            asigAppPerf.Estado = EstadoEntidad.Added;
+
+            CboSeguridadPerfiles.Enabled = true;
+            CboSeguridadModulos.Enabled = true;
+            CboSeguridadAplicaciones.Enabled = true;
         }
 
         private void BtnSeguridadBuscar_Click(object sender, EventArgs e)
         {
             try
             {
-                int idRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                int idModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                int idAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
+                if (string.IsNullOrWhiteSpace(TxtSeguridadFiltro.Text))
+                {
+                    MessageBox.Show("Ingrese un ID de Rol para filtrar");
+                    return;
+                }
 
-                DgvSeguridadListaUsuarios.DataSource = asigAppPerf.FindbyId(idRol, idModulo, idAplicacion);
+                int idRol = Convert.ToInt32(TxtSeguridadFiltro.Text);
+                DgvSeguridadListaUsuarios.DataSource = asigAppPerf.FindByRol(idRol);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El ID de Rol debe ser un número");
             }
             catch (Exception ex)
             {
@@ -193,6 +190,133 @@ namespace proyecto2k26
         }
 
         private void PnlSeguridadPnlDecorativo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnSeguridadModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DgvSeguridadListaUsuarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione una fila del listado para modificar");
+                    return;
+                }
+
+                asigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
+                asigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
+                asigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
+                asigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
+                asigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
+                asigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
+                asigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
+                asigAppPerf.Estado = EstadoEntidad.Modified;
+
+                bool valido = new ValidacionDatos(asigAppPerf).Validar();
+                if (valido)
+                {
+                    string resultado = asigAppPerf.GrabarCambios();
+                    MessageBox.Show(resultado);
+                    ListaAsigAppPerf();
+                    Reinicio();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BtnSeguridadGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                asigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
+                asigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
+                asigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
+                asigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
+                asigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
+                asigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
+                asigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
+                asigAppPerf.Estado = EstadoEntidad.Added;
+
+                bool valido = new ValidacionDatos(asigAppPerf).Validar();
+                if (valido)
+                {
+                    string resultado = asigAppPerf.GrabarCambios();
+                    MessageBox.Show(resultado);
+                    ListaAsigAppPerf();
+                    Reinicio();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BtnSeguridadReporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSeguridadActualizar_Click(object sender, EventArgs e)
+        {
+            TxtSeguridadFiltro.Clear();
+            ListaAsigAppPerf();
+        }
+
+        private void BtnSeguridadInicio_Click(object sender, EventArgs e)
+        {
+            if (DgvSeguridadListaUsuarios.Rows.Count > 0)
+            {
+                DgvSeguridadListaUsuarios.ClearSelection();
+                DgvSeguridadListaUsuarios.Rows[0].Selected = true;
+                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[0].Cells[0];
+            }
+        }
+
+        private void BtnSeguridadAnterior_Click(object sender, EventArgs e)
+        {
+            if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
+            {
+                int filaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
+                if (filaActual > 0)
+                {
+                    DgvSeguridadListaUsuarios.ClearSelection();
+                    DgvSeguridadListaUsuarios.Rows[filaActual - 1].Selected = true;
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[filaActual - 1].Cells[0];
+                }
+            }
+        }
+
+        private void BtnSeguridadSiguiente_Click(object sender, EventArgs e)
+        {
+            if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
+            {
+                int filaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
+                if (filaActual < DgvSeguridadListaUsuarios.Rows.Count - 1)
+                {
+                    DgvSeguridadListaUsuarios.ClearSelection();
+                    DgvSeguridadListaUsuarios.Rows[filaActual + 1].Selected = true;
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[filaActual + 1].Cells[0];
+                }
+            }
+        }
+
+        private void BtnSeguridadFin_Click(object sender, EventArgs e)
+        {
+            if (DgvSeguridadListaUsuarios.Rows.Count > 0)
+            {
+                int ultimaFila = DgvSeguridadListaUsuarios.Rows.Count - 1;
+                DgvSeguridadListaUsuarios.ClearSelection();
+                DgvSeguridadListaUsuarios.Rows[ultimaFila].Selected = true;
+                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[ultimaFila].Cells[0];
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
