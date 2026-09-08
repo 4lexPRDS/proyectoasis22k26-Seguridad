@@ -19,29 +19,31 @@ namespace CapaVista_Seguridad
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.lblIdEmpleado = new System.Windows.Forms.Label();
-            this.cboIdEmpleado = new System.Windows.Forms.ComboBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
             this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.chkVerContrasena = new System.Windows.Forms.CheckBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnReporte = new System.Windows.Forms.Button();
+            this.pnlIngresoDatos = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.pnlIngresoDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,138 +55,242 @@ namespace CapaVista_Seguridad
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblTitulo.Location = new System.Drawing.Point(227, 46);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(145, 30);
+            this.lblTitulo.Size = new System.Drawing.Size(192, 37);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Crear Usuario";
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblEmpleado.Location = new System.Drawing.Point(16, 30);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(95, 23);
+            this.lblEmpleado.TabIndex = 2;
+            this.lblEmpleado.Text = "Empleado:";
+            // 
+            // cboEmpleado
+            // 
+            this.cboEmpleado.BackColor = System.Drawing.SystemColors.Control;
+            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEmpleado.FormattingEnabled = true;
+            this.cboEmpleado.Location = new System.Drawing.Point(136, 30);
+            this.cboEmpleado.Name = "cboEmpleado";
+            this.cboEmpleado.Size = new System.Drawing.Size(382, 24);
+            this.cboEmpleado.TabIndex = 3;
+            this.cboEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboIdEmpleado_SelectedIndexChanged);
             // 
             // lblIdEmpleado
             // 
             this.lblIdEmpleado.AutoSize = true;
             this.lblIdEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblIdEmpleado.Location = new System.Drawing.Point(16, 30);
+            this.lblIdEmpleado.Location = new System.Drawing.Point(16, 67);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(89, 17);
-            this.lblIdEmpleado.TabIndex = 2;
-            this.lblIdEmpleado.Text = "Id Empleado:";
+            this.lblIdEmpleado.Size = new System.Drawing.Size(111, 23);
+            this.lblIdEmpleado.TabIndex = 4;
+            this.lblIdEmpleado.Text = "Id Empleado";
             // 
-            // cboIdEmpleado
+            // txtIdEmpleado
             // 
-            this.cboIdEmpleado.BackColor = System.Drawing.SystemColors.Control;
-            this.cboIdEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIdEmpleado.FormattingEnabled = true;
-            this.cboIdEmpleado.Location = new System.Drawing.Point(127, 30);
-            this.cboIdEmpleado.Name = "cboIdEmpleado";
-            this.cboIdEmpleado.Size = new System.Drawing.Size(391, 24);
-            this.cboIdEmpleado.TabIndex = 3;
-            this.cboIdEmpleado.SelectedIndexChanged += new System.EventHandler(this.cboIdEmpleado_SelectedIndexChanged);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblNombre.Location = new System.Drawing.Point(16, 67);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 17);
-            this.lblNombre.TabIndex = 4;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(109, 67);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(409, 22);
-            this.txtNombre.TabIndex = 5;
-            this.txtNombre.TabStop = false;
+            this.txtIdEmpleado.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtIdEmpleado.Enabled = false;
+            this.txtIdEmpleado.Location = new System.Drawing.Point(136, 67);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.ReadOnly = true;
+            this.txtIdEmpleado.Size = new System.Drawing.Size(80, 22);
+            this.txtIdEmpleado.TabIndex = 5;
+            this.txtIdEmpleado.TabStop = false;
             // 
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblContrasena.Location = new System.Drawing.Point(16, 106);
+            this.lblContrasena.Location = new System.Drawing.Point(16, 152);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(81, 17);
+            this.lblContrasena.Size = new System.Drawing.Size(104, 23);
             this.lblContrasena.TabIndex = 6;
             this.lblContrasena.Text = "Contraseña:";
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BackColor = System.Drawing.SystemColors.Control;
-            this.txtContrasena.Location = new System.Drawing.Point(109, 106);
+            this.txtContrasena.BackColor = System.Drawing.Color.White;
+            this.txtContrasena.Location = new System.Drawing.Point(136, 152);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(409, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(384, 22);
             this.txtContrasena.TabIndex = 7;
             // 
             // lblConfirmarContrasena
             // 
-            this.lblConfirmarContrasena.AutoSize = true;
             this.lblConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(16, 160);
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(16, 192);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(147, 17);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(112, 42);
             this.lblConfirmarContrasena.TabIndex = 8;
             this.lblConfirmarContrasena.Text = "Confirmar Contraseña:";
+            this.lblConfirmarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblConfirmarContrasena.UseCompatibleTextRendering = true;
             // 
             // txtConfirmarContrasena
             // 
-            this.txtConfirmarContrasena.BackColor = System.Drawing.SystemColors.Control;
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(161, 157);
+            this.txtConfirmarContrasena.BackColor = System.Drawing.Color.White;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(136, 208);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.PasswordChar = '*';
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(305, 22);
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(376, 22);
             this.txtConfirmarContrasena.TabIndex = 9;
             // 
-            // panel1
+            // pnlIngresoDatos
             // 
-            this.panel1.BackColor = System.Drawing.Color.OldLace;
-            this.panel1.Controls.Add(this.chkVerContrasena);
-            this.panel1.Controls.Add(this.lblIdEmpleado);
-            this.panel1.Controls.Add(this.cboIdEmpleado);
-            this.panel1.Controls.Add(this.lblNombre);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.txtContrasena);
-            this.panel1.Controls.Add(this.txtConfirmarContrasena);
-            this.panel1.Controls.Add(this.lblContrasena);
-            this.panel1.Controls.Add(this.lblConfirmarContrasena);
-            this.panel1.Location = new System.Drawing.Point(227, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(541, 304);
-            this.panel1.TabIndex = 16;
+            this.pnlIngresoDatos.BackColor = System.Drawing.Color.OldLace;
+            this.pnlIngresoDatos.Controls.Add(this.txtUsuario);
+            this.pnlIngresoDatos.Controls.Add(this.lblUsuario);
+            this.pnlIngresoDatos.Controls.Add(this.lblEstado);
+            this.pnlIngresoDatos.Controls.Add(this.cboEstado);
+            this.pnlIngresoDatos.Controls.Add(this.lblEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.cboEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.lblIdEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.txtIdEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.txtContrasena);
+            this.pnlIngresoDatos.Controls.Add(this.txtConfirmarContrasena);
+            this.pnlIngresoDatos.Controls.Add(this.lblContrasena);
+            this.pnlIngresoDatos.Controls.Add(this.lblConfirmarContrasena);
+            this.pnlIngresoDatos.Location = new System.Drawing.Point(224, 80);
+            this.pnlIngresoDatos.Name = "pnlIngresoDatos";
+            this.pnlIngresoDatos.Size = new System.Drawing.Size(541, 304);
+            this.pnlIngresoDatos.TabIndex = 16;
             // 
-            // chkVerContrasena
+            // txtUsuario
             // 
-            this.chkVerContrasena.AutoSize = true;
-            this.chkVerContrasena.Location = new System.Drawing.Point(503, 163);
-            this.chkVerContrasena.Name = "chkVerContrasena";
-            this.chkVerContrasena.Size = new System.Drawing.Size(15, 14);
-            this.chkVerContrasena.TabIndex = 10;
-            this.chkVerContrasena.UseVisualStyleBackColor = true;
+            this.txtUsuario.Location = new System.Drawing.Point(136, 104);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(376, 22);
+            this.txtUsuario.TabIndex = 13;
             // 
-            // panel2
+            // lblUsuario
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.Fondo_Cusuario;
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(77, 9);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 232);
-            this.panel2.TabIndex = 17;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblUsuario.Location = new System.Drawing.Point(16, 104);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
+            this.lblUsuario.TabIndex = 12;
+            this.lblUsuario.Text = "Usuario";
             // 
-            // pictureBox3
+            // lblEstado
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::CapaVista_Seguridad.Properties.Resources._5;
-            this.pictureBox3.Location = new System.Drawing.Point(-3, -3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(147, 235);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblEstado.Location = new System.Drawing.Point(24, 262);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(63, 23);
+            this.lblEstado.TabIndex = 10;
+            this.lblEstado.Text = "Estado";
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.BackColor = System.Drawing.SystemColors.Control;
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(144, 262);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(88, 24);
+            this.cboEstado.TabIndex = 11;
+            // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(72, 424);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.RowHeadersWidth = 51;
+            this.dgvUsuarios.RowTemplate.Height = 24;
+            this.dgvUsuarios.Size = new System.Drawing.Size(752, 216);
+            this.dgvUsuarios.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(840, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 75);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(840, 488);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(65, 68);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
+            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(840, 72);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(65, 70);
+            this.btnReporte.TabIndex = 11;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(840, 368);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(65, 75);
+            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(840, 160);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(65, 72);
+            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaVista_Seguridad.Properties.Resources._5;
+            this.pictureBox2.Location = new System.Drawing.Point(72, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
             // 
             // btnAyuda
             // 
@@ -200,84 +306,14 @@ namespace CapaVista_Seguridad
             this.btnAyuda.UseVisualStyleBackColor = false;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel3.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.Fondo_Cusuario;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Controls.Add(this.btnReporte);
-            this.panel3.Controls.Add(this.btnSalir);
-            this.panel3.Controls.Add(this.btnGuardar);
-            this.panel3.Controls.Add(this.btnLimpiar);
-            this.panel3.Location = new System.Drawing.Point(774, 56);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(147, 350);
-            this.panel3.TabIndex = 18;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
-            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(46, 3);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(65, 70);
-            this.btnReporte.TabIndex = 11;
-            this.btnReporte.UseVisualStyleBackColor = false;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(46, 269);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(65, 68);
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(46, 89);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(65, 72);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
-            this.btnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
-            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(46, 176);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(65, 75);
-            this.btnLimpiar.TabIndex = 13;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.Fondo_Cusuario;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -18);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.fondo2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(969, 580);
+            this.pictureBox1.Size = new System.Drawing.Size(958, 665);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -286,12 +322,17 @@ namespace CapaVista_Seguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 562);
+            this.ClientSize = new System.Drawing.Size(958, 665);
+            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAyuda);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlIngresoDatos);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -300,11 +341,10 @@ namespace CapaVista_Seguridad
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2002-CrearUsuario";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.pnlIngresoDatos.ResumeLayout(false);
+            this.pnlIngresoDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -315,10 +355,10 @@ namespace CapaVista_Seguridad
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.ComboBox cboEmpleado;
         private System.Windows.Forms.Label lblIdEmpleado;
-        private System.Windows.Forms.ComboBox cboIdEmpleado;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label lblContrasena;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label lblConfirmarContrasena;
@@ -328,10 +368,13 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox chkVerContrasena;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlIngresoDatos;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.TextBox txtUsuario;
     }
 }
