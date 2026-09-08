@@ -73,6 +73,12 @@
     <Compile Include="FrmBitacora.Designer.cs">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoAplicacion.Designer.cs">
+      <DependentUpon>FrmMantenimientoAplicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMantenimientoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoAplicacion.resx">
+      <DependentUpon>FrmMantenimientoAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
       <DependentUpon>FrmMantenimientoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +168,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +275,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconoSeguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reporte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
