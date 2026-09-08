@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,6 +56,16 @@ namespace CapaControlador_Reporteador
             daControlador.Fill(dtControlador);
 
             return dtControlador;
+        }
+
+        public string obtenerRutaReporte(string nombreReporte)
+        {
+            return sentencias.consultarRutaReporte(nombreReporte);
+        }
+
+        public string construirRutaCompleta(string nombreReporte, string rutaReporte)
+        {
+            return Path.Combine(rutaReporte, nombreReporte + ".pdf");
         }
     }
 }

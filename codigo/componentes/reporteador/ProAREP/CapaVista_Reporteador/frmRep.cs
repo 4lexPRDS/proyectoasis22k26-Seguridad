@@ -1,13 +1,15 @@
-﻿using System;
+﻿using CapaControlador_Reporteador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaControlador_Reporteador;
 
 namespace CapaVista_Reporteador
 {
@@ -60,6 +62,50 @@ namespace CapaVista_Reporteador
                         dtpFecha.Value
                     );
             }
-    }
+        }
+
+        private void btnVerRep_Click(object sender, EventArgs e)
+        {
+            string nombreReporte = txtNomRep.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombreReporte))
+            {
+                MessageBox.Show("Debe ingresar el nombre del reporte.", "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                string rutaReporte = controlador.obtenerRutaReporte(nombreReporte);
+
+                if (string.IsNullOrEmpty(rutaReporte))
+                {
+                    MessageBox.Show("No se encontró el reporte en la base de datos.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                string rutaCompleta = controlador.construirRutaCompleta(nombreReporte, rutaReporte);
+
+                if (!File.Exists(rutaCompleta))
+                {
+                    MessageBox.Show("El archivo PDF no existe en la ruta especificada:\n" + rutaCompleta,
+                        "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = rutaCompleta,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el reporte: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
