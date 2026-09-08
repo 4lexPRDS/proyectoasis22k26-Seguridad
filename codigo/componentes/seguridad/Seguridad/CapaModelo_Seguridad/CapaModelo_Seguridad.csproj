@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contratos\IRepositorioAsigAppPerf.cs" />
+    <Compile Include="Contratos\IRepositorioEmpleado.cs" />
     <Compile Include="Contratos\IRepositorioGenerico.cs" />
     <Compile Include="Contratos\IRepositorioMantenimientoApp.cs" />
     <Compile Include="Contratos\IRepositorioRoles.cs" />
     <Compile Include="Contratos\IRepositorioUsuarios.cs" />
     <Compile Include="Entidades\AsigAppPerf.cs" />
     <Compile Include="Entidades\ClsMantenimientoAplicacion.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Modulo.cs" />
     <Compile Include="Entidades\Roles.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Repositorios\ClsRepositorioMantenimientoApp.cs" />
     <Compile Include="Repositorios\Conexion.cs" />
     <Compile Include="Repositorios\RepositorioAsigAppPerf.cs" />
+    <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioModulo.cs" />
     <Compile Include="Repositorios\RepositorioRoles.cs" />
     <Compile Include="Repositorios\RepositorioUsuarios.cs" />
