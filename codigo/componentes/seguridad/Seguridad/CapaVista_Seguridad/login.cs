@@ -39,7 +39,7 @@ namespace CapaVista_Seguridad
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.Region = new Region(GetRoundedRect(panel1.ClientRectangle, 20));
+            SeguridadPnlInterfazLogin.Region = new Region(GetRoundedRect(SeguridadPnlInterfazLogin.ClientRectangle, 20));
         }
 
         private void button1_Click(object sender, EventArgs e)
