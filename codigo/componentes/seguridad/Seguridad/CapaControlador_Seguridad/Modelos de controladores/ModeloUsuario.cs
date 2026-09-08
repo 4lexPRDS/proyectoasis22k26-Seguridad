@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CapaModelo_Seguridad.Contratos;
+using CapaModelo_Seguridad.Entidades;
+using CapaModelo_Seguridad.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaModelo_Seguridad.Contratos;
-using CapaModelo_Seguridad.Entidades;
-using CapaModelo_Seguridad.Repositorios;
 namespace CapaControlador_Seguridad
 {
     public class ModeloUsuario
@@ -16,17 +17,18 @@ namespace CapaControlador_Seguridad
         private string _usuarioUsuario;
         private string _contrasenaUsuario;
         private DateTime _ultimoAccesoUsuario;
-        private IRepositorioUsuarios RepositorioUsuarios;
+        private int _is_active;
+        private RepositorioUsuarios RepositorioUsuarios;
 
         public EstadoEntidad Estado { private get; set; }
         private List<ModeloUsuario> ListaUsuario;
 
         public int idUsuario { get => _idUsuario; set => _idUsuario = value; }
 
-        [Required(ErrorMessage = "El campo numero de identificacion es requerido")]
-        [RegularExpression("([0-9]+)", ErrorMessage = "Numero de identificacion debe ser numerico")]
-        [StringLength(maximumLength: 10, MinimumLength = 10, ErrorMessage = "Numero de identificacion debe tener 10 digitos")]
+        [Required(ErrorMessage = "Debe seleccionar un empleado")]
+        [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un empleado válido")]
         public int IdEmpleado { get => _idEmpleado; set => _idEmpleado = value; }
+        
 
         [Required]
         [RegularExpression("^[a-zA-Zá-ú ]+$", ErrorMessage = "El campo Nombre debe ser solo letras")]
@@ -41,7 +43,7 @@ namespace CapaControlador_Seguridad
 
 
         public DateTime ultimoAccesoUsuario { get => _ultimoAccesoUsuario; set => _ultimoAccesoUsuario = value; }
-
+        public int is_active { get => _is_active; set => _is_active = value; }
 
         public ModeloUsuario()
         {
@@ -59,6 +61,8 @@ namespace CapaControlador_Seguridad
                 modeloDatosUsuarios.usuarioUsuario = _usuarioUsuario;
                 modeloDatosUsuarios.contrasenaUsuario = _contrasenaUsuario;
                 modeloDatosUsuarios.ultimoAccesoUsuario = _ultimoAccesoUsuario;
+                modeloDatosUsuarios.is_active = _is_active;
+
                 switch (Estado)
                 {
                     case EstadoEntidad.Added:
@@ -93,8 +97,10 @@ namespace CapaControlador_Seguridad
                     _idUsuario = item.idUsuario,
                     _idEmpleado = item.idEmpleado,
                     _usuarioUsuario = item.usuarioUsuario,
-                    _ultimoAccesoUsuario = item.ultimoAccesoUsuario
-                    
+                    _contrasenaUsuario = item.contrasenaUsuario,
+                    _ultimoAccesoUsuario = item.ultimoAccesoUsuario,
+                    _is_active = item.is_active
+
                 });
             }
             return ListaUsuario;
@@ -103,8 +109,20 @@ namespace CapaControlador_Seguridad
         {
             return ListaUsuario.FindAll(u => u.idUsuario.Equals(filter) || u._usuarioUsuario.Contains(filter));
         }
-        
 
+        public DataTable GetEmpleados()
+        {
+            return RepositorioUsuarios.GetEmpleados();
+        }
+
+        public List<EstadoEntidadValor> GetEstados()
+        {
+            return new List<EstadoEntidadValor>
+    {
+        new EstadoEntidadValor { Texto = "Activo", Valor = 1 },
+        new EstadoEntidadValor { Texto = "Inactivo", Valor = 0 }
+    };
+        }
     }
 
 }

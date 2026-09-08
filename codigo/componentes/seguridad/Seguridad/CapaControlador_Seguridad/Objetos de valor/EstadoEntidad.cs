@@ -11,5 +11,13 @@ namespace CapaControlador_Seguridad
         Added,
         Deleted,
         Modified
+
+  
     }
+    public class EstadoEntidadValor
+    {
+        public string Texto { get; set; }
+        public int Valor { get; set; }
+    }
+
 }
