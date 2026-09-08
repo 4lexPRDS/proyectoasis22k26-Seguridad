@@ -28,133 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsignacionAplicacionUsuario));
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.cmbUsuario = new System.Windows.Forms.ComboBox();
-            this.lblModulo = new System.Windows.Forms.Label();
-            this.cmbModulo = new System.Windows.Forms.ComboBox();
-            this.lblAplicacion = new System.Windows.Forms.Label();
-            this.cmbAplicacion = new System.Windows.Forms.ComboBox();
+            this.SeguridadGbxDatos = new System.Windows.Forms.GroupBox();
+            this.SeguridadCboAplicacion = new System.Windows.Forms.ComboBox();
+            this.CboSeguridadModulo = new System.Windows.Forms.ComboBox();
+            this.CboSeguridadUsuario = new System.Windows.Forms.ComboBox();
+            this.SeguridadLblUsuario = new System.Windows.Forms.Label();
+            this.SeguridadLblModulo = new System.Windows.Forms.Label();
+            this.SeguridadLblAplicacion = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.colIngresar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvAsignaciones = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
+            this.SeguridadDgvAsignaciones = new System.Windows.Forms.DataGridView();
+            this.SeguridadGbxAsignaciones = new System.Windows.Forms.GroupBox();
+            this.BtnSeguridadInsertar = new System.Windows.Forms.Button();
+            this.BtnSeguridadSalir = new System.Windows.Forms.Button();
+            this.BtnSeguridadQuitar = new System.Windows.Forms.Button();
+            this.BtnSeguridadBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grpDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.SeguridadPnlEncabezado = new System.Windows.Forms.Panel();
+            this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
+            this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
+            this.SeguridadLblDescripcion = new System.Windows.Forms.Label();
+            this.LblSeguridadDescripcion = new System.Windows.Forms.Label();
+            this.SeguridadPbIconoAsignacion = new System.Windows.Forms.PictureBox();
+            this.SeguridadGbxDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvAsignaciones)).BeginInit();
+            this.SeguridadGbxAsignaciones.SuspendLayout();
+            this.SeguridadPnlEncabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbIconoAsignacion)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAyuda
             // 
-            this.btnAyuda.Location = new System.Drawing.Point(1048, -68);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAyuda.Location = new System.Drawing.Point(786, -55);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(100, 28);
+            this.btnAyuda.Size = new System.Drawing.Size(75, 23);
             this.btnAyuda.TabIndex = 21;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = true;
             // 
-            // grpDatos
+            // SeguridadGbxDatos
             // 
-            this.grpDatos.Controls.Add(this.lblUsuario);
-            this.grpDatos.Controls.Add(this.cmbUsuario);
-            this.grpDatos.Controls.Add(this.lblModulo);
-            this.grpDatos.Controls.Add(this.cmbModulo);
-            this.grpDatos.Controls.Add(this.lblAplicacion);
-            this.grpDatos.Controls.Add(this.cmbAplicacion);
-            this.grpDatos.Controls.Add(this.btnAgregar);
-            this.grpDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatos.Location = new System.Drawing.Point(16, 149);
-            this.grpDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpDatos.Name = "grpDatos";
-            this.grpDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpDatos.Size = new System.Drawing.Size(1133, 142);
-            this.grpDatos.TabIndex = 19;
-            this.grpDatos.TabStop = false;
-            this.grpDatos.Text = "Datos";
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadCboAplicacion);
+            this.SeguridadGbxDatos.Controls.Add(this.CboSeguridadModulo);
+            this.SeguridadGbxDatos.Controls.Add(this.CboSeguridadUsuario);
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblUsuario);
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblModulo);
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblAplicacion);
+            this.SeguridadGbxDatos.Controls.Add(this.btnAgregar);
+            this.SeguridadGbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadGbxDatos.Location = new System.Drawing.Point(12, 190);
+            this.SeguridadGbxDatos.Name = "SeguridadGbxDatos";
+            this.SeguridadGbxDatos.Size = new System.Drawing.Size(943, 115);
+            this.SeguridadGbxDatos.TabIndex = 19;
+            this.SeguridadGbxDatos.TabStop = false;
+            this.SeguridadGbxDatos.Text = "Datos";
             // 
-            // lblUsuario
+            // SeguridadCboAplicacion
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(80, 50);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(60, 18);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuario";
+            this.SeguridadCboAplicacion.DropDownWidth = 180;
+            this.SeguridadCboAplicacion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadCboAplicacion.FormattingEnabled = true;
+            this.SeguridadCboAplicacion.Location = new System.Drawing.Point(385, 66);
+            this.SeguridadCboAplicacion.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadCboAplicacion.Name = "SeguridadCboAplicacion";
+            this.SeguridadCboAplicacion.Size = new System.Drawing.Size(163, 33);
+            this.SeguridadCboAplicacion.TabIndex = 10;
             // 
-            // cmbUsuario
+            // CboSeguridadModulo
             // 
-            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(8, 87);
-            this.cmbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(212, 26);
-            this.cmbUsuario.TabIndex = 2;
+            this.CboSeguridadModulo.DropDownWidth = 180;
+            this.CboSeguridadModulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboSeguridadModulo.FormattingEnabled = true;
+            this.CboSeguridadModulo.Location = new System.Drawing.Point(189, 66);
+            this.CboSeguridadModulo.Margin = new System.Windows.Forms.Padding(2);
+            this.CboSeguridadModulo.Name = "CboSeguridadModulo";
+            this.CboSeguridadModulo.Size = new System.Drawing.Size(163, 33);
+            this.CboSeguridadModulo.TabIndex = 9;
             // 
-            // lblModulo
+            // CboSeguridadUsuario
             // 
-            this.lblModulo.AutoSize = true;
-            this.lblModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulo.Location = new System.Drawing.Point(319, 50);
-            this.lblModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblModulo.Name = "lblModulo";
-            this.lblModulo.Size = new System.Drawing.Size(58, 18);
-            this.lblModulo.TabIndex = 3;
-            this.lblModulo.Text = "Módulo";
+            this.CboSeguridadUsuario.DropDownWidth = 180;
+            this.CboSeguridadUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CboSeguridadUsuario.FormattingEnabled = true;
+            this.CboSeguridadUsuario.Location = new System.Drawing.Point(5, 66);
+            this.CboSeguridadUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.CboSeguridadUsuario.Name = "CboSeguridadUsuario";
+            this.CboSeguridadUsuario.Size = new System.Drawing.Size(163, 33);
+            this.CboSeguridadUsuario.TabIndex = 8;
             // 
-            // cmbModulo
+            // SeguridadLblUsuario
             // 
-            this.cmbModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbModulo.FormattingEnabled = true;
-            this.cmbModulo.Location = new System.Drawing.Point(267, 90);
-            this.cmbModulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbModulo.Name = "cmbModulo";
-            this.cmbModulo.Size = new System.Drawing.Size(212, 26);
-            this.cmbModulo.TabIndex = 4;
+            this.SeguridadLblUsuario.AutoSize = true;
+            this.SeguridadLblUsuario.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblUsuario.Location = new System.Drawing.Point(6, 41);
+            this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(66, 21);
+            this.SeguridadLblUsuario.TabIndex = 1;
+            this.SeguridadLblUsuario.Text = "Usuario";
             // 
-            // lblAplicacion
+            // SeguridadLblModulo
             // 
-            this.lblAplicacion.AutoSize = true;
-            this.lblAplicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAplicacion.Location = new System.Drawing.Point(592, 50);
-            this.lblAplicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAplicacion.Name = "lblAplicacion";
-            this.lblAplicacion.Size = new System.Drawing.Size(75, 18);
-            this.lblAplicacion.TabIndex = 5;
-            this.lblAplicacion.Text = "Aplicación";
+            this.SeguridadLblModulo.AutoSize = true;
+            this.SeguridadLblModulo.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblModulo.Location = new System.Drawing.Point(197, 41);
+            this.SeguridadLblModulo.Name = "SeguridadLblModulo";
+            this.SeguridadLblModulo.Size = new System.Drawing.Size(63, 21);
+            this.SeguridadLblModulo.TabIndex = 3;
+            this.SeguridadLblModulo.Text = "Módulo";
             // 
-            // cmbAplicacion
+            // SeguridadLblAplicacion
             // 
-            this.cmbAplicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAplicacion.FormattingEnabled = true;
-            this.cmbAplicacion.Location = new System.Drawing.Point(536, 87);
-            this.cmbAplicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbAplicacion.Name = "cmbAplicacion";
-            this.cmbAplicacion.Size = new System.Drawing.Size(212, 26);
-            this.cmbAplicacion.TabIndex = 6;
+            this.SeguridadLblAplicacion.AutoSize = true;
+            this.SeguridadLblAplicacion.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblAplicacion.Location = new System.Drawing.Point(399, 41);
+            this.SeguridadLblAplicacion.Name = "SeguridadLblAplicacion";
+            this.SeguridadLblAplicacion.Size = new System.Drawing.Size(85, 21);
+            this.SeguridadLblAplicacion.TabIndex = 5;
+            this.SeguridadLblAplicacion.Text = "Aplicación";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(903, 73);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(739, 41);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(163, 43);
+            this.btnAgregar.Size = new System.Drawing.Size(162, 41);
             this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "Form Bitacora";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // colIngresar
@@ -178,137 +187,218 @@
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.ReadOnly = true;
             // 
-            // dgvAsignaciones
+            // SeguridadDgvAsignaciones
             // 
-            this.dgvAsignaciones.AllowUserToAddRows = false;
-            this.dgvAsignaciones.AllowUserToDeleteRows = false;
-            this.dgvAsignaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAsignaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SeguridadDgvAsignaciones.AllowUserToAddRows = false;
+            this.SeguridadDgvAsignaciones.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(242)))));
+            this.SeguridadDgvAsignaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.SeguridadDgvAsignaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SeguridadDgvAsignaciones.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SeguridadDgvAsignaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.SeguridadDgvAsignaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SeguridadDgvAsignaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colUsuario,
             this.colAplicacion,
             this.colIngresar});
-            this.dgvAsignaciones.Location = new System.Drawing.Point(8, 25);
-            this.dgvAsignaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvAsignaciones.MultiSelect = false;
-            this.dgvAsignaciones.Name = "dgvAsignaciones";
-            this.dgvAsignaciones.ReadOnly = true;
-            this.dgvAsignaciones.RowHeadersVisible = false;
-            this.dgvAsignaciones.RowHeadersWidth = 51;
-            this.dgvAsignaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsignaciones.Size = new System.Drawing.Size(836, 341);
-            this.dgvAsignaciones.TabIndex = 13;
+            this.SeguridadDgvAsignaciones.EnableHeadersVisualStyles = false;
+            this.SeguridadDgvAsignaciones.Location = new System.Drawing.Point(9, 20);
+            this.SeguridadDgvAsignaciones.MultiSelect = false;
+            this.SeguridadDgvAsignaciones.Name = "SeguridadDgvAsignaciones";
+            this.SeguridadDgvAsignaciones.ReadOnly = true;
+            this.SeguridadDgvAsignaciones.RowHeadersVisible = false;
+            this.SeguridadDgvAsignaciones.RowHeadersWidth = 51;
+            this.SeguridadDgvAsignaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SeguridadDgvAsignaciones.Size = new System.Drawing.Size(692, 277);
+            this.SeguridadDgvAsignaciones.TabIndex = 13;
             // 
-            // btnSalir
+            // SeguridadGbxAsignaciones
             // 
-            this.btnSalir.Location = new System.Drawing.Point(916, 245);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(133, 43);
-            this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadInsertar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadSalir);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadQuitar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadBuscar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadDgvAsignaciones);
+            this.SeguridadGbxAsignaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadGbxAsignaciones.Location = new System.Drawing.Point(12, 329);
+            this.SeguridadGbxAsignaciones.Name = "SeguridadGbxAsignaciones";
+            this.SeguridadGbxAsignaciones.Size = new System.Drawing.Size(943, 315);
+            this.SeguridadGbxAsignaciones.TabIndex = 20;
+            this.SeguridadGbxAsignaciones.TabStop = false;
+            this.SeguridadGbxAsignaciones.Text = "Asignaciones";
             // 
-            // groupBox1
+            // BtnSeguridadInsertar
             // 
-            this.groupBox1.Controls.Add(this.dgvAsignaciones);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.btnQuitar);
-            this.groupBox1.Controls.Add(this.btnInsertar);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 322);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1133, 388);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Asignaciones";
+            this.BtnSeguridadInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.BtnSeguridadInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeguridadInsertar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.BtnSeguridadInsertar.ForeColor = System.Drawing.Color.White;
+            this.BtnSeguridadInsertar.Location = new System.Drawing.Point(741, 141);
+            this.BtnSeguridadInsertar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSeguridadInsertar.Name = "BtnSeguridadInsertar";
+            this.BtnSeguridadInsertar.Size = new System.Drawing.Size(160, 39);
+            this.BtnSeguridadInsertar.TabIndex = 17;
+            this.BtnSeguridadInsertar.Text = "Insertar 🧾";
+            this.BtnSeguridadInsertar.UseVisualStyleBackColor = false;
             // 
-            // btnBuscar
+            // BtnSeguridadSalir
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(916, 25);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(133, 43);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.BtnSeguridadSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.BtnSeguridadSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeguridadSalir.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.BtnSeguridadSalir.ForeColor = System.Drawing.Color.White;
+            this.BtnSeguridadSalir.Location = new System.Drawing.Point(741, 205);
+            this.BtnSeguridadSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSeguridadSalir.Name = "BtnSeguridadSalir";
+            this.BtnSeguridadSalir.Size = new System.Drawing.Size(160, 37);
+            this.BtnSeguridadSalir.TabIndex = 16;
+            this.BtnSeguridadSalir.Text = "Salir 🚪";
+            this.BtnSeguridadSalir.UseVisualStyleBackColor = false;
             // 
-            // btnQuitar
+            // BtnSeguridadQuitar
             // 
-            this.btnQuitar.Location = new System.Drawing.Point(916, 97);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(133, 43);
-            this.btnQuitar.TabIndex = 9;
-            this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.BtnSeguridadQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.BtnSeguridadQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeguridadQuitar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.BtnSeguridadQuitar.ForeColor = System.Drawing.Color.White;
+            this.BtnSeguridadQuitar.Location = new System.Drawing.Point(741, 78);
+            this.BtnSeguridadQuitar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSeguridadQuitar.Name = "BtnSeguridadQuitar";
+            this.BtnSeguridadQuitar.Size = new System.Drawing.Size(160, 37);
+            this.BtnSeguridadQuitar.TabIndex = 15;
+            this.BtnSeguridadQuitar.Text = "Quitar ❌";
+            this.BtnSeguridadQuitar.UseVisualStyleBackColor = false;
             // 
-            // btnInsertar
+            // BtnSeguridadBuscar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(916, 175);
-            this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(133, 43);
-            this.btnInsertar.TabIndex = 10;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.BtnSeguridadBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.BtnSeguridadBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeguridadBuscar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.BtnSeguridadBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(741, 20);
+            this.BtnSeguridadBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSeguridadBuscar.Name = "BtnSeguridadBuscar";
+            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(160, 40);
+            this.BtnSeguridadBuscar.TabIndex = 14;
+            this.BtnSeguridadBuscar.Text = "Buscar 🔍";
+            this.BtnSeguridadBuscar.UseVisualStyleBackColor = false;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(-80, -82);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(-60, -67);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(424, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(342, 24);
             this.lblTitulo.TabIndex = 18;
             this.lblTitulo.Text = "Asignación de Aplicación a Usuario";
             // 
-            // button1
+            // SeguridadPnlEncabezado
             // 
-            this.button1.Location = new System.Drawing.Point(1147, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Ayuda";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SeguridadPnlEncabezado.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.panel_fondo;
+            this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadBtnAyuda);
+            this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadPbMascota);
+            this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadLblDescripcion);
+            this.SeguridadPnlEncabezado.Controls.Add(this.LblSeguridadDescripcion);
+            this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadPbIconoAsignacion);
+            this.SeguridadPnlEncabezado.Location = new System.Drawing.Point(2, 11);
+            this.SeguridadPnlEncabezado.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadPnlEncabezado.Name = "SeguridadPnlEncabezado";
+            this.SeguridadPnlEncabezado.Size = new System.Drawing.Size(1017, 154);
+            this.SeguridadPnlEncabezado.TabIndex = 24;
             // 
-            // label1
+            // SeguridadBtnAyuda
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 29);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Asignación de Aplicación a Usuario";
+            this.SeguridadBtnAyuda.Image = global::CapaVista_Seguridad.Properties.Resources.btn_ayuda;
+            this.SeguridadBtnAyuda.Location = new System.Drawing.Point(859, 23);
+            this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
+            this.SeguridadBtnAyuda.Size = new System.Drawing.Size(94, 103);
+            this.SeguridadBtnAyuda.TabIndex = 4;
+            this.SeguridadBtnAyuda.UseVisualStyleBackColor = true;
+            // 
+            // SeguridadPbMascota
+            // 
+            this.SeguridadPbMascota.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadPbMascota.Image = global::CapaVista_Seguridad.Properties.Resources._8;
+            this.SeguridadPbMascota.Location = new System.Drawing.Point(619, 11);
+            this.SeguridadPbMascota.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadPbMascota.Name = "SeguridadPbMascota";
+            this.SeguridadPbMascota.Size = new System.Drawing.Size(92, 133);
+            this.SeguridadPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeguridadPbMascota.TabIndex = 3;
+            this.SeguridadPbMascota.TabStop = false;
+            // 
+            // SeguridadLblDescripcion
+            // 
+            this.SeguridadLblDescripcion.AutoSize = true;
+            this.SeguridadLblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblDescripcion.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblDescripcion.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.SeguridadLblDescripcion.Location = new System.Drawing.Point(178, 91);
+            this.SeguridadLblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
+            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(338, 18);
+            this.SeguridadLblDescripcion.TabIndex = 2;
+            this.SeguridadLblDescripcion.Text = "Administra la asignación de aplicaciones a usuarios.";
+            // 
+            // LblSeguridadDescripcion
+            // 
+            this.LblSeguridadDescripcion.AutoSize = true;
+            this.LblSeguridadDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.LblSeguridadDescripcion.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadDescripcion.ForeColor = System.Drawing.Color.Teal;
+            this.LblSeguridadDescripcion.Location = new System.Drawing.Point(176, 57);
+            this.LblSeguridadDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblSeguridadDescripcion.Name = "LblSeguridadDescripcion";
+            this.LblSeguridadDescripcion.Size = new System.Drawing.Size(410, 25);
+            this.LblSeguridadDescripcion.TabIndex = 1;
+            this.LblSeguridadDescripcion.Text = "Asignación de Aplicación a Usuario";
+            // 
+            // SeguridadPbIconoAsignacion
+            // 
+            this.SeguridadPbIconoAsignacion.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadPbIconoAsignacion.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.Btn_prf_apl;
+            this.SeguridadPbIconoAsignacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadPbIconoAsignacion.Location = new System.Drawing.Point(57, 11);
+            this.SeguridadPbIconoAsignacion.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadPbIconoAsignacion.Name = "SeguridadPbIconoAsignacion";
+            this.SeguridadPbIconoAsignacion.Size = new System.Drawing.Size(104, 119);
+            this.SeguridadPbIconoAsignacion.TabIndex = 0;
+            this.SeguridadPbIconoAsignacion.TabStop = false;
             // 
             // FrmAsignacionAplicacionUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 746);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.Linen;
+            this.ClientSize = new System.Drawing.Size(1051, 656);
+            this.Controls.Add(this.SeguridadPnlEncabezado);
             this.Controls.Add(this.btnAyuda);
-            this.Controls.Add(this.grpDatos);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.SeguridadGbxDatos);
+            this.Controls.Add(this.SeguridadGbxAsignaciones);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmAsignacionAplicacionUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignación de Aplicación a Usuario";
-            this.grpDatos.ResumeLayout(false);
-            this.grpDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignaciones)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.SeguridadGbxDatos.ResumeLayout(false);
+            this.SeguridadGbxDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvAsignaciones)).EndInit();
+            this.SeguridadGbxAsignaciones.ResumeLayout(false);
+            this.SeguridadPnlEncabezado.ResumeLayout(false);
+            this.SeguridadPnlEncabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbIconoAsignacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,25 +407,29 @@
         #endregion
 
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.GroupBox grpDatos;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.ComboBox cmbUsuario;
-        private System.Windows.Forms.Label lblModulo;
-        private System.Windows.Forms.ComboBox cmbModulo;
-        private System.Windows.Forms.Label lblAplicacion;
-        private System.Windows.Forms.ComboBox cmbAplicacion;
+        private System.Windows.Forms.GroupBox SeguridadGbxDatos;
+        private System.Windows.Forms.Label SeguridadLblUsuario;
+        private System.Windows.Forms.Label SeguridadLblModulo;
+        private System.Windows.Forms.Label SeguridadLblAplicacion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIngresar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAplicacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;
-        private System.Windows.Forms.DataGridView dgvAsignaciones;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnQuitar;
-        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.DataGridView SeguridadDgvAsignaciones;
+        private System.Windows.Forms.GroupBox SeguridadGbxAsignaciones;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel SeguridadPnlEncabezado;
+        private System.Windows.Forms.Button SeguridadBtnAyuda;
+        private System.Windows.Forms.PictureBox SeguridadPbMascota;
+        private System.Windows.Forms.Label SeguridadLblDescripcion;
+        private System.Windows.Forms.Label LblSeguridadDescripcion;
+        private System.Windows.Forms.PictureBox SeguridadPbIconoAsignacion;
+        private System.Windows.Forms.Button BtnSeguridadBuscar;
+        private System.Windows.Forms.Button BtnSeguridadQuitar;
+        private System.Windows.Forms.Button BtnSeguridadSalir;
+        private System.Windows.Forms.Button BtnSeguridadInsertar;
+        private System.Windows.Forms.ComboBox SeguridadCboAplicacion;
+        private System.Windows.Forms.ComboBox CboSeguridadModulo;
+        private System.Windows.Forms.ComboBox CboSeguridadUsuario;
     }
 }
