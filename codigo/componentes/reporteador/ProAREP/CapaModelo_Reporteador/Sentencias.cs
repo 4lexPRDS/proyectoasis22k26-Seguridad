@@ -69,5 +69,20 @@ namespace CapaModelo_Reporteador
 
             return new OdbcDataAdapter(cmd);
         }
+
+        public string consultarRutaReporte(string nombreReporte)
+        {
+            string sSql = "SELECT rutaReporte FROM tblReporte WHERE nombreReporte = ? ;";
+            OdbcCommand cmdSentencias = new OdbcCommand(sSql, conn.conexion());
+            cmdSentencias.Parameters.Add("nombreReporte", OdbcType.VarChar).Value = nombreReporte;
+            object resultado = cmdSentencias.ExecuteScalar();
+
+            if (resultado != null && resultado != DBNull.Value)
+            {
+                return resultado.ToString();
+            }
+
+            return string.Empty;
+        }
     }
 }
