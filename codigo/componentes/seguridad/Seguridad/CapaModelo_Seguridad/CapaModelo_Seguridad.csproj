@@ -47,21 +47,21 @@
     <Compile Include="Contratos\IRepositorioMantenimientoApp.cs" />
     <Compile Include="Contratos\IRepositorioRoles.cs" />
     <Compile Include="Contratos\IRepositorioUsuarios.cs" />
-    <Compile Include="Entidades\AsigAppPerf.cs" />
+    <Compile Include="Entidades\ClsAsigAppPerf.cs" />
     <Compile Include="Entidades\ClsMantenimientoAplicacion.cs" />
-    <Compile Include="Entidades\Empleado.cs" />
-    <Compile Include="Entidades\Modulo.cs" />
-    <Compile Include="Entidades\Roles.cs" />
-    <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Entidades\ClsEmpleado.cs" />
+    <Compile Include="Entidades\ClsModulo.cs" />
+    <Compile Include="Entidades\ClsRoles.cs" />
+    <Compile Include="Entidades\ClsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\ClsRepositorioMantenimientoApp.cs" />
-    <Compile Include="Repositorios\Conexion.cs" />
-    <Compile Include="Repositorios\RepositorioAsigAppPerf.cs" />
-    <Compile Include="Repositorios\RepositorioEmpleado.cs" />
-    <Compile Include="Repositorios\RepositorioModulo.cs" />
-    <Compile Include="Repositorios\RepositorioRoles.cs" />
-    <Compile Include="Repositorios\RepositorioUsuarios.cs" />
-    <Compile Include="Repositorios\Sentencias.cs" />
+    <Compile Include="Repositorios\ClsConexion.cs" />
+    <Compile Include="Repositorios\ClsRepositorioAsigAppPerf.cs" />
+    <Compile Include="Repositorios\ClsRepositorioEmpleado.cs" />
+    <Compile Include="Repositorios\ClsRepositorioModulo.cs" />
+    <Compile Include="Repositorios\ClsRepositorioRoles.cs" />
+    <Compile Include="Repositorios\ClsRepositorioUsuarios.cs" />
+    <Compile Include="Repositorios\ClsSentencias.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,34 +15,36 @@ using System.Windows.Forms;
 
 namespace CapaVista_Seguridad
 {
-    public partial class FrmMantenimientoAplicacion : Form{
+    public partial class FrmMantenimientoAplicacion : Form
+    {
         private ClsModeloMantenimientoApp _ModeloMantenimientoApp = new ClsModeloMantenimientoApp();
-        public FrmMantenimientoAplicacion(){
+        public FrmMantenimientoAplicacion()
+        {
             InitializeComponent();
         }
 
-        private void FrmMantenimientoAplicacion_Load(object sender, EventArgs e){
+        private void FrmMantenimientoAplicacion_Load(object sender, EventArgs e)
+        {
             SeguridadMetCargarCombos();
             SeguridadMetListaAplicaciones();
         }
 
-        private void SeguridadMetCargarCombos(){
+        private void SeguridadMetCargarCombos()
+        {
             try
             {
-                SeguridadCboIdModulo.DataSource = _ModeloMantenimientoApp.SeguridadMetGetModulos();
-                SeguridadCboIdModulo.DisplayMember = "nombreModulo";
-                SeguridadCboIdModulo.ValueMember = "idModulo";
+                SeguridadCboIdModulo.DataSource = _ModeloMantenimientoApp.SeguridadMetObtenerModulos();
+                SeguridadCboIdModulo.DisplayMember = "NombreModulo";
+                SeguridadCboIdModulo.ValueMember = "IdModulo";
 
-                SeguridadCboBuscar.DataSource = _ModeloMantenimientoApp.SeguridadMetGetAplicaciones();
-                SeguridadCboBuscar.DisplayMember = "nombreAplicacion";
-                SeguridadCboBuscar.ValueMember = "idAplicacion";
+                SeguridadCboBuscar.DataSource = _ModeloMantenimientoApp.SeguridadMetObtenerAplicaciones();
+                SeguridadCboBuscar.DisplayMember = "NombreAplicacion";
+                SeguridadCboBuscar.ValueMember = "IdAplicacion";
 
                 SeguridadCboEstado.Items.Clear();
                 SeguridadCboEstado.Items.Add("Activo");
                 SeguridadCboEstado.Items.Add("Inactivo");
                 SeguridadCboEstado.SelectedIndex = 0;
-
-
             }
             catch (Exception Ex)
             {
@@ -50,19 +52,20 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void SeguridadMetListaAplicaciones(){
+        private void SeguridadMetListaAplicaciones()
+        {
             try
             {
-                SeguridadDgvAplicaciones.DataSource = _ModeloMantenimientoApp.SeguridadMetGetAll();
+                SeguridadDgvAplicaciones.DataSource = _ModeloMantenimientoApp.SeguridadMetObtenerTodos();
             }
-
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.ToString());
             }
         }
 
-        private void SeguridadBtnNuevo_Click(Object sender, EventArgs e){
+        private void SeguridadBtnNuevo_Click(Object sender, EventArgs e)
+        {
             SeguridadMetReinicio();
         }
 
@@ -76,7 +79,7 @@ namespace CapaVista_Seguridad
                 _ModeloMantenimientoApp.IsActive = SeguridadCboEstado.SelectedItem.ToString() == "Activo";
                 _ModeloMantenimientoApp.Estado = EstadoEntidad.Added;
 
-                bool Valido = new ValidacionDatos(_ModeloMantenimientoApp).Validar();
+                bool Valido = new ClsValidacionDatos(_ModeloMantenimientoApp).SeguridadMetValidar();
 
                 if (Valido)
                 {
@@ -86,15 +89,14 @@ namespace CapaVista_Seguridad
                     SeguridadMetReinicio();
                 }
             }
-
             catch (Exception Ex)
             {
-                    MessageBox.Show(Ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
-        }   
+        }
 
-       private void SeguridadBtnModificar_Click(Object sender, EventArgs e)
-       {
+        private void SeguridadBtnModificar_Click(Object sender, EventArgs e)
+        {
             try
             {
                 _ModeloMantenimientoApp.IdAplicacion = Convert.ToInt32(SeguridadTxtIdAplicacion.Text);
@@ -104,28 +106,27 @@ namespace CapaVista_Seguridad
                 _ModeloMantenimientoApp.IsActive = SeguridadCboEstado.SelectedItem.ToString() == "Activo";
                 _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
 
-                    bool Valido = new ValidacionDatos(_ModeloMantenimientoApp).Validar();
-                    if (Valido)
-                    {
-                        string Resultado = _ModeloMantenimientoApp.SeguridadMetGrabarCambios();
-                        MessageBox.Show(Resultado);
-                        SeguridadMetListaAplicaciones();
-                        SeguridadMetReinicio();
-                    }
+                bool Valido = new ClsValidacionDatos(_ModeloMantenimientoApp).SeguridadMetValidar();
+                if (Valido)
+                {
+                    string Resultado = _ModeloMantenimientoApp.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListaAplicaciones();
+                    SeguridadMetReinicio();
+                }
             }
             catch (Exception Ex)
             {
-                    MessageBox.Show(Ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
-       }
-          
+        }
 
         private void SeguridadBtnBuscar_Click(Object sender, EventArgs e)
         {
             try
             {
                 int IdAplicacion = Convert.ToInt32(SeguridadCboBuscar.SelectedValue);
-                var Resultado = _ModeloMantenimientoApp.SeguridadMetFindById(IdAplicacion);
+                var Resultado = _ModeloMantenimientoApp.SeguridadMetBuscarPorId(IdAplicacion);
 
                 if (Resultado != null)
                 {
@@ -163,7 +164,6 @@ namespace CapaVista_Seguridad
                         SeguridadMetListaAplicaciones();
                         SeguridadMetReinicio();
                     }
-
                 }
                 else
                 {
@@ -180,7 +180,6 @@ namespace CapaVista_Seguridad
         {
             this.Close();
         }
-
 
         private void SeguridadMetReinicio()
         {
@@ -199,15 +198,15 @@ namespace CapaVista_Seguridad
 
         private void SeguridadDgvAplicaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-             if (SeguridadDgvAplicaciones.SelectedRows.Count > 0)
-             {
-                    SeguridadTxtIdAplicacion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[0].Value.ToString();
-                    SeguridadCboIdModulo.SelectedValue = Convert.ToInt32(SeguridadDgvAplicaciones.CurrentRow.Cells[1].Value);
-                    SeguridadTxtNombreAplicacion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[2].Value.ToString();
-                    SeguridadTxtDescripcion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[3].Value.ToString();
-                    SeguridadCboEstado.SelectedItem = Convert.ToBoolean(SeguridadDgvAplicaciones.CurrentRow.Cells[4].Value) ? "Activo" : "Inactivo";
-                    _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
-             }
+            if (SeguridadDgvAplicaciones.SelectedRows.Count > 0)
+            {
+                SeguridadTxtIdAplicacion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[0].Value.ToString();
+                SeguridadCboIdModulo.SelectedValue = Convert.ToInt32(SeguridadDgvAplicaciones.CurrentRow.Cells[1].Value);
+                SeguridadTxtNombreAplicacion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[2].Value.ToString();
+                SeguridadTxtDescripcion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[3].Value.ToString();
+                SeguridadCboEstado.SelectedItem = Convert.ToBoolean(SeguridadDgvAplicaciones.CurrentRow.Cells[4].Value) ? "Activo" : "Inactivo";
+                _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
+            }
         }
     }
 }

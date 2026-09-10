@@ -15,7 +15,7 @@ namespace proyecto2k26
 {
     public partial class FrmAsignacionAppPerf : Form
     {
-        private ModeloAsigAppPerf asigAppPerf = new ModeloAsigAppPerf();
+        private ClsModeloAsigAppPerf _AsigAppPerf = new ClsModeloAsigAppPerf();
 
         public FrmAsignacionAppPerf()
         {
@@ -24,25 +24,25 @@ namespace proyecto2k26
 
         private void FrmAsignacionAppPerf_Load(object sender, EventArgs e)
         {
-            CargarCombos();
-            ListaAsigAppPerf();
+            SeguridadMetCargarCombos();
+            SeguridadMetListarAsigAppPerf();
         }
 
-        private void CargarCombos()
+        private void SeguridadMetCargarCombos()
         {
             try
             {
-                CboSeguridadPerfiles.DataSource = asigAppPerf.GetRoles();
-                CboSeguridadPerfiles.DisplayMember = "nombreRol";
-                CboSeguridadPerfiles.ValueMember = "idRol";
+                CboSeguridadPerfiles.DataSource = _AsigAppPerf.SeguridadMetObtenerRoles();
+                CboSeguridadPerfiles.DisplayMember = "NombreRol";
+                CboSeguridadPerfiles.ValueMember = "IdRol";
 
-                CboSeguridadModulos.DataSource = asigAppPerf.GetModulos();
-                CboSeguridadModulos.DisplayMember = "nombreModulo";
-                CboSeguridadModulos.ValueMember = "idModulo";
+                CboSeguridadModulos.DataSource = _AsigAppPerf.SeguridadMetObtenerModulos();
+                CboSeguridadModulos.DisplayMember = "NombreModulo";
+                CboSeguridadModulos.ValueMember = "IdModulo";
 
-                CboSeguridadAplicaciones.DataSource = asigAppPerf.GetAplicaciones();
-                CboSeguridadAplicaciones.DisplayMember = "nombreAplicacion";
-                CboSeguridadAplicaciones.ValueMember = "idAplicacion";
+                CboSeguridadAplicaciones.DataSource = _AsigAppPerf.SeguridadMetObtenerAplicaciones();
+                CboSeguridadAplicaciones.DisplayMember = "NombreAplicacion";
+                CboSeguridadAplicaciones.ValueMember = "IdAplicacion";
             }
             catch (Exception ex)
             {
@@ -50,11 +50,11 @@ namespace proyecto2k26
             }
         }
 
-        private void ListaAsigAppPerf()
+        private void SeguridadMetListarAsigAppPerf()
         {
             try
             {
-                DgvSeguridadListaUsuarios.DataSource = asigAppPerf.GetAll();
+                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetObtenerTodos();
             }
             catch (Exception ex)
             {
@@ -110,7 +110,7 @@ namespace proyecto2k26
             chkSeguridadeliminar.Checked = false;
             chkSeguridadImprimir.Checked = false;
 
-            asigAppPerf.Estado = EstadoEntidad.Added;
+            _AsigAppPerf.Estado = EstadoEntidad.Added;
 
             CboSeguridadPerfiles.Enabled = true;
             CboSeguridadModulos.Enabled = true;
@@ -127,8 +127,8 @@ namespace proyecto2k26
                     return;
                 }
 
-                int idRol = Convert.ToInt32(TxtSeguridadFiltro.Text);
-                DgvSeguridadListaUsuarios.DataSource = asigAppPerf.FindByRol(idRol);
+                int IdRol = Convert.ToInt32(TxtSeguridadFiltro.Text);
+                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetBuscarPorRol(IdRol);
             }
             catch (FormatException)
             {
@@ -144,14 +144,14 @@ namespace proyecto2k26
         {
             if (DgvSeguridadListaUsuarios.SelectedRows.Count > 0)
             {
-                asigAppPerf.Estado = EstadoEntidad.Deleted;
-                asigAppPerf.IdRol = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[0].Value);
-                asigAppPerf.IdModulo = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[1].Value);
-                asigAppPerf.IdAplicacion = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[2].Value);
+                _AsigAppPerf.Estado = EstadoEntidad.Deleted;
+                _AsigAppPerf.IdRol = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[0].Value);
+                _AsigAppPerf.IdModulo = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[1].Value);
+                _AsigAppPerf.IdAplicacion = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[2].Value);
 
-                string resultado = asigAppPerf.GrabarCambios();
-                MessageBox.Show(resultado);
-                ListaAsigAppPerf();
+                string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
+                MessageBox.Show(Resultado);
+                SeguridadMetListarAsigAppPerf();
             }
             else MessageBox.Show("Seleccione una fila");
         }
@@ -170,7 +170,7 @@ namespace proyecto2k26
         {
             if (DgvSeguridadListaUsuarios.SelectedRows.Count > 0)
             {
-                asigAppPerf.Estado = EstadoEntidad.Modified;
+                _AsigAppPerf.Estado = EstadoEntidad.Modified;
                 CboSeguridadPerfiles.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[0].Value);
                 CboSeguridadModulos.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[1].Value);
                 CboSeguridadAplicaciones.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[2].Value);
@@ -181,7 +181,7 @@ namespace proyecto2k26
             }
         }
 
-        private void Reinicio()
+        private void SeguridadMetReinicio()
         {
             chkSeguridadInsertar.Checked = false;
             chkSeguridadEditar.Checked = false;
@@ -204,22 +204,22 @@ namespace proyecto2k26
                     return;
                 }
 
-                asigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                asigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                asigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
-                asigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
-                asigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
-                asigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
-                asigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
-                asigAppPerf.Estado = EstadoEntidad.Modified;
+                _AsigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
+                _AsigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
+                _AsigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
+                _AsigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
+                _AsigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
+                _AsigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
+                _AsigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
+                _AsigAppPerf.Estado = EstadoEntidad.Modified;
 
-                bool valido = new ValidacionDatos(asigAppPerf).Validar();
-                if (valido)
+                bool Valido = new ClsValidacionDatos(_AsigAppPerf).SeguridadMetValidar();
+                if (Valido)
                 {
-                    string resultado = asigAppPerf.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaAsigAppPerf();
-                    Reinicio();
+                    string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarAsigAppPerf();
+                    SeguridadMetReinicio();
                 }
             }
             catch (Exception ex)
@@ -232,22 +232,22 @@ namespace proyecto2k26
         {
             try
             {
-                asigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                asigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                asigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
-                asigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
-                asigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
-                asigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
-                asigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
-                asigAppPerf.Estado = EstadoEntidad.Added;
+                _AsigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
+                _AsigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
+                _AsigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
+                _AsigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
+                _AsigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
+                _AsigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
+                _AsigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
+                _AsigAppPerf.Estado = EstadoEntidad.Added;
 
-                bool valido = new ValidacionDatos(asigAppPerf).Validar();
-                if (valido)
+                bool Valido = new ClsValidacionDatos(_AsigAppPerf).SeguridadMetValidar();
+                if (Valido)
                 {
-                    string resultado = asigAppPerf.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaAsigAppPerf();
-                    Reinicio();
+                    string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarAsigAppPerf();
+                    SeguridadMetReinicio();
                 }
             }
             catch (Exception ex)
@@ -264,7 +264,7 @@ namespace proyecto2k26
         private void BtnSeguridadActualizar_Click(object sender, EventArgs e)
         {
             TxtSeguridadFiltro.Clear();
-            ListaAsigAppPerf();
+            SeguridadMetListarAsigAppPerf();
         }
 
         private void BtnSeguridadInicio_Click(object sender, EventArgs e)
@@ -281,12 +281,12 @@ namespace proyecto2k26
         {
             if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
             {
-                int filaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
-                if (filaActual > 0)
+                int FilaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
+                if (FilaActual > 0)
                 {
                     DgvSeguridadListaUsuarios.ClearSelection();
-                    DgvSeguridadListaUsuarios.Rows[filaActual - 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[filaActual - 1].Cells[0];
+                    DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Selected = true;
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Cells[0];
                 }
             }
         }
@@ -295,12 +295,12 @@ namespace proyecto2k26
         {
             if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
             {
-                int filaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
-                if (filaActual < DgvSeguridadListaUsuarios.Rows.Count - 1)
+                int FilaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
+                if (FilaActual < DgvSeguridadListaUsuarios.Rows.Count - 1)
                 {
                     DgvSeguridadListaUsuarios.ClearSelection();
-                    DgvSeguridadListaUsuarios.Rows[filaActual + 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[filaActual + 1].Cells[0];
+                    DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Selected = true;
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Cells[0];
                 }
             }
         }
@@ -309,10 +309,10 @@ namespace proyecto2k26
         {
             if (DgvSeguridadListaUsuarios.Rows.Count > 0)
             {
-                int ultimaFila = DgvSeguridadListaUsuarios.Rows.Count - 1;
+                int UltimaFila = DgvSeguridadListaUsuarios.Rows.Count - 1;
                 DgvSeguridadListaUsuarios.ClearSelection();
-                DgvSeguridadListaUsuarios.Rows[ultimaFila].Selected = true;
-                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[ultimaFila].Cells[0];
+                DgvSeguridadListaUsuarios.Rows[UltimaFila].Selected = true;
+                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells[0];
             }
         }
 

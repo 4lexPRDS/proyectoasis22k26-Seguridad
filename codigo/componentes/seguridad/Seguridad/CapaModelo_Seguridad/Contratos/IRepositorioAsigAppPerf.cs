@@ -7,7 +7,7 @@ using CapaModelo_Seguridad.Entidades;
 
 namespace CapaModelo_Seguridad.Contratos
 {
-    public interface IRepositorioAsigAppPerf: IRepositorioGenerico<AsigAppPerf> 
+    public interface IRepositorioAsigAppPerf: IRepositorioGenerico<ClsAsigAppPerf> 
     { }
     
 }

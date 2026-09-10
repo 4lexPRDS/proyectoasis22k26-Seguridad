@@ -9,40 +9,40 @@ namespace CapaVista_Seguridad
 {
     public partial class FrmUsuarios : Form
     {
-        private ModeloUsuario usuario = new ModeloUsuario();
+        private ClsModeloUsuario _Usuario = new ClsModeloUsuario();
         public FrmUsuarios()
         {
             InitializeComponent();
-            
+
         }
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            ListaUsuarios();
-            CargarCombos();
-            CargarComboEstado();
+            SeguridadMetListarUsuarios();
+            SeguridadMetCargarCombos();
+            SeguridadMetCargarComboEstado();
         }
 
-        private void CargarComboEstado()
+        private void SeguridadMetCargarComboEstado()
         {
-            cboEstado.DataSource = usuario.GetEstados();
+            cboEstado.DataSource = _Usuario.SeguridadMetObtenerEstados();
             cboEstado.DisplayMember = "Texto";
             cboEstado.ValueMember = "Valor";
             cboEstado.SelectedIndex = -1;
         }
-        private void CargarCombos()
+        private void SeguridadMetCargarCombos()
         {
             try
             {
-                cboEmpleado.DataSource = usuario.GetEmpleados();
-                cboEmpleado.DisplayMember = "nombresEmpleado";
-                cboEmpleado.ValueMember = "idEmpleado";
+                cboEmpleado.DataSource = _Usuario.SeguridadMetObtenerEmpleados();
+                cboEmpleado.DisplayMember = "NombresEmpleado";
+                cboEmpleado.ValueMember = "IdEmpleado";
                 cboEmpleado.SelectedIndex = -1;
                 cboEmpleado.SelectedIndexChanged += CboEmpleado_SelectedIndexChanged;
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
         }
         private void CboEmpleado_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,15 +53,15 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void ListaUsuarios()
+        private void SeguridadMetListarUsuarios()
         {
             try
             {
-                dgvUsuarios.DataSource = usuario.GetAll();
+                dgvUsuarios.DataSource = _Usuario.SeguridadMetObtenerTodos();
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
 
         }
@@ -80,25 +80,25 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                usuario.IdEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
-                usuario.usuarioUsuario = txtUsuario.Text;
-                usuario.contrasenaUsuario = txtContrasena.Text;
-                usuario.ultimoAccesoUsuario = DateTime.Now;
-                usuario.is_active = Convert.ToInt32(cboEstado.SelectedValue);
-                usuario.Estado = EstadoEntidad.Added;
+                _Usuario.IdEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
+                _Usuario.UsuarioUsuario = txtUsuario.Text;
+                _Usuario.ContrasenaUsuario = txtContrasena.Text;
+                _Usuario.UltimoAccesoUsuario = DateTime.Now;
+                _Usuario.IsActive = Convert.ToInt32(cboEstado.SelectedValue);
+                _Usuario.Estado = EstadoEntidad.Added;
 
-                bool valido = new ValidacionDatos(usuario).Validar();
-                if (valido)
+                bool Valido = new ClsValidacionDatos(_Usuario).SeguridadMetValidar();
+                if (Valido)
                 {
-                    string resultado = usuario.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaUsuarios();
+                    string Resultado = _Usuario.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarUsuarios();
                     //Reinicio();
                 }
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
         }
 

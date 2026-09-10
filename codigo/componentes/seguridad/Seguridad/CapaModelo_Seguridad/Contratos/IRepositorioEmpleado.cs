@@ -7,7 +7,7 @@ using CapaModelo_Seguridad.Entidades;
 
 namespace CapaModelo_Seguridad.Contratos
 {
-    public interface IRepositorioEmpleado: IRepositorioGenerico<Empleado> 
+    public interface IRepositorioEmpleado: IRepositorioGenerico<ClsEmpleado> 
     { }
     
 }

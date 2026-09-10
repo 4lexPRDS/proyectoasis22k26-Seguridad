@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaModelo_Seguridad.Contratos
 {
-    public interface IRepositorioUsuarios : IRepositorioGenerico<Usuarios>
+    public interface IRepositorioUsuarios : IRepositorioGenerico<ClsUsuarios>
     {
     }
 }

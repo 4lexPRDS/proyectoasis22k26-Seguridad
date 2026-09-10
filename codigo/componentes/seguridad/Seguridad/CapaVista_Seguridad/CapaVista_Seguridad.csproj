@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsignacionPerfiles.cs">
+    <Compile Include="FrmAsignacionPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AsignacionPerfiles.Designer.cs">
-      <DependentUpon>AsignacionPerfiles.cs</DependentUpon>
+    <Compile Include="FrmAsignacionPerfiles.Designer.cs">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ayudas\ValidacionDatos.cs" />
+    <Compile Include="Ayudas\ClsValidacionDatos.cs" />
     <Compile Include="FrmAsignacionAplicacionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,17 +109,17 @@
     <Compile Include="FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIseguridad.cs">
+    <Compile Include="FrmMDISeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIseguridad.Designer.cs">
-      <DependentUpon>MDIseguridad.cs</DependentUpon>
+    <Compile Include="FrmMDISeguridad.Designer.cs">
+      <DependentUpon>FrmMDISeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -129,8 +129,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AsignacionPerfiles.resx">
-      <DependentUpon>AsignacionPerfiles.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAsignacionPerfiles.resx">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignacionAplicacionUsuario.resx">
       <DependentUpon>FrmAsignacionAplicacionUsuario.cs</DependentUpon>
@@ -159,11 +159,11 @@
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIseguridad.resx">
-      <DependentUpon>MDIseguridad.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMDISeguridad.resx">
+      <DependentUpon>FrmMDISeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

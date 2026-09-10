@@ -15,7 +15,7 @@ namespace proyecto2k26
 {
     public partial class FrmMantenimientoEmpleado : Form
     {
-        private ModeloEmpleado empleado = new ModeloEmpleado();
+        private ClsModeloEmpleado _Empleado = new ClsModeloEmpleado();
 
         public FrmMantenimientoEmpleado()
         {
@@ -24,14 +24,14 @@ namespace proyecto2k26
 
         private void FrmMantenimientoEmpleado_Load(object sender, EventArgs e)
         {
-            ListaEmpleados();
+            SeguridadMetListarEmpleados();
         }
 
-        private void ListaEmpleados()
+        private void SeguridadMetListarEmpleados()
         {
             try
             {
-                SeguridadDgvEmpleados.DataSource = empleado.GetAll();
+                SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetObtenerTodos();
             }
             catch (Exception ex)
             {
@@ -64,7 +64,7 @@ namespace proyecto2k26
             SeguridadTxtTelefono.Text = "";
             SeguridadTxtCorreo.Text = "";
 
-            empleado.Estado = EstadoEntidad.Added;
+            _Empleado.Estado = EstadoEntidad.Added;
 
             SeguridadCboGenero.Enabled = true;
         }
@@ -79,8 +79,8 @@ namespace proyecto2k26
                     return;
                 }
 
-                int idEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
-                SeguridadDgvEmpleados.DataSource = empleado.FindbyId(idEmpleado);
+                int IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
+                SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(IdEmpleado);
             }
             catch (FormatException)
             {
@@ -96,12 +96,12 @@ namespace proyecto2k26
         {
             if (SeguridadDgvEmpleados.SelectedRows.Count > 0)
             {
-                empleado.Estado = EstadoEntidad.Deleted;
-                empleado.IdEmpleado = Convert.ToInt32(SeguridadDgvEmpleados.CurrentRow.Cells[0].Value);
+                _Empleado.Estado = EstadoEntidad.Deleted;
+                _Empleado.IdEmpleado = Convert.ToInt32(SeguridadDgvEmpleados.CurrentRow.Cells[0].Value);
 
-                string resultado = empleado.GrabarCambios();
-                MessageBox.Show(resultado);
-                ListaEmpleados();
+                string Resultado = _Empleado.SeguridadMetGrabarCambios();
+                MessageBox.Show(Resultado);
+                SeguridadMetListarEmpleados();
             }
             else MessageBox.Show("Seleccione una fila");
         }
@@ -120,7 +120,7 @@ namespace proyecto2k26
         {
             if (SeguridadDgvEmpleados.SelectedRows.Count > 0)
             {
-                empleado.Estado = EstadoEntidad.Modified;
+                _Empleado.Estado = EstadoEntidad.Modified;
                 SeguridadTxtIdEmpleado.Text = SeguridadDgvEmpleados.CurrentRow.Cells[0].Value.ToString();
                 SeguridadTxtCodigo.Text = SeguridadDgvEmpleados.CurrentRow.Cells[1].Value.ToString();
                 SeguridadTxtDpi.Text = SeguridadDgvEmpleados.CurrentRow.Cells[2].Value.ToString();
@@ -137,7 +137,7 @@ namespace proyecto2k26
             }
         }
 
-        private void Reinicio()
+        private void SeguridadMetReinicio()
         {
             SeguridadTxtCodigo.Text = "";
             SeguridadTxtDpi.Text = "";
@@ -160,27 +160,27 @@ namespace proyecto2k26
                     return;
                 }
 
-                empleado.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
-                empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
-                empleado.DpiEmpleado = SeguridadTxtDpi.Text;
-                empleado.NitEmpleado = SeguridadTxtNit.Text;
-                empleado.NombresEmpleado = SeguridadTxtNombres.Text;
-                empleado.ApellidosEmpleado = SeguridadTxtApellidos.Text;
-                empleado.PuestoEmpleado = SeguridadTxtPuesto.Text;
-                empleado.GeneroEmpleado = SeguridadCboGenero.SelectedItem?.ToString();
-                empleado.FechaNacimientoEmpleado = SeguridadDtpFechaNacimiento.Value;
-                empleado.FechaContratacionEmpleado = SeguridadDtpFechaContratacion.Value;
-                empleado.TelefonoEmpleado = SeguridadTxtTelefono.Text;
-                empleado.CorreoEmpleado = SeguridadTxtCorreo.Text;
-                empleado.Estado = EstadoEntidad.Modified;
+                _Empleado.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
+                _Empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
+                _Empleado.DpiEmpleado = SeguridadTxtDpi.Text;
+                _Empleado.NitEmpleado = SeguridadTxtNit.Text;
+                _Empleado.NombresEmpleado = SeguridadTxtNombres.Text;
+                _Empleado.ApellidosEmpleado = SeguridadTxtApellidos.Text;
+                _Empleado.PuestoEmpleado = SeguridadTxtPuesto.Text;
+                _Empleado.GeneroEmpleado = SeguridadCboGenero.SelectedItem?.ToString();
+                _Empleado.FechaNacimientoEmpleado = SeguridadDtpFechaNacimiento.Value;
+                _Empleado.FechaContratacionEmpleado = SeguridadDtpFechaContratacion.Value;
+                _Empleado.TelefonoEmpleado = SeguridadTxtTelefono.Text;
+                _Empleado.CorreoEmpleado = SeguridadTxtCorreo.Text;
+                _Empleado.Estado = EstadoEntidad.Modified;
 
-                bool valido = new ValidacionDatos(empleado).Validar();
-                if (valido)
+                bool Valido = new ClsValidacionDatos(_Empleado).SeguridadMetValidar();
+                if (Valido)
                 {
-                    string resultado = empleado.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaEmpleados();
-                    Reinicio();
+                    string Resultado = _Empleado.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarEmpleados();
+                    SeguridadMetReinicio();
                 }
             }
             catch (Exception ex)
@@ -193,26 +193,26 @@ namespace proyecto2k26
         {
             try
             {
-                empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
-                empleado.DpiEmpleado = SeguridadTxtDpi.Text;
-                empleado.NitEmpleado = SeguridadTxtNit.Text;
-                empleado.NombresEmpleado = SeguridadTxtNombres.Text;
-                empleado.ApellidosEmpleado = SeguridadTxtApellidos.Text;
-                empleado.PuestoEmpleado = SeguridadTxtPuesto.Text;
-                empleado.GeneroEmpleado = SeguridadCboGenero.SelectedItem?.ToString();
-                empleado.FechaNacimientoEmpleado = SeguridadDtpFechaNacimiento.Value;
-                empleado.FechaContratacionEmpleado = SeguridadDtpFechaContratacion.Value;
-                empleado.TelefonoEmpleado = SeguridadTxtTelefono.Text;
-                empleado.CorreoEmpleado = SeguridadTxtCorreo.Text;
-                empleado.Estado = EstadoEntidad.Added;
+                _Empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
+                _Empleado.DpiEmpleado = SeguridadTxtDpi.Text;
+                _Empleado.NitEmpleado = SeguridadTxtNit.Text;
+                _Empleado.NombresEmpleado = SeguridadTxtNombres.Text;
+                _Empleado.ApellidosEmpleado = SeguridadTxtApellidos.Text;
+                _Empleado.PuestoEmpleado = SeguridadTxtPuesto.Text;
+                _Empleado.GeneroEmpleado = SeguridadCboGenero.SelectedItem?.ToString();
+                _Empleado.FechaNacimientoEmpleado = SeguridadDtpFechaNacimiento.Value;
+                _Empleado.FechaContratacionEmpleado = SeguridadDtpFechaContratacion.Value;
+                _Empleado.TelefonoEmpleado = SeguridadTxtTelefono.Text;
+                _Empleado.CorreoEmpleado = SeguridadTxtCorreo.Text;
+                _Empleado.Estado = EstadoEntidad.Added;
 
-                bool valido = new ValidacionDatos(empleado).Validar();
-                if (valido)
+                bool Valido = new ClsValidacionDatos(_Empleado).SeguridadMetValidar();
+                if (Valido)
                 {
-                    string resultado = empleado.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaEmpleados();
-                    Reinicio();
+                    string Resultado = _Empleado.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarEmpleados();
+                    SeguridadMetReinicio();
                 }
             }
             catch (Exception ex)
@@ -224,14 +224,14 @@ namespace proyecto2k26
         private void SeguridadBtnLimpiar_Click(object sender, EventArgs e)
         {
             SeguridadTxtIdEmpleado.Clear();
-            Reinicio();
-            ListaEmpleados();
+            SeguridadMetReinicio();
+            SeguridadMetListarEmpleados();
         }
 
         private void SeguridadBtnRefrescar_Click(object sender, EventArgs e)
         {
             SeguridadTxtIdEmpleado.Clear();
-            ListaEmpleados();
+            SeguridadMetListarEmpleados();
         }
 
         private void SeguridadBtnInicio_Click(object sender, EventArgs e)
@@ -248,12 +248,12 @@ namespace proyecto2k26
         {
             if (SeguridadDgvEmpleados.Rows.Count > 0 && SeguridadDgvEmpleados.CurrentCell != null)
             {
-                int filaActual = SeguridadDgvEmpleados.CurrentCell.RowIndex;
-                if (filaActual > 0)
+                int FilaActual = SeguridadDgvEmpleados.CurrentCell.RowIndex;
+                if (FilaActual > 0)
                 {
                     SeguridadDgvEmpleados.ClearSelection();
-                    SeguridadDgvEmpleados.Rows[filaActual - 1].Selected = true;
-                    SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[filaActual - 1].Cells[0];
+                    SeguridadDgvEmpleados.Rows[FilaActual - 1].Selected = true;
+                    SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual - 1].Cells[0];
                 }
             }
         }
@@ -262,12 +262,12 @@ namespace proyecto2k26
         {
             if (SeguridadDgvEmpleados.Rows.Count > 0 && SeguridadDgvEmpleados.CurrentCell != null)
             {
-                int filaActual = SeguridadDgvEmpleados.CurrentCell.RowIndex;
-                if (filaActual < SeguridadDgvEmpleados.Rows.Count - 1)
+                int FilaActual = SeguridadDgvEmpleados.CurrentCell.RowIndex;
+                if (FilaActual < SeguridadDgvEmpleados.Rows.Count - 1)
                 {
                     SeguridadDgvEmpleados.ClearSelection();
-                    SeguridadDgvEmpleados.Rows[filaActual + 1].Selected = true;
-                    SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[filaActual + 1].Cells[0];
+                    SeguridadDgvEmpleados.Rows[FilaActual + 1].Selected = true;
+                    SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual + 1].Cells[0];
                 }
             }
         }
@@ -276,10 +276,10 @@ namespace proyecto2k26
         {
             if (SeguridadDgvEmpleados.Rows.Count > 0)
             {
-                int ultimaFila = SeguridadDgvEmpleados.Rows.Count - 1;
+                int UltimaFila = SeguridadDgvEmpleados.Rows.Count - 1;
                 SeguridadDgvEmpleados.ClearSelection();
-                SeguridadDgvEmpleados.Rows[ultimaFila].Selected = true;
-                SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[ultimaFila].Cells[0];
+                SeguridadDgvEmpleados.Rows[UltimaFila].Selected = true;
+                SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[UltimaFila].Cells[0];
             }
         }
     }
