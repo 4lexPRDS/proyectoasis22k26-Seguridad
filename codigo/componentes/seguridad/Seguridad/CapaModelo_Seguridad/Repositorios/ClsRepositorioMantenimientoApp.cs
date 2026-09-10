@@ -8,10 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace CapaModelo_Seguridad.Repositorios
 {
-    public class ClsRepositorioMantenimientoApp : Sentencias, IRepositorioMantenimientoApp
+    public class ClsRepositorioMantenimientoApp : ClsSentencias, IRepositorioMantenimientoApp
     {
         private string _SelectAll;
         private string _Insert;
@@ -26,64 +25,63 @@ namespace CapaModelo_Seguridad.Repositorios
             _Delete = "DELETE FROM tblAplicacion WHERE idAplicacion=?";
         }
 
-        public int Agregar(ClsMantenimientoAplicacion Entidad)
+        public int SeguridadMetAgregar(ClsMantenimientoAplicacion Entidad)
         {
             var Parametros = new List<OdbcParameter>();
-            Parametros.Add(new OdbcParameter("p_idModulo", Entidad.idModulo));
-            Parametros.Add(new OdbcParameter("p_nombreAplicacion", Entidad.nombreAplicacion));
-            Parametros.Add(new OdbcParameter("p_descripcionAplicacion", Entidad.descripcionAplicacion));
-            Parametros.Add(new OdbcParameter("p_is_active", Entidad.is_active));
-            return EjecucionNonQuery(_Insert, Parametros, CommandType.Text);
+            Parametros.Add(new OdbcParameter("p_idModulo", Entidad.IdModulo));
+            Parametros.Add(new OdbcParameter("p_nombreAplicacion", Entidad.NombreAplicacion));
+            Parametros.Add(new OdbcParameter("p_descripcionAplicacion", Entidad.DescripcionAplicacion));
+            Parametros.Add(new OdbcParameter("p_is_active", Entidad.IsActive));
+            return SeguridadMetEjecucionNonQuery(_Insert, Parametros, CommandType.Text);
         }
 
-        public int Editar(ClsMantenimientoAplicacion Entidad)
+        public int SeguridadMetEditar(ClsMantenimientoAplicacion Entidad)
         {
             var Parametros = new List<OdbcParameter>();
-            Parametros.Add(new OdbcParameter("p_idModulo", Entidad.idModulo));
-            Parametros.Add(new OdbcParameter("p_nombreAplicacion", Entidad.nombreAplicacion));
-            Parametros.Add(new OdbcParameter("p_descripcionAplicacion", Entidad.descripcionAplicacion));
-            Parametros.Add(new OdbcParameter("p_is_active", Entidad.is_active));
-            Parametros.Add(new OdbcParameter("p_idAplicacion", Entidad.idAplicacion));
-            return EjecucionNonQuery(_Update, Parametros, CommandType.Text);
+            Parametros.Add(new OdbcParameter("p_idModulo", Entidad.IdModulo));
+            Parametros.Add(new OdbcParameter("p_nombreAplicacion", Entidad.NombreAplicacion));
+            Parametros.Add(new OdbcParameter("p_descripcionAplicacion", Entidad.DescripcionAplicacion));
+            Parametros.Add(new OdbcParameter("p_is_active", Entidad.IsActive));
+            Parametros.Add(new OdbcParameter("p_idAplicacion", Entidad.IdAplicacion));
+            return SeguridadMetEjecucionNonQuery(_Update, Parametros, CommandType.Text);
         }
 
-        public int Remover(ClsMantenimientoAplicacion Entidad)
+        public int SeguridadMetRemover(ClsMantenimientoAplicacion Entidad)
         {
             var Parametros = new List<OdbcParameter>();
-            Parametros.Add(new OdbcParameter("p_idAplicacion", Entidad.idAplicacion));
-            return EjecucionNonQuery(_Delete, Parametros, CommandType.Text);
+            Parametros.Add(new OdbcParameter("p_idAplicacion", Entidad.IdAplicacion));
+            return SeguridadMetEjecucionNonQuery(_Delete, Parametros, CommandType.Text);
         }
 
-        public IEnumerable<ClsMantenimientoAplicacion> GetAll()
+        public IEnumerable<ClsMantenimientoAplicacion> SeguridadMetObtenerTodos()
         {
-            var LstAplicaciones = new List<ClsMantenimientoAplicacion>();
-            var TablaDatos = EjecucionConsulta(_SelectAll, CommandType.Text);
+            var ListaAplicaciones = new List<ClsMantenimientoAplicacion>();
+            var TablaDatos = SeguridadMetEjecucionConsulta(_SelectAll, CommandType.Text);
             foreach (DataRow Row in TablaDatos.Rows)
             {
                 var Aplicacion = new ClsMantenimientoAplicacion();
-
-                Aplicacion.idAplicacion = Convert.ToInt32(Row[0]);
-                Aplicacion.idModulo = Convert.ToInt32(Row[1]);
-                Aplicacion.nombreAplicacion = Convert.ToString(Row[2]);
-                Aplicacion.descripcionAplicacion = Convert.ToString(Row[3]);
-                Aplicacion.is_active = Convert.ToBoolean(Row[4]);
-                Aplicacion.created_at = Convert.ToDateTime(Row[5]);
-                Aplicacion.updated_at = Convert.ToDateTime(Row[6]);
-                LstAplicaciones.Add(Aplicacion);
+                Aplicacion.IdAplicacion = Convert.ToInt32(Row[0]);
+                Aplicacion.IdModulo = Convert.ToInt32(Row[1]);
+                Aplicacion.NombreAplicacion = Convert.ToString(Row[2]);
+                Aplicacion.DescripcionAplicacion = Convert.ToString(Row[3]);
+                Aplicacion.IsActive = Convert.ToBoolean(Row[4]);
+                Aplicacion.CreatedAt = Convert.ToDateTime(Row[5]);
+                Aplicacion.UpdatedAt = Convert.ToDateTime(Row[6]);
+                ListaAplicaciones.Add(Aplicacion);
             }
             TablaDatos.Clear();
             TablaDatos = null;
-            return LstAplicaciones;
+            return ListaAplicaciones;
         }
 
-        public DataTable SeguridadMetGetModulos()
+        public DataTable SeguridadMetObtenerModulos()
         {
-            return EjecucionConsulta("SELECT idModulo, nombreModulo FROM tblModulo", CommandType.Text);
+            return SeguridadMetEjecucionConsulta("SELECT idModulo, nombreModulo FROM tblModulo", CommandType.Text);
         }
 
-        public DataTable SeguridadMetGetAplicaciones()
+        public DataTable SeguridadMetObtenerAplicaciones()
         {
-            return EjecucionConsulta("SELECT idAplicacion, CONCAT(idAplicacion, ' - ', nombreAplicacion) AS nombreAplicacion FROM tblAplicacion",CommandType.Text);
+            return SeguridadMetEjecucionConsulta("SELECT idAplicacion, CONCAT(idAplicacion, ' - ', nombreAplicacion) AS nombreAplicacion FROM tblAplicacion", CommandType.Text);
         }
     }
 }

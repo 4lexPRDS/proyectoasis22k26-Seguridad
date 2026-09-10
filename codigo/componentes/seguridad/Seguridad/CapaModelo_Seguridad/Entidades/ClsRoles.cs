@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaModelo_Seguridad.Entidades
 {
-    public class ClsMantenimientoAplicacion
+    public class ClsRoles
     {
-        public int IdAplicacion { get; set; }
-        public int IdModulo { get; set; }
-        public string NombreAplicacion { get; set; }
-        public string DescripcionAplicacion { get; set; }
+        public int IdRol { get; set; }
+        public string NombreRol { get; set; }
+        public string DescripcionRol { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

@@ -8,110 +8,110 @@ namespace CapaVista_Seguridad
 {
     public partial class FrmModulo : Form
     {
-        private ModeloModulo controladorModulo = new ModeloModulo();
-        private BindingSource bindingSource = new BindingSource();
-        private bool esCargando = false; // Bandera para evitar eventos al enlazar datos
+        private ClsModeloModulo _ControladorModulo = new ClsModeloModulo();
+        private BindingSource _BindingSource = new BindingSource();
+        private bool _EsCargando = false; // Bandera para evitar eventos al enlazar datos
 
         public FrmModulo()
         {
             InitializeComponent();
-            AplicarEstandarVisual();
-            CargarDatos();
-            EstadoInicial();
+            SeguridadMetAplicarEstandarVisual();
+            SeguridadMetCargarDatos();
+            SeguridadMetEstadoInicial();
         }
 
         #region Estándar Visual y Configuración de Barra de Herramientas
 
-        private void AplicarEstandarVisual()
+        private void SeguridadMetAplicarEstandarVisual()
         {
-            Color colorFondo = ColorTranslator.FromHtml("#EDC9A1");
-            Color colorBotonFondo = ColorTranslator.FromHtml("#83C5BE");
-            Color colorBotonBorde = ColorTranslator.FromHtml("#006D77");
+            Color ColorFondo = ColorTranslator.FromHtml("#EDC9A1");
+            Color ColorBotonFondo = ColorTranslator.FromHtml("#83C5BE");
+            Color ColorBotonBorde = ColorTranslator.FromHtml("#006D77");
 
-            this.BackColor = colorFondo;
-            this.pnlBarraHerramientas.BackColor = colorFondo;
+            this.BackColor = ColorFondo;
+            this.pnlBarraHerramientas.BackColor = ColorFondo;
 
-            string[] nombresBotones = { "Ingresar", "Modificar", "Guardar", "Cancelar", "Eliminar",
+            string[] NombresBotones = { "Ingresar", "Modificar", "Guardar", "Cancelar", "Eliminar",
                                 "Consultar", "Imprimir", "Refrescar", "Inicio", "Anterior",
                                 "Siguiente", "Fin", "Ayuda", "Salir" };
 
             this.pnlBarraHerramientas.Controls.Clear();
 
-            foreach (string nombre in nombresBotones)
+            foreach (string Nombre in NombresBotones)
             {
-                Button btn = new Button
+                Button Btn = new Button
                 {
-                    Name = "SeguridadBtn" + nombre,
+                    Name = "SeguridadBtn" + Nombre,
                     Text = "",
                     Size = new Size(62, 65),
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = colorBotonFondo,
+                    BackColor = ColorBotonFondo,
                     Cursor = Cursors.Hand,
                     BackgroundImageLayout = ImageLayout.Zoom,
                     Margin = new Padding(2)
                 };
 
-                btn.FlatAppearance.BorderColor = colorBotonBorde;
-                btn.FlatAppearance.BorderSize = 1;
+                Btn.FlatAppearance.BorderColor = ColorBotonBorde;
+                Btn.FlatAppearance.BorderSize = 1;
 
-                switch (nombre)
+                switch (Nombre)
                 {
                     case "Ingresar":
-                        btn.BackgroundImage = Properties.Resources.btn_ingresarN;
-                        btn.Click += BtnIngresar_Click;
+                        Btn.BackgroundImage = Properties.Resources.btn_ingresarN;
+                        Btn.Click += BtnIngresar_Click;
                         break;
                     case "Modificar":
-                        btn.BackgroundImage = Properties.Resources.btn_modificarN;
-                        btn.Click += BtnModificar_Click;
+                        Btn.BackgroundImage = Properties.Resources.btn_modificarN;
+                        Btn.Click += BtnModificar_Click;
                         break;
                     case "Guardar":
-                        btn.BackgroundImage = Properties.Resources.btn_guardarN;
-                        btn.Click += BtnGuardar_Click;
+                        Btn.BackgroundImage = Properties.Resources.btn_guardarN;
+                        Btn.Click += BtnGuardar_Click;
                         break;
                     case "Cancelar":
-                        btn.BackgroundImage = Properties.Resources.btn_cancelarN;
-                        btn.Click += BtnCancelar_Click;
+                        Btn.BackgroundImage = Properties.Resources.btn_cancelarN;
+                        Btn.Click += BtnCancelar_Click;
                         break;
                     case "Eliminar":
-                        btn.BackgroundImage = Properties.Resources.btn_eliminarN;
-                        btn.Click += BtnEliminar_Click;
+                        Btn.BackgroundImage = Properties.Resources.btn_eliminarN;
+                        Btn.Click += BtnEliminar_Click;
                         break;
                     case "Consultar":
                     case "Refrescar":
-                        btn.BackgroundImage = (nombre == "Consultar") ? Properties.Resources.btn_consultarN : Properties.Resources.btn_refrescarN;
-                        btn.Click += (s, e) => { CargarDatos(); EstadoInicial(); };
+                        Btn.BackgroundImage = (Nombre == "Consultar") ? Properties.Resources.btn_consultarN : Properties.Resources.btn_refrescarN;
+                        Btn.Click += (s, e) => { SeguridadMetCargarDatos(); SeguridadMetEstadoInicial(); };
                         break;
                     case "Imprimir":
-                        btn.BackgroundImage = Properties.Resources.btn_imprimirN;
-                        btn.Click += (s, e) => MessageBox.Show("Generando reporte de módulos...", "Imprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Btn.BackgroundImage = Properties.Resources.btn_imprimirN;
+                        Btn.Click += (s, e) => MessageBox.Show("Generando reporte de módulos...", "Imprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case "Inicio":
-                        btn.BackgroundImage = Properties.Resources.btn_inicioN;
-                        btn.Click += (s, e) => bindingSource.MoveFirst();
+                        Btn.BackgroundImage = Properties.Resources.btn_inicioN;
+                        Btn.Click += (s, e) => _BindingSource.MoveFirst();
                         break;
                     case "Anterior":
-                        btn.BackgroundImage = Properties.Resources.btn_anteriorN;
-                        btn.Click += (s, e) => bindingSource.MovePrevious();
+                        Btn.BackgroundImage = Properties.Resources.btn_anteriorN;
+                        Btn.Click += (s, e) => _BindingSource.MovePrevious();
                         break;
                     case "Siguiente":
-                        btn.BackgroundImage = Properties.Resources.btn_siguienteN;
-                        btn.Click += (s, e) => bindingSource.MoveNext();
+                        Btn.BackgroundImage = Properties.Resources.btn_siguienteN;
+                        Btn.Click += (s, e) => _BindingSource.MoveNext();
                         break;
                     case "Fin":
-                        btn.BackgroundImage = Properties.Resources.btn_finN;
-                        btn.Click += (s, e) => bindingSource.MoveLast();
+                        Btn.BackgroundImage = Properties.Resources.btn_finN;
+                        Btn.Click += (s, e) => _BindingSource.MoveLast();
                         break;
                     case "Ayuda":
-                        btn.BackgroundImage = Properties.Resources.btn_ayudaN;
-                        btn.Click += (s, e) => MessageBox.Show("Formulario para mantenimiento de módulos del sistema.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Btn.BackgroundImage = Properties.Resources.btn_ayudaN;
+                        Btn.Click += (s, e) => MessageBox.Show("Formulario para mantenimiento de módulos del sistema.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case "Salir":
-                        btn.BackgroundImage = Properties.Resources.btn_salirN;
-                        btn.Click += (s, e) => this.Close();
+                        Btn.BackgroundImage = Properties.Resources.btn_salirN;
+                        Btn.Click += (s, e) => this.Close();
                         break;
                 }
 
-                this.pnlBarraHerramientas.Controls.Add(btn);
+                this.pnlBarraHerramientas.Controls.Add(Btn);
             }
 
             // Estilos del DataGridView
@@ -122,52 +122,52 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvModulos.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
 
             this.SeguridadDgvModulos.CellClick += SeguridadDgvModulos_CellClick;
-            this.bindingSource.CurrentChanged += BindingSource_CurrentChanged;
+            _BindingSource.CurrentChanged += BindingSource_CurrentChanged;
         }
 
         #endregion
 
         #region Gestión de Datos y Carga desde Base de Datos
 
-        private void CargarDatos()
+        private void SeguridadMetCargarDatos()
         {
             try
             {
-                esCargando = true;
+                _EsCargando = true;
 
-                DataTable dtModulos = controladorModulo.ObtenerModulosTabla();
-                bindingSource.DataSource = dtModulos;
-                SeguridadDgvModulos.DataSource = bindingSource;
+                DataTable DtModulos = _ControladorModulo.SeguridadMetObtenerModulosTabla();
+                _BindingSource.DataSource = DtModulos;
+                SeguridadDgvModulos.DataSource = _BindingSource;
 
-                FormatearGrid();
-                CargarComboBoxesDesdeBD();
+                SeguridadMetFormatearGrid();
+                SeguridadMetCargarComboBoxesDesdeBD();
 
-                esCargando = false;
+                _EsCargando = false;
             }
             catch (Exception ex)
             {
-                esCargando = false;
+                _EsCargando = false;
                 MessageBox.Show("Error al consultar la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void CargarComboBoxesDesdeBD()
+        private void SeguridadMetCargarComboBoxesDesdeBD()
         {
             try
             {
                 // Obtenemos los registros reales de la base de datos
-                DataTable dtModulosNombre = controladorModulo.ObtenerModulosTabla();
-                DataTable dtModulosDescrip = controladorModulo.ObtenerModulosTabla();
+                DataTable DtModulosNombre = _ControladorModulo.SeguridadMetObtenerModulosTabla();
+                DataTable DtModulosDescrip = _ControladorModulo.SeguridadMetObtenerModulosTabla();
 
-                if (dtModulosNombre != null && dtModulosNombre.Rows.Count > 0)
+                if (DtModulosNombre != null && DtModulosNombre.Rows.Count > 0)
                 {
                     // Llenar ComboBox Nombre Módulo desde BD
-                    SeguridadCmbNombreModulo.DataSource = dtModulosNombre;
+                    SeguridadCmbNombreModulo.DataSource = DtModulosNombre;
                     SeguridadCmbNombreModulo.DisplayMember = "nombreModulo";
                     SeguridadCmbNombreModulo.ValueMember = "idModulo";
 
                     // Llenar ComboBox Descripción Módulo desde BD
-                    SeguridadCmbDescripcion.DataSource = dtModulosDescrip;
+                    SeguridadCmbDescripcion.DataSource = DtModulosDescrip;
                     SeguridadCmbDescripcion.DisplayMember = "descripcionModulo";
                     SeguridadCmbDescripcion.ValueMember = "idModulo";
                 }
@@ -178,14 +178,14 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void FormatearGrid()
+        private void SeguridadMetFormatearGrid()
         {
             if (SeguridadDgvModulos.Columns.Contains("is_active"))
             {
-                int colIndex = SeguridadDgvModulos.Columns["is_active"].Index;
+                int ColIndex = SeguridadDgvModulos.Columns["is_active"].Index;
                 SeguridadDgvModulos.Columns.Remove("is_active");
 
-                DataGridViewCheckBoxColumn chkCol = new DataGridViewCheckBoxColumn
+                DataGridViewCheckBoxColumn ChkCol = new DataGridViewCheckBoxColumn
                 {
                     Name = "is_active",
                     DataPropertyName = "is_active",
@@ -193,7 +193,7 @@ namespace CapaVista_Seguridad
                     TrueValue = 1,
                     FalseValue = 0
                 };
-                SeguridadDgvModulos.Columns.Insert(colIndex, chkCol);
+                SeguridadDgvModulos.Columns.Insert(ColIndex, ChkCol);
             }
 
             if (SeguridadDgvModulos.Columns.Count > 0)
@@ -207,22 +207,22 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void CargarRegistroActual()
+        private void SeguridadMetCargarRegistroActual()
         {
-            if (esCargando) return;
+            if (_EsCargando) return;
 
-            if (bindingSource.Current is DataRowView row)
+            if (_BindingSource.Current is DataRowView Fila)
             {
-                SeguridadCmbIdModulo.Text = row["idModulo"].ToString();
-                SeguridadCmbNombreModulo.Text = row["nombreModulo"].ToString();
-                SeguridadCmbDescripcion.Text = row["descripcionModulo"].ToString();
+                SeguridadCmbIdModulo.Text = Fila["idModulo"].ToString();
+                SeguridadCmbNombreModulo.Text = Fila["nombreModulo"].ToString();
+                SeguridadCmbDescripcion.Text = Fila["descripcionModulo"].ToString();
 
-                object val = row["is_active"];
-                SeguridadChkEstado.Checked = (val != DBNull.Value && (Convert.ToInt32(val) == 1 || Convert.ToBoolean(val)));
+                object Val = Fila["is_active"];
+                SeguridadChkEstado.Checked = (Val != DBNull.Value && (Convert.ToInt32(Val) == 1 || Convert.ToBoolean(Val)));
             }
             else
             {
-                LimpiarCampos();
+                SeguridadMetLimpiarCampos();
             }
         }
 
@@ -230,16 +230,16 @@ namespace CapaVista_Seguridad
 
         #region Control de Estados del Formulario y Botones
 
-        private void CambiarEstadoBoton(string nombreBoton, bool habilitado)
+        private void SeguridadMetCambiarEstadoBoton(string NombreBoton, bool Habilitado)
         {
-            Control[] controles = this.pnlBarraHerramientas.Controls.Find("SeguridadBtn" + nombreBoton, false);
-            if (controles.Length > 0)
+            Control[] Controles = this.pnlBarraHerramientas.Controls.Find("SeguridadBtn" + NombreBoton, false);
+            if (Controles.Length > 0)
             {
-                controles[0].Enabled = habilitado;
+                Controles[0].Enabled = Habilitado;
             }
         }
 
-        private void EstadoInicial()
+        private void SeguridadMetEstadoInicial()
         {
             SeguridadCmbIdModulo.Enabled = false;
             SeguridadCmbNombreModulo.Enabled = false;
@@ -249,17 +249,17 @@ namespace CapaVista_Seguridad
             SeguridadCmbNombreModulo.DropDownStyle = ComboBoxStyle.DropDownList;
             SeguridadCmbDescripcion.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            CargarRegistroActual();
+            SeguridadMetCargarRegistroActual();
 
-            CambiarEstadoBoton("Ingresar", true);
-            CambiarEstadoBoton("Modificar", true);
-            CambiarEstadoBoton("Eliminar", true);
-            CambiarEstadoBoton("Consultar", true);
-            CambiarEstadoBoton("Guardar", false);
-            CambiarEstadoBoton("Cancelar", false);
+            SeguridadMetCambiarEstadoBoton("Ingresar", true);
+            SeguridadMetCambiarEstadoBoton("Modificar", true);
+            SeguridadMetCambiarEstadoBoton("Eliminar", true);
+            SeguridadMetCambiarEstadoBoton("Consultar", true);
+            SeguridadMetCambiarEstadoBoton("Guardar", false);
+            SeguridadMetCambiarEstadoBoton("Cancelar", false);
         }
 
-        private void EstadoEdicion()
+        private void SeguridadMetEstadoEdicion()
         {
             SeguridadCmbNombreModulo.Enabled = true;
             SeguridadCmbDescripcion.Enabled = true;
@@ -269,15 +269,15 @@ namespace CapaVista_Seguridad
             SeguridadCmbNombreModulo.DropDownStyle = ComboBoxStyle.DropDown;
             SeguridadCmbDescripcion.DropDownStyle = ComboBoxStyle.DropDown;
 
-            CambiarEstadoBoton("Ingresar", false);
-            CambiarEstadoBoton("Modificar", false);
-            CambiarEstadoBoton("Eliminar", false);
-            CambiarEstadoBoton("Consultar", false);
-            CambiarEstadoBoton("Guardar", true);
-            CambiarEstadoBoton("Cancelar", true);
+            SeguridadMetCambiarEstadoBoton("Ingresar", false);
+            SeguridadMetCambiarEstadoBoton("Modificar", false);
+            SeguridadMetCambiarEstadoBoton("Eliminar", false);
+            SeguridadMetCambiarEstadoBoton("Consultar", false);
+            SeguridadMetCambiarEstadoBoton("Guardar", true);
+            SeguridadMetCambiarEstadoBoton("Cancelar", true);
         }
 
-        private void LimpiarCampos()
+        private void SeguridadMetLimpiarCampos()
         {
             SeguridadCmbIdModulo.Text = "";
             SeguridadCmbNombreModulo.SelectedIndex = -1;
@@ -293,13 +293,13 @@ namespace CapaVista_Seguridad
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            EstadoEdicion();
+            SeguridadMetEstadoEdicion();
 
             // Cargar los elementos desplegables de la base de datos
-            CargarComboBoxesDesdeBD();
+            SeguridadMetCargarComboBoxesDesdeBD();
 
             // Limpiar los controles para un nuevo registro (Id Módulo queda vacío para AUTO_INCREMENT)
-            LimpiarCampos();
+            SeguridadMetLimpiarCampos();
 
             SeguridadCmbNombreModulo.Focus();
         }
@@ -308,7 +308,7 @@ namespace CapaVista_Seguridad
         {
             if (!string.IsNullOrEmpty(SeguridadCmbIdModulo.Text))
             {
-                EstadoEdicion();
+                SeguridadMetEstadoEdicion();
                 SeguridadCmbNombreModulo.Focus();
             }
             else
@@ -319,8 +319,8 @@ namespace CapaVista_Seguridad
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            CargarDatos();
-            EstadoInicial();
+            SeguridadMetCargarDatos();
+            SeguridadMetEstadoInicial();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -331,43 +331,43 @@ namespace CapaVista_Seguridad
                 return;
             }
 
-            controladorModulo.NombreModulo = SeguridadCmbNombreModulo.Text.Trim();
-            controladorModulo.DescripcionModulo = SeguridadCmbDescripcion.Text.Trim();
-            controladorModulo.Is_active = SeguridadChkEstado.Checked;
+            _ControladorModulo.NombreModulo = SeguridadCmbNombreModulo.Text.Trim();
+            _ControladorModulo.DescripcionModulo = SeguridadCmbDescripcion.Text.Trim();
+            _ControladorModulo.IsActive = SeguridadChkEstado.Checked;
 
             // Si Id Módulo está vacío, es un INSERT nuevo
             if (string.IsNullOrEmpty(SeguridadCmbIdModulo.Text))
             {
-                controladorModulo.Estado = EstadoEntidad.Added;
+                _ControladorModulo.Estado = EstadoEntidad.Added;
             }
             else
             {
-                controladorModulo.IdModulo = Convert.ToInt32(SeguridadCmbIdModulo.Text);
-                controladorModulo.Estado = EstadoEntidad.Modified;
+                _ControladorModulo.IdModulo = Convert.ToInt32(SeguridadCmbIdModulo.Text);
+                _ControladorModulo.Estado = EstadoEntidad.Modified;
             }
 
-            string resultado = controladorModulo.GrabarCambios();
-            MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string Resultado = _ControladorModulo.SeguridadMetGrabarCambios();
+            MessageBox.Show(Resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            CargarDatos();
-            EstadoInicial();
+            SeguridadMetCargarDatos();
+            SeguridadMetEstadoInicial();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(SeguridadCmbIdModulo.Text))
             {
-                DialogResult respuesta = MessageBox.Show("¿Está seguro de eliminar este módulo definitivamente?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (respuesta == DialogResult.Yes)
+                DialogResult Respuesta = MessageBox.Show("¿Está seguro de eliminar este módulo definitivamente?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Respuesta == DialogResult.Yes)
                 {
-                    controladorModulo.IdModulo = Convert.ToInt32(SeguridadCmbIdModulo.Text);
-                    controladorModulo.Estado = EstadoEntidad.Deleted;
+                    _ControladorModulo.IdModulo = Convert.ToInt32(SeguridadCmbIdModulo.Text);
+                    _ControladorModulo.Estado = EstadoEntidad.Deleted;
 
-                    string resultado = controladorModulo.GrabarCambios();
-                    MessageBox.Show(resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string Resultado = _ControladorModulo.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    CargarDatos();
-                    EstadoInicial();
+                    SeguridadMetCargarDatos();
+                    SeguridadMetEstadoInicial();
                 }
             }
             else
@@ -378,14 +378,14 @@ namespace CapaVista_Seguridad
 
         private void BindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            CargarRegistroActual();
+            SeguridadMetCargarRegistroActual();
         }
 
         private void SeguridadDgvModulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                CargarRegistroActual();
+                SeguridadMetCargarRegistroActual();
             }
         }
 

@@ -26,41 +26,36 @@ namespace CapaVista_Seguridad
     /// </summary>
     public partial class FrmMantenimientoPerfiles : Form
     {
-
-        private ModeloRoles seguridadRoles = new ModeloRoles();
+        private ClsModeloRoles _SeguridadRoles = new ClsModeloRoles();
 
         public FrmMantenimientoPerfiles()
         {
             InitializeComponent();
         }
 
-
-
         private void FrmMantenimientoPerfiles_Load(object sender, System.EventArgs e)
         {
-            ListaRoles();
+            SeguridadMetListarRoles();
         }
 
-        private void ListaRoles()
+        private void SeguridadMetListarRoles()
         {
             try
             {
-                SeguridadDgvListaRoles.DataSource = seguridadRoles.GetAll();
+                SeguridadDgvListaRoles.DataSource = _SeguridadRoles.SeguridadMetObtenerTodos();
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
         }
 
-        private void Reinicio()
+        private void SeguridadMetReinicio()
         {
             SeguridadTxtNombreRol.Clear();
             SeguridadTxtDescripcionRol.Clear();
             SeguridadChkActivo.Checked = false;
         }
-
-
 
         private void SeguridadLblTitulo_Click(object sender, System.EventArgs e)
         {
@@ -96,64 +91,59 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                seguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
-                seguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
-                seguridadRoles.IsActive = SeguridadChkActivo.Checked;
-                seguridadRoles.Estado = EstadoEntidad.Added;
+                _SeguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
+                _SeguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
+                _SeguridadRoles.IsActive = SeguridadChkActivo.Checked;
+                _SeguridadRoles.Estado = EstadoEntidad.Added;
 
-                bool valido = new Ayudas.ValidacionDatos(seguridadRoles).Validar();
-                if (valido == true)
+                bool Valido = new Ayudas.ClsValidacionDatos(_SeguridadRoles).SeguridadMetValidar();
+                if (Valido == true)
                 {
-                    string resultado = seguridadRoles.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaRoles();
-                    Reinicio();
+                    string Resultado = _SeguridadRoles.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarRoles();
+                    SeguridadMetReinicio();
                 }
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
         }
 
         private void SeguridadBtnModificar_Click(object sender, EventArgs e)
         {
-
-
             if (SeguridadDgvListaRoles.SelectedRows.Count > 0)
             {
-                seguridadRoles.Estado = EstadoEntidad.Modified;
-                seguridadRoles.IdRol = Convert.ToInt32(SeguridadDgvListaRoles.CurrentRow.Cells[0].Value);
-                seguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
-                seguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
-                seguridadRoles.IsActive = SeguridadChkActivo.Checked;
+                _SeguridadRoles.Estado = EstadoEntidad.Modified;
+                _SeguridadRoles.IdRol = Convert.ToInt32(SeguridadDgvListaRoles.CurrentRow.Cells[0].Value);
+                _SeguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
+                _SeguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
+                _SeguridadRoles.IsActive = SeguridadChkActivo.Checked;
 
-
-                bool valido = new Ayudas.ValidacionDatos(seguridadRoles).Validar();
-                if (valido == true)
+                bool Valido = new Ayudas.ClsValidacionDatos(_SeguridadRoles).SeguridadMetValidar();
+                if (Valido == true)
                 {
-                    string resultado = seguridadRoles.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaRoles();
-                    Reinicio();
+                    string Resultado = _SeguridadRoles.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarRoles();
+                    SeguridadMetReinicio();
                 }
             }
             else MessageBox.Show("Seleccione una fila");
-
-
         }
 
         private void SeguridadBtnEliminar_Click(object sender, EventArgs e)
         {
             if (SeguridadDgvListaRoles.SelectedRows.Count > 0)
             {
-                seguridadRoles.Estado = EstadoEntidad.Deleted;
-                seguridadRoles.IdRol = Convert.ToInt32(SeguridadDgvListaRoles.CurrentRow.Cells[0].Value);
+                _SeguridadRoles.Estado = EstadoEntidad.Deleted;
+                _SeguridadRoles.IdRol = Convert.ToInt32(SeguridadDgvListaRoles.CurrentRow.Cells[0].Value);
 
-                string resultado = seguridadRoles.GrabarCambios();
-                MessageBox.Show(resultado);
-                ListaRoles();
-                Reinicio();
+                string Resultado = _SeguridadRoles.SeguridadMetGrabarCambios();
+                MessageBox.Show(Resultado);
+                SeguridadMetListarRoles();
+                SeguridadMetReinicio();
             }
             else MessageBox.Show("Seleccione una fila");
         }
@@ -162,25 +152,24 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                seguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
-                seguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
-                seguridadRoles.IsActive = SeguridadChkActivo.Checked;
-                seguridadRoles.Estado = EstadoEntidad.Added;
+                _SeguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
+                _SeguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
+                _SeguridadRoles.IsActive = SeguridadChkActivo.Checked;
+                _SeguridadRoles.Estado = EstadoEntidad.Added;
 
-                bool valido = new Ayudas.ValidacionDatos(seguridadRoles).Validar();
-                if (valido == true)
+                bool Valido = new Ayudas.ClsValidacionDatos(_SeguridadRoles).SeguridadMetValidar();
+                if (Valido == true)
                 {
-                    string resultado = seguridadRoles.GrabarCambios();
-                    MessageBox.Show(resultado);
-                    ListaRoles();
-                    Reinicio();
+                    string Resultado = _SeguridadRoles.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarRoles();
+                    SeguridadMetReinicio();
                 }
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(Ex.ToString());
             }
-
         }
     }
 }

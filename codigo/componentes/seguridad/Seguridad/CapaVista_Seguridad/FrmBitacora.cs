@@ -20,10 +20,8 @@ namespace Ventana_Bitacora_Seguridad
 
         private void btnBuscarAccion_Click(object sender, EventArgs e)
         {
-
-            AsignacionPerfiles form = new AsignacionPerfiles();
-            form.Show();
-
+            FrmAsignacionPerfiles Formulario = new FrmAsignacionPerfiles();
+            Formulario.Show();
         }
     }
 }

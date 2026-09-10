@@ -8,7 +8,7 @@ using CapaModelo_Seguridad.Entidades;
 
 namespace CapaModelo_Seguridad.Contratos
 {
-    public interface IRepositorioRoles : IRepositorioGenerico<Roles>
+    public interface IRepositorioRoles : IRepositorioGenerico<ClsRoles>
     {
 
     }
