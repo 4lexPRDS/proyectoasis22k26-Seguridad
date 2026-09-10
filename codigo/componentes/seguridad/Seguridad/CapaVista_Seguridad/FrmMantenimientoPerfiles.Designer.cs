@@ -27,10 +27,12 @@ namespace CapaVista_Seguridad
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoPerfiles));
             this.SeguridadPnlFiltros = new System.Windows.Forms.Panel();
+            this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
             this.SeguridadTxtDescripcionRol = new System.Windows.Forms.TextBox();
             this.SeguridadTxtCodigoRol = new System.Windows.Forms.TextBox();
             this.SeguridadTxtNombreRol = new System.Windows.Forms.TextBox();
@@ -65,7 +67,6 @@ namespace CapaVista_Seguridad
             this.SeguridadPbIconoPrincipal = new System.Windows.Forms.PictureBox();
             this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
             this.SeguridadPbBanner = new System.Windows.Forms.PictureBox();
-            this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
             this.SeguridadPnlFiltros.SuspendLayout();
             this.SeguridadPnlListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvListaRoles)).BeginInit();
@@ -93,6 +94,16 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlFiltros.Name = "SeguridadPnlFiltros";
             this.SeguridadPnlFiltros.Size = new System.Drawing.Size(1358, 140);
             this.SeguridadPnlFiltros.TabIndex = 6;
+            // 
+            // SeguridadChkActivo
+            // 
+            this.SeguridadChkActivo.AutoSize = true;
+            this.SeguridadChkActivo.Location = new System.Drawing.Point(181, 102);
+            this.SeguridadChkActivo.Name = "SeguridadChkActivo";
+            this.SeguridadChkActivo.Size = new System.Drawing.Size(88, 20);
+            this.SeguridadChkActivo.TabIndex = 29;
+            this.SeguridadChkActivo.Text = "validacion";
+            this.SeguridadChkActivo.UseVisualStyleBackColor = true;
             // 
             // SeguridadTxtDescripcionRol
             // 
@@ -125,7 +136,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblFiltrosHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblFiltrosHeader.Location = new System.Drawing.Point(48, 14);
             this.SeguridadLblFiltrosHeader.Name = "SeguridadLblFiltrosHeader";
-            this.SeguridadLblFiltrosHeader.Size = new System.Drawing.Size(209, 24);
+            this.SeguridadLblFiltrosHeader.Size = new System.Drawing.Size(168, 19);
             this.SeguridadLblFiltrosHeader.TabIndex = 1;
             this.SeguridadLblFiltrosHeader.Text = "Filtros de búsqueda";
             // 
@@ -136,7 +147,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblCodigoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.SeguridadLblCodigoPerfil.Location = new System.Drawing.Point(20, 54);
             this.SeguridadLblCodigoPerfil.Name = "SeguridadLblCodigoPerfil";
-            this.SeguridadLblCodigoPerfil.Size = new System.Drawing.Size(126, 21);
+            this.SeguridadLblCodigoPerfil.Size = new System.Drawing.Size(100, 17);
             this.SeguridadLblCodigoPerfil.TabIndex = 2;
             this.SeguridadLblCodigoPerfil.Text = "Código Perfil:";
             // 
@@ -147,7 +158,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblNombrePerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.SeguridadLblNombrePerfil.Location = new System.Drawing.Point(410, 54);
             this.SeguridadLblNombrePerfil.Name = "SeguridadLblNombrePerfil";
-            this.SeguridadLblNombrePerfil.Size = new System.Drawing.Size(165, 21);
+            this.SeguridadLblNombrePerfil.Size = new System.Drawing.Size(131, 17);
             this.SeguridadLblNombrePerfil.TabIndex = 4;
             this.SeguridadLblNombrePerfil.Text = "Nombre del Perfil:";
             // 
@@ -158,7 +169,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblDescripcionPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.SeguridadLblDescripcionPerfil.Location = new System.Drawing.Point(815, 54);
             this.SeguridadLblDescripcionPerfil.Name = "SeguridadLblDescripcionPerfil";
-            this.SeguridadLblDescripcionPerfil.Size = new System.Drawing.Size(197, 21);
+            this.SeguridadLblDescripcionPerfil.Size = new System.Drawing.Size(153, 17);
             this.SeguridadLblDescripcionPerfil.TabIndex = 6;
             this.SeguridadLblDescripcionPerfil.Text = "Descripción del Perfil:";
             // 
@@ -169,7 +180,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblEstadoPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.SeguridadLblEstadoPerfil.Location = new System.Drawing.Point(20, 99);
             this.SeguridadLblEstadoPerfil.Name = "SeguridadLblEstadoPerfil";
-            this.SeguridadLblEstadoPerfil.Size = new System.Drawing.Size(155, 21);
+            this.SeguridadLblEstadoPerfil.Size = new System.Drawing.Size(123, 17);
             this.SeguridadLblEstadoPerfil.TabIndex = 8;
             this.SeguridadLblEstadoPerfil.Text = "Estado del Perfil:";
             // 
@@ -223,7 +234,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblListado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblListado.Location = new System.Drawing.Point(48, 14);
             this.SeguridadLblListado.Name = "SeguridadLblListado";
-            this.SeguridadLblListado.Size = new System.Drawing.Size(195, 24);
+            this.SeguridadLblListado.Size = new System.Drawing.Size(160, 19);
             this.SeguridadLblListado.TabIndex = 1;
             this.SeguridadLblListado.Text = "Listado de Perfiles";
             // 
@@ -243,31 +254,31 @@ namespace CapaVista_Seguridad
             // 
             this.SeguridadDgvListaRoles.AllowUserToAddRows = false;
             this.SeguridadDgvListaRoles.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(232)))));
-            this.SeguridadDgvListaRoles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(232)))));
+            this.SeguridadDgvListaRoles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SeguridadDgvListaRoles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SeguridadDgvListaRoles.BackgroundColor = System.Drawing.Color.White;
             this.SeguridadDgvListaRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SeguridadDgvListaRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SeguridadDgvListaRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SeguridadDgvListaRoles.ColumnHeadersHeight = 34;
             this.SeguridadDgvListaRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SeguridadDgvListaRoles.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SeguridadDgvListaRoles.DefaultCellStyle = dataGridViewCellStyle3;
             this.SeguridadDgvListaRoles.Location = new System.Drawing.Point(15, 52);
             this.SeguridadDgvListaRoles.Name = "SeguridadDgvListaRoles";
             this.SeguridadDgvListaRoles.ReadOnly = true;
@@ -286,7 +297,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.SeguridadLblSubtitulo.Location = new System.Drawing.Point(177, 106);
             this.SeguridadLblSubtitulo.Name = "SeguridadLblSubtitulo";
-            this.SeguridadLblSubtitulo.Size = new System.Drawing.Size(429, 25);
+            this.SeguridadLblSubtitulo.Size = new System.Drawing.Size(327, 19);
             this.SeguridadLblSubtitulo.TabIndex = 10;
             this.SeguridadLblSubtitulo.Text = "Administra la información de los perfiles del sistema.";
             this.SeguridadLblSubtitulo.Click += new System.EventHandler(this.SeguridadLblSubtitulo_Click);
@@ -299,7 +310,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblTitulo.Location = new System.Drawing.Point(175, 62);
             this.SeguridadLblTitulo.Name = "SeguridadLblTitulo";
-            this.SeguridadLblTitulo.Size = new System.Drawing.Size(473, 39);
+            this.SeguridadLblTitulo.Size = new System.Drawing.Size(374, 32);
             this.SeguridadLblTitulo.TabIndex = 9;
             this.SeguridadLblTitulo.Text = "Mantenimiento de Perfiles";
             this.SeguridadLblTitulo.Click += new System.EventHandler(this.SeguridadLblTitulo_Click);
@@ -582,16 +593,6 @@ namespace CapaVista_Seguridad
             this.SeguridadPbBanner.TabIndex = 8;
             this.SeguridadPbBanner.TabStop = false;
             // 
-            // SeguridadChkActivo
-            // 
-            this.SeguridadChkActivo.AutoSize = true;
-            this.SeguridadChkActivo.Location = new System.Drawing.Point(181, 102);
-            this.SeguridadChkActivo.Name = "SeguridadChkActivo";
-            this.SeguridadChkActivo.Size = new System.Drawing.Size(91, 20);
-            this.SeguridadChkActivo.TabIndex = 29;
-            this.SeguridadChkActivo.Text = "validacion";
-            this.SeguridadChkActivo.UseVisualStyleBackColor = true;
-            // 
             // FrmMantenimientoPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,10 +608,11 @@ namespace CapaVista_Seguridad
             this.Controls.Add(this.SeguridadPnlFiltros);
             this.Controls.Add(this.SeguridadFlpToolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmMantenimientoPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2007 – MantenimientoPerfiles";
+            this.Text = "2008 – MantenimientoPerfiles";
             this.Load += new System.EventHandler(this.FrmMantenimientoPerfiles_Load);
             this.SeguridadPnlFiltros.ResumeLayout(false);
             this.SeguridadPnlFiltros.PerformLayout();

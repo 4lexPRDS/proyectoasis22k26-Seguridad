@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.SeguridadPnlInterfazLogin = new System.Windows.Forms.Panel();
             this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
             this.SeguridadLnkOlvidarContrasena = new System.Windows.Forms.LinkLabel();
@@ -111,7 +112,7 @@
             this.SeguridadLblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblContraseña.Location = new System.Drawing.Point(136, 327);
             this.SeguridadLblContraseña.Name = "SeguridadLblContraseña";
-            this.SeguridadLblContraseña.Size = new System.Drawing.Size(96, 17);
+            this.SeguridadLblContraseña.Size = new System.Drawing.Size(81, 13);
             this.SeguridadLblContraseña.TabIndex = 5;
             this.SeguridadLblContraseña.Text = "🔐 Contraseña";
             // 
@@ -143,7 +144,7 @@
             this.SeguridadLblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblUsuario.Location = new System.Drawing.Point(136, 262);
             this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
-            this.SeguridadLblUsuario.Size = new System.Drawing.Size(75, 17);
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(62, 13);
             this.SeguridadLblUsuario.TabIndex = 2;
             this.SeguridadLblUsuario.Text = "👤 Usuario";
             // 
@@ -165,7 +166,7 @@
             this.SeguridadLbIdentificadorInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLbIdentificadorInicioSesion.Location = new System.Drawing.Point(120, 188);
             this.SeguridadLbIdentificadorInicioSesion.Name = "SeguridadLbIdentificadorInicioSesion";
-            this.SeguridadLbIdentificadorInicioSesion.Size = new System.Drawing.Size(122, 20);
+            this.SeguridadLbIdentificadorInicioSesion.Size = new System.Drawing.Size(96, 15);
             this.SeguridadLbIdentificadorInicioSesion.TabIndex = 1;
             this.SeguridadLbIdentificadorInicioSesion.Text = "INICIAR SESIÓN";
             // 
@@ -201,7 +202,7 @@
             this.SeguridadPbLogo.TabIndex = 7;
             this.SeguridadPbLogo.TabStop = false;
             // 
-            // login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,12 +210,13 @@
             this.Controls.Add(this.SeguridadPbLogo);
             this.Controls.Add(this.SeguridadPnlInterfazLogin);
             this.Controls.Add(this.SeguridadPbLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "login";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " 2000 - Login";
             this.SeguridadPnlInterfazLogin.ResumeLayout(false);
             this.SeguridadPnlInterfazLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();

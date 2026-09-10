@@ -55,7 +55,7 @@ namespace CapaVista_Seguridad
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblTitulo.Location = new System.Drawing.Point(227, 46);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(192, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(145, 30);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Crear Usuario";
             // 
@@ -66,7 +66,7 @@ namespace CapaVista_Seguridad
             this.lblEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblEmpleado.Location = new System.Drawing.Point(16, 30);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(95, 23);
+            this.lblEmpleado.Size = new System.Drawing.Size(73, 17);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado:";
             // 
@@ -88,7 +88,7 @@ namespace CapaVista_Seguridad
             this.lblIdEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblIdEmpleado.Location = new System.Drawing.Point(16, 67);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(111, 23);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(85, 17);
             this.lblIdEmpleado.TabIndex = 4;
             this.lblIdEmpleado.Text = "Id Empleado";
             // 
@@ -110,7 +110,7 @@ namespace CapaVista_Seguridad
             this.lblContrasena.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblContrasena.Location = new System.Drawing.Point(16, 152);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(104, 23);
+            this.lblContrasena.Size = new System.Drawing.Size(81, 17);
             this.lblContrasena.TabIndex = 6;
             this.lblContrasena.Text = "Contraseña:";
             // 
@@ -178,7 +178,7 @@ namespace CapaVista_Seguridad
             this.lblUsuario.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblUsuario.Location = new System.Drawing.Point(16, 104);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(55, 17);
             this.lblUsuario.TabIndex = 12;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -189,7 +189,7 @@ namespace CapaVista_Seguridad
             this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
             this.lblEstado.Location = new System.Drawing.Point(24, 262);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(63, 23);
+            this.lblEstado.Size = new System.Drawing.Size(49, 17);
             this.lblEstado.TabIndex = 10;
             this.lblEstado.Text = "Estado";
             // 
@@ -339,7 +339,7 @@ namespace CapaVista_Seguridad
             this.MinimizeBox = false;
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "2002-CrearUsuario";
+            this.Text = "2005 - Crear Usuario";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             this.pnlIngresoDatos.ResumeLayout(false);
             this.pnlIngresoDatos.PerformLayout();
