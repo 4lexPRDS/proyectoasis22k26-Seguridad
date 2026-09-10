@@ -22,6 +22,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModulo));
             this.pnlBarraHerramientas = new System.Windows.Forms.FlowLayoutPanel();
             this.SeguridadLblIdModulo = new System.Windows.Forms.Label();
             this.SeguridadCmbIdModulo = new System.Windows.Forms.ComboBox();
@@ -32,61 +33,98 @@
             this.SeguridadLblEstado = new System.Windows.Forms.Label();
             this.SeguridadChkEstado = new System.Windows.Forms.CheckBox();
             this.SeguridadDgvModulos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).BeginInit();
             this.SuspendLayout();
-
-            // ... (Configuración del Formulario y Panel se mantiene igual) ...
-            this.Name = "FrmModulo";
-            this.Text = "2004 - MantenimientoModulo";
-            this.MaximizeBox = false;
-            this.Size = new System.Drawing.Size(1020, 550);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
+            // 
+            // pnlBarraHerramientas
+            // 
             this.pnlBarraHerramientas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBarraHerramientas.Height = 85;
+            this.pnlBarraHerramientas.Location = new System.Drawing.Point(0, 0);
+            this.pnlBarraHerramientas.Name = "pnlBarraHerramientas";
             this.pnlBarraHerramientas.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlBarraHerramientas.Size = new System.Drawing.Size(1004, 85);
+            this.pnlBarraHerramientas.TabIndex = 0;
             this.pnlBarraHerramientas.WrapContents = false;
-
-            // Configuración de los ComboBox (con DropDown para permitir escribir)
-            this.SeguridadLblIdModulo.Location = new System.Drawing.Point(20, 103);
+            // 
+            // SeguridadLblIdModulo
+            // 
             this.SeguridadLblIdModulo.AutoSize = true;
+            this.SeguridadLblIdModulo.Location = new System.Drawing.Point(20, 103);
+            this.SeguridadLblIdModulo.Name = "SeguridadLblIdModulo";
+            this.SeguridadLblIdModulo.Size = new System.Drawing.Size(72, 16);
+            this.SeguridadLblIdModulo.TabIndex = 1;
             this.SeguridadLblIdModulo.Text = "Id Modulo :";
-
+            // 
+            // SeguridadCmbIdModulo
+            // 
             this.SeguridadCmbIdModulo.Location = new System.Drawing.Point(115, 100);
-            this.SeguridadCmbIdModulo.Width = 100;
-            this.SeguridadCmbIdModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown; // Permite escribir
-
-            this.SeguridadLblNombreModulo.Location = new System.Drawing.Point(240, 103);
+            this.SeguridadCmbIdModulo.Name = "SeguridadCmbIdModulo";
+            this.SeguridadCmbIdModulo.Size = new System.Drawing.Size(100, 24);
+            this.SeguridadCmbIdModulo.TabIndex = 2;
+            // 
+            // SeguridadLblNombreModulo
+            // 
             this.SeguridadLblNombreModulo.AutoSize = true;
+            this.SeguridadLblNombreModulo.Location = new System.Drawing.Point(240, 103);
+            this.SeguridadLblNombreModulo.Name = "SeguridadLblNombreModulo";
+            this.SeguridadLblNombreModulo.Size = new System.Drawing.Size(110, 16);
+            this.SeguridadLblNombreModulo.TabIndex = 3;
             this.SeguridadLblNombreModulo.Text = "Nombre Modulo :";
-
+            // 
+            // SeguridadCmbNombreModulo
+            // 
             this.SeguridadCmbNombreModulo.Location = new System.Drawing.Point(355, 100);
-            this.SeguridadCmbNombreModulo.Width = 180;
-            this.SeguridadCmbNombreModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-
-            this.SeguridadLblDescripcion.Location = new System.Drawing.Point(560, 103);
+            this.SeguridadCmbNombreModulo.Name = "SeguridadCmbNombreModulo";
+            this.SeguridadCmbNombreModulo.Size = new System.Drawing.Size(180, 24);
+            this.SeguridadCmbNombreModulo.TabIndex = 4;
+            // 
+            // SeguridadLblDescripcion
+            // 
             this.SeguridadLblDescripcion.AutoSize = true;
+            this.SeguridadLblDescripcion.Location = new System.Drawing.Point(560, 103);
+            this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
+            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(85, 16);
+            this.SeguridadLblDescripcion.TabIndex = 5;
             this.SeguridadLblDescripcion.Text = "Descripción :";
-
+            // 
+            // SeguridadCmbDescripcion
+            // 
             this.SeguridadCmbDescripcion.Location = new System.Drawing.Point(655, 100);
-            this.SeguridadCmbDescripcion.Width = 190;
-            this.SeguridadCmbDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-
-            this.SeguridadLblEstado.Location = new System.Drawing.Point(865, 103);
+            this.SeguridadCmbDescripcion.Name = "SeguridadCmbDescripcion";
+            this.SeguridadCmbDescripcion.Size = new System.Drawing.Size(190, 24);
+            this.SeguridadCmbDescripcion.TabIndex = 6;
+            // 
+            // SeguridadLblEstado
+            // 
             this.SeguridadLblEstado.AutoSize = true;
+            this.SeguridadLblEstado.Location = new System.Drawing.Point(865, 103);
+            this.SeguridadLblEstado.Name = "SeguridadLblEstado";
+            this.SeguridadLblEstado.Size = new System.Drawing.Size(56, 16);
+            this.SeguridadLblEstado.TabIndex = 7;
             this.SeguridadLblEstado.Text = "Estado :";
-
-            this.SeguridadChkEstado.Location = new System.Drawing.Point(925, 102);
+            // 
+            // SeguridadChkEstado
+            // 
             this.SeguridadChkEstado.AutoSize = true;
-
-            // ... (Configuración del DataGridView se mantiene igual) ...
-            this.SeguridadDgvModulos.Name = "SeguridadDgvModulos";
-            this.SeguridadDgvModulos.Location = new System.Drawing.Point(20, 160);
-            this.SeguridadDgvModulos.Size = new System.Drawing.Size(960, 320);
-            this.SeguridadDgvModulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SeguridadChkEstado.Location = new System.Drawing.Point(925, 102);
+            this.SeguridadChkEstado.Name = "SeguridadChkEstado";
+            this.SeguridadChkEstado.Size = new System.Drawing.Size(15, 14);
+            this.SeguridadChkEstado.TabIndex = 8;
+            // 
+            // SeguridadDgvModulos
+            // 
             this.SeguridadDgvModulos.AllowUserToAddRows = false;
+            this.SeguridadDgvModulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SeguridadDgvModulos.Location = new System.Drawing.Point(20, 160);
+            this.SeguridadDgvModulos.Name = "SeguridadDgvModulos";
             this.SeguridadDgvModulos.ReadOnly = true;
             this.SeguridadDgvModulos.RowHeadersWidth = 30;
-
+            this.SeguridadDgvModulos.Size = new System.Drawing.Size(960, 320);
+            this.SeguridadDgvModulos.TabIndex = 9;
+            // 
+            // FrmModulo
+            // 
+            this.ClientSize = new System.Drawing.Size(1004, 511);
             this.Controls.Add(this.pnlBarraHerramientas);
             this.Controls.Add(this.SeguridadLblIdModulo);
             this.Controls.Add(this.SeguridadCmbIdModulo);
@@ -97,9 +135,15 @@
             this.Controls.Add(this.SeguridadLblEstado);
             this.Controls.Add(this.SeguridadChkEstado);
             this.Controls.Add(this.SeguridadDgvModulos);
-
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "FrmModulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "2006 - Mantenimiento Modulo";
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

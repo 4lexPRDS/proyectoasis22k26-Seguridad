@@ -30,19 +30,23 @@ namespace proyecto2k26
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsignacionAppPerf));
             this.PnlSeguridadPnlDecorativo = new System.Windows.Forms.Panel();
-            this.chkSeguridadImprimir = new System.Windows.Forms.CheckBox();
-            this.chkSeguridadeliminar = new System.Windows.Forms.CheckBox();
-            this.chkSeguridadEditar = new System.Windows.Forms.CheckBox();
-            this.chkSeguridadInsertar = new System.Windows.Forms.CheckBox();
+            this.TxtSeguridadFiltro = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.CboSeguridadAplicaciones = new System.Windows.Forms.ComboBox();
             this.CboSeguridadModulos = new System.Windows.Forms.ComboBox();
             this.CboSeguridadPerfiles = new System.Windows.Forms.ComboBox();
-            this.BtnSeguridadAgregar = new System.Windows.Forms.Button();
             this.LblSeguridadNombreAplicaciones = new System.Windows.Forms.Label();
             this.LblSeguridadNombreModulos = new System.Windows.Forms.Label();
             this.LblSeguridadNombrePerfil = new System.Windows.Forms.Label();
-            this.DgvSeguridadListaUsuarios = new System.Windows.Forms.DataGridView();
             this.BtnSeguridadBuscar = new System.Windows.Forms.Button();
+            this.PnlSeguridadPermisos = new System.Windows.Forms.Panel();
+            this.chkSeguridadImprimir = new System.Windows.Forms.CheckBox();
+            this.chkSeguridadInsertar = new System.Windows.Forms.CheckBox();
+            this.LblSeguridadAsigPermisos = new System.Windows.Forms.Label();
+            this.chkSeguridadEditar = new System.Windows.Forms.CheckBox();
+            this.chkSeguridadeliminar = new System.Windows.Forms.CheckBox();
+            this.BtnSeguridadAgregar = new System.Windows.Forms.Button();
+            this.DgvSeguridadListaUsuarios = new System.Windows.Forms.DataGridView();
             this.BtnSeguridadQuitar = new System.Windows.Forms.Button();
             this.BtnSeguridadImprimir = new System.Windows.Forms.Button();
             this.BtnSeguridadSalir = new System.Windows.Forms.Button();
@@ -52,8 +56,6 @@ namespace proyecto2k26
             this.LblSeguridadInformacion = new System.Windows.Forms.Label();
             this.LblSeguridadDescripcion = new System.Windows.Forms.Label();
             this.PbNavegadorIconoAsigAppPerf = new System.Windows.Forms.PictureBox();
-            this.PnlSeguridadPermisos = new System.Windows.Forms.Panel();
-            this.LblSeguridadAsigPermisos = new System.Windows.Forms.Label();
             this.BtnSeguridadSiguiente = new System.Windows.Forms.Button();
             this.BtnSeguridadReporte = new System.Windows.Forms.Button();
             this.BtnSeguridadActualizar = new System.Windows.Forms.Button();
@@ -62,14 +64,12 @@ namespace proyecto2k26
             this.BtnSeguridadFin = new System.Windows.Forms.Button();
             this.BtnSeguridadAnterior = new System.Windows.Forms.Button();
             this.BtnSeguridadGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtSeguridadFiltro = new System.Windows.Forms.TextBox();
             this.PnlSeguridadPnlDecorativo.SuspendLayout();
+            this.PnlSeguridadPermisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSeguridadListaUsuarios)).BeginInit();
             this.PnlSeguridadFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorPbMascota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorIconoAsigAppPerf)).BeginInit();
-            this.PnlSeguridadPermisos.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlSeguridadPnlDecorativo
@@ -93,57 +93,25 @@ namespace proyecto2k26
             this.PnlSeguridadPnlDecorativo.TabIndex = 1;
             this.PnlSeguridadPnlDecorativo.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlSeguridadPnlDecorativo_Paint);
             // 
-            // chkSeguridadImprimir
+            // TxtSeguridadFiltro
             // 
-            this.chkSeguridadImprimir.AutoSize = true;
-            this.chkSeguridadImprimir.BackColor = System.Drawing.Color.Transparent;
-            this.chkSeguridadImprimir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguridadImprimir.Location = new System.Drawing.Point(623, 6);
-            this.chkSeguridadImprimir.Name = "chkSeguridadImprimir";
-            this.chkSeguridadImprimir.Size = new System.Drawing.Size(102, 29);
-            this.chkSeguridadImprimir.TabIndex = 13;
-            this.chkSeguridadImprimir.Text = "Imprimir";
-            this.chkSeguridadImprimir.UseVisualStyleBackColor = false;
-            this.chkSeguridadImprimir.CheckedChanged += new System.EventHandler(this.chkSeguridadImprimir_CheckedChanged);
+            this.TxtSeguridadFiltro.Location = new System.Drawing.Point(1026, 100);
+            this.TxtSeguridadFiltro.Multiline = true;
+            this.TxtSeguridadFiltro.Name = "TxtSeguridadFiltro";
+            this.TxtSeguridadFiltro.Size = new System.Drawing.Size(260, 32);
+            this.TxtSeguridadFiltro.TabIndex = 19;
             // 
-            // chkSeguridadeliminar
+            // label1
             // 
-            this.chkSeguridadeliminar.AutoSize = true;
-            this.chkSeguridadeliminar.BackColor = System.Drawing.Color.Transparent;
-            this.chkSeguridadeliminar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguridadeliminar.Location = new System.Drawing.Point(478, 6);
-            this.chkSeguridadeliminar.Name = "chkSeguridadeliminar";
-            this.chkSeguridadeliminar.Size = new System.Drawing.Size(96, 29);
-            this.chkSeguridadeliminar.TabIndex = 12;
-            this.chkSeguridadeliminar.Text = "Eliminar";
-            this.chkSeguridadeliminar.UseVisualStyleBackColor = false;
-            this.chkSeguridadeliminar.CheckedChanged += new System.EventHandler(this.chkSeguridadeliminar_CheckedChanged);
-            // 
-            // chkSeguridadEditar
-            // 
-            this.chkSeguridadEditar.AutoSize = true;
-            this.chkSeguridadEditar.BackColor = System.Drawing.Color.Transparent;
-            this.chkSeguridadEditar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguridadEditar.Location = new System.Drawing.Point(344, 6);
-            this.chkSeguridadEditar.Name = "chkSeguridadEditar";
-            this.chkSeguridadEditar.Size = new System.Drawing.Size(79, 29);
-            this.chkSeguridadEditar.TabIndex = 11;
-            this.chkSeguridadEditar.Text = "Editar";
-            this.chkSeguridadEditar.UseVisualStyleBackColor = false;
-            this.chkSeguridadEditar.CheckedChanged += new System.EventHandler(this.chkSeguridadEditar_CheckedChanged);
-            // 
-            // chkSeguridadInsertar
-            // 
-            this.chkSeguridadInsertar.AutoSize = true;
-            this.chkSeguridadInsertar.BackColor = System.Drawing.Color.Transparent;
-            this.chkSeguridadInsertar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguridadInsertar.Location = new System.Drawing.Point(185, 6);
-            this.chkSeguridadInsertar.Name = "chkSeguridadInsertar";
-            this.chkSeguridadInsertar.Size = new System.Drawing.Size(93, 29);
-            this.chkSeguridadInsertar.TabIndex = 10;
-            this.chkSeguridadInsertar.Text = "Insertar";
-            this.chkSeguridadInsertar.UseVisualStyleBackColor = false;
-            this.chkSeguridadInsertar.CheckedChanged += new System.EventHandler(this.chkSeguridadInsertar_CheckedChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(1026, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 21);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Filtra por ID de Asignacion";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // CboSeguridadAplicaciones
             // 
@@ -151,7 +119,7 @@ namespace proyecto2k26
             this.CboSeguridadAplicaciones.FormattingEnabled = true;
             this.CboSeguridadAplicaciones.Location = new System.Drawing.Point(622, 51);
             this.CboSeguridadAplicaciones.Name = "CboSeguridadAplicaciones";
-            this.CboSeguridadAplicaciones.Size = new System.Drawing.Size(279, 33);
+            this.CboSeguridadAplicaciones.Size = new System.Drawing.Size(279, 28);
             this.CboSeguridadAplicaciones.TabIndex = 9;
             this.CboSeguridadAplicaciones.SelectedIndexChanged += new System.EventHandler(this.CboSeguridadAplicaciones_SelectedIndexChanged);
             // 
@@ -161,7 +129,7 @@ namespace proyecto2k26
             this.CboSeguridadModulos.FormattingEnabled = true;
             this.CboSeguridadModulos.Location = new System.Drawing.Point(320, 51);
             this.CboSeguridadModulos.Name = "CboSeguridadModulos";
-            this.CboSeguridadModulos.Size = new System.Drawing.Size(231, 33);
+            this.CboSeguridadModulos.Size = new System.Drawing.Size(231, 28);
             this.CboSeguridadModulos.TabIndex = 8;
             this.CboSeguridadModulos.SelectedIndexChanged += new System.EventHandler(this.CboSeguridadModulos_SelectedIndexChanged);
             // 
@@ -172,9 +140,136 @@ namespace proyecto2k26
             this.CboSeguridadPerfiles.FormattingEnabled = true;
             this.CboSeguridadPerfiles.Location = new System.Drawing.Point(49, 51);
             this.CboSeguridadPerfiles.Name = "CboSeguridadPerfiles";
-            this.CboSeguridadPerfiles.Size = new System.Drawing.Size(216, 33);
+            this.CboSeguridadPerfiles.Size = new System.Drawing.Size(216, 28);
             this.CboSeguridadPerfiles.TabIndex = 7;
             this.CboSeguridadPerfiles.SelectedIndexChanged += new System.EventHandler(this.CboSeguridadPerfiles_SelectedIndexChanged);
+            // 
+            // LblSeguridadNombreAplicaciones
+            // 
+            this.LblSeguridadNombreAplicaciones.AutoSize = true;
+            this.LblSeguridadNombreAplicaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadNombreAplicaciones.ForeColor = System.Drawing.Color.DimGray;
+            this.LblSeguridadNombreAplicaciones.Location = new System.Drawing.Point(617, 20);
+            this.LblSeguridadNombreAplicaciones.Name = "LblSeguridadNombreAplicaciones";
+            this.LblSeguridadNombreAplicaciones.Size = new System.Drawing.Size(96, 21);
+            this.LblSeguridadNombreAplicaciones.TabIndex = 4;
+            this.LblSeguridadNombreAplicaciones.Text = "Aplicaciones";
+            // 
+            // LblSeguridadNombreModulos
+            // 
+            this.LblSeguridadNombreModulos.AutoSize = true;
+            this.LblSeguridadNombreModulos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadNombreModulos.ForeColor = System.Drawing.Color.DimGray;
+            this.LblSeguridadNombreModulos.Location = new System.Drawing.Point(315, 20);
+            this.LblSeguridadNombreModulos.Name = "LblSeguridadNombreModulos";
+            this.LblSeguridadNombreModulos.Size = new System.Drawing.Size(71, 21);
+            this.LblSeguridadNombreModulos.TabIndex = 2;
+            this.LblSeguridadNombreModulos.Text = "Modulos";
+            // 
+            // LblSeguridadNombrePerfil
+            // 
+            this.LblSeguridadNombrePerfil.AutoSize = true;
+            this.LblSeguridadNombrePerfil.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadNombrePerfil.ForeColor = System.Drawing.Color.DimGray;
+            this.LblSeguridadNombrePerfil.Location = new System.Drawing.Point(44, 20);
+            this.LblSeguridadNombrePerfil.Name = "LblSeguridadNombrePerfil";
+            this.LblSeguridadNombrePerfil.Size = new System.Drawing.Size(60, 21);
+            this.LblSeguridadNombrePerfil.TabIndex = 0;
+            this.LblSeguridadNombrePerfil.Text = "Perfiles";
+            this.LblSeguridadNombrePerfil.Click += new System.EventHandler(this.lblPerfiles_Click);
+            // 
+            // BtnSeguridadBuscar
+            // 
+            this.BtnSeguridadBuscar.BackColor = System.Drawing.Color.Teal;
+            this.BtnSeguridadBuscar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_consultarN;
+            this.BtnSeguridadBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSeguridadBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSeguridadBuscar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSeguridadBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(953, 69);
+            this.BtnSeguridadBuscar.Name = "BtnSeguridadBuscar";
+            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(67, 63);
+            this.BtnSeguridadBuscar.TabIndex = 3;
+            this.BtnSeguridadBuscar.UseVisualStyleBackColor = false;
+            this.BtnSeguridadBuscar.Click += new System.EventHandler(this.BtnSeguridadBuscar_Click);
+            // 
+            // PnlSeguridadPermisos
+            // 
+            this.PnlSeguridadPermisos.BackColor = System.Drawing.Color.Transparent;
+            this.PnlSeguridadPermisos.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.dashboardSeguridad;
+            this.PnlSeguridadPermisos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadImprimir);
+            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadInsertar);
+            this.PnlSeguridadPermisos.Controls.Add(this.LblSeguridadAsigPermisos);
+            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadEditar);
+            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadeliminar);
+            this.PnlSeguridadPermisos.Location = new System.Drawing.Point(49, 106);
+            this.PnlSeguridadPermisos.Name = "PnlSeguridadPermisos";
+            this.PnlSeguridadPermisos.Size = new System.Drawing.Size(852, 48);
+            this.PnlSeguridadPermisos.TabIndex = 14;
+            // 
+            // chkSeguridadImprimir
+            // 
+            this.chkSeguridadImprimir.AutoSize = true;
+            this.chkSeguridadImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.chkSeguridadImprimir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSeguridadImprimir.Location = new System.Drawing.Point(623, 6);
+            this.chkSeguridadImprimir.Name = "chkSeguridadImprimir";
+            this.chkSeguridadImprimir.Size = new System.Drawing.Size(85, 24);
+            this.chkSeguridadImprimir.TabIndex = 13;
+            this.chkSeguridadImprimir.Text = "Imprimir";
+            this.chkSeguridadImprimir.UseVisualStyleBackColor = false;
+            this.chkSeguridadImprimir.CheckedChanged += new System.EventHandler(this.chkSeguridadImprimir_CheckedChanged);
+            // 
+            // chkSeguridadInsertar
+            // 
+            this.chkSeguridadInsertar.AutoSize = true;
+            this.chkSeguridadInsertar.BackColor = System.Drawing.Color.Transparent;
+            this.chkSeguridadInsertar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSeguridadInsertar.Location = new System.Drawing.Point(185, 6);
+            this.chkSeguridadInsertar.Name = "chkSeguridadInsertar";
+            this.chkSeguridadInsertar.Size = new System.Drawing.Size(77, 24);
+            this.chkSeguridadInsertar.TabIndex = 10;
+            this.chkSeguridadInsertar.Text = "Insertar";
+            this.chkSeguridadInsertar.UseVisualStyleBackColor = false;
+            this.chkSeguridadInsertar.CheckedChanged += new System.EventHandler(this.chkSeguridadInsertar_CheckedChanged);
+            // 
+            // LblSeguridadAsigPermisos
+            // 
+            this.LblSeguridadAsigPermisos.AutoSize = true;
+            this.LblSeguridadAsigPermisos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadAsigPermisos.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.LblSeguridadAsigPermisos.Location = new System.Drawing.Point(15, 7);
+            this.LblSeguridadAsigPermisos.Name = "LblSeguridadAsigPermisos";
+            this.LblSeguridadAsigPermisos.Size = new System.Drawing.Size(83, 21);
+            this.LblSeguridadAsigPermisos.TabIndex = 16;
+            this.LblSeguridadAsigPermisos.Text = " Permisos";
+            // 
+            // chkSeguridadEditar
+            // 
+            this.chkSeguridadEditar.AutoSize = true;
+            this.chkSeguridadEditar.BackColor = System.Drawing.Color.Transparent;
+            this.chkSeguridadEditar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSeguridadEditar.Location = new System.Drawing.Point(344, 6);
+            this.chkSeguridadEditar.Name = "chkSeguridadEditar";
+            this.chkSeguridadEditar.Size = new System.Drawing.Size(67, 24);
+            this.chkSeguridadEditar.TabIndex = 11;
+            this.chkSeguridadEditar.Text = "Editar";
+            this.chkSeguridadEditar.UseVisualStyleBackColor = false;
+            this.chkSeguridadEditar.CheckedChanged += new System.EventHandler(this.chkSeguridadEditar_CheckedChanged);
+            // 
+            // chkSeguridadeliminar
+            // 
+            this.chkSeguridadeliminar.AutoSize = true;
+            this.chkSeguridadeliminar.BackColor = System.Drawing.Color.Transparent;
+            this.chkSeguridadeliminar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSeguridadeliminar.Location = new System.Drawing.Point(478, 6);
+            this.chkSeguridadeliminar.Name = "chkSeguridadeliminar";
+            this.chkSeguridadeliminar.Size = new System.Drawing.Size(82, 24);
+            this.chkSeguridadeliminar.TabIndex = 12;
+            this.chkSeguridadeliminar.Text = "Eliminar";
+            this.chkSeguridadeliminar.UseVisualStyleBackColor = false;
+            this.chkSeguridadeliminar.CheckedChanged += new System.EventHandler(this.chkSeguridadeliminar_CheckedChanged);
             // 
             // BtnSeguridadAgregar
             // 
@@ -191,40 +286,6 @@ namespace proyecto2k26
             this.BtnSeguridadAgregar.UseVisualStyleBackColor = false;
             this.BtnSeguridadAgregar.Click += new System.EventHandler(this.BtnSeguridadAgregar_Click);
             // 
-            // LblSeguridadNombreAplicaciones
-            // 
-            this.LblSeguridadNombreAplicaciones.AutoSize = true;
-            this.LblSeguridadNombreAplicaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeguridadNombreAplicaciones.ForeColor = System.Drawing.Color.DimGray;
-            this.LblSeguridadNombreAplicaciones.Location = new System.Drawing.Point(617, 20);
-            this.LblSeguridadNombreAplicaciones.Name = "LblSeguridadNombreAplicaciones";
-            this.LblSeguridadNombreAplicaciones.Size = new System.Drawing.Size(121, 28);
-            this.LblSeguridadNombreAplicaciones.TabIndex = 4;
-            this.LblSeguridadNombreAplicaciones.Text = "Aplicaciones";
-            // 
-            // LblSeguridadNombreModulos
-            // 
-            this.LblSeguridadNombreModulos.AutoSize = true;
-            this.LblSeguridadNombreModulos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeguridadNombreModulos.ForeColor = System.Drawing.Color.DimGray;
-            this.LblSeguridadNombreModulos.Location = new System.Drawing.Point(315, 20);
-            this.LblSeguridadNombreModulos.Name = "LblSeguridadNombreModulos";
-            this.LblSeguridadNombreModulos.Size = new System.Drawing.Size(90, 28);
-            this.LblSeguridadNombreModulos.TabIndex = 2;
-            this.LblSeguridadNombreModulos.Text = "Modulos";
-            // 
-            // LblSeguridadNombrePerfil
-            // 
-            this.LblSeguridadNombrePerfil.AutoSize = true;
-            this.LblSeguridadNombrePerfil.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeguridadNombrePerfil.ForeColor = System.Drawing.Color.DimGray;
-            this.LblSeguridadNombrePerfil.Location = new System.Drawing.Point(44, 20);
-            this.LblSeguridadNombrePerfil.Name = "LblSeguridadNombrePerfil";
-            this.LblSeguridadNombrePerfil.Size = new System.Drawing.Size(73, 28);
-            this.LblSeguridadNombrePerfil.TabIndex = 0;
-            this.LblSeguridadNombrePerfil.Text = "Perfiles";
-            this.LblSeguridadNombrePerfil.Click += new System.EventHandler(this.lblPerfiles_Click);
-            // 
             // DgvSeguridadListaUsuarios
             // 
             this.DgvSeguridadListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -236,21 +297,6 @@ namespace proyecto2k26
             this.DgvSeguridadListaUsuarios.Size = new System.Drawing.Size(1332, 254);
             this.DgvSeguridadListaUsuarios.TabIndex = 2;
             this.DgvSeguridadListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeguridadListaUsuarios_CellContentClick);
-            // 
-            // BtnSeguridadBuscar
-            // 
-            this.BtnSeguridadBuscar.BackColor = System.Drawing.Color.Teal;
-            this.BtnSeguridadBuscar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_consultarN;
-            this.BtnSeguridadBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSeguridadBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguridadBuscar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSeguridadBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(953, 69);
-            this.BtnSeguridadBuscar.Name = "BtnSeguridadBuscar";
-            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(67, 63);
-            this.BtnSeguridadBuscar.TabIndex = 3;
-            this.BtnSeguridadBuscar.UseVisualStyleBackColor = false;
-            this.BtnSeguridadBuscar.Click += new System.EventHandler(this.BtnSeguridadBuscar_Click);
             // 
             // BtnSeguridadQuitar
             // 
@@ -343,7 +389,7 @@ namespace proyecto2k26
             this.LblSeguridadInformacion.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LblSeguridadInformacion.Location = new System.Drawing.Point(237, 112);
             this.LblSeguridadInformacion.Name = "LblSeguridadInformacion";
-            this.LblSeguridadInformacion.Size = new System.Drawing.Size(546, 22);
+            this.LblSeguridadInformacion.Size = new System.Drawing.Size(447, 18);
             this.LblSeguridadInformacion.TabIndex = 2;
             this.LblSeguridadInformacion.Text = "Administre los perfiles que le asignara a cada aplicacion del sistema.";
             // 
@@ -355,7 +401,7 @@ namespace proyecto2k26
             this.LblSeguridadDescripcion.ForeColor = System.Drawing.Color.Teal;
             this.LblSeguridadDescripcion.Location = new System.Drawing.Point(235, 70);
             this.LblSeguridadDescripcion.Name = "LblSeguridadDescripcion";
-            this.LblSeguridadDescripcion.Size = new System.Drawing.Size(404, 31);
+            this.LblSeguridadDescripcion.Size = new System.Drawing.Size(327, 25);
             this.LblSeguridadDescripcion.TabIndex = 1;
             this.LblSeguridadDescripcion.Text = "Asignación Aplicación Perfil";
             // 
@@ -369,32 +415,6 @@ namespace proyecto2k26
             this.PbNavegadorIconoAsigAppPerf.Size = new System.Drawing.Size(139, 147);
             this.PbNavegadorIconoAsigAppPerf.TabIndex = 0;
             this.PbNavegadorIconoAsigAppPerf.TabStop = false;
-            // 
-            // PnlSeguridadPermisos
-            // 
-            this.PnlSeguridadPermisos.BackColor = System.Drawing.Color.Transparent;
-            this.PnlSeguridadPermisos.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.dashboardSeguridad;
-            this.PnlSeguridadPermisos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadImprimir);
-            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadInsertar);
-            this.PnlSeguridadPermisos.Controls.Add(this.LblSeguridadAsigPermisos);
-            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadEditar);
-            this.PnlSeguridadPermisos.Controls.Add(this.chkSeguridadeliminar);
-            this.PnlSeguridadPermisos.Location = new System.Drawing.Point(49, 106);
-            this.PnlSeguridadPermisos.Name = "PnlSeguridadPermisos";
-            this.PnlSeguridadPermisos.Size = new System.Drawing.Size(852, 48);
-            this.PnlSeguridadPermisos.TabIndex = 14;
-            // 
-            // LblSeguridadAsigPermisos
-            // 
-            this.LblSeguridadAsigPermisos.AutoSize = true;
-            this.LblSeguridadAsigPermisos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeguridadAsigPermisos.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.LblSeguridadAsigPermisos.Location = new System.Drawing.Point(15, 7);
-            this.LblSeguridadAsigPermisos.Name = "LblSeguridadAsigPermisos";
-            this.LblSeguridadAsigPermisos.Size = new System.Drawing.Size(102, 28);
-            this.LblSeguridadAsigPermisos.TabIndex = 16;
-            this.LblSeguridadAsigPermisos.Text = " Permisos";
             // 
             // BtnSeguridadSiguiente
             // 
@@ -484,26 +504,6 @@ namespace proyecto2k26
             this.BtnSeguridadGuardar.UseVisualStyleBackColor = true;
             this.BtnSeguridadGuardar.Click += new System.EventHandler(this.BtnSeguridadGuardar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(1026, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 28);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Filtra por ID de Asignacion";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // TxtSeguridadFiltro
-            // 
-            this.TxtSeguridadFiltro.Location = new System.Drawing.Point(1026, 100);
-            this.TxtSeguridadFiltro.Multiline = true;
-            this.TxtSeguridadFiltro.Name = "TxtSeguridadFiltro";
-            this.TxtSeguridadFiltro.Size = new System.Drawing.Size(260, 32);
-            this.TxtSeguridadFiltro.TabIndex = 19;
-            // 
             // FrmAsignacionAppPerf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -529,17 +529,17 @@ namespace proyecto2k26
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAsignacionAppPerf";
-            this.Text = "2009- AsignacionAplicacionPerfil";
+            this.Text = "2010- Asignacion Aplicacion Perfil";
             this.Load += new System.EventHandler(this.FrmAsignacionAppPerf_Load);
             this.PnlSeguridadPnlDecorativo.ResumeLayout(false);
             this.PnlSeguridadPnlDecorativo.PerformLayout();
+            this.PnlSeguridadPermisos.ResumeLayout(false);
+            this.PnlSeguridadPermisos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSeguridadListaUsuarios)).EndInit();
             this.PnlSeguridadFormulario.ResumeLayout(false);
             this.PnlSeguridadFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorPbMascota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorIconoAsigAppPerf)).EndInit();
-            this.PnlSeguridadPermisos.ResumeLayout(false);
-            this.PnlSeguridadPermisos.PerformLayout();
             this.ResumeLayout(false);
 
         }

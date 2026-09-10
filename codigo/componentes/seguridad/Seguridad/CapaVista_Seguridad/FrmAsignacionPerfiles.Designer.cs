@@ -28,6 +28,7 @@ namespace AplicacionPerfiles
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsignacionPerfiles));
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxMascota = new System.Windows.Forms.PictureBox();
@@ -115,7 +116,7 @@ namespace AplicacionPerfiles
             this.labelSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.labelSubtitulo.Location = new System.Drawing.Point(158, 92);
             this.labelSubtitulo.Name = "labelSubtitulo";
-            this.labelSubtitulo.Size = new System.Drawing.Size(497, 25);
+            this.labelSubtitulo.Size = new System.Drawing.Size(389, 20);
             this.labelSubtitulo.TabIndex = 3;
             this.labelSubtitulo.Text = "Administra la consulta y asignación de perfiles a usuarios.";
             // 
@@ -127,7 +128,7 @@ namespace AplicacionPerfiles
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
             this.labelTitulo.Location = new System.Drawing.Point(156, 38);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(407, 50);
+            this.labelTitulo.Size = new System.Drawing.Size(329, 41);
             this.labelTitulo.TabIndex = 2;
             this.labelTitulo.Text = "Asignación de Perfiles";
             // 
@@ -224,7 +225,7 @@ namespace AplicacionPerfiles
             this.comboBoxUsuariosConsulta.FormattingEnabled = true;
             this.comboBoxUsuariosConsulta.Location = new System.Drawing.Point(32, 130);
             this.comboBoxUsuariosConsulta.Name = "comboBoxUsuariosConsulta";
-            this.comboBoxUsuariosConsulta.Size = new System.Drawing.Size(631, 29);
+            this.comboBoxUsuariosConsulta.Size = new System.Drawing.Size(631, 25);
             this.comboBoxUsuariosConsulta.TabIndex = 0;
             // 
             // labelUsuariosConsulta
@@ -234,7 +235,7 @@ namespace AplicacionPerfiles
             this.labelUsuariosConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.labelUsuariosConsulta.Location = new System.Drawing.Point(32, 104);
             this.labelUsuariosConsulta.Name = "labelUsuariosConsulta";
-            this.labelUsuariosConsulta.Size = new System.Drawing.Size(75, 23);
+            this.labelUsuariosConsulta.Size = new System.Drawing.Size(62, 19);
             this.labelUsuariosConsulta.TabIndex = 4;
             this.labelUsuariosConsulta.Text = "Usuarios";
             // 
@@ -245,7 +246,7 @@ namespace AplicacionPerfiles
             this.labelTituloConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
             this.labelTituloConsulta.Location = new System.Drawing.Point(90, 36);
             this.labelTituloConsulta.Name = "labelTituloConsulta";
-            this.labelTituloConsulta.Size = new System.Drawing.Size(331, 30);
+            this.labelTituloConsulta.Size = new System.Drawing.Size(272, 25);
             this.labelTituloConsulta.TabIndex = 3;
             this.labelTituloConsulta.Text = "Consulta de Perfiles a Usuarios";
             // 
@@ -356,7 +357,7 @@ namespace AplicacionPerfiles
             this.comboBoxPerfilesAsignacion.FormattingEnabled = true;
             this.comboBoxPerfilesAsignacion.Location = new System.Drawing.Point(392, 130);
             this.comboBoxPerfilesAsignacion.Name = "comboBoxPerfilesAsignacion";
-            this.comboBoxPerfilesAsignacion.Size = new System.Drawing.Size(262, 29);
+            this.comboBoxPerfilesAsignacion.Size = new System.Drawing.Size(262, 25);
             this.comboBoxPerfilesAsignacion.TabIndex = 1;
             // 
             // comboBoxUsuariosAsignacion
@@ -365,7 +366,7 @@ namespace AplicacionPerfiles
             this.comboBoxUsuariosAsignacion.FormattingEnabled = true;
             this.comboBoxUsuariosAsignacion.Location = new System.Drawing.Point(32, 130);
             this.comboBoxUsuariosAsignacion.Name = "comboBoxUsuariosAsignacion";
-            this.comboBoxUsuariosAsignacion.Size = new System.Drawing.Size(340, 29);
+            this.comboBoxUsuariosAsignacion.Size = new System.Drawing.Size(340, 25);
             this.comboBoxUsuariosAsignacion.TabIndex = 0;
             // 
             // labelPerfilesAsignacion
@@ -375,7 +376,7 @@ namespace AplicacionPerfiles
             this.labelPerfilesAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.labelPerfilesAsignacion.Location = new System.Drawing.Point(392, 104);
             this.labelPerfilesAsignacion.Name = "labelPerfilesAsignacion";
-            this.labelPerfilesAsignacion.Size = new System.Drawing.Size(63, 23);
+            this.labelPerfilesAsignacion.Size = new System.Drawing.Size(51, 19);
             this.labelPerfilesAsignacion.TabIndex = 7;
             this.labelPerfilesAsignacion.Text = "Perfiles";
             // 
@@ -386,7 +387,7 @@ namespace AplicacionPerfiles
             this.labelUsuariosAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.labelUsuariosAsignacion.Location = new System.Drawing.Point(32, 104);
             this.labelUsuariosAsignacion.Name = "labelUsuariosAsignacion";
-            this.labelUsuariosAsignacion.Size = new System.Drawing.Size(75, 23);
+            this.labelUsuariosAsignacion.Size = new System.Drawing.Size(62, 19);
             this.labelUsuariosAsignacion.TabIndex = 6;
             this.labelUsuariosAsignacion.Text = "Usuarios";
             // 
@@ -397,7 +398,7 @@ namespace AplicacionPerfiles
             this.labelTituloAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
             this.labelTituloAsignacion.Location = new System.Drawing.Point(90, 36);
             this.labelTituloAsignacion.Name = "labelTituloAsignacion";
-            this.labelTituloAsignacion.Size = new System.Drawing.Size(354, 30);
+            this.labelTituloAsignacion.Size = new System.Drawing.Size(292, 25);
             this.labelTituloAsignacion.TabIndex = 5;
             this.labelTituloAsignacion.Text = "Asignacion de Perfiles a Usuarios";
             // 
@@ -423,7 +424,7 @@ namespace AplicacionPerfiles
             this.labelIconAsignacion.Text = "👥";
             this.labelIconAsignacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // AsignacionPerfiles
+            // FrmAsignacionPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,12 +432,13 @@ namespace AplicacionPerfiles
             this.ClientSize = new System.Drawing.Size(1538, 844);
             this.Controls.Add(this.panelContenedorListas);
             this.Controls.Add(this.panelHeader);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1199, 749);
-            this.Name = "AsignacionPerfiles";
+            this.Name = "FrmAsignacionPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Asignación de Perfiles";
+            this.Text = "2009 - Asignación de Perfiles";
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
