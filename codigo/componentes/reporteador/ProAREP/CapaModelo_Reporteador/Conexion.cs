@@ -12,7 +12,7 @@ namespace CapaModelo_Reporteador
 
         public OdbcConnection conexion()
         {
-            OdbcConnection conn = new OdbcConnection("Dsn=dbreporte;Uid=usuprueba;Pwd=TuContraseñaAqui;");
+            OdbcConnection conn = new OdbcConnection("Dsn=dbReporteador;Uid=usuprueba;Pwd=TuContraseñaAqui;");
             try
             {
                 conn.Open();

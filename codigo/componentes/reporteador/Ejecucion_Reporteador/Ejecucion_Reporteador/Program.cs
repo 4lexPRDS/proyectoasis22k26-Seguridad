@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejecucion
+namespace Ejecucion_Reporteador
 {
     internal static class Program
     {

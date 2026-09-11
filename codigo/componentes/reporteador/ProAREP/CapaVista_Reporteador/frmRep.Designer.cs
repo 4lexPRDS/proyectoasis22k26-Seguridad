@@ -2,11 +2,6 @@
 {
     partial class frmRep
     {
-
-        // ============================================
-        // MODIFICADO POR VELVETH CHAVEZ - 8 SEP 2026
-        // ============================================
-
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -33,230 +28,218 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblReportes = new System.Windows.Forms.Label();
-            this.lblRuta = new System.Windows.Forms.Label();
-            this.lblNomRep = new System.Windows.Forms.Label();
-            this.txtRuta = new System.Windows.Forms.TextBox();
-            this.txtNomRep = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnRuta = new System.Windows.Forms.Button();
-            this.btnVerRep = new System.Windows.Forms.Button();
-            this.txtBus = new System.Windows.Forms.TextBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.btnAplFil = new System.Windows.Forms.Button();
+            this.ReporteadorLblReportes = new System.Windows.Forms.Label();
+            this.ReporteadorLblRutaReporte = new System.Windows.Forms.Label();
+            this.ReporteadorLblNombreReporte = new System.Windows.Forms.Label();
+            this.ReporteadorTxtRutaReporte = new System.Windows.Forms.TextBox();
+            this.ReporteadorTxtNombreReporte = new System.Windows.Forms.TextBox();
+            this.ReporteadorBtnGuardarReporte = new System.Windows.Forms.Button();
+            this.ReporteadorBtnModificarReporte = new System.Windows.Forms.Button();
+            this.ReporteadorBtnLimpiarReporte = new System.Windows.Forms.Button();
+            this.ReporteadorBtnEliminarReporte = new System.Windows.Forms.Button();
+            this.ReporteadorBtnImprimirReporte = new System.Windows.Forms.Button();
+            this.ReporteadorBtnRuta = new System.Windows.Forms.Button();
+            this.ReporteadorBtnVerReporte = new System.Windows.Forms.Button();
+            this.ReporteadorTxtBuscarNombreReporte = new System.Windows.Forms.TextBox();
+            this.ReporteadorDtpFecharReporte = new System.Windows.Forms.DateTimePicker();
+            this.ReporteadorBtnAplicarFiltro = new System.Windows.Forms.Button();
             this.dtgRep = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscar = new System.Windows.Forms.CheckedListBox();
+            this.ReporteadorChkNombreReporte = new System.Windows.Forms.CheckBox();
+            this.ReporteadorChkFecha = new System.Windows.Forms.CheckBox();
+            this.ReporteadorLblDatosBuscarReporte = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRep)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblReportes
+            // ReporteadorLblReportes
             // 
-            this.lblReportes.AutoSize = true;
-            this.lblReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportes.Location = new System.Drawing.Point(413, 54);
-            this.lblReportes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblReportes.Name = "lblReportes";
-            this.lblReportes.Size = new System.Drawing.Size(163, 39);
-            this.lblReportes.TabIndex = 0;
-            this.lblReportes.Text = "Reportes";
+            this.ReporteadorLblReportes.AutoSize = true;
+            this.ReporteadorLblReportes.Font = new System.Drawing.Font("Lucida Sans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorLblReportes.Location = new System.Drawing.Point(376, 38);
+            this.ReporteadorLblReportes.Name = "ReporteadorLblReportes";
+            this.ReporteadorLblReportes.Size = new System.Drawing.Size(132, 32);
+            this.ReporteadorLblReportes.TabIndex = 0;
+            this.ReporteadorLblReportes.Text = "Reportes";
             // 
-            // lblRuta
+            // ReporteadorLblRutaReporte
             // 
-            this.lblRuta.AutoSize = true;
-            this.lblRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRuta.Location = new System.Drawing.Point(71, 114);
-            this.lblRuta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(161, 25);
-            this.lblRuta.TabIndex = 1;
-            this.lblRuta.Text = "Ruta de reportes:";
+            this.ReporteadorLblRutaReporte.AutoSize = true;
+            this.ReporteadorLblRutaReporte.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorLblRutaReporte.Location = new System.Drawing.Point(53, 93);
+            this.ReporteadorLblRutaReporte.Name = "ReporteadorLblRutaReporte";
+            this.ReporteadorLblRutaReporte.Size = new System.Drawing.Size(141, 21);
+            this.ReporteadorLblRutaReporte.TabIndex = 1;
+            this.ReporteadorLblRutaReporte.Text = "Ruta de reportes:";
             // 
-            // lblNomRep
+            // ReporteadorLblNombreReporte
             // 
-            this.lblNomRep.AutoSize = true;
-            this.lblNomRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomRep.Location = new System.Drawing.Point(71, 170);
-            this.lblNomRep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomRep.Name = "lblNomRep";
-            this.lblNomRep.Size = new System.Drawing.Size(184, 25);
-            this.lblNomRep.TabIndex = 2;
-            this.lblNomRep.Text = "Nombre del reporte:";
+            this.ReporteadorLblNombreReporte.AutoSize = true;
+            this.ReporteadorLblNombreReporte.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorLblNombreReporte.Location = new System.Drawing.Point(53, 176);
+            this.ReporteadorLblNombreReporte.Name = "ReporteadorLblNombreReporte";
+            this.ReporteadorLblNombreReporte.Size = new System.Drawing.Size(160, 21);
+            this.ReporteadorLblNombreReporte.TabIndex = 2;
+            this.ReporteadorLblNombreReporte.Text = "Nombre del reporte:";
             // 
-            // txtRuta
+            // ReporteadorTxtRutaReporte
             // 
-            this.txtRuta.Location = new System.Drawing.Point(284, 113);
-            this.txtRuta.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(495, 22);
-            this.txtRuta.TabIndex = 3;
-            this.txtRuta.Text = "Ubicacion del archivo";
+            this.ReporteadorTxtRutaReporte.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorTxtRutaReporte.Location = new System.Drawing.Point(213, 92);
+            this.ReporteadorTxtRutaReporte.Name = "ReporteadorTxtRutaReporte";
+            this.ReporteadorTxtRutaReporte.Size = new System.Drawing.Size(427, 33);
+            this.ReporteadorTxtRutaReporte.TabIndex = 3;
+            this.ReporteadorTxtRutaReporte.Text = "Ubicacion del archivo";
             // 
-            // txtNomRep
+            // ReporteadorTxtNombreReporte
             // 
-            this.txtNomRep.Location = new System.Drawing.Point(284, 172);
-            this.txtNomRep.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNomRep.Name = "txtNomRep";
-            this.txtNomRep.Size = new System.Drawing.Size(495, 22);
-            this.txtNomRep.TabIndex = 4;
+            this.ReporteadorTxtNombreReporte.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorTxtNombreReporte.Location = new System.Drawing.Point(212, 164);
+            this.ReporteadorTxtNombreReporte.Name = "ReporteadorTxtNombreReporte";
+            this.ReporteadorTxtNombreReporte.Size = new System.Drawing.Size(428, 33);
+            this.ReporteadorTxtNombreReporte.TabIndex = 4;
             // 
-            // btnGuardar
+            // ReporteadorBtnGuardarReporte
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Teal;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(107, 262);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(125, 42);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnGuardarReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnGuardarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnGuardarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnGuardarReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnGuardarReporte.Location = new System.Drawing.Point(61, 239);
+            this.ReporteadorBtnGuardarReporte.Name = "ReporteadorBtnGuardarReporte";
+            this.ReporteadorBtnGuardarReporte.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnGuardarReporte.TabIndex = 5;
+            this.ReporteadorBtnGuardarReporte.Text = "Guardar";
+            this.ReporteadorBtnGuardarReporte.UseVisualStyleBackColor = false;
             // 
-            // btnModificar
+            // ReporteadorBtnModificarReporte
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Teal;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(283, 262);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(125, 42);
-            this.btnModificar.TabIndex = 6;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnModificarReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnModificarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnModificarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnModificarReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnModificarReporte.Location = new System.Drawing.Point(213, 239);
+            this.ReporteadorBtnModificarReporte.Name = "ReporteadorBtnModificarReporte";
+            this.ReporteadorBtnModificarReporte.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnModificarReporte.TabIndex = 6;
+            this.ReporteadorBtnModificarReporte.Text = "Modificar";
+            this.ReporteadorBtnModificarReporte.UseVisualStyleBackColor = false;
             // 
-            // btnLimpiar
+            // ReporteadorBtnLimpiarReporte
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Teal;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(468, 262);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(125, 42);
-            this.btnLimpiar.TabIndex = 7;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnLimpiarReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnLimpiarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnLimpiarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnLimpiarReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnLimpiarReporte.Location = new System.Drawing.Point(382, 239);
+            this.ReporteadorBtnLimpiarReporte.Name = "ReporteadorBtnLimpiarReporte";
+            this.ReporteadorBtnLimpiarReporte.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnLimpiarReporte.TabIndex = 7;
+            this.ReporteadorBtnLimpiarReporte.Text = "Limpiar";
+            this.ReporteadorBtnLimpiarReporte.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
+            // ReporteadorBtnEliminarReporte
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Teal;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(653, 262);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(125, 42);
-            this.btnEliminar.TabIndex = 8;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnEliminarReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnEliminarReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnEliminarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnEliminarReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnEliminarReporte.Location = new System.Drawing.Point(555, 239);
+            this.ReporteadorBtnEliminarReporte.Name = "ReporteadorBtnEliminarReporte";
+            this.ReporteadorBtnEliminarReporte.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnEliminarReporte.TabIndex = 8;
+            this.ReporteadorBtnEliminarReporte.Text = "Eliminar";
+            this.ReporteadorBtnEliminarReporte.UseVisualStyleBackColor = false;
             // 
-            // btnImprimir
+            // ReporteadorBtnImprimirReporte
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.Teal;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(840, 262);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(125, 42);
-            this.btnImprimir.TabIndex = 9;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnImprimirReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnImprimirReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnImprimirReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnImprimirReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnImprimirReporte.Location = new System.Drawing.Point(730, 239);
+            this.ReporteadorBtnImprimirReporte.Name = "ReporteadorBtnImprimirReporte";
+            this.ReporteadorBtnImprimirReporte.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnImprimirReporte.TabIndex = 9;
+            this.ReporteadorBtnImprimirReporte.Text = "Imprimir";
+            this.ReporteadorBtnImprimirReporte.UseVisualStyleBackColor = false;
             // 
-            // btnRuta
+            // ReporteadorBtnRuta
             // 
-            this.btnRuta.BackColor = System.Drawing.Color.Teal;
-            this.btnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRuta.ForeColor = System.Drawing.Color.White;
-            this.btnRuta.Location = new System.Drawing.Point(869, 97);
-            this.btnRuta.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRuta.Name = "btnRuta";
-            this.btnRuta.Size = new System.Drawing.Size(125, 42);
-            this.btnRuta.TabIndex = 10;
-            this.btnRuta.Text = "Ruta";
-            this.btnRuta.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnRuta.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnRuta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnRuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnRuta.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnRuta.Location = new System.Drawing.Point(730, 93);
+            this.ReporteadorBtnRuta.Name = "ReporteadorBtnRuta";
+            this.ReporteadorBtnRuta.Size = new System.Drawing.Size(94, 34);
+            this.ReporteadorBtnRuta.TabIndex = 10;
+            this.ReporteadorBtnRuta.Text = "Ruta";
+            this.ReporteadorBtnRuta.UseVisualStyleBackColor = false;
             // 
-            // btnVerRep
+            // ReporteadorBtnVerReporte
             // 
-            this.btnVerRep.BackColor = System.Drawing.Color.Teal;
-            this.btnVerRep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerRep.ForeColor = System.Drawing.Color.White;
-            this.btnVerRep.Location = new System.Drawing.Point(827, 156);
-            this.btnVerRep.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVerRep.Name = "btnVerRep";
-            this.btnVerRep.Size = new System.Drawing.Size(168, 41);
-            this.btnVerRep.TabIndex = 11;
-            this.btnVerRep.Text = "Ver Reporte";
-            this.btnVerRep.UseVisualStyleBackColor = false;
+            this.ReporteadorBtnVerReporte.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnVerReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnVerReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnVerReporte.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnVerReporte.Location = new System.Drawing.Point(698, 164);
+            this.ReporteadorBtnVerReporte.Name = "ReporteadorBtnVerReporte";
+            this.ReporteadorBtnVerReporte.Size = new System.Drawing.Size(126, 33);
+            this.ReporteadorBtnVerReporte.TabIndex = 11;
+            this.ReporteadorBtnVerReporte.Text = "Ver Reporte";
+            this.ReporteadorBtnVerReporte.UseVisualStyleBackColor = false;
             // 
-            // txtBus
+            // ReporteadorTxtBuscarNombreReporte
             // 
-            this.txtBus.Location = new System.Drawing.Point(336, 315);
-            this.txtBus.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBus.Name = "txtBus";
-            this.txtBus.Size = new System.Drawing.Size(379, 22);
-            this.txtBus.TabIndex = 14;
-            this.txtBus.Text = "Colocar el nombre del reporte";
+            this.ReporteadorTxtBuscarNombreReporte.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorTxtBuscarNombreReporte.Location = new System.Drawing.Point(57, 396);
+            this.ReporteadorTxtBuscarNombreReporte.Name = "ReporteadorTxtBuscarNombreReporte";
+            this.ReporteadorTxtBuscarNombreReporte.Size = new System.Drawing.Size(285, 33);
+            this.ReporteadorTxtBuscarNombreReporte.TabIndex = 14;
+            this.ReporteadorTxtBuscarNombreReporte.Text = "Colocar el nombre del reporte";
             // 
-            // dtpFecha
+            // ReporteadorDtpFecharReporte
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(336, 343);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(379, 22);
-            this.dtpFecha.TabIndex = 15;
-            this.dtpFecha.Value = new System.DateTime(2026, 9, 3, 8, 9, 53, 0);
+            this.ReporteadorDtpFecharReporte.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorDtpFecharReporte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ReporteadorDtpFecharReporte.Location = new System.Drawing.Point(440, 393);
+            this.ReporteadorDtpFecharReporte.Name = "ReporteadorDtpFecharReporte";
+            this.ReporteadorDtpFecharReporte.Size = new System.Drawing.Size(200, 33);
+            this.ReporteadorDtpFecharReporte.TabIndex = 15;
+            this.ReporteadorDtpFecharReporte.Value = new System.DateTime(2026, 9, 3, 8, 9, 53, 0);
             // 
-            // btnAplFil
+            // ReporteadorBtnAplicarFiltro
             // 
-            this.btnAplFil.BackColor = System.Drawing.Color.Teal;
-            this.btnAplFil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAplFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplFil.ForeColor = System.Drawing.Color.White;
-            this.btnAplFil.Location = new System.Drawing.Point(747, 322);
-            this.btnAplFil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAplFil.Name = "btnAplFil";
-            this.btnAplFil.Size = new System.Drawing.Size(157, 43);
-            this.btnAplFil.TabIndex = 16;
-            this.btnAplFil.Text = "Aplicar filtro";
-            this.btnAplFil.UseVisualStyleBackColor = false;
-            this.btnAplFil.Click += new System.EventHandler(this.btnAplFil_Click);
+            this.ReporteadorBtnAplicarFiltro.BackColor = System.Drawing.Color.Teal;
+            this.ReporteadorBtnAplicarFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReporteadorBtnAplicarFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorBtnAplicarFiltro.ForeColor = System.Drawing.Color.White;
+            this.ReporteadorBtnAplicarFiltro.Location = new System.Drawing.Point(706, 391);
+            this.ReporteadorBtnAplicarFiltro.Name = "ReporteadorBtnAplicarFiltro";
+            this.ReporteadorBtnAplicarFiltro.Size = new System.Drawing.Size(118, 35);
+            this.ReporteadorBtnAplicarFiltro.TabIndex = 16;
+            this.ReporteadorBtnAplicarFiltro.Text = "Aplicar filtro";
+            this.ReporteadorBtnAplicarFiltro.UseVisualStyleBackColor = false;
             // 
             // dtgRep
             // 
             this.dtgRep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgRep.Location = new System.Drawing.Point(76, 430);
-            this.dtgRep.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgRep.Location = new System.Drawing.Point(27, 462);
             this.dtgRep.Name = "dtgRep";
-            this.dtgRep.RowHeadersWidth = 51;
-            this.dtgRep.Size = new System.Drawing.Size(919, 124);
+            this.dtgRep.Size = new System.Drawing.Size(797, 129);
             this.dtgRep.TabIndex = 17;
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Teal;
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1067, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(874, 29);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -265,53 +248,69 @@
             this.reporteToolStripMenuItem.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reporteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(112, 29);
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
             this.reporteToolStripMenuItem.Text = "Reportes";
             // 
-            // buscar
+            // ReporteadorChkNombreReporte
             // 
-            this.buscar.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.buscar.ColumnWidth = 436;
-            this.buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscar.FormattingEnabled = true;
-            this.buscar.HorizontalScrollbar = true;
-            this.buscar.Items.AddRange(new object[] {
-            "Buscar por nombre",
-            "Buscar por fecha"});
-            this.buscar.Location = new System.Drawing.Point(132, 319);
-            this.buscar.MultiColumn = true;
-            this.buscar.Name = "buscar";
-            this.buscar.Size = new System.Drawing.Size(197, 46);
-            this.buscar.TabIndex = 20;
+            this.ReporteadorChkNombreReporte.AutoSize = true;
+            this.ReporteadorChkNombreReporte.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorChkNombreReporte.Location = new System.Drawing.Point(61, 350);
+            this.ReporteadorChkNombreReporte.Name = "ReporteadorChkNombreReporte";
+            this.ReporteadorChkNombreReporte.Size = new System.Drawing.Size(179, 25);
+            this.ReporteadorChkNombreReporte.TabIndex = 21;
+            this.ReporteadorChkNombreReporte.Text = "Nombre del reporte:";
+            this.ReporteadorChkNombreReporte.UseVisualStyleBackColor = true;
+            // 
+            // ReporteadorChkFecha
+            // 
+            this.ReporteadorChkFecha.AutoSize = true;
+            this.ReporteadorChkFecha.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorChkFecha.Location = new System.Drawing.Point(440, 350);
+            this.ReporteadorChkFecha.Name = "ReporteadorChkFecha";
+            this.ReporteadorChkFecha.Size = new System.Drawing.Size(170, 25);
+            this.ReporteadorChkFecha.TabIndex = 22;
+            this.ReporteadorChkFecha.Text = "Fecha del reporte: ";
+            this.ReporteadorChkFecha.UseVisualStyleBackColor = true;
+            // 
+            // ReporteadorLblDatosBuscarReporte
+            // 
+            this.ReporteadorLblDatosBuscarReporte.AutoSize = true;
+            this.ReporteadorLblDatosBuscarReporte.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteadorLblDatosBuscarReporte.Location = new System.Drawing.Point(57, 303);
+            this.ReporteadorLblDatosBuscarReporte.Name = "ReporteadorLblDatosBuscarReporte";
+            this.ReporteadorLblDatosBuscarReporte.Size = new System.Drawing.Size(211, 21);
+            this.ReporteadorLblDatosBuscarReporte.TabIndex = 23;
+            this.ReporteadorLblDatosBuscarReporte.Text = "Datos para buscar reporte:";
             // 
             // frmRep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1067, 629);
-            this.Controls.Add(this.buscar);
+            this.ClientSize = new System.Drawing.Size(874, 626);
+            this.Controls.Add(this.ReporteadorLblDatosBuscarReporte);
+            this.Controls.Add(this.ReporteadorChkFecha);
+            this.Controls.Add(this.ReporteadorChkNombreReporte);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dtgRep);
-            this.Controls.Add(this.btnAplFil);
-            this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.txtBus);
-            this.Controls.Add(this.btnVerRep);
-            this.Controls.Add(this.btnRuta);
-            this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtNomRep);
-            this.Controls.Add(this.txtRuta);
-            this.Controls.Add(this.lblNomRep);
-            this.Controls.Add(this.lblRuta);
-            this.Controls.Add(this.lblReportes);
+            this.Controls.Add(this.ReporteadorBtnAplicarFiltro);
+            this.Controls.Add(this.ReporteadorDtpFecharReporte);
+            this.Controls.Add(this.ReporteadorTxtBuscarNombreReporte);
+            this.Controls.Add(this.ReporteadorBtnVerReporte);
+            this.Controls.Add(this.ReporteadorBtnRuta);
+            this.Controls.Add(this.ReporteadorBtnImprimirReporte);
+            this.Controls.Add(this.ReporteadorBtnEliminarReporte);
+            this.Controls.Add(this.ReporteadorBtnLimpiarReporte);
+            this.Controls.Add(this.ReporteadorBtnModificarReporte);
+            this.Controls.Add(this.ReporteadorBtnGuardarReporte);
+            this.Controls.Add(this.ReporteadorTxtNombreReporte);
+            this.Controls.Add(this.ReporteadorTxtRutaReporte);
+            this.Controls.Add(this.ReporteadorLblNombreReporte);
+            this.Controls.Add(this.ReporteadorLblRutaReporte);
+            this.Controls.Add(this.ReporteadorLblReportes);
             this.ForeColor = System.Drawing.Color.Black;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRep";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reportes";
@@ -326,24 +325,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblReportes;
-        private System.Windows.Forms.Label lblRuta;
-        private System.Windows.Forms.Label lblNomRep;
-        private System.Windows.Forms.TextBox txtRuta;
-        private System.Windows.Forms.TextBox txtNomRep;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnRuta;
-        private System.Windows.Forms.Button btnVerRep;
-        private System.Windows.Forms.TextBox txtBus;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.Button btnAplFil;
+        private System.Windows.Forms.Label ReporteadorLblReportes;
+        private System.Windows.Forms.Label ReporteadorLblRutaReporte;
+        private System.Windows.Forms.Label ReporteadorLblNombreReporte;
+        private System.Windows.Forms.TextBox ReporteadorTxtRutaReporte;
+        private System.Windows.Forms.TextBox ReporteadorTxtNombreReporte;
+        private System.Windows.Forms.Button ReporteadorBtnGuardarReporte;
+        private System.Windows.Forms.Button ReporteadorBtnModificarReporte;
+        private System.Windows.Forms.Button ReporteadorBtnLimpiarReporte;
+        private System.Windows.Forms.Button ReporteadorBtnEliminarReporte;
+        private System.Windows.Forms.Button ReporteadorBtnImprimirReporte;
+        private System.Windows.Forms.Button ReporteadorBtnRuta;
+        private System.Windows.Forms.Button ReporteadorBtnVerReporte;
+        private System.Windows.Forms.TextBox ReporteadorTxtBuscarNombreReporte;
+        private System.Windows.Forms.DateTimePicker ReporteadorDtpFecharReporte;
+        private System.Windows.Forms.Button ReporteadorBtnAplicarFiltro;
         private System.Windows.Forms.DataGridView dtgRep;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
-        private System.Windows.Forms.CheckedListBox buscar;
+        private System.Windows.Forms.CheckBox ReporteadorChkNombreReporte;
+        private System.Windows.Forms.CheckBox ReporteadorChkFecha;
+        private System.Windows.Forms.Label ReporteadorLblDatosBuscarReporte;
     }
 }
