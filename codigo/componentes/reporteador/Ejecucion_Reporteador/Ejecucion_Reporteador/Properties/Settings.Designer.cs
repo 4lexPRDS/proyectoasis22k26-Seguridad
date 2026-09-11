@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ejecucion.Properties
+namespace Ejecucion_Reporteador.Properties
 {
 
 

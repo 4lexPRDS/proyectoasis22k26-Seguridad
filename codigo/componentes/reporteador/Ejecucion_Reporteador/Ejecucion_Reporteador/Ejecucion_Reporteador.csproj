@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4C68C932-FE4C-4894-B84C-B76593E8928F}</ProjectGuid>
+    <ProjectGuid>{3C0AAE3F-CDF3-44BA-A54F-0B7EC1611DE2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejecucion</RootNamespace>
-    <AssemblyName>Ejecucion</AssemblyName>
+    <RootNamespace>Ejecucion_Reporteador</RootNamespace>
+    <AssemblyName>Ejecucion_Reporteador</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
