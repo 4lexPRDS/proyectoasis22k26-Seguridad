@@ -1,6 +1,4 @@
-using CapaControlador_Seguridad;
 using CapaVista_Seguridad;
-using CapaVista_Seguridad.Ayudas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,308 +13,45 @@ namespace proyecto2k26
 {
     public partial class FrmAsignacionAppPerf : Form
     {
-        private ClsModeloAsigAppPerf _AsigAppPerf = new ClsModeloAsigAppPerf();
-
         public FrmAsignacionAppPerf()
         {
             InitializeComponent();
         }
 
-        private void FrmAsignacionAppPerf_Load(object sender, EventArgs e)
-        {
-            SeguridadMetCargarCombos();
-            SeguridadMetListarAsigAppPerf();
-        }
-
-        private void SeguridadMetCargarCombos()
-        {
-            try
-            {
-                CboSeguridadPerfiles.DataSource = _AsigAppPerf.SeguridadMetObtenerRoles();
-                CboSeguridadPerfiles.DisplayMember = "NombreRol";
-                CboSeguridadPerfiles.ValueMember = "IdRol";
-
-                CboSeguridadModulos.DataSource = _AsigAppPerf.SeguridadMetObtenerModulos();
-                CboSeguridadModulos.DisplayMember = "NombreModulo";
-                CboSeguridadModulos.ValueMember = "IdModulo";
-
-                CboSeguridadAplicaciones.DataSource = _AsigAppPerf.SeguridadMetObtenerAplicaciones();
-                CboSeguridadAplicaciones.DisplayMember = "NombreAplicacion";
-                CboSeguridadAplicaciones.ValueMember = "IdAplicacion";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void SeguridadMetListarAsigAppPerf()
-        {
-            try
-            {
-                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetObtenerTodos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void lblPerfiles_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadAplicaciones_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadPerfiles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadModulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadInsertar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadEditar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadeliminar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadImprimir_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Seleccione un Perfil, Módulo y Aplicación, marque los permisos deseados y presione Agregar.");
-        }
-
-        private void BtnSeguridadAgregar_Click(object sender, EventArgs e)
-        {
-            CboSeguridadPerfiles.SelectedIndex = -1;
-            CboSeguridadModulos.SelectedIndex = -1;
-            CboSeguridadAplicaciones.SelectedIndex = -1;
-
-            chkSeguridadInsertar.Checked = false;
-            chkSeguridadEditar.Checked = false;
-            chkSeguridadeliminar.Checked = false;
-            chkSeguridadImprimir.Checked = false;
-
-            _AsigAppPerf.Estado = EstadoEntidad.Added;
-
-            CboSeguridadPerfiles.Enabled = true;
-            CboSeguridadModulos.Enabled = true;
-            CboSeguridadAplicaciones.Enabled = true;
-        }
-
-        private void BtnSeguridadBuscar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrWhiteSpace(TxtSeguridadFiltro.Text))
-                {
-                    MessageBox.Show("Ingrese un ID de Rol para filtrar");
-                    return;
-                }
-
-                int IdRol = Convert.ToInt32(TxtSeguridadFiltro.Text);
-                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetBuscarPorRol(IdRol);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("El ID de Rol debe ser un número");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void BtnSeguridadQuitar_Click(object sender, EventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.SelectedRows.Count > 0)
-            {
-                _AsigAppPerf.Estado = EstadoEntidad.Deleted;
-                _AsigAppPerf.IdRol = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[0].Value);
-                _AsigAppPerf.IdModulo = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[1].Value);
-                _AsigAppPerf.IdAplicacion = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[2].Value);
-
-                string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
-                MessageBox.Show(Resultado);
-                SeguridadMetListarAsigAppPerf();
-            }
-            else MessageBox.Show("Seleccione una fila");
-        }
-
-        private void BtnSeguridadImprimir_Click(object sender, EventArgs e)
-        {
-            // TODO: lógica para imprimir el contenido de DgvSeguridadListaUsuarios
-        }
-
-        private void BtnSeguridadSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void DgvSeguridadListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.SelectedRows.Count > 0)
-            {
-                _AsigAppPerf.Estado = EstadoEntidad.Modified;
-                CboSeguridadPerfiles.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[0].Value);
-                CboSeguridadModulos.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[1].Value);
-                CboSeguridadAplicaciones.SelectedValue = Convert.ToInt32(DgvSeguridadListaUsuarios.CurrentRow.Cells[2].Value);
-                chkSeguridadInsertar.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells[3].Value);
-                chkSeguridadEditar.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells[4].Value);
-                chkSeguridadeliminar.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells[5].Value);
-                chkSeguridadImprimir.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells[6].Value);
-            }
-        }
-
-        private void SeguridadMetReinicio()
-        {
-            chkSeguridadInsertar.Checked = false;
-            chkSeguridadEditar.Checked = false;
-            chkSeguridadeliminar.Checked = false;
-            chkSeguridadImprimir.Checked = false;
-        }
-
-        private void PnlSeguridadPnlDecorativo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BtnSeguridadModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (DgvSeguridadListaUsuarios.SelectedRows.Count == 0)
-                {
-                    MessageBox.Show("Seleccione una fila del listado para modificar");
-                    return;
-                }
-
-                _AsigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                _AsigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                _AsigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
-                _AsigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
-                _AsigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
-                _AsigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
-                _AsigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
-                _AsigAppPerf.Estado = EstadoEntidad.Modified;
-
-                bool Valido = new ClsValidacionDatos(_AsigAppPerf).SeguridadMetValidar();
-                if (Valido)
-                {
-                    string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
-                    MessageBox.Show(Resultado);
-                    SeguridadMetListarAsigAppPerf();
-                    SeguridadMetReinicio();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void BtnSeguridadGuardar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _AsigAppPerf.IdRol = Convert.ToInt32(CboSeguridadPerfiles.SelectedValue);
-                _AsigAppPerf.IdModulo = Convert.ToInt32(CboSeguridadModulos.SelectedValue);
-                _AsigAppPerf.IdAplicacion = Convert.ToInt32(CboSeguridadAplicaciones.SelectedValue);
-                _AsigAppPerf.DerInsertarRolModuloAplicacion = chkSeguridadInsertar.Checked;
-                _AsigAppPerf.DerEditarRolModuloAplicacion = chkSeguridadEditar.Checked;
-                _AsigAppPerf.DerEliminarRolModuloAplicacion = chkSeguridadeliminar.Checked;
-                _AsigAppPerf.DerImprimirRolModuloAplicacion = chkSeguridadImprimir.Checked;
-                _AsigAppPerf.Estado = EstadoEntidad.Added;
-
-                bool Valido = new ClsValidacionDatos(_AsigAppPerf).SeguridadMetValidar();
-                if (Valido)
-                {
-                    string Resultado = _AsigAppPerf.SeguridadMetGrabarCambios();
-                    MessageBox.Show(Resultado);
-                    SeguridadMetListarAsigAppPerf();
-                    SeguridadMetReinicio();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void BtnSeguridadReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSeguridadActualizar_Click(object sender, EventArgs e)
-        {
-            TxtSeguridadFiltro.Clear();
-            SeguridadMetListarAsigAppPerf();
-        }
-
-        private void BtnSeguridadInicio_Click(object sender, EventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.Rows.Count > 0)
-            {
-                DgvSeguridadListaUsuarios.ClearSelection();
-                DgvSeguridadListaUsuarios.Rows[0].Selected = true;
-                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[0].Cells[0];
-            }
-        }
-
-        private void BtnSeguridadAnterior_Click(object sender, EventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
-            {
-                int FilaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
-                if (FilaActual > 0)
-                {
-                    DgvSeguridadListaUsuarios.ClearSelection();
-                    DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Cells[0];
-                }
-            }
-        }
-
-        private void BtnSeguridadSiguiente_Click(object sender, EventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.Rows.Count > 0 && DgvSeguridadListaUsuarios.CurrentCell != null)
-            {
-                int FilaActual = DgvSeguridadListaUsuarios.CurrentCell.RowIndex;
-                if (FilaActual < DgvSeguridadListaUsuarios.Rows.Count - 1)
-                {
-                    DgvSeguridadListaUsuarios.ClearSelection();
-                    DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Cells[0];
-                }
-            }
-        }
-
-        private void BtnSeguridadFin_Click(object sender, EventArgs e)
-        {
-            if (DgvSeguridadListaUsuarios.Rows.Count > 0)
-            {
-                int UltimaFila = DgvSeguridadListaUsuarios.Rows.Count - 1;
-                DgvSeguridadListaUsuarios.ClearSelection();
-                DgvSeguridadListaUsuarios.Rows[UltimaFila].Selected = true;
-                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells[0];
-            }
-        }
-
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAsignacionAplicacionUsuario frmasigusu = new FrmAsignacionAplicacionUsuario();
+            this.Hide();
+            frmasigusu.ShowDialog();
+            this.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // TODO: lógica para buscar y cargar resultados en dataGridView1
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            // TODO: lógica para quitar la fila seleccionada de dataGridView1
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            // TODO: lógica para imprimir el contenido de dataGridView1
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

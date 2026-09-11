@@ -16,7 +16,7 @@ namespace Ejecucion_Seguridad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVista_Seguridad.FrmLogin());
+            Application.Run(new CapaVista_Seguridad.login());
         }
     }
 }

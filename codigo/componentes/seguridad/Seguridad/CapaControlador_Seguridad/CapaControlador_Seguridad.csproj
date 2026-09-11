@@ -31,8 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaModelo_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CapaModelo_Seguridad\bin\Debug\CapaModelo_Seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,20 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelos de controladores\ClsModeloAsigAppPerf.cs" />
-    <Compile Include="Modelos de controladores\ClsModeloEmpleado.cs" />
-    <Compile Include="Modelos de controladores\ClsModeloMantenimientoApp.cs" />
-    <Compile Include="Modelos de controladores\ClsModeloModulo.cs" />
-    <Compile Include="Modelos de controladores\ClsModeloRoles.cs" />
-    <Compile Include="Modelos de controladores\ClsModeloUsuario.cs" />
-    <Compile Include="Objetos de valor\ClsEstadoEntidadValor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaModelo_Seguridad\CapaModelo_Seguridad.csproj">
-      <Project>{3fdc5838-1ec3-42c3-b7ca-b396c03b239f}</Project>
-      <Name>CapaModelo_Seguridad</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
