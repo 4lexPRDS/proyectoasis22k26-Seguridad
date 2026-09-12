@@ -21,14 +21,14 @@ namespace CapaModelo_Seguridad.Repositorios
         {
             selectAll = "SELECT idUsuario"
                          + ", idEmpleado"
-                         + ", usuarioUsuario"
+                         + ",nombreUsuario"
                          + ", contrasenaUsuario"
                          + ", ultimoAccesoUsuario"
                          + ", is_active"
                          + " FROM tblusuario";
-            insert = "INSERT INTO tblusuario (idEmpleado, usuarioUsuario, contrasenaUsuario, ultimoAccesoUsuario, is_active) VALUES (?,?,?,?,?)";
+            insert = "INSERT INTO tblusuario (idEmpleado,nombreUsuario, contrasenaUsuario, ultimoAccesoUsuario, is_active) VALUES (?,?,?,?,?)";
 
-            update = "UPDATE tblusuario SET idEmpleado=?, usuarioUsuario=?, contrasenaUsuario=?, ultimoAccesoUsuario=?,is_active=? WHERE idUsuario=?"; 
+            update = "UPDATE tblusuario SET idEmpleado=?,nombreUsuario=?, contrasenaUsuario=?, ultimoAccesoUsuario=?,is_active=? WHERE idUsuario=?"; 
 
             delete = "DELETE FROM tblusuario WHERE idUsuario=?";
         }
