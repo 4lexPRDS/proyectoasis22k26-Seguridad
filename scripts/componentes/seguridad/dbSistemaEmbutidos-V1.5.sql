@@ -8,15 +8,15 @@ CREATE TABLE tblEmpleado (
     idEmpleado INT AUTO_INCREMENT NOT NULL,
     codigoEmpleado VARCHAR(30) NOT NULL,
     dpiEmpleado CHAR(13) NOT NULL,
-    nitEmpleado CHAR(10) NULL,
+    nitEmpleado CHAR(10) NOT NULL,
     nombresEmpleado VARCHAR(100) NOT NULL,
     apellidosEmpleado VARCHAR(100) NOT NULL,
-    puestoEmpleadob VARCHAR(255) NOT NULL,
+    puestoEmpleado VARCHAR(255) NOT NULL,
     generoEmpleado CHAR(1) NOT NULL COMMENT 'M = Masculino, F = Femenino',
     fechaNacimientoEmpleado DATE NOT NULL,
     fechaContratacionEmpleado DATE NOT NULL,
-    telefonoEmpleado VARCHAR(30) NULL,
-    correoEmpleado VARCHAR(150) NULL,
+    telefonoEmpleado VARCHAR(30) NOT NULL,
+    correoEmpleado VARCHAR(150) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -30,7 +30,7 @@ CREATE TABLE tblEmpleado (
 CREATE TABLE tblRol (
     idRol INT AUTO_INCREMENT NOT NULL,
     nombreRol VARCHAR(100) NOT NULL,
-    descripcionRol VARCHAR(255) NULL,
+    descripcionRol VARCHAR(255) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -41,7 +41,7 @@ CREATE TABLE tblRol (
 CREATE TABLE tblModulo (
     idModulo INT AUTO_INCREMENT NOT NULL,
     nombreModulo VARCHAR(100) NOT NULL,
-    descripcionModulo VARCHAR(255) NULL,
+    descripcionModulo VARCHAR(255) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -53,7 +53,7 @@ CREATE TABLE tblAplicacion (
     idAplicacion INT AUTO_INCREMENT NOT NULL,
     idModulo INT NOT NULL,
     nombreAplicacion VARCHAR(100) NOT NULL,
-    descripcionAplicacion VARCHAR(255) NULL,
+    descripcionAplicacion VARCHAR(255) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -63,17 +63,17 @@ CREATE TABLE tblAplicacion (
 ) ENGINE=InnoDB;
 
 CREATE TABLE tblUsuario (
-    idUsuario INT AUTO_INCREMENT NOT NULL,
+    idUsuario INT AUTO_INCREMENT,
     idEmpleado INT NOT NULL,
-    usuarioUsuario VARCHAR(30) NOT NULL,
+    nombreUsuario VARCHAR(30) NOT NULL, /*cambiarlo a nombreUsuario*/    
     contrasenaUsuario VARCHAR(255) NOT NULL,
-    ultimoAccesoUsuario DATETIME NULL,
+    ultimoAccesoUsuario DATETIME NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT Pk_Usuario PRIMARY KEY (idUsuario),
     CONSTRAINT uqIdEmpleadoUsuario UNIQUE (idEmpleado),
-    CONSTRAINT uqUsuarioUsuario UNIQUE (usuarioUsuario),
+    CONSTRAINT uqUsuarioUsuario UNIQUE (nombreUsuario),
     CONSTRAINT Fk_Usuario_Empleado FOREIGN KEY (idEmpleado)
         REFERENCES tblEmpleado (idEmpleado) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB;
@@ -145,11 +145,11 @@ CREATE TABLE tblUsuarioModuloAplicacion (
 
 CREATE TABLE tblBitacora (
     idBitacora INT AUTO_INCREMENT NOT NULL,
-    idUsuario INT NULL,
+    idUsuario INT,
     accionBitacora VARCHAR(30) NOT NULL,
     tablaBitacora VARCHAR(100) NOT NULL,
-    idRegistroBitacora INT NULL,
-    detallesBitacora TEXT NULL,
+    idRegistroBitacora INT NOT NULL,
+    detallesBitacora TEXT NOT NULL,
     ipBitacora VARCHAR(50) NOT NULL,
     fechaHoraBitacora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -169,3 +169,120 @@ CREATE INDEX idxUsrModAplIdAplicacion ON tblUsuarioModuloAplicacion (idAplicacio
 CREATE INDEX idxBitacoraIdUsuario ON tblBitacora (idUsuario);
 CREATE INDEX idxBitacoraFechaHora ON tblBitacora (fechaHoraBitacora);
 CREATE INDEX idxBitacoraTabla ON tblBitacora (tablaBitacora);
+
+
+
+-- INSERTS
+
+USE dbSistemaEmbutidos;
+
+-- 1. tblEmpleado 
+
+INSERT INTO tblEmpleado (
+    codigoEmpleado, dpiEmpleado, nitEmpleado, nombresEmpleado, apellidosEmpleado,
+    puestoEmpleado, generoEmpleado, fechaNacimientoEmpleado, fechaContratacionEmpleado,
+    telefonoEmpleado, correoEmpleado
+) VALUES
+('EMP-001', '1234567890123', '1234567K', 'Isabel', 'Meléndez', 'Coordinadora de Implementación', 'F', '2000-05-14', '2026-01-10', '55512345', 'isabel.melendez@terminus.com'),
+('EMP-002', '2345678901234', '2345678K', 'Carlos', 'Ramírez', 'Analista de Sistemas', 'M', '1998-03-22', '2025-11-05', '55523456', 'carlos.ramirez@terminus.com'),
+('EMP-003', '3456789012345', '3456789K', 'María', 'López', 'Administradora de Base de Datos', 'F', '1995-09-30', '2025-08-19', '55534567', 'maria.lopez@terminus.com');
+
+
+-- 2. tblRol 
+
+INSERT INTO tblRol (nombreRol, descripcionRol) VALUES
+('Administrador', 'Rol con acceso total al sistema'),
+('Supervisor', 'Rol con acceso a reportes y aprobaciones'),
+('Operativo', 'Rol con acceso limitado a registro de datos');
+
+
+-- 3. tblModulo 
+
+INSERT INTO tblModulo (nombreModulo, descripcionModulo) VALUES
+('Producción', 'Módulo de control de producción de embutidos'),
+('Inventario', 'Módulo de control de materia prima y producto terminado'),
+('Ventas', 'Módulo de gestión de pedidos y clientes');
+
+
+-- 4. tblAplicacion
+
+INSERT INTO tblAplicacion (idModulo, nombreAplicacion, descripcionAplicacion) VALUES
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Producción'), 'Registro de Lotes', 'Registro y seguimiento de lotes de producción'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Inventario'), 'Control de Existencias', 'Control de entradas y salidas de inventario'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Ventas'), 'Gestión de Pedidos', 'Registro y seguimiento de pedidos de clientes');
+
+
+-- 5. tblUsuario 
+
+INSERT INTO tblUsuario (idEmpleado, nombreUsuario, contrasenaUsuario, ultimoAccesoUsuario) VALUES
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-001'), 'imelendez', '$2y$10$HASHDEPRUEBA0000000001', NOW()),
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-002'), 'cramirez', '$2y$10$HASHDEPRUEBA0000000002', NOW()),
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-003'), 'mlopez', '$2y$10$HASHDEPRUEBA0000000003', NOW());
+
+-- 6. tblRecuperacionContrasena 
+
+INSERT INTO tblRecuperacionContrasena (idUsuario, tokenRecuperacionContrasena, fechaExpiracionRecuperacionContrasena, usadoRecuperacionContrasena) VALUES
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), 'TOKEN-A1B2C3D4', DATE_ADD(NOW(), INTERVAL 1 DAY), FALSE),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), 'TOKEN-E5F6G7H8', DATE_ADD(NOW(), INTERVAL 1 DAY), FALSE),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), 'TOKEN-I9J0K1L2', DATE_ADD(NOW(), INTERVAL 1 DAY), TRUE);
+
+
+-- 7. tblUsuarioRol 
+
+INSERT INTO tblUsuarioRol (idUsuario, idRol, fechaAsignacionUsuarioRol) VALUES
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Administrador'), CURDATE()),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Supervisor'), CURDATE()),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Operativo'), CURDATE());
+
+
+-- 8. tblRolModuloAplicacion 
+
+INSERT INTO tblRolModuloAplicacion (idRol, idModulo, idAplicacion, derInsertarRolModuloAplicacion, derEditarRolModuloAplicacion, derEliminarRolModuloAplicacion, derImprimirRolModuloAplicacion) VALUES
+(
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Administrador'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Producción'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Registro de Lotes'),
+    TRUE, TRUE, TRUE, TRUE
+),
+(
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Supervisor'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Inventario'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Control de Existencias'),
+    TRUE, TRUE, FALSE, TRUE
+),
+(
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Operativo'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Ventas'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Gestión de Pedidos'),
+    TRUE, FALSE, FALSE, FALSE
+);
+
+--  9. tblUsuarioModuloAplicacion
+
+INSERT INTO tblUsuarioModuloAplicacion (idUsuario, idModulo, idAplicacion, derInsertarUsuarioModuloAplicacion, derEditarUsuarioModuloAplicacion, derEliminarUsuarioModuloAplicacion, derImprimirUsuarioModuloAplicacion) VALUES
+(
+    (SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Producción'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Registro de Lotes'),
+    TRUE, TRUE, TRUE, TRUE
+),
+(
+    (SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Inventario'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Control de Existencias'),
+    TRUE, TRUE, FALSE, FALSE
+),
+(
+    (SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Ventas'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Gestión de Pedidos'),
+    TRUE, FALSE, FALSE, FALSE
+);
+
+
+-- 10. tblBitacora 
+
+INSERT INTO tblBitacora (idUsuario, accionBitacora, tablaBitacora, idRegistroBitacora, detallesBitacora, ipBitacora) VALUES
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), 'INSERT', 'tblEmpleado', 1, 'Alta de empleado de prueba', '192.168.1.10'),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), 'UPDATE', 'tblAplicacion', 2, 'Actualización de datos de aplicación', '192.168.1.11'),
+((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), 'DELETE', 'tblUsuarioRol', 3, 'Eliminación de asignación de rol', '192.168.1.12');
