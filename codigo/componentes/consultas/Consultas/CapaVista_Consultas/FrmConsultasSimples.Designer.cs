@@ -1,6 +1,6 @@
 ﻿namespace CapaVista_Consultas
 {
-    partial class ConsultaSimple_400_001
+    partial class FrmConsultasSimples
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaSimple_400_001));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasSimples));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.tablaSimple1 = new CapaVista_Consultas.UserControls.TablaSimple();
+            this.tablaSimple1 = new CapaVista_Consultas.UserControls.UcTablaSimple();
             this.ConsultasGbxAgregarFiltro = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.agrupar_Ordenar1 = new CapaVista_Consultas.Agrupar_Ordenar();
+            this.agrupar_Ordenar1 = new CapaVista_Consultas.UcAgruparOrdenar();
             this.ConsultasBtnComplejas = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxAgregarFiltro.SuspendLayout();
@@ -53,7 +53,7 @@
             this.ConsultasTlpPrincipal.RowCount = 2;
             this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ConsultasTlpPrincipal.Size = new System.Drawing.Size(1096, 548);
+            this.ConsultasTlpPrincipal.Size = new System.Drawing.Size(1096, 653);
             this.ConsultasTlpPrincipal.TabIndex = 19;
             // 
             // tablaSimple1
@@ -65,7 +65,7 @@
             this.tablaSimple1.Location = new System.Drawing.Point(2, 145);
             this.tablaSimple1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.tablaSimple1.Name = "tablaSimple1";
-            this.tablaSimple1.Size = new System.Drawing.Size(1092, 399);
+            this.tablaSimple1.Size = new System.Drawing.Size(1092, 504);
             this.tablaSimple1.TabIndex = 18;
             // 
             // ConsultasGbxAgregarFiltro
@@ -115,12 +115,12 @@
             this.ConsultasBtnComplejas.UseVisualStyleBackColor = false;
             this.ConsultasBtnComplejas.Click += new System.EventHandler(this.ConsultasBtnComplejas_Click);
             // 
-            // ConsultaSimple_400_001
+            // FrmConsultasSimples
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1096, 548);
+            this.ClientSize = new System.Drawing.Size(1096, 653);
             this.Controls.Add(this.ConsultasTlpPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -133,10 +133,10 @@
         }
 
         #endregion
-        private UserControls.TablaSimple tablaSimple1;
+        private UserControls.UcTablaSimple tablaSimple1;
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private Components.ClsGrupoConsultas ConsultasGbxAgregarFiltro;
-        private Agrupar_Ordenar agrupar_Ordenar1;
+        private UcAgruparOrdenar agrupar_Ordenar1;
         private ClsBotonConsultas ConsultasBtnComplejas;
     }
 }

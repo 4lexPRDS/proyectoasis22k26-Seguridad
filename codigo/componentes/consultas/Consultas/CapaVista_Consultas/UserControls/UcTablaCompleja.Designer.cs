@@ -1,6 +1,6 @@
 ﻿namespace CapaVista_Consultas
 {
-    partial class TablaCompleja
+    partial class UcTablaCompleja
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TablaCompleja));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcTablaCompleja));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.consultaTlpDgvComplejas = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasTlpComplejas = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasTlpPaginacion = new System.Windows.Forms.TableLayoutPanel();
@@ -127,10 +128,13 @@
             this.ConsultasBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnSiguiente.Location = new System.Drawing.Point(634, 1);
             this.ConsultasBtnSiguiente.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnSiguiente.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnSiguiente.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnSiguiente.Name = "ConsultasBtnSiguiente";
             this.ConsultasBtnSiguiente.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnSiguiente.TabIndex = 3;
             this.ConsultasBtnSiguiente.UseVisualStyleBackColor = false;
+            this.ConsultasBtnSiguiente.Click += new System.EventHandler(this.ConsultasBtnSiguiente_Click_1);
             // 
             // ConsultasBtnAnterior
             // 
@@ -143,10 +147,13 @@
             this.ConsultasBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnAnterior.Location = new System.Drawing.Point(0, 1);
             this.ConsultasBtnAnterior.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnAnterior.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnAnterior.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnAnterior.Name = "ConsultasBtnAnterior";
             this.ConsultasBtnAnterior.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnAnterior.TabIndex = 4;
             this.ConsultasBtnAnterior.UseVisualStyleBackColor = false;
+            this.ConsultasBtnAnterior.Click += new System.EventHandler(this.ConsultasBtnAnterior_Click_1);
             // 
             // ConsultasCboTablas
             // 
@@ -183,42 +190,49 @@
             this.ConsultasDgvComplejas.AllowUserToAddRows = false;
             this.ConsultasDgvComplejas.AllowUserToDeleteRows = false;
             this.ConsultasDgvComplejas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.ConsultasDgvComplejas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.ConsultasDgvComplejas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ConsultasDgvComplejas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultasDgvComplejas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
             this.ConsultasDgvComplejas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConsultasDgvComplejas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.ConsultasDgvComplejas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.ConsultasDgvComplejas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.ConsultasDgvComplejas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ConsultasDgvComplejas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ConsultasDgvComplejas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ConsultasDgvComplejas.DefaultCellStyle = dataGridViewCellStyle7;
             this.ConsultasDgvComplejas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasDgvComplejas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ConsultasDgvComplejas.EnableHeadersVisualStyles = false;
             this.ConsultasDgvComplejas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ConsultasDgvComplejas.GridColor = System.Drawing.Color.LightGray;
+            this.ConsultasDgvComplejas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
             this.ConsultasDgvComplejas.Location = new System.Drawing.Point(3, 4);
             this.ConsultasDgvComplejas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConsultasDgvComplejas.MultiSelect = false;
             this.ConsultasDgvComplejas.Name = "ConsultasDgvComplejas";
+            this.ConsultasDgvComplejas.ReadOnly = true;
             this.ConsultasDgvComplejas.RowHeadersVisible = false;
             this.ConsultasDgvComplejas.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.ConsultasDgvComplejas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ConsultasDgvComplejas.RowTemplate.Height = 28;
             this.ConsultasDgvComplejas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ConsultasDgvComplejas.Size = new System.Drawing.Size(714, 275);
@@ -249,7 +263,7 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // TablaCompleja
+            // UcTablaCompleja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

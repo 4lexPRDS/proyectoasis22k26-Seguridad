@@ -11,20 +11,20 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class ConsultaSimple_400_001 : FrmBaseTerminus
+    public partial class FrmConsultasSimples : FrmBaseTerminus
     {
         ControladorConsultaSimple controlador = new ControladorConsultaSimple();
 
         //Variable dinámica de la tabla = empleado es eliminable
         public string TablaActual { get; set; } = "empleado";
 
-        public ConsultaSimple_400_001()
+        public FrmConsultasSimples()
         {
             InitializeComponent();
 
         }
 
-        public ConsultaSimple_400_001( string tabla)
+        public FrmConsultasSimples( string tabla)
         {
             InitializeComponent();
             tablaSimple1.ConsultasProcActualizarTabla(tabla);
@@ -57,7 +57,7 @@ namespace CapaVista_Consultas
 
         private void ConsultasBtnComplejas_Click(object sender, EventArgs e)
         {
-            ConsultaCompleja_500_001 consultaCompleja_500_001 = new ConsultaCompleja_500_001();
+            FrmConsultasComplejas consultaCompleja_500_001 = new FrmConsultasComplejas();
             this.Hide();
             consultaCompleja_500_001.Show();
         }

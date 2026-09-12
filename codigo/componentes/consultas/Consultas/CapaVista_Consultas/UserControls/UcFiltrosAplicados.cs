@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
-    public partial class FiltrosAplicados : ClsControlUsuarioConsultas
+    public partial class UcFiltrosAplicados : ClsControlUsuarioConsultas
     {
-        public FiltrosAplicados()
+        public UcFiltrosAplicados()
         {
             InitializeComponent();
         }

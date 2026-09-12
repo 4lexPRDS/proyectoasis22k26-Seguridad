@@ -1,6 +1,6 @@
 ﻿namespace CapaVista_Consultas.UserControls
 {
-    partial class CondicionesOrdenamientoAgrupacion
+    partial class UcCondicionesOrdenamientoAgrupacion
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CondicionesOrdenamientoAgrupacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcCondicionesOrdenamientoAgrupacion));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasLblOrdenamiento = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
             this.ConsultasLblCampo = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
@@ -236,19 +236,21 @@
             this.ConsultasBtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnIngresar.Location = new System.Drawing.Point(335, 240);
             this.ConsultasBtnIngresar.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnIngresar.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnIngresar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.Name = "ConsultasBtnIngresar";
             this.ConsultasBtnIngresar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.TabIndex = 9;
             this.ConsultasBtnIngresar.UseVisualStyleBackColor = false;
             // 
-            // CondicionesOrdenamientoAgrupacion
+            // UcCondicionesOrdenamientoAgrupacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
             this.Controls.Add(this.ConsultasTlpPrincipal);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "CondicionesOrdenamientoAgrupacion";
+            this.Name = "UcCondicionesOrdenamientoAgrupacion";
             this.Size = new System.Drawing.Size(613, 329);
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasTlpPrincipal.PerformLayout();

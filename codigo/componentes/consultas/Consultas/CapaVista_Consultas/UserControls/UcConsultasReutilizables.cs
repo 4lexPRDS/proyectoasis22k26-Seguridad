@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
-    public partial class ConsultasReutilizables : ClsControlUsuarioConsultas
+    public partial class UcConsultasReutilizables : ClsControlUsuarioConsultas
     {
-        public ConsultasReutilizables()
+        public UcConsultasReutilizables()
         {
             InitializeComponent();
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)

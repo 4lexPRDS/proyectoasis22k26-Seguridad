@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
-    public partial class Agrupar_Ordenar : ClsControlUsuarioConsultas
+    public partial class UcAgruparOrdenar : ClsControlUsuarioConsultas
     {
         private readonly ClsControladorConsultas _controlador =
             new ClsControladorConsultas();
 
-        public Agrupar_Ordenar()
+        public UcAgruparOrdenar()
         {
             InitializeComponent();
 

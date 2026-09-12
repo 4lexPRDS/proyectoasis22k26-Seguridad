@@ -1,6 +1,6 @@
 ﻿namespace CapaVista_Consultas
 {
-    partial class Agrupar_Ordenar
+    partial class UcAgruparOrdenar
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agrupar_Ordenar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcAgruparOrdenar));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasBtnRefrescar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasTxtValor = new CapaVista_Consultas.ClsCajaTextoConsultas();
@@ -272,7 +272,7 @@
             this.ConsultasCboCampo.Size = new System.Drawing.Size(142, 31);
             this.ConsultasCboCampo.TabIndex = 20;
             // 
-            // Agrupar_Ordenar
+            // UcAgruparOrdenar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -11,9 +11,9 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class ConsultaCompleja_500_001 : FrmBaseTerminus
+    public partial class FrmConsultasComplejas : FrmBaseTerminus
     {
-        public ConsultaCompleja_500_001()
+        public FrmConsultasComplejas()
         {
             InitializeComponent();
             // Estandarización EST-10 del Componente Consultas
@@ -29,7 +29,7 @@ namespace CapaVista_Consultas
 
         private void ConsultasBtnSalir_Click_1(object sender, EventArgs e)
         {
-            ConsultaSimple_400_001 ConsultaSimple_400_0011 = new ConsultaSimple_400_001();
+            FrmConsultasSimples ConsultaSimple_400_0011 = new FrmConsultasSimples();
             this.Hide();
             ConsultaSimple_400_0011.Show();
         }

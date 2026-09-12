@@ -20,7 +20,19 @@ namespace CapaVista_Consultas.Components
         public ClsTablaDatosConsultas()
         {
             DoubleBuffered = true;
-            
+
+            AplicarEstandarizacion();
+        }
+
+        protected override void OnHandleCreated(System.EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            AplicarEstandarizacion();
+        }
+
+        private void AplicarEstandarizacion()
+        {
             AutoGenerateColumns = true;
 
             Font = new Font(
@@ -48,15 +60,15 @@ namespace CapaVista_Consultas.Components
                 {
                     BackColor = Primario,
                     ForeColor = Color.White,
+                    SelectionBackColor = Primario,
+                    SelectionForeColor = Color.White,
+                    Alignment =
+                        DataGridViewContentAlignment.MiddleLeft,
                     Font = new Font(
                         "Tahoma",
                         9.5F,
                         FontStyle.Bold,
-                        GraphicsUnit.Point),
-                    Alignment =
-                        DataGridViewContentAlignment.MiddleLeft,
-                    SelectionBackColor = Primario,
-                    SelectionForeColor = Color.White
+                        GraphicsUnit.Point)
                 };
 
             DefaultCellStyle =
@@ -64,16 +76,25 @@ namespace CapaVista_Consultas.Components
                 {
                     BackColor = Color.White,
                     ForeColor = Primario,
-                    Font = new Font(
-                        "Segoe UI",
-                        9F,
-                        FontStyle.Regular,
-                        GraphicsUnit.Point),
                     SelectionBackColor = Secundario,
                     SelectionForeColor = Color.White,
                     Alignment =
                         DataGridViewContentAlignment.MiddleLeft,
-                    Padding = new Padding(3, 0, 3, 0)
+                    Padding = new Padding(3, 0, 3, 0),
+                    Font = new Font(
+                        "Segoe UI",
+                        9F,
+                        FontStyle.Regular,
+                        GraphicsUnit.Point)
+                };
+
+            RowsDefaultCellStyle =
+                new DataGridViewCellStyle
+                {
+                    BackColor = Color.White,
+                    ForeColor = Primario,
+                    SelectionBackColor = Secundario,
+                    SelectionForeColor = Color.White
                 };
 
             AlternatingRowsDefaultCellStyle =
@@ -87,6 +108,8 @@ namespace CapaVista_Consultas.Components
 
             RowHeadersVisible = false;
 
+            ReadOnly = true;
+
             AllowUserToAddRows = false;
             AllowUserToDeleteRows = false;
             AllowUserToResizeRows = false;
@@ -95,6 +118,9 @@ namespace CapaVista_Consultas.Components
                 DataGridViewSelectionMode.FullRowSelect;
 
             MultiSelect = false;
+
+            EditMode =
+                DataGridViewEditMode.EditProgrammatically;
 
             AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.Fill;
@@ -113,8 +139,11 @@ namespace CapaVista_Consultas.Components
         {
             base.OnPaint(e);
 
-            if (ClientSize.Width <= 0 || ClientSize.Height <= 0)
+            if (ClientSize.Width <= 0 ||
+                ClientSize.Height <= 0)
+            {
                 return;
+            }
 
             using (Pen borde = new Pen(Primario, 1F))
             {

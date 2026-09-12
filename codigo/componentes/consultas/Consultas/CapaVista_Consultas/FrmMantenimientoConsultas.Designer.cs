@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoConsultas));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasGbxCondicionesLogicas = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.condicionesOrdenamientoAgrupacion1 = new CapaVista_Consultas.UserControls.CondicionesOrdenamientoAgrupacion();
-            this.filtrosAplicados1 = new CapaVista_Consultas.FiltrosAplicados();
+            this.condicionesOrdenamientoAgrupacion1 = new CapaVista_Consultas.UserControls.UcCondicionesOrdenamientoAgrupacion();
+            this.filtrosAplicados1 = new CapaVista_Consultas.UcFiltrosAplicados();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxCondicionesLogicas.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMantenimientoConsultas";
             this.Text = "FrmMantenimientoConsultas";
+            this.TopMost = true;
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasGbxCondicionesLogicas.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -110,7 +111,7 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private Components.ClsGrupoConsultas ConsultasGbxCondicionesLogicas;
-        private UserControls.CondicionesOrdenamientoAgrupacion condicionesOrdenamientoAgrupacion1;
-        private FiltrosAplicados filtrosAplicados1;
+        private UserControls.UcCondicionesOrdenamientoAgrupacion condicionesOrdenamientoAgrupacion1;
+        private UcFiltrosAplicados filtrosAplicados1;
     }
 }

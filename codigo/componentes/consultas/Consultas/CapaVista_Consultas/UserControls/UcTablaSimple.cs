@@ -12,7 +12,7 @@ using CapaVista_Consultas.Components;
 
 namespace CapaVista_Consultas.UserControls
 {
-    public partial class TablaSimple : ClsControlUsuarioConsultas
+    public partial class UcTablaSimple : ClsControlUsuarioConsultas
     {
         private readonly clsTablas tablas = new clsTablas();
         private int _PaginaActual = 1;
@@ -23,7 +23,7 @@ namespace CapaVista_Consultas.UserControls
         private int _inicioRangoPagina = 1;
         private int _cantidadBotonesPagina = 5;
 
-        public TablaSimple()
+        public UcTablaSimple()
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace CapaVista_Consultas.UserControls
             }
         }
 
-        public TablaSimple(string tabla)
+        public UcTablaSimple(string tabla)
         {
             InitializeComponent();
 

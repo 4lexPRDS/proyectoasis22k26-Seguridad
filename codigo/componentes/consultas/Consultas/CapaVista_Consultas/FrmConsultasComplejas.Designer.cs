@@ -1,6 +1,6 @@
 ﻿namespace CapaVista_Consultas
 {
-    partial class ConsultaCompleja_500_001
+    partial class FrmConsultasComplejas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaCompleja_500_001));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasComplejas));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.tablaCompleja1 = new CapaVista_Consultas.TablaCompleja();
+            this.tablaCompleja1 = new CapaVista_Consultas.UcTablaCompleja();
             this.ConsultasBtnSalir = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasGbxReutilizables = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.consultasReutilizables1 = new CapaVista_Consultas.ConsultasReutilizables();
+            this.consultasReutilizables1 = new CapaVista_Consultas.UcConsultasReutilizables();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxReutilizables.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +116,7 @@
             this.consultasReutilizables1.Size = new System.Drawing.Size(1013, 253);
             this.consultasReutilizables1.TabIndex = 0;
             // 
-            // ConsultaCompleja_500_001
+            // FrmConsultasComplejas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1140, 874);
-            this.Name = "ConsultaCompleja_500_001";
+            this.Name = "FrmConsultasComplejas";
             this.Text = "4002 – ConsultasComplejas";
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasGbxReutilizables.ResumeLayout(false);
@@ -137,9 +137,9 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
-        private TablaCompleja tablaCompleja1;
+        private UcTablaCompleja tablaCompleja1;
         private ClsBotonConsultas ConsultasBtnSalir;
         private Components.ClsGrupoConsultas ConsultasGbxReutilizables;
-        private ConsultasReutilizables consultasReutilizables1;
+        private UcConsultasReutilizables consultasReutilizables1;
     }
 }

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace CapaVista_Consultas.Components
 {
@@ -18,15 +12,15 @@ namespace CapaVista_Consultas.Components
         private static readonly Color Secundario =
             ColorTranslator.FromHtml("#4E8078");
 
-        private bool _esActivo;
+        private bool _EsActivo;
 
         public bool EsActivo
         {
-            get => _esActivo;
+            get => _EsActivo;
             set
             {
-                _esActivo = value;
-                ActualizarEstado();
+                _EsActivo = value;
+                ConsultasProcActualizarEstado();
             }
         }
 
@@ -43,20 +37,22 @@ namespace CapaVista_Consultas.Components
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
 
+            BackColor = Primario;
+            ForeColor = Color.White;
+
             Cursor = Cursors.Hand;
+
             UseVisualStyleBackColor = false;
 
-            BackColor = Color.White;
-            ForeColor = Primario;
+            TextAlign = ContentAlignment.MiddleCenter;
 
             Margin = new Padding(2);
-            TextAlign = ContentAlignment.MiddleCenter;
         }
 
         protected override Size DefaultSize =>
             new Size(35, 30);
 
-        protected override void OnMouseEnter(System.EventArgs e)
+        protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
 
@@ -67,35 +63,39 @@ namespace CapaVista_Consultas.Components
             }
         }
 
-        protected override void OnMouseLeave(System.EventArgs e)
+        protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
 
-            ActualizarEstado();
+            ConsultasProcActualizarEstado();
         }
 
-        private void ActualizarEstado()
+        protected override void OnEnabledChanged(EventArgs e)
         {
-            if (EsActivo)
-            {
-                BackColor = Primario;
-                ForeColor = Color.White;
-                Font = new Font(
-                    "Segoe UI",
-                    9F,
-                    FontStyle.Bold,
-                    GraphicsUnit.Point);
-            }
-            else
-            {
-                BackColor = Color.White;
-                ForeColor = Primario;
-                Font = new Font(
-                    "Segoe UI",
-                    9F,
-                    FontStyle.Regular,
-                    GraphicsUnit.Point);
-            }
+            base.OnEnabledChanged(e);
+
+            Cursor = Enabled
+                ? Cursors.Hand
+                : Cursors.Default;
+
+            ForeColor = Color.White;
+        }
+
+        private void ConsultasProcActualizarEstado()
+        {
+            BackColor = EsActivo
+                ? Secundario
+                : Primario;
+
+            ForeColor = Color.White;
+
+            Font = new Font(
+                "Segoe UI",
+                9F,
+                EsActivo
+                    ? FontStyle.Bold
+                    : FontStyle.Regular,
+                GraphicsUnit.Point);
         }
     }
 }
