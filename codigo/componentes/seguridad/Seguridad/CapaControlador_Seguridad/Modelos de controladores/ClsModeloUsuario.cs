@@ -15,7 +15,7 @@ namespace CapaControlador_Seguridad
     {
         private int _IdUsuario;
         private int _IdEmpleado;
-        private string _UsuarioUsuario;
+        private string _NombreUsuario;
         private string _ContrasenaUsuario;
         private DateTime _UltimoAccesoUsuario;
         private int _IsActive;
@@ -33,7 +33,7 @@ namespace CapaControlador_Seguridad
         [Required]
         [RegularExpression("^[a-zA-Zá-ú ]+$", ErrorMessage = "El campo Nombre debe ser solo letras")]
         [StringLength(maximumLength: 100, MinimumLength = 3)]
-        public string UsuarioUsuario { get => _UsuarioUsuario; set => _UsuarioUsuario = value; }
+        public string NombreUsuario { get => _NombreUsuario; set => _NombreUsuario = value; }
 
         [Required]
         [RegularExpression(@"^\S+$", ErrorMessage = "La contraseña no debe contener espacios")]
@@ -56,7 +56,7 @@ namespace CapaControlador_Seguridad
                 var ModeloDatosUsuarios = new ClsUsuarios();
                 ModeloDatosUsuarios.IdUsuario = _IdUsuario;
                 ModeloDatosUsuarios.IdEmpleado = _IdEmpleado;
-                ModeloDatosUsuarios.UsuarioUsuario = _UsuarioUsuario;
+                ModeloDatosUsuarios.NombreUsuario = _NombreUsuario;
                 ModeloDatosUsuarios.ContrasenaUsuario = _ContrasenaUsuario;
                 ModeloDatosUsuarios.UltimoAccesoUsuario = _UltimoAccesoUsuario;
                 ModeloDatosUsuarios.IsActive = _IsActive;
@@ -94,7 +94,7 @@ namespace CapaControlador_Seguridad
                 {
                     _IdUsuario = Item.IdUsuario,
                     _IdEmpleado = Item.IdEmpleado,
-                    _UsuarioUsuario = Item.UsuarioUsuario,
+                    _NombreUsuario = Item.NombreUsuario,
                     _ContrasenaUsuario = Item.ContrasenaUsuario,
                     _UltimoAccesoUsuario = Item.UltimoAccesoUsuario,
                     _IsActive = Item.IsActive
@@ -105,7 +105,7 @@ namespace CapaControlador_Seguridad
 
         public IEnumerable<ClsModeloUsuario> SeguridadMetBuscarPorId(string Filtro)
         {
-            return _ListaUsuario.FindAll(u => u.IdUsuario.Equals(Filtro) || u._UsuarioUsuario.Contains(Filtro));
+            return _ListaUsuario.FindAll(u => u.IdUsuario.Equals(Filtro) || u._NombreUsuario.Contains(Filtro));
         }
 
         public DataTable SeguridadMetObtenerEmpleados()
