@@ -22,14 +22,14 @@ namespace CapaModelo_Seguridad.Repositorios
         {
             _SelectAll = "SELECT idUsuario"
                          + ", idEmpleado"
-                         + ", usuarioUsuario"
+                         + ",nombreUsuario"
                          + ", contrasenaUsuario"
                          + ", ultimoAccesoUsuario"
                          + ", is_active"
                          + " FROM tblusuario";
-            _Insert = "INSERT INTO tblusuario (idEmpleado, usuarioUsuario, contrasenaUsuario, ultimoAccesoUsuario, is_active) VALUES (?,?,?,?,?)";
+            _Insert = "INSERT INTO tblusuario (idEmpleado,nombreUsuario, contrasenaUsuario, ultimoAccesoUsuario, is_active) VALUES (?,?,?,?,?)";
 
-            _Update = "UPDATE tblusuario SET idEmpleado=?, usuarioUsuario=?, contrasenaUsuario=?, ultimoAccesoUsuario=?,is_active=? WHERE idUsuario=?";
+            _Update = "UPDATE tblusuario SET idEmpleado=?,nombreUsuario=?, contrasenaUsuario=?, ultimoAccesoUsuario=?,is_active=? WHERE idUsuario=?";
 
             _Delete = "DELETE FROM tblusuario WHERE idUsuario=?";
         }
@@ -38,7 +38,7 @@ namespace CapaModelo_Seguridad.Repositorios
         {
             var Parametros = new List<OdbcParameter>();
             Parametros.Add(new OdbcParameter("p_idEmpleado", Entidad.IdEmpleado));
-            Parametros.Add(new OdbcParameter("p_usuarioUsuario", Entidad.UsuarioUsuario));
+            Parametros.Add(new OdbcParameter("p_nombreUsuario", Entidad.NombreUsuario));
             Parametros.Add(new OdbcParameter("p_contrasenaUsuario", Entidad.ContrasenaUsuario));
             Parametros.Add(new OdbcParameter("p_ultimoAccesoUsuario", Entidad.UltimoAccesoUsuario));
             Parametros.Add(new OdbcParameter("p_is_active", Entidad.IsActive));
@@ -50,7 +50,7 @@ namespace CapaModelo_Seguridad.Repositorios
         {
             var Parametros = new List<OdbcParameter>();
             Parametros.Add(new OdbcParameter("p_idEmpleado", Entidad.IdEmpleado));
-            Parametros.Add(new OdbcParameter("p_usuarioUsuario", Entidad.UsuarioUsuario));
+            Parametros.Add(new OdbcParameter("p_nombreUsuario", Entidad.NombreUsuario));
             Parametros.Add(new OdbcParameter("p_contrasenaUsuario", Entidad.ContrasenaUsuario));
             Parametros.Add(new OdbcParameter("p_ultimoAccesoUsuario", Entidad.UltimoAccesoUsuario));
             Parametros.Add(new OdbcParameter("p_is_active", Entidad.IsActive));
@@ -74,7 +74,7 @@ namespace CapaModelo_Seguridad.Repositorios
                 var Usuario = new ClsUsuarios();
                 Usuario.IdUsuario = Convert.ToInt32(Fila[0]);
                 Usuario.IdEmpleado = Convert.ToInt32(Fila[1]);
-                Usuario.UsuarioUsuario = Fila[2].ToString();
+                Usuario.NombreUsuario = Fila[2].ToString();
                 Usuario.ContrasenaUsuario = Fila[3].ToString();
                 Usuario.UltimoAccesoUsuario = Convert.ToDateTime(Fila[4]);
                 Usuario.IsActive = Convert.ToInt32(Fila[5]);

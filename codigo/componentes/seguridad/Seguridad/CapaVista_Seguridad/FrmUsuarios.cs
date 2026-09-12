@@ -81,7 +81,7 @@ namespace CapaVista_Seguridad
             try
             {
                 _Usuario.IdEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
-                _Usuario.UsuarioUsuario = txtUsuario.Text;
+                _Usuario.NombreUsuario = txtUsuario.Text;
                 _Usuario.ContrasenaUsuario = txtContrasena.Text;
                 _Usuario.UltimoAccesoUsuario = DateTime.Now;
                 _Usuario.IsActive = Convert.ToInt32(cboEstado.SelectedValue);
@@ -123,6 +123,11 @@ namespace CapaVista_Seguridad
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
