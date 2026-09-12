@@ -46,7 +46,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Cbo_Comparacion, 1, 0);
@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(392, 126);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(343, 134);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -69,9 +69,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 96);
+            this.label3.Location = new System.Drawing.Point(90, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 16);
+            this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Valor:";
             // 
@@ -79,9 +79,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 12);
+            this.label1.Location = new System.Drawing.Point(48, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
+            this.label1.Size = new System.Drawing.Size(83, 34);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tipo de Comparador";
             // 
@@ -96,9 +96,9 @@
             ">= ",
             "<= ",
             "LIKE"});
-            this.Cbo_Comparacion.Location = new System.Drawing.Point(156, 8);
+            this.Cbo_Comparacion.Location = new System.Drawing.Point(137, 10);
             this.Cbo_Comparacion.Name = "Cbo_Comparacion";
-            this.Cbo_Comparacion.Size = new System.Drawing.Size(147, 24);
+            this.Cbo_Comparacion.Size = new System.Drawing.Size(128, 25);
             this.Cbo_Comparacion.TabIndex = 2;
             // 
             // Cbo_Campo
@@ -109,27 +109,27 @@
             "nombre",
             "apellido",
             "telefono"});
-            this.Cbo_Campo.Location = new System.Drawing.Point(156, 50);
+            this.Cbo_Campo.Location = new System.Drawing.Point(137, 54);
             this.Cbo_Campo.Name = "Cbo_Campo";
-            this.Cbo_Campo.Size = new System.Drawing.Size(147, 24);
+            this.Cbo_Campo.Size = new System.Drawing.Size(128, 25);
             this.Cbo_Campo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 54);
+            this.label2.Location = new System.Drawing.Point(78, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Campo:";
             // 
             // Txtvalor
             // 
             this.Txtvalor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txtvalor.Location = new System.Drawing.Point(156, 93);
+            this.Txtvalor.Location = new System.Drawing.Point(137, 98);
             this.Txtvalor.Name = "Txtvalor";
-            this.Txtvalor.Size = new System.Drawing.Size(147, 22);
+            this.Txtvalor.Size = new System.Drawing.Size(128, 25);
             this.Txtvalor.TabIndex = 5;
             // 
             // button1
@@ -139,25 +139,26 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(329, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.MaximumSize = new System.Drawing.Size(50, 50);
-            this.button1.MinimumSize = new System.Drawing.Size(50, 50);
+            this.button1.Location = new System.Drawing.Point(270, 32);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.MaximumSize = new System.Drawing.Size(70, 70);
+            this.button1.MinimumSize = new System.Drawing.Size(70, 70);
             this.button1.Name = "button1";
             this.tableLayoutPanel1.SetRowSpan(this.button1, 3);
-            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.Size = new System.Drawing.Size(70, 70);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CondicionesComparacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.Name = "CondicionesComparacion";
-            this.Size = new System.Drawing.Size(392, 126);
+            this.Size = new System.Drawing.Size(343, 134);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

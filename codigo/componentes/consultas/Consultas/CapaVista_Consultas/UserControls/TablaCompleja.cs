@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControlador_Consultas;
+using CapaVista_Consultas.Components;
 
 namespace CapaVista_Consultas
 {
-    public partial class TablaCompleja : UserControl
+    public partial class TablaCompleja : ClsControlUsuarioConsultas
     {
         private int _PaginaActual = 1;
         private int _RegistrosPorPagina = 10;
@@ -19,159 +15,187 @@ namespace CapaVista_Consultas
         private int _TotalPaginas = 0;
         private string _TablaSeleccionada = "";
         private int _inicioRangoPagina = 1;
+        private int _cantidadBotonesPagina = 5;
 
-        private int _cantidadBotonesPagina = 5; 
-        clsTablas tablas = new clsTablas();
+        private readonly clsTablas tablas = new clsTablas();
+
         public TablaCompleja()
         {
             InitializeComponent();
 
-            InitializeComponent();
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
-                ClsEstandarizacionDataGridView.Estandarizar(ConsultasDgvComplejas);
+                ConsultasDgvComplejas.AutoGenerateColumns = true;
+
+                ConsultasCboTablas.SelectionChangeCommitted +=
+                    ConsultasCboTablas_SelectionChangeCommitted;
+
                 ConsultasProcPopularCboTablas();
             }
         }
+
+        private void ConsultasCboTablas_SelectionChangeCommitted(
+        object sender,
+        EventArgs e)
+            {
+                if (ConsultasCboTablas.SelectedItem == null)
+                {
+                    return;
+                }
+
+                _TablaSeleccionada =
+                    ConsultasCboTablas.SelectedItem.ToString();
+
+                _PaginaActual = 1;
+                _inicioRangoPagina = 1;
+
+                ConsultasProcActualizarTabla();
+            }
 
         public void ConsultasProcPopularCboTablas()
         {
             ConsultasCboTablas.Items.Clear();
 
-            DataTable daTablas = tablas.ConsultasFuncObtenerTablas();
+            DataTable dtTablas = tablas.ConsultasFuncObtenerTablas();
 
-            foreach (DataRow row in daTablas.Rows)
+            foreach (DataRow row in dtTablas.Rows)
             {
                 ConsultasCboTablas.Items.Add(row[0].ToString());
             }
 
             ConsultasCboTablas.SelectedIndex = -1;
-            ConsultasCboTablas.SelectedItem = null;
-            ConsultasCboTablas.Text = "";
         }
-        private void ConsultasProcActuaizarDgvTablas(string tablaSeleccionada)
+
+        private void ConsultasProcActualizarDgvTablas(
+        string tablaSeleccionada)
         {
-            ConsultasDgvComplejas.DataSource = null;
-            DataTable dtTablas = tablas.ConsutlasFuncLlenarTabla(tablaSeleccionada, _PaginaActual, _RegistrosPorPagina);
+            DataTable dtTablas =
+                tablas.ConsutlasFuncLlenarTabla(
+                    tablaSeleccionada,
+                    _PaginaActual,
+                    _RegistrosPorPagina);
+
             ConsultasDgvComplejas.DataSource = dtTablas;
         }
-        private void ConsultasCboTablas_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-            if (ConsultasCboTablas.SelectedItem == null)
-            {
-
-                return;
-            }
-
-            _TablaSeleccionada = ConsultasCboTablas.SelectedItem.ToString();
-            _PaginaActual = 1;
-            _inicioRangoPagina = 1;
-
-            ConsultasProcCalcularTotalPaginas();
-            _TotalPaginas = (int)Math.Ceiling((double)_TotalRegistros / _RegistrosPorPagina );
-
-            ConsultasProcCrearBotonesPaginas();
-            ConsultasProcActuaizarDgvTablas(_TablaSeleccionada);
-
-        }
         private void ConsultasProcCalcularTotalPaginas()
         {
-            _TotalRegistros = tablas.ConsultasFuncContarRegistros(_TablaSeleccionada);
+            _TotalRegistros =
+                tablas.ConsultasFuncContarRegistros(_TablaSeleccionada);
 
             _TotalPaginas = (int)Math.Ceiling(
-                (double)_TotalRegistros / _RegistrosPorPagina
-            );
+                (double)_TotalRegistros / _RegistrosPorPagina);
         }
+
         private void ConsultasProcCrearBotonesPaginas()
         {
             ConsultasFlpPaginas.Controls.Clear();
 
-            int finRango = _inicioRangoPagina + _cantidadBotonesPagina - 1;
+            int finRango =
+                _inicioRangoPagina +
+                _cantidadBotonesPagina - 1;
 
             if (finRango > _TotalPaginas)
+            {
                 finRango = _TotalPaginas;
-
+            }
 
             for (int i = _inicioRangoPagina; i <= finRango; i++)
             {
-                Button btn = new Button();
+                ClsBotonPaginacionConsultas btn =
+                    new ClsBotonPaginacionConsultas();
 
+                btn.Name = $"ConsultasBtnPagina{i}";
                 btn.Text = i.ToString();
                 btn.Tag = i;
+                btn.EsActivo = i == _PaginaActual;
 
-                btn.Width = 35;
-                btn.Height = 30;
-
-                btn.Click += BtnPagina_Click;
+                btn.Click += ConsultasBtnPagina_Click;
 
                 ConsultasFlpPaginas.Controls.Add(btn);
             }
-
-            ConsultasProcActualizarBotonesPagina();
         }
-        private void BtnPagina_Click(object sender, EventArgs e)
+
+        private void ConsultasProcActualizarTabla()
         {
-            Button btn = (Button)sender;
+            if (string.IsNullOrWhiteSpace(_TablaSeleccionada))
+            {
+                return;
+            }
+
+            ConsultasProcCalcularTotalPaginas();
+            ConsultasProcCrearBotonesPaginas();
+            ConsultasProcActualizarDgvTablas(_TablaSeleccionada);
+        }
+
+        private void ConsultasCboTablas_SelectedIndexChanged(
+            object sender,
+            EventArgs e)
+        {
+            if (ConsultasCboTablas.SelectedItem == null)
+            {
+                return;
+            }
+
+            _TablaSeleccionada =
+                ConsultasCboTablas.SelectedItem.ToString();
+
+            _PaginaActual = 1;
+            _inicioRangoPagina = 1;
+
+            ConsultasProcActualizarTabla();
+        }
+
+        private void ConsultasBtnPagina_Click(
+            object sender,
+            EventArgs e)
+        {
+            ClsBotonPaginacionConsultas btn =
+                (ClsBotonPaginacionConsultas)sender;
 
             _PaginaActual = Convert.ToInt32(btn.Tag);
 
-            ConsultasProcCrearBotonesPaginas();
-
-            ConsultasProcActuaizarDgvTablas(_TablaSeleccionada);
-        }
-        private void ConsultasProcActualizarBotonesPagina()
-        {
-            foreach (Button btn in ConsultasFlpPaginas.Controls)
-            {
-                int pagina = Convert.ToInt32(btn.Tag);
-
-                if (pagina == _PaginaActual)
-                {
-                    btn.BackColor = Color.FromArgb(197, 155, 39);
-                    btn.ForeColor = Color.White;
-                }
-                else
-                {
-                    btn.BackColor = Color.White;
-                    btn.ForeColor = Color.Black;
-                }
-            }
+            ConsultasProcActualizarTabla();
         }
 
-
-        private void ConsultasBtnAnterior_Click(object sender, EventArgs e)
+        private void ConsultasBtnSiguiente_Click(
+            object sender,
+            EventArgs e)
         {
-            if (_PaginaActual > 1)
+            if (_PaginaActual >= _TotalPaginas)
             {
-                _PaginaActual--;
-
-                if (_PaginaActual < _inicioRangoPagina)
-                {
-                    _inicioRangoPagina--;
-                }
-
-                ConsultasProcCrearBotonesPaginas();
-
-                ConsultasProcActuaizarDgvTablas(_TablaSeleccionada);
+                return;
             }
+
+            _PaginaActual++;
+
+            if (_PaginaActual >=
+                _inicioRangoPagina +
+                _cantidadBotonesPagina)
+            {
+                _inicioRangoPagina++;
+            }
+
+            ConsultasProcActualizarTabla();
         }
 
-        private void ConsultasBtnSiguiente_Click(object sender, EventArgs e)
+        private void ConsultasBtnAnterior_Click(
+            object sender,
+            EventArgs e)
         {
-            if (_PaginaActual < _TotalPaginas)
+            if (_PaginaActual <= 1)
             {
-                _PaginaActual++;
-
-                if (_PaginaActual >= _inicioRangoPagina + _cantidadBotonesPagina)
-                {
-                    _inicioRangoPagina++;
-                }
-
-                ConsultasProcCrearBotonesPaginas();
-
-                ConsultasProcActuaizarDgvTablas(_TablaSeleccionada);
+                return;
             }
+
+            _PaginaActual--;
+
+            if (_PaginaActual < _inicioRangoPagina)
+            {
+                _inicioRangoPagina--;
+            }
+
+            ConsultasProcActualizarTabla();
         }
     }
 }

@@ -8,31 +8,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControlador_Consultas;
+using CapaVista_Consultas.Components;
 
 namespace CapaVista_Consultas.UserControls
 {
-    public partial class TablaSimple : UserControl
+    public partial class TablaSimple : ClsControlUsuarioConsultas
     {
-
-        clsTablas tablas = new clsTablas();
-        private int _PaginaActual = 10;
+        private readonly clsTablas tablas = new clsTablas();
+        private int _PaginaActual = 1;
         private int _RegistrosPorPagina = 10;
         private int _TotalRegistros = 0;
         private int _TotalPaginas = 0;
         private string _TablaSeleccionada = "";
         private int _inicioRangoPagina = 1;
-
         private int _cantidadBotonesPagina = 5;
-        public TablaSimple(string tabla)
-        {
-            InitializeComponent();
-            ConsultasProcActualizarTabla(tabla);
-        }
 
         public TablaSimple()
         {
             InitializeComponent();
-            ConsultasProcActualizarTabla("consulta"); //actualizar parametro
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                ConsultasDgvSimples.AutoGenerateColumns = true;
+                ConsultasProcActualizarTabla("consulta");
+            }
+        }
+
+        public TablaSimple(string tabla)
+        {
+            InitializeComponent();
+
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                ConsultasDgvSimples.AutoGenerateColumns = true;
+                ConsultasProcActualizarTabla(tabla);
+            }
         }
         /*private string _nombreTabla;
         [Category("Consultas")]
@@ -59,12 +69,24 @@ namespace CapaVista_Consultas.UserControls
 
         public void ConsultasProcActualizarTabla(string tablaSeleccionada)
         {
+            if (_TablaSeleccionada != tablaSeleccionada)
+            {
+                _PaginaActual = 1;
+                _inicioRangoPagina = 1;
+            }
+
             _TablaSeleccionada = tablaSeleccionada;
+
             CalcularTotalPaginas();
-            ConsultasDgvSimples.DataSource = null;
-            DataTable dtTablas = tablas.ConsutlasFuncLlenarTabla(_TablaSeleccionada, _PaginaActual, _RegistrosPorPagina);
+
+            DataTable dtTablas = tablas.ConsutlasFuncLlenarTabla(
+                _TablaSeleccionada,
+                _PaginaActual,
+                _RegistrosPorPagina);
+
             ConsultasDgvSimples.DataSource = dtTablas;
-            CrearBotonesPaginas(); 
+
+            CrearBotonesPaginas();
 
         }
         private void CalcularTotalPaginas()
@@ -84,55 +106,42 @@ namespace CapaVista_Consultas.UserControls
             if (finRango > _TotalPaginas)
                 finRango = _TotalPaginas;
 
-
             for (int i = _inicioRangoPagina; i <= finRango; i++)
             {
-                Button btn = new Button();
+                ClsBotonPaginacionConsultas btn =
+                    new ClsBotonPaginacionConsultas();
 
+                btn.Name = $"ConsultasBtnPagina{i}";
                 btn.Text = i.ToString();
                 btn.Tag = i;
-
-                btn.Width = 35;
-                btn.Height = 30;
+                btn.EsActivo = i == _PaginaActual;
 
                 btn.Click += BtnPagina_Click;
 
                 ConsultasFlpPaginas.Controls.Add(btn);
             }
-
-            ConsultasProcActualizarBotonesPagina();
         }
         private void BtnPagina_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            ClsBotonPaginacionConsultas btn =
+            (ClsBotonPaginacionConsultas)sender;
 
             _PaginaActual = Convert.ToInt32(btn.Tag);
 
-            CrearBotonesPaginas();
-
             ConsultasProcActualizarTabla(_TablaSeleccionada);
         }
-        private void ConsultasProcActualizarBotonesPagina()
-        {
-            foreach (Button btn in ConsultasFlpPaginas.Controls)
-            {
-                int pagina = Convert.ToInt32(btn.Tag);
-
-                if (pagina == _PaginaActual)
-                {
-                    btn.BackColor = Color.FromArgb(197, 155, 39);
-                    btn.ForeColor = Color.White;
-                }
-                else
-                {
-                    btn.BackColor = Color.White;
-                    btn.ForeColor = Color.Black;
-                }
-            }
-        }
-
 
         private void ConsultasBtnAnterior_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ConsultasBtnSiguiente_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ConsultasBtnAnterior1_Click(object sender, EventArgs e)
         {
             if (_PaginaActual > 1)
             {
@@ -143,24 +152,21 @@ namespace CapaVista_Consultas.UserControls
                     _inicioRangoPagina--;
                 }
 
-                CrearBotonesPaginas();
-
                 ConsultasProcActualizarTabla(_TablaSeleccionada);
             }
         }
 
-        private void ConsultasBtnSiguiente_Click(object sender, EventArgs e)
+        private void ConsultasBtnSiguiente_Click_1(object sender, EventArgs e)
         {
             if (_PaginaActual < _TotalPaginas)
             {
                 _PaginaActual++;
 
-                if (_PaginaActual >= _inicioRangoPagina + _cantidadBotonesPagina)
+                if (_PaginaActual >=
+                    _inicioRangoPagina + _cantidadBotonesPagina)
                 {
                     _inicioRangoPagina++;
                 }
-
-                CrearBotonesPaginas();
 
                 ConsultasProcActualizarTabla(_TablaSeleccionada);
             }

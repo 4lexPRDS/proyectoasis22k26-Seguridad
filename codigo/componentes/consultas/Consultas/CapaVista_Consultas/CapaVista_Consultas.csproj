@@ -47,7 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsEstandarizacionDataGridView.cs" />
+    <Compile Include="Components\ClsBotonConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsBotonPaginacionConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsBotonRadioConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsCajaTextoConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsControlUsuarioConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ClsEtiquetaConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsGrupoConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsListaDesplegableConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\ClsTablaDatosConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\FrmBaseTerminus.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMantenimientoConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,7 +100,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ClsEstandarizacionConsultas.cs" />
     <Compile Include="UserControls\Agrupar&amp;Ordenar.cs">
       <SubType>UserControl</SubType>
     </Compile>

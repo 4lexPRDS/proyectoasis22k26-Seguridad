@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaVista_Consultas.Components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas.UserControls
 {
-    public partial class CondicionesOrdenamientoAgrupacion : UserControl
+    public partial class CondicionesOrdenamientoAgrupacion : ClsControlUsuarioConsultas
     {
         public CondicionesOrdenamientoAgrupacion()
         {

@@ -28,115 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ConsultasGbxCondicionesLogicas = new System.Windows.Forms.GroupBox();
-            this.condicionesLogica2 = new CapaVista_Consultas.CondicionesLogica();
-            this.ConsultasGbxCondicionesComparacion = new System.Windows.Forms.GroupBox();
-            this.condicionesComparacion1 = new CapaVista_Consultas.CondicionesComparacion();
-            this.ConsultasGbxOrdenamientoAgrupacion = new System.Windows.Forms.GroupBox();
-            this.filtrosAplicados1 = new CapaVista_Consultas.FiltrosAplicados();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoConsultas));
+            this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
+            this.ConsultasGbxCondicionesLogicas = new CapaVista_Consultas.Components.ClsGrupoConsultas();
             this.condicionesOrdenamientoAgrupacion1 = new CapaVista_Consultas.UserControls.CondicionesOrdenamientoAgrupacion();
+            this.filtrosAplicados1 = new CapaVista_Consultas.FiltrosAplicados();
+            this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxCondicionesLogicas.SuspendLayout();
-            this.ConsultasGbxCondicionesComparacion.SuspendLayout();
-            this.ConsultasGbxOrdenamientoAgrupacion.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ConsultasTlpPrincipal
+            // 
+            this.ConsultasTlpPrincipal.ColumnCount = 2;
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasGbxCondicionesLogicas, 0, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.filtrosAplicados1, 1, 0);
+            this.ConsultasTlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasTlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.ConsultasTlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultasTlpPrincipal.Name = "ConsultasTlpPrincipal";
+            this.ConsultasTlpPrincipal.RowCount = 1;
+            this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ConsultasTlpPrincipal.Size = new System.Drawing.Size(981, 292);
+            this.ConsultasTlpPrincipal.TabIndex = 16;
             // 
             // ConsultasGbxCondicionesLogicas
             // 
-            this.ConsultasGbxCondicionesLogicas.Controls.Add(this.condicionesLogica2);
-            this.ConsultasGbxCondicionesLogicas.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultasGbxCondicionesLogicas.Location = new System.Drawing.Point(18, 253);
+            this.ConsultasGbxCondicionesLogicas.BackColor = System.Drawing.Color.Transparent;
+            this.ConsultasGbxCondicionesLogicas.Controls.Add(this.condicionesOrdenamientoAgrupacion1);
+            this.ConsultasGbxCondicionesLogicas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasGbxCondicionesLogicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConsultasGbxCondicionesLogicas.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.ConsultasGbxCondicionesLogicas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            this.ConsultasGbxCondicionesLogicas.Location = new System.Drawing.Point(3, 3);
             this.ConsultasGbxCondicionesLogicas.Name = "ConsultasGbxCondicionesLogicas";
-            this.ConsultasGbxCondicionesLogicas.Size = new System.Drawing.Size(821, 170);
-            this.ConsultasGbxCondicionesLogicas.TabIndex = 12;
+            this.ConsultasGbxCondicionesLogicas.Size = new System.Drawing.Size(386, 286);
+            this.ConsultasGbxCondicionesLogicas.TabIndex = 16;
             this.ConsultasGbxCondicionesLogicas.TabStop = false;
-            this.ConsultasGbxCondicionesLogicas.Text = "Condiciones Lógicas";
-            // 
-            // condicionesLogica2
-            // 
-            this.condicionesLogica2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.condicionesLogica2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.condicionesLogica2.Location = new System.Drawing.Point(3, 30);
-            this.condicionesLogica2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.condicionesLogica2.Name = "condicionesLogica2";
-            this.condicionesLogica2.Size = new System.Drawing.Size(815, 137);
-            this.condicionesLogica2.TabIndex = 8;
-            // 
-            // ConsultasGbxCondicionesComparacion
-            // 
-            this.ConsultasGbxCondicionesComparacion.Controls.Add(this.condicionesComparacion1);
-            this.ConsultasGbxCondicionesComparacion.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultasGbxCondicionesComparacion.Location = new System.Drawing.Point(15, 428);
-            this.ConsultasGbxCondicionesComparacion.Name = "ConsultasGbxCondicionesComparacion";
-            this.ConsultasGbxCondicionesComparacion.Size = new System.Drawing.Size(824, 179);
-            this.ConsultasGbxCondicionesComparacion.TabIndex = 13;
-            this.ConsultasGbxCondicionesComparacion.TabStop = false;
-            this.ConsultasGbxCondicionesComparacion.Text = "Condiciones de Comparación";
-            // 
-            // condicionesComparacion1
-            // 
-            this.condicionesComparacion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.condicionesComparacion1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.condicionesComparacion1.Location = new System.Drawing.Point(3, 30);
-            this.condicionesComparacion1.Margin = new System.Windows.Forms.Padding(2);
-            this.condicionesComparacion1.Name = "condicionesComparacion1";
-            this.condicionesComparacion1.Size = new System.Drawing.Size(818, 146);
-            this.condicionesComparacion1.TabIndex = 1;
-            // 
-            // ConsultasGbxOrdenamientoAgrupacion
-            // 
-            this.ConsultasGbxOrdenamientoAgrupacion.Controls.Add(this.condicionesOrdenamientoAgrupacion1);
-            this.ConsultasGbxOrdenamientoAgrupacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultasGbxOrdenamientoAgrupacion.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsultasGbxOrdenamientoAgrupacion.Location = new System.Drawing.Point(21, 36);
-            this.ConsultasGbxOrdenamientoAgrupacion.Name = "ConsultasGbxOrdenamientoAgrupacion";
-            this.ConsultasGbxOrdenamientoAgrupacion.Size = new System.Drawing.Size(818, 218);
-            this.ConsultasGbxOrdenamientoAgrupacion.TabIndex = 14;
-            this.ConsultasGbxOrdenamientoAgrupacion.TabStop = false;
-            this.ConsultasGbxOrdenamientoAgrupacion.Text = "Ordenamiento / Agrupación";
-            // 
-            // filtrosAplicados1
-            // 
-            this.filtrosAplicados1.Location = new System.Drawing.Point(872, 36);
-            this.filtrosAplicados1.Name = "filtrosAplicados1";
-            this.filtrosAplicados1.Size = new System.Drawing.Size(597, 561);
-            this.filtrosAplicados1.TabIndex = 15;
+            this.ConsultasGbxCondicionesLogicas.Text = "Agregar Condición";
             // 
             // condicionesOrdenamientoAgrupacion1
             // 
             this.condicionesOrdenamientoAgrupacion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
             this.condicionesOrdenamientoAgrupacion1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.condicionesOrdenamientoAgrupacion1.Location = new System.Drawing.Point(3, 30);
-            this.condicionesOrdenamientoAgrupacion1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.condicionesOrdenamientoAgrupacion1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.condicionesOrdenamientoAgrupacion1.Location = new System.Drawing.Point(3, 24);
+            this.condicionesOrdenamientoAgrupacion1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.condicionesOrdenamientoAgrupacion1.Name = "condicionesOrdenamientoAgrupacion1";
-            this.condicionesOrdenamientoAgrupacion1.Size = new System.Drawing.Size(812, 185);
-            this.condicionesOrdenamientoAgrupacion1.TabIndex = 0;
+            this.condicionesOrdenamientoAgrupacion1.Size = new System.Drawing.Size(380, 259);
+            this.condicionesOrdenamientoAgrupacion1.TabIndex = 1;
+            // 
+            // filtrosAplicados1
+            // 
+            this.filtrosAplicados1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
+            this.filtrosAplicados1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filtrosAplicados1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.filtrosAplicados1.Location = new System.Drawing.Point(392, 0);
+            this.filtrosAplicados1.Margin = new System.Windows.Forms.Padding(0);
+            this.filtrosAplicados1.Name = "filtrosAplicados1";
+            this.filtrosAplicados1.Size = new System.Drawing.Size(589, 292);
+            this.filtrosAplicados1.TabIndex = 17;
             // 
             // FrmMantenimientoConsultas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1481, 654);
-            this.Controls.Add(this.filtrosAplicados1);
-            this.Controls.Add(this.ConsultasGbxOrdenamientoAgrupacion);
-            this.Controls.Add(this.ConsultasGbxCondicionesComparacion);
-            this.Controls.Add(this.ConsultasGbxCondicionesLogicas);
+            this.ClientSize = new System.Drawing.Size(981, 292);
+            this.Controls.Add(this.ConsultasTlpPrincipal);
+            this.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMantenimientoConsultas";
             this.Text = "FrmMantenimientoConsultas";
+            this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasGbxCondicionesLogicas.ResumeLayout(false);
-            this.ConsultasGbxCondicionesComparacion.ResumeLayout(false);
-            this.ConsultasGbxOrdenamientoAgrupacion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox ConsultasGbxCondicionesLogicas;
-        private CondicionesLogica condicionesLogica2;
-        private System.Windows.Forms.GroupBox ConsultasGbxCondicionesComparacion;
-        private CondicionesComparacion condicionesComparacion1;
-        private System.Windows.Forms.GroupBox ConsultasGbxOrdenamientoAgrupacion;
-        private FiltrosAplicados filtrosAplicados1;
+        private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
+        private Components.ClsGrupoConsultas ConsultasGbxCondicionesLogicas;
         private UserControls.CondicionesOrdenamientoAgrupacion condicionesOrdenamientoAgrupacion1;
+        private FiltrosAplicados filtrosAplicados1;
     }
 }

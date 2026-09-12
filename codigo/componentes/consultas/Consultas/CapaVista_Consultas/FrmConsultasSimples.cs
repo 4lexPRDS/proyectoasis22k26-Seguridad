@@ -11,7 +11,7 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class ConsultaSimple_400_001 : Form
+    public partial class ConsultaSimple_400_001 : FrmBaseTerminus
     {
         ControladorConsultaSimple controlador = new ControladorConsultaSimple();
 
@@ -32,9 +32,7 @@ namespace CapaVista_Consultas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ConsultaCompleja_500_001 consultaCompleja_500_001 = new ConsultaCompleja_500_001();
-            this.Hide();
-            consultaCompleja_500_001.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,9 +55,11 @@ namespace CapaVista_Consultas
             );*/
         }
 
-        private void agrupar_Ordenar1_Load(object sender, EventArgs e)
+        private void ConsultasBtnComplejas_Click(object sender, EventArgs e)
         {
-
+            ConsultaCompleja_500_001 consultaCompleja_500_001 = new ConsultaCompleja_500_001();
+            this.Hide();
+            consultaCompleja_500_001.Show();
         }
     }
 }

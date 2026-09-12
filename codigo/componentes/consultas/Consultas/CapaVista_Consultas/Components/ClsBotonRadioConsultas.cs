@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaVista_Consultas.Components
+{
+    public class ClsBotonRadioConsultas : RadioButton
+    {
+        private static readonly Color ColorTexto =
+            ColorTranslator.FromHtml("#2E4A63");
+
+        public ClsBotonRadioConsultas()
+        {
+            Font = new Font(
+                "Tahoma",
+                9.5F,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+
+            ForeColor = ColorTexto;
+            BackColor = Color.Transparent;
+            AutoSize = true;
+            Cursor = Cursors.Hand;
+            UseVisualStyleBackColor = true;
+            Margin = new Padding(3);
+        }
+    }
+}

@@ -11,29 +11,27 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class ConsultaCompleja_500_001 : Form
+    public partial class ConsultaCompleja_500_001 : FrmBaseTerminus
     {
         public ConsultaCompleja_500_001()
         {
             InitializeComponent();
             // Estandarización EST-10 del Componente Consultas
-            ClsEstandarizacionConsultas.ConsultasMetAplicarFormatoVentana(
+        /*    ClsEstandarizacionConsultas.ConsultasMetAplicarFormatoVentana(
                 this, "4002", "ConsultasComplejas");
-        }
+        */}
 
         /// <summary>
         /// TEMPORAL - Carga filas de ejemplo para el prototipo.
         /// Eliminar cuando el constructor de consultas alimente la cuadrícula.
         /// </summary>
 
-        private void ConsultasBtnInicio_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void ConsultasBtnSalir_Click(object sender, EventArgs e)
+        private void ConsultasBtnSalir_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            ConsultaSimple_400_001 ConsultaSimple_400_0011 = new ConsultaSimple_400_001();
+            this.Hide();
+            ConsultaSimple_400_0011.Show();
         }
     }
 }
