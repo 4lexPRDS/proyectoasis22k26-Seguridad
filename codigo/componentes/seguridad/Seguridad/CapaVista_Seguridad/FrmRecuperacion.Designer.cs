@@ -55,7 +55,6 @@
             this.SeguridadLblCorreoElectronico = new System.Windows.Forms.Label();
             this.SeguridadTxtCorreo = new System.Windows.Forms.TextBox();
             this.SeguridadLblUsuario = new System.Windows.Forms.Label();
-            this.SeguridadTxtUsuario = new System.Windows.Forms.TextBox();
             this.SeguridadLblDescripcionEnviarCodigo = new System.Windows.Forms.Label();
             this.SeguridadLblTituloEnviarCodigo = new System.Windows.Forms.Label();
             this.SeguridadPbIconoEnviarCodigo = new System.Windows.Forms.PictureBox();
@@ -360,7 +359,6 @@
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadLblCorreoElectronico);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadTxtCorreo);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadLblUsuario);
-            this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadTxtUsuario);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadLblDescripcionEnviarCodigo);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadLblTituloEnviarCodigo);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadPbIconoEnviarCodigo);
@@ -413,18 +411,6 @@
             this.SeguridadLblUsuario.Size = new System.Drawing.Size(68, 14);
             this.SeguridadLblUsuario.TabIndex = 4;
             this.SeguridadLblUsuario.Text = "👤  Usuario";
-            // 
-            // SeguridadTxtUsuario
-            // 
-            this.SeguridadTxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.SeguridadTxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SeguridadTxtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.SeguridadTxtUsuario.Location = new System.Drawing.Point(12, 215);
-            this.SeguridadTxtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SeguridadTxtUsuario.Name = "SeguridadTxtUsuario";
-            this.SeguridadTxtUsuario.Size = new System.Drawing.Size(240, 23);
-            this.SeguridadTxtUsuario.TabIndex = 3;
-            this.SeguridadTxtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // SeguridadLblDescripcionEnviarCodigo
             // 
@@ -737,7 +723,6 @@
         private System.Windows.Forms.PictureBox SeguridadPbIconoEnviarCodigo;
         private System.Windows.Forms.Label SeguridadLblTituloEnviarCodigo;
         private System.Windows.Forms.Label SeguridadLblDescripcionEnviarCodigo;
-        private System.Windows.Forms.TextBox SeguridadTxtUsuario;
         private System.Windows.Forms.Label SeguridadLblCorreoElectronico;
         private System.Windows.Forms.TextBox SeguridadTxtCorreo;
         private System.Windows.Forms.Label SeguridadLblUsuario;
