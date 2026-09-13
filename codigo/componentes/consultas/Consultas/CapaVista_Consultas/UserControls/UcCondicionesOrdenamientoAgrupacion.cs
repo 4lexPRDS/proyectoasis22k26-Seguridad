@@ -16,6 +16,25 @@ namespace CapaVista_Consultas.UserControls
         public UcCondicionesOrdenamientoAgrupacion()
         {
             InitializeComponent();
+            CargarDatosIniciales();
+        }
+
+        private void CargarDatosIniciales()
+        {
+            ConsultasCboOperador.Items.Clear();
+
+            ConsultasCboOperador.Items.AddRange(new object[]
+            {
+                "=",
+                ">",
+                "<",
+                ">=",
+                "<=",
+                "Contiene",
+                "Comienza con",
+                "Termina con"
+            });
+            ConsultasRdoAscendente.Checked = true;
         }
     }
 }
