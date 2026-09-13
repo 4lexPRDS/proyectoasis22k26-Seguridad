@@ -1,4 +1,4 @@
-﻿using AplicacionPerfiles;
+﻿using CapaControlador_Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ventana_Bitacora_Seguridad;
+
 
 namespace CapaVista_Seguridad
 {
