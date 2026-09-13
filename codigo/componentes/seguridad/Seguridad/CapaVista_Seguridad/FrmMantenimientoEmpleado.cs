@@ -39,13 +39,7 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void SeguridadCboGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void SeguridadChkActivo_CheckedChanged(object sender, EventArgs e)
-        {
-        }
+       
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
@@ -106,10 +100,6 @@ namespace CapaVista_Seguridad
             else MessageBox.Show("Seleccione una fila");
         }
 
-        private void SeguridadBtnImprimir_Click(object sender, EventArgs e)
-        {
-            // TODO: lógica para imprimir el contenido de SeguridadDgvEmpleados
-        }
 
         private void SeguridadBtnSalir_Click(object sender, EventArgs e)
         {

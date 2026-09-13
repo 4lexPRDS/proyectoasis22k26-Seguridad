@@ -321,7 +321,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnImprimir.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnImprimir.TabIndex = 6;
             this.SeguridadBtnImprimir.UseVisualStyleBackColor = false;
-            this.SeguridadBtnImprimir.Click += new System.EventHandler(this.SeguridadBtnImprimir_Click);
             // 
             // SeguridadBtnRefrescar
             // 
@@ -967,6 +966,7 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SeguridadDgvEmpleados.Size = new System.Drawing.Size(1368, 272);
             this.SeguridadDgvEmpleados.TabIndex = 0;
+            this.SeguridadDgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeguridadDgvEmpleados_CellContentClick);
             // 
             // FrmMantenimientoEmpleado
             // 
