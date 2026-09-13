@@ -15,10 +15,6 @@ namespace CapaVista_Seguridad
     public partial class FrmLogin : Form
     {
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         public FrmLogin()
         {
             InitializeComponent();
@@ -57,11 +53,6 @@ namespace CapaVista_Seguridad
             Recuperacion.ShowDialog();
 
             this.Show();
-        }
-
-        private void dgbConsultaTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

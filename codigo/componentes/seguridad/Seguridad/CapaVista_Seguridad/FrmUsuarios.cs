@@ -66,16 +66,6 @@ namespace CapaVista_Seguridad
 
         }
 
-        private void cboIdEmpleado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkVerContrasena_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -102,34 +92,5 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAyuda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

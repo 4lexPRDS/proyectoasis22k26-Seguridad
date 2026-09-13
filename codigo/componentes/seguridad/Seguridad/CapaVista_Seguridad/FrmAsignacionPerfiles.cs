@@ -47,10 +47,6 @@ namespace CapaVista_Seguridad
             panelAsignacion.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelAsignacion.ClientRectangle, 18));
         }
 
-        private void panelIconPrincipal_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         private void panelIconConsulta_Paint(object sender, PaintEventArgs e)
         {
             panelIconConsulta.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelIconConsulta.ClientRectangle, 10));
@@ -59,28 +55,6 @@ namespace CapaVista_Seguridad
         private void panelIconAsignacion_Paint(object sender, PaintEventArgs e)
         {
             panelIconAsignacion.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelIconAsignacion.ClientRectangle, 10));
-        }
-
-        // ---- Prototipo NO funcional: los siguientes eventos están vacíos a propósito ----
-
-        private void buttonCancelarConsulta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCancelarAsignacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAsignar_Click(object sender, EventArgs e)
-        {
-
-        }
+        }  
     }
 }

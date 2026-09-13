@@ -257,10 +257,5 @@ namespace CapaVista_Seguridad
         }
 
         #endregion
-
-        private void FrmModulo_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -71,7 +71,7 @@ namespace CapaVista_Seguridad
             // 
             // panelHeader
             // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.panelHeader.Controls.Add(this.pictureBox1);
@@ -79,19 +79,20 @@ namespace CapaVista_Seguridad
             this.panelHeader.Controls.Add(this.labelSubtitulo);
             this.panelHeader.Controls.Add(this.labelTitulo);
             this.panelHeader.Controls.Add(this.pictureBoxBanner);
-            this.panelHeader.Location = new System.Drawing.Point(24, 24);
+            this.panelHeader.Location = new System.Drawing.Point(18, 20);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1490, 224);
+            this.panelHeader.Size = new System.Drawing.Size(1118, 182);
             this.panelHeader.TabIndex = 0;
             this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.iconAsignacionPerfiles;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 38);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -101,9 +102,10 @@ namespace CapaVista_Seguridad
             this.pictureBoxMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxMascota.BackColor = System.Drawing.Color.Linen;
             this.pictureBoxMascota.Image = global::CapaVista_Seguridad.Properties.Resources._8;
-            this.pictureBoxMascota.Location = new System.Drawing.Point(905, 3);
+            this.pictureBoxMascota.Location = new System.Drawing.Point(679, 2);
+            this.pictureBoxMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxMascota.Name = "pictureBoxMascota";
-            this.pictureBoxMascota.Size = new System.Drawing.Size(193, 216);
+            this.pictureBoxMascota.Size = new System.Drawing.Size(145, 176);
             this.pictureBoxMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMascota.TabIndex = 4;
             this.pictureBoxMascota.TabStop = false;
@@ -114,7 +116,8 @@ namespace CapaVista_Seguridad
             this.labelSubtitulo.BackColor = System.Drawing.Color.Linen;
             this.labelSubtitulo.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.labelSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.labelSubtitulo.Location = new System.Drawing.Point(158, 92);
+            this.labelSubtitulo.Location = new System.Drawing.Point(118, 75);
+            this.labelSubtitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSubtitulo.Name = "labelSubtitulo";
             this.labelSubtitulo.Size = new System.Drawing.Size(389, 20);
             this.labelSubtitulo.TabIndex = 3;
@@ -126,7 +129,8 @@ namespace CapaVista_Seguridad
             this.labelTitulo.BackColor = System.Drawing.Color.Linen;
             this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
-            this.labelTitulo.Location = new System.Drawing.Point(156, 38);
+            this.labelTitulo.Location = new System.Drawing.Point(117, 31);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(329, 41);
             this.labelTitulo.TabIndex = 2;
@@ -134,28 +138,30 @@ namespace CapaVista_Seguridad
             // 
             // pictureBoxBanner
             // 
-            this.pictureBoxBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureBoxBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxBanner.BackColor = System.Drawing.Color.Linen;
             this.pictureBoxBanner.Image = global::CapaVista_Seguridad.Properties.Resources.banner;
             this.pictureBoxBanner.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxBanner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxBanner.Name = "pictureBoxBanner";
-            this.pictureBoxBanner.Size = new System.Drawing.Size(1490, 224);
+            this.pictureBoxBanner.Size = new System.Drawing.Size(1118, 182);
             this.pictureBoxBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBanner.TabIndex = 0;
             this.pictureBoxBanner.TabStop = false;
             // 
             // panelContenedorListas
             // 
-            this.panelContenedorListas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panelContenedorListas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedorListas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(238)))), ((int)(((byte)(230)))));
             this.panelContenedorListas.Controls.Add(this.tableLayoutPanelContenido);
-            this.panelContenedorListas.Location = new System.Drawing.Point(24, 264);
+            this.panelContenedorListas.Location = new System.Drawing.Point(18, 214);
+            this.panelContenedorListas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelContenedorListas.Name = "panelContenedorListas";
-            this.panelContenedorListas.Size = new System.Drawing.Size(1490, 604);
+            this.panelContenedorListas.Size = new System.Drawing.Size(1118, 491);
             this.panelContenedorListas.TabIndex = 1;
             // 
             // tableLayoutPanelContenido
@@ -168,10 +174,11 @@ namespace CapaVista_Seguridad
             this.tableLayoutPanelContenido.Controls.Add(this.panelAsignacion, 1, 0);
             this.tableLayoutPanelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelContenido.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelContenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanelContenido.Name = "tableLayoutPanelContenido";
             this.tableLayoutPanelContenido.RowCount = 1;
             this.tableLayoutPanelContenido.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelContenido.Size = new System.Drawing.Size(1490, 604);
+            this.tableLayoutPanelContenido.Size = new System.Drawing.Size(1118, 491);
             this.tableLayoutPanelContenido.TabIndex = 0;
             // 
             // panelConsulta
@@ -184,10 +191,10 @@ namespace CapaVista_Seguridad
             this.panelConsulta.Controls.Add(this.labelTituloConsulta);
             this.panelConsulta.Controls.Add(this.panelIconConsulta);
             this.panelConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConsulta.Location = new System.Drawing.Point(3, 3);
-            this.panelConsulta.Margin = new System.Windows.Forms.Padding(3, 3, 12, 3);
+            this.panelConsulta.Location = new System.Drawing.Point(2, 2);
+            this.panelConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 9, 2);
             this.panelConsulta.Name = "panelConsulta";
-            this.panelConsulta.Size = new System.Drawing.Size(730, 598);
+            this.panelConsulta.Size = new System.Drawing.Size(548, 487);
             this.panelConsulta.TabIndex = 0;
             this.panelConsulta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConsulta_Paint);
             // 
@@ -198,34 +205,36 @@ namespace CapaVista_Seguridad
             this.buttonCancelarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancelarConsulta.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.buttonCancelarConsulta.ForeColor = System.Drawing.Color.White;
-            this.buttonCancelarConsulta.Location = new System.Drawing.Point(517, 210);
+            this.buttonCancelarConsulta.Location = new System.Drawing.Point(388, 171);
+            this.buttonCancelarConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelarConsulta.Name = "buttonCancelarConsulta";
-            this.buttonCancelarConsulta.Size = new System.Drawing.Size(174, 46);
+            this.buttonCancelarConsulta.Size = new System.Drawing.Size(130, 37);
             this.buttonCancelarConsulta.TabIndex = 2;
             this.buttonCancelarConsulta.Text = "Cancelar   ❌";
             this.buttonCancelarConsulta.UseVisualStyleBackColor = false;
-            this.buttonCancelarConsulta.Click += new System.EventHandler(this.buttonCancelarConsulta_Click);
             // 
             // panelListaConsulta
             // 
-            this.panelListaConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panelListaConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelListaConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(234)))));
             this.panelListaConsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelListaConsulta.Location = new System.Drawing.Point(32, 180);
+            this.panelListaConsulta.Location = new System.Drawing.Point(24, 146);
+            this.panelListaConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelListaConsulta.Name = "panelListaConsulta";
-            this.panelListaConsulta.Size = new System.Drawing.Size(462, 370);
+            this.panelListaConsulta.Size = new System.Drawing.Size(347, 302);
             this.panelListaConsulta.TabIndex = 1;
             // 
             // comboBoxUsuariosConsulta
             // 
-            this.comboBoxUsuariosConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxUsuariosConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxUsuariosConsulta.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.comboBoxUsuariosConsulta.FormattingEnabled = true;
-            this.comboBoxUsuariosConsulta.Location = new System.Drawing.Point(32, 130);
+            this.comboBoxUsuariosConsulta.Location = new System.Drawing.Point(24, 106);
+            this.comboBoxUsuariosConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxUsuariosConsulta.Name = "comboBoxUsuariosConsulta";
-            this.comboBoxUsuariosConsulta.Size = new System.Drawing.Size(631, 25);
+            this.comboBoxUsuariosConsulta.Size = new System.Drawing.Size(474, 25);
             this.comboBoxUsuariosConsulta.TabIndex = 0;
             // 
             // labelUsuariosConsulta
@@ -233,7 +242,8 @@ namespace CapaVista_Seguridad
             this.labelUsuariosConsulta.AutoSize = true;
             this.labelUsuariosConsulta.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelUsuariosConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.labelUsuariosConsulta.Location = new System.Drawing.Point(32, 104);
+            this.labelUsuariosConsulta.Location = new System.Drawing.Point(24, 84);
+            this.labelUsuariosConsulta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsuariosConsulta.Name = "labelUsuariosConsulta";
             this.labelUsuariosConsulta.Size = new System.Drawing.Size(62, 19);
             this.labelUsuariosConsulta.TabIndex = 4;
@@ -244,7 +254,8 @@ namespace CapaVista_Seguridad
             this.labelTituloConsulta.AutoSize = true;
             this.labelTituloConsulta.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.labelTituloConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
-            this.labelTituloConsulta.Location = new System.Drawing.Point(90, 36);
+            this.labelTituloConsulta.Location = new System.Drawing.Point(68, 29);
+            this.labelTituloConsulta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTituloConsulta.Name = "labelTituloConsulta";
             this.labelTituloConsulta.Size = new System.Drawing.Size(272, 25);
             this.labelTituloConsulta.TabIndex = 3;
@@ -254,9 +265,10 @@ namespace CapaVista_Seguridad
             // 
             this.panelIconConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
             this.panelIconConsulta.Controls.Add(this.labelIconConsulta);
-            this.panelIconConsulta.Location = new System.Drawing.Point(32, 28);
+            this.panelIconConsulta.Location = new System.Drawing.Point(24, 23);
+            this.panelIconConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelIconConsulta.Name = "panelIconConsulta";
-            this.panelIconConsulta.Size = new System.Drawing.Size(44, 44);
+            this.panelIconConsulta.Size = new System.Drawing.Size(33, 36);
             this.panelIconConsulta.TabIndex = 5;
             this.panelIconConsulta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIconConsulta_Paint);
             // 
@@ -266,8 +278,9 @@ namespace CapaVista_Seguridad
             this.labelIconConsulta.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.labelIconConsulta.ForeColor = System.Drawing.Color.White;
             this.labelIconConsulta.Location = new System.Drawing.Point(0, 0);
+            this.labelIconConsulta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIconConsulta.Name = "labelIconConsulta";
-            this.labelIconConsulta.Size = new System.Drawing.Size(44, 44);
+            this.labelIconConsulta.Size = new System.Drawing.Size(33, 36);
             this.labelIconConsulta.TabIndex = 0;
             this.labelIconConsulta.Text = "🔍";
             this.labelIconConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,10 +299,10 @@ namespace CapaVista_Seguridad
             this.panelAsignacion.Controls.Add(this.labelTituloAsignacion);
             this.panelAsignacion.Controls.Add(this.panelIconAsignacion);
             this.panelAsignacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAsignacion.Location = new System.Drawing.Point(757, 3);
-            this.panelAsignacion.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
+            this.panelAsignacion.Location = new System.Drawing.Point(568, 2);
+            this.panelAsignacion.Margin = new System.Windows.Forms.Padding(9, 2, 2, 2);
             this.panelAsignacion.Name = "panelAsignacion";
-            this.panelAsignacion.Size = new System.Drawing.Size(730, 598);
+            this.panelAsignacion.Size = new System.Drawing.Size(548, 487);
             this.panelAsignacion.TabIndex = 1;
             this.panelAsignacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAsignacion_Paint);
             // 
@@ -300,13 +313,13 @@ namespace CapaVista_Seguridad
             this.buttonAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAsignar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.buttonAsignar.ForeColor = System.Drawing.Color.White;
-            this.buttonAsignar.Location = new System.Drawing.Point(522, 352);
+            this.buttonAsignar.Location = new System.Drawing.Point(392, 286);
+            this.buttonAsignar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAsignar.Name = "buttonAsignar";
-            this.buttonAsignar.Size = new System.Drawing.Size(174, 46);
+            this.buttonAsignar.Size = new System.Drawing.Size(130, 37);
             this.buttonAsignar.TabIndex = 4;
             this.buttonAsignar.Text = "Asignar   👤";
             this.buttonAsignar.UseVisualStyleBackColor = false;
-            this.buttonAsignar.Click += new System.EventHandler(this.buttonAsignar_Click);
             // 
             // buttonCancelarAsignacion
             // 
@@ -315,23 +328,24 @@ namespace CapaVista_Seguridad
             this.buttonCancelarAsignacion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCancelarAsignacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.buttonCancelarAsignacion.ForeColor = System.Drawing.Color.White;
-            this.buttonCancelarAsignacion.Location = new System.Drawing.Point(522, 260);
+            this.buttonCancelarAsignacion.Location = new System.Drawing.Point(392, 211);
+            this.buttonCancelarAsignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelarAsignacion.Name = "buttonCancelarAsignacion";
-            this.buttonCancelarAsignacion.Size = new System.Drawing.Size(174, 46);
+            this.buttonCancelarAsignacion.Size = new System.Drawing.Size(130, 37);
             this.buttonCancelarAsignacion.TabIndex = 3;
             this.buttonCancelarAsignacion.Text = "Cancelar   ❌";
             this.buttonCancelarAsignacion.UseVisualStyleBackColor = false;
-            this.buttonCancelarAsignacion.Click += new System.EventHandler(this.buttonCancelarAsignacion_Click);
             // 
             // panelListaAsignacion
             // 
-            this.panelListaAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panelListaAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelListaAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(234)))));
             this.panelListaAsignacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelListaAsignacion.Location = new System.Drawing.Point(32, 240);
+            this.panelListaAsignacion.Location = new System.Drawing.Point(24, 195);
+            this.panelListaAsignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelListaAsignacion.Name = "panelListaAsignacion";
-            this.panelListaAsignacion.Size = new System.Drawing.Size(462, 310);
+            this.panelListaAsignacion.Size = new System.Drawing.Size(347, 253);
             this.panelListaAsignacion.TabIndex = 2;
             // 
             // buttonAgregar
@@ -341,32 +355,34 @@ namespace CapaVista_Seguridad
             this.buttonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAgregar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.buttonAgregar.ForeColor = System.Drawing.Color.White;
-            this.buttonAgregar.Location = new System.Drawing.Point(247, 180);
+            this.buttonAgregar.Location = new System.Drawing.Point(185, 146);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAgregar.Name = "buttonAgregar";
-            this.buttonAgregar.Size = new System.Drawing.Size(210, 46);
+            this.buttonAgregar.Size = new System.Drawing.Size(158, 37);
             this.buttonAgregar.TabIndex = 2;
             this.buttonAgregar.Text = "Agregar   ➕";
             this.buttonAgregar.UseVisualStyleBackColor = false;
-            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // comboBoxPerfilesAsignacion
             // 
-            this.comboBoxPerfilesAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxPerfilesAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPerfilesAsignacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.comboBoxPerfilesAsignacion.FormattingEnabled = true;
-            this.comboBoxPerfilesAsignacion.Location = new System.Drawing.Point(392, 130);
+            this.comboBoxPerfilesAsignacion.Location = new System.Drawing.Point(294, 106);
+            this.comboBoxPerfilesAsignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxPerfilesAsignacion.Name = "comboBoxPerfilesAsignacion";
-            this.comboBoxPerfilesAsignacion.Size = new System.Drawing.Size(262, 25);
+            this.comboBoxPerfilesAsignacion.Size = new System.Drawing.Size(198, 25);
             this.comboBoxPerfilesAsignacion.TabIndex = 1;
             // 
             // comboBoxUsuariosAsignacion
             // 
             this.comboBoxUsuariosAsignacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.comboBoxUsuariosAsignacion.FormattingEnabled = true;
-            this.comboBoxUsuariosAsignacion.Location = new System.Drawing.Point(32, 130);
+            this.comboBoxUsuariosAsignacion.Location = new System.Drawing.Point(24, 106);
+            this.comboBoxUsuariosAsignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxUsuariosAsignacion.Name = "comboBoxUsuariosAsignacion";
-            this.comboBoxUsuariosAsignacion.Size = new System.Drawing.Size(340, 25);
+            this.comboBoxUsuariosAsignacion.Size = new System.Drawing.Size(256, 25);
             this.comboBoxUsuariosAsignacion.TabIndex = 0;
             // 
             // labelPerfilesAsignacion
@@ -374,7 +390,8 @@ namespace CapaVista_Seguridad
             this.labelPerfilesAsignacion.AutoSize = true;
             this.labelPerfilesAsignacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelPerfilesAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.labelPerfilesAsignacion.Location = new System.Drawing.Point(392, 104);
+            this.labelPerfilesAsignacion.Location = new System.Drawing.Point(294, 84);
+            this.labelPerfilesAsignacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPerfilesAsignacion.Name = "labelPerfilesAsignacion";
             this.labelPerfilesAsignacion.Size = new System.Drawing.Size(51, 19);
             this.labelPerfilesAsignacion.TabIndex = 7;
@@ -385,7 +402,8 @@ namespace CapaVista_Seguridad
             this.labelUsuariosAsignacion.AutoSize = true;
             this.labelUsuariosAsignacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelUsuariosAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.labelUsuariosAsignacion.Location = new System.Drawing.Point(32, 104);
+            this.labelUsuariosAsignacion.Location = new System.Drawing.Point(24, 84);
+            this.labelUsuariosAsignacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsuariosAsignacion.Name = "labelUsuariosAsignacion";
             this.labelUsuariosAsignacion.Size = new System.Drawing.Size(62, 19);
             this.labelUsuariosAsignacion.TabIndex = 6;
@@ -396,7 +414,8 @@ namespace CapaVista_Seguridad
             this.labelTituloAsignacion.AutoSize = true;
             this.labelTituloAsignacion.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.labelTituloAsignacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
-            this.labelTituloAsignacion.Location = new System.Drawing.Point(90, 36);
+            this.labelTituloAsignacion.Location = new System.Drawing.Point(68, 29);
+            this.labelTituloAsignacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTituloAsignacion.Name = "labelTituloAsignacion";
             this.labelTituloAsignacion.Size = new System.Drawing.Size(292, 25);
             this.labelTituloAsignacion.TabIndex = 5;
@@ -406,9 +425,10 @@ namespace CapaVista_Seguridad
             // 
             this.panelIconAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(92)))));
             this.panelIconAsignacion.Controls.Add(this.labelIconAsignacion);
-            this.panelIconAsignacion.Location = new System.Drawing.Point(32, 28);
+            this.panelIconAsignacion.Location = new System.Drawing.Point(24, 23);
+            this.panelIconAsignacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelIconAsignacion.Name = "panelIconAsignacion";
-            this.panelIconAsignacion.Size = new System.Drawing.Size(44, 44);
+            this.panelIconAsignacion.Size = new System.Drawing.Size(33, 36);
             this.panelIconAsignacion.TabIndex = 8;
             this.panelIconAsignacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIconAsignacion_Paint);
             // 
@@ -418,24 +438,26 @@ namespace CapaVista_Seguridad
             this.labelIconAsignacion.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.labelIconAsignacion.ForeColor = System.Drawing.Color.White;
             this.labelIconAsignacion.Location = new System.Drawing.Point(0, 0);
+            this.labelIconAsignacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIconAsignacion.Name = "labelIconAsignacion";
-            this.labelIconAsignacion.Size = new System.Drawing.Size(44, 44);
+            this.labelIconAsignacion.Size = new System.Drawing.Size(33, 36);
             this.labelIconAsignacion.TabIndex = 0;
             this.labelIconAsignacion.Text = "👥";
             this.labelIconAsignacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmAsignacionPerfiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(238)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1538, 844);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.panelContenedorListas);
             this.Controls.Add(this.panelHeader);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1199, 749);
+            this.MinimumSize = new System.Drawing.Size(903, 597);
             this.Name = "FrmAsignacionPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2009 - Asignación de Perfiles";
