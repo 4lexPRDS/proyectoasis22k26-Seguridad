@@ -39,7 +39,6 @@
             this.SeguridadLblUsuario = new System.Windows.Forms.Label();
             this.SeguridadLblModulo = new System.Windows.Forms.Label();
             this.SeguridadLblAplicacion = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.colIngresar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +81,6 @@
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblUsuario);
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblModulo);
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblAplicacion);
-            this.SeguridadGbxDatos.Controls.Add(this.btnAgregar);
             this.SeguridadGbxDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadGbxDatos.Location = new System.Drawing.Point(16, 234);
             this.SeguridadGbxDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -158,20 +156,6 @@
             this.SeguridadLblAplicacion.Size = new System.Drawing.Size(85, 21);
             this.SeguridadLblAplicacion.TabIndex = 5;
             this.SeguridadLblAplicacion.Text = "Aplicación";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.btnAgregar.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(985, 50);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(216, 50);
-            this.btnAgregar.TabIndex = 7;
-            this.btnAgregar.Text = "Form Bitacora";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // colIngresar
             // 
@@ -421,7 +405,6 @@
         private System.Windows.Forms.Label SeguridadLblUsuario;
         private System.Windows.Forms.Label SeguridadLblModulo;
         private System.Windows.Forms.Label SeguridadLblAplicacion;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIngresar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAplicacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUsuario;

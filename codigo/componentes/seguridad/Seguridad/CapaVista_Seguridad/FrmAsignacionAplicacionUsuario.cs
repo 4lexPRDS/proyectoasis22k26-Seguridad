@@ -17,10 +17,5 @@ namespace CapaVista_Seguridad
         {
             InitializeComponent();
         }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
