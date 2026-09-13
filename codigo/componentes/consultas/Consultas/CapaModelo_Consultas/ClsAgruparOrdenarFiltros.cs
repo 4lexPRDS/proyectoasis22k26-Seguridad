@@ -8,7 +8,7 @@ namespace CapaModelo_Consultas
 
     public class ClsAgruparOrdenarFiltros
     {
-        private Conexion _conexion = new Conexion();
+        private ClsConexion _conexion = new ClsConexion();
 
         public string Pub_sTabla { get; set; }
         public string Pub_sOrdenamiento { get; set; }

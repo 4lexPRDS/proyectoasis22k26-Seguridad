@@ -6,8 +6,8 @@ namespace CapaControlador_Consultas
 {
     /// Mishel loeiza 9959-23-3457
     /// Recibe las acciones de la Vista, valida datos y llama a la CapaModelo.
-    
     /// </summary>
+
     public class ClsControladorConsultas
     {
         private ClsAgruparOrdenarFiltros _filtros = new ClsAgruparOrdenarFiltros();

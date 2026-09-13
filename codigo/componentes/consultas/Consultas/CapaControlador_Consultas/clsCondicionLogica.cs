@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapaControlador_Consultas
 {
-    public class clsCondicionLogica
+    public class ClsCondicionLogica
     {
 
         public string Campo { get; set; }
         public string Valor { get; set; }
         public string OperadorLogico { get; set; }
 
-        public clsCondicionLogica(
+        public ClsCondicionLogica(
             string campo,
             string valor,
             string operadorLogico)

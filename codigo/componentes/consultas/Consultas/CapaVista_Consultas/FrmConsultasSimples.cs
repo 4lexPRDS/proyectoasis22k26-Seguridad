@@ -11,9 +11,9 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class FrmConsultasSimples : FrmBaseTerminus
+    public partial class FrmConsultasSimples : ClsBaseTerminus
     {
-        ControladorConsultaSimple controlador = new ControladorConsultaSimple();
+        ClsControladorConsultaSimple controlador = new ClsControladorConsultaSimple();
 
         //Variable dinámica de la tabla = empleado es eliminable
         public string TablaActual { get; set; } = "empleado";

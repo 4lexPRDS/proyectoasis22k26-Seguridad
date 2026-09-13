@@ -74,7 +74,7 @@
     <Compile Include="Components\ClsTablaDatosConsultas.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\FrmBaseTerminus.cs">
+    <Compile Include="Components\ClsBaseTerminus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMantenimientoConsultas.cs">

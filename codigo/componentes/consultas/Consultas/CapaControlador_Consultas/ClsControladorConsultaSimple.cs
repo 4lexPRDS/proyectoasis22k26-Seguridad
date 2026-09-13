@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CapaControlador_Consultas
 {
-    public class ControladorConsultaSimple
+    public class ClsControladorConsultaSimple
     {
         public string GenerarConsultaDinamica(string tabla, string campo, string operador, string valor, string campoOrden, bool esAscendente)
         {

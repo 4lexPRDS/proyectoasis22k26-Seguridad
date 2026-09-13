@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaModelo_Consultas
 {
-    internal class Conexion
+    internal class ClsConexion
     {
         public OdbcConnection conexion()
         {

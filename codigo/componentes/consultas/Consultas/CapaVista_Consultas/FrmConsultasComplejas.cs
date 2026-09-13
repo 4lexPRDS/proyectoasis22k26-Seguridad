@@ -11,7 +11,7 @@ using CapaControlador_Consultas;
 
 namespace CapaVista_Consultas
 {
-    public partial class FrmConsultasComplejas : FrmBaseTerminus
+    public partial class FrmConsultasComplejas : ClsBaseTerminus
     {
         public FrmConsultasComplejas()
         {

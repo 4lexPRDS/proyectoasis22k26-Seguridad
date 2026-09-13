@@ -9,7 +9,7 @@ namespace CapaVista_Consultas
 {
     public partial class UcTablaCompleja : ClsControlUsuarioConsultas
     {
-        private readonly clsTablas _Tablas = new clsTablas();
+        private readonly ClsTablas _Tablas = new ClsTablas();
 
         private int _PaginaActual = 1;
         private int _RegistrosPorPagina = 10;

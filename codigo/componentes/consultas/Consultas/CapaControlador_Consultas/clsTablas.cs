@@ -9,9 +9,9 @@ using CapaModelo_Consultas;
 
 namespace CapaControlador_Consultas
 {
-    public class clsTablas
+    public class ClsTablas
     {
-        clsSentenciasTablas sentencias = new clsSentenciasTablas();
+        ClsSentenciasTablas sentencias = new ClsSentenciasTablas();
 
         public DataTable ConsutlasFuncLlenarTabla (string NombreTabla, int pagina, int registrosPorPagina)
         {

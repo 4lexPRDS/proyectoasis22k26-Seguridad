@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsControladorConsultas.cs" />
-    <Compile Include="ControladorConsultaSimple.cs" />
-    <Compile Include="clsCondicionComparacion.cs" />
-    <Compile Include="clsCondicionLogica.cs" />
-    <Compile Include="clsConstructorconsultas.cs" />
-    <Compile Include="clsTablas.cs" />
+    <Compile Include="ClsControladorConsultaSimple.cs" />
+    <Compile Include="ClsCondicionComparacion.cs" />
+    <Compile Include="ClsCondicionLogica.cs" />
+    <Compile Include="ClsConstructorconsultas.cs" />
+    <Compile Include="ClsTablas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

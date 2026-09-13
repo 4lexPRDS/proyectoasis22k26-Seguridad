@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
-    public class FrmBaseTerminus : Form
+    public class ClsBaseTerminus : Form
     {
-        protected FrmBaseTerminus()
+        protected ClsBaseTerminus()
         {
             DoubleBuffered = true;
 

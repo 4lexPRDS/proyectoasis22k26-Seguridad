@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapaControlador_Consultas
 {
-    public class clsConstructorconsultas
+    public class ClsConstructorConsultas
     {
         private string tabla;
 
         private List<string> condiciones;
         private List<string> operadoresLogicos;
 
-        public clsConstructorconsultas(string tabla)
+        public ClsConstructorConsultas(string tabla)
         {
             this.tabla = tabla;
 

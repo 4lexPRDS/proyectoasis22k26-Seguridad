@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
-    public partial class FrmMantenimientoConsultas : FrmBaseTerminus
+    public partial class FrmMantenimientoConsultas : ClsBaseTerminus
     {
         public FrmMantenimientoConsultas()
         {

@@ -45,8 +45,8 @@
   <ItemGroup>
     <Compile Include="ClsAgruparOrdenarFiltros.cs" />
     <Compile Include="ClsConsultasDatos.cs" />
-    <Compile Include="clsSentenciasTablas.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="ClsSentenciasTablas.cs" />
+    <Compile Include="ClsConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

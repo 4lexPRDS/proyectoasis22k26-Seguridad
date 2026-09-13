@@ -14,7 +14,7 @@ namespace CapaVista_Consultas.UserControls
 {
     public partial class UcTablaSimple : ClsControlUsuarioConsultas
     {
-        private readonly clsTablas tablas = new clsTablas();
+        private readonly ClsTablas tablas = new ClsTablas();
         private int _PaginaActual = 1;
         private int _RegistrosPorPagina = 10;
         private int _TotalRegistros = 0;

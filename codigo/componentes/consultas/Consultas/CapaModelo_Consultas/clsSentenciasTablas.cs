@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaModelo_Consultas { 
-    public class clsSentenciasTablas { 
-        Conexion con = new Conexion();
+    public class ClsSentenciasTablas { 
+        ClsConexion con = new ClsConexion();
         public OdbcDataAdapter ObtenerTabla(string Tabla, int pagina, int registrosPorPagina)
         {
             try
