@@ -62,38 +62,6 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void lblPerfiles_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadAplicaciones_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadPerfiles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CboSeguridadModulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadInsertar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadEditar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadeliminar_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void chkSeguridadImprimir_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
         private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Seleccione un Perfil, Módulo y Aplicación, marque los permisos deseados y presione Agregar.");
@@ -156,11 +124,6 @@ namespace CapaVista_Seguridad
             else MessageBox.Show("Seleccione una fila");
         }
 
-        private void BtnSeguridadImprimir_Click(object sender, EventArgs e)
-        {
-            // TODO: lógica para imprimir el contenido de DgvSeguridadListaUsuarios
-        }
-
         private void BtnSeguridadSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -187,11 +150,6 @@ namespace CapaVista_Seguridad
             chkSeguridadEditar.Checked = false;
             chkSeguridadeliminar.Checked = false;
             chkSeguridadImprimir.Checked = false;
-        }
-
-        private void PnlSeguridadPnlDecorativo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void BtnSeguridadModificar_Click(object sender, EventArgs e)
@@ -256,11 +214,6 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void BtnSeguridadReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnSeguridadActualizar_Click(object sender, EventArgs e)
         {
             TxtSeguridadFiltro.Clear();
@@ -314,11 +267,6 @@ namespace CapaVista_Seguridad
                 DgvSeguridadListaUsuarios.Rows[UltimaFila].Selected = true;
                 DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells[0];
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

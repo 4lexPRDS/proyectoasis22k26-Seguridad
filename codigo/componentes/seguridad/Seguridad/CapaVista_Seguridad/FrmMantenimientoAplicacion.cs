@@ -191,11 +191,6 @@ namespace CapaVista_Seguridad
             _ModeloMantenimientoApp.Estado = EstadoEntidad.Added;
         }
 
-        private void SeguridadBtnReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SeguridadDgvAplicaciones_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (SeguridadDgvAplicaciones.SelectedRows.Count > 0)
