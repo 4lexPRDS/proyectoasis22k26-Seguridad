@@ -16,7 +16,7 @@ namespace CapaVista_Consultas
         ClsControladorConsultaSimple _Controlador = new ClsControladorConsultaSimple();
 
         //Variable dinámica de la tabla = empleado es eliminable
-        public string TablaActual { get; set; } = "empleado";
+        public string TablaActual { get; set; } = "tblConsulta";
 
         public FrmConsultasSimples()
         {
