@@ -23,16 +23,16 @@ namespace CapaVista_Consultas
 
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
-                CargarDatosIniciales();
+                ConsultasMetCargarDatosIniciales();
             }
         }
 
-        private void CargarDatosIniciales()
+        private void ConsultasMetCargarDatosIniciales()
         {
-            string tabla = "Empleados";
+            string Tabla = "Empleados";
 
-            _controlador.PoblarComboCampos(
-                tabla,
+            _controlador.ConsultasMetPoblarComboCampos(
+                Tabla,
                 ConsultasCboCampo);
 
             ConsultasCboOperador.Items.Clear();

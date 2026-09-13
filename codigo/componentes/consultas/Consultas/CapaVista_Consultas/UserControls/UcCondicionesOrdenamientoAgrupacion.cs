@@ -16,10 +16,10 @@ namespace CapaVista_Consultas.UserControls
         public UcCondicionesOrdenamientoAgrupacion()
         {
             InitializeComponent();
-            CargarDatosIniciales();
+            ConsultasMetCargarDatosIniciales();
         }
 
-        private void CargarDatosIniciales()
+        private void ConsultasMetCargarDatosIniciales()
         {
             ConsultasCboOperador.Items.Clear();
 

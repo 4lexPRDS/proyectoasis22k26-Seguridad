@@ -11,7 +11,7 @@ namespace CapaVista_Consultas.Components
 {
     public class ClsGrupoConsultas : GroupBox
     {
-        private static readonly Color ColorTexto =
+        private static readonly Color _ColorTexto =
             ColorTranslator.FromHtml("#2E4A63");
 
         public ClsGrupoConsultas()
@@ -22,7 +22,7 @@ namespace CapaVista_Consultas.Components
                 FontStyle.Bold,
                 GraphicsUnit.Point);
 
-            ForeColor = ColorTexto;
+            ForeColor = _ColorTexto;
             BackColor = Color.Transparent;
             FlatStyle = FlatStyle.Flat;
             Margin = new Padding(3);

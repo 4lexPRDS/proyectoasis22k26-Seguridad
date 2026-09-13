@@ -5,33 +5,33 @@ namespace CapaVista_Consultas.Components
 {
     public class ClsTablaDatosConsultas : DataGridView
     {
-        private static readonly Color Primario =
+        private static readonly Color _Primario =
             ColorTranslator.FromHtml("#2E4A63");
 
-        private static readonly Color Secundario =
+        private static readonly Color _Secundario =
             ColorTranslator.FromHtml("#4E8078");
 
-        private static readonly Color Fondo =
+        private static readonly Color _Fondo =
             ColorTranslator.FromHtml("#EDE7DA");
 
-        private static readonly Color FondoAlterno =
+        private static readonly Color _FondoAlterno =
             Color.FromArgb(245, 242, 235);
 
         public ClsTablaDatosConsultas()
         {
             DoubleBuffered = true;
 
-            AplicarEstandarizacion();
+            ConsultasMetAplicarEstandarizacion();
         }
 
         protected override void OnHandleCreated(System.EventArgs e)
         {
             base.OnHandleCreated(e);
 
-            AplicarEstandarizacion();
+            ConsultasMetAplicarEstandarizacion();
         }
 
-        private void AplicarEstandarizacion()
+        private void ConsultasMetAplicarEstandarizacion()
         {
             AutoGenerateColumns = true;
 
@@ -48,7 +48,7 @@ namespace CapaVista_Consultas.Components
             CellBorderStyle =
                 DataGridViewCellBorderStyle.SingleHorizontal;
 
-            GridColor = Fondo;
+            GridColor = _Fondo;
 
             EnableHeadersVisualStyles = false;
 
@@ -58,9 +58,9 @@ namespace CapaVista_Consultas.Components
             ColumnHeadersDefaultCellStyle =
                 new DataGridViewCellStyle
                 {
-                    BackColor = Primario,
+                    BackColor = _Primario,
                     ForeColor = Color.White,
-                    SelectionBackColor = Primario,
+                    SelectionBackColor = _Primario,
                     SelectionForeColor = Color.White,
                     Alignment =
                         DataGridViewContentAlignment.MiddleLeft,
@@ -75,8 +75,8 @@ namespace CapaVista_Consultas.Components
                 new DataGridViewCellStyle
                 {
                     BackColor = Color.White,
-                    ForeColor = Primario,
-                    SelectionBackColor = Secundario,
+                    ForeColor = _Primario,
+                    SelectionBackColor = _Secundario,
                     SelectionForeColor = Color.White,
                     Alignment =
                         DataGridViewContentAlignment.MiddleLeft,
@@ -92,17 +92,17 @@ namespace CapaVista_Consultas.Components
                 new DataGridViewCellStyle
                 {
                     BackColor = Color.White,
-                    ForeColor = Primario,
-                    SelectionBackColor = Secundario,
+                    ForeColor = _Primario,
+                    SelectionBackColor = _Secundario,
                     SelectionForeColor = Color.White
                 };
 
             AlternatingRowsDefaultCellStyle =
                 new DataGridViewCellStyle
                 {
-                    BackColor = FondoAlterno,
-                    ForeColor = Primario,
-                    SelectionBackColor = Secundario,
+                    BackColor = _FondoAlterno,
+                    ForeColor = _Primario,
+                    SelectionBackColor = _Secundario,
                     SelectionForeColor = Color.White
                 };
 
@@ -145,10 +145,10 @@ namespace CapaVista_Consultas.Components
                 return;
             }
 
-            using (Pen borde = new Pen(Primario, 1F))
+            using (Pen Borde = new Pen(_Primario, 1F))
             {
                 e.Graphics.DrawRectangle(
-                    borde,
+                    Borde,
                     0,
                     0,
                     ClientSize.Width - 1,

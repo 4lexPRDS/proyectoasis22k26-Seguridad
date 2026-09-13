@@ -11,7 +11,7 @@ namespace CapaVista_Consultas
 {
     public class ClsBotonConsultas : Button
     {
-        private static readonly Color FondoConsultas =
+        private static readonly Color _FondoConsultas =
             ColorTranslator.FromHtml("#EDE7DA");
 
         public ClsBotonConsultas()
@@ -22,7 +22,7 @@ namespace CapaVista_Consultas
             MinimumSize = new Size(80, 80);
             MaximumSize = new Size(80, 80);
 
-            BackColor = FondoConsultas;
+            BackColor = _FondoConsultas;
 
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;

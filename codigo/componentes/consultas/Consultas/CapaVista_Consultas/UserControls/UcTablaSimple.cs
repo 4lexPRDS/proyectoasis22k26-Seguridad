@@ -14,14 +14,14 @@ namespace CapaVista_Consultas.UserControls
 {
     public partial class UcTablaSimple : ClsControlUsuarioConsultas
     {
-        private readonly ClsTablas tablas = new ClsTablas();
+        private readonly ClsTablas Tablas = new ClsTablas();
         private int _PaginaActual = 1;
         private int _RegistrosPorPagina = 10;
         private int _TotalRegistros = 0;
         private int _TotalPaginas = 0;
         private string _TablaSeleccionada = "";
-        private int _inicioRangoPagina = 1;
-        private int _cantidadBotonesPagina = 5;
+        private int _InicioRangoPagina = 1;
+        private int _CantidadBotonesPagina = 5;
 
         public UcTablaSimple()
         {
@@ -72,73 +72,63 @@ namespace CapaVista_Consultas.UserControls
             if (_TablaSeleccionada != tablaSeleccionada)
             {
                 _PaginaActual = 1;
-                _inicioRangoPagina = 1;
+                _InicioRangoPagina = 1;
             }
 
             _TablaSeleccionada = tablaSeleccionada;
 
-            CalcularTotalPaginas();
+            ConsultasProcCalcularTotalPaginas();
 
-            DataTable dtTablas = tablas.ConsutlasFuncLlenarTabla(
+            DataTable DtTablas = Tablas.ConsultasFuncLlenarTabla(
                 _TablaSeleccionada,
                 _PaginaActual,
                 _RegistrosPorPagina);
 
-            ConsultasDgvSimples.DataSource = dtTablas;
+            ConsultasDgvSimples.DataSource = DtTablas;
 
-            CrearBotonesPaginas();
+            ConsultasProcCrearBotonesPaginas();
 
         }
-        private void CalcularTotalPaginas()
+        private void ConsultasProcCalcularTotalPaginas()
         {
-            _TotalRegistros = tablas.ConsultasFuncContarRegistros(_TablaSeleccionada);
+            _TotalRegistros = Tablas.ConsultasFuncContarRegistros(_TablaSeleccionada);
 
             _TotalPaginas = (int)Math.Ceiling(
                 (double)_TotalRegistros / _RegistrosPorPagina
             );
         }
-        private void CrearBotonesPaginas()
+        private void ConsultasProcCrearBotonesPaginas()
         {
             ConsultasFlpPaginas.Controls.Clear();
 
-            int finRango = _inicioRangoPagina + _cantidadBotonesPagina - 1;
+            int FinRango = _InicioRangoPagina + _CantidadBotonesPagina - 1;
 
-            if (finRango > _TotalPaginas)
-                finRango = _TotalPaginas;
+            if (FinRango > _TotalPaginas)
+                FinRango = _TotalPaginas;
 
-            for (int i = _inicioRangoPagina; i <= finRango; i++)
+            for (int NumeroPagina = _InicioRangoPagina; NumeroPagina <= FinRango; NumeroPagina++)
             {
-                ClsBotonPaginacionConsultas btn =
+                ClsBotonPaginacionConsultas BotonPagina =
                     new ClsBotonPaginacionConsultas();
 
-                btn.Name = $"ConsultasBtnPagina{i}";
-                btn.Text = i.ToString();
-                btn.Tag = i;
-                btn.EsActivo = i == _PaginaActual;
+                BotonPagina.Name = $"ConsultasBtnPagina{NumeroPagina}";
+                BotonPagina.Text = NumeroPagina.ToString();
+                BotonPagina.Tag = NumeroPagina;
+                BotonPagina.EsActivo = NumeroPagina == _PaginaActual;
 
-                btn.Click += BtnPagina_Click;
+                BotonPagina.Click += BtnPagina_Click;
 
-                ConsultasFlpPaginas.Controls.Add(btn);
+                ConsultasFlpPaginas.Controls.Add(BotonPagina);
             }
         }
         private void BtnPagina_Click(object sender, EventArgs e)
         {
-            ClsBotonPaginacionConsultas btn =
+            ClsBotonPaginacionConsultas BotonPagina =
             (ClsBotonPaginacionConsultas)sender;
 
-            _PaginaActual = Convert.ToInt32(btn.Tag);
+            _PaginaActual = Convert.ToInt32(BotonPagina.Tag);
 
             ConsultasProcActualizarTabla(_TablaSeleccionada);
-        }
-
-        private void ConsultasBtnAnterior_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ConsultasBtnSiguiente_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void ConsultasBtnAnterior1_Click(object sender, EventArgs e)
@@ -147,9 +137,9 @@ namespace CapaVista_Consultas.UserControls
             {
                 _PaginaActual--;
 
-                if (_PaginaActual < _inicioRangoPagina)
+                if (_PaginaActual < _InicioRangoPagina)
                 {
-                    _inicioRangoPagina--;
+                    _InicioRangoPagina--;
                 }
 
                 ConsultasProcActualizarTabla(_TablaSeleccionada);
@@ -163,9 +153,9 @@ namespace CapaVista_Consultas.UserControls
                 _PaginaActual++;
 
                 if (_PaginaActual >=
-                    _inicioRangoPagina + _cantidadBotonesPagina)
+                    _InicioRangoPagina + _CantidadBotonesPagina)
                 {
-                    _inicioRangoPagina++;
+                    _InicioRangoPagina++;
                 }
 
                 ConsultasProcActualizarTabla(_TablaSeleccionada);

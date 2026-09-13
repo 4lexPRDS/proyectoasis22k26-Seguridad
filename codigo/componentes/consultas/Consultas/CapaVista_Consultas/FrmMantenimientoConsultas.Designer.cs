@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoConsultas));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasGbxCondicionesLogicas = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.condicionesOrdenamientoAgrupacion1 = new CapaVista_Consultas.UserControls.UcCondicionesOrdenamientoAgrupacion();
-            this.filtrosAplicados1 = new CapaVista_Consultas.UcFiltrosAplicados();
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion = new CapaVista_Consultas.UserControls.UcCondicionesOrdenamientoAgrupacion();
+            this.ConsultasUcFiltrosAplicados = new CapaVista_Consultas.UcFiltrosAplicados();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxCondicionesLogicas.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasGbxCondicionesLogicas, 0, 0);
-            this.ConsultasTlpPrincipal.Controls.Add(this.filtrosAplicados1, 1, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasUcFiltrosAplicados, 1, 0);
             this.ConsultasTlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConsultasTlpPrincipal.Location = new System.Drawing.Point(0, 0);
             this.ConsultasTlpPrincipal.Margin = new System.Windows.Forms.Padding(2);
@@ -56,7 +56,7 @@
             // ConsultasGbxCondicionesLogicas
             // 
             this.ConsultasGbxCondicionesLogicas.BackColor = System.Drawing.Color.Transparent;
-            this.ConsultasGbxCondicionesLogicas.Controls.Add(this.condicionesOrdenamientoAgrupacion1);
+            this.ConsultasGbxCondicionesLogicas.Controls.Add(this.ConsultasUcCondicionesOrdenamientoAgrupacion);
             this.ConsultasGbxCondicionesLogicas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConsultasGbxCondicionesLogicas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasGbxCondicionesLogicas.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -68,27 +68,27 @@
             this.ConsultasGbxCondicionesLogicas.TabStop = false;
             this.ConsultasGbxCondicionesLogicas.Text = "Agregar Condición";
             // 
-            // condicionesOrdenamientoAgrupacion1
+            // ConsultasUcCondicionesOrdenamientoAgrupacion
             // 
-            this.condicionesOrdenamientoAgrupacion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.condicionesOrdenamientoAgrupacion1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.condicionesOrdenamientoAgrupacion1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.condicionesOrdenamientoAgrupacion1.Location = new System.Drawing.Point(3, 24);
-            this.condicionesOrdenamientoAgrupacion1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.condicionesOrdenamientoAgrupacion1.Name = "condicionesOrdenamientoAgrupacion1";
-            this.condicionesOrdenamientoAgrupacion1.Size = new System.Drawing.Size(380, 259);
-            this.condicionesOrdenamientoAgrupacion1.TabIndex = 1;
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Location = new System.Drawing.Point(3, 24);
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Name = "ConsultasUcCondicionesOrdenamientoAgrupacion";
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.Size = new System.Drawing.Size(380, 259);
+            this.ConsultasUcCondicionesOrdenamientoAgrupacion.TabIndex = 1;
             // 
-            // filtrosAplicados1
+            // ConsultasUcFiltrosAplicados
             // 
-            this.filtrosAplicados1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.filtrosAplicados1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filtrosAplicados1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.filtrosAplicados1.Location = new System.Drawing.Point(392, 0);
-            this.filtrosAplicados1.Margin = new System.Windows.Forms.Padding(0);
-            this.filtrosAplicados1.Name = "filtrosAplicados1";
-            this.filtrosAplicados1.Size = new System.Drawing.Size(589, 292);
-            this.filtrosAplicados1.TabIndex = 17;
+            this.ConsultasUcFiltrosAplicados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
+            this.ConsultasUcFiltrosAplicados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasUcFiltrosAplicados.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ConsultasUcFiltrosAplicados.Location = new System.Drawing.Point(392, 0);
+            this.ConsultasUcFiltrosAplicados.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasUcFiltrosAplicados.Name = "ConsultasUcFiltrosAplicados";
+            this.ConsultasUcFiltrosAplicados.Size = new System.Drawing.Size(589, 292);
+            this.ConsultasUcFiltrosAplicados.TabIndex = 17;
             // 
             // FrmMantenimientoConsultas
             // 
@@ -111,7 +111,7 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private Components.ClsGrupoConsultas ConsultasGbxCondicionesLogicas;
-        private UserControls.UcCondicionesOrdenamientoAgrupacion condicionesOrdenamientoAgrupacion1;
-        private UcFiltrosAplicados filtrosAplicados1;
+        private UserControls.UcCondicionesOrdenamientoAgrupacion ConsultasUcCondicionesOrdenamientoAgrupacion;
+        private UcFiltrosAplicados ConsultasUcFiltrosAplicados;
     }
 }

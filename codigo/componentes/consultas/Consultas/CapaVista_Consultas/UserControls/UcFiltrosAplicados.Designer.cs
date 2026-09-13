@@ -8,7 +8,7 @@
         private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
-        /// Limpiar los recursos que se estén usando.
+        /// ConsultasMetLimpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
@@ -32,17 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasFlpBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.ConsultasBtnConsultar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasBtnGuardar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasBtnEliminar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasDgvConsultasFiltros = new CapaVista_Consultas.Components.ClsTablaDatosConsultas();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultasColTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultasColCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultasColOperador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultasColValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConsultasColOrdenamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasFlpBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultasDgvConsultasFiltros)).BeginInit();
@@ -89,6 +90,8 @@
             this.ConsultasBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnConsultar.Location = new System.Drawing.Point(0, 0);
             this.ConsultasBtnConsultar.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnConsultar.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnConsultar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnConsultar.Name = "ConsultasBtnConsultar";
             this.ConsultasBtnConsultar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnConsultar.TabIndex = 0;
@@ -105,6 +108,8 @@
             this.ConsultasBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnGuardar.Location = new System.Drawing.Point(0, 80);
             this.ConsultasBtnGuardar.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnGuardar.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnGuardar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnGuardar.Name = "ConsultasBtnGuardar";
             this.ConsultasBtnGuardar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnGuardar.TabIndex = 1;
@@ -121,6 +126,8 @@
             this.ConsultasBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultasBtnEliminar.Location = new System.Drawing.Point(0, 160);
             this.ConsultasBtnEliminar.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasBtnEliminar.MaximumSize = new System.Drawing.Size(80, 80);
+            this.ConsultasBtnEliminar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnEliminar.Name = "ConsultasBtnEliminar";
             this.ConsultasBtnEliminar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnEliminar.TabIndex = 2;
@@ -150,11 +157,11 @@
             this.ConsultasDgvConsultasFiltros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ConsultasDgvConsultasFiltros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultasDgvConsultasFiltros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.ConsultasColTipo,
+            this.ConsultasColCampo,
+            this.ConsultasColOperador,
+            this.ConsultasColValor,
+            this.ConsultasColOrdenamiento});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -164,6 +171,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ConsultasDgvConsultasFiltros.DefaultCellStyle = dataGridViewCellStyle3;
             this.ConsultasDgvConsultasFiltros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasDgvConsultasFiltros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ConsultasDgvConsultasFiltros.EnableHeadersVisualStyles = false;
             this.ConsultasDgvConsultasFiltros.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ConsultasDgvConsultasFiltros.GridColor = System.Drawing.Color.LightGray;
@@ -171,42 +179,53 @@
             this.ConsultasDgvConsultasFiltros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConsultasDgvConsultasFiltros.MultiSelect = false;
             this.ConsultasDgvConsultasFiltros.Name = "ConsultasDgvConsultasFiltros";
+            this.ConsultasDgvConsultasFiltros.ReadOnly = true;
             this.ConsultasDgvConsultasFiltros.RowHeadersVisible = false;
             this.ConsultasDgvConsultasFiltros.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(128)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.ConsultasDgvConsultasFiltros.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ConsultasDgvConsultasFiltros.RowTemplate.Height = 28;
             this.ConsultasDgvConsultasFiltros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ConsultasDgvConsultasFiltros.Size = new System.Drawing.Size(596, 361);
             this.ConsultasDgvConsultasFiltros.TabIndex = 3;
             // 
-            // Column1
+            // ConsultasColTipo
             // 
-            this.Column1.HeaderText = "Tipo";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.ConsultasColTipo.HeaderText = "Tipo";
+            this.ConsultasColTipo.MinimumWidth = 6;
+            this.ConsultasColTipo.Name = "ConsultasColTipo";
+            this.ConsultasColTipo.ReadOnly = true;
             // 
-            // Column2
+            // ConsultasColCampo
             // 
-            this.Column2.HeaderText = "Campo";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.ConsultasColCampo.HeaderText = "Campo";
+            this.ConsultasColCampo.MinimumWidth = 6;
+            this.ConsultasColCampo.Name = "ConsultasColCampo";
+            this.ConsultasColCampo.ReadOnly = true;
             // 
-            // Column3
+            // ConsultasColOperador
             // 
-            this.Column3.HeaderText = "Operador";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
+            this.ConsultasColOperador.HeaderText = "Operador";
+            this.ConsultasColOperador.MinimumWidth = 6;
+            this.ConsultasColOperador.Name = "ConsultasColOperador";
+            this.ConsultasColOperador.ReadOnly = true;
             // 
-            // Column4
+            // ConsultasColValor
             // 
-            this.Column4.HeaderText = "Valor";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.ConsultasColValor.HeaderText = "Valor";
+            this.ConsultasColValor.MinimumWidth = 6;
+            this.ConsultasColValor.Name = "ConsultasColValor";
+            this.ConsultasColValor.ReadOnly = true;
             // 
-            // Column5
+            // ConsultasColOrdenamiento
             // 
-            this.Column5.HeaderText = "Ordenamiento";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
+            this.ConsultasColOrdenamiento.HeaderText = "Ordenamiento";
+            this.ConsultasColOrdenamiento.MinimumWidth = 6;
+            this.ConsultasColOrdenamiento.Name = "ConsultasColOrdenamiento";
+            this.ConsultasColOrdenamiento.ReadOnly = true;
             // 
             // UcFiltrosAplicados
             // 
@@ -214,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ConsultasTlpPrincipal);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "FiltrosAplicados";
+            this.Name = "UcFiltrosAplicados";
             this.Size = new System.Drawing.Size(682, 369);
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasFlpBotones.ResumeLayout(false);
@@ -228,11 +247,11 @@
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private System.Windows.Forms.FlowLayoutPanel ConsultasFlpBotones;
         private Components.ClsTablaDatosConsultas ConsultasDgvConsultasFiltros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColCampo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColOperador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColOrdenamiento;
         private ClsBotonConsultas ConsultasBtnConsultar;
         private ClsBotonConsultas ConsultasBtnGuardar;
         private ClsBotonConsultas ConsultasBtnEliminar;

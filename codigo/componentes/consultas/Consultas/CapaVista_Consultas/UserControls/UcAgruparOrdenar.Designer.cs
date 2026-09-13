@@ -8,7 +8,7 @@
         private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
-        /// Limpiar los recursos que se estén usando.
+        /// ConsultasMetLimpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcAgruparOrdenar));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasBtnRefrescar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasTxtValor = new CapaVista_Consultas.ClsCajaTextoConsultas();
             this.ConsultasCboOperador = new CapaVista_Consultas.Components.ClsListaDesplegableConsultas();
@@ -42,40 +42,40 @@
             this.ConsultasLblValor = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
             this.ConsultasBtnIngresar = new CapaVista_Consultas.ClsBotonConsultas();
             this.ConsultasCboCampo = new CapaVista_Consultas.Components.ClsListaDesplegableConsultas();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasTlpOrdenamiento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // ConsultasTlpPrincipal
             // 
-            this.tableLayoutPanel1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolTip;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33345F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33345F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3331F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasBtnRefrescar, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasTxtValor, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasCboOperador, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasTlpOrdenamiento, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasLblOrdenamiento, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasLblCampo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasLblOperador, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasLblValor, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasBtnIngresar, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ConsultasCboCampo, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(775, 128);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.ConsultasTlpPrincipal.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolTip;
+            this.ConsultasTlpPrincipal.ColumnCount = 6;
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33345F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33345F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3331F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.ConsultasTlpPrincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasBtnRefrescar, 5, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasTxtValor, 3, 1);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasCboOperador, 2, 1);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasTlpOrdenamiento, 0, 1);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasLblOrdenamiento, 0, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasLblCampo, 1, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasLblOperador, 2, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasLblValor, 3, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasBtnIngresar, 4, 0);
+            this.ConsultasTlpPrincipal.Controls.Add(this.ConsultasCboCampo, 1, 1);
+            this.ConsultasTlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConsultasTlpPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.ConsultasTlpPrincipal.Margin = new System.Windows.Forms.Padding(0);
+            this.ConsultasTlpPrincipal.Name = "ConsultasTlpPrincipal";
+            this.ConsultasTlpPrincipal.RowCount = 3;
+            this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.ConsultasTlpPrincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ConsultasTlpPrincipal.Size = new System.Drawing.Size(775, 128);
+            this.ConsultasTlpPrincipal.TabIndex = 0;
             // 
             // ConsultasBtnRefrescar
             // 
@@ -91,7 +91,7 @@
             this.ConsultasBtnRefrescar.MaximumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnRefrescar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnRefrescar.Name = "ConsultasBtnRefrescar";
-            this.tableLayoutPanel1.SetRowSpan(this.ConsultasBtnRefrescar, 2);
+            this.ConsultasTlpPrincipal.SetRowSpan(this.ConsultasBtnRefrescar, 2);
             this.ConsultasBtnRefrescar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnRefrescar.TabIndex = 23;
             this.ConsultasBtnRefrescar.UseVisualStyleBackColor = false;
@@ -107,7 +107,7 @@
             this.ConsultasTxtValor.Location = new System.Drawing.Point(449, 39);
             this.ConsultasTxtValor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConsultasTxtValor.Name = "ConsultasTxtValor";
-            this.ConsultasTxtValor.Size = new System.Drawing.Size(142, 30);
+            this.ConsultasTxtValor.Size = new System.Drawing.Size(141, 30);
             this.ConsultasTxtValor.TabIndex = 22;
             // 
             // ConsultasCboOperador
@@ -229,7 +229,7 @@
             this.ConsultasLblValor.BackColor = System.Drawing.Color.Transparent;
             this.ConsultasLblValor.Font = new System.Drawing.Font("Tahoma", 9.5F);
             this.ConsultasLblValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(74)))), ((int)(((byte)(99)))));
-            this.ConsultasLblValor.Location = new System.Drawing.Point(497, 12);
+            this.ConsultasLblValor.Location = new System.Drawing.Point(496, 12);
             this.ConsultasLblValor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConsultasLblValor.Name = "ConsultasLblValor";
             this.ConsultasLblValor.Size = new System.Drawing.Size(46, 19);
@@ -246,12 +246,12 @@
             this.ConsultasBtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConsultasBtnIngresar.FlatAppearance.BorderSize = 0;
             this.ConsultasBtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultasBtnIngresar.Location = new System.Drawing.Point(599, 10);
+            this.ConsultasBtnIngresar.Location = new System.Drawing.Point(598, 10);
             this.ConsultasBtnIngresar.Margin = new System.Windows.Forms.Padding(0);
             this.ConsultasBtnIngresar.MaximumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.MinimumSize = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.Name = "ConsultasBtnIngresar";
-            this.tableLayoutPanel1.SetRowSpan(this.ConsultasBtnIngresar, 2);
+            this.ConsultasTlpPrincipal.SetRowSpan(this.ConsultasBtnIngresar, 2);
             this.ConsultasBtnIngresar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.TabIndex = 14;
             this.ConsultasBtnIngresar.UseVisualStyleBackColor = false;
@@ -277,12 +277,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(231)))), ((int)(((byte)(218)))));
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.ConsultasTlpPrincipal);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "Agrupar_Ordenar";
+            this.Name = "UcAgruparOrdenar";
             this.Size = new System.Drawing.Size(775, 128);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.ConsultasTlpPrincipal.ResumeLayout(false);
+            this.ConsultasTlpPrincipal.PerformLayout();
             this.ConsultasTlpOrdenamiento.ResumeLayout(false);
             this.ConsultasTlpOrdenamiento.PerformLayout();
             this.ResumeLayout(false);
@@ -290,7 +290,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private ClsBotonConsultas ConsultasBtnIngresar;
         private Components.ClsEtiquetaConsultas ConsultasLblOrdenamiento;
         private Components.ClsEtiquetaConsultas ConsultasLblCampo;

@@ -25,7 +25,7 @@ namespace CapaControlador_Consultas
           
         }
 
-        public string GenerarCondicion()
+        public string ConsultasMetGenerarCondicion()
         {
             return $"{Campo} {OperadorComparacion} '{Valor}'";
         }

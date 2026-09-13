@@ -43,10 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsAgruparOrdenarFiltros.cs" />
-    <Compile Include="ClsConsultasDatos.cs" />
-    <Compile Include="ClsSentenciasTablas.cs" />
-    <Compile Include="ClsConexion.cs" />
+    <Compile Include="Constructores\ClsCondicionComparacion.cs" />
+    <Compile Include="Constructores\ClsCondicionLogica.cs" />
+    <Compile Include="Constructores\ClsConstructorconsultas.cs" />
+    <Compile Include="Entidades\ClsAgruparOrdenarFiltros.cs" />
+    <Compile Include="Consultas\ClsConsultasDatos.cs" />
+    <Compile Include="Consultas\ClsSentenciasTablas.cs" />
+    <Compile Include="Conexion\ClsConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,7 +9,7 @@ namespace CapaVista_Consultas.Components
 {
     public class ClsControlUsuarioConsultas : UserControl
     {
-        private static readonly Font FuentePredeterminada =
+        private static readonly Font _FuentePredeterminada =
             new Font(
                 "Segoe UI",
                 9F,
@@ -20,7 +20,7 @@ namespace CapaVista_Consultas.Components
         {
             DoubleBuffered = true;
 
-            Font = FuentePredeterminada;
+            Font = _FuentePredeterminada;
 
             BackColor = ColorTranslator.FromHtml("#EDE7DA");
 

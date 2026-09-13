@@ -6,7 +6,7 @@ namespace CapaVista_Consultas
 {
     public class ClsCajaTextoConsultas : TextBox
     {
-        private static readonly Color ColorTexto =
+        private static readonly Color _ColorTexto =
             ColorTranslator.FromHtml("#2E4A63");
 
         public ClsCajaTextoConsultas()
@@ -18,7 +18,7 @@ namespace CapaVista_Consultas
                 GraphicsUnit.Point);
 
             BackColor = Color.White;
-            ForeColor = ColorTexto;
+            ForeColor = _ColorTexto;
             BorderStyle = BorderStyle.FixedSingle;
             ShortcutsEnabled = true;
             Margin = new Padding(3);

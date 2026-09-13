@@ -46,16 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsControladorConsultas.cs" />
-    <Compile Include="ClsControladorConsultaSimple.cs" />
-    <Compile Include="ClsCondicionComparacion.cs" />
-    <Compile Include="ClsCondicionLogica.cs" />
-    <Compile Include="ClsConstructorConsultas.cs" />
-    <Compile Include="ClsTablas.cs" />
+    <Compile Include="Controladores\ClsControladorConsultas.cs" />
+    <Compile Include="Controladores\ClsControladorConsultaSimple.cs" />
+    <Compile Include="Tablas\ClsTablas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,10 +6,10 @@ namespace CapaVista_Consultas.Components
 {
     public class ClsBotonPaginacionConsultas : Button
     {
-        private static readonly Color Primario =
+        private static readonly Color _Primario =
             ColorTranslator.FromHtml("#2E4A63");
 
-        private static readonly Color Secundario =
+        private static readonly Color _Secundario =
             ColorTranslator.FromHtml("#4E8078");
 
         private bool _EsActivo;
@@ -37,7 +37,7 @@ namespace CapaVista_Consultas.Components
             FlatStyle = FlatStyle.Flat;
             FlatAppearance.BorderSize = 0;
 
-            BackColor = Primario;
+            BackColor = _Primario;
             ForeColor = Color.White;
 
             Cursor = Cursors.Hand;
@@ -58,7 +58,7 @@ namespace CapaVista_Consultas.Components
 
             if (!EsActivo)
             {
-                BackColor = Secundario;
+                BackColor = _Secundario;
                 ForeColor = Color.White;
             }
         }
@@ -84,8 +84,8 @@ namespace CapaVista_Consultas.Components
         private void ConsultasProcActualizarEstado()
         {
             BackColor = EsActivo
-                ? Secundario
-                : Primario;
+                ? _Secundario
+                : _Primario;
 
             ForeColor = Color.White;
 

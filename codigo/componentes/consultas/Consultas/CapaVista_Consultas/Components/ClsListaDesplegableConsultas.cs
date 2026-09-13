@@ -11,7 +11,7 @@ namespace CapaVista_Consultas.Components
 {
     public class ClsListaDesplegableConsultas : ComboBox
     {
-        private static readonly Color ColorTexto =
+        private static readonly Color _ColorTexto =
             ColorTranslator.FromHtml("#2E4A63");
 
         public ClsListaDesplegableConsultas()
@@ -22,7 +22,7 @@ namespace CapaVista_Consultas.Components
                 FontStyle.Regular,
                 GraphicsUnit.Point);
 
-            ForeColor = ColorTexto;
+            ForeColor = _ColorTexto;
             BackColor = Color.White;
 
             DropDownStyle = ComboBoxStyle.DropDownList;

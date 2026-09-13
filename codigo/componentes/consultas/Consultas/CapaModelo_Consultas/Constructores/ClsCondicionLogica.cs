@@ -23,12 +23,12 @@ namespace CapaControlador_Consultas
             OperadorLogico = operadorLogico;
         }
 
-        public string GenerarCondicion()
+        public string ConsultasMetGenerarCondicion()
         {
             return $"{Campo} = '{Valor}'";
         }
 
-        public string GenerarOperadorLogico()
+        public string ConsultasMetGenerarOperadorLogico()
         {
             return OperadorLogico;
         }

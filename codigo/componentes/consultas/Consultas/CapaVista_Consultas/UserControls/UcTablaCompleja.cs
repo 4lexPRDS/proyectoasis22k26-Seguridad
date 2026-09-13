@@ -26,7 +26,7 @@ namespace CapaVista_Consultas
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
                 ConsultasCboTablas.SelectionChangeCommitted +=
-                    ConsultasCboTablas_SelectionChangeCommitted;
+                    ConsultasMetCboTablasSelectionChangeCommitted;
 
                 ConsultasProcPopularCboTablas();
                 ConsultasProcActualizarNavegacion();
@@ -37,13 +37,13 @@ namespace CapaVista_Consultas
         {
             ConsultasCboTablas.Items.Clear();
 
-            DataTable dtTablas =
+            DataTable DtTablas =
                 _Tablas.ConsultasFuncObtenerTablas();
 
-            foreach (DataRow fila in dtTablas.Rows)
+            foreach (DataRow Fila in DtTablas.Rows)
             {
                 ConsultasCboTablas.Items.Add(
-                    fila[0].ToString());
+                    Fila[0].ToString());
             }
 
             ConsultasCboTablas.SelectedIndex = -1;
@@ -64,13 +64,13 @@ namespace CapaVista_Consultas
 
         private void ConsultasProcActualizarDgvTablas()
         {
-            DataTable dtTablas =
-                _Tablas.ConsutlasFuncLlenarTabla(
+            DataTable DtTablas =
+                _Tablas.ConsultasFuncLlenarTabla(
                     _TablaSeleccionada,
                     _PaginaActual,
                     _RegistrosPorPagina);
 
-            ConsultasDgvComplejas.DataSource = dtTablas;
+            ConsultasDgvComplejas.DataSource = DtTablas;
         }
 
         private void ConsultasProcCalcularTotalPaginas()
@@ -105,40 +105,40 @@ namespace CapaVista_Consultas
                 return;
             }
 
-            int finRango =
+            int FinRango =
                 _InicioRangoPagina +
                 _CantidadBotonesPagina - 1;
 
-            if (finRango > _TotalPaginas)
+            if (FinRango > _TotalPaginas)
             {
-                finRango = _TotalPaginas;
+                FinRango = _TotalPaginas;
             }
 
             for (
-                int numeroPagina = _InicioRangoPagina;
-                numeroPagina <= finRango;
-                numeroPagina++)
+                int NumeroPagina = _InicioRangoPagina;
+                NumeroPagina <= FinRango;
+                NumeroPagina++)
             {
-                ClsBotonPaginacionConsultas botonPagina =
+                ClsBotonPaginacionConsultas BotonPagina =
                     new ClsBotonPaginacionConsultas();
 
-                botonPagina.Name =
-                    $"ConsultasBtnPagina{numeroPagina}";
+                BotonPagina.Name =
+                    $"ConsultasBtnPagina{NumeroPagina}";
 
-                botonPagina.Text =
-                    numeroPagina.ToString();
+                BotonPagina.Text =
+                    NumeroPagina.ToString();
 
-                botonPagina.Tag =
-                    numeroPagina;
+                BotonPagina.Tag =
+                    NumeroPagina;
 
-                botonPagina.EsActivo =
-                    numeroPagina == _PaginaActual;
+                BotonPagina.EsActivo =
+                    NumeroPagina == _PaginaActual;
 
-                botonPagina.Click +=
+                BotonPagina.Click +=
                     ConsultasBtnPagina_Click;
 
                 ConsultasFlpPaginas.Controls.Add(
-                    botonPagina);
+                    BotonPagina);
             }
         }
 
@@ -152,7 +152,7 @@ namespace CapaVista_Consultas
                 _PaginaActual < _TotalPaginas;
         }
 
-        private void ConsultasCboTablas_SelectionChangeCommitted(
+        private void ConsultasMetCboTablasSelectionChangeCommitted(
             object sender,
             EventArgs e)
         {
@@ -174,13 +174,13 @@ namespace CapaVista_Consultas
             object sender,
             EventArgs e)
         {
-            if (!(sender is ClsBotonPaginacionConsultas botonPagina))
+            if (!(sender is ClsBotonPaginacionConsultas BotonPagina))
             {
                 return;
             }
 
             _PaginaActual =
-                Convert.ToInt32(botonPagina.Tag);
+                Convert.ToInt32(BotonPagina.Tag);
 
             ConsultasProcActualizarTabla();
         }
