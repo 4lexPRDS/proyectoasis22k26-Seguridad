@@ -30,7 +30,7 @@ namespace CapaVista_Consultas.UserControls
             if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
             {
                 ConsultasDgvSimples.AutoGenerateColumns = true;
-                ConsultasProcActualizarTabla("consulta");
+                ConsultasProcActualizarTabla("tblConsulta");
             }
         }
 

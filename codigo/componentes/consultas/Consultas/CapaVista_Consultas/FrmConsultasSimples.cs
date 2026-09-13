@@ -24,7 +24,7 @@ namespace CapaVista_Consultas
 
         }
 
-        public FrmConsultasSimples( string tabla)
+        public FrmConsultasSimples(string tabla)
         {
             InitializeComponent();
             ConsultasUcTablaSimple.ConsultasProcActualizarTabla(tabla);
