@@ -18,7 +18,6 @@ namespace CapaControlador_Consultas
             _filtros.Pub_sTabla = tabla;
             _filtros.Pub_PopularComboBox(cboDestino);
         }
-
         public string ValidarFiltro(string campo)
         {
             if (string.IsNullOrEmpty(campo))

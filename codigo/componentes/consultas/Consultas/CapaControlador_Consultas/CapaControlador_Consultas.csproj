@@ -50,9 +50,12 @@
     <Compile Include="ClsControladorConsultaSimple.cs" />
     <Compile Include="ClsCondicionComparacion.cs" />
     <Compile Include="ClsCondicionLogica.cs" />
-    <Compile Include="ClsConstructorconsultas.cs" />
+    <Compile Include="ClsConstructorConsultas.cs" />
     <Compile Include="ClsTablas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
