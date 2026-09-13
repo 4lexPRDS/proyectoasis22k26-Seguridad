@@ -100,7 +100,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMantenimientoConsultas";
-            this.Text = "FrmMantenimientoConsultas";
+            this.Text = "4003 – MantenimientoComplejas";
             this.TopMost = true;
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasGbxCondicionesLogicas.ResumeLayout(false);
