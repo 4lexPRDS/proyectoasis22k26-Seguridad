@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ventana_Bitacora_Seguridad;
+using CapaControlador_Seguridad;
 
 namespace CapaVista_Seguridad
 {

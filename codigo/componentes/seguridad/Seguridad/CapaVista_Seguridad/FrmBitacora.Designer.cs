@@ -1,4 +1,4 @@
-﻿namespace Ventana_Bitacora_Seguridad
+﻿namespace CapaVista_Seguridad
 {
     partial class FrmBitacora
     {
