@@ -1,4 +1,4 @@
-﻿using AplicacionPerfiles;
+﻿using CapaControlador_Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ventana_Bitacora_Seguridad
+namespace CapaVista_Seguridad
 {
     public partial class FrmBitacora : Form
     {

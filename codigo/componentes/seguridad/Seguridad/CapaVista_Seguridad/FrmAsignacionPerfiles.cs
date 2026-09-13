@@ -1,3 +1,4 @@
+using CapaControlador_Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionPerfiles
+namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionPerfiles : Form
     {

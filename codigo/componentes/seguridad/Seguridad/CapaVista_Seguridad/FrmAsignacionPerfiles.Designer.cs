@@ -1,4 +1,4 @@
-namespace AplicacionPerfiles
+namespace CapaVista_Seguridad
 {
     partial class FrmAsignacionPerfiles
     {
@@ -71,7 +71,7 @@ namespace AplicacionPerfiles
             // 
             // panelHeader
             // 
-            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.panelHeader.Controls.Add(this.pictureBox1);
@@ -134,8 +134,8 @@ namespace AplicacionPerfiles
             // 
             // pictureBoxBanner
             // 
-            this.pictureBoxBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBoxBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxBanner.BackColor = System.Drawing.Color.Linen;
             this.pictureBoxBanner.Image = global::CapaVista_Seguridad.Properties.Resources.banner;
@@ -148,8 +148,8 @@ namespace AplicacionPerfiles
             // 
             // panelContenedorListas
             // 
-            this.panelContenedorListas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelContenedorListas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedorListas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(238)))), ((int)(((byte)(230)))));
             this.panelContenedorListas.Controls.Add(this.tableLayoutPanelContenido);
@@ -208,7 +208,7 @@ namespace AplicacionPerfiles
             // 
             // panelListaConsulta
             // 
-            this.panelListaConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelListaConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelListaConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(234)))));
             this.panelListaConsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -219,7 +219,7 @@ namespace AplicacionPerfiles
             // 
             // comboBoxUsuariosConsulta
             // 
-            this.comboBoxUsuariosConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxUsuariosConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxUsuariosConsulta.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.comboBoxUsuariosConsulta.FormattingEnabled = true;
@@ -325,7 +325,7 @@ namespace AplicacionPerfiles
             // 
             // panelListaAsignacion
             // 
-            this.panelListaAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelListaAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelListaAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(241)))), ((int)(((byte)(234)))));
             this.panelListaAsignacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -351,7 +351,7 @@ namespace AplicacionPerfiles
             // 
             // comboBoxPerfilesAsignacion
             // 
-            this.comboBoxPerfilesAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxPerfilesAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPerfilesAsignacion.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.comboBoxPerfilesAsignacion.FormattingEnabled = true;
