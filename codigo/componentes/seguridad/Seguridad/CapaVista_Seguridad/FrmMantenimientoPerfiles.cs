@@ -14,6 +14,7 @@ namespace CapaVista_Seguridad
         {
             InitializeComponent();
             SeguridadPnlFiltros.Enabled = false;
+            SeguridadBtnGuardar.Enabled = false;
         }
 
         private void FrmMantenimientoPerfiles_Load(object sender, System.EventArgs e)
@@ -91,31 +92,13 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnCancelar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                _SeguridadRoles.NombreRol = SeguridadTxtNombreRol.Text;
-                _SeguridadRoles.DescripcionRol = SeguridadTxtDescripcionRol.Text;
-                _SeguridadRoles.IsActive = SeguridadChkActivo.Checked;
-                _SeguridadRoles.Estado = EstadoEntidad.Added;
-
-                bool Valido = new Ayudas.ClsValidacionDatos(_SeguridadRoles).SeguridadMetValidar();
-                if (Valido == true)
-                {
-                    string Resultado = _SeguridadRoles.SeguridadMetGrabarCambios();
-                    MessageBox.Show(Resultado);
-                    SeguridadMetListarRoles();
-                    SeguridadMetReinicio();
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.ToString());
-            }
+            SeguridadMetReinicio();
         }
 
         private void SeguridadBtnIngresar_Click(object sender, EventArgs e)
         {
             SeguridadPnlFiltros.Enabled = true;
+            SeguridadBtnGuardar.Enabled = true;
             _SeguridadRoles.Estado = EstadoEntidad.Added;
             SeguridadMetReinicio();
             
