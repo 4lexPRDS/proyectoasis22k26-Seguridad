@@ -17,7 +17,30 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Insert;
         private string _Delete;
         private string _Update;
+        // Consulta para validar el login del usuario
+        private string login = "SELECT idUsuario, idEmpleado, nombreUsuario, is_active " +
+     "FROM tblusuario WHERE nombreUsuario=? AND contrasenaUsuario=? AND is_active=1";
 
+        //Metodo para validar usuario y contraseña, retorna un objeto ClsUsuarios si es valido, de lo contrario retorna null
+        public ClsUsuarios SeguridadMetValidarLogin(string usuario, string contrasena)
+        {
+            var _parametros = new List<OdbcParameter>();
+            _parametros.Add(new OdbcParameter("p_usuario", usuario));
+            _parametros.Add(new OdbcParameter("p_contrasena", contrasena));
+
+            var tabla = SeguridadMetEjecucionConsulta(login, CommandType.Text, _parametros);
+
+            if (tabla.Rows.Count == 0) return null;
+
+            var row = tabla.Rows[0];
+            return new ClsUsuarios
+            {
+                IdUsuario = Convert.ToInt32(row[0]),
+                IdEmpleado = Convert.ToInt32(row[1]),
+                NombreUsuario = row[2].ToString(),
+                IsActive = Convert.ToInt32(row[3])
+            };
+        }
         public ClsRepositorioUsuarios()
         {
             _SelectAll = "SELECT idUsuario"
