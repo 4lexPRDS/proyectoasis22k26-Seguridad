@@ -10,13 +10,13 @@ namespace CapaVista_Navegador
     // Se encarga del DataGridView: crearlo, mostrarlo, moverse entre filas
     public class ClsCrudGrid
     {
-        private Form _Formulario;
+        private Form Formulario;
 
         public DataGridView NavegadorDgvDatos { get; private set; }
 
         public ClsCrudGrid(Form _Formulario)
         {
-            this._Formulario = _Formulario;
+            this.Formulario = _Formulario;
         }
 
         public void NavegadorMetMostrar(DataTable Datos)
@@ -41,7 +41,7 @@ namespace CapaVista_Navegador
         private void NavegadorMetCrearGrid()
         {
             NavegadorDgvDatos = new DataGridView();
-            NavegadorDgvDatos.Name = "dgvDatos";
+            NavegadorDgvDatos.Name = "NavegadorDgvDatos";
             NavegadorDgvDatos.AllowUserToAddRows = false;
             NavegadorDgvDatos.AllowUserToDeleteRows = false;
             NavegadorDgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
@@ -51,7 +51,7 @@ namespace CapaVista_Navegador
             NavegadorDgvDatos.BackgroundColor = Color.White;
             NavegadorDgvDatos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
-            _Formulario.Controls.Add(NavegadorDgvDatos);
+            Formulario.Controls.Add(NavegadorDgvDatos);
         }
 
         public void NavegadorMetPosicionar(int PosicionY)
@@ -64,8 +64,8 @@ namespace CapaVista_Navegador
             NavegadorDgvDatos.Location = new Point(Margen, PosicionY);
 
             NavegadorDgvDatos.Size = new Size(
-                Math.Max(100, _Formulario.ClientSize.Width - (Margen * 2)),
-                Math.Max(100, _Formulario.ClientSize.Height - PosicionY - Margen));
+                Math.Max(100, Formulario.ClientSize.Width - (Margen * 2)),
+                Math.Max(100, Formulario.ClientSize.Height - PosicionY - Margen));
 
             NavegadorDgvDatos.BringToFront();
         }

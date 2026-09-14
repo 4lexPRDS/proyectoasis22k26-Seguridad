@@ -35,7 +35,7 @@ namespace CapaVista_Navegador
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrud));
             this.NavegadorBtnIngresar = new System.Windows.Forms.Button();
-            this.Imgn_list1 = new System.Windows.Forms.ImageList(this.components);
+            this.NavegadorIlImagenes = new System.Windows.Forms.ImageList(this.components);
             this.NavegadorBtnCancelar = new System.Windows.Forms.Button();
             this.NavegadorBtnModificar = new System.Windows.Forms.Button();
             this.NavegadorBtnImprimir = new System.Windows.Forms.Button();
@@ -49,12 +49,13 @@ namespace CapaVista_Navegador
             this.NavegadorBtnFin = new System.Windows.Forms.Button();
             this.NavegadorBtnRefrescar = new System.Windows.Forms.Button();
             this.NavegadorBtnAyuda = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // NavegadorBtnIngresar
             // 
             this.NavegadorBtnIngresar.ImageIndex = 0;
-            this.NavegadorBtnIngresar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnIngresar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnIngresar.Location = new System.Drawing.Point(12, 24);
             this.NavegadorBtnIngresar.Name = "NavegadorBtnIngresar";
             this.NavegadorBtnIngresar.Size = new System.Drawing.Size(101, 81);
@@ -62,30 +63,30 @@ namespace CapaVista_Navegador
             this.NavegadorBtnIngresar.UseVisualStyleBackColor = true;
             this.NavegadorBtnIngresar.Click += new System.EventHandler(this.NavegadorMetIngresarClick);
             // 
-            // Imgn_list1
+            // NavegadorIlImagenes
             // 
-            this.Imgn_list1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Imgn_list1.ImageStream")));
-            this.Imgn_list1.TransparentColor = System.Drawing.Color.Transparent;
-            this.Imgn_list1.Images.SetKeyName(0, "ingresar.png");
-            this.Imgn_list1.Images.SetKeyName(1, "cancelar.png");
-            this.Imgn_list1.Images.SetKeyName(2, "consultar.png");
-            this.Imgn_list1.Images.SetKeyName(3, "eliminar.png");
-            this.Imgn_list1.Images.SetKeyName(4, "Fin.png");
-            this.Imgn_list1.Images.SetKeyName(5, "Guardar.png");
-            this.Imgn_list1.Images.SetKeyName(6, "icono aterior.png");
-            this.Imgn_list1.Images.SetKeyName(7, "imprimir.png");
-            this.Imgn_list1.Images.SetKeyName(8, "inicio.png");
-            this.Imgn_list1.Images.SetKeyName(9, "modificar.png");
-            this.Imgn_list1.Images.SetKeyName(10, "refrescar.png");
-            this.Imgn_list1.Images.SetKeyName(11, "salir.png");
-            this.Imgn_list1.Images.SetKeyName(12, "siguiente.png");
-            this.Imgn_list1.Images.SetKeyName(13, "Fin.png");
-            this.Imgn_list1.Images.SetKeyName(14, "ayuda.png");
+            this.NavegadorIlImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("NavegadorIlImagenes.ImageStream")));
+            this.NavegadorIlImagenes.TransparentColor = System.Drawing.Color.Transparent;
+            this.NavegadorIlImagenes.Images.SetKeyName(0, "ingresar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(1, "cancelar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(2, "consultar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(3, "eliminar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(4, "Fin.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(5, "Guardar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(6, "icono aterior.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(7, "imprimir.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(8, "inicio.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(9, "modificar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(10, "refrescar.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(11, "salir.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(12, "siguiente.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(13, "Fin.png");
+            this.NavegadorIlImagenes.Images.SetKeyName(14, "ayuda.png");
             // 
             // NavegadorBtnCancelar
             // 
             this.NavegadorBtnCancelar.ImageIndex = 1;
-            this.NavegadorBtnCancelar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnCancelar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnCancelar.Location = new System.Drawing.Point(119, 24);
             this.NavegadorBtnCancelar.Name = "NavegadorBtnCancelar";
             this.NavegadorBtnCancelar.Size = new System.Drawing.Size(101, 81);
@@ -95,7 +96,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnModificar
             // 
             this.NavegadorBtnModificar.ImageIndex = 9;
-            this.NavegadorBtnModificar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnModificar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnModificar.Location = new System.Drawing.Point(547, 24);
             this.NavegadorBtnModificar.Name = "NavegadorBtnModificar";
             this.NavegadorBtnModificar.Size = new System.Drawing.Size(101, 81);
@@ -105,7 +106,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnImprimir
             // 
             this.NavegadorBtnImprimir.ImageIndex = 7;
-            this.NavegadorBtnImprimir.ImageList = this.Imgn_list1;
+            this.NavegadorBtnImprimir.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnImprimir.Location = new System.Drawing.Point(333, 111);
             this.NavegadorBtnImprimir.Name = "NavegadorBtnImprimir";
             this.NavegadorBtnImprimir.Size = new System.Drawing.Size(101, 81);
@@ -115,7 +116,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnGuardar
             // 
             this.NavegadorBtnGuardar.ImageIndex = 5;
-            this.NavegadorBtnGuardar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnGuardar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnGuardar.Location = new System.Drawing.Point(440, 111);
             this.NavegadorBtnGuardar.Name = "NavegadorBtnGuardar";
             this.NavegadorBtnGuardar.Size = new System.Drawing.Size(101, 81);
@@ -125,7 +126,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnSiguiente
             // 
             this.NavegadorBtnSiguiente.ImageIndex = 13;
-            this.NavegadorBtnSiguiente.ImageList = this.Imgn_list1;
+            this.NavegadorBtnSiguiente.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnSiguiente.Location = new System.Drawing.Point(868, 24);
             this.NavegadorBtnSiguiente.Name = "NavegadorBtnSiguiente";
             this.NavegadorBtnSiguiente.Size = new System.Drawing.Size(101, 81);
@@ -135,7 +136,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnAnterior
             // 
             this.NavegadorBtnAnterior.ImageIndex = 8;
-            this.NavegadorBtnAnterior.ImageList = this.Imgn_list1;
+            this.NavegadorBtnAnterior.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnAnterior.Location = new System.Drawing.Point(761, 24);
             this.NavegadorBtnAnterior.Name = "NavegadorBtnAnterior";
             this.NavegadorBtnAnterior.Size = new System.Drawing.Size(101, 81);
@@ -145,7 +146,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnInicio
             // 
             this.NavegadorBtnInicio.ImageIndex = 6;
-            this.NavegadorBtnInicio.ImageList = this.Imgn_list1;
+            this.NavegadorBtnInicio.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnInicio.Location = new System.Drawing.Point(654, 24);
             this.NavegadorBtnInicio.Name = "NavegadorBtnInicio";
             this.NavegadorBtnInicio.Size = new System.Drawing.Size(101, 81);
@@ -155,7 +156,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnEliminar
             // 
             this.NavegadorBtnEliminar.ImageIndex = 3;
-            this.NavegadorBtnEliminar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnEliminar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnEliminar.Location = new System.Drawing.Point(333, 24);
             this.NavegadorBtnEliminar.Name = "NavegadorBtnEliminar";
             this.NavegadorBtnEliminar.Size = new System.Drawing.Size(101, 81);
@@ -165,7 +166,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnConsultar
             // 
             this.NavegadorBtnConsultar.ImageIndex = 2;
-            this.NavegadorBtnConsultar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnConsultar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnConsultar.Location = new System.Drawing.Point(226, 24);
             this.NavegadorBtnConsultar.Name = "NavegadorBtnConsultar";
             this.NavegadorBtnConsultar.Size = new System.Drawing.Size(101, 81);
@@ -175,7 +176,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnSalir
             // 
             this.NavegadorBtnSalir.ImageIndex = 11;
-            this.NavegadorBtnSalir.ImageList = this.Imgn_list1;
+            this.NavegadorBtnSalir.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnSalir.Location = new System.Drawing.Point(761, 111);
             this.NavegadorBtnSalir.Name = "NavegadorBtnSalir";
             this.NavegadorBtnSalir.Size = new System.Drawing.Size(101, 81);
@@ -185,7 +186,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnFin
             // 
             this.NavegadorBtnFin.ImageIndex = 12;
-            this.NavegadorBtnFin.ImageList = this.Imgn_list1;
+            this.NavegadorBtnFin.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnFin.Location = new System.Drawing.Point(975, 24);
             this.NavegadorBtnFin.Name = "NavegadorBtnFin";
             this.NavegadorBtnFin.Size = new System.Drawing.Size(101, 81);
@@ -195,7 +196,7 @@ namespace CapaVista_Navegador
             // NavegadorBtnRefrescar
             // 
             this.NavegadorBtnRefrescar.ImageIndex = 10;
-            this.NavegadorBtnRefrescar.ImageList = this.Imgn_list1;
+            this.NavegadorBtnRefrescar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnRefrescar.Location = new System.Drawing.Point(440, 24);
             this.NavegadorBtnRefrescar.Name = "NavegadorBtnRefrescar";
             this.NavegadorBtnRefrescar.Size = new System.Drawing.Size(101, 81);
@@ -205,18 +206,24 @@ namespace CapaVista_Navegador
             // NavegadorBtnAyuda
             // 
             this.NavegadorBtnAyuda.ImageIndex = 14;
-            this.NavegadorBtnAyuda.ImageList = this.Imgn_list1;
+            this.NavegadorBtnAyuda.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnAyuda.Location = new System.Drawing.Point(654, 111);
             this.NavegadorBtnAyuda.Name = "NavegadorBtnAyuda";
             this.NavegadorBtnAyuda.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnAyuda.TabIndex = 14;
             this.NavegadorBtnAyuda.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // FrmCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1089, 653);
             this.Controls.Add(this.NavegadorBtnAyuda);
             this.Controls.Add(this.NavegadorBtnRefrescar);
@@ -234,7 +241,7 @@ namespace CapaVista_Navegador
             this.Controls.Add(this.NavegadorBtnIngresar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCrud";
-            this.Text = "Frm_Crud";
+            this.Text = "1001 – Crud";
             this.ResumeLayout(false);
 
         }
@@ -242,7 +249,7 @@ namespace CapaVista_Navegador
         #endregion
 
         private System.Windows.Forms.Button NavegadorBtnIngresar;
-        private System.Windows.Forms.ImageList Imgn_list1;
+        private System.Windows.Forms.ImageList NavegadorIlImagenes;
         private System.Windows.Forms.Button NavegadorBtnCancelar;
         private System.Windows.Forms.Button NavegadorBtnModificar;
         private System.Windows.Forms.Button NavegadorBtnImprimir;
@@ -256,5 +263,6 @@ namespace CapaVista_Navegador
         private System.Windows.Forms.Button NavegadorBtnFin;
         private System.Windows.Forms.Button NavegadorBtnRefrescar;
         private System.Windows.Forms.Button NavegadorBtnAyuda;
+        private ImageList imageList1;
     }
 }

@@ -50,7 +50,7 @@ namespace CapaVista_Navegador
             this._ModoModificar = Modificar;
 
             NavegadorPnlRegistro = new Panel();
-            NavegadorPnlRegistro.Name = "panelRegistro";
+            NavegadorPnlRegistro.Name = "NavegadorPnlRegistro";
             NavegadorPnlRegistro.Location = new Point(10, PosicionY);
             NavegadorPnlRegistro.Width = _Formulario.ClientSize.Width - 20;
 
@@ -59,7 +59,7 @@ namespace CapaVista_Navegador
             if (Altura > 400) Altura = 400;
             NavegadorPnlRegistro.Height = Altura;
 
-            NavegadorPnlRegistro.BackColor = Color.Beige;
+            NavegadorPnlRegistro.BackColor = Color.FromArgb(242, 233, 217);
             NavegadorPnlRegistro.BorderStyle = BorderStyle.FixedSingle;
             NavegadorPnlRegistro.AutoScroll = true;
 
@@ -221,10 +221,10 @@ namespace CapaVista_Navegador
 
                     for (int Indice = 0; Indice < NavegadorCboCampo.Items.Count; Indice++)
                     {
-                        DataRowView item = NavegadorCboCampo.Items[Indice] as DataRowView;
-                        if (item == null) continue;
+                        DataRowView Item = NavegadorCboCampo.Items[Indice] as DataRowView;
+                        if (Item == null) continue;
 
-                        if (string.Equals(Convert.ToString(item.Row[Col.ColumnaFK]), Valor, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(Convert.ToString(Item.Row[Col.ColumnaFK]), Valor, StringComparison.OrdinalIgnoreCase))
                         {
                             NavegadorCboCampo.SelectedIndex = Indice;
                             break;
