@@ -76,6 +76,18 @@ namespace CapaControlador_Seguridad
             _RepositorioEmpleado = new ClsRepositorioEmpleado();
         }
 
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (FechaNacimientoEmpleado > FechaContratacionEmpleado)
+            {
+                yield return new ValidationResult(
+                    "La fecha de nacimiento no puede ser mayor a la fecha de contratación",
+                    new[] { nameof(FechaNacimientoEmpleado) });
+            }
+        }
+
+
+
         public string SeguridadMetGrabarCambios()
         {
             string Mensaje = null;
@@ -150,5 +162,9 @@ namespace CapaControlador_Seguridad
         {
             return _ListaEmpleado.FindAll(e => e._IdEmpleado == IdEmpleado);
         }
+     
+
+
+
     }
 }
