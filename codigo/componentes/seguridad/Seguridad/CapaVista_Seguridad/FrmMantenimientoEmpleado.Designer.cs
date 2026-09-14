@@ -522,6 +522,9 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtCodigo.Name = "SeguridadTxtCodigo";
             this.SeguridadTxtCodigo.Size = new System.Drawing.Size(323, 30);
             this.SeguridadTxtCodigo.TabIndex = 0;
+            this.SeguridadTxtCodigo.Text = "EMP-";
+            this.SeguridadTxtCodigo.TextChanged += new System.EventHandler(this.SeguridadTxtCodigo_TextChanged);
+            this.SeguridadTxtCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SeguridadTxtCodigo_KeyDown);
             // 
             // SeguridadLblCodigo
             // 
@@ -615,9 +618,11 @@ namespace CapaVista_Seguridad
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SeguridadTxtDpi.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SeguridadTxtDpi.Location = new System.Drawing.Point(3, 22);
+            this.SeguridadTxtDpi.MaxLength = 13;
             this.SeguridadTxtDpi.Name = "SeguridadTxtDpi";
             this.SeguridadTxtDpi.Size = new System.Drawing.Size(323, 30);
             this.SeguridadTxtDpi.TabIndex = 0;
+            this.SeguridadTxtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SeguridadTxtDpi_KeyPress);
             // 
             // SeguridadLblDpi
             // 
@@ -647,9 +652,12 @@ namespace CapaVista_Seguridad
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SeguridadTxtNit.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SeguridadTxtNit.Location = new System.Drawing.Point(3, 22);
+            this.SeguridadTxtNit.MaxLength = 9;
             this.SeguridadTxtNit.Name = "SeguridadTxtNit";
             this.SeguridadTxtNit.Size = new System.Drawing.Size(323, 30);
             this.SeguridadTxtNit.TabIndex = 0;
+            this.SeguridadTxtNit.TextChanged += new System.EventHandler(this.SeguridadTxtNit_TextChanged);
+            this.SeguridadTxtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SeguridadTxtNit_KeyPress);
             // 
             // SeguridadLblNit
             // 
@@ -743,6 +751,7 @@ namespace CapaVista_Seguridad
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SeguridadTxtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SeguridadTxtTelefono.Location = new System.Drawing.Point(3, 22);
+            this.SeguridadTxtTelefono.MaxLength = 8;
             this.SeguridadTxtTelefono.Name = "SeguridadTxtTelefono";
             this.SeguridadTxtTelefono.Size = new System.Drawing.Size(323, 30);
             this.SeguridadTxtTelefono.TabIndex = 0;
@@ -781,7 +790,7 @@ namespace CapaVista_Seguridad
             "F"});
             this.SeguridadCboGenero.Location = new System.Drawing.Point(3, 22);
             this.SeguridadCboGenero.Name = "SeguridadCboGenero";
-            this.SeguridadCboGenero.Size = new System.Drawing.Size(323, 31);
+            this.SeguridadCboGenero.Size = new System.Drawing.Size(281, 31);
             this.SeguridadCboGenero.TabIndex = 0;
             // 
             // SeguridadLblGenero

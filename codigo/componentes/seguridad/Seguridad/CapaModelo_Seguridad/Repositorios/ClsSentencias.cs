@@ -43,5 +43,25 @@ namespace CapaModelo_Seguridad
                 return _TablaDatos; // retorno de la tabla de datos
             }
         }
+
+        // Sobrecarga nueva para Validar Login)
+        public DataTable SeguridadMetEjecucionConsulta(string ComandoTexto, CommandType ComandoTipo, List<OdbcParameter> Parametros)
+        {
+            _TablaDatos = new DataTable();
+            using (var ConexionActiva = SeguridadMetObtenerConexion())
+            {
+                ConexionActiva.Open();
+                using (var Comando = new OdbcCommand())
+                {
+                    Comando.Connection = ConexionActiva;
+                    Comando.CommandText = ComandoTexto;
+                    Comando.CommandType = ComandoTipo;
+                    Comando.Parameters.AddRange(Parametros.ToArray());
+                    using (var LectorDatos = Comando.ExecuteReader())
+                        _TablaDatos.Load(LectorDatos);
+                }
+                return _TablaDatos;
+            }
+        }
     }
 }

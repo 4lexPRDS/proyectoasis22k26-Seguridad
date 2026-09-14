@@ -115,6 +115,7 @@ namespace CapaVista_Seguridad
             // 
             // SeguridadTxtCodigoRol
             // 
+            this.SeguridadTxtCodigoRol.Enabled = false;
             this.SeguridadTxtCodigoRol.Location = new System.Drawing.Point(161, 53);
             this.SeguridadTxtCodigoRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtCodigoRol.Name = "SeguridadTxtCodigoRol";
@@ -287,6 +288,8 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvListaRoles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SeguridadDgvListaRoles.Size = new System.Drawing.Size(1328, 426);
             this.SeguridadDgvListaRoles.TabIndex = 3;
+            this.SeguridadDgvListaRoles.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SeguridadDgvListaRoles_CellMouseClick);
+            this.SeguridadDgvListaRoles.SelectionChanged += new System.EventHandler(this.SeguridadDgvListaRoles_SelectionChanged);
             // 
             // SeguridadLblSubtitulo
             // 
@@ -350,6 +353,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnIngresar.TabIndex = 14;
             this.SeguridadBtnIngresar.Text = "➕\r\nIngresar";
             this.SeguridadBtnIngresar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnIngresar.Click += new System.EventHandler(this.SeguridadBtnIngresar_Click);
             // 
             // SeguridadBtnModificar
             // 
@@ -458,8 +462,9 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnRefrescar.Name = "SeguridadBtnRefrescar";
             this.SeguridadBtnRefrescar.Size = new System.Drawing.Size(90, 76);
             this.SeguridadBtnRefrescar.TabIndex = 21;
-            this.SeguridadBtnRefrescar.Text = "🔄\r\nRefrescar";
+            this.SeguridadBtnRefrescar.Text = "🔄\r\nActualizar";
             this.SeguridadBtnRefrescar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnRefrescar.Click += new System.EventHandler(this.SeguridadBtnRefrescar_Click);
             // 
             // SeguridadBtnInicio
             // 
@@ -475,6 +480,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnInicio.TabIndex = 22;
             this.SeguridadBtnInicio.Text = "⏮\r\nInicio";
             this.SeguridadBtnInicio.UseVisualStyleBackColor = false;
+            this.SeguridadBtnInicio.Click += new System.EventHandler(this.SeguridadBtnInicio_Click);
             // 
             // SeguridadBtnAnterior
             // 
@@ -490,6 +496,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAnterior.TabIndex = 23;
             this.SeguridadBtnAnterior.Text = "◀\r\nAnterior";
             this.SeguridadBtnAnterior.UseVisualStyleBackColor = false;
+            this.SeguridadBtnAnterior.Click += new System.EventHandler(this.SeguridadBtnAnterior_Click);
             // 
             // SeguridadBtnSiguiente
             // 
@@ -505,6 +512,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSiguiente.TabIndex = 24;
             this.SeguridadBtnSiguiente.Text = "▶\r\nSiguiente";
             this.SeguridadBtnSiguiente.UseVisualStyleBackColor = false;
+            this.SeguridadBtnSiguiente.Click += new System.EventHandler(this.SeguridadBtnSiguiente_Click);
             // 
             // SeguridadBtnFin
             // 
@@ -520,6 +528,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin.TabIndex = 25;
             this.SeguridadBtnFin.Text = "⏭\r\nFin";
             this.SeguridadBtnFin.UseVisualStyleBackColor = false;
+            this.SeguridadBtnFin.Click += new System.EventHandler(this.SeguridadBtnFin_Click);
             // 
             // SeguridadBtnAyuda
             // 
@@ -535,6 +544,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda.TabIndex = 26;
             this.SeguridadBtnAyuda.Text = "❓\r\nAyuda";
             this.SeguridadBtnAyuda.UseVisualStyleBackColor = false;
+            this.SeguridadBtnAyuda.Click += new System.EventHandler(this.SeguridadBtnAyuda_Click);
             // 
             // SeguridadBtnSalir
             // 

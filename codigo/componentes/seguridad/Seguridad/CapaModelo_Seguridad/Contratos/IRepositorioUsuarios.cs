@@ -9,5 +9,6 @@ namespace CapaModelo_Seguridad.Contratos
 {
     public interface IRepositorioUsuarios : IRepositorioGenerico<ClsUsuarios>
     {
+        ClsUsuarios SeguridadMetValidarLogin(string NombreUsuario, string ContrasenaUsuario);
     }
 }
