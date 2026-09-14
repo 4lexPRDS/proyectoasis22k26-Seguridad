@@ -49,12 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="conexion\conexionBD.cs" />
-    <Compile Include="esquema\esquema.cs" />
-    <Compile Include="seguridad\permisos.cs" />
-    <Compile Include="datos\registros.cs" />
-    <Compile Include="seguridad\usuarios.cs" />
-    <Compile Include="validaciones\validaciones.cs" />
+    <Compile Include="conexion\ClsConexionBD.cs" />
+    <Compile Include="esquema\ClsEsquema.cs" />
+    <Compile Include="seguridad\ClsPermisos.cs" />
+    <Compile Include="datos\ClsRegistros.cs" />
+    <Compile Include="seguridad\ClsUsuarios.cs" />
+    <Compile Include="validaciones\ClsValidaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

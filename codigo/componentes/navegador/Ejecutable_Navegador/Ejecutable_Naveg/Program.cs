@@ -16,7 +16,7 @@ namespace Ejecutable_Naveg
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Crud());
+            Application.Run(new FrmCrud());
         }
     }
 }

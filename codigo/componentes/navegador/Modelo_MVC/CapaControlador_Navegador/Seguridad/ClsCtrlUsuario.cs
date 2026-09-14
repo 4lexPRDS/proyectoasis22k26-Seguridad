@@ -1,0 +1,53 @@
+﻿using System;
+using System.Data;
+using CapaModelo_Navegador;
+
+namespace CapaControlador_Navegador
+{
+    // Todo lo relacionado a login y permisos
+    public class ClsCtrlUsuario
+    {
+        private ClsUsuarios _Usuarios = new ClsUsuarios();
+
+        public bool NavegadorFuncAutenticarUsuario(string Usuario, string Clave, out string Mensaje, out DataRow DatosUsuario)
+        {
+            Mensaje = string.Empty;
+            DatosUsuario = null;
+
+            if (string.IsNullOrWhiteSpace(Usuario))
+            {
+                Mensaje = "Debe ingresar el Usuario.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Clave))
+            {
+                Mensaje = "Debe ingresar la contraseña.";
+                return false;
+            }
+
+            DataTable TablaDatos = _Usuarios.NavegadorFuncValidarUsuario(Usuario.Trim(), Clave.Trim());
+
+            if (TablaDatos.Rows.Count == 0)
+            {
+                Mensaje = "Usuario o contraseña incorrectos.";
+                return false;
+            }
+
+            DatosUsuario = TablaDatos.Rows[0];
+            return true;
+        }
+
+        // Se deja igual que antes, pendiente de conectar con la tabla real de permisos
+        public bool NavegadorFuncGuardarRelacionUsuarioPermiso(int IdUsuario, int IdAplicacion, int IdModulo, int IdPermiso)
+        {
+            bool ExisteApp = _Usuarios.NavegadorFuncExisteAplicacion(IdAplicacion);
+            bool ExisteMod = _Usuarios.NavegadorFuncExisteModulo(IdModulo);
+
+            if (ExisteApp && ExisteMod)
+                return _Usuarios.NavegadorFuncGuardarUsuarioPermisoBD(IdUsuario, IdAplicacion, IdModulo, IdPermiso);
+
+            return false;
+        }
+    }
+}
