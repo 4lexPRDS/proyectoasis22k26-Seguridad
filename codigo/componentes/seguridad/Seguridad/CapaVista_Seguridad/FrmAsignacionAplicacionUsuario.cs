@@ -1,4 +1,5 @@
-﻿using CapaControlador_Seguridad;
+﻿using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaControlador_Seguridad;
 using CapaVista_Seguridad.Ayudas;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ namespace CapaVista_Seguridad
     public partial class FrmAsignacionAplicacionUsuario : Form
     {
         private ClsModeloAsigAppUsuario _AsigAppUsuario = new ClsModeloAsigAppUsuario();
+
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;
+        private const int ID_APLICACION = 11;
 
         public FrmAsignacionAplicacionUsuario()
         {
@@ -25,6 +30,19 @@ namespace CapaVista_Seguridad
 
         private void FrmAsignacionAplicacionUsuario_Load(object sender, EventArgs e)
         {
+
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+            {
+                { SeguridadBtnInsertar, TipoPermiso.Insertar },
+                { SeguridadBtnQuitar, TipoPermiso.Eliminar }
+            };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+                return;
+
             SeguridadMetCargarCombos();
             SeguridadMetListarAsigAppUsuario();
         }

@@ -1,3 +1,6 @@
+using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaVista_Seguridad.Ayudas;
+using System.Collections.Generic;
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Modelos_de_controladores;
 using System;
@@ -10,6 +13,9 @@ namespace CapaVista_Seguridad
     {
         private ClsModeloRoles _SeguridadRoles = new ClsModeloRoles();
 
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;
+        private const int ID_APLICACION = 8;
         public FrmMantenimientoPerfiles()
         {
             InitializeComponent();
@@ -19,8 +25,23 @@ namespace CapaVista_Seguridad
 
         private void FrmMantenimientoPerfiles_Load(object sender, System.EventArgs e)
         {
+
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+                {
+                    { SeguridadBtnIngresar,   TipoPermiso.Insertar },
+                    { SeguridadBtnModificar, TipoPermiso.Editar },
+                    { SeguridadBtnEliminar, TipoPermiso.Eliminar }
+                };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+                return;
+
             SeguridadMetListarRoles();
         }
+        
 
         private void SeguridadMetListarRoles()
         {
