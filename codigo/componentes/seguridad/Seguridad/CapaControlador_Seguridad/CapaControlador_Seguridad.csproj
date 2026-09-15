@@ -49,6 +49,10 @@
     <Compile Include="Modelos de controladores\ClsModeloRoles.cs" />
     <Compile Include="Modelos de controladores\ClsModeloUsuario.cs" />
     <Compile Include="Objetos de valor\ClsEstadoEntidadValor.cs" />
+    <Compile Include="Objetos de valor\ClsPermisoAplicacion.cs" />
+    <Compile Include="Objetos de valor\ClsRolInfo.cs" />
+    <Compile Include="Objetos de valor\ClsSesionSeguridad.cs" />
+    <Compile Include="Objetos de valor\ClsTipoPermiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

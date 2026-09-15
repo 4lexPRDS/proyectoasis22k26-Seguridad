@@ -1,5 +1,5 @@
 ﻿using CapaControlador_Seguridad;
-
+using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,8 +50,17 @@ namespace CapaVista_Seguridad
 
                 if (acceso)
                 {
+                    // ---- Guardar la sesión --------------------------------
+                    ClsSesionSeguridad.SeguridadMetIniciarSesion(
+                        idUsuario: modelo.IdUsuario,
+                        nombreUsuario: modelo.NombreUsuario,
+                        nombreEmpleado: modelo.NombreEmpleado,
+                        roles: modelo.Roles
+                    );
+                    // ---- Fin guardar sesión --------------------------------
+
                     this.Hide();
-                    var frmPrincipal = new FrmMDISeguridad(); // ajusta al nombre real de tu formulario principal
+                    var frmPrincipal = new FrmMDISeguridad();
                     frmPrincipal.ShowDialog();
                     this.Close();
                 }
@@ -66,7 +75,6 @@ namespace CapaVista_Seguridad
             {
                 MessageBox.Show(ex.ToString());
             }
-            ;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
