@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Data.Odbc;
 using System.Linq;
 
 namespace CapaControlador_Seguridad
@@ -13,8 +14,11 @@ namespace CapaControlador_Seguridad
     public class ClsModeloAsigAppPerf
     {
         private int _IdRol;
+        private string _NombreRol;
         private int _IdModulo;
+        private string _NombreModulo;
         private int _IdAplicacion;
+        private string _NombreAplicacion;
         private bool _DerInsertar;
         private bool _DerEditar;
         private bool _DerEliminar;
@@ -29,14 +33,17 @@ namespace CapaControlador_Seguridad
         [Required(ErrorMessage = "El campo Rol es requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un Rol válido")]
         public int IdRol { get => _IdRol; set => _IdRol = value; }
+        public string NombreRol { get => _NombreRol; set => _NombreRol = value; }
 
         [Required(ErrorMessage = "El campo Módulo es requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un Módulo válido")]
         public int IdModulo { get => _IdModulo; set => _IdModulo = value; }
+        public string NombreModulo { get => _NombreModulo; set => _NombreModulo = value; }
 
         [Required(ErrorMessage = "El campo Aplicación es requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar una Aplicación válida")]
         public int IdAplicacion { get => _IdAplicacion; set => _IdAplicacion = value; }
+        public string NombreAplicacion { get => _NombreAplicacion; set => _NombreAplicacion = value; }
 
         public bool DerInsertarRolModuloAplicacion { get => _DerInsertar; set => _DerInsertar = value; }
         public bool DerEditarRolModuloAplicacion { get => _DerEditar; set => _DerEditar = value; }
@@ -84,6 +91,13 @@ namespace CapaControlador_Seguridad
                         break;
                 }
             }
+            catch (OdbcException OdbcEx)
+            {
+                if (OdbcEx.Errors.Count > 0 && OdbcEx.Errors[0].NativeError == 1062)
+                    Mensaje = "Ya existe un perfil asignado con esos permisos para ese Rol, Módulo y Aplicación.";
+                else
+                    Mensaje = OdbcEx.ToString();
+            }
             catch (Exception Ex)
             {
                 Mensaje = Ex.ToString();
@@ -100,8 +114,11 @@ namespace CapaControlador_Seguridad
                 _ListaAsigAppPerf.Add(new ClsModeloAsigAppPerf
                 {
                     _IdRol = Item.IdRol,
+                    _NombreRol = Item.NombreRol,
                     _IdModulo = Item.IdModulo,
+                    _NombreModulo = Item.NombreModulo,
                     _IdAplicacion = Item.IdAplicacion,
+                    _NombreAplicacion = Item.NombreAplicacion,
                     _DerInsertar = Item.DerInsertarRolModuloAplicacion,
                     _DerEditar = Item.DerEditarRolModuloAplicacion,
                     _DerEliminar = Item.DerEliminarRolModuloAplicacion,
@@ -169,7 +186,7 @@ namespace CapaControlador_Seguridad
             }
             catch (Exception)
             {
-                return new ClsPermisoAplicacion(); 
+                return new ClsPermisoAplicacion();
             }
         }
 

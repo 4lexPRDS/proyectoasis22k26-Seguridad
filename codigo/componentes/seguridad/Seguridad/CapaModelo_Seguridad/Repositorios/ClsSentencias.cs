@@ -40,11 +40,10 @@ namespace CapaModelo_Seguridad
                     using (var LectorDatos = Comando.ExecuteReader())
                         _TablaDatos.Load(LectorDatos);  //Llenar la tabla de datos
                 }
-                return _TablaDatos; // retorno de la tabla de datos
+                return _TablaDatos; 
             }
         }
 
-        // Sobrecarga nueva para Validar Login)
         public DataTable SeguridadMetEjecucionConsulta(string ComandoTexto, CommandType ComandoTipo, List<OdbcParameter> Parametros)
         {
             _TablaDatos = new DataTable();
