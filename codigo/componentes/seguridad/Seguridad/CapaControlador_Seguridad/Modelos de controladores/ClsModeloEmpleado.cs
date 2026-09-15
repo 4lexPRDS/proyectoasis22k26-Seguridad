@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaModelo_Seguridad.Contratos;
+using System.Data.Odbc;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
 
@@ -121,6 +122,27 @@ namespace CapaControlador_Seguridad
                         _RepositorioEmpleado.SeguridadMetRemover(ModeloDatos);
                         Mensaje = "Eliminacion exitosa";
                         break;
+                }
+            }
+            catch (OdbcException Ex)
+            {
+                bool esErrorLlaveForanea = false;
+                foreach (OdbcError error in Ex.Errors)
+                {
+                    if (error.NativeError == 1451)
+                    {
+                        esErrorLlaveForanea = true;
+                        break;
+                    }
+                }
+
+                if (esErrorLlaveForanea)
+                {
+                    Mensaje = "No se puede eliminar este empleado porque tiene información relacionada en otro módulo del sistema. Elimine o reasigne esa información primero.";
+                }
+                else
+                {
+                    Mensaje = Ex.ToString();
                 }
             }
             catch (Exception Ex)
