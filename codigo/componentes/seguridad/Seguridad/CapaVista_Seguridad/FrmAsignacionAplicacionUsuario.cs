@@ -16,10 +16,10 @@ namespace CapaVista_Seguridad
             InitializeComponent();
 
             this.Load += FrmAsignacionAplicacionUsuario_Load;
-            BtnSeguridadInsertar.Click += BtnSeguridadInsertar_Click;
-            BtnSeguridadQuitar.Click += BtnSeguridadQuitar_Click;
-            BtnSeguridadBuscar.Click += BtnSeguridadBuscar_Click;
-            BtnSeguridadSalir.Click += BtnSeguridadSalir_Click;
+            SeguridadBtnInsertar.Click += BtnSeguridadInsertar_Click;
+            SeguridadBtnQuitar.Click += BtnSeguridadQuitar_Click;
+            SeguridadBtnBuscar.Click += BtnSeguridadBuscar_Click;
+            SeguridadBtnSalir.Click += BtnSeguridadSalir_Click;
             SeguridadBtnAyuda.Click += SeguridadBtnAyuda_Click;
         }
 
@@ -33,20 +33,20 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                CboSeguridadUsuario.DataSource = _AsigAppUsuario.SeguridadMetObtenerUsuarios();
-                CboSeguridadUsuario.DisplayMember = "nombreUsuario";
-                CboSeguridadUsuario.ValueMember = "idUsuario";
+                SeguridadCboUsuario.DataSource = _AsigAppUsuario.SeguridadMetObtenerUsuarios();
+                SeguridadCboUsuario.DisplayMember = "nombreUsuario";
+                SeguridadCboUsuario.ValueMember = "idUsuario";
 
-                CboSeguridadModulo.DataSource = _AsigAppUsuario.SeguridadMetObtenerModulos();
-                CboSeguridadModulo.DisplayMember = "nombreModulo";
-                CboSeguridadModulo.ValueMember = "idModulo";
+                SeguridadCboModulo.DataSource = _AsigAppUsuario.SeguridadMetObtenerModulos();
+                SeguridadCboModulo.DisplayMember = "nombreModulo";
+                SeguridadCboModulo.ValueMember = "idModulo";
 
                 SeguridadCboAplicacion.DataSource = _AsigAppUsuario.SeguridadMetObtenerAplicaciones();
                 SeguridadCboAplicacion.DisplayMember = "nombreAplicacion";
                 SeguridadCboAplicacion.ValueMember = "idAplicacion";
 
-                CboSeguridadUsuario.SelectedIndex = -1;
-                CboSeguridadModulo.SelectedIndex = -1;
+                SeguridadCboUsuario.SelectedIndex = -1;
+                SeguridadCboModulo.SelectedIndex = -1;
                 SeguridadCboAplicacion.SelectedIndex = -1;
             }
             catch (Exception ex)
@@ -72,7 +72,7 @@ namespace CapaVista_Seguridad
         {
             SeguridadDgvAsignaciones.Rows.Clear();
 
-            DataTable Usuarios = CboSeguridadUsuario.DataSource as DataTable;
+            DataTable Usuarios = SeguridadCboUsuario.DataSource as DataTable;
             DataTable Aplicaciones = SeguridadCboAplicacion.DataSource as DataTable;
 
             foreach (ClsModeloAsigAppUsuario Item in Lista)
@@ -114,8 +114,8 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                if (CboSeguridadUsuario.SelectedIndex == -1 ||
-                    CboSeguridadModulo.SelectedIndex == -1 ||
+                if (SeguridadCboUsuario.SelectedIndex == -1 ||
+                    SeguridadCboModulo.SelectedIndex == -1 ||
                     SeguridadCboAplicacion.SelectedIndex == -1)
                 {
                     MessageBox.Show("Seleccione Usuario, Módulo y Aplicación");
@@ -123,10 +123,10 @@ namespace CapaVista_Seguridad
                 }
 
                 _AsigAppUsuario.IdUsuario =
-                    Convert.ToInt32(CboSeguridadUsuario.SelectedValue);
+                    Convert.ToInt32(SeguridadCboUsuario.SelectedValue);
 
                 _AsigAppUsuario.IdModulo =
-                    Convert.ToInt32(CboSeguridadModulo.SelectedValue);
+                    Convert.ToInt32(SeguridadCboModulo.SelectedValue);
 
                 _AsigAppUsuario.IdAplicacion =
                     Convert.ToInt32(SeguridadCboAplicacion.SelectedValue);
@@ -200,14 +200,14 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                if (CboSeguridadUsuario.SelectedIndex == -1)
+                if (SeguridadCboUsuario.SelectedIndex == -1)
                 {
                     MessageBox.Show("Seleccione un Usuario para buscar");
                     return;
                 }
 
                 int IdUsuario =
-                    Convert.ToInt32(CboSeguridadUsuario.SelectedValue);
+                    Convert.ToInt32(SeguridadCboUsuario.SelectedValue);
 
                 var Resultado =
                     _AsigAppUsuario.SeguridadMetBuscarPorUsuario(IdUsuario);
@@ -234,8 +234,8 @@ namespace CapaVista_Seguridad
 
         private void SeguridadMetReinicio()
         {
-            CboSeguridadUsuario.SelectedIndex = -1;
-            CboSeguridadModulo.SelectedIndex = -1;
+            SeguridadCboUsuario.SelectedIndex = -1;
+            SeguridadCboModulo.SelectedIndex = -1;
             SeguridadCboAplicacion.SelectedIndex = -1;
         }
     }
