@@ -60,14 +60,17 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
                 {
                     case EstadoEntidad.Added:
                         _RepositorioAsigUsuPerf.SeguridadMetAgregar(ModeloDatos);
+                        // PENDIENTE DE AGREGAR BITACORA
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioAsigUsuPerf.SeguridadMetEditar(ModeloDatos);
+                        // PENDIENTE DE AGREGAR BITACORA
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioAsigUsuPerf.SeguridadMetRemover(ModeloDatos);
+                        // PENDIENTE DE AGREGAR BITACORA
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }

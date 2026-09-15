@@ -112,14 +112,17 @@ namespace CapaControlador_Seguridad
                 {
                     case EstadoEntidad.Added:
                         _RepositorioEmpleado.SeguridadMetAgregar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblEmpleado", ModeloDatos.IdEmpleado, "Se agregó el empleado: " + _NombresEmpleado + " " + _ApellidosEmpleado);
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioEmpleado.SeguridadMetEditar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblEmpleado", ModeloDatos.IdEmpleado, "Se actualizó el empleado: " + _NombresEmpleado + " " + _ApellidosEmpleado);
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioEmpleado.SeguridadMetRemover(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblEmpleado", ModeloDatos.IdEmpleado, "Se eliminó el empleado ID: " + ModeloDatos.IdEmpleado);
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }
