@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.Odbc;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace CapaModelo_Consultas
 {
@@ -14,12 +15,12 @@ namespace CapaModelo_Consultas
             int Pagina,
             int RegistrosPorPagina)
         {
-            ConsultasMetValidarNombreTabla(NombreTabla);
-
-            DataTable DtTabla = new DataTable();
-
             try
             {
+                ConsultasMetValidarNombreTabla(NombreTabla);
+
+                DataTable DtTabla = new DataTable();
+
                 int Inicio = (Pagina - 1) * RegistrosPorPagina;
 
                 string Consulta =
@@ -52,19 +53,27 @@ namespace CapaModelo_Consultas
             }
             catch (Exception Ex)
             {
-                throw new Exception(
-                    "Error al cargar la tabla " +
-                    NombreTabla + ".",
-                    Ex);
+                MessageBox.Show(
+                    "Error al cargar la tabla '" +
+                    NombreTabla + "'.\n\n" +
+                    "Detalle del error:\n" +
+                    Ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                Environment.Exit(1);
+
+                return null;
             }
         }
 
         public DataTable ConsultasFuncObtenerTablas()
         {
-            DataTable DtTablas = new DataTable();
-
             try
             {
+                DataTable DtTablas = new DataTable();
+
                 string Consulta = "SHOW TABLES;";
 
                 using (OdbcConnection Conexion =
@@ -85,19 +94,28 @@ namespace CapaModelo_Consultas
             }
             catch (Exception Ex)
             {
-                throw new Exception(
-                    "Error al obtener las tablas de la base de datos.",
-                    Ex);
+                MessageBox.Show(
+                    "Error al obtener las tablas de la base de datos.\n\n" +
+                    "Verifique la conexión con la base de datos.\n\n" +
+                    "Detalle del error:\n" +
+                    Ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                Environment.Exit(1);
+
+                return null;
             }
         }
 
         public int ConsultasFuncContarRegistros(
             string NombreTabla)
         {
-            ConsultasMetValidarNombreTabla(NombreTabla);
-
             try
             {
+                ConsultasMetValidarNombreTabla(NombreTabla);
+
                 string Consulta =
                     "SELECT COUNT(*) FROM " + NombreTabla + ";";
 
@@ -119,10 +137,18 @@ namespace CapaModelo_Consultas
             }
             catch (Exception Ex)
             {
-                throw new Exception(
-                    "Error al contar los registros de la tabla " +
-                    NombreTabla + ".",
-                    Ex);
+                MessageBox.Show(
+                    "Error al contar los registros de la tabla '" +
+                    NombreTabla + "'.\n\n" +
+                    "Detalle del error:\n" +
+                    Ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                Environment.Exit(1);
+
+                return 0;
             }
         }
 

@@ -100,6 +100,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMantenimientoConsultas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4003 – MantenimientoConsultas";
             this.TopMost = true;
             this.ConsultasTlpPrincipal.ResumeLayout(false);

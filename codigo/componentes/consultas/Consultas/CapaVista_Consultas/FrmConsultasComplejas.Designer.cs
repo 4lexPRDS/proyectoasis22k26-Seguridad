@@ -128,6 +128,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1140, 874);
             this.Name = "FrmConsultasComplejas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4002 – ConsultasComplejas";
             this.ConsultasTlpPrincipal.ResumeLayout(false);
             this.ConsultasGbxReutilizables.ResumeLayout(false);
