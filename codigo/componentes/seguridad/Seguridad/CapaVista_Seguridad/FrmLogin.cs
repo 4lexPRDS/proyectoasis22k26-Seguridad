@@ -51,7 +51,7 @@ namespace CapaVista_Seguridad
                 if (acceso)
                 {
                     this.Hide();
-                    var frmPrincipal = new FrmMDISeguridad(); // ajusta al nombre real de tu formulario principal
+                    var frmPrincipal = new FrmSplash();
                     frmPrincipal.ShowDialog();
                     this.Close();
                 }
