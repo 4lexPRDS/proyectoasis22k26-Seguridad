@@ -51,6 +51,7 @@ namespace CapaControlador_Seguridad
                 _RepositorioRecuperacion.SeguridadMetEliminarPorUsuario(IdUsuario.Value);
 
                 Mensaje = "Contrasena actualizada";
+                ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblRecuperacion", IdUsuario.Value, "Se actualizó una contraseña.");
             }
             catch (Exception ex)
             {

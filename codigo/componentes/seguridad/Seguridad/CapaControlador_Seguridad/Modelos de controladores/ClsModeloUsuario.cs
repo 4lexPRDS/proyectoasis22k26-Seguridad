@@ -73,14 +73,17 @@ namespace CapaControlador_Seguridad
                 {
                     case EstadoEntidad.Added:
                         _RepositorioUsuarios.SeguridadMetAgregar(ModeloDatosUsuarios);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblUsuario", ModeloDatosUsuarios.IdUsuario, "Se agregó el usuario: " + _NombreUsuario);
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioUsuarios.SeguridadMetEditar(ModeloDatosUsuarios);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblUsuario", ModeloDatosUsuarios.IdUsuario, "Se actualizó el usuario: " + _NombreUsuario);
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioUsuarios.SeguridadMetRemover(ModeloDatosUsuarios);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblUsuario", ModeloDatosUsuarios.IdUsuario, "Se eliminó el usuario ID: " + ModeloDatosUsuarios.IdUsuario);
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }
@@ -153,7 +156,7 @@ namespace CapaControlador_Seguridad
                     NombreRol = Fila["nombreRol"].ToString()
                 });
             }
-
+            ClsModeloBitacora.SeguridadMetRegistrarAccion("LOGIN", "tblUsuario", resultado.IdUsuario, "Inicio de sesión exitoso del usuario: " + resultado.NombreUsuario);
             return true;
         }
     }

@@ -71,14 +71,17 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
                 {
                     case EstadoEntidad.Added:
                         _RepositorioRoles.SeguridadMetAgregar(ModeloDatosRoles);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblRol", ModeloDatosRoles.IdRol, "Se agregó el perfil: " + _NombreRol);
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioRoles.SeguridadMetEditar(ModeloDatosRoles);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblRol", ModeloDatosRoles.IdRol, "Se actualizó el perfil: " + _NombreRol);
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioRoles.SeguridadMetRemover(ModeloDatosRoles);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblRol", ModeloDatosRoles.IdRol, "Se eliminó el rol perfil: " + ModeloDatosRoles.IdRol);
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }

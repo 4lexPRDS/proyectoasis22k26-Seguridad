@@ -43,14 +43,17 @@ namespace CapaControlador_Seguridad
                 {
                     case EstadoEntidad.Added:
                         _RepositorioModulo.SeguridadMetAgregar(Modulo);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblModulo", Modulo.IdModulo, "Se agregó el módulo: " + _NombreModulo);
                         Mensaje = "Registro guardado exitosamente.";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioModulo.SeguridadMetEditar(Modulo);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblModulo", Modulo.IdModulo, "Se actualizó el módulo: " + _NombreModulo);
                         Mensaje = "Registro actualizado exitosamente.";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioModulo.SeguridadMetRemover(Modulo);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblModulo", Modulo.IdModulo, "Se eliminó el módulo ID: " + Modulo.IdModulo);
                         Mensaje = "Registro eliminado exitosamente.";
                         break;
                 }

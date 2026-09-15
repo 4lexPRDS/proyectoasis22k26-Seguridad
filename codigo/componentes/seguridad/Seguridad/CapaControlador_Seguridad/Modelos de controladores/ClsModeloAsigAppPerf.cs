@@ -69,14 +69,17 @@ namespace CapaControlador_Seguridad
                 {
                     case EstadoEntidad.Added:
                         _RepositorioAsigAppPerf.SeguridadMetAgregar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblAsigAppPerf", ModeloDatos.IdRol, "Se asignó aplicación " + _IdAplicacion + " al rol " + _IdRol);
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioAsigAppPerf.SeguridadMetEditar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblAsigAppPerf", ModeloDatos.IdRol, "Se actualizaron permisos de aplicación " + _IdAplicacion + " al rol " + _IdRol);
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioAsigAppPerf.SeguridadMetRemover(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblAsigAppPerf", ModeloDatos.IdRol, "Se eliminó asignación de aplicación " + _IdAplicacion + " al rol " + _IdRol);
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }
