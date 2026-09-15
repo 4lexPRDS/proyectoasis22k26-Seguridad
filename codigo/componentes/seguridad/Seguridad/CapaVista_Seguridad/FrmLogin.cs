@@ -60,7 +60,7 @@ namespace CapaVista_Seguridad
                     // ---- Fin guardar sesión --------------------------------
 
                     this.Hide();
-                    var frmPrincipal = new FrmMDISeguridad();
+                    var frmPrincipal = new FrmSplash();
                     frmPrincipal.ShowDialog();
                     this.Close();
                 }
