@@ -54,6 +54,18 @@ namespace CapaVista_Reporteador
                 btnGuardar1.Click += BtnGuardar1_Click;
             }
 
+            // =====================================================
+            // BTN Imprimir
+            // =====================================================
+            if (btnImprimir1 != null)
+            {
+                btnImprimir1.RutaReporte = null;
+            }
+
+            ReporteadorDgvReportes.SelectionChanged +=
+                ReporteadorDgvReportes_SelectionChanged;
+
+
             // Cargar formulario
             Load += FrmReportes_Load;
         }
@@ -442,6 +454,49 @@ namespace CapaVista_Reporteador
                     "No se pudo cargar la lista de reportes.\n\n" +
                     ex.Message
                 );
+            }
+        }
+
+        // =========================================================
+        // SELECCIONAR REPORTE PARA IMPRIMIR
+        // =========================================================
+
+        private void ReporteadorDgvReportes_SelectionChanged(
+            object sender,
+            EventArgs e)
+        {
+            try
+            {
+                if (btnImprimir1 == null)
+                {
+                    return;
+                }
+
+                if (ReporteadorDgvReportes.CurrentRow == null)
+                {
+                    btnImprimir1.RutaReporte = null;
+                    return;
+                }
+
+                object valorRuta =
+                    ReporteadorDgvReportes
+                    .CurrentRow
+                    .Cells["RutaReporte"]
+                    .Value;
+
+                if (valorRuta == null ||
+                    valorRuta == DBNull.Value)
+                {
+                    btnImprimir1.RutaReporte = null;
+                    return;
+                }
+
+                btnImprimir1.RutaReporte =
+                    valorRuta.ToString();
+            }
+            catch
+            {
+                btnImprimir1.RutaReporte = null;
             }
         }
 
