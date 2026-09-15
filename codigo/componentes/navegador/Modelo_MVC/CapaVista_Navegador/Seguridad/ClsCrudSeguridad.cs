@@ -2,9 +2,12 @@
 using System.Windows.Forms;
 using CapaControlador_Navegador; // <- esta es la unica capa que crudSeguridad debe conocer
 
+
+//-----------------------------------------------------
+// - Hecho por: Natali Sofía Montenegro Portillo 
+// - Carne: 0901-23-10017
 namespace CapaVista_Navegador
 {
-    // Envuelve la validacion de permisos para no repetir el try/catch en cada boton
     public class ClsCrudSeguridad
     {
         private string _Usuario;
@@ -29,7 +32,7 @@ namespace CapaVista_Navegador
 
             try
             {
-                return _Permisos.NavegadorFuncValidarAcceso(_Usuario, _Modulo);
+                return _Permisos.NavegadorFuncValidarAcceso(_Usuario, _Modulo);   //validaciones por try y catch
             }
             catch (Exception Excepcion)
             {
@@ -44,3 +47,5 @@ namespace CapaVista_Navegador
         }
     }
 }
+
+//--------------------------------------------------
