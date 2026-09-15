@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista_Consultas
+namespace CapaVista_Consultas.Components
 {
     public class ClsBotonConsultas : Button
     {

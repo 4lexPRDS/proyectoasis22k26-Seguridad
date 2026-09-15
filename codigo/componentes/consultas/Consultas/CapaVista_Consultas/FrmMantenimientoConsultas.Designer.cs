@@ -32,7 +32,7 @@
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasGbxCondicionesLogicas = new CapaVista_Consultas.Components.ClsGrupoConsultas();
             this.ConsultasUcCondicionesOrdenamientoAgrupacion = new CapaVista_Consultas.UserControls.UcCondicionesOrdenamientoAgrupacion();
-            this.ConsultasUcFiltrosAplicados = new CapaVista_Consultas.UcFiltrosAplicados();
+            this.ConsultasUcFiltrosAplicados = new CapaVista_Consultas.UserControls.UcFiltrosAplicados();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxCondicionesLogicas.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +112,6 @@
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private Components.ClsGrupoConsultas ConsultasGbxCondicionesLogicas;
         private UserControls.UcCondicionesOrdenamientoAgrupacion ConsultasUcCondicionesOrdenamientoAgrupacion;
-        private UcFiltrosAplicados ConsultasUcFiltrosAplicados;
+        private UserControls.UcFiltrosAplicados ConsultasUcFiltrosAplicados;
     }
 }

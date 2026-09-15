@@ -1,4 +1,4 @@
-﻿namespace CapaVista_Consultas
+﻿namespace CapaVista_Consultas.UserControls
 {
     partial class UcTablaCompleja
     {
@@ -37,14 +37,11 @@
             this.ConsultasTlpComplejas = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasTlpPaginacion = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasFlpPaginas = new System.Windows.Forms.FlowLayoutPanel();
-            this.ConsultasBtnSiguiente = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnAnterior = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasBtnSiguiente = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnAnterior = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasCboTablas = new CapaVista_Consultas.Components.ClsListaDesplegableConsultas();
             this.ConsultasLblTabla = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
             this.ConsultasDgvComplejas = new CapaVista_Consultas.Components.ClsTablaDatosConsultas();
-            this.button1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasTlpComplejas.SuspendLayout();
             this.ConsultasTlpPaginacion.SuspendLayout();
@@ -134,7 +131,7 @@
             this.ConsultasBtnSiguiente.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnSiguiente.TabIndex = 3;
             this.ConsultasBtnSiguiente.UseVisualStyleBackColor = false;
-            this.ConsultasBtnSiguiente.Click += new System.EventHandler(this.ConsultasBtnSiguiente_Click_1);
+            this.ConsultasBtnSiguiente.Click += new System.EventHandler(this.ConsultasMetBtnSiguienteClick);
             // 
             // ConsultasBtnAnterior
             // 
@@ -153,7 +150,7 @@
             this.ConsultasBtnAnterior.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnAnterior.TabIndex = 4;
             this.ConsultasBtnAnterior.UseVisualStyleBackColor = false;
-            this.ConsultasBtnAnterior.Click += new System.EventHandler(this.ConsultasBtnAnterior_Click_1);
+            this.ConsultasBtnAnterior.Click += new System.EventHandler(this.ConsultasMetBtnAnteriorClick);
             // 
             // ConsultasCboTablas
             // 
@@ -238,31 +235,6 @@
             this.ConsultasDgvComplejas.Size = new System.Drawing.Size(714, 275);
             this.ConsultasDgvComplejas.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 21);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(148, 21);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(84, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // UcTablaCompleja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -286,14 +258,11 @@
 
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpComplejas;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPaginacion;
         private System.Windows.Forms.FlowLayoutPanel ConsultasFlpPaginas;
         private Components.ClsListaDesplegableConsultas ConsultasCboTablas;
-        private ClsBotonConsultas ConsultasBtnSiguiente;
-        private ClsBotonConsultas ConsultasBtnAnterior;
+        private Components.ClsBotonConsultas ConsultasBtnSiguiente;
+        private Components.ClsBotonConsultas ConsultasBtnAnterior;
         private Components.ClsEtiquetaConsultas ConsultasLblTabla;
         private Components.ClsTablaDatosConsultas ConsultasDgvComplejas;
     }

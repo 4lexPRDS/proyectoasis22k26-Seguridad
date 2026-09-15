@@ -1,58 +1,147 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
-namespace CapaModelo_Consultas { 
-    public class ClsSentenciasTablas { 
-        ClsConexion _Conexion = new ClsConexion();
-        public OdbcDataAdapter ConsultasFuncObtenerTabla(string Tabla, int pagina, int registrosPorPagina)
+namespace CapaModelo_Consultas
+{
+    public class ClsSentenciasTablas
+    {
+        private readonly ClsConexion _Conexion = new ClsConexion();
+
+        public DataTable ConsultasFuncObtenerTabla(
+            string NombreTabla,
+            int Pagina,
+            int RegistrosPorPagina)
         {
+            ConsultasMetValidarNombreTabla(NombreTabla);
+
+            DataTable DtTabla = new DataTable();
+
             try
             {
-                int Inicio = (pagina - 1) * registrosPorPagina;
+                int Inicio = (Pagina - 1) * RegistrosPorPagina;
 
                 string Consulta =
-                    "SELECT * FROM " + Tabla +
+                    "SELECT * FROM " + NombreTabla +
                     " LIMIT ? OFFSET ?;";
 
-                OdbcCommand Cmd = new OdbcCommand(Consulta, _Conexion.ConsultasFuncConexion());
+                using (OdbcConnection Conexion =
+                    _Conexion.ConsultasFuncConexion())
+                {
+                    using (OdbcCommand Cmd =
+                        new OdbcCommand(Consulta, Conexion))
+                    {
+                        Cmd.Parameters.AddWithValue(
+                            "?",
+                            RegistrosPorPagina);
 
-                Cmd.Parameters.AddWithValue("?", registrosPorPagina);
-                Cmd.Parameters.AddWithValue("?", Inicio);
+                        Cmd.Parameters.AddWithValue(
+                            "?",
+                            Inicio);
 
-                OdbcDataAdapter DaTabla = new OdbcDataAdapter(Cmd);
+                        using (OdbcDataAdapter DaTabla =
+                            new OdbcDataAdapter(Cmd))
+                        {
+                            DaTabla.Fill(DtTabla);
+                        }
+                    }
+                }
 
-                return DaTabla;
+                return DtTabla;
             }
             catch (Exception Ex)
             {
-                Console.WriteLine("Error al cargar la tabla: " + Ex.Message);
-                return null;
+                throw new Exception(
+                    "Error al cargar la tabla " +
+                    NombreTabla + ".",
+                    Ex);
             }
         }
 
-        public OdbcDataAdapter ConsultasFuncObtenerTablas() { 
-            string Consulta = "SHOW TABLES;"; 
-            OdbcDataAdapter DaTablas = new OdbcDataAdapter(Consulta, _Conexion.ConsultasFuncConexion()); 
-            return DaTablas; 
-        }
-        public int ConsultasFuncContarRegistros(string NombreTabla)
+        public DataTable ConsultasFuncObtenerTablas()
         {
-            string Consulta =
-                "SELECT COUNT(*) FROM " + NombreTabla;
+            DataTable DtTablas = new DataTable();
 
-            OdbcCommand Cmd = new OdbcCommand(
-                Consulta,
-                _Conexion.ConsultasFuncConexion()
-            );
+            try
+            {
+                string Consulta = "SHOW TABLES;";
 
-            return Convert.ToInt32(Cmd.ExecuteScalar());
+                using (OdbcConnection Conexion =
+                    _Conexion.ConsultasFuncConexion())
+                {
+                    using (OdbcCommand Cmd =
+                        new OdbcCommand(Consulta, Conexion))
+                    {
+                        using (OdbcDataAdapter DaTablas =
+                            new OdbcDataAdapter(Cmd))
+                        {
+                            DaTablas.Fill(DtTablas);
+                        }
+                    }
+                }
+
+                return DtTablas;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(
+                    "Error al obtener las tablas de la base de datos.",
+                    Ex);
+            }
         }
-    } 
+
+        public int ConsultasFuncContarRegistros(
+            string NombreTabla)
+        {
+            ConsultasMetValidarNombreTabla(NombreTabla);
+
+            try
+            {
+                string Consulta =
+                    "SELECT COUNT(*) FROM " + NombreTabla + ";";
+
+                using (OdbcConnection Conexion =
+                    _Conexion.ConsultasFuncConexion())
+                {
+                    if (Conexion.State != ConnectionState.Open)
+                    {
+                        Conexion.Open();
+                    }
+
+                    using (OdbcCommand Cmd =
+                        new OdbcCommand(Consulta, Conexion))
+                    {
+                        return Convert.ToInt32(
+                            Cmd.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(
+                    "Error al contar los registros de la tabla " +
+                    NombreTabla + ".",
+                    Ex);
+            }
+        }
+
+        private void ConsultasMetValidarNombreTabla(
+            string NombreTabla)
+        {
+            if (string.IsNullOrWhiteSpace(NombreTabla))
+            {
+                throw new ArgumentException(
+                    "El nombre de la tabla no puede estar vacío.");
+            }
+
+            if (!Regex.IsMatch(
+                NombreTabla,
+                @"^[A-Za-z_][A-Za-z0-9_]*$"))
+            {
+                throw new ArgumentException(
+                    "El nombre de la tabla contiene caracteres no válidos.");
+            }
+        }
+    }
 }

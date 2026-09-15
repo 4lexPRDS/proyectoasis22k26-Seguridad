@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultasComplejas));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.ConsultasUcTablaCompleja = new CapaVista_Consultas.UcTablaCompleja();
-            this.ConsultasBtnSalir = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasUcTablaCompleja = new CapaVista_Consultas.UserControls.UcTablaCompleja();
+            this.ConsultasBtnSalir = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasGbxReutilizables = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.ConsultasUcConsultasReutilizables = new CapaVista_Consultas.UcConsultasReutilizables();
+            this.ConsultasUcConsultasReutilizables = new CapaVista_Consultas.UserControls.UcConsultasReutilizables();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxReutilizables.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +86,7 @@
             this.ConsultasBtnSalir.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnSalir.TabIndex = 17;
             this.ConsultasBtnSalir.UseVisualStyleBackColor = false;
-            this.ConsultasBtnSalir.Click += new System.EventHandler(this.ConsultasBtnSalir_Click_1);
+            this.ConsultasBtnSalir.Click += new System.EventHandler(this.ConsultasMetBtnSalir);
             // 
             // ConsultasGbxReutilizables
             // 
@@ -137,9 +137,9 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
-        private UcTablaCompleja ConsultasUcTablaCompleja;
-        private ClsBotonConsultas ConsultasBtnSalir;
+        private UserControls.UcTablaCompleja ConsultasUcTablaCompleja;
+        private Components.ClsBotonConsultas ConsultasBtnSalir;
         private Components.ClsGrupoConsultas ConsultasGbxReutilizables;
-        private UcConsultasReutilizables ConsultasUcConsultasReutilizables;
+        private UserControls.UcConsultasReutilizables ConsultasUcConsultasReutilizables;
     }
 }

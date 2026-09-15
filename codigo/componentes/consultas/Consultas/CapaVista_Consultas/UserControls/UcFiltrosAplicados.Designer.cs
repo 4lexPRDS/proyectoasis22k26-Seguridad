@@ -1,4 +1,4 @@
-﻿namespace CapaVista_Consultas
+﻿namespace CapaVista_Consultas.UserControls
 {
     partial class UcFiltrosAplicados
     {
@@ -35,9 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasFlpBotones = new System.Windows.Forms.FlowLayoutPanel();
-            this.ConsultasBtnConsultar = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnGuardar = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnEliminar = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasBtnConsultar = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnGuardar = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnEliminar = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasDgvConsultasFiltros = new CapaVista_Consultas.Components.ClsTablaDatosConsultas();
             this.ConsultasColTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultasColCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -252,8 +252,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColOperador;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColOrdenamiento;
-        private ClsBotonConsultas ConsultasBtnConsultar;
-        private ClsBotonConsultas ConsultasBtnGuardar;
-        private ClsBotonConsultas ConsultasBtnEliminar;
+        private Components.ClsBotonConsultas ConsultasBtnConsultar;
+        private Components.ClsBotonConsultas ConsultasBtnGuardar;
+        private Components.ClsBotonConsultas ConsultasBtnEliminar;
     }
 }

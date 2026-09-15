@@ -32,8 +32,8 @@
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasUcTablaSimple = new CapaVista_Consultas.UserControls.UcTablaSimple();
             this.ConsultasGbxAgregarFiltro = new CapaVista_Consultas.Components.ClsGrupoConsultas();
-            this.ConsultasUcAgruparOrdenar = new CapaVista_Consultas.UcAgruparOrdenar();
-            this.ConsultasBtnComplejas = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasUcAgruparOrdenar = new CapaVista_Consultas.UserControls.UcAgruparOrdenar();
+            this.ConsultasBtnComplejas = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasGbxAgregarFiltro.SuspendLayout();
             this.SuspendLayout();
@@ -113,7 +113,7 @@
             this.ConsultasBtnComplejas.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnComplejas.TabIndex = 20;
             this.ConsultasBtnComplejas.UseVisualStyleBackColor = false;
-            this.ConsultasBtnComplejas.Click += new System.EventHandler(this.ConsultasBtnComplejas_Click);
+            this.ConsultasBtnComplejas.Click += new System.EventHandler(this.ConsultasMetBtnComplejas);
             // 
             // FrmConsultasSimples
             // 
@@ -136,7 +136,7 @@
         private UserControls.UcTablaSimple ConsultasUcTablaSimple;
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private Components.ClsGrupoConsultas ConsultasGbxAgregarFiltro;
-        private UcAgruparOrdenar ConsultasUcAgruparOrdenar;
-        private ClsBotonConsultas ConsultasBtnComplejas;
+        private UserControls.UcAgruparOrdenar ConsultasUcAgruparOrdenar;
+        private Components.ClsBotonConsultas ConsultasBtnComplejas;
     }
 }

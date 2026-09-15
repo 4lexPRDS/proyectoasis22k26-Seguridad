@@ -1,4 +1,4 @@
-﻿namespace CapaVista_Consultas
+﻿namespace CapaVista_Consultas.UserControls
 {
     partial class UcConsultasReutilizables
     {
@@ -35,9 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasFlpBotones = new System.Windows.Forms.FlowLayoutPanel();
-            this.ConsultasBtnConsultar = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnIngresar = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnEliminar = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasBtnConsultar = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnIngresar = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnEliminar = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasDgvConsultasReutilizables = new CapaVista_Consultas.Components.ClsTablaDatosConsultas();
             this.ConsultasColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConsultasColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,7 +112,7 @@
             this.ConsultasBtnIngresar.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnIngresar.TabIndex = 1;
             this.ConsultasBtnIngresar.UseVisualStyleBackColor = false;
-            this.ConsultasBtnIngresar.Click += new System.EventHandler(this.ConsultasBtnIngresar_Click);
+            this.ConsultasBtnIngresar.Click += new System.EventHandler(this.ConsultasMetBtnIngresar);
             // 
             // ConsultasBtnEliminar
             // 
@@ -233,9 +233,9 @@
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private System.Windows.Forms.FlowLayoutPanel ConsultasFlpBotones;
         private Components.ClsTablaDatosConsultas ConsultasDgvConsultasReutilizables;
-        private ClsBotonConsultas ConsultasBtnConsultar;
-        private ClsBotonConsultas ConsultasBtnIngresar;
-        private ClsBotonConsultas ConsultasBtnEliminar;
+        private Components.ClsBotonConsultas ConsultasBtnConsultar;
+        private Components.ClsBotonConsultas ConsultasBtnIngresar;
+        private Components.ClsBotonConsultas ConsultasBtnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ConsultasColHora;

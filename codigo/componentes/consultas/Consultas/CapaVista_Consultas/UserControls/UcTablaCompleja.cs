@@ -1,11 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
-using System.Windows.Forms;
 using CapaControlador_Consultas;
 using CapaVista_Consultas.Components;
 
-namespace CapaVista_Consultas
+namespace CapaVista_Consultas.UserControls
 {
     public partial class UcTablaCompleja : ClsControlUsuarioConsultas
     {
@@ -135,7 +134,7 @@ namespace CapaVista_Consultas
                     NumeroPagina == _PaginaActual;
 
                 BotonPagina.Click +=
-                    ConsultasBtnPagina_Click;
+                    ConsultasMetBtnPaginaClick;
 
                 ConsultasFlpPaginas.Controls.Add(
                     BotonPagina);
@@ -170,9 +169,7 @@ namespace CapaVista_Consultas
             ConsultasProcActualizarTabla();
         }
 
-        private void ConsultasBtnPagina_Click(
-            object sender,
-            EventArgs e)
+        private void ConsultasMetBtnPaginaClick(object sender,EventArgs e)
         {
             if (!(sender is ClsBotonPaginacionConsultas BotonPagina))
             {
@@ -185,7 +182,7 @@ namespace CapaVista_Consultas
             ConsultasProcActualizarTabla();
         }
 
-        private void ConsultasBtnSiguiente_Click_1(object sender, EventArgs e)
+        private void ConsultasMetBtnSiguienteClick(object sender, EventArgs e)
         {
             if (_PaginaActual >= _TotalPaginas)
             {
@@ -204,7 +201,7 @@ namespace CapaVista_Consultas
             ConsultasProcActualizarTabla();
         }
 
-        private void ConsultasBtnAnterior_Click_1(object sender, EventArgs e)
+        private void ConsultasMetBtnAnteriorClick(object sender, EventArgs e)
         {
             if (_PaginaActual <= 1)
             {

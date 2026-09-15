@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace CapaVista_Consultas
+﻿namespace CapaVista_Consultas
 {
-    public partial class FrmMantenimientoConsultas : ClsBaseTerminus
+    public partial class FrmMantenimientoConsultas : Components.ClsBaseTerminus
     {
         public FrmMantenimientoConsultas()
         {

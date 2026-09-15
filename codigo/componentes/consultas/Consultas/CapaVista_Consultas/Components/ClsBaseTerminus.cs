@@ -1,8 +1,7 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace CapaVista_Consultas
+namespace CapaVista_Consultas.Components
 {
     public class ClsBaseTerminus : Form
     {

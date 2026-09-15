@@ -35,8 +35,8 @@
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasTlpPaginacion = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasFlpPaginas = new System.Windows.Forms.FlowLayoutPanel();
-            this.ConsultasBtnAnterior = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasBtnSiguiente = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasBtnAnterior = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasBtnSiguiente = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasDgvSimples = new CapaVista_Consultas.Components.ClsTablaDatosConsultas();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasTlpPaginacion.SuspendLayout();
@@ -101,7 +101,7 @@
             this.ConsultasBtnAnterior.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnAnterior.TabIndex = 3;
             this.ConsultasBtnAnterior.UseVisualStyleBackColor = false;
-            this.ConsultasBtnAnterior.Click += new System.EventHandler(this.ConsultasBtnAnterior1_Click);
+            this.ConsultasBtnAnterior.Click += new System.EventHandler(this.ConsultasMetBtnAnteriorClick);
             // 
             // ConsultasBtnSiguiente
             // 
@@ -118,7 +118,7 @@
             this.ConsultasBtnSiguiente.Size = new System.Drawing.Size(80, 80);
             this.ConsultasBtnSiguiente.TabIndex = 4;
             this.ConsultasBtnSiguiente.UseVisualStyleBackColor = false;
-            this.ConsultasBtnSiguiente.Click += new System.EventHandler(this.ConsultasBtnSiguiente_Click_1);
+            this.ConsultasBtnSiguiente.Click += new System.EventHandler(this.ConsultasMetBtnSiguiente);
             // 
             // ConsultasDgvSimples
             // 
@@ -187,8 +187,8 @@
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPaginacion;
         private System.Windows.Forms.FlowLayoutPanel ConsultasFlpPaginas;
-        private ClsBotonConsultas ConsultasBtnAnterior;
-        private ClsBotonConsultas ConsultasBtnSiguiente;
+        private Components.ClsBotonConsultas ConsultasBtnAnterior;
+        private Components.ClsBotonConsultas ConsultasBtnSiguiente;
         private Components.ClsTablaDatosConsultas ConsultasDgvSimples;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CapaVista_Consultas
+﻿namespace CapaVista_Consultas.UserControls
 {
     partial class UcAgruparOrdenar
     {
@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcAgruparOrdenar));
             this.ConsultasTlpPrincipal = new System.Windows.Forms.TableLayoutPanel();
-            this.ConsultasBtnRefrescar = new CapaVista_Consultas.ClsBotonConsultas();
-            this.ConsultasTxtValor = new CapaVista_Consultas.ClsCajaTextoConsultas();
+            this.ConsultasBtnRefrescar = new CapaVista_Consultas.Components.ClsBotonConsultas();
+            this.ConsultasTxtValor = new CapaVista_Consultas.Components.ClsCajaTextoConsultas();
             this.ConsultasCboOperador = new CapaVista_Consultas.Components.ClsListaDesplegableConsultas();
             this.ConsultasTlpOrdenamiento = new System.Windows.Forms.TableLayoutPanel();
             this.ConsultasRdoDescendente = new CapaVista_Consultas.Components.ClsBotonRadioConsultas();
@@ -40,7 +40,7 @@
             this.ConsultasLblCampo = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
             this.ConsultasLblOperador = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
             this.ConsultasLblValor = new CapaVista_Consultas.Components.ClsEtiquetaConsultas();
-            this.ConsultasBtnIngresar = new CapaVista_Consultas.ClsBotonConsultas();
+            this.ConsultasBtnIngresar = new CapaVista_Consultas.Components.ClsBotonConsultas();
             this.ConsultasCboCampo = new CapaVista_Consultas.Components.ClsListaDesplegableConsultas();
             this.ConsultasTlpPrincipal.SuspendLayout();
             this.ConsultasTlpOrdenamiento.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // ConsultasTxtValor
             // 
-            this.ConsultasTxtValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ConsultasTxtValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultasTxtValor.BackColor = System.Drawing.Color.White;
             this.ConsultasTxtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -112,7 +112,7 @@
             // 
             // ConsultasCboOperador
             // 
-            this.ConsultasCboOperador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ConsultasCboOperador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultasCboOperador.BackColor = System.Drawing.Color.White;
             this.ConsultasCboOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -128,7 +128,7 @@
             // 
             // ConsultasTlpOrdenamiento
             // 
-            this.ConsultasTlpOrdenamiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ConsultasTlpOrdenamiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultasTlpOrdenamiento.ColumnCount = 2;
             this.ConsultasTlpOrdenamiento.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -258,7 +258,7 @@
             // 
             // ConsultasCboCampo
             // 
-            this.ConsultasCboCampo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ConsultasCboCampo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConsultasCboCampo.BackColor = System.Drawing.Color.White;
             this.ConsultasCboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -291,7 +291,7 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel ConsultasTlpPrincipal;
-        private ClsBotonConsultas ConsultasBtnIngresar;
+        private Components.ClsBotonConsultas ConsultasBtnIngresar;
         private Components.ClsEtiquetaConsultas ConsultasLblOrdenamiento;
         private Components.ClsEtiquetaConsultas ConsultasLblCampo;
         private Components.ClsEtiquetaConsultas ConsultasLblOperador;
@@ -301,7 +301,7 @@
         private Components.ClsBotonRadioConsultas ConsultasRdoAscendente;
         private Components.ClsListaDesplegableConsultas ConsultasCboCampo;
         private Components.ClsListaDesplegableConsultas ConsultasCboOperador;
-        private ClsCajaTextoConsultas ConsultasTxtValor;
-        private ClsBotonConsultas ConsultasBtnRefrescar;
+        private Components.ClsCajaTextoConsultas ConsultasTxtValor;
+        private Components.ClsBotonConsultas ConsultasBtnRefrescar;
     }
 }
