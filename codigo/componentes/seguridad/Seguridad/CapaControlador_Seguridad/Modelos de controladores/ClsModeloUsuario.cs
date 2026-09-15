@@ -1,4 +1,4 @@
-﻿using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
@@ -44,12 +44,8 @@ namespace CapaControlador_Seguridad
         public DateTime UltimoAccesoUsuario { get => _UltimoAccesoUsuario; set => _UltimoAccesoUsuario = value; }
         public int IsActive { get => _IsActive; set => _IsActive = value; }
 
-        // Datos adicionales que deja cargados SeguridadMetIniciarSesion,
-        // para que el formulario los use al llamar a ClsSesionSeguridad.SeguridadMetIniciarSesion
         public string NombreEmpleado { get => _NombreEmpleado; set => _NombreEmpleado = value; }
 
-        // Un usuario puede tener varios roles asignados (tblUsuarioRol permite
-        // varias filas por idUsuario), por eso es una lista y no un solo IdRol/NombreRol.
         public List<ClsRolInfo> Roles { get => _Roles; set => _Roles = value; }
 
         public ClsModeloUsuario()
@@ -66,7 +62,10 @@ namespace CapaControlador_Seguridad
                 ModeloDatosUsuarios.IdUsuario = _IdUsuario;
                 ModeloDatosUsuarios.IdEmpleado = _IdEmpleado;
                 ModeloDatosUsuarios.NombreUsuario = _NombreUsuario;
-                ModeloDatosUsuarios.ContrasenaUsuario = _ContrasenaUsuario;
+
+                ModeloDatosUsuarios.ContrasenaUsuario = string.IsNullOrEmpty(_ContrasenaUsuario)
+                    ? _ContrasenaUsuario
+                    : BCrypt.Net.BCrypt.HashPassword(_ContrasenaUsuario);
                 ModeloDatosUsuarios.UltimoAccesoUsuario = _UltimoAccesoUsuario;
                 ModeloDatosUsuarios.IsActive = _IsActive;
 
@@ -131,33 +130,31 @@ namespace CapaControlador_Seguridad
             };
         }
 
-        // Metodo para el inicio de sesión: valida usuario/contraseña y,
-        // si es correcto, deja cargados en la instancia todos los datos
-        // que la Vista necesita para abrir ClsSesionSeguridad (incluye TODOS
-        // los roles del usuario, porque tblUsuarioRol permite más de uno).
+
         public bool SeguridadMetIniciarSesion(string NombreUsuario, string ContrasenaUsuario)
         {
             var resultado = _RepositorioUsuarios.SeguridadMetValidarLogin(NombreUsuario, ContrasenaUsuario);
-            if (resultado != null)
+            if (resultado == null) return false;
+
+            bool Coincide = BCrypt.Net.BCrypt.Verify(ContrasenaUsuario, resultado.ContrasenaUsuario);
+            if (!Coincide) return false;
+
+            _IdUsuario = resultado.IdUsuario;
+            _NombreUsuario = resultado.NombreUsuario;
+            _NombreEmpleado = resultado.NombreEmpleado;
+
+            _Roles = new List<ClsRolInfo>();
+            DataTable TablaRoles = _RepositorioUsuarios.SeguridadMetObtenerRolesPorUsuario(_IdUsuario);
+            foreach (DataRow Fila in TablaRoles.Rows)
             {
-                _IdUsuario = resultado.IdUsuario;
-                _NombreUsuario = resultado.NombreUsuario;
-                _NombreEmpleado = resultado.NombreEmpleado;
-
-                _Roles = new List<ClsRolInfo>();
-                DataTable TablaRoles = _RepositorioUsuarios.SeguridadMetObtenerRolesPorUsuario(_IdUsuario);
-                foreach (DataRow Fila in TablaRoles.Rows)
+                _Roles.Add(new ClsRolInfo
                 {
-                    _Roles.Add(new ClsRolInfo
-                    {
-                        IdRol = Convert.ToInt32(Fila["idRol"]),
-                        NombreRol = Fila["nombreRol"].ToString()
-                    });
-                }
-
-                return true;
+                    IdRol = Convert.ToInt32(Fila["idRol"]),
+                    NombreRol = Fila["nombreRol"].ToString()
+                });
             }
-            return false;
+
+            return true;
         }
     }
 }

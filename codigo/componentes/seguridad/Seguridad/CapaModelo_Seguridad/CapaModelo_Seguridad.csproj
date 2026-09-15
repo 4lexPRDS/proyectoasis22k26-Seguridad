@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contratos\IRepositorioAsigUsuPerf.cs" />
+    <Compile Include="Contratos\IRepositorioRecuperacionContrasena.cs" />
     <Compile Include="Entidades\ClsAsigAppUsuario.cs" />
     <Compile Include="Contratos\IRepositorioAsigAppPerf.cs" />
     <Compile Include="Contratos\IRepositorioAsigAppUsuario.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Entidades\ClsMantenimientoAplicacion.cs" />
     <Compile Include="Entidades\ClsEmpleado.cs" />
     <Compile Include="Entidades\ClsModulo.cs" />
+    <Compile Include="Entidades\ClsRecuperacionContrasena.cs" />
     <Compile Include="Entidades\ClsRoles.cs" />
     <Compile Include="Entidades\ClsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="Repositorios\ClsRepositorioAsigAppPerf.cs" />
     <Compile Include="Repositorios\ClsRepositorioEmpleado.cs" />
     <Compile Include="Repositorios\ClsRepositorioModulo.cs" />
+    <Compile Include="Repositorios\ClsRepositorioRecuperacionContrasena.cs" />
     <Compile Include="Repositorios\ClsRepositorioRoles.cs" />
     <Compile Include="Repositorios\ClsRepositorioUsuarios.cs" />
     <Compile Include="Repositorios\ClsSentencias.cs" />
