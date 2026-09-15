@@ -1,4 +1,5 @@
 using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad;
 using CapaVista_Seguridad.Ayudas;
 using System;
@@ -16,6 +17,10 @@ namespace CapaVista_Seguridad
     public partial class FrmMantenimientoEmpleado : Form
     {
         private ClsModeloEmpleado _Empleado = new ClsModeloEmpleado();
+        private ClsPermisoAplicacion _MisPermisos;
+
+        private const int ID_MODULO = 4;       
+        private const int ID_APLICACION = 4;   
 
         public FrmMantenimientoEmpleado()
         {
@@ -26,6 +31,19 @@ namespace CapaVista_Seguridad
 
         private void FrmMantenimientoEmpleado_Load(object sender, EventArgs e)
         {
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+    {
+        { SeguridadBtnGuardar,   TipoPermiso.Insertar },
+        { SeguridadBtnModificar, TipoPermiso.Editar },
+        { SeguridadBtnEliminar,  TipoPermiso.Eliminar }
+    };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+                return;
+
             SeguridadMetListarEmpleados();
             SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
             SeguridadTxtCodigo.SelectionStart = SeguridadTxtCodigo.Text.Length;

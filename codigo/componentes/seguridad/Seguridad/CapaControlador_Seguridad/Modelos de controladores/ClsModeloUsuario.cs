@@ -1,4 +1,5 @@
-﻿using CapaModelo_Seguridad.Contratos;
+﻿using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
 using System;
@@ -6,8 +7,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaControlador_Seguridad
 {
@@ -19,6 +18,8 @@ namespace CapaControlador_Seguridad
         private string _ContrasenaUsuario;
         private DateTime _UltimoAccesoUsuario;
         private int _IsActive;
+        private string _NombreEmpleado;
+        private List<ClsRolInfo> _Roles = new List<ClsRolInfo>();
         private ClsRepositorioUsuarios _RepositorioUsuarios;
 
         public EstadoEntidad Estado { private get; set; }
@@ -42,6 +43,14 @@ namespace CapaControlador_Seguridad
 
         public DateTime UltimoAccesoUsuario { get => _UltimoAccesoUsuario; set => _UltimoAccesoUsuario = value; }
         public int IsActive { get => _IsActive; set => _IsActive = value; }
+
+        // Datos adicionales que deja cargados SeguridadMetIniciarSesion,
+        // para que el formulario los use al llamar a ClsSesionSeguridad.SeguridadMetIniciarSesion
+        public string NombreEmpleado { get => _NombreEmpleado; set => _NombreEmpleado = value; }
+
+        // Un usuario puede tener varios roles asignados (tblUsuarioRol permite
+        // varias filas por idUsuario), por eso es una lista y no un solo IdRol/NombreRol.
+        public List<ClsRolInfo> Roles { get => _Roles; set => _Roles = value; }
 
         public ClsModeloUsuario()
         {
@@ -121,13 +130,31 @@ namespace CapaControlador_Seguridad
                 new ClsEstadoEntidadValor { Texto = "Inactivo", Valor = 0 }
             };
         }
-        //Metodo para el inicio de sesión, que valida el nombre de usuario y la contraseña ingresados por el usuario.
+
+        // Metodo para el inicio de sesión: valida usuario/contraseña y,
+        // si es correcto, deja cargados en la instancia todos los datos
+        // que la Vista necesita para abrir ClsSesionSeguridad (incluye TODOS
+        // los roles del usuario, porque tblUsuarioRol permite más de uno).
         public bool SeguridadMetIniciarSesion(string NombreUsuario, string ContrasenaUsuario)
         {
             var resultado = _RepositorioUsuarios.SeguridadMetValidarLogin(NombreUsuario, ContrasenaUsuario);
             if (resultado != null)
             {
-                IdUsuario = resultado.IdUsuario;
+                _IdUsuario = resultado.IdUsuario;
+                _NombreUsuario = resultado.NombreUsuario;
+                _NombreEmpleado = resultado.NombreEmpleado;
+
+                _Roles = new List<ClsRolInfo>();
+                DataTable TablaRoles = _RepositorioUsuarios.SeguridadMetObtenerRolesPorUsuario(_IdUsuario);
+                foreach (DataRow Fila in TablaRoles.Rows)
+                {
+                    _Roles.Add(new ClsRolInfo
+                    {
+                        IdRol = Convert.ToInt32(Fila["idRol"]),
+                        NombreRol = Fila["nombreRol"].ToString()
+                    });
+                }
+
                 return true;
             }
             return false;

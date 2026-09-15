@@ -1,13 +1,12 @@
-﻿using System;
+﻿using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaModelo_Seguridad.Contratos;
+using CapaModelo_Seguridad.Entidades;
+using CapaModelo_Seguridad.Repositorios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaModelo_Seguridad.Contratos;
-using CapaModelo_Seguridad.Entidades;
-using CapaModelo_Seguridad.Repositorios;
 
 namespace CapaControlador_Seguridad
 {
@@ -137,6 +136,53 @@ namespace CapaControlador_Seguridad
         public IEnumerable<ClsModeloAsigAppPerf> SeguridadMetBuscarPorRol(int IdRol)
         {
             return _ListaAsigAppPerf.FindAll(e => e._IdRol == IdRol);
+        }
+
+        // Permisos para UN rol específico en un módulo y aplicación dados
+        public ClsPermisoAplicacion SeguridadMetObtenerPermisos(
+            int IdRol, int IdModulo, int IdAplicacion)
+        {
+            try
+            {
+                if (_ListaAsigAppPerf == null)
+                    SeguridadMetObtenerTodos();
+
+                var Registro = _ListaAsigAppPerf.Find(e =>
+                    e._IdRol == IdRol &&
+                    e._IdModulo == IdModulo &&
+                    e._IdAplicacion == IdAplicacion);
+
+                if (Registro == null)
+                    return new ClsPermisoAplicacion(); // sin permisos
+
+                return new ClsPermisoAplicacion
+                {
+                    TieneAcceso = true,
+                    PuedeInsertar = Registro._DerInsertar,
+                    PuedeEditar = Registro._DerEditar,
+                    PuedeEliminar = Registro._DerEliminar,
+                    PuedeImprimir = Registro._DerImprimir
+                };
+            }
+            catch (Exception)
+            {
+                return new ClsPermisoAplicacion(); 
+            }
+        }
+
+        // Permisos combinados de TODOS los roles del usuario en sesión
+        public ClsPermisoAplicacion SeguridadMetObtenerPermisosSesion(
+            int IdModulo, int IdAplicacion)
+        {
+            var PermisoCombinado = new ClsPermisoAplicacion();
+
+            foreach (int IdRol in ClsSesionSeguridad.IdsRoles)
+            {
+                var Permiso = SeguridadMetObtenerPermisos(IdRol, IdModulo, IdAplicacion);
+                PermisoCombinado = PermisoCombinado.SeguridadMetCombinar(Permiso);
+            }
+
+            return PermisoCombinado;
         }
     }
 }

@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaModelo_Seguridad.Repositorios
 {
@@ -17,9 +15,22 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Insert;
         private string _Delete;
         private string _Update;
-        // Consulta para validar el login del usuario
-        private string login = "SELECT idUsuario, idEmpleado, nombreUsuario, is_active " +
-     "FROM tblusuario WHERE nombreUsuario=? AND contrasenaUsuario=? AND is_active=1";
+
+        // Consulta para validar el login del usuario.
+        // Se agrega JOIN a tblempleado para traer el nombre completo del empleado,
+        // que la sesión (ClsSesionSeguridad) necesita mostrar en pantalla.
+        private string login = "SELECT u.idUsuario, u.idEmpleado, u.nombreUsuario, u.is_active, " +
+             "CONCAT(e.nombresEmpleado, ' ', e.apellidosEmpleado) AS nombreEmpleado " +
+             "FROM tblusuario u " +
+             "INNER JOIN tblempleado e ON u.idEmpleado = e.idEmpleado " +
+             "WHERE u.nombreUsuario=? AND u.contrasenaUsuario=? AND u.is_active=1";
+
+        // Consulta para traer TODOS los roles asignados a un usuario
+        // (tblUsuarioRol permite varias filas por idUsuario)
+        private string rolesPorUsuario = "SELECT ur.idRol, r.nombreRol " +
+             "FROM tblusuariorol ur " +
+             "INNER JOIN tblrol r ON ur.idRol = r.idRol " +
+             "WHERE ur.idUsuario=?";
 
         //Metodo para validar usuario y contraseña, retorna un objeto ClsUsuarios si es valido, de lo contrario retorna null
         public ClsUsuarios SeguridadMetValidarLogin(string usuario, string contrasena)
@@ -38,9 +49,22 @@ namespace CapaModelo_Seguridad.Repositorios
                 IdUsuario = Convert.ToInt32(row[0]),
                 IdEmpleado = Convert.ToInt32(row[1]),
                 NombreUsuario = row[2].ToString(),
-                IsActive = Convert.ToInt32(row[3])
+                IsActive = Convert.ToInt32(row[3]),
+                NombreEmpleado = row[4].ToString()
             };
         }
+
+        // Devuelve idRol + nombreRol de cada rol asignado al usuario.
+        // Lo consume ClsModeloUsuario.SeguridadMetIniciarSesion para armar
+        // la lista de ClsRolInfo que se guarda en ClsSesionSeguridad.
+        public DataTable SeguridadMetObtenerRolesPorUsuario(int idUsuario)
+        {
+            var Parametros = new List<OdbcParameter>();
+            Parametros.Add(new OdbcParameter("p_idUsuario", idUsuario));
+
+            return SeguridadMetEjecucionConsulta(rolesPorUsuario, CommandType.Text, Parametros);
+        }
+
         public ClsRepositorioUsuarios()
         {
             _SelectAll = "SELECT idUsuario"
