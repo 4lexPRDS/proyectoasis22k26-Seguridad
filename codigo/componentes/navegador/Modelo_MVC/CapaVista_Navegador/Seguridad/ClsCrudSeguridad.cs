@@ -5,13 +5,14 @@ using CapaControlador_Navegador; // <- esta es la unica capa que crudSeguridad d
 
 //-----------------------------------------------------
 // - Hecho por: Natali Sofía Montenegro Portillo 
-// - Carne: 0901-23-10017
+// - Ultima modificación: 14/09/2026
+// - Carne: 0901-23-10017 
 namespace CapaVista_Navegador
 {
     public class ClsCrudSeguridad
     {
         private string _Usuario;
-        private string _Modulo;
+        private string _Modulo;   //recibe datos
 
         // IMPORTANTE: aqui va ctrlPermiso (Controlador), NUNCA "permisos" (Modelo).
         // La Vista no debe conocer clases de CapaModelo_Navegador.
@@ -20,19 +21,20 @@ namespace CapaVista_Navegador
         public ClsCrudSeguridad(string Usuario, string Modulo)
         {
             this._Usuario = Usuario;
-            this._Modulo = Modulo;
+            this._Modulo = Modulo; //guardar info de controlado
         }
 
         public bool NavegadorFuncTieneAcceso()
         {
             if (string.IsNullOrEmpty(_Usuario) || string.IsNullOrEmpty(_Modulo))
             {
-                return true;
+                return true;  //verifica si no están vacios los campos
             }
 
+            //validaciones por try y catch
             try
             {
-                return _Permisos.NavegadorFuncValidarAcceso(_Usuario, _Modulo);   //validaciones por try y catch
+                return _Permisos.NavegadorFuncValidarAcceso(_Usuario, _Modulo);   //llama a la funcion de validar acceso
             }
             catch (Exception Excepcion)
             {
@@ -40,7 +42,7 @@ namespace CapaVista_Navegador
                     "Error al validar los permisos: " + Excepcion.Message,
                     "Error de seguridad",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    MessageBoxIcon.Warning);  //si no encuentra permisos, muestra error
 
                 return false;
             }
@@ -49,3 +51,6 @@ namespace CapaVista_Navegador
 }
 
 //--------------------------------------------------
+// - Final: Natali Sofía Montenegro Portillo 
+// - Carne: 0901-23-10017 
+// Clase que permite la validacion de permisos de un usuario sobre un módulo específico. 
