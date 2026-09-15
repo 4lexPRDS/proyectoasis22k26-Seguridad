@@ -1,5 +1,6 @@
 ﻿using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Modelos_de_controladores;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad;
 using CapaVista_Seguridad.Ayudas;
 using System;
@@ -18,6 +19,10 @@ namespace CapaVista_Seguridad
     public partial class FrmMantenimientoAplicacion : Form
     {
         private ClsModeloMantenimientoApp _ModeloMantenimientoApp = new ClsModeloMantenimientoApp();
+
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;
+        private const int ID_APLICACION = 7;
         public FrmMantenimientoAplicacion()
         {
             InitializeComponent();
@@ -27,6 +32,19 @@ namespace CapaVista_Seguridad
         {
             SeguridadMetCargarCombos();
             SeguridadMetListaAplicaciones();
+
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+            {
+                { SeguridadBtnGuardar, TipoPermiso.Insertar },
+                { SeguridadBtnModificar, TipoPermiso.Editar },
+                { SeguridadBtnEliminar, TipoPermiso.Eliminar }
+            };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso) 
+                return;
         }
 
         private void SeguridadMetCargarCombos()

@@ -1,4 +1,6 @@
-﻿using CapaControlador_Seguridad;
+﻿using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaVista_Seguridad.Ayudas;
+using CapaControlador_Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,16 +16,36 @@ namespace CapaVista_Seguridad
     public partial class FrmBitacora : Form
     {
         ClsModeloBitacora controladorBitacora = new ClsModeloBitacora();
+
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;
+        private const int ID_APLICACION = 12;
         public FrmBitacora()
         {
             InitializeComponent();
-            CargarBitacora(); // Cargar los datos al abrir el formulario
 
+            this.Load += FrmBitacora_Load;
             // Asignar eventos a los botones existentes
             this.btnVerBitacora.Click += new System.EventHandler(this.btnVerBitacora_Click);
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
         }
 
+        private void FrmBitacora_Load(object sender, EventArgs e)
+        {
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+            {
+                { btnVerBitacora, TipoPermiso.Imprimir }
+            };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+                return;
+
+            CargarBitacora();
+        }
+        
         private void CargarBitacora()
         {
             try

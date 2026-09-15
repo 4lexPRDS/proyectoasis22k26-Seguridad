@@ -1,7 +1,10 @@
-﻿using System;
+﻿using CapaVista_Seguridad.Ayudas;
+using System.Collections.Generic;
+using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using CapaControlador_Seguridad;
 
 namespace CapaVista_Seguridad
 {
@@ -11,11 +14,26 @@ namespace CapaVista_Seguridad
         private BindingSource bindingSource = new BindingSource();
         private bool esCargando = false;
 
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;      
+        private const int ID_APLICACION = 6;
+
         public FrmModulo()
         {
             InitializeComponent();
             CargarDatos();
             EstadoInicial();
+
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+                {
+                    { SeguridadBtnIngresar,   TipoPermiso.Insertar },
+                    { SeguridadBtnModificar, TipoPermiso.Editar },
+                    { SeguridadBtnEliminar, TipoPermiso.Eliminar },
+                    { SeguridadBtnImprimir,   TipoPermiso.Imprimir }                    
+                };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
         }
 
         #region Gestión de Datos

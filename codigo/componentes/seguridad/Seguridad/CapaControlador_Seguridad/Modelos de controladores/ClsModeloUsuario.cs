@@ -156,6 +156,15 @@ namespace CapaControlador_Seguridad
                     NombreRol = Fila["nombreRol"].ToString()
                 });
             }
+
+            ClsSesionSeguridad.SeguridadMetIniciarSesion(
+               _IdUsuario,
+               _NombreUsuario,
+               _NombreEmpleado,
+               _Roles
+            );
+           
+                
             ClsModeloBitacora.SeguridadMetRegistrarAccion("LOGIN", "tblUsuario", resultado.IdUsuario, "Inicio de sesión exitoso del usuario: " + resultado.NombreUsuario);
             return true;
         }
