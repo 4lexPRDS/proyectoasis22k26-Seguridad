@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace CapaVista_Consultas
 {
@@ -20,6 +21,12 @@ namespace CapaVista_Consultas
         private void ConsultasMetBtnComplejas(object sender, EventArgs e)
         {
             FrmConsultasComplejas FormularioConsultasComplejas = new FrmConsultasComplejas();
+
+            FormularioConsultasComplejas.FormClosed += (s, args) =>
+            {
+                Application.Exit();
+            };
+
             this.Hide();
             FormularioConsultasComplejas.Show();
         }

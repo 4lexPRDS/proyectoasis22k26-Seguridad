@@ -12,6 +12,11 @@ namespace CapaVista_Consultas
         private void ConsultasMetBtnSalir(object sender, EventArgs e)
         {
             FrmConsultasSimples FormularioConsultasSimples = new FrmConsultasSimples();
+            FormularioConsultasSimples.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
             this.Hide();
             FormularioConsultasSimples.Show();
         }
