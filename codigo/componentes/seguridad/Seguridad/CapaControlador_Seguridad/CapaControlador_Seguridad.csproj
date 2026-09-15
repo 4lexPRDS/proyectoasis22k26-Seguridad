@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos de controladores\ClsModeloAsigAppPerf.cs" />
+    <Compile Include="Modelos de controladores\ClsModeloAsigAppUsuario.cs" />
     <Compile Include="Modelos de controladores\ClsModeloEmpleado.cs" />
     <Compile Include="Modelos de controladores\ClsModeloMantenimientoApp.cs" />
     <Compile Include="Modelos de controladores\ClsModeloModulo.cs" />
