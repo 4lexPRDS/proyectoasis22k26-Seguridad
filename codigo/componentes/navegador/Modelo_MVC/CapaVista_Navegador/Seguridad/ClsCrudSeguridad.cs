@@ -54,3 +54,4 @@ namespace CapaVista_Navegador
 // - Final: Natali Sofía Montenegro Portillo 
 // - Carne: 0901-23-10017 
 // Clase que permite la validacion de permisos de un usuario sobre un módulo específico. 
+// Esta clase se encuentra en la capa de vista y utiliza el controlador ClsCtrlPermiso para realizar la validación.
