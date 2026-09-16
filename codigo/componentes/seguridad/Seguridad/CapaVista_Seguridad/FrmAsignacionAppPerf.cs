@@ -1,3 +1,4 @@
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaControlador_Seguridad;
 using CapaVista_Seguridad;
 using CapaVista_Seguridad.Ayudas;
@@ -17,13 +18,30 @@ namespace CapaVista_Seguridad
     {
         private ClsModeloAsigAppPerf _AsigAppPerf = new ClsModeloAsigAppPerf();
 
+        private ClsPermisoAplicacion _MisPermisos;
+        private const int ID_MODULO = 4;
+        private const int ID_APLICACION = 10;
+
         public FrmAsignacionAppPerf()
-        {
+        {   
             InitializeComponent();
         }
 
         private void FrmAsignacionAppPerf_Load(object sender, EventArgs e)
         {
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+            {
+                { BtnSeguridadAgregar,   TipoPermiso.Insertar },
+                { BtnSeguridadModificar, TipoPermiso.Editar   },
+                { BtnSeguridadQuitar,    TipoPermiso.Eliminar }
+            };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+             this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+            return;
+
             SeguridadMetCargarCombos();
             SeguridadMetConfigurarColumnas();
             SeguridadMetListarAsigAppPerf();
