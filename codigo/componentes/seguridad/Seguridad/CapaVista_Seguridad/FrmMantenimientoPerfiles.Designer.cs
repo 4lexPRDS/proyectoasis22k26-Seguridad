@@ -49,9 +49,6 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvListaRoles = new System.Windows.Forms.DataGridView();
             this.SeguridadLblSubtitulo = new System.Windows.Forms.Label();
             this.SeguridadLblTitulo = new System.Windows.Forms.Label();
-            this.SeguridadPbIconoPrincipal = new System.Windows.Forms.PictureBox();
-            this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
-            this.SeguridadPbBanner = new System.Windows.Forms.PictureBox();
             this.SeguridadFlpToolbar = new System.Windows.Forms.FlowLayoutPanel();
             this.SeguridadBtnIngresar = new System.Windows.Forms.Button();
             this.SeguridadBtnModificar = new System.Windows.Forms.Button();
@@ -67,13 +64,16 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin = new System.Windows.Forms.Button();
             this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadBtnSalir = new System.Windows.Forms.Button();
+            this.SeguridadPbIconoPrincipal = new System.Windows.Forms.PictureBox();
+            this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
+            this.SeguridadPbBanner = new System.Windows.Forms.PictureBox();
             this.SeguridadPnlFiltros.SuspendLayout();
             this.SeguridadPnlListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvListaRoles)).BeginInit();
+            this.SeguridadFlpToolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbIconoPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbBanner)).BeginInit();
-            this.SeguridadFlpToolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // SeguridadPnlFiltros
@@ -319,47 +319,6 @@ namespace CapaVista_Seguridad
             this.SeguridadLblTitulo.TabIndex = 9;
             this.SeguridadLblTitulo.Text = "Mantenimiento de Perfiles";
             // 
-            // SeguridadPbIconoPrincipal
-            // 
-            this.SeguridadPbIconoPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SeguridadPbIconoPrincipal.BackColor = System.Drawing.Color.Linen;
-            this.SeguridadPbIconoPrincipal.Image = global::CapaVista_Seguridad.Properties.Resources.icon_mantenimiento;
-            this.SeguridadPbIconoPrincipal.Location = new System.Drawing.Point(52, 44);
-            this.SeguridadPbIconoPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SeguridadPbIconoPrincipal.Name = "SeguridadPbIconoPrincipal";
-            this.SeguridadPbIconoPrincipal.Size = new System.Drawing.Size(140, 118);
-            this.SeguridadPbIconoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SeguridadPbIconoPrincipal.TabIndex = 13;
-            this.SeguridadPbIconoPrincipal.TabStop = false;
-            // 
-            // SeguridadPbMascota
-            // 
-            this.SeguridadPbMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SeguridadPbMascota.BackColor = System.Drawing.Color.Linen;
-            this.SeguridadPbMascota.Image = global::CapaVista_Seguridad.Properties.Resources._5;
-            this.SeguridadPbMascota.Location = new System.Drawing.Point(842, -8);
-            this.SeguridadPbMascota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SeguridadPbMascota.Name = "SeguridadPbMascota";
-            this.SeguridadPbMascota.Size = new System.Drawing.Size(235, 232);
-            this.SeguridadPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SeguridadPbMascota.TabIndex = 11;
-            this.SeguridadPbMascota.TabStop = false;
-            // 
-            // SeguridadPbBanner
-            // 
-            this.SeguridadPbBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SeguridadPbBanner.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadPbBanner.Image = global::CapaVista_Seguridad.Properties.Resources.banner;
-            this.SeguridadPbBanner.Location = new System.Drawing.Point(-8, -8);
-            this.SeguridadPbBanner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SeguridadPbBanner.Name = "SeguridadPbBanner";
-            this.SeguridadPbBanner.Size = new System.Drawing.Size(1542, 232);
-            this.SeguridadPbBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.SeguridadPbBanner.TabIndex = 8;
-            this.SeguridadPbBanner.TabStop = false;
-            // 
             // SeguridadFlpToolbar
             // 
             this.SeguridadFlpToolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(242)))));
@@ -382,7 +341,7 @@ namespace CapaVista_Seguridad
             this.SeguridadFlpToolbar.Name = "SeguridadFlpToolbar";
             this.SeguridadFlpToolbar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SeguridadFlpToolbar.Size = new System.Drawing.Size(1528, 116);
-            this.SeguridadFlpToolbar.TabIndex = 15;
+            this.SeguridadFlpToolbar.TabIndex = 5;
             this.SeguridadFlpToolbar.WrapContents = false;
             // 
             // SeguridadBtnIngresar
@@ -400,6 +359,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnIngresar.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnIngresar.TabIndex = 14;
             this.SeguridadBtnIngresar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnIngresar.Click += new System.EventHandler(this.SeguridadBtnIngresar_Click);
             // 
             // SeguridadBtnModificar
             // 
@@ -416,6 +376,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnModificar.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnModificar.TabIndex = 15;
             this.SeguridadBtnModificar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnModificar.Click += new System.EventHandler(this.SeguridadBtnModificar_Click);
             // 
             // SeguridadBtnGuardar
             // 
@@ -433,6 +394,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnGuardar.TabIndex = 16;
             this.SeguridadBtnGuardar.UseVisualStyleBackColor = true;
             this.SeguridadBtnGuardar.UseWaitCursor = true;
+            this.SeguridadBtnGuardar.Click += new System.EventHandler(this.SeguridadBtnGuardar_Click);
             // 
             // SeguridadBtnCancelar
             // 
@@ -449,6 +411,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnCancelar.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnCancelar.TabIndex = 17;
             this.SeguridadBtnCancelar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnCancelar.Click += new System.EventHandler(this.SeguridadBtnCancelar_Click);
             // 
             // SeguridadBtnEliminar
             // 
@@ -465,6 +428,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnEliminar.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnEliminar.TabIndex = 18;
             this.SeguridadBtnEliminar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnEliminar.Click += new System.EventHandler(this.SeguridadBtnEliminar_Click);
             // 
             // SeguridadBtnConsultar
             // 
@@ -513,6 +477,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnRefrescar.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnRefrescar.TabIndex = 21;
             this.SeguridadBtnRefrescar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnRefrescar.Click += new System.EventHandler(this.SeguridadBtnRefrescar_Click);
             // 
             // SeguridadBtnInicio
             // 
@@ -529,6 +494,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnInicio.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnInicio.TabIndex = 22;
             this.SeguridadBtnInicio.UseVisualStyleBackColor = false;
+            this.SeguridadBtnInicio.Click += new System.EventHandler(this.SeguridadBtnInicio_Click);
             // 
             // SeguridadBtnAnterior
             // 
@@ -545,6 +511,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAnterior.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnAnterior.TabIndex = 23;
             this.SeguridadBtnAnterior.UseVisualStyleBackColor = false;
+            this.SeguridadBtnAnterior.Click += new System.EventHandler(this.SeguridadBtnAnterior_Click);
             // 
             // SeguridadBtnSiguiente
             // 
@@ -561,6 +528,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSiguiente.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnSiguiente.TabIndex = 24;
             this.SeguridadBtnSiguiente.UseVisualStyleBackColor = false;
+            this.SeguridadBtnSiguiente.Click += new System.EventHandler(this.SeguridadBtnSiguiente_Click);
             // 
             // SeguridadBtnFin
             // 
@@ -577,6 +545,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnFin.TabIndex = 25;
             this.SeguridadBtnFin.UseVisualStyleBackColor = false;
+            this.SeguridadBtnFin.Click += new System.EventHandler(this.SeguridadBtnFin_Click);
             // 
             // SeguridadBtnAyuda
             // 
@@ -593,6 +562,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda.Size = new System.Drawing.Size(101, 95);
             this.SeguridadBtnAyuda.TabIndex = 26;
             this.SeguridadBtnAyuda.UseVisualStyleBackColor = false;
+            this.SeguridadBtnAyuda.Click += new System.EventHandler(this.SeguridadBtnAyuda_Click);
             // 
             // SeguridadBtnSalir
             // 
@@ -610,13 +580,53 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSalir.TabIndex = 27;
             this.SeguridadBtnSalir.UseVisualStyleBackColor = false;
             // 
+            // SeguridadPbIconoPrincipal
+            // 
+            this.SeguridadPbIconoPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SeguridadPbIconoPrincipal.BackColor = System.Drawing.Color.Linen;
+            this.SeguridadPbIconoPrincipal.Image = global::CapaVista_Seguridad.Properties.Resources.icon_mantenimiento;
+            this.SeguridadPbIconoPrincipal.Location = new System.Drawing.Point(52, 44);
+            this.SeguridadPbIconoPrincipal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SeguridadPbIconoPrincipal.Name = "SeguridadPbIconoPrincipal";
+            this.SeguridadPbIconoPrincipal.Size = new System.Drawing.Size(140, 118);
+            this.SeguridadPbIconoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SeguridadPbIconoPrincipal.TabIndex = 13;
+            this.SeguridadPbIconoPrincipal.TabStop = false;
+            // 
+            // SeguridadPbMascota
+            // 
+            this.SeguridadPbMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SeguridadPbMascota.BackColor = System.Drawing.Color.Linen;
+            this.SeguridadPbMascota.Image = global::CapaVista_Seguridad.Properties.Resources._5;
+            this.SeguridadPbMascota.Location = new System.Drawing.Point(842, -8);
+            this.SeguridadPbMascota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SeguridadPbMascota.Name = "SeguridadPbMascota";
+            this.SeguridadPbMascota.Size = new System.Drawing.Size(235, 232);
+            this.SeguridadPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SeguridadPbMascota.TabIndex = 11;
+            this.SeguridadPbMascota.TabStop = false;
+            // 
+            // SeguridadPbBanner
+            // 
+            this.SeguridadPbBanner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SeguridadPbBanner.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadPbBanner.Image = global::CapaVista_Seguridad.Properties.Resources.banner;
+            this.SeguridadPbBanner.Location = new System.Drawing.Point(-8, -8);
+            this.SeguridadPbBanner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SeguridadPbBanner.Name = "SeguridadPbBanner";
+            this.SeguridadPbBanner.Size = new System.Drawing.Size(1542, 232);
+            this.SeguridadPbBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeguridadPbBanner.TabIndex = 8;
+            this.SeguridadPbBanner.TabStop = false;
+            // 
             // FrmMantenimientoPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1546, 1186);
-            this.Controls.Add(this.SeguridadFlpToolbar);
             this.Controls.Add(this.SeguridadPbIconoPrincipal);
             this.Controls.Add(this.SeguridadPbMascota);
             this.Controls.Add(this.SeguridadLblSubtitulo);
@@ -624,6 +634,7 @@ namespace CapaVista_Seguridad
             this.Controls.Add(this.SeguridadPbBanner);
             this.Controls.Add(this.SeguridadPnlListado);
             this.Controls.Add(this.SeguridadPnlFiltros);
+            this.Controls.Add(this.SeguridadFlpToolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -637,10 +648,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlListado.ResumeLayout(false);
             this.SeguridadPnlListado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvListaRoles)).EndInit();
+            this.SeguridadFlpToolbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbIconoPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbBanner)).EndInit();
-            this.SeguridadFlpToolbar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,13 +672,6 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Label SeguridadLblSubtitulo;
         private System.Windows.Forms.Label SeguridadLblTitulo;
         private System.Windows.Forms.PictureBox SeguridadPbBanner;
-        private System.Windows.Forms.TextBox SeguridadTxtNombreRol;
-        private System.Windows.Forms.TextBox SeguridadTxtDescripcionRol;
-        private System.Windows.Forms.TextBox SeguridadTxtCodigoRol;
-        private System.Windows.Forms.Button SeguridadLblIconoFiltros;
-        private System.Windows.Forms.Button SeguridadLblIconoListado;
-        private System.Windows.Forms.PictureBox SeguridadPbIconoPrincipal;
-        private System.Windows.Forms.CheckBox SeguridadChkActivo;
         private System.Windows.Forms.FlowLayoutPanel SeguridadFlpToolbar;
         private System.Windows.Forms.Button SeguridadBtnIngresar;
         private System.Windows.Forms.Button SeguridadBtnModificar;
@@ -683,5 +687,12 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Button SeguridadBtnFin;
         private System.Windows.Forms.Button SeguridadBtnAyuda;
         private System.Windows.Forms.Button SeguridadBtnSalir;
+        private System.Windows.Forms.TextBox SeguridadTxtNombreRol;
+        private System.Windows.Forms.TextBox SeguridadTxtDescripcionRol;
+        private System.Windows.Forms.TextBox SeguridadTxtCodigoRol;
+        private System.Windows.Forms.Button SeguridadLblIconoFiltros;
+        private System.Windows.Forms.Button SeguridadLblIconoListado;
+        private System.Windows.Forms.PictureBox SeguridadPbIconoPrincipal;
+        private System.Windows.Forms.CheckBox SeguridadChkActivo;
     }
 }
