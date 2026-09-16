@@ -19,7 +19,6 @@ namespace CapaModelo_Seguridad.Repositorios
 
         public ClsRepositorioAsigUsuPerf()
         {
-            //esto debe estar igual a la base para que haga match tambien
             _SelectAll = "SELECT ur.idUsuario, ur.idRol, ur.fechaAsignacionUsuarioRol, ur.created_at, ur.updated_at, u.nombreUsuario, r.nombreRol " +
                          "FROM tblUsuarioRol ur " +
                          "INNER JOIN tblUsuario u ON ur.idUsuario = u.idUsuario " +

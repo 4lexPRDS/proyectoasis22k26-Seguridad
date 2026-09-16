@@ -16,14 +16,12 @@ namespace CapaVista_Seguridad
             SeguridadBtnCambiarContrasena.Click += SeguridadBtnCambiarContrasena_Click;
         }
 
-        // paso 2 deshabilitado mientras se hace el paso 1
         private void SeguridadMetIrAPasoUno()
         {
             SeguridadPnlEnviarCodigo.Enabled = true;
             SeguridadPnlVerificarCambiar.Enabled = false;
         }
 
-        // al pasar al paso 2, el paso 1 se deshabilita
         private void SeguridadMetIrAPasoDos()
         {
             SeguridadPnlEnviarCodigo.Enabled = false;

@@ -51,8 +51,6 @@ namespace CapaModelo_Seguridad.Repositorios
                 NombreEmpleado = row[5].ToString()
             };
         }
-
-        // Devuelve idRol + nombreRol de cada rol asignado al usuario.
         public DataTable SeguridadMetObtenerRolesPorUsuario(int idUsuario)
         {
             var Parametros = new List<OdbcParameter>();
@@ -76,7 +74,6 @@ namespace CapaModelo_Seguridad.Repositorios
 
             _Delete = "DELETE FROM tblusuario WHERE idUsuario=?";
 
-            // AGREGADO para recuperación de contraseña
             _UpdateContrasena = "UPDATE tblusuario SET contrasenaUsuario=? WHERE idUsuario=?";
         }
 
@@ -135,8 +132,6 @@ namespace CapaModelo_Seguridad.Repositorios
         {
             return SeguridadMetEjecucionConsulta("SELECT idEmpleado, nombresEmpleado FROM tblempleado", CommandType.Text);
         }
-
-        // AGREGADO para recuperación de contraseña
         public void SeguridadMetActualizarContrasena(int IdUsuario, string ContrasenaHasheada)
         {
             var Parametros = new List<OdbcParameter>();

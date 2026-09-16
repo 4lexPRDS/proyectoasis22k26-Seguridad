@@ -7,11 +7,7 @@ using System.Text;
 
 namespace CapaControlador_Seguridad
 {
-    // Paso 1 de la recuperación de contraseña: valida usuario+correo,
-    // respeta el cooldown de 1 minuto entre solicitudes, genera el código
-    // y lo envía. Es su propia clase (y no parte de ClsModeloCambiarContrasena)
-    // para que ClsValidacionDatos pueda validar el objeto completo sin
-    // chocar con los campos del paso 2.
+
     public class ClsModeloSolicitarCodigo
     {
         private const int _MinutosValidez = 5;
@@ -75,8 +71,6 @@ namespace CapaControlador_Seguridad
             return Mensaje;
         }
 
-        // Código alfanumérico de 6 caracteres (mayúsculas + dígitos, sin
-        // caracteres ambiguos tipo 0/O o 1/I para que sea fácil de transcribir).
         private string SeguridadMetGenerarCodigo()
         {
             const string Caracteres = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";

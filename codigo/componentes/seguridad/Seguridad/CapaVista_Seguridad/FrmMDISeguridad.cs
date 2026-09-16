@@ -49,11 +49,6 @@ namespace CapaVista_Seguridad
             catch { }
         }
 
-        private void SeguridadLblUsuariosRol_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             int Radio = 20;

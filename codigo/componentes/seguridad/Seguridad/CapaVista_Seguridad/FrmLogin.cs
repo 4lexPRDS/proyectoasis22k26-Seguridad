@@ -16,10 +16,6 @@ namespace CapaVista_Seguridad
     public partial class FrmLogin : Form
     {
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         public FrmLogin()
         {
             InitializeComponent();
@@ -50,14 +46,12 @@ namespace CapaVista_Seguridad
 
                 if (acceso)
                 {
-                    // ---- Guardar la sesión --------------------------------
                     ClsSesionSeguridad.SeguridadMetIniciarSesion(
                         idUsuario: modelo.IdUsuario,
                         nombreUsuario: modelo.NombreUsuario,
                         nombreEmpleado: modelo.NombreEmpleado,
                         roles: modelo.Roles
                     );
-                    // ---- Fin guardar sesión --------------------------------
 
                     this.Hide();
                     var frmPrincipal = new FrmSplash();
@@ -86,16 +80,6 @@ namespace CapaVista_Seguridad
             Recuperacion.ShowDialog();
 
             this.Show();
-        }
-
-        private void dgbConsultaTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
