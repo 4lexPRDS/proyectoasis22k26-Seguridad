@@ -19,8 +19,6 @@ namespace CapaModelo_Seguridad.Repositorios
             _SelectAll = "SELECT idModulo, nombreModulo, descripcionModulo, is_active FROM tblModulo";
             _Insert = "INSERT INTO tblModulo (nombreModulo, descripcionModulo, is_active) VALUES (?, ?, ?)";
             _Update = "UPDATE tblModulo SET nombreModulo=?, descripcionModulo=?, is_active=? WHERE idModulo=?";
-
-            // SE CAMBIÓ A BORRADO FÍSICO REAL:
             _Delete = "DELETE FROM tblModulo WHERE idModulo=?";
         }
 

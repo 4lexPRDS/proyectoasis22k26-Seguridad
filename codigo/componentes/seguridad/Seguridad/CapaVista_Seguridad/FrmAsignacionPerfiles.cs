@@ -16,8 +16,6 @@ namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionPerfiles : Form
     {
-        // Componente Seguridad, módulo Seguridad (4), aplicación
-        // "Asignación de Perfiles" (9) según el seed de dbSistemaEmbutidos_v1_7.
         private const int ID_MODULO = 4;
         private const int ID_APLICACION = 9;
 
@@ -41,7 +39,6 @@ namespace CapaVista_Seguridad
             _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
                 this, ID_MODULO, ID_APLICACION, MapaBotones);
 
-            // Si no puede eliminar, ocultamos la columna "Quitar" de perfiles ya asignados.
             if (dataGridViewPerfilesUsuario.Columns.Contains("ColQuitarConsulta"))
                 dataGridViewPerfilesUsuario.Columns["ColQuitarConsulta"].Visible =
                     _MisPermisos != null && _MisPermisos.PuedeEliminar;
@@ -55,7 +52,6 @@ namespace CapaVista_Seguridad
             dataGridViewAsignacion.CellClick += dataGridViewAsignacion_CellClick;
         }
 
-        // Helper para dar esquinas redondeadas a los paneles (mismo patrón usado en el módulo de Seguridad)
         private GraphicsPath SeguridadMetObtenerRectanguloRedondeado(Rectangle Limites, int Radio)
         {
             GraphicsPath RutaGrafica = new GraphicsPath();
@@ -324,7 +320,6 @@ namespace CapaVista_Seguridad
             int Exitosos = 0;
             int Total = dataGridViewAsignacion.Rows.Count;
 
-            // Se recorre una copia de las filas porque vamos a limpiar el grid al final.
             foreach (DataGridViewRow Fila in dataGridViewAsignacion.Rows)
             {
                 int idUsuario = Convert.ToInt32(Fila.Cells["ColIdUsuarioPend"].Value);
@@ -355,7 +350,6 @@ namespace CapaVista_Seguridad
             comboBoxUsuariosAsignacion.SelectedIndex = -1;
             comboBoxPerfilesAsignacion.SelectedIndex = -1;
 
-            // Si el usuario consultado es alguno de los recién asignados, refresca su lista.
             comboBoxUsuariosConsulta_SelectedIndexChanged(this, EventArgs.Empty);
         }
 

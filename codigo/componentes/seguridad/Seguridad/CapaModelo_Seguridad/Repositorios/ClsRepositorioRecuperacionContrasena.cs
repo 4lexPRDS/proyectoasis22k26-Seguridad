@@ -17,8 +17,6 @@ namespace CapaModelo_Seguridad.Repositorios
 
         public ClsRepositorioRecuperacionContrasena()
         {
-            //esto debe estar igual a la base para que haga match tambien
-            //tblUsuario no tiene correo, se cruza con tblEmpleado
             _BuscarUsuarioPorCorreo = "SELECT u.idUsuario FROM tblUsuario u"
                                      + " INNER JOIN tblEmpleado e ON e.idEmpleado = u.idEmpleado"
                                      + " WHERE u.nombreUsuario = ? AND e.correoEmpleado = ?"
@@ -33,8 +31,6 @@ namespace CapaModelo_Seguridad.Repositorios
 
             _Insert = "INSERT INTO tblRecuperacionContrasena (idUsuario, tokenRecuperacionContrasena, fechaExpiracionRecuperacionContrasena, usadoRecuperacionContrasena)"
                     + " VALUES (?, ?, ?, FALSE)";
-
-            // el token es UNIQUE en la tabla, no hace falta cruzar con tblUsuario
             _BuscarIdUsuarioPorToken = "SELECT idUsuario FROM tblRecuperacionContrasena"
                                       + " WHERE tokenRecuperacionContrasena = ?"
                                       + " AND usadoRecuperacionContrasena = FALSE"

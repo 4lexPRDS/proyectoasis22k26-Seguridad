@@ -217,7 +217,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " 2000 - Login";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.Click += new System.EventHandler(this.button1_Click);
             this.SeguridadPnlInterfazLogin.ResumeLayout(false);
             this.SeguridadPnlInterfazLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();

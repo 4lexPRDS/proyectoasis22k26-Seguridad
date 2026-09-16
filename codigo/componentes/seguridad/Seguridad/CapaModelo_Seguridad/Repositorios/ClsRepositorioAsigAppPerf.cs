@@ -18,8 +18,7 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Delete;
 
         public ClsRepositorioAsigAppPerf()
-        {
-                //esto debe estar igual a la base para que haga match tambein 
+        { 
                 _SelectAll = @"
         SELECT 
             p.idRol, r.nombreRol,

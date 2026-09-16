@@ -19,7 +19,6 @@ namespace CapaModelo_Seguridad.Repositorios
 
         public ClsRepositorioEmpleado()
         {
-            //esto debe estar igual a la base para que haga match tambein 
             _SelectAll = "SELECT * FROM tblEmpleado";
             _Insert = "INSERT INTO tblEmpleado VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT, DEFAULT)";
             _Update = "UPDATE tblEmpleado SET codigoEmpleado=?, dpiEmpleado=?, nitEmpleado=?, nombresEmpleado=?, apellidosEmpleado=?, puestoEmpleado=?, generoEmpleado=?, fechaNacimientoEmpleado=?, fechaContratacionEmpleado=?, telefonoEmpleado=?, correoEmpleado=? WHERE idEmpleado=?";

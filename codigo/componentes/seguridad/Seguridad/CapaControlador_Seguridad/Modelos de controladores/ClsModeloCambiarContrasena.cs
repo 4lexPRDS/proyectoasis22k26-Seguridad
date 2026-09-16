@@ -5,9 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CapaControlador_Seguridad
 {
-    // Paso 2 de la recuperación de contraseña: valida el código y, si es
-    // válido, actualiza la contraseña (hasheada con BCrypt). El token es
-    // UNIQUE en la tabla, así que no hace falta pedir el usuario aquí.
+
     public class ClsModeloCambiarContrasena
     {
         private IRepositorioRecuperacionContrasena _RepositorioRecuperacion;
@@ -16,8 +14,6 @@ namespace CapaControlador_Seguridad
         [Required(ErrorMessage = "Debe ingresar el código recibido por correo")]
         public string CodigoRecuperacion { get; set; }
 
-        // mismas reglas que ContrasenaUsuario en ClsModeloUsuario, para que
-        // quede estandarizado con el resto del sistema
         [Required(ErrorMessage = "Debe ingresar la nueva contraseña")]
         [RegularExpression(@"^\S+$", ErrorMessage = "La contraseña no debe contener espacios")]
         [StringLength(100, MinimumLength = 6)]

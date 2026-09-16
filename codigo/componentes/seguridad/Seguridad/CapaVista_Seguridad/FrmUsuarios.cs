@@ -13,9 +13,8 @@ namespace CapaVista_Seguridad
         private ClsModeloUsuario _Usuario = new ClsModeloUsuario();
         private ClsPermisoAplicacion _MisPermisos;
 
-        // Ajusta estos valores a los idModulo / idAplicacion reales de "Usuarios"
-        private const int ID_MODULO = 4;       // Seguridad
-        private const int ID_APLICACION = 5;   // Usuarios
+        private const int ID_MODULO = 4;       
+        private const int ID_APLICACION = 5;  
 
         public FrmUsuarios()
         {
@@ -31,15 +30,14 @@ namespace CapaVista_Seguridad
                     { btnGuardar,   TipoPermiso.Insertar },
                     { btnModificar, TipoPermiso.Editar },
                     { btnReporte,   TipoPermiso.Imprimir }
-                    // btnLimpiar y btnSalir NO dependen de permisos,
-                    // quedan siempre habilitados si hay acceso al form
+
                 };
 
                 _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
                     this, ID_MODULO, ID_APLICACION, MapaBotones);
 
                 if (!_MisPermisos.TieneAcceso)
-                    return; // el helper ya deshabilitó todo el form y mostró el mensaje
+                    return;
 
                 SeguridadMetListarUsuarios();
                 SeguridadMetCargarCombos();
@@ -98,9 +96,6 @@ namespace CapaVista_Seguridad
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Bloqueo defensivo: aunque el botón esté deshabilitado en pantalla,
-            // esto evita que se ejecute la acción si se invoca por otro medio
-            // (ej. atajo de teclado, código, etc.)
             if (!_MisPermisos.PuedeInsertar)
             {
                 MessageBox.Show("No tienes permiso para agregar usuarios.",
@@ -123,7 +118,6 @@ namespace CapaVista_Seguridad
                     string Resultado = _Usuario.SeguridadMetGrabarCambios();
                     MessageBox.Show(Resultado);
                     SeguridadMetListarUsuarios();
-                    //Reinicio();
                 }
             }
             catch (Exception Ex)
@@ -140,8 +134,6 @@ namespace CapaVista_Seguridad
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // TODO: lógica de modificar (pendiente de implementar)
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
@@ -152,8 +144,6 @@ namespace CapaVista_Seguridad
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // TODO: lógica de reporte (pendiente de implementar)
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

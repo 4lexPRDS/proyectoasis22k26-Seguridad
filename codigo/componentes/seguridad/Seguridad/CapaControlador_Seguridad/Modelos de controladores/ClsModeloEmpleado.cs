@@ -187,9 +187,5 @@ namespace CapaControlador_Seguridad
         {
             return _ListaEmpleado.FindAll(e => e._IdEmpleado == IdEmpleado);
         }
-     
-
-
-
     }
 }

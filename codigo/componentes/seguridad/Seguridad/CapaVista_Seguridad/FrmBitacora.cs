@@ -25,7 +25,6 @@ namespace CapaVista_Seguridad
             InitializeComponent();
 
             this.Load += FrmBitacora_Load;
-            // Asignar eventos a los botones existentes
             this.btnVerBitacora.Click += new System.EventHandler(this.btnVerBitacora_Click);
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
         }
@@ -54,7 +53,6 @@ namespace CapaVista_Seguridad
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = lista;
 
-                // Ajustar visualización de las columnas si existen
                 if (dataGridView1.Columns.Count > 0)
                 {
                     dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);

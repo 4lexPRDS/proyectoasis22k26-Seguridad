@@ -8,8 +8,6 @@ namespace CapaModelo_Seguridad.Entidades
 {
     public class ClsEmpleado
     {
-        //IMPORTANTE TODOS ESTOS CAMPOS DEBEN SER IGUAL A COMO
-        //LO TENGAN EN SU BASE DE DATOS PARA QUE HAGAN MATCH
         public int IdEmpleado { get; set; }
         public string CodigoEmpleado { get; set; }
         public string DpiEmpleado { get; set; }
