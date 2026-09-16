@@ -49,12 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ayudas\ClsSeguridadFormHelper.cs" />
-    <Compile Include="FrmAsignacionPerfiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAsignacionPerfiles.Designer.cs">
-      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ayudas\ClsValidacionDatos.cs" />
     <Compile Include="FrmAsignacionAplicacionUsuario.cs">
       <SubType>Form</SubType>
@@ -67,6 +61,12 @@
     </Compile>
     <Compile Include="FrmAsignacionAppPerf.Designer.cs">
       <DependentUpon>FrmAsignacionAppPerf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAsignacionPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAsignacionPerfiles.Designer.cs">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBitacora.cs">
       <SubType>Form</SubType>
@@ -136,14 +136,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAsignacionPerfiles.resx">
-      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignacionAplicacionUsuario.resx">
       <DependentUpon>FrmAsignacionAplicacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignacionAppPerf.resx">
       <DependentUpon>FrmAsignacionAppPerf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAsignacionPerfiles.resx">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
