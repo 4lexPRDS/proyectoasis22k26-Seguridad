@@ -1,4 +1,4 @@
-﻿using CapaControlador_Seguridad;
+using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;
@@ -22,10 +22,10 @@ namespace CapaVista_Seguridad
             this.Load += FrmMDISeguridad_Load;
         }
 
-        // ---- Mostrar usuario/rol conectado -----------------------------
         private void FrmMDISeguridad_Load(object sender, EventArgs e)
         {
             SeguridadMetActualizarInfoUsuario();
+            SeguridadMetCargarKPIs();
         }
 
         private void SeguridadMetActualizarInfoUsuario()
@@ -34,18 +34,29 @@ namespace CapaVista_Seguridad
             SeguridadLblUsuarioRol.Text = $"Rol: {ClsSesionSeguridad.SeguridadMetRolesComoTexto()}";
         }
 
-        // El Designer.cs todavía engancha el evento Click de uno de los labels
-        // a este método (quedó de cuando era un solo label). Se deja vacío
-        // para que compile; bórralo del diseñador si no lo necesitas.
+        private void SeguridadMetCargarKPIs()
+        {
+            try
+            {
+                var Dashboard = new ClsModeloDashboard();
+                SeguridadLblKPIResp1.Text = Dashboard.SeguridadMetUsuarios().ToString();
+                SeguridadLblKPIResp2.Text = Dashboard.SeguridadMetAplicaciones().ToString();
+                SeguridadLblKPIResp3.Text = Dashboard.SeguridadMetPerfiles().ToString();
+                SeguridadLblKPIResp4.Text = Dashboard.SeguridadMetModulos().ToString();
+                SeguridadLblKPIResp5.Text = Dashboard.SeguridadMetBitacora().ToString();
+                SeguridadLblKPIResp6.Text = Dashboard.SeguridadMetAsignaciones().ToString();
+            }
+            catch { }
+        }
+
         private void SeguridadLblUsuariosRol_Click(object sender, EventArgs e)
         {
 
         }
-        // ---- Fin mostrar usuario/rol conectado -------------------------
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            int Radio = 20; // ajusta el radio como quieras
+            int Radio = 20;
             SeguridadPnlDashboard.Region = new Region(SeguridadMetRedondearEsquinas(SeguridadPnlDashboard.ClientRectangle, Radio));
         }
 
@@ -54,10 +65,10 @@ namespace CapaVista_Seguridad
             GraphicsPath RutaGrafica = new GraphicsPath();
             int Diametro = Radio * 2;
 
-            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Y, Diametro, Diametro, 180, 90); // esquina superior izquierda
-            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Y, Diametro, Diametro, 270, 90); // superior derecha
-            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Bottom - Diametro, Diametro, Diametro, 0, 90); // inferior derecha
-            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Bottom - Diametro, Diametro, Diametro, 90, 90); // inferior izquierda
+            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Y, Diametro, Diametro, 180, 90);
+            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Y, Diametro, Diametro, 270, 90);
+            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Bottom - Diametro, Diametro, Diametro, 0, 90);
+            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Bottom - Diametro, Diametro, Diametro, 90, 90);
             RutaGrafica.CloseFigure();
 
             return RutaGrafica;
@@ -107,7 +118,7 @@ namespace CapaVista_Seguridad
                 SeguridadPnlDashboard.Location = new Point(200, 52);
                 SeguridadBtnBurger.Location = new Point(220, 13);
                 SeguridadLblUsuario.Location = new Point(285, 19);
-                SeguridadLblUsuarioRol.Location = new Point(285, 39); // ajusta el Y según tu diseño
+                SeguridadLblUsuarioRol.Location = new Point(285, 39);
             }
             else
             {
@@ -115,7 +126,7 @@ namespace CapaVista_Seguridad
                 SeguridadPnlDashboard.Location = new Point(307, 52);
                 SeguridadBtnBurger.Location = new Point(323, 13);
                 SeguridadLblUsuario.Location = new Point(390, 19);
-                SeguridadLblUsuarioRol.Location = new Point(390, 39); // ajusta el Y según tu diseño
+                SeguridadLblUsuarioRol.Location = new Point(390, 39);
             }
         }
 
