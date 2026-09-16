@@ -65,6 +65,7 @@
     <Compile Include="Repositorios\ClsRepositorioAsigAppUsuario.cs" />
     <Compile Include="Repositorios\ClsRepositorioAsigUsuPerf.cs" />
     <Compile Include="Repositorios\ClsRepositorioBitacora.cs" />
+    <Compile Include="Repositorios\ClsRepositorioDashboard.cs" />
     <Compile Include="Repositorios\ClsRepositorioMantenimientoApp.cs" />
     <Compile Include="Repositorios\ClsConexion.cs" />
     <Compile Include="Repositorios\ClsRepositorioAsigAppPerf.cs" />

@@ -84,6 +84,7 @@
     <Compile Include="Modelos de controladores\ClsModeloAsigUsuPerf.cs" />
     <Compile Include="Modelos de controladores\ClsModeloBitacora.cs" />
     <Compile Include="Modelos de controladores\ClsModeloCambiarContrasena.cs" />
+    <Compile Include="Modelos de controladores\ClsModeloDashboard.cs" />
     <Compile Include="Modelos de controladores\ClsModeloEmpleado.cs" />
     <Compile Include="Modelos de controladores\ClsModeloMantenimientoApp.cs" />
     <Compile Include="Modelos de controladores\ClsModeloModulo.cs" />
