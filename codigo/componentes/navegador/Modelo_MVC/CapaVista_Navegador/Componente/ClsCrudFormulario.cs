@@ -460,6 +460,7 @@ namespace CapaVista_Navegador
                 _Controles[Campo].Focus();
             }
         }
+
         //Cierra y elimina el panel de registro del formulario para seguir con la navegacion normal del formulario
         public void NavegadorMetCerrar()
         {
@@ -476,5 +477,6 @@ namespace CapaVista_Navegador
         }
     }
 }
+
 // Diego Alejandro Cheng Peña 0901-22-8091 
 // Fecha actual : 14/09/2026
