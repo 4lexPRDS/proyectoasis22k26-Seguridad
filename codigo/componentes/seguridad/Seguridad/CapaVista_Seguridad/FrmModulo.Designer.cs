@@ -41,8 +41,10 @@
             this.SeguridadLblEstado = new System.Windows.Forms.Label();
             this.SeguridadChkEstado = new System.Windows.Forms.CheckBox();
             this.SeguridadDgvModulos = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlBarraHerramientas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraHerramientas
@@ -64,7 +66,7 @@
             this.pnlBarraHerramientas.Controls.Add(this.SeguridadBtnSalir);
             this.pnlBarraHerramientas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraHerramientas.Location = new System.Drawing.Point(0, 0);
-            this.pnlBarraHerramientas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlBarraHerramientas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBarraHerramientas.Name = "pnlBarraHerramientas";
             this.pnlBarraHerramientas.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.pnlBarraHerramientas.Size = new System.Drawing.Size(813, 69);
@@ -326,18 +328,20 @@
             // SeguridadLblIdModulo
             // 
             this.SeguridadLblIdModulo.AutoSize = true;
+            this.SeguridadLblIdModulo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblIdModulo.Location = new System.Drawing.Point(15, 83);
             this.SeguridadLblIdModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblIdModulo.Name = "SeguridadLblIdModulo";
-            this.SeguridadLblIdModulo.Size = new System.Drawing.Size(60, 13);
+            this.SeguridadLblIdModulo.Size = new System.Drawing.Size(61, 13);
             this.SeguridadLblIdModulo.TabIndex = 14;
             this.SeguridadLblIdModulo.Text = "Id Módulo :";
             // 
             // SeguridadTxtIdModulo
             // 
             this.SeguridadTxtIdModulo.BackColor = System.Drawing.Color.White;
+            this.SeguridadTxtIdModulo.Enabled = false;
             this.SeguridadTxtIdModulo.Location = new System.Drawing.Point(81, 80);
-            this.SeguridadTxtIdModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtIdModulo.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtIdModulo.Name = "SeguridadTxtIdModulo";
             this.SeguridadTxtIdModulo.ReadOnly = true;
             this.SeguridadTxtIdModulo.Size = new System.Drawing.Size(68, 20);
@@ -346,6 +350,7 @@
             // SeguridadLblNombreModulo
             // 
             this.SeguridadLblNombreModulo.AutoSize = true;
+            this.SeguridadLblNombreModulo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblNombreModulo.Location = new System.Drawing.Point(165, 83);
             this.SeguridadLblNombreModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblNombreModulo.Name = "SeguridadLblNombreModulo";
@@ -356,7 +361,7 @@
             // SeguridadTxtNombreModulo
             // 
             this.SeguridadTxtNombreModulo.Location = new System.Drawing.Point(254, 80);
-            this.SeguridadTxtNombreModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtNombreModulo.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtNombreModulo.Name = "SeguridadTxtNombreModulo";
             this.SeguridadTxtNombreModulo.Size = new System.Drawing.Size(151, 20);
             this.SeguridadTxtNombreModulo.TabIndex = 17;
@@ -364,17 +369,18 @@
             // SeguridadLblDescripcion
             // 
             this.SeguridadLblDescripcion.AutoSize = true;
+            this.SeguridadLblDescripcion.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblDescripcion.Location = new System.Drawing.Point(418, 83);
             this.SeguridadLblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
-            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(69, 13);
+            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(68, 13);
             this.SeguridadLblDescripcion.TabIndex = 18;
             this.SeguridadLblDescripcion.Text = "Descripción :";
             // 
             // SeguridadTxtDescripcion
             // 
             this.SeguridadTxtDescripcion.Location = new System.Drawing.Point(488, 80);
-            this.SeguridadTxtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtDescripcion.Name = "SeguridadTxtDescripcion";
             this.SeguridadTxtDescripcion.Size = new System.Drawing.Size(211, 20);
             this.SeguridadTxtDescripcion.TabIndex = 19;
@@ -382,18 +388,19 @@
             // SeguridadLblEstado
             // 
             this.SeguridadLblEstado.AutoSize = true;
+            this.SeguridadLblEstado.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblEstado.Location = new System.Drawing.Point(712, 83);
             this.SeguridadLblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblEstado.Name = "SeguridadLblEstado";
-            this.SeguridadLblEstado.Size = new System.Drawing.Size(46, 13);
+            this.SeguridadLblEstado.Size = new System.Drawing.Size(47, 13);
             this.SeguridadLblEstado.TabIndex = 20;
             this.SeguridadLblEstado.Text = "Estado :";
             // 
             // SeguridadChkEstado
             // 
             this.SeguridadChkEstado.AutoSize = true;
-            this.SeguridadChkEstado.Location = new System.Drawing.Point(758, 81);
-            this.SeguridadChkEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadChkEstado.Location = new System.Drawing.Point(765, 84);
+            this.SeguridadChkEstado.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadChkEstado.Name = "SeguridadChkEstado";
             this.SeguridadChkEstado.Size = new System.Drawing.Size(15, 14);
             this.SeguridadChkEstado.TabIndex = 21;
@@ -413,14 +420,24 @@
             this.SeguridadDgvModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SeguridadDgvModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SeguridadDgvModulos.EnableHeadersVisualStyles = false;
-            this.SeguridadDgvModulos.Location = new System.Drawing.Point(15, 114);
-            this.SeguridadDgvModulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadDgvModulos.Location = new System.Drawing.Point(8, 116);
+            this.SeguridadDgvModulos.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadDgvModulos.Name = "SeguridadDgvModulos";
             this.SeguridadDgvModulos.ReadOnly = true;
             this.SeguridadDgvModulos.RowHeadersWidth = 30;
-            this.SeguridadDgvModulos.Size = new System.Drawing.Size(783, 276);
+            this.SeguridadDgvModulos.Size = new System.Drawing.Size(743, 276);
             this.SeguridadDgvModulos.TabIndex = 22;
             this.SeguridadDgvModulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeguridadDgvModulos_CellClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources._3;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(754, 348);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 63);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmModulo
             // 
@@ -428,6 +445,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
             this.ClientSize = new System.Drawing.Size(813, 414);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlBarraHerramientas);
             this.Controls.Add(this.SeguridadLblIdModulo);
             this.Controls.Add(this.SeguridadTxtIdModulo);
@@ -439,13 +457,14 @@
             this.Controls.Add(this.SeguridadChkEstado);
             this.Controls.Add(this.SeguridadDgvModulos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmModulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2006 - MantenimientoModulo";
             this.pnlBarraHerramientas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +497,6 @@
         private System.Windows.Forms.Label SeguridadLblEstado;
         private System.Windows.Forms.CheckBox SeguridadChkEstado;
         private System.Windows.Forms.DataGridView SeguridadDgvModulos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

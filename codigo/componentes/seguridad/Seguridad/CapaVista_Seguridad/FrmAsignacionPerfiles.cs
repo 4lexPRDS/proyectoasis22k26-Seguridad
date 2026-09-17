@@ -79,15 +79,6 @@ namespace CapaVista_Seguridad
             panelAsignacion.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelAsignacion.ClientRectangle, 18));
         }
 
-        private void panelIconConsulta_Paint(object sender, PaintEventArgs e)
-        {
-            panelIconConsulta.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelIconConsulta.ClientRectangle, 10));
-        }
-
-        private void panelIconAsignacion_Paint(object sender, PaintEventArgs e)
-        {
-            panelIconAsignacion.Region = new Region(SeguridadMetObtenerRectanguloRedondeado(panelIconAsignacion.ClientRectangle, 10));
-        }
 
         #region Configuración de columnas (mismo patrón que FrmAsignacionAppPerf: columnas ocultas para los Id)
 
