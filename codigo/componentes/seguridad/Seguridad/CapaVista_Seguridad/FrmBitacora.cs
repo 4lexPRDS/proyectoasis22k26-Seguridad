@@ -1,4 +1,4 @@
-﻿using AplicacionPerfiles;
+﻿using CapaControlador_Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ventana_Bitacora_Seguridad
+namespace CapaVista_Seguridad
 {
     public partial class FrmBitacora : Form
     {
@@ -20,10 +20,8 @@ namespace Ventana_Bitacora_Seguridad
 
         private void btnBuscarAccion_Click(object sender, EventArgs e)
         {
-
-            AsignacionPerfiles form = new AsignacionPerfiles();
-            form.Show();
-
+            FrmAsignacionPerfiles Formulario = new FrmAsignacionPerfiles();
+            Formulario.Show();
         }
     }
 }
