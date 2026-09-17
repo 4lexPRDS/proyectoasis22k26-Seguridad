@@ -52,7 +52,6 @@ namespace CapaControlador_Seguridad
                     }
                 }
 
-                // si pasó el cooldown, el código anterior deja de servir de inmediato
                 _RepositorioRecuperacion.SeguridadMetEliminarPorUsuario(IdUsuario.Value);
 
                 var Codigo = SeguridadMetGenerarCodigo();

@@ -43,7 +43,7 @@ namespace CapaControlador_Seguridad
                 var ContrasenaHasheada = BCrypt.Net.BCrypt.HashPassword(NuevaContrasena);
                 _RepositorioUsuarios.SeguridadMetActualizarContrasena(IdUsuario.Value, ContrasenaHasheada);
 
-                // el código ya se usó, que no quede pendiente en la bd
+                
                 _RepositorioRecuperacion.SeguridadMetEliminarPorUsuario(IdUsuario.Value);
 
                 Mensaje = "Contrasena actualizada";
