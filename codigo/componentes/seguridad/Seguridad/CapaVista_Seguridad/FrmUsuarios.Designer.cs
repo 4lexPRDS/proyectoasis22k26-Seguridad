@@ -53,9 +53,10 @@ namespace CapaVista_Seguridad
             this.lblTitulo.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblTitulo.Location = new System.Drawing.Point(227, 46);
+            this.lblTitulo.Location = new System.Drawing.Point(170, 37);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(192, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(145, 30);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Crear Usuario";
             // 
@@ -64,9 +65,10 @@ namespace CapaVista_Seguridad
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEmpleado.Location = new System.Drawing.Point(16, 30);
+            this.lblEmpleado.Location = new System.Drawing.Point(12, 24);
+            this.lblEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(95, 23);
+            this.lblEmpleado.Size = new System.Drawing.Size(73, 17);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado:";
             // 
@@ -75,10 +77,10 @@ namespace CapaVista_Seguridad
             this.cboEmpleado.BackColor = System.Drawing.SystemColors.Control;
             this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpleado.FormattingEnabled = true;
-            this.cboEmpleado.Location = new System.Drawing.Point(136, 30);
-            this.cboEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboEmpleado.Location = new System.Drawing.Point(102, 24);
+            this.cboEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.cboEmpleado.Name = "cboEmpleado";
-            this.cboEmpleado.Size = new System.Drawing.Size(383, 24);
+            this.cboEmpleado.Size = new System.Drawing.Size(288, 21);
             this.cboEmpleado.TabIndex = 3;
             // 
             // lblIdEmpleado
@@ -86,9 +88,10 @@ namespace CapaVista_Seguridad
             this.lblIdEmpleado.AutoSize = true;
             this.lblIdEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblIdEmpleado.Location = new System.Drawing.Point(16, 66);
+            this.lblIdEmpleado.Location = new System.Drawing.Point(12, 54);
+            this.lblIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(111, 23);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(85, 17);
             this.lblIdEmpleado.TabIndex = 4;
             this.lblIdEmpleado.Text = "Id Empleado";
             // 
@@ -96,11 +99,11 @@ namespace CapaVista_Seguridad
             // 
             this.txtIdEmpleado.BackColor = System.Drawing.Color.Gainsboro;
             this.txtIdEmpleado.Enabled = false;
-            this.txtIdEmpleado.Location = new System.Drawing.Point(136, 66);
-            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(102, 54);
+            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.ReadOnly = true;
-            this.txtIdEmpleado.Size = new System.Drawing.Size(80, 22);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(61, 20);
             this.txtIdEmpleado.TabIndex = 5;
             this.txtIdEmpleado.TabStop = false;
             // 
@@ -109,29 +112,31 @@ namespace CapaVista_Seguridad
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblContrasena.Location = new System.Drawing.Point(16, 153);
+            this.lblContrasena.Location = new System.Drawing.Point(12, 124);
+            this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(104, 23);
+            this.lblContrasena.Size = new System.Drawing.Size(81, 17);
             this.lblContrasena.TabIndex = 6;
             this.lblContrasena.Text = "Contraseña:";
             // 
             // txtContrasena
             // 
             this.txtContrasena.BackColor = System.Drawing.Color.White;
-            this.txtContrasena.Location = new System.Drawing.Point(136, 153);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.Location = new System.Drawing.Point(102, 124);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(384, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(289, 20);
             this.txtContrasena.TabIndex = 7;
             // 
             // lblConfirmarContrasena
             // 
             this.lblConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(16, 192);
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(12, 156);
+            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(112, 42);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(84, 34);
             this.lblConfirmarContrasena.TabIndex = 8;
             this.lblConfirmarContrasena.Text = "Confirmar Contraseña:";
             this.lblConfirmarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,11 +145,11 @@ namespace CapaVista_Seguridad
             // txtConfirmarContrasena
             // 
             this.txtConfirmarContrasena.BackColor = System.Drawing.Color.White;
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(136, 208);
-            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(102, 169);
+            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.PasswordChar = '*';
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(376, 22);
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(283, 20);
             this.txtConfirmarContrasena.TabIndex = 9;
             // 
             // pnlIngresoDatos
@@ -162,18 +167,18 @@ namespace CapaVista_Seguridad
             this.pnlIngresoDatos.Controls.Add(this.txtConfirmarContrasena);
             this.pnlIngresoDatos.Controls.Add(this.lblContrasena);
             this.pnlIngresoDatos.Controls.Add(this.lblConfirmarContrasena);
-            this.pnlIngresoDatos.Location = new System.Drawing.Point(224, 80);
-            this.pnlIngresoDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlIngresoDatos.Location = new System.Drawing.Point(168, 65);
+            this.pnlIngresoDatos.Margin = new System.Windows.Forms.Padding(2);
             this.pnlIngresoDatos.Name = "pnlIngresoDatos";
-            this.pnlIngresoDatos.Size = new System.Drawing.Size(541, 304);
+            this.pnlIngresoDatos.Size = new System.Drawing.Size(406, 247);
             this.pnlIngresoDatos.TabIndex = 16;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(136, 103);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsuario.Location = new System.Drawing.Point(102, 84);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(376, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(283, 20);
             this.txtUsuario.TabIndex = 13;
             // 
             // lblUsuario
@@ -181,9 +186,10 @@ namespace CapaVista_Seguridad
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblUsuario.Location = new System.Drawing.Point(16, 103);
+            this.lblUsuario.Location = new System.Drawing.Point(12, 84);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(55, 17);
             this.lblUsuario.TabIndex = 12;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -192,9 +198,10 @@ namespace CapaVista_Seguridad
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEstado.Location = new System.Drawing.Point(24, 262);
+            this.lblEstado.Location = new System.Drawing.Point(18, 213);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(63, 23);
+            this.lblEstado.Size = new System.Drawing.Size(49, 17);
             this.lblEstado.TabIndex = 10;
             this.lblEstado.Text = "Estado";
             // 
@@ -203,34 +210,34 @@ namespace CapaVista_Seguridad
             this.cboEstado.BackColor = System.Drawing.SystemColors.Control;
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(144, 262);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboEstado.Location = new System.Drawing.Point(108, 213);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(88, 24);
+            this.cboEstado.Size = new System.Drawing.Size(67, 21);
             this.cboEstado.TabIndex = 11;
             // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(72, 423);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUsuarios.Location = new System.Drawing.Point(54, 344);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(752, 217);
+            this.dgvUsuarios.Size = new System.Drawing.Size(564, 176);
             this.dgvUsuarios.TabIndex = 21;
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
             this.btnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(840, 263);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModificar.Location = new System.Drawing.Point(619, 195);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(65, 75);
+            this.btnModificar.Size = new System.Drawing.Size(60, 60);
             this.btnModificar.TabIndex = 20;
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
@@ -238,27 +245,27 @@ namespace CapaVista_Seguridad
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(840, 487);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Location = new System.Drawing.Point(630, 396);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(65, 68);
+            this.btnSalir.Size = new System.Drawing.Size(60, 60);
             this.btnSalir.TabIndex = 14;
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
             // btnReporte
             // 
-            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.BackColor = System.Drawing.Color.White;
             this.btnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
-            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(840, 71);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReporte.Location = new System.Drawing.Point(619, 50);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(65, 70);
+            this.btnReporte.Size = new System.Drawing.Size(60, 60);
             this.btnReporte.TabIndex = 11;
             this.btnReporte.UseVisualStyleBackColor = false;
             // 
@@ -266,13 +273,13 @@ namespace CapaVista_Seguridad
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
             this.btnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
-            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(840, 368);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Location = new System.Drawing.Point(619, 264);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(65, 75);
+            this.btnLimpiar.Size = new System.Drawing.Size(60, 60);
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
@@ -280,13 +287,13 @@ namespace CapaVista_Seguridad
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(840, 160);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(619, 128);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(65, 71);
+            this.btnGuardar.Size = new System.Drawing.Size(60, 60);
             this.btnGuardar.TabIndex = 12;
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -294,10 +301,10 @@ namespace CapaVista_Seguridad
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista_Seguridad.Properties.Resources._5;
-            this.pictureBox2.Location = new System.Drawing.Point(72, 25);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(54, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 128);
+            this.pictureBox2.Size = new System.Drawing.Size(84, 104);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -306,13 +313,13 @@ namespace CapaVista_Seguridad
             // 
             this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
             this.btnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
-            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Location = new System.Drawing.Point(5, 2);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAyuda.Location = new System.Drawing.Point(4, 2);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(41, 42);
+            this.btnAyuda.Size = new System.Drawing.Size(31, 34);
             this.btnAyuda.TabIndex = 1;
             this.btnAyuda.UseVisualStyleBackColor = false;
             // 
@@ -322,18 +329,18 @@ namespace CapaVista_Seguridad
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(957, 665);
+            this.pictureBox1.Size = new System.Drawing.Size(718, 540);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 665);
+            this.ClientSize = new System.Drawing.Size(718, 540);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnSalir);
@@ -346,9 +353,8 @@ namespace CapaVista_Seguridad
             this.Controls.Add(this.pnlIngresoDatos);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2005 - Crear Usuario";
