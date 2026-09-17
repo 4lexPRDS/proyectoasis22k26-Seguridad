@@ -8,9 +8,7 @@ using System.Reflection;
 
 namespace CapaControlador_Seguridad.Correo
 {
-    // Envío de correo genérico por SMTP (Gmail + Contraseña de aplicación).
-    // Las credenciales se leen del App.config del ejecutable
-    // (Ejecucion_Seguridad), nunca quedan escritas en el código.
+    
     public class ClsEnvioCorreo
     {
         public void SeguridadMetEnviarCorreo(string CorreoDestino, string Asunto, string CuerpoHtml)
@@ -26,9 +24,7 @@ namespace CapaControlador_Seguridad.Correo
             Mensaje.Subject = Asunto;
 
             var Cuerpo = new BodyBuilder { HtmlBody = CuerpoHtml };
-            // el encabezado y el pie son imágenes fijas del diseño, van
-            // embebidas en el propio correo (no como link externo, porque
-            // Gmail/Outlook bloquean imágenes externas por defecto)
+            
             SeguridadMetAdjuntarImagenEmbebida(Cuerpo, "header.jpg", "encabezado");
             SeguridadMetAdjuntarImagenEmbebida(Cuerpo, "footer.jpg", "pie");
             Mensaje.Body = Cuerpo.ToMessageBody();
@@ -42,10 +38,6 @@ namespace CapaControlador_Seguridad.Correo
             }
         }
 
-        // Las imágenes van como "Embedded Resource" del proyecto
-        // (Correo/Recursos/header.jpg y footer.jpg) para no depender de una
-        // ruta de archivo en disco. Busca por el nombre de archivo al final
-        // del recurso para no depender de escribir el namespace completo a mano.
         private void SeguridadMetAdjuntarImagenEmbebida(BodyBuilder Cuerpo, string NombreArchivo, string ContentId)
         {
             var Ensamblado = Assembly.GetExecutingAssembly();

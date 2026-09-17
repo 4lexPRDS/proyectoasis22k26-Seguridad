@@ -1,10 +1,6 @@
 namespace CapaControlador_Seguridad.Correo
 {
-    // Cuerpo HTML del correo de recuperación. El encabezado y el pie son
-    // las imágenes fijas del diseño (banner.png / footer.png), embebidas
-    // por ClsEnvioCorreo y referenciadas aquí como cid:encabezado / cid:pie.
-    // Este método solo arma la parte de en medio, que sí cambia según el
-    // usuario y el código.
+    
     public static class ClsPlantillaCorreoRecuperacion
     {
         private const string _ColorTitulo = "#006D77";

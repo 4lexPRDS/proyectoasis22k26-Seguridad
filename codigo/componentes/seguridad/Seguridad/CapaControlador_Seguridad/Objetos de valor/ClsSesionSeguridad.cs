@@ -11,10 +11,8 @@ namespace CapaControlador_Seguridad.Objetos_de_valor
         public static string NombreEmpleado { get; set; }
         public static List<ClsRolInfo> Roles { get; set; } = new List<ClsRolInfo>();
 
-        // true si hay un usuario logueado
         public static bool HaySesionActiva => IdUsuario > 0;
 
-        // Lista de solo los IDs de roles
         public static List<int> IdsRoles => Roles.Select(r => r.IdRol).ToList();
 
         public static bool SeguridadMetTieneRol(int idRol)
