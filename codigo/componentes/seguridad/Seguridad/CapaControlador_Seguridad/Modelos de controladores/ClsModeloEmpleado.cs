@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaModelo_Seguridad.Contratos;
+using System.Data.Odbc;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
 
@@ -76,6 +77,18 @@ namespace CapaControlador_Seguridad
             _RepositorioEmpleado = new ClsRepositorioEmpleado();
         }
 
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (FechaNacimientoEmpleado > FechaContratacionEmpleado)
+            {
+                yield return new ValidationResult(
+                    "La fecha de nacimiento no puede ser mayor a la fecha de contratación",
+                    new[] { nameof(FechaNacimientoEmpleado) });
+            }
+        }
+
+
+
         public string SeguridadMetGrabarCambios()
         {
             string Mensaje = null;
@@ -99,16 +112,40 @@ namespace CapaControlador_Seguridad
                 {
                     case EstadoEntidad.Added:
                         _RepositorioEmpleado.SeguridadMetAgregar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblEmpleado", ModeloDatos.IdEmpleado, "Se agregó el empleado: " + _NombresEmpleado + " " + _ApellidosEmpleado);
                         Mensaje = "Grabacion exitosa";
                         break;
                     case EstadoEntidad.Modified:
                         _RepositorioEmpleado.SeguridadMetEditar(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblEmpleado", ModeloDatos.IdEmpleado, "Se actualizó el empleado: " + _NombresEmpleado + " " + _ApellidosEmpleado);
                         Mensaje = "Actualizacion exitosa";
                         break;
                     case EstadoEntidad.Deleted:
                         _RepositorioEmpleado.SeguridadMetRemover(ModeloDatos);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblEmpleado", ModeloDatos.IdEmpleado, "Se eliminó el empleado ID: " + ModeloDatos.IdEmpleado);
                         Mensaje = "Eliminacion exitosa";
                         break;
+                }
+            }
+            catch (OdbcException Ex)
+            {
+                bool esErrorLlaveForanea = false;
+                foreach (OdbcError error in Ex.Errors)
+                {
+                    if (error.NativeError == 1451)
+                    {
+                        esErrorLlaveForanea = true;
+                        break;
+                    }
+                }
+
+                if (esErrorLlaveForanea)
+                {
+                    Mensaje = "No se puede eliminar este empleado porque tiene información relacionada en otro módulo del sistema. Elimine o reasigne esa información primero.";
+                }
+                else
+                {
+                    Mensaje = Ex.ToString();
                 }
             }
             catch (Exception Ex)

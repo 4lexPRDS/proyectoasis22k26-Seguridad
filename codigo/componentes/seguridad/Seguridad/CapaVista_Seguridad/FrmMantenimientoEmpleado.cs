@@ -1,4 +1,5 @@
 using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad;
 using CapaVista_Seguridad.Ayudas;
 using System;
@@ -16,15 +17,36 @@ namespace CapaVista_Seguridad
     public partial class FrmMantenimientoEmpleado : Form
     {
         private ClsModeloEmpleado _Empleado = new ClsModeloEmpleado();
+        private ClsPermisoAplicacion _MisPermisos;
+
+        private const int ID_MODULO = 4;       
+        private const int ID_APLICACION = 4;   
 
         public FrmMantenimientoEmpleado()
         {
             InitializeComponent();
         }
 
+        private const string PrefijoCodigoEmpleado = "EMP-";
+
         private void FrmMantenimientoEmpleado_Load(object sender, EventArgs e)
         {
+            var MapaBotones = new Dictionary<Control, TipoPermiso>
+    {
+        { SeguridadBtnGuardar,   TipoPermiso.Insertar },
+        { SeguridadBtnModificar, TipoPermiso.Editar },
+        { SeguridadBtnEliminar,  TipoPermiso.Eliminar }
+    };
+
+            _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
+                this, ID_MODULO, ID_APLICACION, MapaBotones);
+
+            if (!_MisPermisos.TieneAcceso)
+                return;
+
             SeguridadMetListarEmpleados();
+            SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
+            SeguridadTxtCodigo.SelectionStart = SeguridadTxtCodigo.Text.Length;
         }
 
         private void SeguridadMetListarEmpleados()
@@ -40,7 +62,6 @@ namespace CapaVista_Seguridad
         }
 
        
-
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Complete los datos del empleado y presione Guardar.");
@@ -129,7 +150,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadMetReinicio()
         {
-            SeguridadTxtCodigo.Text = "";
+            SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado; 
             SeguridadTxtDpi.Text = "";
             SeguridadTxtNit.Text = "";
             SeguridadTxtNombres.Text = "";
@@ -148,8 +169,9 @@ namespace CapaVista_Seguridad
                 {
                     MessageBox.Show("Seleccione una fila del listado para modificar");
                     return;
-                }
 
+                }
+                  if (!ValidarFechas()) return;
                 _Empleado.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
                 _Empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
                 _Empleado.DpiEmpleado = SeguridadTxtDpi.Text;
@@ -183,6 +205,7 @@ namespace CapaVista_Seguridad
         {
             try
             {
+                if (!ValidarFechas()) return;
                 _Empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
                 _Empleado.DpiEmpleado = SeguridadTxtDpi.Text;
                 _Empleado.NitEmpleado = SeguridadTxtNit.Text;
@@ -271,6 +294,76 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.Rows[UltimaFila].Selected = true;
                 SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[UltimaFila].Cells[0];
             }
+        }
+
+        private void SeguridadTxtDpi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SeguridadTxtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool _formateandoNit = false;
+
+        private void SeguridadTxtNit_TextChanged(object sender, EventArgs e)
+        {
+            if (_formateandoNit) return;
+
+            _formateandoNit = true;
+
+            string soloDigitos = SeguridadTxtNit.Text.Replace("-", "");
+
+            if (soloDigitos.Length > 8)
+                soloDigitos = soloDigitos.Substring(0, 8);
+
+            string textoFormateado = soloDigitos;
+            if (soloDigitos.Length == 8)
+            {
+                textoFormateado = soloDigitos.Substring(0, 7) + "-" + soloDigitos.Substring(7, 1);
+            }
+
+            SeguridadTxtNit.Text = textoFormateado;
+            SeguridadTxtNit.SelectionStart = SeguridadTxtNit.Text.Length;
+
+            _formateandoNit = false;
+        }
+
+        private void SeguridadTxtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (!SeguridadTxtCodigo.Text.StartsWith(PrefijoCodigoEmpleado))
+            {
+                SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
+                SeguridadTxtCodigo.SelectionStart = SeguridadTxtCodigo.Text.Length;
+            }
+        }
+
+        private void SeguridadTxtCodigo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+                && SeguridadTxtCodigo.SelectionStart <= PrefijoCodigoEmpleado.Length)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private bool ValidarFechas()
+        {
+            if (SeguridadDtpFechaNacimiento.Value > SeguridadDtpFechaContratacion.Value)
+            {
+                MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de contratación");
+                return false;
+            }
+            return true;
         }
     }
 }

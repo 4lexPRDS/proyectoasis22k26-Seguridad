@@ -112,7 +112,7 @@
             this.SeguridadLblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblContraseña.Location = new System.Drawing.Point(136, 327);
             this.SeguridadLblContraseña.Name = "SeguridadLblContraseña";
-            this.SeguridadLblContraseña.Size = new System.Drawing.Size(81, 13);
+            this.SeguridadLblContraseña.Size = new System.Drawing.Size(96, 17);
             this.SeguridadLblContraseña.TabIndex = 5;
             this.SeguridadLblContraseña.Text = "🔐 Contraseña";
             // 
@@ -144,7 +144,7 @@
             this.SeguridadLblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblUsuario.Location = new System.Drawing.Point(136, 262);
             this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
-            this.SeguridadLblUsuario.Size = new System.Drawing.Size(62, 13);
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(75, 17);
             this.SeguridadLblUsuario.TabIndex = 2;
             this.SeguridadLblUsuario.Text = "👤 Usuario";
             // 
@@ -166,7 +166,7 @@
             this.SeguridadLbIdentificadorInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLbIdentificadorInicioSesion.Location = new System.Drawing.Point(120, 188);
             this.SeguridadLbIdentificadorInicioSesion.Name = "SeguridadLbIdentificadorInicioSesion";
-            this.SeguridadLbIdentificadorInicioSesion.Size = new System.Drawing.Size(96, 15);
+            this.SeguridadLbIdentificadorInicioSesion.Size = new System.Drawing.Size(122, 20);
             this.SeguridadLbIdentificadorInicioSesion.TabIndex = 1;
             this.SeguridadLbIdentificadorInicioSesion.Text = "INICIAR SESIÓN";
             // 
@@ -217,6 +217,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " 2000 - Login";
+            this.Click += new System.EventHandler(this.button1_Click);
             this.SeguridadPnlInterfazLogin.ResumeLayout(false);
             this.SeguridadPnlInterfazLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();

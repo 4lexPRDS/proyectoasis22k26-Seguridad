@@ -189,10 +189,10 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSeguridadBuscar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSeguridadBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(715, 56);
+            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(709, 56);
             this.BtnSeguridadBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadBuscar.Name = "BtnSeguridadBuscar";
-            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(50, 51);
+            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(55, 55);
             this.BtnSeguridadBuscar.TabIndex = 3;
             this.BtnSeguridadBuscar.UseVisualStyleBackColor = false;
             this.BtnSeguridadBuscar.Click += new System.EventHandler(this.BtnSeguridadBuscar_Click);
@@ -288,7 +288,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadAgregar.Location = new System.Drawing.Point(81, 167);
             this.BtnSeguridadAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadAgregar.Name = "BtnSeguridadAgregar";
-            this.BtnSeguridadAgregar.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadAgregar.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadAgregar.TabIndex = 6;
             this.BtnSeguridadAgregar.UseVisualStyleBackColor = false;
             this.BtnSeguridadAgregar.Click += new System.EventHandler(this.BtnSeguridadAgregar_Click);
@@ -317,7 +317,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadQuitar.Location = new System.Drawing.Point(298, 169);
             this.BtnSeguridadQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadQuitar.Name = "BtnSeguridadQuitar";
-            this.BtnSeguridadQuitar.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadQuitar.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadQuitar.TabIndex = 4;
             this.BtnSeguridadQuitar.UseVisualStyleBackColor = false;
             this.BtnSeguridadQuitar.Click += new System.EventHandler(this.BtnSeguridadQuitar_Click);
@@ -333,7 +333,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadImprimir.Location = new System.Drawing.Point(447, 169);
             this.BtnSeguridadImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadImprimir.Name = "BtnSeguridadImprimir";
-            this.BtnSeguridadImprimir.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadImprimir.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadImprimir.TabIndex = 5;
             this.BtnSeguridadImprimir.UseVisualStyleBackColor = false;
             // 
@@ -348,7 +348,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadSalir.Location = new System.Drawing.Point(892, 172);
             this.BtnSeguridadSalir.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadSalir.Name = "BtnSeguridadSalir";
-            this.BtnSeguridadSalir.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadSalir.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadSalir.TabIndex = 6;
             this.BtnSeguridadSalir.UseVisualStyleBackColor = false;
             this.BtnSeguridadSalir.Click += new System.EventHandler(this.BtnSeguridadSalir_Click);
@@ -439,7 +439,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadSiguiente.Location = new System.Drawing.Point(744, 171);
             this.BtnSeguridadSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadSiguiente.Name = "BtnSeguridadSiguiente";
-            this.BtnSeguridadSiguiente.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadSiguiente.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadSiguiente.TabIndex = 8;
             this.BtnSeguridadSiguiente.UseVisualStyleBackColor = true;
             this.BtnSeguridadSiguiente.Click += new System.EventHandler(this.BtnSeguridadSiguiente_Click);
@@ -448,7 +448,7 @@ namespace CapaVista_Seguridad
             // 
             this.BtnSeguridadReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
             this.BtnSeguridadReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSeguridadReporte.Location = new System.Drawing.Point(373, 167);
+            this.BtnSeguridadReporte.Location = new System.Drawing.Point(373, 170);
             this.BtnSeguridadReporte.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadReporte.Name = "BtnSeguridadReporte";
             this.BtnSeguridadReporte.Size = new System.Drawing.Size(70, 70);
@@ -462,7 +462,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadActualizar.Location = new System.Drawing.Point(521, 169);
             this.BtnSeguridadActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadActualizar.Name = "BtnSeguridadActualizar";
-            this.BtnSeguridadActualizar.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadActualizar.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadActualizar.TabIndex = 10;
             this.BtnSeguridadActualizar.UseVisualStyleBackColor = true;
             this.BtnSeguridadActualizar.Click += new System.EventHandler(this.BtnSeguridadActualizar_Click);
@@ -474,7 +474,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadModificar.Location = new System.Drawing.Point(152, 167);
             this.BtnSeguridadModificar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadModificar.Name = "BtnSeguridadModificar";
-            this.BtnSeguridadModificar.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadModificar.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadModificar.TabIndex = 11;
             this.BtnSeguridadModificar.UseVisualStyleBackColor = true;
             this.BtnSeguridadModificar.Click += new System.EventHandler(this.BtnSeguridadModificar_Click);
@@ -486,7 +486,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadInicio.Location = new System.Drawing.Point(596, 171);
             this.BtnSeguridadInicio.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadInicio.Name = "BtnSeguridadInicio";
-            this.BtnSeguridadInicio.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadInicio.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadInicio.TabIndex = 12;
             this.BtnSeguridadInicio.UseVisualStyleBackColor = true;
             this.BtnSeguridadInicio.Click += new System.EventHandler(this.BtnSeguridadInicio_Click);
@@ -498,7 +498,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadFin.Location = new System.Drawing.Point(818, 172);
             this.BtnSeguridadFin.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadFin.Name = "BtnSeguridadFin";
-            this.BtnSeguridadFin.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadFin.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadFin.TabIndex = 13;
             this.BtnSeguridadFin.UseVisualStyleBackColor = true;
             this.BtnSeguridadFin.Click += new System.EventHandler(this.BtnSeguridadFin_Click);
@@ -510,7 +510,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadAnterior.Location = new System.Drawing.Point(670, 171);
             this.BtnSeguridadAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadAnterior.Name = "BtnSeguridadAnterior";
-            this.BtnSeguridadAnterior.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadAnterior.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadAnterior.TabIndex = 14;
             this.BtnSeguridadAnterior.UseVisualStyleBackColor = true;
             this.BtnSeguridadAnterior.Click += new System.EventHandler(this.BtnSeguridadAnterior_Click);
@@ -522,7 +522,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadGuardar.Location = new System.Drawing.Point(226, 169);
             this.BtnSeguridadGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSeguridadGuardar.Name = "BtnSeguridadGuardar";
-            this.BtnSeguridadGuardar.Size = new System.Drawing.Size(70, 68);
+            this.BtnSeguridadGuardar.Size = new System.Drawing.Size(70, 70);
             this.BtnSeguridadGuardar.TabIndex = 15;
             this.BtnSeguridadGuardar.UseVisualStyleBackColor = true;
             this.BtnSeguridadGuardar.Click += new System.EventHandler(this.BtnSeguridadGuardar_Click);

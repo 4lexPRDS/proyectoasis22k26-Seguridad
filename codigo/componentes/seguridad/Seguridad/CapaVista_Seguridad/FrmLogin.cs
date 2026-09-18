@@ -1,4 +1,5 @@
 ﻿using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,10 +39,36 @@ namespace CapaVista_Seguridad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmMDISeguridad Perfil = new FrmMDISeguridad();
-            this.Hide();
-            Perfil.ShowDialog();
-            this.Show();
+            try
+            {
+                var modelo = new ClsModeloUsuario();
+                bool acceso = modelo.SeguridadMetIniciarSesion(SeguridadTxtUsuario.Text, SeguridadTxtContraseña.Text);
+
+                if (acceso)
+                {
+                    ClsSesionSeguridad.SeguridadMetIniciarSesion(
+                        idUsuario: modelo.IdUsuario,
+                        nombreUsuario: modelo.NombreUsuario,
+                        nombreEmpleado: modelo.NombreEmpleado,
+                        roles: modelo.Roles
+                    );
+
+                    this.Hide();
+                    var frmPrincipal = new FrmSplash();
+                    frmPrincipal.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    SeguridadTxtContraseña.Clear();
+                    SeguridadTxtContraseña.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
