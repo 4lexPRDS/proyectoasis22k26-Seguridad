@@ -41,6 +41,10 @@
     <Reference Include="CapaEntidades_Navegador">
       <HintPath>..\CapaEntidades_Navegador\bin\Debug\CapaEntidades_Navegador.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Navegador, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Control_Usuarios\CapaVista_Navegador\bin\Debug\CapaVista_Navegador.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
