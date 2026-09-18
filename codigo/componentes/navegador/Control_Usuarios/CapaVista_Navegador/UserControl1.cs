@@ -16,5 +16,10 @@ namespace CapaVista_Navegador
         {
             InitializeComponent();
         }
+
+        private void NavegadorBtnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
