@@ -52,9 +52,9 @@ namespace CapaVista_Navegador
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.userControl11 = new CapaVista_Navegador.UserControl1();
             this.SuspendLayout();
-            //
+            // 
             // NavegadorBtnIngresar
-            //
+            // 
             this.NavegadorBtnIngresar.ImageIndex = 0;
             this.NavegadorBtnIngresar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnIngresar.Location = new System.Drawing.Point(12, 24);
@@ -232,14 +232,14 @@ namespace CapaVista_Navegador
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            //
+            // 
             // userControl11
-            //
-            this.userControl11.Location = new System.Drawing.Point(12, 12);
+            // 
+            this.userControl11.Location = new System.Drawing.Point(12, 259);
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(1110, 284);
             this.userControl11.TabIndex = 15;
-            //
+            // 
             // FrmCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
