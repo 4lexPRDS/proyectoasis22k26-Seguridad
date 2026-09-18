@@ -10,6 +10,10 @@ using CapaModelo_Navegador;
 //Roger Yankhel de Jesús Herrera Alcántara 0901-23-2429 16/9/2026
 namespace CapaControlador_Navegador
 {
+    // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+    // Obsoleto: reemplazado por ClsSeguridadFormHelper de Seguridad, llamado directamente desde
+    // ClsCrudSeguridad (CapaVista_Navegador). Se deja sin borrar para coordinar con Roger antes de eliminarlo.
+    // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
     //Recibe la solicitud de la capa Vista
     public class ClsCtrlPermiso
     {

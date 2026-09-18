@@ -16,7 +16,10 @@ namespace CapaVista_Navegador
         private readonly ClsCrudFormulario _Formulario;
         private readonly ClsCrudAcciones _Acciones;
         private readonly ClsSelectorLlave _SelectorLlave;
-        private readonly ClsCrudSeguridad _Seguridad;
+        // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+        // Se quitó el campo _Seguridad: ya no se valida el acceso aquí en cada acción.
+        // Los botones sin permiso quedan deshabilitados desde FrmCrud (ver ClsCrudSeguridad).
+        // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
 
         private List<ClsColumnaInfo> _EsquemaActual;
         private Dictionary<string, string> _PkModificar;
@@ -35,10 +38,6 @@ namespace CapaVista_Navegador
             _Formulario = new ClsCrudFormulario(_Vista);
 
             _SelectorLlave = new ClsSelectorLlave(_Vista);
-
-            _Seguridad = new ClsCrudSeguridad(
-                UsuarioActual,
-                CodigoModulo);
 
             _Acciones = new ClsCrudAcciones();
         }
@@ -120,9 +119,6 @@ namespace CapaVista_Navegador
         // INGRESAR
         public void NavegadorMetIngresar()
         {
-            if (!_Seguridad.NavegadorFuncTieneAcceso())
-                return;
-
             if (!NavegadorFuncConsultarTabla())
                 return;
 
@@ -154,9 +150,6 @@ namespace CapaVista_Navegador
         // CONSULTAR
         public void NavegadorMetConsultar()
         {
-            if (!_Seguridad.NavegadorFuncTieneAcceso())
-                return;
-
             _Formulario.NavegadorMetCerrar();
 
             NavegadorFuncConsultarTabla();
@@ -165,9 +158,6 @@ namespace CapaVista_Navegador
         // REFRESCAR
         public void NavegadorMetRefrescar()
         {
-            if (!_Seguridad.NavegadorFuncTieneAcceso())
-                return;
-
             _Formulario.NavegadorMetCerrar();
 
             _Grid.NavegadorMetOcultar();
@@ -176,9 +166,6 @@ namespace CapaVista_Navegador
         // MODIFICAR
         public void NavegadorMetModificar()
         {
-            if (!_Seguridad.NavegadorFuncTieneAcceso())
-                return;
-
             DataGridViewRow Fila =
                 _Grid.NavegadorDgvDatos != null
                 ? _Grid.NavegadorDgvDatos.CurrentRow
@@ -229,9 +216,6 @@ namespace CapaVista_Navegador
         // ELIMINAR
         public void NavegadorMetEliminar()
         {
-            if (!_Seguridad.NavegadorFuncTieneAcceso())
-                return;
-
             DataGridViewRow Fila =
                 _Grid.NavegadorDgvDatos != null
                 ? _Grid.NavegadorDgvDatos.CurrentRow
