@@ -12,6 +12,11 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaControlador_Navegador;
+// Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
+// Estos dos using son para poder usar la clase de bitácora (auditoría) del componente Seguridad.
+using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
+// Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
 using CapaEntidades_Navegador;
 
 namespace CapaVista_Navegador
@@ -19,6 +24,13 @@ namespace CapaVista_Navegador
     public class ClsCrudAcciones
     {
         private ClsCtrlRegistro _CtrlRegistro = new ClsCtrlRegistro();
+
+        // Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
+        // Bitácora de Seguridad: deja rastro de Insertar/Modificar/Eliminar. Se usa el método de
+        // instancia con IdUsuario explícito porque el método estático SeguridadMetRegistrarAccion usa
+        // una clase de sesión distinta (ClsSesion) que queda fija en el usuario 1.
+        private ClsModeloBitacora _Bitacora = new ClsModeloBitacora();
+        // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
 
         // ====================================================================
         // Función:      NavegadorFuncConfirmarAccion
@@ -237,7 +249,25 @@ namespace CapaVista_Navegador
                 NavegadorFuncResumenDatos(Datos)))
                 return false;
 
-            return _CtrlRegistro.NavegadorFuncInsertarRegistro(Tabla, Datos);
+            // Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
+            // Primero se inserta el registro tal como ya funcionaba. Si se insertó bien, se calcula
+            // qué id usar para la bitácora (el de la llave primaria si ya se conoce, si no 0 porque
+            // es autoincremento) y se registra la acción "INSERT" con los datos que se guardaron.
+            bool Insertado = _CtrlRegistro.NavegadorFuncInsertarRegistro(Tabla, Datos);
+
+            if (Insertado)
+            {
+                int IdRegistro = 0;
+                if (ValoresPK.Count > 0)
+                    int.TryParse(ValoresPK[0], out IdRegistro);
+
+                _Bitacora.SeguridadMetRegistrarBitacora(
+                    ClsSesionSeguridad.IdUsuario, "INSERT", Tabla, IdRegistro,
+                    "Se insertó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos), null);
+            }
+
+            return Insertado;
+            // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
         }
 
         // ====================================================================
@@ -274,7 +304,23 @@ namespace CapaVista_Navegador
                 NavegadorFuncResumenDatos(Datos)))
                 return false;
 
-            return _CtrlRegistro.NavegadorFuncActualizarRegistro(Tabla, Datos, ClavesPrimarias);
+            // Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
+            // Igual que en Insertar: primero se actualiza el registro, y si salió bien, se registra
+            // la acción "UPDATE" en la bitácora. Aquí sí se conoce el id real porque ya existía.
+            bool Actualizado = _CtrlRegistro.NavegadorFuncActualizarRegistro(Tabla, Datos, ClavesPrimarias);
+
+            if (Actualizado)
+            {
+                int IdRegistro = 0;
+                foreach (string ValorPk in ClavesPrimarias.Values) { int.TryParse(ValorPk, out IdRegistro); break; }
+
+                _Bitacora.SeguridadMetRegistrarBitacora(
+                    ClsSesionSeguridad.IdUsuario, "UPDATE", Tabla, IdRegistro,
+                    "Se actualizó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos), null);
+            }
+
+            return Actualizado;
+            // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
         }
 
         // ====================================================================
@@ -311,7 +357,23 @@ namespace CapaVista_Navegador
                 "¿Desea eliminar el registro seleccionado de la tabla '" + Tabla + "'?"))
                 return false;
 
-            return _CtrlRegistro.NavegadorFuncEliminarRegistro(Tabla, ClavesPrimarias);
+            // Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
+            // Igual que arriba: se elimina el registro y, si se pudo eliminar, se registra la
+            // acción "DELETE" en la bitácora con el id del registro que se borró.
+            bool Eliminado = _CtrlRegistro.NavegadorFuncEliminarRegistro(Tabla, ClavesPrimarias);
+
+            if (Eliminado)
+            {
+                int IdRegistro = 0;
+                foreach (string ValorPk in ClavesPrimarias.Values) { int.TryParse(ValorPk, out IdRegistro); break; }
+
+                _Bitacora.SeguridadMetRegistrarBitacora(
+                    ClsSesionSeguridad.IdUsuario, "DELETE", Tabla, IdRegistro,
+                    "Se eliminó un registro de " + Tabla + ".", null);
+            }
+
+            return Eliminado;
+            // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
         }
 
         // ====================================================================
