@@ -93,7 +93,6 @@
             // SeguridadBtnLogin
             // 
             this.SeguridadBtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SeguridadBtnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnLogin.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnLogin.Location = new System.Drawing.Point(120, 368);
