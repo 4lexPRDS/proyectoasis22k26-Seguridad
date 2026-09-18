@@ -50,10 +50,11 @@ namespace CapaVista_Navegador
             this.NavegadorBtnRefrescar = new System.Windows.Forms.Button();
             this.NavegadorBtnAyuda = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.userControl11 = new CapaVista_Navegador.UserControl1();
             this.SuspendLayout();
-            // 
+            //
             // NavegadorBtnIngresar
-            // 
+            //
             this.NavegadorBtnIngresar.ImageIndex = 0;
             this.NavegadorBtnIngresar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnIngresar.Location = new System.Drawing.Point(12, 24);
@@ -61,7 +62,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnIngresar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnIngresar.TabIndex = 0;
             this.NavegadorBtnIngresar.UseVisualStyleBackColor = true;
-            this.NavegadorBtnIngresar.Click += new System.EventHandler(this.NavegadorMetIngresarClick);
+            this.NavegadorBtnIngresar.Visible = false;
             // 
             // NavegadorIlImagenes
             // 
@@ -92,6 +93,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnCancelar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnCancelar.TabIndex = 1;
             this.NavegadorBtnCancelar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnCancelar.Visible = false;
             // 
             // NavegadorBtnModificar
             // 
@@ -102,6 +104,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnModificar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnModificar.TabIndex = 2;
             this.NavegadorBtnModificar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnModificar.Visible = false;
             // 
             // NavegadorBtnImprimir
             // 
@@ -112,6 +115,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnImprimir.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnImprimir.TabIndex = 3;
             this.NavegadorBtnImprimir.UseVisualStyleBackColor = true;
+            this.NavegadorBtnImprimir.Visible = false;
             // 
             // NavegadorBtnGuardar
             // 
@@ -122,6 +126,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnGuardar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnGuardar.TabIndex = 4;
             this.NavegadorBtnGuardar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnGuardar.Visible = false;
             // 
             // NavegadorBtnSiguiente
             // 
@@ -132,6 +137,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnSiguiente.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnSiguiente.TabIndex = 5;
             this.NavegadorBtnSiguiente.UseVisualStyleBackColor = true;
+            this.NavegadorBtnSiguiente.Visible = false;
             // 
             // NavegadorBtnAnterior
             // 
@@ -142,6 +148,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnAnterior.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnAnterior.TabIndex = 6;
             this.NavegadorBtnAnterior.UseVisualStyleBackColor = true;
+            this.NavegadorBtnAnterior.Visible = false;
             // 
             // NavegadorBtnInicio
             // 
@@ -152,6 +159,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnInicio.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnInicio.TabIndex = 7;
             this.NavegadorBtnInicio.UseVisualStyleBackColor = true;
+            this.NavegadorBtnInicio.Visible = false;
             // 
             // NavegadorBtnEliminar
             // 
@@ -162,6 +170,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnEliminar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnEliminar.TabIndex = 8;
             this.NavegadorBtnEliminar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnEliminar.Visible = false;
             // 
             // NavegadorBtnConsultar
             // 
@@ -172,6 +181,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnConsultar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnConsultar.TabIndex = 9;
             this.NavegadorBtnConsultar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnConsultar.Visible = false;
             // 
             // NavegadorBtnSalir
             // 
@@ -182,6 +192,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnSalir.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnSalir.TabIndex = 10;
             this.NavegadorBtnSalir.UseVisualStyleBackColor = true;
+            this.NavegadorBtnSalir.Visible = false;
             // 
             // NavegadorBtnFin
             // 
@@ -192,6 +203,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnFin.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnFin.TabIndex = 11;
             this.NavegadorBtnFin.UseVisualStyleBackColor = true;
+            this.NavegadorBtnFin.Visible = false;
             // 
             // NavegadorBtnRefrescar
             // 
@@ -202,6 +214,7 @@ namespace CapaVista_Navegador
             this.NavegadorBtnRefrescar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnRefrescar.TabIndex = 13;
             this.NavegadorBtnRefrescar.UseVisualStyleBackColor = true;
+            this.NavegadorBtnRefrescar.Visible = false;
             // 
             // NavegadorBtnAyuda
             // 
@@ -212,19 +225,28 @@ namespace CapaVista_Navegador
             this.NavegadorBtnAyuda.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnAyuda.TabIndex = 14;
             this.NavegadorBtnAyuda.UseVisualStyleBackColor = true;
+            this.NavegadorBtnAyuda.Visible = false;
             // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
+            //
+            // userControl11
+            //
+            this.userControl11.Location = new System.Drawing.Point(12, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(1110, 284);
+            this.userControl11.TabIndex = 15;
+            //
             // FrmCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(1293, 653);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.NavegadorBtnAyuda);
             this.Controls.Add(this.NavegadorBtnRefrescar);
             this.Controls.Add(this.NavegadorBtnFin);
@@ -264,5 +286,6 @@ namespace CapaVista_Navegador
         private System.Windows.Forms.Button NavegadorBtnRefrescar;
         private System.Windows.Forms.Button NavegadorBtnAyuda;
         private ImageList imageList1;
+        private UserControl1 userControl11;
     }
 }

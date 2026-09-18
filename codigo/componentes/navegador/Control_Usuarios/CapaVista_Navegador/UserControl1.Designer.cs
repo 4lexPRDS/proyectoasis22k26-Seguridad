@@ -57,7 +57,6 @@
             this.NavegadorBtnIngresar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnIngresar.TabIndex = 1;
             this.NavegadorBtnIngresar.UseVisualStyleBackColor = true;
-            this.NavegadorBtnIngresar.Click += new System.EventHandler(this.NavegadorBtnIngresar_Click);
             // 
             // NavegadorBtnConsultar
             // 
