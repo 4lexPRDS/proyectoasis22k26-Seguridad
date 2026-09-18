@@ -82,7 +82,6 @@
             this.SeguridadBtnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnIngresar.Location = new System.Drawing.Point(10, 6);
             this.SeguridadBtnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnIngresar.Name = "SeguridadBtnIngresar";
@@ -100,7 +99,6 @@
             this.SeguridadBtnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnModificar.Location = new System.Drawing.Point(66, 6);
             this.SeguridadBtnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnModificar.Name = "SeguridadBtnModificar";
@@ -118,7 +116,6 @@
             this.SeguridadBtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnGuardar.Location = new System.Drawing.Point(122, 6);
             this.SeguridadBtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnGuardar.Name = "SeguridadBtnGuardar";
@@ -136,7 +133,6 @@
             this.SeguridadBtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnCancelar.Location = new System.Drawing.Point(178, 6);
             this.SeguridadBtnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnCancelar.Name = "SeguridadBtnCancelar";
@@ -154,7 +150,6 @@
             this.SeguridadBtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnEliminar.Location = new System.Drawing.Point(234, 6);
             this.SeguridadBtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnEliminar.Name = "SeguridadBtnEliminar";
@@ -172,7 +167,6 @@
             this.SeguridadBtnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnConsultar.Location = new System.Drawing.Point(290, 6);
             this.SeguridadBtnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnConsultar.Name = "SeguridadBtnConsultar";
@@ -190,7 +184,6 @@
             this.SeguridadBtnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnImprimir.Location = new System.Drawing.Point(346, 6);
             this.SeguridadBtnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnImprimir.Name = "SeguridadBtnImprimir";
@@ -208,7 +201,6 @@
             this.SeguridadBtnRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(402, 6);
             this.SeguridadBtnRefrescar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnRefrescar.Name = "SeguridadBtnRefrescar";
@@ -226,7 +218,6 @@
             this.SeguridadBtnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnInicio.Location = new System.Drawing.Point(458, 6);
             this.SeguridadBtnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnInicio.Name = "SeguridadBtnInicio";
@@ -244,7 +235,6 @@
             this.SeguridadBtnAnterior.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAnterior.Location = new System.Drawing.Point(514, 6);
             this.SeguridadBtnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnAnterior.Name = "SeguridadBtnAnterior";
@@ -262,7 +252,6 @@
             this.SeguridadBtnSiguiente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(570, 6);
             this.SeguridadBtnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnSiguiente.Name = "SeguridadBtnSiguiente";
@@ -280,7 +269,6 @@
             this.SeguridadBtnFin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnFin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnFin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnFin.Location = new System.Drawing.Point(626, 6);
             this.SeguridadBtnFin.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnFin.Name = "SeguridadBtnFin";
@@ -298,7 +286,6 @@
             this.SeguridadBtnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAyuda.Location = new System.Drawing.Point(682, 6);
             this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
@@ -316,7 +303,6 @@
             this.SeguridadBtnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSalir.Location = new System.Drawing.Point(738, 6);
             this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";

@@ -232,7 +232,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAgregar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ingresarN;
             this.SeguridadBtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAgregar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAgregar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadBtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
             this.SeguridadBtnAgregar.Location = new System.Drawing.Point(3, 3);
@@ -248,7 +247,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
             this.SeguridadBtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnModificar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnModificar.Location = new System.Drawing.Point(66, 3);
             this.SeguridadBtnModificar.Name = "SeguridadBtnModificar";
             this.SeguridadBtnModificar.Size = new System.Drawing.Size(57, 62);
@@ -262,7 +260,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
             this.SeguridadBtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnGuardar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnGuardar.Location = new System.Drawing.Point(129, 3);
             this.SeguridadBtnGuardar.Name = "SeguridadBtnGuardar";
             this.SeguridadBtnGuardar.Size = new System.Drawing.Size(57, 62);
@@ -276,7 +273,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnCancelar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_cancelarN;
             this.SeguridadBtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnCancelar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnCancelar.Location = new System.Drawing.Point(192, 3);
             this.SeguridadBtnCancelar.Name = "SeguridadBtnCancelar";
             this.SeguridadBtnCancelar.Size = new System.Drawing.Size(57, 62);
@@ -289,7 +285,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnEliminar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
             this.SeguridadBtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnEliminar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnEliminar.Location = new System.Drawing.Point(255, 3);
             this.SeguridadBtnEliminar.Name = "SeguridadBtnEliminar";
             this.SeguridadBtnEliminar.Size = new System.Drawing.Size(57, 62);
@@ -303,7 +298,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnConsultar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_consultarN;
             this.SeguridadBtnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnConsultar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnConsultar.Location = new System.Drawing.Point(318, 3);
             this.SeguridadBtnConsultar.Name = "SeguridadBtnConsultar";
             this.SeguridadBtnConsultar.Size = new System.Drawing.Size(57, 62);
@@ -317,7 +311,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnImprimir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_imprimirN;
             this.SeguridadBtnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnImprimir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnImprimir.Location = new System.Drawing.Point(381, 3);
             this.SeguridadBtnImprimir.Name = "SeguridadBtnImprimir";
             this.SeguridadBtnImprimir.Size = new System.Drawing.Size(57, 62);
@@ -330,7 +323,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnRefrescar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_refrescarN;
             this.SeguridadBtnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnRefrescar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(444, 3);
             this.SeguridadBtnRefrescar.Name = "SeguridadBtnRefrescar";
             this.SeguridadBtnRefrescar.Size = new System.Drawing.Size(57, 62);
@@ -344,7 +336,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnInicio.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_inicioN;
             this.SeguridadBtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnInicio.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnInicio.Location = new System.Drawing.Point(507, 3);
             this.SeguridadBtnInicio.Name = "SeguridadBtnInicio";
             this.SeguridadBtnInicio.Size = new System.Drawing.Size(57, 62);
@@ -358,7 +349,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAnterior.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_anteriorN;
             this.SeguridadBtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAnterior.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAnterior.Location = new System.Drawing.Point(570, 3);
             this.SeguridadBtnAnterior.Name = "SeguridadBtnAnterior";
             this.SeguridadBtnAnterior.Size = new System.Drawing.Size(57, 62);
@@ -372,7 +362,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSiguiente.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_siguienteN;
             this.SeguridadBtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSiguiente.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(633, 3);
             this.SeguridadBtnSiguiente.Name = "SeguridadBtnSiguiente";
             this.SeguridadBtnSiguiente.Size = new System.Drawing.Size(57, 62);
@@ -386,7 +375,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_finN;
             this.SeguridadBtnFin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnFin.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnFin.Location = new System.Drawing.Point(696, 3);
             this.SeguridadBtnFin.Name = "SeguridadBtnFin";
             this.SeguridadBtnFin.Size = new System.Drawing.Size(57, 62);
@@ -400,7 +388,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.SeguridadBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAyuda.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAyuda.Location = new System.Drawing.Point(759, 3);
             this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
             this.SeguridadBtnAyuda.Size = new System.Drawing.Size(57, 62);
@@ -414,7 +401,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
             this.SeguridadBtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSalir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSalir.Location = new System.Drawing.Point(822, 3);
             this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";
             this.SeguridadBtnSalir.Size = new System.Drawing.Size(57, 62);
@@ -927,7 +913,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnBuscar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.Buscar;
             this.SeguridadBtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnBuscar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnBuscar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.SeguridadBtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
             this.SeguridadBtnBuscar.Location = new System.Drawing.Point(37, 17);
@@ -944,7 +929,6 @@ namespace CapaVista_Seguridad
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SeguridadBtnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnLimpiar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnLimpiar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.SeguridadBtnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadBtnLimpiar.Location = new System.Drawing.Point(3, 88);
