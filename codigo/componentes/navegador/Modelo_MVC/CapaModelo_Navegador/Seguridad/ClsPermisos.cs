@@ -5,6 +5,11 @@ using System;
 
 namespace CapaModelo_Navegador
 {
+    // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+    // Obsoleto: reemplazado por ClsPermisoAplicacion/ClsModeloAsigAppPerf de Seguridad, consumidos
+    // vía ClsSeguridadFormHelper desde ClsCrudSeguridad (CapaVista_Navegador). Se deja sin borrar
+    // para coordinar con Matthew antes de eliminarlo.
+    // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
     public class ClsPermisos
     {
         // Instancia para conectar a la base de datos

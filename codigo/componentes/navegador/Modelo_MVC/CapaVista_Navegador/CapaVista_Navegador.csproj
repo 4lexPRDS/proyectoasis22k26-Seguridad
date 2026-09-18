@@ -13,6 +13,10 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
+    <!-- Ruta al repo local de Seguridad (clonado como hermano de este repo). Ajustar si tu clon vive en otro lugar. -->
+    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\..\..\..\proyectoasis22k26-Seguridad\codigo\componentes\seguridad\Seguridad</SeguridadBin>
+    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +50,21 @@
       <HintPath>..\..\Control_Usuarios\CapaVista_Navegador\bin\Debug\CapaVista_Navegador_Controles.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
+    <!-- Componente Seguridad: helper que habilita/deshabilita botones según permisos (ver ClsCrudSeguridad). -->
+    <Reference Include="CapaVista_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaVista_Seguridad\bin\Debug\CapaVista_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CapaControlador_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CapaModelo_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaModelo_Seguridad\bin\Debug\CapaModelo_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />

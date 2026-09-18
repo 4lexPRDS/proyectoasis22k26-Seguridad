@@ -27,7 +27,11 @@ namespace CapaModelo_Navegador
             //Se crea la conexión utilizando el DSN configurado para la base de datos.
             //El valor entre corchetes debe sustituirse por el nombre correspondiente de la base de datos.
             
-            OdbcConnection Conexion = new OdbcConnection("Dsn=bd_proyectonominasfin");
+            // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+            // Se apunta al DSN "EmbutidosS.A", que es el mismo que usa el componente Seguridad
+            // (base de datos dbSistemaEmbutidos), para poder leer los permisos reales de los usuarios.
+            OdbcConnection Conexion = new OdbcConnection("Dsn=EmbutidosS.A");
+            // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
 
             try
             {
