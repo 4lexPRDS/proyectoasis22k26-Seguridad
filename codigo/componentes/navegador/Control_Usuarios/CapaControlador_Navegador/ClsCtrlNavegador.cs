@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaModelo_Navegador;
 
+
 namespace CapaControlador_Navegador
 {
     internal class ClsCtrlNavegador
     {
+
+
     }
 }

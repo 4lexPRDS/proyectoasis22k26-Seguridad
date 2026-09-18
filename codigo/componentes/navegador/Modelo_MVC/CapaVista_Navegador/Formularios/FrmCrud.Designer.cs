@@ -224,7 +224,7 @@ namespace CapaVista_Navegador
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1089, 653);
+            this.ClientSize = new System.Drawing.Size(1293, 653);
             this.Controls.Add(this.NavegadorBtnAyuda);
             this.Controls.Add(this.NavegadorBtnRefrescar);
             this.Controls.Add(this.NavegadorBtnFin);
