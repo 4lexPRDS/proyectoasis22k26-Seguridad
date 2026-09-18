@@ -7,7 +7,7 @@ namespace CapaVista_Navegador
     public partial class FrmCrud : Form
     {
         // CAMBIAR AQUÍ MANUALMENTE LA TABLA A LA QUE SE DESEA HACER CRUD
-        private string _NombreTabla = "tbl_empleados";
+        private string _NombreTabla = "tbl_PruebaValidaciones";
 
         private ClsCrudEventos _Eventos;
 
