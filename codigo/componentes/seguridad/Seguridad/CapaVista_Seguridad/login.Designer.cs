@@ -28,104 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SeguridadPnlInterfazLogin = new System.Windows.Forms.Panel();
+            this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
+            this.SeguridadLnkOlvidarContrasena = new System.Windows.Forms.LinkLabel();
+            this.SeguridadBtnLogin = new System.Windows.Forms.Button();
+            this.SeguridadLblContraseña = new System.Windows.Forms.Label();
+            this.SeguridadTxtContraseña = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.SeguridadLblUsuario = new System.Windows.Forms.Label();
+            this.SeguridadTxtUsuario = new System.Windows.Forms.TextBox();
+            this.SeguridadLbIdentificadorInicioSesion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SeguridadPbLogin = new System.Windows.Forms.PictureBox();
+            this.SeguridadPbLogo = new System.Windows.Forms.PictureBox();
+            this.SeguridadPnlInterfazLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // SeguridadPnlInterfazLogin
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(525, 96);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 455);
-            this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadPbMascota);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadLnkOlvidarContrasena);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadBtnLogin);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadLblContraseña);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadTxtContraseña);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.panel3);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadLblUsuario);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadTxtUsuario);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.SeguridadLbIdentificadorInicioSesion);
+            this.SeguridadPnlInterfazLogin.Controls.Add(this.panel2);
+            this.SeguridadPnlInterfazLogin.Location = new System.Drawing.Point(525, 96);
+            this.SeguridadPnlInterfazLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadPnlInterfazLogin.Name = "SeguridadPnlInterfazLogin";
+            this.SeguridadPnlInterfazLogin.Size = new System.Drawing.Size(351, 455);
+            this.SeguridadPnlInterfazLogin.TabIndex = 5;
+            this.SeguridadPnlInterfazLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox2
+            // SeguridadPbMascota
             // 
-            this.pictureBox2.Image = global::CapaVista_Seguridad.Properties.Resources._5;
-            this.pictureBox2.Location = new System.Drawing.Point(121, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 129);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.SeguridadPbMascota.Image = global::CapaVista_Seguridad.Properties.Resources._5;
+            this.SeguridadPbMascota.Location = new System.Drawing.Point(121, 34);
+            this.SeguridadPbMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadPbMascota.Name = "SeguridadPbMascota";
+            this.SeguridadPbMascota.Size = new System.Drawing.Size(116, 129);
+            this.SeguridadPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeguridadPbMascota.TabIndex = 8;
+            this.SeguridadPbMascota.TabStop = false;
             // 
-            // linkLabel1
+            // SeguridadLnkOlvidarContrasena
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.linkLabel1.Location = new System.Drawing.Point(99, 422);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(161, 16);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.SeguridadLnkOlvidarContrasena.AutoSize = true;
+            this.SeguridadLnkOlvidarContrasena.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLnkOlvidarContrasena.Location = new System.Drawing.Point(99, 422);
+            this.SeguridadLnkOlvidarContrasena.Name = "SeguridadLnkOlvidarContrasena";
+            this.SeguridadLnkOlvidarContrasena.Size = new System.Drawing.Size(161, 16);
+            this.SeguridadLnkOlvidarContrasena.TabIndex = 7;
+            this.SeguridadLnkOlvidarContrasena.TabStop = true;
+            this.SeguridadLnkOlvidarContrasena.Text = "¿Olvidaste tu contraseña?";
+            this.SeguridadLnkOlvidarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button1
+            // SeguridadBtnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(120, 368);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SeguridadBtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadBtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SeguridadBtnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SeguridadBtnLogin.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnLogin.Location = new System.Drawing.Point(120, 368);
+            this.SeguridadBtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnLogin.Name = "SeguridadBtnLogin";
+            this.SeguridadBtnLogin.Size = new System.Drawing.Size(117, 36);
+            this.SeguridadBtnLogin.TabIndex = 0;
+            this.SeguridadBtnLogin.Text = "LOGIN";
+            this.SeguridadBtnLogin.UseVisualStyleBackColor = false;
+            this.SeguridadBtnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // SeguridadLblContraseña
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.label3.Location = new System.Drawing.Point(136, 327);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "🔐 Contraseña";
+            this.SeguridadLblContraseña.AutoSize = true;
+            this.SeguridadLblContraseña.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLblContraseña.Location = new System.Drawing.Point(136, 327);
+            this.SeguridadLblContraseña.Name = "SeguridadLblContraseña";
+            this.SeguridadLblContraseña.Size = new System.Drawing.Size(96, 17);
+            this.SeguridadLblContraseña.TabIndex = 5;
+            this.SeguridadLblContraseña.Text = "🔐 Contraseña";
             // 
-            // textBox2
+            // SeguridadTxtContraseña
             // 
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.textBox2.Location = new System.Drawing.Point(48, 295);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(264, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Tag = "";
+            this.SeguridadTxtContraseña.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SeguridadTxtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadTxtContraseña.Location = new System.Drawing.Point(48, 295);
+            this.SeguridadTxtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtContraseña.Name = "SeguridadTxtContraseña";
+            this.SeguridadTxtContraseña.PasswordChar = '*';
+            this.SeguridadTxtContraseña.Size = new System.Drawing.Size(264, 22);
+            this.SeguridadTxtContraseña.TabIndex = 4;
+            this.SeguridadTxtContraseña.Tag = "";
             // 
             // panel3
             // 
@@ -136,38 +136,38 @@
             this.panel3.Size = new System.Drawing.Size(275, 32);
             this.panel3.TabIndex = 6;
             // 
-            // label2
+            // SeguridadLblUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.label2.Location = new System.Drawing.Point(136, 262);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "👤 Usuario";
+            this.SeguridadLblUsuario.AutoSize = true;
+            this.SeguridadLblUsuario.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLblUsuario.Location = new System.Drawing.Point(136, 262);
+            this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(75, 17);
+            this.SeguridadLblUsuario.TabIndex = 2;
+            this.SeguridadLblUsuario.Text = "👤 Usuario";
             // 
-            // textBox1
+            // SeguridadTxtUsuario
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.textBox1.Location = new System.Drawing.Point(48, 229);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Tag = "";
+            this.SeguridadTxtUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SeguridadTxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadTxtUsuario.Location = new System.Drawing.Point(48, 229);
+            this.SeguridadTxtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtUsuario.Name = "SeguridadTxtUsuario";
+            this.SeguridadTxtUsuario.Size = new System.Drawing.Size(264, 22);
+            this.SeguridadTxtUsuario.TabIndex = 1;
+            this.SeguridadTxtUsuario.Tag = "";
             // 
-            // label1
+            // SeguridadLbIdentificadorInicioSesion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.label1.Location = new System.Drawing.Point(120, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "INICIAR SESIÓN";
+            this.SeguridadLbIdentificadorInicioSesion.AutoSize = true;
+            this.SeguridadLbIdentificadorInicioSesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLbIdentificadorInicioSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLbIdentificadorInicioSesion.Location = new System.Drawing.Point(120, 188);
+            this.SeguridadLbIdentificadorInicioSesion.Name = "SeguridadLbIdentificadorInicioSesion";
+            this.SeguridadLbIdentificadorInicioSesion.Size = new System.Drawing.Size(122, 20);
+            this.SeguridadLbIdentificadorInicioSesion.TabIndex = 1;
+            this.SeguridadLbIdentificadorInicioSesion.Text = "INICIAR SESIÓN";
             // 
             // panel2
             // 
@@ -178,66 +178,66 @@
             this.panel2.Size = new System.Drawing.Size(275, 32);
             this.panel2.TabIndex = 3;
             // 
-            // pictureBox1
+            // SeguridadPbLogin
             // 
-            this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.fondo2;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(947, 619);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.SeguridadPbLogin.Image = global::CapaVista_Seguridad.Properties.Resources.fondo2;
+            this.SeguridadPbLogin.Location = new System.Drawing.Point(-4, -10);
+            this.SeguridadPbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadPbLogin.Name = "SeguridadPbLogin";
+            this.SeguridadPbLogin.Size = new System.Drawing.Size(947, 619);
+            this.SeguridadPbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeguridadPbLogin.TabIndex = 6;
+            this.SeguridadPbLogin.TabStop = false;
             // 
-            // pictureBox3
+            // SeguridadPbLogo
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(220)))));
-            this.pictureBox3.Image = global::CapaVista_Seguridad.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(77, 82);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(225, 222);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.SeguridadPbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(235)))), ((int)(((byte)(220)))));
+            this.SeguridadPbLogo.Image = global::CapaVista_Seguridad.Properties.Resources.logo;
+            this.SeguridadPbLogo.Location = new System.Drawing.Point(77, 82);
+            this.SeguridadPbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadPbLogo.Name = "SeguridadPbLogo";
+            this.SeguridadPbLogo.Size = new System.Drawing.Size(225, 222);
+            this.SeguridadPbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SeguridadPbLogo.TabIndex = 7;
+            this.SeguridadPbLogo.TabStop = false;
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 599);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.SeguridadPbLogo);
+            this.Controls.Add(this.SeguridadPnlInterfazLogin);
+            this.Controls.Add(this.SeguridadPbLogin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.SeguridadPnlInterfazLogin.ResumeLayout(false);
+            this.SeguridadPnlInterfazLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel SeguridadPnlInterfazLogin;
+        private System.Windows.Forms.LinkLabel SeguridadLnkOlvidarContrasena;
+        private System.Windows.Forms.Button SeguridadBtnLogin;
+        private System.Windows.Forms.Label SeguridadLblContraseña;
+        private System.Windows.Forms.TextBox SeguridadTxtContraseña;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SeguridadLblUsuario;
+        private System.Windows.Forms.TextBox SeguridadTxtUsuario;
+        private System.Windows.Forms.Label SeguridadLbIdentificadorInicioSesion;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox SeguridadPbLogin;
+        private System.Windows.Forms.PictureBox SeguridadPbMascota;
+        private System.Windows.Forms.PictureBox SeguridadPbLogo;
     }
 }
