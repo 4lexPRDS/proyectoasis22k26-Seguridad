@@ -1,4 +1,5 @@
-﻿using proyecto2k26;
+﻿using CapaControlador_Seguridad;
+using proyecto2k26;
 using proyectosisk26;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,11 @@ namespace CapaVista_Seguridad
 {
     public partial class login : Form
     {
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
         public login()
         {
             InitializeComponent();
@@ -33,12 +39,12 @@ namespace CapaVista_Seguridad
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.Region = new Region(GetRoundedRect(panel1.ClientRectangle, 20));
+            SeguridadPnlInterfazLogin.Region = new Region(GetRoundedRect(SeguridadPnlInterfazLogin.ClientRectangle, 20));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmAsignacionAppPerf frmPerfil = new FrmAsignacionAppPerf();
+            MDIseguridad frmPerfil = new MDIseguridad();
             this.Hide();
             frmPerfil.ShowDialog();
             this.Show();
@@ -46,13 +52,18 @@ namespace CapaVista_Seguridad
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Recuperacion formRecuperacion = new Recuperacion();
+         FrmRecuperacion formRecuperacion = new FrmRecuperacion();
 
             this.Hide();
 
             formRecuperacion.ShowDialog();
 
             this.Show();
+        }
+
+        private void dgbConsultaTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
