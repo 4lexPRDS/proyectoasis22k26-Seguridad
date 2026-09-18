@@ -48,12 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAsignacionPerfiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAsignacionPerfiles.Designer.cs">
-      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Ayudas\ClsSeguridadFormHelper.cs" />
     <Compile Include="Ayudas\ClsValidacionDatos.cs" />
     <Compile Include="FrmAsignacionAplicacionUsuario.cs">
       <SubType>Form</SubType>
@@ -66,6 +61,12 @@
     </Compile>
     <Compile Include="FrmAsignacionAppPerf.Designer.cs">
       <DependentUpon>FrmAsignacionAppPerf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAsignacionPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAsignacionPerfiles.Designer.cs">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBitacora.cs">
       <SubType>Form</SubType>
@@ -103,6 +104,12 @@
     <Compile Include="FrmRecuperacion.Designer.cs">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,14 +136,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmAsignacionPerfiles.resx">
-      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignacionAplicacionUsuario.resx">
       <DependentUpon>FrmAsignacionAplicacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignacionAppPerf.resx">
       <DependentUpon>FrmAsignacionAppPerf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAsignacionPerfiles.resx">
+      <DependentUpon>FrmAsignacionPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperacion.resx">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
@@ -287,6 +297,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backUsu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo splash1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

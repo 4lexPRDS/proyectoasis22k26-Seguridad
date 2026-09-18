@@ -1,4 +1,4 @@
-﻿using CapaModelo_Seguridad.Contratos;
+using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Repositorios;
 using CapaModelo_Seguridad.Entidades;
 using System;
@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaModelo_Seguridad.Repositorios
 {
@@ -17,6 +15,49 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Insert;
         private string _Delete;
         private string _Update;
+        private string _UpdateContrasena;
+
+
+        private string login = "SELECT u.idUsuario, u.idEmpleado, u.nombreUsuario, u.contrasenaUsuario, u.is_active, " +
+             "CONCAT(e.nombresEmpleado, ' ', e.apellidosEmpleado) AS nombreEmpleado " +
+             "FROM tblusuario u " +
+             "INNER JOIN tblempleado e ON u.idEmpleado = e.idEmpleado " +
+             "WHERE u.nombreUsuario=? AND u.is_active=1";
+
+
+        private string rolesPorUsuario = "SELECT ur.idRol, r.nombreRol " +
+             "FROM tblusuariorol ur " +
+             "INNER JOIN tblrol r ON ur.idRol = r.idRol " +
+             "WHERE ur.idUsuario=?";
+
+
+        public ClsUsuarios SeguridadMetValidarLogin(string usuario, string contrasena)
+        {
+            var _parametros = new List<OdbcParameter>();
+            _parametros.Add(new OdbcParameter("p_usuario", usuario));
+
+            var tabla = SeguridadMetEjecucionConsulta(login, CommandType.Text, _parametros);
+
+            if (tabla.Rows.Count == 0) return null;
+
+            var row = tabla.Rows[0];
+            return new ClsUsuarios
+            {
+                IdUsuario = Convert.ToInt32(row[0]),
+                IdEmpleado = Convert.ToInt32(row[1]),
+                NombreUsuario = row[2].ToString(),
+                ContrasenaUsuario = row[3].ToString(),
+                IsActive = Convert.ToInt32(row[4]),
+                NombreEmpleado = row[5].ToString()
+            };
+        }
+        public DataTable SeguridadMetObtenerRolesPorUsuario(int idUsuario)
+        {
+            var Parametros = new List<OdbcParameter>();
+            Parametros.Add(new OdbcParameter("p_idUsuario", idUsuario));
+
+            return SeguridadMetEjecucionConsulta(rolesPorUsuario, CommandType.Text, Parametros);
+        }
 
         public ClsRepositorioUsuarios()
         {
@@ -32,6 +73,8 @@ namespace CapaModelo_Seguridad.Repositorios
             _Update = "UPDATE tblusuario SET idEmpleado=?,nombreUsuario=?, contrasenaUsuario=?, ultimoAccesoUsuario=?,is_active=? WHERE idUsuario=?";
 
             _Delete = "DELETE FROM tblusuario WHERE idUsuario=?";
+
+            _UpdateContrasena = "UPDATE tblusuario SET contrasenaUsuario=? WHERE idUsuario=?";
         }
 
         public int SeguridadMetAgregar(ClsUsuarios Entidad)
@@ -88,6 +131,13 @@ namespace CapaModelo_Seguridad.Repositorios
         public DataTable SeguridadMetObtenerEmpleados()
         {
             return SeguridadMetEjecucionConsulta("SELECT idEmpleado, nombresEmpleado FROM tblempleado", CommandType.Text);
+        }
+        public void SeguridadMetActualizarContrasena(int IdUsuario, string ContrasenaHasheada)
+        {
+            var Parametros = new List<OdbcParameter>();
+            Parametros.Add(new OdbcParameter("p_contrasenaUsuario", ContrasenaHasheada));
+            Parametros.Add(new OdbcParameter("p_idUsuario", IdUsuario));
+            SeguridadMetEjecucionNonQuery(_UpdateContrasena, Parametros, CommandType.Text);
         }
     }
 }

@@ -13,6 +13,9 @@ namespace CapaModelo_Seguridad.Entidades
         public int IdRol { get; set; }
         public int IdModulo { get; set; }
         public int IdAplicacion { get; set; }
+        public string NombreRol { get; set; }          
+        public string NombreModulo { get; set; }      
+        public string NombreAplicacion { get; set; }
 
         public bool DerInsertarRolModuloAplicacion { get; set; }
         public bool DerEditarRolModuloAplicacion { get; set; }

@@ -13,8 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
-    <!-- Ruta al repo local de Seguridad (clonado como hermano de este repo). Ajustar si tu clon vive en otro lugar. -->
-    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\..\..\..\proyectoasis22k26-Seguridad\codigo\componentes\seguridad\Seguridad</SeguridadBin>
+    <!-- Componente Seguridad ubicado dentro de este mismo repo (codigo/componentes/seguridad). Ajustar solo si se mueve de lugar. -->
+    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\seguridad\Seguridad</SeguridadBin>
     <!-- Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

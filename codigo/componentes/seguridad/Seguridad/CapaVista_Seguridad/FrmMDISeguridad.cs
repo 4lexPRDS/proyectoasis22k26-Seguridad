@@ -1,4 +1,5 @@
-﻿using CapaControlador_Seguridad;
+using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,39 @@ namespace CapaVista_Seguridad
         public FrmMDISeguridad()
         {
             InitializeComponent();
+            this.Load += FrmMDISeguridad_Load;
+        }
+
+        private void FrmMDISeguridad_Load(object sender, EventArgs e)
+        {
+            SeguridadMetActualizarInfoUsuario();
+            SeguridadMetCargarKPIs();
+        }
+
+        private void SeguridadMetActualizarInfoUsuario()
+        {
+            SeguridadLblUsuario.Text = $"Usuario: {ClsSesionSeguridad.NombreEmpleado}";
+            SeguridadLblUsuarioRol.Text = $"Rol: {ClsSesionSeguridad.SeguridadMetRolesComoTexto()}";
+        }
+
+        private void SeguridadMetCargarKPIs()
+        {
+            try
+            {
+                var Dashboard = new ClsModeloDashboard();
+                SeguridadLblKPIResp1.Text = Dashboard.SeguridadMetUsuarios().ToString();
+                SeguridadLblKPIResp2.Text = Dashboard.SeguridadMetAplicaciones().ToString();
+                SeguridadLblKPIResp3.Text = Dashboard.SeguridadMetPerfiles().ToString();
+                SeguridadLblKPIResp4.Text = Dashboard.SeguridadMetModulos().ToString();
+                SeguridadLblKPIResp5.Text = Dashboard.SeguridadMetBitacora().ToString();
+                SeguridadLblKPIResp6.Text = Dashboard.SeguridadMetAsignaciones().ToString();
+            }
+            catch { }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            int Radio = 20; // ajusta el radio como quieras
+            int Radio = 20;
             SeguridadPnlDashboard.Region = new Region(SeguridadMetRedondearEsquinas(SeguridadPnlDashboard.ClientRectangle, Radio));
         }
 
@@ -31,10 +60,10 @@ namespace CapaVista_Seguridad
             GraphicsPath RutaGrafica = new GraphicsPath();
             int Diametro = Radio * 2;
 
-            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Y, Diametro, Diametro, 180, 90); // esquina superior izquierda
-            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Y, Diametro, Diametro, 270, 90); // superior derecha
-            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Bottom - Diametro, Diametro, Diametro, 0, 90); // inferior derecha
-            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Bottom - Diametro, Diametro, Diametro, 90, 90); // inferior izquierda
+            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Y, Diametro, Diametro, 180, 90);
+            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Y, Diametro, Diametro, 270, 90);
+            RutaGrafica.AddArc(Rectangulo.Right - Diametro, Rectangulo.Bottom - Diametro, Diametro, Diametro, 0, 90);
+            RutaGrafica.AddArc(Rectangulo.X, Rectangulo.Bottom - Diametro, Diametro, Diametro, 90, 90);
             RutaGrafica.CloseFigure();
 
             return RutaGrafica;
@@ -83,14 +112,16 @@ namespace CapaVista_Seguridad
                 SeguridadPnlNavegador.Width = 64;
                 SeguridadPnlDashboard.Location = new Point(200, 52);
                 SeguridadBtnBurger.Location = new Point(220, 13);
-                SeguridadLblUsuariosRol.Location = new Point(285, 19);
+                SeguridadLblUsuario.Location = new Point(285, 19);
+                SeguridadLblUsuarioRol.Location = new Point(285, 39);
             }
             else
             {
                 SeguridadPnlNavegador.Width = 270;
                 SeguridadPnlDashboard.Location = new Point(307, 52);
                 SeguridadBtnBurger.Location = new Point(323, 13);
-                SeguridadLblUsuariosRol.Location = new Point(390, 19);
+                SeguridadLblUsuario.Location = new Point(390, 19);
+                SeguridadLblUsuarioRol.Location = new Point(390, 39);
             }
         }
 
