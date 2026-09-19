@@ -81,5 +81,10 @@ namespace CapaVista_Seguridad
 
             this.Show();
         }
+
+        private void SeguridadChkMostrarContra_CheckedChanged(object sender, EventArgs e)
+        {
+            SeguridadTxtContraseña.PasswordChar = SeguridadChkMostrarContra.Checked ? '\0' : '*';
+        }
     }
 }

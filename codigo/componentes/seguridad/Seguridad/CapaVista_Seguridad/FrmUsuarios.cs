@@ -10,7 +10,9 @@ namespace CapaVista_Seguridad
 {
     public partial class FrmUsuarios : Form
     {
+        //LLAMADO DE LACLASE MODELO USUARIO PARA PODER ACCEDER A SUS METODOS Y PROPIEDADES
         private ClsModeloUsuario _Usuario = new ClsModeloUsuario();
+        //LLAMADO DE LA CLASE DE PERMISOS PARA PODER ACCEDER A SUS METODOS Y PROPIEDADES
         private ClsPermisoAplicacion _MisPermisos;
 
         private const int ID_MODULO = 4;       
@@ -152,6 +154,7 @@ namespace CapaVista_Seguridad
                 _Usuario.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
                 _Usuario.NombreUsuario = SeguridadTxtUsuario.Text;
                 _Usuario.ContrasenaUsuario = SeguridadTxtContrasena.Text;
+                _Usuario.ConfirmarContrasenaUsuario = SeguridadTxtConfirmarContrasena.Text;
                 _Usuario.UltimoAccesoUsuario = DateTime.Now;
                 _Usuario.IsActive = SeguridadChkActivo.Checked ? 1 : 0;
                 _Usuario.Estado = EstadoEntidad.Added;
@@ -204,6 +207,9 @@ namespace CapaVista_Seguridad
             this.Close();
         }
 
-        
+        private void SeguridadChkMostrarContra_CheckedChanged(object sender, EventArgs e)
+        {
+            SeguridadTxtContrasena.PasswordChar = SeguridadChkMostrarContra.Checked ? '\0' : '*';
+        }
     }
 }
