@@ -69,19 +69,7 @@ namespace CapaVista_Seguridad.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Buscar
-        {
-            get
-            {
-                object obj = ResourceManager.GetObject("Buscar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-
+        
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
@@ -95,9 +83,29 @@ namespace CapaVista_Seguridad.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _51 {
+            get {
+                object obj = ResourceManager.GetObject("51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8 {
             get {
                 object obj = ResourceManager.GetObject("8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _81 {
+            get {
+                object obj = ResourceManager.GetObject("81", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -118,6 +126,16 @@ namespace CapaVista_Seguridad.Properties {
         internal static System.Drawing.Bitmap botonmdi1 {
             get {
                 object obj = ResourceManager.GetObject("botonmdi1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonmdi10 {
+            get {
+                object obj = ResourceManager.GetObject("botonmdi10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -485,6 +503,16 @@ namespace CapaVista_Seguridad.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_reporte1 {
+            get {
+                object obj = ResourceManager.GetObject("btn_reporte1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_salir {
             get {
                 object obj = ResourceManager.GetObject("btn_salir", resourceCulture);
@@ -515,6 +543,16 @@ namespace CapaVista_Seguridad.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnNuevo {
+            get {
+                object obj = ResourceManager.GetObject("btnNuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap burguer {
             get {
                 object obj = ResourceManager.GetObject("burguer", resourceCulture);
@@ -528,6 +566,16 @@ namespace CapaVista_Seguridad.Properties {
         internal static System.Drawing.Bitmap burguer1 {
             get {
                 object obj = ResourceManager.GetObject("burguer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Buscar {
+            get {
+                object obj = ResourceManager.GetObject("Buscar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -578,6 +626,16 @@ namespace CapaVista_Seguridad.Properties {
         internal static System.Drawing.Bitmap Fondo_Cusuario {
             get {
                 object obj = ResourceManager.GetObject("Fondo Cusuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_splash {
+            get {
+                object obj = ResourceManager.GetObject("fondo splash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -791,8 +849,5 @@ namespace CapaVista_Seguridad.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
-
-
     }
 }

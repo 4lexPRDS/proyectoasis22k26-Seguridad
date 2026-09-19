@@ -158,6 +158,12 @@ namespace CapaControlador_Seguridad
             return _ListaAsigAppPerf.FindAll(e => e._IdRol == IdRol);
         }
 
+        public IEnumerable<ClsModeloAsigAppPerf> SeguridadMetBuscarPorNombreRol(string NombreRol)
+        {
+            return _ListaAsigAppPerf.FindAll(e =>
+                e._NombreRol.IndexOf(NombreRol, StringComparison.OrdinalIgnoreCase) >= 0);
+        }
+
         // Permisos para UN rol específico en un módulo y aplicación dados
         public ClsPermisoAplicacion SeguridadMetObtenerPermisos(
             int IdRol, int IdModulo, int IdAplicacion)

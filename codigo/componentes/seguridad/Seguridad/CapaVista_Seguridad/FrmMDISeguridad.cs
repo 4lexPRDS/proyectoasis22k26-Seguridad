@@ -142,5 +142,20 @@ namespace CapaVista_Seguridad
             FrmMantenimientoAplicacion Aplicaciones = new FrmMantenimientoAplicacion();
             Aplicaciones.ShowDialog();
         }
+
+        private void SeguridadBtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+                 "¿Seguro que deseas cerrar sesión?",
+                 "Cerrar sesión",
+                 MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close(); 
+            }
+
+        }
     }
 }

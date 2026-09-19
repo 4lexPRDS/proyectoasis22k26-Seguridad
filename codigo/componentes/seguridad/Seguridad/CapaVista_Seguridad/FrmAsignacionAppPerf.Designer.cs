@@ -31,7 +31,7 @@ namespace CapaVista_Seguridad
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsignacionAppPerf));
             this.PnlSeguridadPnlDecorativo = new System.Windows.Forms.Panel();
             this.TxtSeguridadFiltro = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblSeguridadBusqueda = new System.Windows.Forms.Label();
             this.CboSeguridadAplicaciones = new System.Windows.Forms.ComboBox();
             this.CboSeguridadModulos = new System.Windows.Forms.ComboBox();
             this.CboSeguridadPerfiles = new System.Windows.Forms.ComboBox();
@@ -77,7 +77,7 @@ namespace CapaVista_Seguridad
             this.PnlSeguridadPnlDecorativo.BackColor = System.Drawing.Color.AntiqueWhite;
             this.PnlSeguridadPnlDecorativo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PnlSeguridadPnlDecorativo.Controls.Add(this.TxtSeguridadFiltro);
-            this.PnlSeguridadPnlDecorativo.Controls.Add(this.label1);
+            this.PnlSeguridadPnlDecorativo.Controls.Add(this.LblSeguridadBusqueda);
             this.PnlSeguridadPnlDecorativo.Controls.Add(this.CboSeguridadAplicaciones);
             this.PnlSeguridadPnlDecorativo.Controls.Add(this.CboSeguridadModulos);
             this.PnlSeguridadPnlDecorativo.Controls.Add(this.CboSeguridadPerfiles);
@@ -102,16 +102,16 @@ namespace CapaVista_Seguridad
             this.TxtSeguridadFiltro.Size = new System.Drawing.Size(260, 32);
             this.TxtSeguridadFiltro.TabIndex = 19;
             // 
-            // label1
+            // LblSeguridadBusqueda
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(1027, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 28);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Filtra por ID de Asignacion";
+            this.LblSeguridadBusqueda.AutoSize = true;
+            this.LblSeguridadBusqueda.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadBusqueda.ForeColor = System.Drawing.Color.DimGray;
+            this.LblSeguridadBusqueda.Location = new System.Drawing.Point(1024, 69);
+            this.LblSeguridadBusqueda.Name = "LblSeguridadBusqueda";
+            this.LblSeguridadBusqueda.Size = new System.Drawing.Size(274, 25);
+            this.LblSeguridadBusqueda.TabIndex = 18;
+            this.LblSeguridadBusqueda.Text = "Escribe el ROL que deseas buscar ";
             // 
             // CboSeguridadAplicaciones
             // 
@@ -149,11 +149,11 @@ namespace CapaVista_Seguridad
             this.LblSeguridadNombreAplicaciones.AutoSize = true;
             this.LblSeguridadNombreAplicaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSeguridadNombreAplicaciones.ForeColor = System.Drawing.Color.DimGray;
-            this.LblSeguridadNombreAplicaciones.Location = new System.Drawing.Point(617, 20);
+            this.LblSeguridadNombreAplicaciones.Location = new System.Drawing.Point(616, 20);
             this.LblSeguridadNombreAplicaciones.Name = "LblSeguridadNombreAplicaciones";
-            this.LblSeguridadNombreAplicaciones.Size = new System.Drawing.Size(121, 28);
+            this.LblSeguridadNombreAplicaciones.Size = new System.Drawing.Size(139, 28);
             this.LblSeguridadNombreAplicaciones.TabIndex = 4;
-            this.LblSeguridadNombreAplicaciones.Text = "Aplicaciones";
+            this.LblSeguridadNombreAplicaciones.Text = "Aplicaciones * ";
             // 
             // LblSeguridadNombreModulos
             // 
@@ -162,9 +162,9 @@ namespace CapaVista_Seguridad
             this.LblSeguridadNombreModulos.ForeColor = System.Drawing.Color.DimGray;
             this.LblSeguridadNombreModulos.Location = new System.Drawing.Point(315, 20);
             this.LblSeguridadNombreModulos.Name = "LblSeguridadNombreModulos";
-            this.LblSeguridadNombreModulos.Size = new System.Drawing.Size(90, 28);
+            this.LblSeguridadNombreModulos.Size = new System.Drawing.Size(108, 28);
             this.LblSeguridadNombreModulos.TabIndex = 2;
-            this.LblSeguridadNombreModulos.Text = "Modulos";
+            this.LblSeguridadNombreModulos.Text = "Modulos * ";
             // 
             // LblSeguridadNombrePerfil
             // 
@@ -173,9 +173,9 @@ namespace CapaVista_Seguridad
             this.LblSeguridadNombrePerfil.ForeColor = System.Drawing.Color.DimGray;
             this.LblSeguridadNombrePerfil.Location = new System.Drawing.Point(44, 20);
             this.LblSeguridadNombrePerfil.Name = "LblSeguridadNombrePerfil";
-            this.LblSeguridadNombrePerfil.Size = new System.Drawing.Size(73, 28);
+            this.LblSeguridadNombrePerfil.Size = new System.Drawing.Size(86, 28);
             this.LblSeguridadNombrePerfil.TabIndex = 0;
-            this.LblSeguridadNombrePerfil.Text = "Perfiles";
+            this.LblSeguridadNombrePerfil.Text = "Perfiles *";
             // 
             // BtnSeguridadBuscar
             // 
@@ -297,7 +297,7 @@ namespace CapaVista_Seguridad
             this.DgvSeguridadListaUsuarios.RowTemplate.Height = 24;
             this.DgvSeguridadListaUsuarios.Size = new System.Drawing.Size(1332, 254);
             this.DgvSeguridadListaUsuarios.TabIndex = 2;
-            this.DgvSeguridadListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeguridadListaUsuarios_CellContentClick);
+            this.DgvSeguridadListaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeguridadListaUsuarios_CellContentClick);
             // 
             // BtnSeguridadQuitar
             // 
@@ -590,7 +590,7 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Button BtnSeguridadFin;
         private System.Windows.Forms.Button BtnSeguridadAnterior;
         private System.Windows.Forms.Button BtnSeguridadGuardar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblSeguridadBusqueda;
         private System.Windows.Forms.TextBox TxtSeguridadFiltro;
     }
 }
