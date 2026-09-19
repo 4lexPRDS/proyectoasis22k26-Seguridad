@@ -31,10 +31,10 @@ namespace CapaModelo_Seguridad.Repositorios
              "WHERE ur.idUsuario=?";
 
 
-        public ClsUsuarios SeguridadMetValidarLogin(string usuario, string contrasena)
+        public ClsUsuarios SeguridadMetValidarLogin(string NombreUsuario, string ContrasenaUsuario)
         {
             var _parametros = new List<OdbcParameter>();
-            _parametros.Add(new OdbcParameter("p_usuario", usuario));
+            _parametros.Add(new OdbcParameter("p_usuario", NombreUsuario));
 
             var tabla = SeguridadMetEjecucionConsulta(login, CommandType.Text, _parametros);
 
