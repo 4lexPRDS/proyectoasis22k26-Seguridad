@@ -27,9 +27,9 @@ namespace CapaVista_Seguridad
             {
                 var MapaBotones = new Dictionary<Control, TipoPermiso>
                 {
-                    { btnGuardar,   TipoPermiso.Insertar },
-                    { btnModificar, TipoPermiso.Editar },
-                    { btnReporte,   TipoPermiso.Imprimir }
+                    { SeguridadBtnGuardar,   TipoPermiso.Insertar },
+                    { SeguridadBtnModificar, TipoPermiso.Editar },
+                    { SeguridadBtnReporte,   TipoPermiso.Imprimir }
 
                 };
 
@@ -38,10 +38,13 @@ namespace CapaVista_Seguridad
 
                 if (!_MisPermisos.TieneAcceso)
                     return;
-
+                //nombramos primero las columnas y luego llenamos todo
+                SeguridadMetConfigurarColumnasUsuarios();
                 SeguridadMetListarUsuarios();
                 SeguridadMetCargarCombos();
-                SeguridadMetCargarComboEstado();
+                
+
+
             }
             catch (Exception Ex)
             {
@@ -50,23 +53,17 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void SeguridadMetCargarComboEstado()
-        {
-            cboEstado.DataSource = _Usuario.SeguridadMetObtenerEstados();
-            cboEstado.DisplayMember = "Texto";
-            cboEstado.ValueMember = "Valor";
-            cboEstado.SelectedIndex = -1;
-        }
+       
 
         private void SeguridadMetCargarCombos()
         {
             try
             {
-                cboEmpleado.DataSource = _Usuario.SeguridadMetObtenerEmpleados();
-                cboEmpleado.DisplayMember = "NombresEmpleado";
-                cboEmpleado.ValueMember = "IdEmpleado";
-                cboEmpleado.SelectedIndex = -1;
-                cboEmpleado.SelectedIndexChanged += CboEmpleado_SelectedIndexChanged;
+                SeguridadCboEmpleado.DataSource = _Usuario.SeguridadMetObtenerEmpleados();
+                SeguridadCboEmpleado.DisplayMember = "NombresEmpleado";
+                SeguridadCboEmpleado.ValueMember = "IdEmpleado";
+                SeguridadCboEmpleado.SelectedIndex = -1;
+                SeguridadCboEmpleado.SelectedIndexChanged += CboEmpleado_SelectedIndexChanged;
             }
             catch (Exception Ex)
             {
@@ -76,9 +73,9 @@ namespace CapaVista_Seguridad
 
         private void CboEmpleado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboEmpleado.SelectedValue != null)
+            if (SeguridadCboEmpleado.SelectedValue != null)
             {
-                txtIdEmpleado.Text = cboEmpleado.SelectedValue.ToString();
+                SeguridadTxtIdEmpleado.Text = SeguridadCboEmpleado.SelectedValue.ToString();
             }
         }
 
@@ -86,12 +83,59 @@ namespace CapaVista_Seguridad
         {
             try
             {
-                dgvUsuarios.DataSource = _Usuario.SeguridadMetObtenerTodos();
+                SeguridadDgvUsuarios.DataSource = _Usuario.SeguridadMetObtenerTodos();
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.ToString());
             }
+        }
+        //Metodo para configurar nombre de las columnas del DataGridView sean mas legibles
+        private void SeguridadMetConfigurarColumnasUsuarios()
+        {
+            SeguridadDgvUsuarios.AutoGenerateColumns = false;
+            SeguridadDgvUsuarios.Columns.Clear();
+
+            SeguridadDgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colIdUsuario",
+                DataPropertyName = "IdUsuario",
+                HeaderText = "ID",
+                Width = 50
+            });
+
+            SeguridadDgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colIdEmpleado",
+                DataPropertyName = "IdEmpleado",
+                HeaderText = "ID Empleado",
+                Width = 90
+            });
+
+            SeguridadDgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colNombreUsuario",
+                DataPropertyName = "NombreUsuario",
+                HeaderText = "Usuario",
+                Width = 160
+            });
+
+            SeguridadDgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "colUltimoAcceso",
+                DataPropertyName = "UltimoAccesoUsuario",
+                HeaderText = "Último acceso",
+                Width = 150,
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "dd/MM/yyyy HH:mm" }
+            });
+
+            SeguridadDgvUsuarios.Columns.Add(new DataGridViewCheckBoxColumn
+            {
+                Name = "colIsActive",
+                DataPropertyName = "IsActive",
+                HeaderText = "Estado",
+                Width = 60
+            });
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -105,11 +149,11 @@ namespace CapaVista_Seguridad
 
             try
             {
-                _Usuario.IdEmpleado = Convert.ToInt32(txtIdEmpleado.Text);
-                _Usuario.NombreUsuario = txtUsuario.Text;
-                _Usuario.ContrasenaUsuario = txtContrasena.Text;
+                _Usuario.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
+                _Usuario.NombreUsuario = SeguridadTxtUsuario.Text;
+                _Usuario.ContrasenaUsuario = SeguridadTxtContrasena.Text;
                 _Usuario.UltimoAccesoUsuario = DateTime.Now;
-                _Usuario.IsActive = Convert.ToInt32(cboEstado.SelectedValue);
+                _Usuario.IsActive = SeguridadChkActivo.Checked ? 1 : 0;
                 _Usuario.Estado = EstadoEntidad.Added;
 
                 bool Valido = new ClsValidacionDatos(_Usuario).SeguridadMetValidar();
@@ -148,16 +192,18 @@ namespace CapaVista_Seguridad
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtIdEmpleado.Clear();
-            txtUsuario.Clear();
-            txtContrasena.Clear();
-            cboEmpleado.SelectedIndex = -1;
-            cboEstado.SelectedIndex = -1;
+            SeguridadTxtIdEmpleado.Clear();
+            SeguridadTxtUsuario.Clear();
+            SeguridadTxtContrasena.Clear();
+            SeguridadCboEmpleado.SelectedIndex = -1;
+            SeguridadChkActivo.Checked = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

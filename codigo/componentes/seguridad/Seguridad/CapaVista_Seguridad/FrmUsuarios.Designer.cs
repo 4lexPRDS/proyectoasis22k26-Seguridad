@@ -20,29 +20,29 @@ namespace CapaVista_Seguridad
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblEmpleado = new System.Windows.Forms.Label();
-            this.cboEmpleado = new System.Windows.Forms.ComboBox();
+            this.SeguridadCboEmpleado = new System.Windows.Forms.ComboBox();
             this.lblIdEmpleado = new System.Windows.Forms.Label();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.SeguridadTxtIdEmpleado = new System.Windows.Forms.TextBox();
             this.lblContrasena = new System.Windows.Forms.Label();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.SeguridadTxtContrasena = new System.Windows.Forms.TextBox();
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
-            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
+            this.SeguridadTxtConfirmarContrasena = new System.Windows.Forms.TextBox();
             this.pnlIngresoDatos = new System.Windows.Forms.Panel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.SeguridadTxtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.SeguridadDgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.SeguridadBtnModificar = new System.Windows.Forms.Button();
+            this.SeguridadBtnSalir = new System.Windows.Forms.Button();
+            this.SeguridadBtnReporte = new System.Windows.Forms.Button();
+            this.SeguridadBtnLimpiar = new System.Windows.Forms.Button();
+            this.SeguridadBtnGuardar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
             this.pnlIngresoDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,10 +53,9 @@ namespace CapaVista_Seguridad
             this.lblTitulo.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblTitulo.Location = new System.Drawing.Point(170, 37);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(227, 46);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(145, 30);
+            this.lblTitulo.Size = new System.Drawing.Size(192, 37);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Crear Usuario";
             // 
@@ -65,131 +64,126 @@ namespace CapaVista_Seguridad
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEmpleado.Location = new System.Drawing.Point(12, 24);
-            this.lblEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmpleado.Location = new System.Drawing.Point(16, 30);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(73, 17);
+            this.lblEmpleado.Size = new System.Drawing.Size(95, 23);
             this.lblEmpleado.TabIndex = 2;
             this.lblEmpleado.Text = "Empleado:";
             // 
-            // cboEmpleado
+            // SeguridadCboEmpleado
             // 
-            this.cboEmpleado.BackColor = System.Drawing.SystemColors.Control;
-            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmpleado.FormattingEnabled = true;
-            this.cboEmpleado.Location = new System.Drawing.Point(102, 24);
-            this.cboEmpleado.Margin = new System.Windows.Forms.Padding(2);
-            this.cboEmpleado.Name = "cboEmpleado";
-            this.cboEmpleado.Size = new System.Drawing.Size(288, 21);
-            this.cboEmpleado.TabIndex = 3;
+            this.SeguridadCboEmpleado.BackColor = System.Drawing.SystemColors.Control;
+            this.SeguridadCboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SeguridadCboEmpleado.FormattingEnabled = true;
+            this.SeguridadCboEmpleado.Location = new System.Drawing.Point(136, 30);
+            this.SeguridadCboEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadCboEmpleado.Name = "SeguridadCboEmpleado";
+            this.SeguridadCboEmpleado.Size = new System.Drawing.Size(383, 24);
+            this.SeguridadCboEmpleado.TabIndex = 3;
             // 
             // lblIdEmpleado
             // 
             this.lblIdEmpleado.AutoSize = true;
             this.lblIdEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEmpleado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblIdEmpleado.Location = new System.Drawing.Point(12, 54);
-            this.lblIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdEmpleado.Location = new System.Drawing.Point(16, 66);
             this.lblIdEmpleado.Name = "lblIdEmpleado";
-            this.lblIdEmpleado.Size = new System.Drawing.Size(85, 17);
+            this.lblIdEmpleado.Size = new System.Drawing.Size(111, 23);
             this.lblIdEmpleado.TabIndex = 4;
             this.lblIdEmpleado.Text = "Id Empleado";
             // 
-            // txtIdEmpleado
+            // SeguridadTxtIdEmpleado
             // 
-            this.txtIdEmpleado.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtIdEmpleado.Enabled = false;
-            this.txtIdEmpleado.Location = new System.Drawing.Point(102, 54);
-            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.ReadOnly = true;
-            this.txtIdEmpleado.Size = new System.Drawing.Size(61, 20);
-            this.txtIdEmpleado.TabIndex = 5;
-            this.txtIdEmpleado.TabStop = false;
+            this.SeguridadTxtIdEmpleado.BackColor = System.Drawing.Color.Gainsboro;
+            this.SeguridadTxtIdEmpleado.Enabled = false;
+            this.SeguridadTxtIdEmpleado.Location = new System.Drawing.Point(136, 66);
+            this.SeguridadTxtIdEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtIdEmpleado.Name = "SeguridadTxtIdEmpleado";
+            this.SeguridadTxtIdEmpleado.ReadOnly = true;
+            this.SeguridadTxtIdEmpleado.Size = new System.Drawing.Size(80, 22);
+            this.SeguridadTxtIdEmpleado.TabIndex = 5;
+            this.SeguridadTxtIdEmpleado.TabStop = false;
             // 
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblContrasena.Location = new System.Drawing.Point(12, 124);
-            this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContrasena.Location = new System.Drawing.Point(16, 153);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(81, 17);
+            this.lblContrasena.Size = new System.Drawing.Size(104, 23);
             this.lblContrasena.TabIndex = 6;
             this.lblContrasena.Text = "Contraseña:";
             // 
-            // txtContrasena
+            // SeguridadTxtContrasena
             // 
-            this.txtContrasena.BackColor = System.Drawing.Color.White;
-            this.txtContrasena.Location = new System.Drawing.Point(102, 124);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(289, 20);
-            this.txtContrasena.TabIndex = 7;
+            this.SeguridadTxtContrasena.BackColor = System.Drawing.Color.White;
+            this.SeguridadTxtContrasena.Location = new System.Drawing.Point(136, 153);
+            this.SeguridadTxtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtContrasena.Name = "SeguridadTxtContrasena";
+            this.SeguridadTxtContrasena.PasswordChar = '*';
+            this.SeguridadTxtContrasena.Size = new System.Drawing.Size(384, 22);
+            this.SeguridadTxtContrasena.TabIndex = 7;
             // 
             // lblConfirmarContrasena
             // 
             this.lblConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblConfirmarContrasena.Location = new System.Drawing.Point(12, 156);
-            this.lblConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblConfirmarContrasena.Location = new System.Drawing.Point(16, 192);
             this.lblConfirmarContrasena.Name = "lblConfirmarContrasena";
-            this.lblConfirmarContrasena.Size = new System.Drawing.Size(84, 34);
+            this.lblConfirmarContrasena.Size = new System.Drawing.Size(112, 42);
             this.lblConfirmarContrasena.TabIndex = 8;
             this.lblConfirmarContrasena.Text = "Confirmar Contraseña:";
             this.lblConfirmarContrasena.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblConfirmarContrasena.UseCompatibleTextRendering = true;
             // 
-            // txtConfirmarContrasena
+            // SeguridadTxtConfirmarContrasena
             // 
-            this.txtConfirmarContrasena.BackColor = System.Drawing.Color.White;
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(102, 169);
-            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(2);
-            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
-            this.txtConfirmarContrasena.PasswordChar = '*';
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(283, 20);
-            this.txtConfirmarContrasena.TabIndex = 9;
+            this.SeguridadTxtConfirmarContrasena.BackColor = System.Drawing.Color.White;
+            this.SeguridadTxtConfirmarContrasena.Location = new System.Drawing.Point(136, 208);
+            this.SeguridadTxtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtConfirmarContrasena.Name = "SeguridadTxtConfirmarContrasena";
+            this.SeguridadTxtConfirmarContrasena.PasswordChar = '*';
+            this.SeguridadTxtConfirmarContrasena.Size = new System.Drawing.Size(376, 22);
+            this.SeguridadTxtConfirmarContrasena.TabIndex = 9;
             // 
             // pnlIngresoDatos
             // 
             this.pnlIngresoDatos.BackColor = System.Drawing.Color.OldLace;
-            this.pnlIngresoDatos.Controls.Add(this.txtUsuario);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadChkActivo);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadTxtUsuario);
             this.pnlIngresoDatos.Controls.Add(this.lblUsuario);
             this.pnlIngresoDatos.Controls.Add(this.lblEstado);
-            this.pnlIngresoDatos.Controls.Add(this.cboEstado);
             this.pnlIngresoDatos.Controls.Add(this.lblEmpleado);
-            this.pnlIngresoDatos.Controls.Add(this.cboEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadCboEmpleado);
             this.pnlIngresoDatos.Controls.Add(this.lblIdEmpleado);
-            this.pnlIngresoDatos.Controls.Add(this.txtIdEmpleado);
-            this.pnlIngresoDatos.Controls.Add(this.txtContrasena);
-            this.pnlIngresoDatos.Controls.Add(this.txtConfirmarContrasena);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadTxtIdEmpleado);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadTxtContrasena);
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadTxtConfirmarContrasena);
             this.pnlIngresoDatos.Controls.Add(this.lblContrasena);
             this.pnlIngresoDatos.Controls.Add(this.lblConfirmarContrasena);
-            this.pnlIngresoDatos.Location = new System.Drawing.Point(168, 65);
-            this.pnlIngresoDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlIngresoDatos.Location = new System.Drawing.Point(224, 80);
+            this.pnlIngresoDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlIngresoDatos.Name = "pnlIngresoDatos";
-            this.pnlIngresoDatos.Size = new System.Drawing.Size(406, 247);
+            this.pnlIngresoDatos.Size = new System.Drawing.Size(541, 304);
             this.pnlIngresoDatos.TabIndex = 16;
             // 
-            // txtUsuario
+            // SeguridadTxtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(102, 84);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(283, 20);
-            this.txtUsuario.TabIndex = 13;
+            this.SeguridadTxtUsuario.Location = new System.Drawing.Point(136, 103);
+            this.SeguridadTxtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadTxtUsuario.Name = "SeguridadTxtUsuario";
+            this.SeguridadTxtUsuario.Size = new System.Drawing.Size(376, 22);
+            this.SeguridadTxtUsuario.TabIndex = 13;
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 84);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(16, 103);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(55, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
             this.lblUsuario.TabIndex = 12;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -198,108 +192,97 @@ namespace CapaVista_Seguridad
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lblEstado.Location = new System.Drawing.Point(18, 213);
-            this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstado.Location = new System.Drawing.Point(24, 262);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(49, 17);
+            this.lblEstado.Size = new System.Drawing.Size(63, 23);
             this.lblEstado.TabIndex = 10;
             this.lblEstado.Text = "Estado";
             // 
-            // cboEstado
+            // SeguridadDgvUsuarios
             // 
-            this.cboEstado.BackColor = System.Drawing.SystemColors.Control;
-            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(108, 213);
-            this.cboEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(67, 21);
-            this.cboEstado.TabIndex = 11;
+            this.SeguridadDgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SeguridadDgvUsuarios.Location = new System.Drawing.Point(72, 423);
+            this.SeguridadDgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadDgvUsuarios.Name = "SeguridadDgvUsuarios";
+            this.SeguridadDgvUsuarios.RowHeadersWidth = 51;
+            this.SeguridadDgvUsuarios.RowTemplate.Height = 24;
+            this.SeguridadDgvUsuarios.Size = new System.Drawing.Size(752, 217);
+            this.SeguridadDgvUsuarios.TabIndex = 21;
+       
             // 
-            // dgvUsuarios
+            // SeguridadBtnModificar
             // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(54, 344);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.RowHeadersWidth = 51;
-            this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(564, 176);
-            this.dgvUsuarios.TabIndex = 21;
+            this.SeguridadBtnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadBtnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
+            this.SeguridadBtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnModificar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnModificar.Location = new System.Drawing.Point(825, 240);
+            this.SeguridadBtnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnModificar.Name = "SeguridadBtnModificar";
+            this.SeguridadBtnModificar.Size = new System.Drawing.Size(80, 74);
+            this.SeguridadBtnModificar.TabIndex = 20;
+            this.SeguridadBtnModificar.UseVisualStyleBackColor = false;
             // 
-            // btnModificar
+            // SeguridadBtnSalir
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(619, 195);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(60, 60);
-            this.btnModificar.TabIndex = 20;
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadBtnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
+            this.SeguridadBtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnSalir.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnSalir.Location = new System.Drawing.Point(840, 487);
+            this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";
+            this.SeguridadBtnSalir.Size = new System.Drawing.Size(80, 74);
+            this.SeguridadBtnSalir.TabIndex = 14;
+            this.SeguridadBtnSalir.UseVisualStyleBackColor = false;
             // 
-            // btnSalir
+            // SeguridadBtnReporte
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(630, 396);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(60, 60);
-            this.btnSalir.TabIndex = 14;
-            this.btnSalir.UseVisualStyleBackColor = false;
+            this.SeguridadBtnReporte.BackColor = System.Drawing.Color.White;
+            this.SeguridadBtnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
+            this.SeguridadBtnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnReporte.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnReporte.Location = new System.Drawing.Point(825, 62);
+            this.SeguridadBtnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnReporte.Name = "SeguridadBtnReporte";
+            this.SeguridadBtnReporte.Size = new System.Drawing.Size(80, 74);
+            this.SeguridadBtnReporte.TabIndex = 11;
+            this.SeguridadBtnReporte.UseVisualStyleBackColor = false;
             // 
-            // btnReporte
+            // SeguridadBtnLimpiar
             // 
-            this.btnReporte.BackColor = System.Drawing.Color.White;
-            this.btnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
-            this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(619, 50);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(60, 60);
-            this.btnReporte.TabIndex = 11;
-            this.btnReporte.UseVisualStyleBackColor = false;
+            this.SeguridadBtnLimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadBtnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
+            this.SeguridadBtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnLimpiar.Location = new System.Drawing.Point(825, 325);
+            this.SeguridadBtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnLimpiar.Name = "SeguridadBtnLimpiar";
+            this.SeguridadBtnLimpiar.Size = new System.Drawing.Size(80, 74);
+            this.SeguridadBtnLimpiar.TabIndex = 13;
+            this.SeguridadBtnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // btnLimpiar
+            // SeguridadBtnGuardar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
-            this.btnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
-            this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(619, 264);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(60, 60);
-            this.btnLimpiar.TabIndex = 13;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(619, 128);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(60, 60);
-            this.btnGuardar.TabIndex = 12;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.SeguridadBtnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadBtnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
+            this.SeguridadBtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnGuardar.Location = new System.Drawing.Point(825, 158);
+            this.SeguridadBtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnGuardar.Name = "SeguridadBtnGuardar";
+            this.SeguridadBtnGuardar.Size = new System.Drawing.Size(80, 74);
+            this.SeguridadBtnGuardar.TabIndex = 12;
+            this.SeguridadBtnGuardar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaVista_Seguridad.Properties.Resources._5;
-            this.pictureBox2.Location = new System.Drawing.Point(54, 20);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(72, 25);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(84, 104);
+            this.pictureBox2.Size = new System.Drawing.Size(112, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -310,10 +293,10 @@ namespace CapaVista_Seguridad
             this.btnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
-            this.btnAyuda.Location = new System.Drawing.Point(4, 2);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAyuda.Location = new System.Drawing.Point(5, 2);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(31, 34);
+            this.btnAyuda.Size = new System.Drawing.Size(41, 42);
             this.btnAyuda.TabIndex = 1;
             this.btnAyuda.UseVisualStyleBackColor = false;
             // 
@@ -323,31 +306,45 @@ namespace CapaVista_Seguridad
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CapaVista_Seguridad.Properties.Resources.fondo2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(718, 540);
+            this.pictureBox1.Size = new System.Drawing.Size(957, 665);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // SeguridadChkActivo
+            // 
+            this.SeguridadChkActivo.AutoSize = true;
+            this.SeguridadChkActivo.Checked = true;
+            this.SeguridadChkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SeguridadChkActivo.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SeguridadChkActivo.ForeColor = System.Drawing.Color.DimGray;
+            this.SeguridadChkActivo.Location = new System.Drawing.Point(104, 264);
+            this.SeguridadChkActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadChkActivo.Name = "SeguridadChkActivo";
+            this.SeguridadChkActivo.Size = new System.Drawing.Size(78, 25);
+            this.SeguridadChkActivo.TabIndex = 14;
+            this.SeguridadChkActivo.Text = "Activo";
+            // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 540);
-            this.Controls.Add(this.dgvUsuarios);
-            this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnReporte);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnGuardar);
+            this.ClientSize = new System.Drawing.Size(957, 665);
+            this.Controls.Add(this.SeguridadDgvUsuarios);
+            this.Controls.Add(this.SeguridadBtnModificar);
+            this.Controls.Add(this.SeguridadBtnSalir);
+            this.Controls.Add(this.SeguridadBtnReporte);
+            this.Controls.Add(this.SeguridadBtnLimpiar);
+            this.Controls.Add(this.SeguridadBtnGuardar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pnlIngresoDatos);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -355,7 +352,7 @@ namespace CapaVista_Seguridad
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             this.pnlIngresoDatos.ResumeLayout(false);
             this.pnlIngresoDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -368,25 +365,25 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Label lblEmpleado;
-        private System.Windows.Forms.ComboBox cboEmpleado;
+        private System.Windows.Forms.ComboBox SeguridadCboEmpleado;
         private System.Windows.Forms.Label lblIdEmpleado;
-        private System.Windows.Forms.TextBox txtIdEmpleado;
+        private System.Windows.Forms.TextBox SeguridadTxtIdEmpleado;
         private System.Windows.Forms.Label lblContrasena;
-        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox SeguridadTxtContrasena;
         private System.Windows.Forms.Label lblConfirmarContrasena;
-        private System.Windows.Forms.TextBox txtConfirmarContrasena;
-        private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox SeguridadTxtConfirmarContrasena;
+        private System.Windows.Forms.Button SeguridadBtnReporte;
+        private System.Windows.Forms.Button SeguridadBtnGuardar;
+        private System.Windows.Forms.Button SeguridadBtnLimpiar;
+        private System.Windows.Forms.Button SeguridadBtnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlIngresoDatos;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Button SeguridadBtnModificar;
+        private System.Windows.Forms.DataGridView SeguridadDgvUsuarios;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox SeguridadTxtUsuario;
+        private System.Windows.Forms.CheckBox SeguridadChkActivo;
     }
 }

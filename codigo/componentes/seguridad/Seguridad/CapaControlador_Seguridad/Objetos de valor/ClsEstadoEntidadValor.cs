@@ -14,10 +14,6 @@ namespace CapaControlador_Seguridad
 
 
     }
-    public class ClsEstadoEntidadValor
-    {
-        public string Texto { get; set; }
-        public int Valor { get; set; }
-    }
+   
 
 }
