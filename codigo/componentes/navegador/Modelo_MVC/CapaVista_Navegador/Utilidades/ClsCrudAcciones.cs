@@ -12,12 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaControlador_Navegador;
-// Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
-// Estos dos using son para poder usar la clase de bitácora (auditoría) del componente Seguridad.
-using CapaControlador_Seguridad;
-using CapaControlador_Seguridad.Objetos_de_valor;
-// Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 
 namespace CapaVista_Navegador
 {
@@ -26,10 +21,9 @@ namespace CapaVista_Navegador
         private ClsCtrlRegistro _CtrlRegistro = new ClsCtrlRegistro();
 
         // Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335
-        // Bitácora de Seguridad: deja rastro de Insertar/Modificar/Eliminar. Se usa el método de
-        // instancia con IdUsuario explícito porque el método estático SeguridadMetRegistrarAccion usa
-        // una clase de sesión distinta (ClsSesion) que queda fija en el usuario 1.
-        private ClsModeloBitacora _Bitacora = new ClsModeloBitacora();
+        // Bitácora: deja rastro de Insertar/Modificar/Eliminar. La fachada viene del componente
+        // Navegador y es la que sabe hablar con Seguridad (usuario de la sesión, IP, etc.).
+        private ClsNavegadorBitacora _Bitacora = new ClsNavegadorBitacora();
         // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
 
         // ====================================================================
@@ -261,9 +255,9 @@ namespace CapaVista_Navegador
                 if (ValoresPK.Count > 0)
                     int.TryParse(ValoresPK[0], out IdRegistro);
 
-                _Bitacora.SeguridadMetRegistrarBitacora(
-                    ClsSesionSeguridad.IdUsuario, "INSERT", Tabla, IdRegistro,
-                    "Se insertó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos), null);
+                _Bitacora.NavegadorMetRegistrarBitacora(
+                    "INSERT", Tabla, IdRegistro,
+                    "Se insertó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos));
             }
 
             return Insertado;
@@ -314,9 +308,9 @@ namespace CapaVista_Navegador
                 int IdRegistro = 0;
                 foreach (string ValorPk in ClavesPrimarias.Values) { int.TryParse(ValorPk, out IdRegistro); break; }
 
-                _Bitacora.SeguridadMetRegistrarBitacora(
-                    ClsSesionSeguridad.IdUsuario, "UPDATE", Tabla, IdRegistro,
-                    "Se actualizó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos), null);
+                _Bitacora.NavegadorMetRegistrarBitacora(
+                    "UPDATE", Tabla, IdRegistro,
+                    "Se actualizó un registro en " + Tabla + ": " + NavegadorFuncResumenDatos(Datos));
             }
 
             return Actualizado;
@@ -367,9 +361,9 @@ namespace CapaVista_Navegador
                 int IdRegistro = 0;
                 foreach (string ValorPk in ClavesPrimarias.Values) { int.TryParse(ValorPk, out IdRegistro); break; }
 
-                _Bitacora.SeguridadMetRegistrarBitacora(
-                    ClsSesionSeguridad.IdUsuario, "DELETE", Tabla, IdRegistro,
-                    "Se eliminó un registro de " + Tabla + ".", null);
+                _Bitacora.NavegadorMetRegistrarBitacora(
+                    "DELETE", Tabla, IdRegistro,
+                    "Se eliminó un registro de " + Tabla + ".");
             }
 
             return Eliminado;

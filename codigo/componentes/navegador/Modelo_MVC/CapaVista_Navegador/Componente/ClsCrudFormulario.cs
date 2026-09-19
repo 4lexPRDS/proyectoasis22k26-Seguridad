@@ -4,7 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using CapaControlador_Navegador;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 
 namespace CapaVista_Navegador
 {
@@ -14,7 +14,7 @@ namespace CapaVista_Navegador
     // Arma el panel dinamico de un registro: labels, textbox, combo, fecha, checkbox
     public class ClsCrudFormulario
     {
-        private readonly Form _Formulario;
+        private readonly Control _Formulario;
         private readonly ClsCtrlTabla _CtrlTabla = new ClsCtrlTabla();
         private Panel NavegadorPnlRegistro;
         private Dictionary<string, Control> _Controles;
@@ -40,7 +40,7 @@ namespace CapaVista_Navegador
         public int Bottom => NavegadorPnlRegistro?.Bottom ?? 0;
 
         // Inicializa el formulario CRUD con el formulario principal
-        public ClsCrudFormulario(Form Formulario) => _Formulario = Formulario;
+        public ClsCrudFormulario(Control Formulario) => _Formulario = Formulario;
 
         // Abre el formulario dinamico para insertar o modificar un registro
         public void NavegadorMetAbrir(string Tabla, List<ClsColumnaInfo> Esquema,

@@ -4,18 +4,18 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using CapaControlador_Navegador;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 
 namespace CapaVista_Navegador
 {
     // Si el driver ODBC no detecta la llave primaria, la pregunta una vez y la recuerda por tabla
     public class ClsSelectorLlave
     {
-        private Form _Formulario;
+        private Control _Formulario;
         private ClsCtrlEsquema _CtrlEsquema = new ClsCtrlEsquema();
         private Dictionary<string, List<string>> _ClavesManualesPorTabla = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
 
-        public ClsSelectorLlave(Form Formulario)
+        public ClsSelectorLlave(Control Formulario)
         {
             this._Formulario = Formulario;
         }

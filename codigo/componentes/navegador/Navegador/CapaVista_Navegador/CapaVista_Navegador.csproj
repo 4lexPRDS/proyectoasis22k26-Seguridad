@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <!-- Componente Seguridad dentro de este mismo repo (codigo/componentes/seguridad). Ajustar solo si se mueve de lugar. -->
+    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\seguridad\Seguridad</SeguridadBin>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <!-- Componente Seguridad: permisos (ClsSeguridadFormHelper), sesión y bitácora, encapsulados dentro del navegador. -->
+    <Reference Include="CapaVista_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaVista_Seguridad\bin\Debug\CapaVista_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CapaControlador_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CapaModelo_Seguridad">
+      <HintPath>$(SeguridadBin)\CapaModelo_Seguridad\bin\Debug\CapaModelo_Seguridad.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -49,11 +64,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Seguridad\ClsCrudSeguridad.cs" />
+    <Compile Include="Seguridad\ClsNavegadorBitacora.cs" />
+    <Compile Include="Navegador.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Navegador.Designer.cs">
+      <DependentUpon>Navegador.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -61,8 +78,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Navegador.resx">
+      <DependentUpon>Navegador.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 
 namespace CapaVista_Navegador
 {
@@ -15,7 +15,7 @@ namespace CapaVista_Navegador
     public class ClsCrudGrid
     {
         // Guardamos el formulario donde se va a dibujar la tabla
-        private Form _Formulario;
+        private Control _Formulario;
 
         // Lista de controles del formulario mapeados con sus nombres de campo/columna
         private Dictionary<string, Control> _MapaControles;
@@ -26,7 +26,7 @@ namespace CapaVista_Navegador
         // Propiedad para acceder a la tabla desde fuera si hace falta
         public DataGridView NavegadorDgvDatos { get; private set; }
 
-        public ClsCrudGrid(Form Formulario)
+        public ClsCrudGrid(Control Formulario)
         {
             this._Formulario = Formulario;
             this._MapaControles = new Dictionary<string, Control>(StringComparer.OrdinalIgnoreCase);
