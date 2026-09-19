@@ -19,6 +19,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -29,6 +30,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,6 +44,13 @@
     </Reference>
     <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
     <!-- Se agrega esta referencia porque Program.cs ahora llama a ClsSesionPrueba, que vive aquí. -->
+    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
+    <!-- El navegador (control de usuario) ahora es un componente aparte: este proyecto lo consume. -->
+    <Reference Include="CapaVista_Navegador_Controles">
+      <HintPath>..\..\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador_Controles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
     <Reference Include="CapaControlador_Navegador">
       <HintPath>..\..\Modelo_MVC\CapaControlador_Navegador\bin\Debug\CapaControlador_Navegador.dll</HintPath>
     </Reference>
@@ -70,6 +79,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
+    <Compile Include="FrmCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrud.Designer.cs">
+      <DependentUpon>FrmCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsSesionPrueba.cs" />
+    <EmbeddedResource Include="FrmCrud.resx">
+      <DependentUpon>FrmCrud.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

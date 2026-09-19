@@ -1,5 +1,5 @@
 ﻿using CapaControlador_Navegador;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,19 @@ namespace CapaVista_Navegador
 {
     public class ClsCrudCoordinador
     {
-        private readonly FrmCrud _Vista;
+        // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+        // Antes el tipo era FrmCrud. Ahora es Form para que el formulario pueda vivir fuera de este
+        // proyecto (en la solución que consume el navegador), y el nombre de la tabla lo da quien lo usa.
+        private readonly Control _Vista;
+
+        private string _NombreTabla;
+
+        public string NombreTabla
+        {
+            get { return _NombreTabla; }
+            set { _NombreTabla = value; }
+        }
+        // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
 
         private readonly ClsCtrlTabla _CtrlTabla;
         private readonly ClsCrudGrid _Grid;
@@ -25,11 +37,14 @@ namespace CapaVista_Navegador
         private Dictionary<string, string> _PkModificar;
 
         public ClsCrudCoordinador(
-            FrmCrud Vista,
+            Control Vista,
+            string Tabla,
             string UsuarioActual,
             string CodigoModulo)
         {
             _Vista = Vista;
+
+            _NombreTabla = Tabla;
 
             _CtrlTabla = new ClsCtrlTabla();
 
@@ -49,18 +64,26 @@ namespace CapaVista_Navegador
             {
                 DataTable Datos =
                     _CtrlTabla.NavegadorFuncLlenarDgv(
-                        _Vista.NombreTabla);
+                        NombreTabla);
 
                 _EsquemaActual =
                     _SelectorLlave.NavegadorFuncObtenerEsquemaConLlaves(
-                        _Vista.NombreTabla);
+                        NombreTabla);
 
                 _Grid.NavegadorMetMostrar(Datos);
 
                 NavegadorMetPosicionar();
 
-                _Vista.Text =
-                    "1001 – Crud " + _Vista.NombreTabla;
+                // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+                // Ahora _Vista es un control que puede estar dentro de cualquier formulario:
+                // el título se le pone al formulario que lo contiene (si ya tiene uno).
+                Form Padre = _Vista.FindForm();
+
+                if (Padre != null)
+                {
+                    Padre.Text = "1001 – Crud " + NombreTabla;
+                }
+                // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
 
                 return true;
             }
@@ -137,7 +160,7 @@ namespace CapaVista_Navegador
             }
 
             _Formulario.NavegadorMetAbrir(
-                _Vista.NombreTabla,
+                NombreTabla,
                 _EsquemaActual,
                 false,
                 null,
@@ -184,7 +207,7 @@ namespace CapaVista_Navegador
 
             _EsquemaActual =
                 _SelectorLlave.NavegadorFuncObtenerEsquemaConLlaves(
-                    _Vista.NombreTabla);
+                    NombreTabla);
 
             _PkModificar =
                 _Grid.NavegadorFuncObtenerClavesPrimarias(
@@ -203,7 +226,7 @@ namespace CapaVista_Navegador
             }
 
             _Formulario.NavegadorMetAbrir(
-                _Vista.NombreTabla,
+                NombreTabla,
                 _EsquemaActual,
                 true,
                 Fila,
@@ -242,7 +265,7 @@ namespace CapaVista_Navegador
             try
             {
                 if (_Acciones.NavegadorFuncEliminar(
-                    _Vista.NombreTabla,
+                    NombreTabla,
                     ClavesPrimarias,
                     out Mensaje))
                 {
@@ -296,7 +319,7 @@ namespace CapaVista_Navegador
             try
             {
                 if (_Acciones.NavegadorFuncGuardar(
-                    _Vista.NombreTabla,
+                    NombreTabla,
                     _EsquemaActual,
                     Datos,
                     _Formulario.ModoModificar,

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace CapaVista_Navegador.formularios
 {
@@ -7,15 +8,26 @@ namespace CapaVista_Navegador.formularios
         private readonly ClsCrudCoordinador _Coordinador;
 
         public ClsCrudEventos(
-            FrmCrud Formulario,
+            Control Formulario,
+            string Tabla,
             string UsuarioActual,
             string CodigoModulo)
         {
             _Coordinador = new ClsCrudCoordinador(
                 Formulario,
+                Tabla,
                 UsuarioActual,
                 CodigoModulo);
         }
+
+        // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
+        // Nombre de la tabla sobre la que trabaja el CRUD; lo cambia quien usa el navegador.
+        public string NombreTabla
+        {
+            get { return _Coordinador.NombreTabla; }
+            set { _Coordinador.NombreTabla = value; }
+        }
+        // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
 
         public void NavegadorMetCargar()
         {

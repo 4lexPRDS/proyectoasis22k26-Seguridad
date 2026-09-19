@@ -36,7 +36,6 @@ namespace CapaVista_Navegador
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCrud));
             this.NavegadorIlImagenes = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.userControl11 = new CapaVista_Navegador.UserControl1();
             this.SuspendLayout();
             // 
             // NavegadorIlImagenes
@@ -65,22 +64,16 @@ namespace CapaVista_Navegador
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // userControl11
-            // 
-            this.userControl11.Location = new System.Drawing.Point(21, 22);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1110, 284);
-            this.userControl11.TabIndex = 15;
-            // 
             // FrmCrud
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1293, 653);
-            this.Controls.Add(this.userControl11);
+            this.ClientSize = new System.Drawing.Size(1545, 653);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IdAplicacion = 4;
+            this.IdModulo = 4;
+            this.Modulo = "EMPLEADOS";
             this.Name = "FrmCrud";
+            this.NombreTabla = "tblempleado";
+            this.Usuario = "USUARIO_PRUEBA";
             this.Text = "1001 – Crud";
             this.ResumeLayout(false);
 
@@ -89,6 +82,5 @@ namespace CapaVista_Navegador
         #endregion
         private System.Windows.Forms.ImageList NavegadorIlImagenes;
         private ImageList imageList1;
-        private UserControl1 userControl11;
     }
 }

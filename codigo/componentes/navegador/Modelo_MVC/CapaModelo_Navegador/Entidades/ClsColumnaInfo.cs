@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidades_Navegador
+namespace CapaModelo_Navegador
 {
-    // Guarda toda la info de una Columna en un solo objeto, la usan las 3 capas
+    // Guarda toda la info de una Columna en un solo objeto, la usan las 3 capas (vive en el modelo)
     public class ClsColumnaInfo
     {
         public string Nombre { get; set; }

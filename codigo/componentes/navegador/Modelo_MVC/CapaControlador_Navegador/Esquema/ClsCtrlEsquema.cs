@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 using CapaModelo_Navegador;
 
 namespace CapaControlador_Navegador

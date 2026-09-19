@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 
 namespace CapaVista_Navegador
 {
