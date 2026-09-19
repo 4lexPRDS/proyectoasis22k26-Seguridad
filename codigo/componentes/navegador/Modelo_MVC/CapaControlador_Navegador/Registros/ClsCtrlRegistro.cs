@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using CapaEntidades_Navegador;
+using CapaModelo_Navegador;
 using CapaModelo_Navegador;
 
 namespace CapaControlador_Navegador

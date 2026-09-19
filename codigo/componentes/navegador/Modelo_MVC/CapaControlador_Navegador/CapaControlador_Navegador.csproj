@@ -12,10 +12,6 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
-    <!-- Componente Seguridad ubicado dentro de este mismo repo (codigo/componentes/seguridad). Ajustar solo si se mueve de lugar. -->
-    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\seguridad\Seguridad</SeguridadBin>
-    <!-- Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,19 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaEntidades_Navegador">
-      <HintPath>..\CapaEntidades_Navegador\bin\Debug\CapaEntidades_Navegador.dll</HintPath>
-    </Reference>
-    <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
-    <!-- Componente Seguridad: sesión estática compartida (ver ClsSesionPrueba). -->
-    <Reference Include="CapaControlador_Seguridad">
-      <HintPath>$(SeguridadBin)\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <!-- Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,9 +48,6 @@
     <Compile Include="registros\ClsCtrlRegistro.cs" />
     <Compile Include="registros\ClsCtrlTabla.cs" />
     <Compile Include="seguridad\ClsCtrlUsuario.cs" />
-    <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
-    <Compile Include="seguridad\ClsSesionPrueba.cs" />
-    <!-- Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

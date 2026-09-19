@@ -13,10 +13,6 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
-    <!-- Componente Seguridad ubicado dentro de este mismo repo (codigo/componentes/seguridad). Ajustar solo si se mueve de lugar. -->
-    <SeguridadBin Condition="'$(SeguridadBin)' == ''">..\..\..\seguridad\Seguridad</SeguridadBin>
-    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,36 +31,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CapaControlador_Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaControlador_Navegador\bin\Debug\CapaControlador_Navegador.dll</HintPath>
     </Reference>
-    <Reference Include="CapaEntidades_Navegador">
-      <HintPath>..\CapaEntidades_Navegador\bin\Debug\CapaEntidades_Navegador.dll</HintPath>
-    </Reference>
-    <Reference Include="CapaVista_Navegador_Controles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Control_Usuarios\CapaVista_Navegador\bin\Debug\CapaVista_Navegador_Controles.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
-    <!-- Componente Seguridad: helper que habilita/deshabilita botones según permisos (ver ClsCrudSeguridad). -->
-    <Reference Include="CapaVista_Seguridad">
-      <HintPath>$(SeguridadBin)\CapaVista_Seguridad\bin\Debug\CapaVista_Seguridad.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CapaControlador_Seguridad">
-      <HintPath>$(SeguridadBin)\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CapaModelo_Seguridad">
-      <HintPath>$(SeguridadBin)\CapaModelo_Seguridad\bin\Debug\CapaModelo_Seguridad.dll</HintPath>
-      <Private>True</Private>
+    <!-- ClsColumnaInfo ahora vive en el modelo (antes estaba en CapaEntidades_Navegador). -->
+    <Reference Include="CapaModelo_Navegador">
+      <HintPath>..\CapaModelo_Navegador\bin\Debug\CapaModelo_Navegador.dll</HintPath>
     </Reference>
     <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
+    <Reference Include="CapaVista_Navegador_Controles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador_Controles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -77,18 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formularios\NavegadorCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\NavegadorCrud.Designer.cs">
+      <DependentUpon>NavegadorCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\ClsCrudCoordinador.cs" />
     <Compile Include="formularios\ClsCrudEventos.cs" />
     <Compile Include="utilidades\ClsCrudAcciones.cs" />
     <Compile Include="componente\ClsCrudFormulario.cs" />
     <Compile Include="componente\ClsCrudGrid.cs" />
-    <Compile Include="seguridad\ClsCrudSeguridad.cs" />
-    <Compile Include="formularios\FrmCrud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formularios\FrmCrud.Designer.cs">
-      <DependentUpon>FrmCrud.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,9 +81,8 @@
     <Compile Include="utilidades\ClsTipoColumna.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formularios\FrmCrud.resx">
-      <DependentUpon>FrmCrud.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="formularios\NavegadorCrud.resx">
+      <DependentUpon>NavegadorCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
