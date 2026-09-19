@@ -25,15 +25,15 @@ namespace CapaVista_Seguridad
             InitializeComponent();
 
             this.Load += FrmBitacora_Load;
-            this.btnVerBitacora.Click += new System.EventHandler(this.btnVerBitacora_Click);
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.SeguridadBtnVerBitacora.Click += new System.EventHandler(this.SeguridadBtnVerBitacora_Click);
+            this.SeguridadBtnSalir.Click += new System.EventHandler(this.SeguridadBtnSalir_Click);
         }
 
         private void FrmBitacora_Load(object sender, EventArgs e)
         {
             var MapaBotones = new Dictionary<Control, TipoPermiso>
             {
-                { btnVerBitacora, TipoPermiso.Imprimir }
+                { SeguridadBtnVerBitacora, TipoPermiso.Imprimir }
             };
 
             _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
@@ -50,12 +50,12 @@ namespace CapaVista_Seguridad
             try
             {
                 var lista = controladorBitacora.SeguridadMetObtenerTodas();
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = lista;
+                SeguridadDgvBitacora.DataSource = null;
+                SeguridadDgvBitacora.DataSource = lista;
 
-                if (dataGridView1.Columns.Count > 0)
+                if (SeguridadDgvBitacora.Columns.Count > 0)
                 {
-                    dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+                    SeguridadDgvBitacora.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
                 }
             }
             catch (Exception ex)
@@ -64,20 +64,14 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void btnBuscarAccion_Click(object sender, EventArgs e)
-        {
-            FrmAsignacionPerfiles Formulario = new FrmAsignacionPerfiles();
-            Formulario.Show();
-        }
-
-        private void btnVerBitacora_Click(object sender, EventArgs e)
-        {
-            CargarBitacora();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void SeguridadBtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SeguridadBtnVerBitacora_Click(object sender, EventArgs e)
+        {
+            CargarBitacora();
         }
     }
 }
