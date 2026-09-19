@@ -194,16 +194,11 @@ namespace CapaVista_Seguridad
             {
                 if (string.IsNullOrWhiteSpace(TxtSeguridadFiltro.Text))
                 {
-                    MessageBox.Show("Ingrese un ID de Rol para filtrar");
+                    MessageBox.Show("Ingrese un Nombre de Rol para filtrar");
                     return;
                 }
 
-                int IdRol = Convert.ToInt32(TxtSeguridadFiltro.Text);
-                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetBuscarPorRol(IdRol);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("El ID de Rol debe ser un número");
+                DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetBuscarPorNombreRol(TxtSeguridadFiltro.Text);
             }
             catch (Exception ex)
             {
@@ -329,7 +324,7 @@ namespace CapaVista_Seguridad
             {
                 DgvSeguridadListaUsuarios.ClearSelection();
                 DgvSeguridadListaUsuarios.Rows[0].Selected = true;
-                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[0].Cells[0];
+                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[0].Cells["NombreRol"];
             }
         }
 
@@ -342,7 +337,7 @@ namespace CapaVista_Seguridad
                 {
                     DgvSeguridadListaUsuarios.ClearSelection();
                     DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Cells[0];
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Cells["NombreRol"];
                 }
             }
         }
@@ -356,7 +351,7 @@ namespace CapaVista_Seguridad
                 {
                     DgvSeguridadListaUsuarios.ClearSelection();
                     DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Selected = true;
-                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Cells[0];
+                    DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Cells["NombreRol"];
                 }
             }
         }
@@ -368,7 +363,7 @@ namespace CapaVista_Seguridad
                 int UltimaFila = DgvSeguridadListaUsuarios.Rows.Count - 1;
                 DgvSeguridadListaUsuarios.ClearSelection();
                 DgvSeguridadListaUsuarios.Rows[UltimaFila].Selected = true;
-                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells[0];
+                DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells["NombreRol"];
             }
         }
     }

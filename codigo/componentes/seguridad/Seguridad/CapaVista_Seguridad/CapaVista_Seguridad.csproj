@@ -129,7 +129,7 @@
       <DependentUpon>FrmMDISeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -176,9 +176,9 @@
       <DependentUpon>FrmMDISeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -309,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo splash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonmdi10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
