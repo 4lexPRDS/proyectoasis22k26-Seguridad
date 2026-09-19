@@ -1,6 +1,7 @@
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -43,12 +44,12 @@ namespace CapaControlador_Seguridad
             try
             {
                 var ModeloDatos = new ClsBitacora();
-                ModeloDatos.IdUsuario = idUsuario ?? ClsSesion.IdUsuario;
+                ModeloDatos.IdUsuario = idUsuario ?? ClsSesionSeguridad.IdUsuario;
                 ModeloDatos.AccionBitacora = accion;
                 ModeloDatos.TablaBitacora = tabla;
                 ModeloDatos.IdRegistroBitacora = idRegistro;
                 ModeloDatos.DetallesBitacora = detalles;
-                ModeloDatos.IpBitacora = string.IsNullOrEmpty(ip) ? ClsSesion.ObtenerIPLocal() : ip;
+                ModeloDatos.IpBitacora = string.IsNullOrEmpty(ip) ? ClsSesionSeguridad.SeguridadMetObtenerIPLocal() : ip;
                 ModeloDatos.FechaHoraBitacora = DateTime.Now;
 
                 _RepositorioBitacora.SeguridadMetAgregar(ModeloDatos);
@@ -68,12 +69,12 @@ namespace CapaControlador_Seguridad
                 var repo = new ClsRepositorioBitacora();
                 var bitacora = new ClsBitacora
                 {
-                    IdUsuario = ClsSesion.IdUsuario,
+                    IdUsuario = ClsSesionSeguridad.IdUsuario,
                     AccionBitacora = accion,
                     TablaBitacora = tabla,
                     IdRegistroBitacora = idRegistro,
                     DetallesBitacora = detalles,
-                    IpBitacora = ClsSesion.ObtenerIPLocal(),
+                    IpBitacora = ClsSesionSeguridad.SeguridadMetObtenerIPLocal(),
                     FechaHoraBitacora = DateTime.Now
                 };
                 repo.SeguridadMetAgregar(bitacora);
@@ -104,29 +105,6 @@ namespace CapaControlador_Seguridad
                 });
             }
             return _ListaBitacora;
-        }
-    }
-
-    public static class ClsSesion
-    {
-        public static int? IdUsuario { get; set; } = 1;
-        public static string NombreUsuario { get; set; } = "Administrador";
-
-        public static string ObtenerIPLocal()
-        {
-            try
-            {
-                var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
-                foreach (var ip in host.AddressList)
-                {
-                    if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                    {
-                        return ip.ToString();
-                    }
-                }
-            }
-            catch { }
-            return "127.0.0.1";
         }
     }
 }
