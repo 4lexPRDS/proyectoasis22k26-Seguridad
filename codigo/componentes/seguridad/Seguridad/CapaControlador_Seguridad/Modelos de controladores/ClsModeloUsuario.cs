@@ -113,7 +113,7 @@ namespace CapaControlador_Seguridad
             }
             return _ListaUsuario;
         }
-
+        
         public IEnumerable<ClsModeloUsuario> SeguridadMetBuscarPorId(string Filtro)
         {
             return _ListaUsuario.FindAll(u => u.IdUsuario.Equals(Filtro) || u._NombreUsuario.Contains(Filtro));
@@ -124,14 +124,7 @@ namespace CapaControlador_Seguridad
             return _RepositorioUsuarios.SeguridadMetObtenerEmpleados();
         }
 
-        public List<ClsEstadoEntidadValor> SeguridadMetObtenerEstados()
-        {
-            return new List<ClsEstadoEntidadValor>
-            {
-                new ClsEstadoEntidadValor { Texto = "Activo", Valor = 1 },
-                new ClsEstadoEntidadValor { Texto = "Inactivo", Valor = 0 }
-            };
-        }
+       
 
 
         public bool SeguridadMetIniciarSesion(string NombreUsuario, string ContrasenaUsuario)
