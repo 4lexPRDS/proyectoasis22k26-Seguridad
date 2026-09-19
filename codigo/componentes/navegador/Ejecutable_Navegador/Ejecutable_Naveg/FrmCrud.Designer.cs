@@ -38,6 +38,10 @@ namespace CapaVista_Navegador
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(21, 26);
+            // 
             // NavegadorIlImagenes
             // 
             this.NavegadorIlImagenes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("NavegadorIlImagenes.ImageStream")));
@@ -66,15 +70,10 @@ namespace CapaVista_Navegador
             // 
             // FrmCrud
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1545, 653);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IdAplicacion = 4;
-            this.IdModulo = 4;
-            this.Modulo = "EMPLEADOS";
             this.Name = "FrmCrud";
-            this.NombreTabla = "tblempleado";
-            this.Usuario = "USUARIO_PRUEBA";
-            this.Text = "1001 – Crud";
             this.ResumeLayout(false);
 
         }
