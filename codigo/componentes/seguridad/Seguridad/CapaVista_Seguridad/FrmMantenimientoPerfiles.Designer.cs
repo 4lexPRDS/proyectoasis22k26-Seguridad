@@ -196,7 +196,6 @@ namespace CapaVista_Seguridad
             // 
             this.SeguridadLblIconoFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblIconoFiltros.FlatAppearance.BorderSize = 0;
-            this.SeguridadLblIconoFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadLblIconoFiltros.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadLblIconoFiltros.ForeColor = System.Drawing.Color.White;
             this.SeguridadLblIconoFiltros.Location = new System.Drawing.Point(4, 5);
@@ -225,7 +224,6 @@ namespace CapaVista_Seguridad
             // 
             this.SeguridadLblIconoListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             this.SeguridadLblIconoListado.FlatAppearance.BorderSize = 0;
-            this.SeguridadLblIconoListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadLblIconoListado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadLblIconoListado.ForeColor = System.Drawing.Color.White;
             this.SeguridadLblIconoListado.Location = new System.Drawing.Point(2, 6);
@@ -359,7 +357,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnIngresar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ingresarN;
             this.SeguridadBtnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnIngresar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnIngresar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnIngresar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnIngresar.Location = new System.Drawing.Point(5, 3);
@@ -376,7 +373,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
             this.SeguridadBtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnModificar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnModificar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnModificar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnModificar.Location = new System.Drawing.Point(76, 3);
@@ -393,7 +389,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
             this.SeguridadBtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnGuardar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnGuardar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnGuardar.Location = new System.Drawing.Point(147, 3);
@@ -411,7 +406,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnCancelar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_cancelarN;
             this.SeguridadBtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnCancelar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnCancelar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnCancelar.Location = new System.Drawing.Point(218, 3);
@@ -428,7 +422,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnEliminar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
             this.SeguridadBtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnEliminar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnEliminar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnEliminar.Location = new System.Drawing.Point(289, 3);
@@ -445,7 +438,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnConsultar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_consultarN;
             this.SeguridadBtnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnConsultar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnConsultar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnConsultar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnConsultar.Location = new System.Drawing.Point(360, 3);
@@ -461,7 +453,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnImprimir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_imprimirN;
             this.SeguridadBtnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnImprimir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnImprimir.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnImprimir.Location = new System.Drawing.Point(431, 3);
@@ -477,7 +468,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnRefrescar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_refrescarN;
             this.SeguridadBtnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnRefrescar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnRefrescar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnRefrescar.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(502, 3);
@@ -494,7 +484,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnInicio.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_inicioN;
             this.SeguridadBtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnInicio.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnInicio.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnInicio.Location = new System.Drawing.Point(573, 3);
@@ -511,7 +500,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAnterior.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_anteriorN;
             this.SeguridadBtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAnterior.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAnterior.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnAnterior.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnAnterior.Location = new System.Drawing.Point(644, 3);
@@ -528,7 +516,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSiguiente.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_siguienteN;
             this.SeguridadBtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSiguiente.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnSiguiente.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(715, 3);
@@ -545,7 +532,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_finN;
             this.SeguridadBtnFin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnFin.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnFin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnFin.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnFin.Location = new System.Drawing.Point(786, 3);
@@ -562,7 +548,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.SeguridadBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAyuda.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAyuda.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnAyuda.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnAyuda.Location = new System.Drawing.Point(857, 3);
@@ -579,7 +564,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
             this.SeguridadBtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSalir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSalir.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SeguridadBtnSalir.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnSalir.Location = new System.Drawing.Point(928, 3);

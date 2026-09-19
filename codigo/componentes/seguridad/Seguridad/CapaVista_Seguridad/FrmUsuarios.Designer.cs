@@ -232,7 +232,6 @@ namespace CapaVista_Seguridad
             this.btnModificar.BackColor = System.Drawing.Color.Transparent;
             this.btnModificar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_modificarN;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(619, 195);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
@@ -246,7 +245,6 @@ namespace CapaVista_Seguridad
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(630, 396);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
@@ -260,7 +258,6 @@ namespace CapaVista_Seguridad
             this.btnReporte.BackColor = System.Drawing.Color.White;
             this.btnReporte.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_reporte;
             this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Location = new System.Drawing.Point(619, 50);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
@@ -274,7 +271,6 @@ namespace CapaVista_Seguridad
             this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
             this.btnLimpiar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
             this.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(619, 264);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
@@ -288,7 +284,6 @@ namespace CapaVista_Seguridad
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(619, 128);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
@@ -314,7 +309,6 @@ namespace CapaVista_Seguridad
             this.btnAyuda.BackColor = System.Drawing.Color.Transparent;
             this.btnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAyuda.ForeColor = System.Drawing.Color.White;
             this.btnAyuda.Location = new System.Drawing.Point(4, 2);
             this.btnAyuda.Margin = new System.Windows.Forms.Padding(2);

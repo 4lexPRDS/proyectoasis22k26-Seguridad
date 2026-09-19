@@ -16,7 +16,7 @@ namespace Ejecucion_Reporteador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaVista_Reporteador.frmRep());
+            Application.Run(new CapaVista_Reporteador.FrmReportes());
         }
     }
 }
