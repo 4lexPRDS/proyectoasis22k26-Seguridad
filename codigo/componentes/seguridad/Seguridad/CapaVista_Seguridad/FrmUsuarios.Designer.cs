@@ -28,6 +28,7 @@ namespace CapaVista_Seguridad
             this.lblConfirmarContrasena = new System.Windows.Forms.Label();
             this.SeguridadTxtConfirmarContrasena = new System.Windows.Forms.TextBox();
             this.pnlIngresoDatos = new System.Windows.Forms.Panel();
+            this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
             this.SeguridadTxtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -40,7 +41,7 @@ namespace CapaVista_Seguridad
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
+            this.SeguridadChkMostrarContra = new System.Windows.Forms.CheckBox();
             this.pnlIngresoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,7 +123,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtContrasena.Name = "SeguridadTxtContrasena";
             this.SeguridadTxtContrasena.PasswordChar = '*';
-            this.SeguridadTxtContrasena.Size = new System.Drawing.Size(384, 22);
+            this.SeguridadTxtContrasena.Size = new System.Drawing.Size(288, 22);
             this.SeguridadTxtContrasena.TabIndex = 7;
             // 
             // lblConfirmarContrasena
@@ -144,12 +145,13 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtConfirmarContrasena.Name = "SeguridadTxtConfirmarContrasena";
             this.SeguridadTxtConfirmarContrasena.PasswordChar = '*';
-            this.SeguridadTxtConfirmarContrasena.Size = new System.Drawing.Size(376, 22);
+            this.SeguridadTxtConfirmarContrasena.Size = new System.Drawing.Size(288, 22);
             this.SeguridadTxtConfirmarContrasena.TabIndex = 9;
             // 
             // pnlIngresoDatos
             // 
             this.pnlIngresoDatos.BackColor = System.Drawing.Color.OldLace;
+            this.pnlIngresoDatos.Controls.Add(this.SeguridadChkMostrarContra);
             this.pnlIngresoDatos.Controls.Add(this.SeguridadChkActivo);
             this.pnlIngresoDatos.Controls.Add(this.SeguridadTxtUsuario);
             this.pnlIngresoDatos.Controls.Add(this.lblUsuario);
@@ -165,8 +167,22 @@ namespace CapaVista_Seguridad
             this.pnlIngresoDatos.Location = new System.Drawing.Point(224, 80);
             this.pnlIngresoDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlIngresoDatos.Name = "pnlIngresoDatos";
-            this.pnlIngresoDatos.Size = new System.Drawing.Size(541, 304);
+            this.pnlIngresoDatos.Size = new System.Drawing.Size(584, 304);
             this.pnlIngresoDatos.TabIndex = 16;
+            // 
+            // SeguridadChkActivo
+            // 
+            this.SeguridadChkActivo.AutoSize = true;
+            this.SeguridadChkActivo.Checked = true;
+            this.SeguridadChkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SeguridadChkActivo.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.SeguridadChkActivo.ForeColor = System.Drawing.Color.DimGray;
+            this.SeguridadChkActivo.Location = new System.Drawing.Point(104, 264);
+            this.SeguridadChkActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadChkActivo.Name = "SeguridadChkActivo";
+            this.SeguridadChkActivo.Size = new System.Drawing.Size(78, 25);
+            this.SeguridadChkActivo.TabIndex = 14;
+            this.SeguridadChkActivo.Text = "Activo";
             // 
             // SeguridadTxtUsuario
             // 
@@ -208,7 +224,6 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvUsuarios.RowTemplate.Height = 24;
             this.SeguridadDgvUsuarios.Size = new System.Drawing.Size(752, 217);
             this.SeguridadDgvUsuarios.TabIndex = 21;
-       
             // 
             // SeguridadBtnModificar
             // 
@@ -313,19 +328,19 @@ namespace CapaVista_Seguridad
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // SeguridadChkActivo
+            // SeguridadChkMostrarContra
             // 
-            this.SeguridadChkActivo.AutoSize = true;
-            this.SeguridadChkActivo.Checked = true;
-            this.SeguridadChkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.SeguridadChkActivo.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.SeguridadChkActivo.ForeColor = System.Drawing.Color.DimGray;
-            this.SeguridadChkActivo.Location = new System.Drawing.Point(104, 264);
-            this.SeguridadChkActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SeguridadChkActivo.Name = "SeguridadChkActivo";
-            this.SeguridadChkActivo.Size = new System.Drawing.Size(78, 25);
-            this.SeguridadChkActivo.TabIndex = 14;
-            this.SeguridadChkActivo.Text = "Activo";
+            this.SeguridadChkMostrarContra.AutoSize = true;
+            this.SeguridadChkMostrarContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadChkMostrarContra.ForeColor = System.Drawing.Color.DarkCyan;
+            this.SeguridadChkMostrarContra.Location = new System.Drawing.Point(432, 152);
+            this.SeguridadChkMostrarContra.Name = "SeguridadChkMostrarContra";
+            this.SeguridadChkMostrarContra.Size = new System.Drawing.Size(52, 24);
+            this.SeguridadChkMostrarContra.TabIndex = 15;
+            this.SeguridadChkMostrarContra.Text = "👁 ";
+            this.SeguridadChkMostrarContra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SeguridadChkMostrarContra.UseVisualStyleBackColor = true;
+            this.SeguridadChkMostrarContra.CheckedChanged += new System.EventHandler(this.SeguridadChkMostrarContra_CheckedChanged);
             // 
             // FrmUsuarios
             // 
@@ -385,5 +400,6 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox SeguridadTxtUsuario;
         private System.Windows.Forms.CheckBox SeguridadChkActivo;
+        private System.Windows.Forms.CheckBox SeguridadChkMostrarContra;
     }
 }
