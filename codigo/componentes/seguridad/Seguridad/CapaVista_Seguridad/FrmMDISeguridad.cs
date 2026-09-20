@@ -127,7 +127,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnModulos_Click(object sender, EventArgs e)
         {
-            FrmModulo Modulo = new FrmModulo();
+            SeguridadFrmModulo Modulo = new SeguridadFrmModulo();
             Modulo.ShowDialog();
         }
 
