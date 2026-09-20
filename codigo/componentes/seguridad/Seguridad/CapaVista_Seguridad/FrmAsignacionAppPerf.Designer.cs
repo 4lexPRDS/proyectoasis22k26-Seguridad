@@ -64,6 +64,7 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadFin = new System.Windows.Forms.Button();
             this.BtnSeguridadAnterior = new System.Windows.Forms.Button();
             this.BtnSeguridadGuardar = new System.Windows.Forms.Button();
+            this.LblSeguridadContador = new System.Windows.Forms.Label();
             this.PnlSeguridadPnlDecorativo.SuspendLayout();
             this.PnlSeguridadPermisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSeguridadListaUsuarios)).BeginInit();
@@ -290,12 +291,12 @@ namespace CapaVista_Seguridad
             // 
             this.DgvSeguridadListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvSeguridadListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvSeguridadListaUsuarios.Location = new System.Drawing.Point(39, 513);
+            this.DgvSeguridadListaUsuarios.Location = new System.Drawing.Point(39, 536);
             this.DgvSeguridadListaUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvSeguridadListaUsuarios.Name = "DgvSeguridadListaUsuarios";
             this.DgvSeguridadListaUsuarios.RowHeadersWidth = 51;
             this.DgvSeguridadListaUsuarios.RowTemplate.Height = 24;
-            this.DgvSeguridadListaUsuarios.Size = new System.Drawing.Size(1332, 254);
+            this.DgvSeguridadListaUsuarios.Size = new System.Drawing.Size(1332, 231);
             this.DgvSeguridadListaUsuarios.TabIndex = 2;
             this.DgvSeguridadListaUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeguridadListaUsuarios_CellContentClick);
             // 
@@ -515,12 +516,24 @@ namespace CapaVista_Seguridad
             this.BtnSeguridadGuardar.UseVisualStyleBackColor = true;
             this.BtnSeguridadGuardar.Click += new System.EventHandler(this.BtnSeguridadGuardar_Click);
             // 
+            // LblSeguridadContador
+            // 
+            this.LblSeguridadContador.AutoSize = true;
+            this.LblSeguridadContador.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadContador.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LblSeguridadContador.Location = new System.Drawing.Point(1123, 500);
+            this.LblSeguridadContador.Name = "LblSeguridadContador";
+            this.LblSeguridadContador.Size = new System.Drawing.Size(206, 23);
+            this.LblSeguridadContador.TabIndex = 16;
+            this.LblSeguridadContador.Text = "Mostrando 0 de 0 registros";
+            // 
             // FrmAsignacionAppPerf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1405, 802);
+            this.Controls.Add(this.LblSeguridadContador);
             this.Controls.Add(this.BtnSeguridadGuardar);
             this.Controls.Add(this.BtnSeguridadAnterior);
             this.Controls.Add(this.BtnSeguridadFin);
@@ -553,6 +566,7 @@ namespace CapaVista_Seguridad
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorPbMascota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbNavegadorIconoAsigAppPerf)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -592,5 +606,6 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Button BtnSeguridadGuardar;
         private System.Windows.Forms.Label LblSeguridadBusqueda;
         private System.Windows.Forms.TextBox TxtSeguridadFiltro;
+        private System.Windows.Forms.Label LblSeguridadContador;
     }
 }

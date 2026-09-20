@@ -47,6 +47,7 @@ namespace CapaVista_Seguridad
             SeguridadMetListarEmpleados();
             SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
             SeguridadTxtCodigo.SelectionStart = SeguridadTxtCodigo.Text.Length;
+            SeguridadMetHabilitarCampos(false);
         }
 
         private void SeguridadMetListarEmpleados()
@@ -54,6 +55,7 @@ namespace CapaVista_Seguridad
             try
             {
                 SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetObtenerTodos();
+                SeguridadMetConfigurarEncabezadosGrid();
             }
             catch (Exception ex)
             {
@@ -61,7 +63,57 @@ namespace CapaVista_Seguridad
             }
         }
 
-       
+        private void SeguridadMetConfigurarEncabezadosGrid()
+        {
+            if (SeguridadDgvEmpleados.Columns["IdEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["IdEmpleado"].HeaderText = "No.";
+
+            if (SeguridadDgvEmpleados.Columns["CodigoEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["CodigoEmpleado"].HeaderText = "Codigo";
+
+            if (SeguridadDgvEmpleados.Columns["DpiEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["DpiEmpleado"].HeaderText = "Dpi";
+
+            if (SeguridadDgvEmpleados.Columns["NitEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["NitEmpleado"].HeaderText = "Nit";
+
+            if (SeguridadDgvEmpleados.Columns["NombresEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["NombresEmpleado"].HeaderText = "Nombre";
+
+            if (SeguridadDgvEmpleados.Columns["ApellidosEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["ApellidosEmpleado"].HeaderText = "Apellido";
+
+            if (SeguridadDgvEmpleados.Columns["PuestoEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["PuestoEmpleado"].HeaderText = "Puesto";
+
+            if (SeguridadDgvEmpleados.Columns["GeneroEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["GeneroEmpleado"].HeaderText = "Genero";
+
+            if (SeguridadDgvEmpleados.Columns["FechaNacimientoEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["FechaNacimientoEmpleado"].HeaderText = "Nacimiento";
+
+            if (SeguridadDgvEmpleados.Columns["FechaContratacionEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["FechaContratacionEmpleado"].HeaderText = "Contratacion";
+
+            if (SeguridadDgvEmpleados.Columns["TelefonoEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["TelefonoEmpleado"].HeaderText = "No.Telefono";
+
+            if (SeguridadDgvEmpleados.Columns["CorreoEmpleado"] != null)
+                SeguridadDgvEmpleados.Columns["CorreoEmpleado"].HeaderText = "Correo";
+
+            if (SeguridadDgvEmpleados.Columns["IsActive"] != null)
+                SeguridadDgvEmpleados.Columns["IsActive"].HeaderText = "Estado";
+
+            if (SeguridadDgvEmpleados.Columns["CreatedAt"] != null)
+                SeguridadDgvEmpleados.Columns["CreatedAt"].HeaderText = "Registrado";
+
+            if (SeguridadDgvEmpleados.Columns["UpdatedAt"] != null)
+                SeguridadDgvEmpleados.Columns["UpdatedAt"].HeaderText = "Última Modificación";
+        }
+
+
+
+
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Complete los datos del empleado y presione Guardar.");
@@ -82,20 +134,43 @@ namespace CapaVista_Seguridad
             _Empleado.Estado = EstadoEntidad.Added;
 
             SeguridadCboGenero.Enabled = true;
+            SeguridadMetHabilitarCampos(true);
         }
 
+
+
+
+        private void SeguridadMetHabilitarCampos(bool habilitar)
+        {
+            SeguridadTxtDpi.Enabled = habilitar;
+            SeguridadTxtNit.Enabled = habilitar;
+            SeguridadTxtNombres.Enabled = habilitar;
+            SeguridadTxtApellidos.Enabled = habilitar;
+            SeguridadTxtPuesto.Enabled = habilitar;
+            SeguridadCboGenero.Enabled = habilitar;
+            SeguridadDtpFechaNacimiento.Enabled = habilitar;
+            SeguridadDtpFechaContratacion.Enabled = habilitar;
+            SeguridadTxtTelefono.Enabled = habilitar;
+            SeguridadTxtCorreo.Enabled = habilitar;
+            SeguridadChkActivo.Enabled = habilitar;
+        }
         private void SeguridadBtnConsultar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(SeguridadTxtIdEmpleado.Text))
+                if (string.IsNullOrWhiteSpace(SeguridadTxtCodigo.Text)
+                || SeguridadTxtCodigo.Text.Trim() == PrefijoCodigoEmpleado)
                 {
-                    MessageBox.Show("Ingrese un Id de Empleado para filtrar");
+                    MessageBox.Show("Ingrese un código de Empleado");
                     return;
                 }
 
-                int IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
-                SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(IdEmpleado);
+                //int IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
+                //SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(IdEmpleado);
+
+                string CodigoEmpleado = SeguridadTxtCodigo.Text;
+                SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(CodigoEmpleado);
+                SeguridadMetConfigurarEncabezadosGrid();
             }
             catch (FormatException)
             {
@@ -131,20 +206,7 @@ namespace CapaVista_Seguridad
         {
             if (SeguridadDgvEmpleados.SelectedRows.Count > 0)
             {
-                _Empleado.Estado = EstadoEntidad.Modified;
-                SeguridadTxtIdEmpleado.Text = SeguridadDgvEmpleados.CurrentRow.Cells[0].Value.ToString();
-                SeguridadTxtCodigo.Text = SeguridadDgvEmpleados.CurrentRow.Cells[1].Value.ToString();
-                SeguridadTxtDpi.Text = SeguridadDgvEmpleados.CurrentRow.Cells[2].Value.ToString();
-                SeguridadTxtNit.Text = SeguridadDgvEmpleados.CurrentRow.Cells[3].Value?.ToString();
-                SeguridadTxtNombres.Text = SeguridadDgvEmpleados.CurrentRow.Cells[4].Value.ToString();
-                SeguridadTxtApellidos.Text = SeguridadDgvEmpleados.CurrentRow.Cells[5].Value.ToString();
-                SeguridadTxtPuesto.Text = SeguridadDgvEmpleados.CurrentRow.Cells[6].Value.ToString();
-                SeguridadCboGenero.SelectedItem = SeguridadDgvEmpleados.CurrentRow.Cells[7].Value.ToString();
-                SeguridadDtpFechaNacimiento.Value = Convert.ToDateTime(SeguridadDgvEmpleados.CurrentRow.Cells[8].Value);
-                SeguridadDtpFechaContratacion.Value = Convert.ToDateTime(SeguridadDgvEmpleados.CurrentRow.Cells[9].Value);
-                SeguridadTxtTelefono.Text = SeguridadDgvEmpleados.CurrentRow.Cells[10].Value?.ToString();
-                SeguridadTxtCorreo.Text = SeguridadDgvEmpleados.CurrentRow.Cells[11].Value?.ToString();
-                SeguridadChkActivo.Checked = Convert.ToBoolean(SeguridadDgvEmpleados.CurrentRow.Cells[12].Value);
+                SeguridadMetCargarFilaEnFormulario(SeguridadDgvEmpleados.CurrentRow.Index);
             }
         }
 
@@ -163,6 +225,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnModificar_Click(object sender, EventArgs e)
         {
+            SeguridadMetHabilitarCampos(true);
             try
             {
                 if (SeguridadDgvEmpleados.SelectedRows.Count == 0)
@@ -171,7 +234,8 @@ namespace CapaVista_Seguridad
                     return;
 
                 }
-                  if (!ValidarFechas()) return;
+               
+                if (!ValidarFechas()) return;
                 _Empleado.IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
                 _Empleado.CodigoEmpleado = SeguridadTxtCodigo.Text;
                 _Empleado.DpiEmpleado = SeguridadTxtDpi.Text;
@@ -226,6 +290,7 @@ namespace CapaVista_Seguridad
                     MessageBox.Show(Resultado);
                     SeguridadMetListarEmpleados();
                     SeguridadMetReinicio();
+                    SeguridadMetHabilitarCampos(false);
                 }
             }
             catch (Exception ex)
@@ -254,6 +319,7 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.ClearSelection();
                 SeguridadDgvEmpleados.Rows[0].Selected = true;
                 SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[0].Cells[0];
+                SeguridadMetCargarFilaEnFormulario(0);
             }
         }
 
@@ -267,6 +333,7 @@ namespace CapaVista_Seguridad
                     SeguridadDgvEmpleados.ClearSelection();
                     SeguridadDgvEmpleados.Rows[FilaActual - 1].Selected = true;
                     SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual - 1].Cells[0];
+                    SeguridadMetCargarFilaEnFormulario(FilaActual - 1);
                 }
             }
         }
@@ -281,8 +348,10 @@ namespace CapaVista_Seguridad
                     SeguridadDgvEmpleados.ClearSelection();
                     SeguridadDgvEmpleados.Rows[FilaActual + 1].Selected = true;
                     SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual + 1].Cells[0];
+                    SeguridadMetCargarFilaEnFormulario(FilaActual + 1);
                 }
             }
+
         }
 
         private void SeguridadBtnFin_Click(object sender, EventArgs e)
@@ -293,7 +362,28 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.ClearSelection();
                 SeguridadDgvEmpleados.Rows[UltimaFila].Selected = true;
                 SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[UltimaFila].Cells[0];
+                SeguridadMetCargarFilaEnFormulario(UltimaFila);
             }
+        }
+
+        private void SeguridadMetCargarFilaEnFormulario(int rowIndex)
+        {
+            var fila = SeguridadDgvEmpleados.Rows[rowIndex];
+
+            _Empleado.Estado = EstadoEntidad.Modified;
+            SeguridadTxtIdEmpleado.Text = fila.Cells[0].Value.ToString();
+            SeguridadTxtCodigo.Text = fila.Cells[1].Value.ToString();
+            SeguridadTxtDpi.Text = fila.Cells[2].Value.ToString();
+            SeguridadTxtNit.Text = fila.Cells[3].Value?.ToString();
+            SeguridadTxtNombres.Text = fila.Cells[4].Value.ToString();
+            SeguridadTxtApellidos.Text = fila.Cells[5].Value.ToString();
+            SeguridadTxtPuesto.Text = fila.Cells[6].Value.ToString();
+            SeguridadCboGenero.SelectedItem = fila.Cells[7].Value.ToString();
+            SeguridadDtpFechaNacimiento.Value = Convert.ToDateTime(fila.Cells[8].Value);
+            SeguridadDtpFechaContratacion.Value = Convert.ToDateTime(fila.Cells[9].Value);
+            SeguridadTxtTelefono.Text = fila.Cells[10].Value?.ToString();
+            SeguridadTxtCorreo.Text = fila.Cells[11].Value?.ToString();
+            SeguridadChkActivo.Checked = Convert.ToBoolean(fila.Cells[12].Value);
         }
 
         private void SeguridadTxtDpi_KeyPress(object sender, KeyPressEventArgs e)
@@ -306,7 +396,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadTxtNit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true;
             }
@@ -358,12 +448,50 @@ namespace CapaVista_Seguridad
 
         private bool ValidarFechas()
         {
-            if (SeguridadDtpFechaNacimiento.Value > SeguridadDtpFechaContratacion.Value)
+            DateTime fechaNacimiento = SeguridadDtpFechaNacimiento.Value;
+            DateTime fechaContratacion = SeguridadDtpFechaContratacion.Value;
+
+            int edadEnContratacion = fechaContratacion.Year - fechaNacimiento.Year;
+
+            if (fechaContratacion < fechaNacimiento.AddYears(edadEnContratacion))
             {
-                MessageBox.Show("La fecha de nacimiento no puede ser mayor a la fecha de contratación");
+                edadEnContratacion--;
+            }
+
+            if (edadEnContratacion < 18)
+            {
+                MessageBox.Show("El empleado debe tener al menos 18 años cumplidos a la fecha de contratación");
                 return false;
             }
+
             return true;
+        }
+
+        private void SeguridadBtnCancelar_Click(object sender, EventArgs e)
+        {
+            SeguridadTxtIdEmpleado.Clear();
+            SeguridadMetReinicio();
+            SeguridadMetListarEmpleados();
+            SeguridadMetHabilitarCampos(false);
+        }
+
+        private void SeguridadTxtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SeguridadTxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

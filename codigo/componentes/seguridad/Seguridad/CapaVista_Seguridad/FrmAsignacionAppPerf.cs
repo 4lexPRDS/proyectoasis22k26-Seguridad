@@ -131,6 +131,7 @@ namespace CapaVista_Seguridad
             });
         }
 
+
         private void SeguridadMetCargarCombos()
         {
             try
@@ -158,11 +159,30 @@ namespace CapaVista_Seguridad
             try
             {
                 DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetObtenerTodos();
+                SeguridadMetActualizarContador();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void SeguridadMetActualizarContador()
+        {
+            int Total = DgvSeguridadListaUsuarios.Rows.Count;
+
+            if (Total == 0)
+            {
+                LblSeguridadContador.Text = "Mostrando 0 de 0 registros";
+                return;
+            }
+
+            int FilaActual = (DgvSeguridadListaUsuarios.CurrentCell != null)
+                ? DgvSeguridadListaUsuarios.CurrentCell.RowIndex + 1
+                : 1;
+
+            LblSeguridadContador.Text = $"Mostrando {FilaActual} de {Total} registros";
         }
 
         private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
@@ -199,6 +219,7 @@ namespace CapaVista_Seguridad
                 }
 
                 DgvSeguridadListaUsuarios.DataSource = _AsigAppPerf.SeguridadMetBuscarPorNombreRol(TxtSeguridadFiltro.Text);
+                SeguridadMetActualizarContador();
             }
             catch (Exception ex)
             {
@@ -239,6 +260,7 @@ namespace CapaVista_Seguridad
                 chkSeguridadEditar.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells["DerEditar"].Value);
                 chkSeguridadeliminar.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells["DerEliminar"].Value);
                 chkSeguridadImprimir.Checked = Convert.ToBoolean(DgvSeguridadListaUsuarios.CurrentRow.Cells["DerImprimir"].Value);
+                SeguridadMetActualizarContador();
             }
         }
 
@@ -325,6 +347,8 @@ namespace CapaVista_Seguridad
                 DgvSeguridadListaUsuarios.ClearSelection();
                 DgvSeguridadListaUsuarios.Rows[0].Selected = true;
                 DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[0].Cells["NombreRol"];
+                SeguridadMetActualizarContador();
+
             }
         }
 
@@ -338,6 +362,7 @@ namespace CapaVista_Seguridad
                     DgvSeguridadListaUsuarios.ClearSelection();
                     DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Selected = true;
                     DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual - 1].Cells["NombreRol"];
+                    SeguridadMetActualizarContador();
                 }
             }
         }
@@ -352,6 +377,7 @@ namespace CapaVista_Seguridad
                     DgvSeguridadListaUsuarios.ClearSelection();
                     DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Selected = true;
                     DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[FilaActual + 1].Cells["NombreRol"];
+                    SeguridadMetActualizarContador();
                 }
             }
         }
@@ -364,6 +390,7 @@ namespace CapaVista_Seguridad
                 DgvSeguridadListaUsuarios.ClearSelection();
                 DgvSeguridadListaUsuarios.Rows[UltimaFila].Selected = true;
                 DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells["NombreRol"];
+                SeguridadMetActualizarContador();
             }
         }
     }
