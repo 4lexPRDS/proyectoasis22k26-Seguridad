@@ -1,7 +1,8 @@
-﻿using System;
-using System.Data;
-using CapaModelo_Seguridad.Entidades;
+﻿using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
+using System;
+using System.Data;
+using System.Data.Odbc;
 
 namespace CapaControlador_Seguridad
 {
@@ -58,9 +59,16 @@ namespace CapaControlador_Seguridad
                         break;
                 }
             }
+            catch (OdbcException ex)
+            {
+                if (ex.Errors.Count > 0 && ex.Errors[0].NativeError == 1062)
+                    Mensaje = "Ya existe un módulo con ese nombre. Use un nombre diferente.";
+                else
+                    Mensaje = "Ocurrió un problema al procesar la solicitud. Verifique los datos e intente nuevamente.";
+            }
             catch (Exception ex)
             {
-                Mensaje = "Error: " + ex.Message;
+                Mensaje = "Ocurrió un error inesperado en el sistema. Intente nuevamente o contacte al administrador.";
             }
             return Mensaje;
         }
