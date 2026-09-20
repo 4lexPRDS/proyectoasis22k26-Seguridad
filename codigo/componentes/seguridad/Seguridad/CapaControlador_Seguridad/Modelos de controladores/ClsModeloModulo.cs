@@ -77,5 +77,9 @@ namespace CapaControlador_Seguridad
         {
             return _RepositorioModulo.SeguridadMetObtenerModulosTabla();
         }
+        public DataTable SeguridadMetObtenerModulosReporte()
+        {
+            return _RepositorioModulo.SeguridadMetObtenerModulosReporte();
+        }
     }
 }
