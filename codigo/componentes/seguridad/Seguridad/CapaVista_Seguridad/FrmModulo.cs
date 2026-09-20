@@ -1,8 +1,9 @@
-﻿using CapaVista_Seguridad.Ayudas;
-using System.Collections.Generic;
-using CapaControlador_Seguridad;
+﻿using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaVista_Seguridad.Ayudas;
+using CapaVista_Seguridad.frmReportes;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -294,8 +295,8 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnImprimir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Generando reporte de módulos...",
-                "Imprimir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FrmReporteModulo reporte = new FrmReporteModulo();
+            reporte.Show();
         }
 
         private void SeguridadBtnInicio_Click(object sender, EventArgs e) => bindingSource.MoveFirst();

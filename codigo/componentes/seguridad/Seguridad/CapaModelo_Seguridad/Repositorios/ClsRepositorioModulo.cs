@@ -13,6 +13,7 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Insert;
         private string _Update;
         private string _Delete;
+        private string _SelectReporte;
 
         public ClsRepositorioModulo()
         {
@@ -20,6 +21,7 @@ namespace CapaModelo_Seguridad.Repositorios
             _Insert = "INSERT INTO tblModulo (nombreModulo, descripcionModulo, is_active) VALUES (?, ?, ?)";
             _Update = "UPDATE tblModulo SET nombreModulo=?, descripcionModulo=?, is_active=? WHERE idModulo=?";
             _Delete = "DELETE FROM tblModulo WHERE idModulo=?";
+            _SelectReporte = "SELECT idModulo AS IdModulo, nombreModulo AS NombreModulo, "+"descripcionModulo AS DescripcionModulo, "+"CAST(is_active AS UNSIGNED) AS IsActive FROM tblModulo";
         }
 
         public int SeguridadMetAgregar(ClsModulo Entidad)
@@ -72,10 +74,14 @@ namespace CapaModelo_Seguridad.Repositorios
             }
             return ListaModulos;
         }
-
+            
         public DataTable SeguridadMetObtenerModulosTabla()
         {
             return SeguridadMetEjecucionConsulta(_SelectAll, CommandType.Text);
+        }
+        public DataTable SeguridadMetObtenerModulosReporte()
+        {
+            return SeguridadMetEjecucionConsulta(_SelectReporte, CommandType.Text);
         }
     }
 }

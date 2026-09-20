@@ -43,9 +43,9 @@
             this.SeguridadBtnIngresar = new System.Windows.Forms.Button();
             this.SeguridadPnl2Modulo = new System.Windows.Forms.Panel();
             this.SeguridadPnl1Modulo = new System.Windows.Forms.Panel();
-            this.SeguridadPb2Modulo = new System.Windows.Forms.PictureBox();
-            this.SeguridadLbl1Modulo = new System.Windows.Forms.Label();
             this.SeguridadLbl2Modulo = new System.Windows.Forms.Label();
+            this.SeguridadLbl1Modulo = new System.Windows.Forms.Label();
+            this.SeguridadPb2Modulo = new System.Windows.Forms.PictureBox();
             this.SeguridadLbl3Contador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPb1Bitacora)).BeginInit();
@@ -430,16 +430,17 @@
             this.SeguridadPnl1Modulo.Size = new System.Drawing.Size(977, 120);
             this.SeguridadPnl1Modulo.TabIndex = 25;
             // 
-            // SeguridadPb2Modulo
+            // SeguridadLbl2Modulo
             // 
-            this.SeguridadPb2Modulo.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadPb2Modulo.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.icon_mantenimiento;
-            this.SeguridadPb2Modulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SeguridadPb2Modulo.Location = new System.Drawing.Point(63, 15);
-            this.SeguridadPb2Modulo.Name = "SeguridadPb2Modulo";
-            this.SeguridadPb2Modulo.Size = new System.Drawing.Size(106, 94);
-            this.SeguridadPb2Modulo.TabIndex = 24;
-            this.SeguridadPb2Modulo.TabStop = false;
+            this.SeguridadLbl2Modulo.AutoSize = true;
+            this.SeguridadLbl2Modulo.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLbl2Modulo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.SeguridadLbl2Modulo.ForeColor = System.Drawing.Color.DimGray;
+            this.SeguridadLbl2Modulo.Location = new System.Drawing.Point(199, 65);
+            this.SeguridadLbl2Modulo.Name = "SeguridadLbl2Modulo";
+            this.SeguridadLbl2Modulo.Size = new System.Drawing.Size(300, 18);
+            this.SeguridadLbl2Modulo.TabIndex = 26;
+            this.SeguridadLbl2Modulo.Text = "Gestione el registro de módulos del sistema. ";
             // 
             // SeguridadLbl1Modulo
             // 
@@ -453,17 +454,16 @@
             this.SeguridadLbl1Modulo.TabIndex = 25;
             this.SeguridadLbl1Modulo.Text = "Mantenimiento de Módulos";
             // 
-            // SeguridadLbl2Modulo
+            // SeguridadPb2Modulo
             // 
-            this.SeguridadLbl2Modulo.AutoSize = true;
-            this.SeguridadLbl2Modulo.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadLbl2Modulo.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.SeguridadLbl2Modulo.ForeColor = System.Drawing.Color.DimGray;
-            this.SeguridadLbl2Modulo.Location = new System.Drawing.Point(199, 65);
-            this.SeguridadLbl2Modulo.Name = "SeguridadLbl2Modulo";
-            this.SeguridadLbl2Modulo.Size = new System.Drawing.Size(300, 18);
-            this.SeguridadLbl2Modulo.TabIndex = 26;
-            this.SeguridadLbl2Modulo.Text = "Gestione el registro de módulos del sistema. ";
+            this.SeguridadPb2Modulo.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadPb2Modulo.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.icon_mantenimiento;
+            this.SeguridadPb2Modulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadPb2Modulo.Location = new System.Drawing.Point(63, 15);
+            this.SeguridadPb2Modulo.Name = "SeguridadPb2Modulo";
+            this.SeguridadPb2Modulo.Size = new System.Drawing.Size(106, 94);
+            this.SeguridadPb2Modulo.TabIndex = 24;
+            this.SeguridadPb2Modulo.TabStop = false;
             // 
             // SeguridadLbl3Contador
             // 
