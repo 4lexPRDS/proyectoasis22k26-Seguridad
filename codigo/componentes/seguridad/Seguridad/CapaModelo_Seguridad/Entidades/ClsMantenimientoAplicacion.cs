@@ -10,6 +10,7 @@ namespace CapaModelo_Seguridad.Entidades
     {
         public int IdAplicacion { get; set; }
         public int IdModulo { get; set; }
+        public String NombreModulo { get; set; }
         public string NombreAplicacion { get; set; }
         public string DescripcionAplicacion { get; set; }
         public bool IsActive { get; set; }

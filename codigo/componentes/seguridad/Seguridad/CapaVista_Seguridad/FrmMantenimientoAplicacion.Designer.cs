@@ -38,11 +38,14 @@
             this.SeguridadCboIdModulo = new System.Windows.Forms.ComboBox();
             this.SeguridadTxtIdAplicacion = new System.Windows.Forms.TextBox();
             this.SeguridadPnlFormulario = new System.Windows.Forms.Panel();
+            this.SeguridadChkEstado = new System.Windows.Forms.CheckBox();
+            this.SeguridadLblObligatorio4 = new System.Windows.Forms.Label();
+            this.SeguridadLblEstado = new System.Windows.Forms.Label();
+            this.SeguridadLblSubtitulo2 = new System.Windows.Forms.Label();
             this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
             this.SeguridadLblObligatorio2 = new System.Windows.Forms.Label();
             this.SeguridadLblObligatorio3 = new System.Windows.Forms.Label();
             this.SeguridadLblObligatorio1 = new System.Windows.Forms.Label();
-            this.SeguridadLblSubtitulo2 = new System.Windows.Forms.Label();
             this.SeguridadPnlBotones = new System.Windows.Forms.Panel();
             this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadBtnFin = new System.Windows.Forms.Button();
@@ -64,9 +67,7 @@
             this.SeguridadLblTitulo = new System.Windows.Forms.Label();
             this.SeguridadCboBuscar = new System.Windows.Forms.ComboBox();
             this.SeguridadLblSubtitulo1 = new System.Windows.Forms.Label();
-            this.SeguridadLblEstado = new System.Windows.Forms.Label();
-            this.SeguridadLblObligatorio4 = new System.Windows.Forms.Label();
-            this.SeguridadChkEstado = new System.Windows.Forms.CheckBox();
+            this.SeguridadLblDatos = new System.Windows.Forms.Label();
             this.SeguridadPnlFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbMascota)).BeginInit();
             this.SeguridadPnlBotones.SuspendLayout();
@@ -80,7 +81,7 @@
             this.SeguridadLblAplicacion.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblAplicacion.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblAplicacion.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblAplicacion.Location = new System.Drawing.Point(21, 77);
+            this.SeguridadLblAplicacion.Location = new System.Drawing.Point(148, 59);
             this.SeguridadLblAplicacion.Name = "SeguridadLblAplicacion";
             this.SeguridadLblAplicacion.Size = new System.Drawing.Size(42, 27);
             this.SeguridadLblAplicacion.TabIndex = 7;
@@ -92,11 +93,11 @@
             this.SeguridadLblModulo.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblModulo.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblModulo.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblModulo.Location = new System.Drawing.Point(354, 76);
+            this.SeguridadLblModulo.Location = new System.Drawing.Point(148, 121);
             this.SeguridadLblModulo.Name = "SeguridadLblModulo";
-            this.SeguridadLblModulo.Size = new System.Drawing.Size(112, 27);
+            this.SeguridadLblModulo.Size = new System.Drawing.Size(82, 27);
             this.SeguridadLblModulo.TabIndex = 9;
-            this.SeguridadLblModulo.Text = "ID Modulo";
+            this.SeguridadLblModulo.Text = "Modulo";
             // 
             // SeguridadLblNombreAplicacion
             // 
@@ -104,7 +105,7 @@
             this.SeguridadLblNombreAplicacion.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblNombreAplicacion.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblNombreAplicacion.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblNombreAplicacion.Location = new System.Drawing.Point(776, 77);
+            this.SeguridadLblNombreAplicacion.Location = new System.Drawing.Point(584, 58);
             this.SeguridadLblNombreAplicacion.Name = "SeguridadLblNombreAplicacion";
             this.SeguridadLblNombreAplicacion.Size = new System.Drawing.Size(89, 27);
             this.SeguridadLblNombreAplicacion.TabIndex = 10;
@@ -116,7 +117,7 @@
             this.SeguridadLblDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblDescripcion.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblDescripcion.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblDescripcion.Location = new System.Drawing.Point(23, 150);
+            this.SeguridadLblDescripcion.Location = new System.Drawing.Point(584, 117);
             this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
             this.SeguridadLblDescripcion.Size = new System.Drawing.Size(123, 27);
             this.SeguridadLblDescripcion.TabIndex = 11;
@@ -125,39 +126,39 @@
             // SeguridadTxtNombreAplicacion
             // 
             this.SeguridadTxtNombreAplicacion.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.SeguridadTxtNombreAplicacion.Location = new System.Drawing.Point(905, 78);
+            this.SeguridadTxtNombreAplicacion.Location = new System.Drawing.Point(713, 58);
             this.SeguridadTxtNombreAplicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtNombreAplicacion.Name = "SeguridadTxtNombreAplicacion";
-            this.SeguridadTxtNombreAplicacion.Size = new System.Drawing.Size(198, 30);
+            this.SeguridadTxtNombreAplicacion.Size = new System.Drawing.Size(297, 30);
             this.SeguridadTxtNombreAplicacion.TabIndex = 12;
             // 
             // SeguridadTxtDescripcion
             // 
             this.SeguridadTxtDescripcion.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.SeguridadTxtDescripcion.Location = new System.Drawing.Point(165, 150);
+            this.SeguridadTxtDescripcion.Location = new System.Drawing.Point(713, 117);
             this.SeguridadTxtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtDescripcion.Name = "SeguridadTxtDescripcion";
-            this.SeguridadTxtDescripcion.Size = new System.Drawing.Size(535, 30);
+            this.SeguridadTxtDescripcion.Size = new System.Drawing.Size(541, 30);
             this.SeguridadTxtDescripcion.TabIndex = 13;
             // 
             // SeguridadCboIdModulo
             // 
             this.SeguridadCboIdModulo.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.SeguridadCboIdModulo.FormattingEnabled = true;
-            this.SeguridadCboIdModulo.Location = new System.Drawing.Point(502, 73);
+            this.SeguridadCboIdModulo.Location = new System.Drawing.Point(268, 122);
             this.SeguridadCboIdModulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadCboIdModulo.Name = "SeguridadCboIdModulo";
-            this.SeguridadCboIdModulo.Size = new System.Drawing.Size(198, 31);
+            this.SeguridadCboIdModulo.Size = new System.Drawing.Size(297, 31);
             this.SeguridadCboIdModulo.TabIndex = 14;
             // 
             // SeguridadTxtIdAplicacion
             // 
             this.SeguridadTxtIdAplicacion.Enabled = false;
             this.SeguridadTxtIdAplicacion.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.SeguridadTxtIdAplicacion.Location = new System.Drawing.Point(98, 76);
+            this.SeguridadTxtIdAplicacion.Location = new System.Drawing.Point(268, 59);
             this.SeguridadTxtIdAplicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtIdAplicacion.Name = "SeguridadTxtIdAplicacion";
-            this.SeguridadTxtIdAplicacion.Size = new System.Drawing.Size(197, 30);
+            this.SeguridadTxtIdAplicacion.Size = new System.Drawing.Size(297, 30);
             this.SeguridadTxtIdAplicacion.TabIndex = 16;
             // 
             // SeguridadPnlFormulario
@@ -165,35 +166,80 @@
             this.SeguridadPnlFormulario.BackColor = System.Drawing.Color.AntiqueWhite;
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadChkEstado);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblObligatorio4);
+            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblDescripcion);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblEstado);
+            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadTxtDescripcion);
+            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblSubtitulo2);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadPbMascota);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblObligatorio2);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblObligatorio3);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblObligatorio1);
-            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblSubtitulo2);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblAplicacion);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadTxtIdAplicacion);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadCboIdModulo);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadTxtNombreAplicacion);
-            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadTxtDescripcion);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblModulo);
             this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblNombreAplicacion);
-            this.SeguridadPnlFormulario.Controls.Add(this.SeguridadLblDescripcion);
-            this.SeguridadPnlFormulario.Location = new System.Drawing.Point(44, 318);
+            this.SeguridadPnlFormulario.Location = new System.Drawing.Point(44, 308);
             this.SeguridadPnlFormulario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPnlFormulario.Name = "SeguridadPnlFormulario";
-            this.SeguridadPnlFormulario.Size = new System.Drawing.Size(1313, 196);
+            this.SeguridadPnlFormulario.Size = new System.Drawing.Size(1313, 166);
             this.SeguridadPnlFormulario.TabIndex = 23;
+            // 
+            // SeguridadChkEstado
+            // 
+            this.SeguridadChkEstado.AutoSize = true;
+            this.SeguridadChkEstado.Location = new System.Drawing.Point(1162, 67);
+            this.SeguridadChkEstado.Name = "SeguridadChkEstado";
+            this.SeguridadChkEstado.Size = new System.Drawing.Size(18, 17);
+            this.SeguridadChkEstado.TabIndex = 27;
+            this.SeguridadChkEstado.UseVisualStyleBackColor = true;
+            // 
+            // SeguridadLblObligatorio4
+            // 
+            this.SeguridadLblObligatorio4.AutoSize = true;
+            this.SeguridadLblObligatorio4.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblObligatorio4.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblObligatorio4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
+            this.SeguridadLblObligatorio4.Location = new System.Drawing.Point(1126, 59);
+            this.SeguridadLblObligatorio4.Name = "SeguridadLblObligatorio4";
+            this.SeguridadLblObligatorio4.Size = new System.Drawing.Size(24, 27);
+            this.SeguridadLblObligatorio4.TabIndex = 26;
+            this.SeguridadLblObligatorio4.Text = "*";
+            // 
+            // SeguridadLblEstado
+            // 
+            this.SeguridadLblEstado.AutoSize = true;
+            this.SeguridadLblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblEstado.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblEstado.ForeColor = System.Drawing.Color.Teal;
+            this.SeguridadLblEstado.Location = new System.Drawing.Point(1048, 59);
+            this.SeguridadLblEstado.Name = "SeguridadLblEstado";
+            this.SeguridadLblEstado.Size = new System.Drawing.Size(77, 27);
+            this.SeguridadLblEstado.TabIndex = 25;
+            this.SeguridadLblEstado.Text = "Estado";
+            // 
+            // SeguridadLblSubtitulo2
+            // 
+            this.SeguridadLblSubtitulo2.AutoSize = true;
+            this.SeguridadLblSubtitulo2.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblSubtitulo2.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblSubtitulo2.ForeColor = System.Drawing.Color.Teal;
+            this.SeguridadLblSubtitulo2.Location = new System.Drawing.Point(16, 5);
+            this.SeguridadLblSubtitulo2.Name = "SeguridadLblSubtitulo2";
+            this.SeguridadLblSubtitulo2.Size = new System.Drawing.Size(171, 27);
+            this.SeguridadLblSubtitulo2.TabIndex = 20;
+            this.SeguridadLblSubtitulo2.Text = "Datos Aplicacion";
             // 
             // SeguridadPbMascota
             // 
             this.SeguridadPbMascota.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadPbMascota.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources._5;
             this.SeguridadPbMascota.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SeguridadPbMascota.Location = new System.Drawing.Point(1131, 2);
+            this.SeguridadPbMascota.Location = new System.Drawing.Point(3, 40);
             this.SeguridadPbMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPbMascota.Name = "SeguridadPbMascota";
-            this.SeguridadPbMascota.Size = new System.Drawing.Size(179, 192);
+            this.SeguridadPbMascota.Size = new System.Drawing.Size(131, 124);
             this.SeguridadPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SeguridadPbMascota.TabIndex = 0;
             this.SeguridadPbMascota.TabStop = false;
@@ -204,7 +250,7 @@
             this.SeguridadLblObligatorio2.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblObligatorio2.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblObligatorio2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SeguridadLblObligatorio2.Location = new System.Drawing.Point(875, 77);
+            this.SeguridadLblObligatorio2.Location = new System.Drawing.Point(683, 58);
             this.SeguridadLblObligatorio2.Name = "SeguridadLblObligatorio2";
             this.SeguridadLblObligatorio2.Size = new System.Drawing.Size(24, 27);
             this.SeguridadLblObligatorio2.TabIndex = 24;
@@ -216,7 +262,7 @@
             this.SeguridadLblObligatorio3.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblObligatorio3.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblObligatorio3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SeguridadLblObligatorio3.Location = new System.Drawing.Point(472, 71);
+            this.SeguridadLblObligatorio3.Location = new System.Drawing.Point(238, 120);
             this.SeguridadLblObligatorio3.Name = "SeguridadLblObligatorio3";
             this.SeguridadLblObligatorio3.Size = new System.Drawing.Size(24, 27);
             this.SeguridadLblObligatorio3.TabIndex = 23;
@@ -228,23 +274,11 @@
             this.SeguridadLblObligatorio1.BackColor = System.Drawing.Color.Transparent;
             this.SeguridadLblObligatorio1.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblObligatorio1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SeguridadLblObligatorio1.Location = new System.Drawing.Point(68, 76);
+            this.SeguridadLblObligatorio1.Location = new System.Drawing.Point(238, 59);
             this.SeguridadLblObligatorio1.Name = "SeguridadLblObligatorio1";
             this.SeguridadLblObligatorio1.Size = new System.Drawing.Size(24, 27);
             this.SeguridadLblObligatorio1.TabIndex = 21;
             this.SeguridadLblObligatorio1.Text = "*";
-            // 
-            // SeguridadLblSubtitulo2
-            // 
-            this.SeguridadLblSubtitulo2.AutoSize = true;
-            this.SeguridadLblSubtitulo2.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadLblSubtitulo2.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeguridadLblSubtitulo2.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblSubtitulo2.Location = new System.Drawing.Point(23, 19);
-            this.SeguridadLblSubtitulo2.Name = "SeguridadLblSubtitulo2";
-            this.SeguridadLblSubtitulo2.Size = new System.Drawing.Size(171, 27);
-            this.SeguridadLblSubtitulo2.TabIndex = 20;
-            this.SeguridadLblSubtitulo2.Text = "Datos Aplicacion";
             // 
             // SeguridadPnlBotones
             // 
@@ -452,7 +486,7 @@
             // 
             this.SeguridadDgvAplicaciones.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.SeguridadDgvAplicaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SeguridadDgvAplicaciones.Location = new System.Drawing.Point(179, 531);
+            this.SeguridadDgvAplicaciones.Location = new System.Drawing.Point(12, 531);
             this.SeguridadDgvAplicaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadDgvAplicaciones.MultiSelect = false;
             this.SeguridadDgvAplicaciones.Name = "SeguridadDgvAplicaciones";
@@ -460,7 +494,7 @@
             this.SeguridadDgvAplicaciones.RowHeadersWidth = 51;
             this.SeguridadDgvAplicaciones.RowTemplate.Height = 24;
             this.SeguridadDgvAplicaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SeguridadDgvAplicaciones.Size = new System.Drawing.Size(1026, 222);
+            this.SeguridadDgvAplicaciones.Size = new System.Drawing.Size(1370, 230);
             this.SeguridadDgvAplicaciones.TabIndex = 25;
             this.SeguridadDgvAplicaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeguridadDgvAplicaciones_CellClick);
             // 
@@ -474,7 +508,7 @@
             this.SeguridadPnlEncabezado.Location = new System.Drawing.Point(21, 12);
             this.SeguridadPnlEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPnlEncabezado.Name = "SeguridadPnlEncabezado";
-            this.SeguridadPnlEncabezado.Size = new System.Drawing.Size(1361, 288);
+            this.SeguridadPnlEncabezado.Size = new System.Drawing.Size(1361, 278);
             this.SeguridadPnlEncabezado.TabIndex = 22;
             // 
             // SeguridadLblTitulo
@@ -511,38 +545,17 @@
             this.SeguridadLblSubtitulo1.TabIndex = 19;
             this.SeguridadLblSubtitulo1.Text = "Buscar";
             // 
-            // SeguridadLblEstado
+            // SeguridadLblDatos
             // 
-            this.SeguridadLblEstado.AutoSize = true;
-            this.SeguridadLblEstado.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadLblEstado.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeguridadLblEstado.ForeColor = System.Drawing.Color.Teal;
-            this.SeguridadLblEstado.Location = new System.Drawing.Point(778, 149);
-            this.SeguridadLblEstado.Name = "SeguridadLblEstado";
-            this.SeguridadLblEstado.Size = new System.Drawing.Size(77, 27);
-            this.SeguridadLblEstado.TabIndex = 25;
-            this.SeguridadLblEstado.Text = "Estado";
-            // 
-            // SeguridadLblObligatorio4
-            // 
-            this.SeguridadLblObligatorio4.AutoSize = true;
-            this.SeguridadLblObligatorio4.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadLblObligatorio4.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeguridadLblObligatorio4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(87)))));
-            this.SeguridadLblObligatorio4.Location = new System.Drawing.Point(875, 149);
-            this.SeguridadLblObligatorio4.Name = "SeguridadLblObligatorio4";
-            this.SeguridadLblObligatorio4.Size = new System.Drawing.Size(24, 27);
-            this.SeguridadLblObligatorio4.TabIndex = 26;
-            this.SeguridadLblObligatorio4.Text = "*";
-            // 
-            // SeguridadChkEstado
-            // 
-            this.SeguridadChkEstado.AutoSize = true;
-            this.SeguridadChkEstado.Location = new System.Drawing.Point(905, 155);
-            this.SeguridadChkEstado.Name = "SeguridadChkEstado";
-            this.SeguridadChkEstado.Size = new System.Drawing.Size(18, 17);
-            this.SeguridadChkEstado.TabIndex = 27;
-            this.SeguridadChkEstado.UseVisualStyleBackColor = true;
+            this.SeguridadLblDatos.AutoSize = true;
+            this.SeguridadLblDatos.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblDatos.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblDatos.ForeColor = System.Drawing.Color.Teal;
+            this.SeguridadLblDatos.Location = new System.Drawing.Point(567, 502);
+            this.SeguridadLblDatos.Name = "SeguridadLblDatos";
+            this.SeguridadLblDatos.Size = new System.Drawing.Size(274, 27);
+            this.SeguridadLblDatos.TabIndex = 28;
+            this.SeguridadLblDatos.Text = "Mostrando 0 de 0 registros";
             // 
             // FrmMantenimientoAplicacion
             // 
@@ -551,6 +564,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1394, 764);
+            this.Controls.Add(this.SeguridadLblDatos);
             this.Controls.Add(this.SeguridadCboBuscar);
             this.Controls.Add(this.SeguridadDgvAplicaciones);
             this.Controls.Add(this.SeguridadPnlFormulario);
@@ -616,5 +630,6 @@
         private System.Windows.Forms.Label SeguridadLblObligatorio4;
         private System.Windows.Forms.Label SeguridadLblEstado;
         private System.Windows.Forms.CheckBox SeguridadChkEstado;
+        private System.Windows.Forms.Label SeguridadLblDatos;
     }
 }
