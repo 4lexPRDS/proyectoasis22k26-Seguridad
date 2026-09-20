@@ -26,6 +26,7 @@ namespace CapaVista_Seguridad
         public FrmMantenimientoAplicacion()
         {
             InitializeComponent();
+            SeguridadMetReinicio();
         }
 
         private void FrmMantenimientoAplicacion_Load(object sender, EventArgs e)
@@ -59,10 +60,6 @@ namespace CapaVista_Seguridad
                 SeguridadCboBuscar.DisplayMember = "NombreAplicacion";
                 SeguridadCboBuscar.ValueMember = "IdAplicacion";
 
-                SeguridadCboEstado.Items.Clear();
-                SeguridadCboEstado.Items.Add("Activo");
-                SeguridadCboEstado.Items.Add("Inactivo");
-                SeguridadCboEstado.SelectedIndex = 0;
             }
             catch (Exception Ex)
             {
@@ -75,16 +72,19 @@ namespace CapaVista_Seguridad
             try
             {
                 SeguridadDgvAplicaciones.DataSource = _ModeloMantenimientoApp.SeguridadMetObtenerTodos();
+
+                SeguridadDgvAplicaciones.Columns[0].HeaderText = "Aplicacion";
+                SeguridadDgvAplicaciones.Columns[1].HeaderText = "Modulo ";
+                SeguridadDgvAplicaciones.Columns[2].HeaderText = "Nombre";
+                SeguridadDgvAplicaciones.Columns[3].HeaderText = "Descripcion";
+                SeguridadDgvAplicaciones.Columns[4].HeaderText = "Activo";
+                SeguridadDgvAplicaciones.Columns[5].HeaderText = "Fecha Creacion";
+                SeguridadDgvAplicaciones.Columns[6].HeaderText = "Ultima Actualizacion";
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.ToString());
             }
-        }
-
-        private void SeguridadBtnNuevo_Click(Object sender, EventArgs e)
-        {
-            SeguridadMetReinicio();
         }
 
         private void SeguridadBtnGuardar_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace CapaVista_Seguridad
                 _ModeloMantenimientoApp.IdModulo = Convert.ToInt32(SeguridadCboIdModulo.SelectedValue);
                 _ModeloMantenimientoApp.NombreAplicacion = SeguridadTxtNombreAplicacion.Text;
                 _ModeloMantenimientoApp.DescripcionAplicacion = SeguridadTxtDescripcion.Text;
-                _ModeloMantenimientoApp.IsActive = SeguridadCboEstado.SelectedItem.ToString() == "Activo";
+                _ModeloMantenimientoApp.IsActive = SeguridadChkEstado.Checked;
                 _ModeloMantenimientoApp.Estado = EstadoEntidad.Added;
 
                 bool Valido = new ClsValidacionDatos(_ModeloMantenimientoApp).SeguridadMetValidar();
@@ -121,7 +121,7 @@ namespace CapaVista_Seguridad
                 _ModeloMantenimientoApp.IdModulo = Convert.ToInt32(SeguridadCboIdModulo.SelectedValue);
                 _ModeloMantenimientoApp.NombreAplicacion = SeguridadTxtNombreAplicacion.Text;
                 _ModeloMantenimientoApp.DescripcionAplicacion = SeguridadTxtDescripcion.Text;
-                _ModeloMantenimientoApp.IsActive = SeguridadCboEstado.SelectedItem.ToString() == "Activo";
+                _ModeloMantenimientoApp.IsActive = SeguridadChkEstado.Checked;
                 _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
 
                 bool Valido = new ClsValidacionDatos(_ModeloMantenimientoApp).SeguridadMetValidar();
@@ -152,8 +152,9 @@ namespace CapaVista_Seguridad
                     SeguridadCboIdModulo.SelectedValue = Resultado.IdModulo;
                     SeguridadTxtNombreAplicacion.Text = Resultado.NombreAplicacion;
                     SeguridadTxtDescripcion.Text = Resultado.DescripcionAplicacion;
-                    SeguridadCboEstado.SelectedItem = Resultado.IsActive ? "Activo" : "Inactivo";
+                    SeguridadChkEstado.Checked = Resultado.IsActive;
                     _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
+
                 }
             }
             catch (Exception Ex)
@@ -199,14 +200,45 @@ namespace CapaVista_Seguridad
             this.Close();
         }
 
+        private void SeguridadMetCargarFila(int Indice)
+        {
+            SeguridadDgvAplicaciones.ClearSelection();
+            SeguridadDgvAplicaciones.Rows[Indice].Selected = true;
+            SeguridadDgvAplicaciones.CurrentCell = SeguridadDgvAplicaciones.Rows[Indice].Cells[0];
+
+            SeguridadTxtIdAplicacion.Text = SeguridadDgvAplicaciones.Rows[Indice].Cells[0].Value.ToString();
+            SeguridadCboIdModulo.SelectedValue = Convert.ToInt32(SeguridadDgvAplicaciones.Rows[Indice].Cells[1].Value);
+            SeguridadTxtNombreAplicacion.Text = SeguridadDgvAplicaciones.Rows[Indice].Cells[2].Value.ToString();
+            SeguridadTxtDescripcion.Text = SeguridadDgvAplicaciones.Rows[Indice].Cells[3].Value.ToString();
+            SeguridadChkEstado.Checked= Convert.ToBoolean(SeguridadDgvAplicaciones.Rows[Indice].Cells[4].Value);
+            _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
+
+        }
+
         private void SeguridadMetReinicio()
         {
             SeguridadTxtIdAplicacion.Text = string.Empty;
             SeguridadTxtNombreAplicacion.Text = string.Empty;
             SeguridadTxtDescripcion.Text = string.Empty;
-            SeguridadCboEstado.SelectedIndex = 0;
-            SeguridadCboIdModulo.SelectedIndex = 0;
+            SeguridadChkEstado.Checked = false;
+            if (SeguridadCboIdModulo.Items.Count > 0)
+                SeguridadCboIdModulo.SelectedIndex = 0;
             _ModeloMantenimientoApp.Estado = EstadoEntidad.Added;
+
+            SeguridadPnlFormulario.Enabled = false;
+            SeguridadCboBuscar.Enabled = false;
+            SeguridadBtnGuardar.Enabled = false;
+            SeguridadBtnModificar.Enabled = false;
+            SeguridadBtnEliminar.Enabled = false;
+            SeguridadBtnCancelar.Enabled = false;
+            SeguridadBtnBuscar.Enabled = false;
+            SeguridadBtnRefrescar.Enabled = false;
+            SeguridadBtnInicio.Enabled = false;
+            SeguridadBtnAnterior.Enabled = false;
+            SeguridadBtnSiguiente.Enabled = false;
+            SeguridadBtnFin.Enabled = false;
+            SeguridadBtnImprimir.Enabled = false;
+            SeguridadBtnReporte.Enabled = false;
         }
 
         private void SeguridadDgvAplicaciones_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -217,9 +249,82 @@ namespace CapaVista_Seguridad
                 SeguridadCboIdModulo.SelectedValue = Convert.ToInt32(SeguridadDgvAplicaciones.CurrentRow.Cells[1].Value);
                 SeguridadTxtNombreAplicacion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[2].Value.ToString();
                 SeguridadTxtDescripcion.Text = SeguridadDgvAplicaciones.CurrentRow.Cells[3].Value.ToString();
-                SeguridadCboEstado.SelectedItem = Convert.ToBoolean(SeguridadDgvAplicaciones.CurrentRow.Cells[4].Value) ? "Activo" : "Inactivo";
+                SeguridadChkEstado.Checked = Convert.ToBoolean(SeguridadDgvAplicaciones.CurrentRow.Cells[4].Value);
                 _ModeloMantenimientoApp.Estado = EstadoEntidad.Modified;
+
+
             }
+        }
+
+        private void SeguridadBtnRefrescar_Click(object sender, EventArgs e)
+        {
+            SeguridadCboBuscar.SelectedIndex = 0;
+            SeguridadMetListaAplicaciones();
+            SeguridadMetReinicio();
+        }
+
+        private void SeguridadBtnInicio_Click(object sender, EventArgs e)
+        {
+            if (SeguridadDgvAplicaciones.Rows.Count > 0)
+            {
+                SeguridadMetCargarFila(0);
+            }
+        }
+
+        private void SeguridadBtnAnterior_Click(object sender, EventArgs e)
+        {
+            if (SeguridadDgvAplicaciones.Rows.Count > 0 && SeguridadDgvAplicaciones.CurrentCell != null)
+            {
+                int FilaActual = SeguridadDgvAplicaciones.CurrentCell.RowIndex;
+                if (FilaActual > 0)
+                {
+                    SeguridadMetCargarFila(FilaActual - 1);
+                }
+            }
+        }
+
+        private void SeguridadBtnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (SeguridadDgvAplicaciones.Rows.Count > 0 && SeguridadDgvAplicaciones.CurrentCell != null)
+            {
+                int FilaActual = SeguridadDgvAplicaciones.CurrentCell.RowIndex;
+                if (FilaActual < SeguridadDgvAplicaciones.Rows.Count - 1)
+                {
+                    SeguridadMetCargarFila(FilaActual + 1);
+                }
+            }
+        }
+
+        private void SeguridadBtnFin_Click(object sender, EventArgs e)
+        {
+            if (SeguridadDgvAplicaciones.Rows.Count > 0)
+            {
+                SeguridadMetCargarFila(SeguridadDgvAplicaciones.Rows.Count - 1);
+            }
+        }
+
+        private void SeguridadBtnIngresar_Click(object sender, EventArgs e)
+        {
+            SeguridadMetReinicio();
+            SeguridadPnlFormulario.Enabled = true;
+            SeguridadCboBuscar.Enabled = true;
+            SeguridadBtnGuardar.Enabled = _MisPermisos.PuedeInsertar;
+            SeguridadBtnModificar.Enabled = _MisPermisos.PuedeEditar;
+            SeguridadBtnEliminar.Enabled = _MisPermisos.PuedeEliminar;
+            SeguridadBtnImprimir.Enabled = _MisPermisos.PuedeImprimir;
+            SeguridadBtnReporte.Enabled = _MisPermisos.PuedeImprimir;
+            SeguridadBtnCancelar.Enabled = true;
+            SeguridadBtnBuscar.Enabled = true;
+            SeguridadBtnRefrescar.Enabled = true;
+            SeguridadBtnInicio.Enabled = true;
+            SeguridadBtnAnterior.Enabled = true;
+            SeguridadBtnSiguiente.Enabled = true;
+            SeguridadBtnFin.Enabled = true;
+        }
+
+        private void SeguridadBtnCancelar_Click(object sender, EventArgs e)
+        {
+            SeguridadMetReinicio();
         }
     }
 }
