@@ -48,6 +48,7 @@ namespace CapaVista_Seguridad
             SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
             SeguridadTxtCodigo.SelectionStart = SeguridadTxtCodigo.Text.Length;
             SeguridadMetHabilitarCampos(false);
+            SeguridadMetActualizarContador();
         }
 
         private void SeguridadMetListarEmpleados()
@@ -111,7 +112,22 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.Columns["UpdatedAt"].HeaderText = "Última Modificación";
         }
 
+        private void SeguridadMetActualizarContador()
+        {
+            int Total = SeguridadDgvEmpleados.Rows.Count;
 
+            if (Total == 0)
+            {
+                LblSeguridadContadorEmpleados.Text = "Mostrando 0 de 0 registros";
+                return;
+            }
+
+            int FilaActual = (SeguridadDgvEmpleados.CurrentCell != null)
+                ? SeguridadDgvEmpleados.CurrentCell.RowIndex + 1
+                : 1;
+
+            LblSeguridadContadorEmpleados.Text = $"Mostrando {FilaActual} de {Total} registros";
+        }
 
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
@@ -165,8 +181,6 @@ namespace CapaVista_Seguridad
                     return;
                 }
 
-                //int IdEmpleado = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
-                //SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(IdEmpleado);
 
                 string CodigoEmpleado = SeguridadTxtCodigo.Text;
                 SeguridadDgvEmpleados.DataSource = _Empleado.SeguridadMetBuscarPorId(CodigoEmpleado);
@@ -225,7 +239,6 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnModificar_Click(object sender, EventArgs e)
         {
-            SeguridadMetHabilitarCampos(true);
             try
             {
                 if (SeguridadDgvEmpleados.SelectedRows.Count == 0)
@@ -257,6 +270,7 @@ namespace CapaVista_Seguridad
                     MessageBox.Show(Resultado);
                     SeguridadMetListarEmpleados();
                     SeguridadMetReinicio();
+                    SeguridadMetHabilitarCampos(false);
                 }
             }
             catch (Exception ex)
@@ -304,6 +318,7 @@ namespace CapaVista_Seguridad
             SeguridadTxtIdEmpleado.Clear();
             SeguridadMetReinicio();
             SeguridadMetListarEmpleados();
+            SeguridadMetHabilitarCampos(false);
         }
 
         private void SeguridadBtnRefrescar_Click(object sender, EventArgs e)
@@ -320,6 +335,7 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.Rows[0].Selected = true;
                 SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[0].Cells[0];
                 SeguridadMetCargarFilaEnFormulario(0);
+                SeguridadMetActualizarContador();
             }
         }
 
@@ -334,6 +350,7 @@ namespace CapaVista_Seguridad
                     SeguridadDgvEmpleados.Rows[FilaActual - 1].Selected = true;
                     SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual - 1].Cells[0];
                     SeguridadMetCargarFilaEnFormulario(FilaActual - 1);
+                    SeguridadMetActualizarContador();
                 }
             }
         }
@@ -349,6 +366,7 @@ namespace CapaVista_Seguridad
                     SeguridadDgvEmpleados.Rows[FilaActual + 1].Selected = true;
                     SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[FilaActual + 1].Cells[0];
                     SeguridadMetCargarFilaEnFormulario(FilaActual + 1);
+                    SeguridadMetActualizarContador();
                 }
             }
 
@@ -363,6 +381,7 @@ namespace CapaVista_Seguridad
                 SeguridadDgvEmpleados.Rows[UltimaFila].Selected = true;
                 SeguridadDgvEmpleados.CurrentCell = SeguridadDgvEmpleados.Rows[UltimaFila].Cells[0];
                 SeguridadMetCargarFilaEnFormulario(UltimaFila);
+                SeguridadMetActualizarContador();
             }
         }
 
@@ -384,6 +403,8 @@ namespace CapaVista_Seguridad
             SeguridadTxtTelefono.Text = fila.Cells[10].Value?.ToString();
             SeguridadTxtCorreo.Text = fila.Cells[11].Value?.ToString();
             SeguridadChkActivo.Checked = Convert.ToBoolean(fila.Cells[12].Value);
+
+            SeguridadMetHabilitarCampos(true);
         }
 
         private void SeguridadTxtDpi_KeyPress(object sender, KeyPressEventArgs e)
