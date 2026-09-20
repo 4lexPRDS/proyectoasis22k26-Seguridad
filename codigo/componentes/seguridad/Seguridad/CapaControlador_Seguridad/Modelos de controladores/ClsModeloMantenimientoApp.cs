@@ -16,6 +16,7 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
         private int _IdModulo;
         private string _NombreAplicacion;
         private string _DescripcionAplicacion;
+        private string _NombreModulo;
         private bool _IsActive;
         private DateTime _CreatedAt;
         private DateTime _UpdatedAt;
@@ -29,6 +30,7 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
         [Required(ErrorMessage = "El campo Id Modulo es requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Debe seleccionar un modulo válido")]
         public int IdModulo { get => _IdModulo; set => _IdModulo = value; }
+        public string NombreModulo { get => _NombreModulo; set => _NombreModulo = value; }
 
         [Required(ErrorMessage = "El campo Nombre Aplicación es requerido")]
         public string NombreAplicacion { get => _NombreAplicacion; set => _NombreAplicacion = value; }
@@ -97,6 +99,7 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
                 {
                     _IdAplicacion = Item.IdAplicacion,
                     _IdModulo = Item.IdModulo,
+                    _NombreModulo = Item.NombreModulo,
                     _NombreAplicacion = Item.NombreAplicacion,
                     _DescripcionAplicacion = Item.DescripcionAplicacion,
                     _IsActive = Item.IsActive,
