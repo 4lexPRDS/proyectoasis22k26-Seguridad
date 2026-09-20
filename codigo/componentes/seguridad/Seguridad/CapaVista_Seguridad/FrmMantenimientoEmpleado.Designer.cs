@@ -35,7 +35,6 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnGuardar = new System.Windows.Forms.Button();
             this.SeguridadBtnCancelar = new System.Windows.Forms.Button();
             this.SeguridadBtnEliminar = new System.Windows.Forms.Button();
-            this.SeguridadBtnConsultar = new System.Windows.Forms.Button();
             this.SeguridadBtnImprimir = new System.Windows.Forms.Button();
             this.SeguridadBtnRefrescar = new System.Windows.Forms.Button();
             this.SeguridadBtnInicio = new System.Windows.Forms.Button();
@@ -45,7 +44,9 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadBtnSalir = new System.Windows.Forms.Button();
             this.SeguridadPnlFiltros = new System.Windows.Forms.Panel();
+            this.LblSeguridadContadorEmpleados = new System.Windows.Forms.Label();
             this.SeguridadTlpFiltros = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SeguridadPnlIdEmpleado = new System.Windows.Forms.Panel();
             this.SeguridadTxtIdEmpleado = new System.Windows.Forms.TextBox();
             this.SeguridadLblIdEmpleado = new System.Windows.Forms.Label();
@@ -84,6 +85,7 @@ namespace CapaVista_Seguridad
             this.SeguridadLblFechaContratacion = new System.Windows.Forms.Label();
             this.SeguridadChkActivo = new System.Windows.Forms.CheckBox();
             this.SeguridadPnlAcciones = new System.Windows.Forms.Panel();
+            this.LblSeguridadBusqueda = new System.Windows.Forms.Label();
             this.SeguridadBtnBuscar = new System.Windows.Forms.Button();
             this.SeguridadBtnLimpiar = new System.Windows.Forms.Button();
             this.SeguridadPnlGrid = new System.Windows.Forms.Panel();
@@ -190,7 +192,7 @@ namespace CapaVista_Seguridad
             // 
             // SeguridadPnlToolbar
             // 
-            this.SeguridadPnlToolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
+            this.SeguridadPnlToolbar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.SeguridadPnlToolbar.Controls.Add(this.SeguridadFlpToolbar);
             this.SeguridadPnlToolbar.Dock = System.Windows.Forms.DockStyle.Top;
             this.SeguridadPnlToolbar.Location = new System.Drawing.Point(0, 140);
@@ -202,12 +204,12 @@ namespace CapaVista_Seguridad
             // 
             // SeguridadFlpToolbar
             // 
+            this.SeguridadFlpToolbar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnAgregar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnModificar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnGuardar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnCancelar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnEliminar);
-            this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnConsultar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnImprimir);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnRefrescar);
             this.SeguridadFlpToolbar.Controls.Add(this.SeguridadBtnInicio);
@@ -233,7 +235,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAgregar.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadBtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
             this.SeguridadBtnAgregar.Location = new System.Drawing.Point(4, 4);
-            this.SeguridadBtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAgregar.Name = "SeguridadBtnAgregar";
             this.SeguridadBtnAgregar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnAgregar.TabIndex = 0;
@@ -247,7 +249,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnModificar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnModificar.Location = new System.Drawing.Point(88, 4);
-            this.SeguridadBtnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnModificar.Name = "SeguridadBtnModificar";
             this.SeguridadBtnModificar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnModificar.TabIndex = 1;
@@ -261,7 +263,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnGuardar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnGuardar.Location = new System.Drawing.Point(172, 4);
-            this.SeguridadBtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnGuardar.Name = "SeguridadBtnGuardar";
             this.SeguridadBtnGuardar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnGuardar.TabIndex = 2;
@@ -275,7 +277,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnCancelar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnCancelar.Location = new System.Drawing.Point(256, 4);
-            this.SeguridadBtnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnCancelar.Name = "SeguridadBtnCancelar";
             this.SeguridadBtnCancelar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnCancelar.TabIndex = 3;
@@ -289,26 +291,12 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnEliminar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnEliminar.Location = new System.Drawing.Point(340, 4);
-            this.SeguridadBtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnEliminar.Name = "SeguridadBtnEliminar";
             this.SeguridadBtnEliminar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnEliminar.TabIndex = 4;
             this.SeguridadBtnEliminar.UseVisualStyleBackColor = false;
             this.SeguridadBtnEliminar.Click += new System.EventHandler(this.SeguridadBtnEliminar_Click);
-            // 
-            // SeguridadBtnConsultar
-            // 
-            this.SeguridadBtnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
-            this.SeguridadBtnConsultar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_consultarN;
-            this.SeguridadBtnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SeguridadBtnConsultar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnConsultar.Location = new System.Drawing.Point(424, 4);
-            this.SeguridadBtnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SeguridadBtnConsultar.Name = "SeguridadBtnConsultar";
-            this.SeguridadBtnConsultar.Size = new System.Drawing.Size(76, 76);
-            this.SeguridadBtnConsultar.TabIndex = 5;
-            this.SeguridadBtnConsultar.UseVisualStyleBackColor = false;
-            this.SeguridadBtnConsultar.Click += new System.EventHandler(this.SeguridadBtnConsultar_Click);
             // 
             // SeguridadBtnImprimir
             // 
@@ -316,8 +304,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnImprimir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_imprimirN;
             this.SeguridadBtnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnImprimir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnImprimir.Location = new System.Drawing.Point(508, 4);
-            this.SeguridadBtnImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnImprimir.Location = new System.Drawing.Point(424, 4);
+            this.SeguridadBtnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnImprimir.Name = "SeguridadBtnImprimir";
             this.SeguridadBtnImprimir.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnImprimir.TabIndex = 6;
@@ -329,8 +317,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnRefrescar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_refrescarN;
             this.SeguridadBtnRefrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnRefrescar.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(592, 4);
-            this.SeguridadBtnRefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(508, 4);
+            this.SeguridadBtnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnRefrescar.Name = "SeguridadBtnRefrescar";
             this.SeguridadBtnRefrescar.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnRefrescar.TabIndex = 7;
@@ -343,8 +331,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnInicio.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_inicioN;
             this.SeguridadBtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnInicio.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnInicio.Location = new System.Drawing.Point(676, 4);
-            this.SeguridadBtnInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnInicio.Location = new System.Drawing.Point(592, 4);
+            this.SeguridadBtnInicio.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnInicio.Name = "SeguridadBtnInicio";
             this.SeguridadBtnInicio.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnInicio.TabIndex = 8;
@@ -357,8 +345,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAnterior.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_anteriorN;
             this.SeguridadBtnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAnterior.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAnterior.Location = new System.Drawing.Point(760, 4);
-            this.SeguridadBtnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAnterior.Location = new System.Drawing.Point(676, 4);
+            this.SeguridadBtnAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAnterior.Name = "SeguridadBtnAnterior";
             this.SeguridadBtnAnterior.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnAnterior.TabIndex = 9;
@@ -371,8 +359,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSiguiente.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_siguienteN;
             this.SeguridadBtnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSiguiente.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(844, 4);
-            this.SeguridadBtnSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(760, 4);
+            this.SeguridadBtnSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnSiguiente.Name = "SeguridadBtnSiguiente";
             this.SeguridadBtnSiguiente.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnSiguiente.TabIndex = 10;
@@ -385,8 +373,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnFin.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_finN;
             this.SeguridadBtnFin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnFin.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnFin.Location = new System.Drawing.Point(928, 4);
-            this.SeguridadBtnFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnFin.Location = new System.Drawing.Point(844, 4);
+            this.SeguridadBtnFin.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnFin.Name = "SeguridadBtnFin";
             this.SeguridadBtnFin.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnFin.TabIndex = 11;
@@ -399,8 +387,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.SeguridadBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAyuda.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnAyuda.Location = new System.Drawing.Point(1012, 4);
-            this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnAyuda.Location = new System.Drawing.Point(928, 4);
+            this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
             this.SeguridadBtnAyuda.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnAyuda.TabIndex = 12;
@@ -413,8 +401,8 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
             this.SeguridadBtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnSalir.FlatAppearance.BorderSize = 0;
-            this.SeguridadBtnSalir.Location = new System.Drawing.Point(1096, 4);
-            this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SeguridadBtnSalir.Location = new System.Drawing.Point(1012, 4);
+            this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";
             this.SeguridadBtnSalir.Size = new System.Drawing.Size(76, 76);
             this.SeguridadBtnSalir.TabIndex = 13;
@@ -424,23 +412,40 @@ namespace CapaVista_Seguridad
             // SeguridadPnlFiltros
             // 
             this.SeguridadPnlFiltros.BackColor = System.Drawing.Color.White;
+            this.SeguridadPnlFiltros.Controls.Add(this.LblSeguridadContadorEmpleados);
             this.SeguridadPnlFiltros.Controls.Add(this.SeguridadTlpFiltros);
             this.SeguridadPnlFiltros.Controls.Add(this.SeguridadPnlAcciones);
             this.SeguridadPnlFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.SeguridadPnlFiltros.Location = new System.Drawing.Point(0, 236);
             this.SeguridadPnlFiltros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPnlFiltros.Name = "SeguridadPnlFiltros";
-            this.SeguridadPnlFiltros.Padding = new System.Windows.Forms.Padding(16, 16, 16, 16);
-            this.SeguridadPnlFiltros.Size = new System.Drawing.Size(1371, 260);
+            this.SeguridadPnlFiltros.Padding = new System.Windows.Forms.Padding(16);
+            this.SeguridadPnlFiltros.Size = new System.Drawing.Size(1371, 272);
             this.SeguridadPnlFiltros.TabIndex = 2;
+            // 
+            // LblSeguridadContadorEmpleados
+            // 
+            this.LblSeguridadContadorEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblSeguridadContadorEmpleados.AutoSize = true;
+            this.LblSeguridadContadorEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LblSeguridadContadorEmpleados.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadContadorEmpleados.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.LblSeguridadContadorEmpleados.Location = new System.Drawing.Point(1119, 247);
+            this.LblSeguridadContadorEmpleados.Name = "LblSeguridadContadorEmpleados";
+            this.LblSeguridadContadorEmpleados.Size = new System.Drawing.Size(206, 23);
+            this.LblSeguridadContadorEmpleados.TabIndex = 17;
+            this.LblSeguridadContadorEmpleados.Text = "Mostrando 0 de 0 registros";
             // 
             // SeguridadTlpFiltros
             // 
             this.SeguridadTlpFiltros.ColumnCount = 4;
+            this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.10822F));
+            this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.76191F));
             this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.SeguridadTlpFiltros.Controls.Add(this.panel1, 3, 3);
             this.SeguridadTlpFiltros.Controls.Add(this.SeguridadPnlIdEmpleado, 0, 0);
             this.SeguridadTlpFiltros.Controls.Add(this.SeguridadPnlCodigo, 1, 0);
             this.SeguridadTlpFiltros.Controls.Add(this.SeguridadPnlNombres, 2, 0);
@@ -460,11 +465,18 @@ namespace CapaVista_Seguridad
             this.SeguridadTlpFiltros.Name = "SeguridadTlpFiltros";
             this.SeguridadTlpFiltros.RowCount = 4;
             this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SeguridadTlpFiltros.Size = new System.Drawing.Size(1155, 228);
+            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.19298F));
+            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.50877F));
+            this.SeguridadTlpFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.29825F));
+            this.SeguridadTlpFiltros.Size = new System.Drawing.Size(1155, 240);
             this.SeguridadTlpFiltros.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(868, 196);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(213, 41);
+            this.panel1.TabIndex = 18;
             // 
             // SeguridadPnlIdEmpleado
             // 
@@ -474,7 +486,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlIdEmpleado.Location = new System.Drawing.Point(5, 6);
             this.SeguridadPnlIdEmpleado.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlIdEmpleado.Name = "SeguridadPnlIdEmpleado";
-            this.SeguridadPnlIdEmpleado.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlIdEmpleado.Size = new System.Drawing.Size(280, 48);
             this.SeguridadPnlIdEmpleado.TabIndex = 0;
             // 
             // SeguridadTxtIdEmpleado
@@ -486,7 +498,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtIdEmpleado.Location = new System.Drawing.Point(3, 22);
             this.SeguridadTxtIdEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtIdEmpleado.Name = "SeguridadTxtIdEmpleado";
-            this.SeguridadTxtIdEmpleado.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtIdEmpleado.Size = new System.Drawing.Size(319, 30);
             this.SeguridadTxtIdEmpleado.TabIndex = 0;
             // 
             // SeguridadLblIdEmpleado
@@ -505,10 +517,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlCodigo.Controls.Add(this.SeguridadTxtCodigo);
             this.SeguridadPnlCodigo.Controls.Add(this.SeguridadLblCodigo);
             this.SeguridadPnlCodigo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlCodigo.Location = new System.Drawing.Point(293, 6);
+            this.SeguridadPnlCodigo.Location = new System.Drawing.Point(295, 6);
             this.SeguridadPnlCodigo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlCodigo.Name = "SeguridadPnlCodigo";
-            this.SeguridadPnlCodigo.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlCodigo.Size = new System.Drawing.Size(276, 48);
             this.SeguridadPnlCodigo.TabIndex = 1;
             // 
             // SeguridadTxtCodigo
@@ -520,7 +532,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtCodigo.MaxLength = 7;
             this.SeguridadTxtCodigo.Name = "SeguridadTxtCodigo";
-            this.SeguridadTxtCodigo.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtCodigo.Size = new System.Drawing.Size(315, 30);
             this.SeguridadTxtCodigo.TabIndex = 0;
             this.SeguridadTxtCodigo.Text = "EMP-";
             this.SeguridadTxtCodigo.TextChanged += new System.EventHandler(this.SeguridadTxtCodigo_TextChanged);
@@ -546,7 +558,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlNombres.Location = new System.Drawing.Point(581, 6);
             this.SeguridadPnlNombres.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlNombres.Name = "SeguridadPnlNombres";
-            this.SeguridadPnlNombres.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlNombres.Size = new System.Drawing.Size(279, 48);
             this.SeguridadPnlNombres.TabIndex = 2;
             // 
             // SeguridadTxtNombres
@@ -557,7 +569,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtNombres.Location = new System.Drawing.Point(3, 22);
             this.SeguridadTxtNombres.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtNombres.Name = "SeguridadTxtNombres";
-            this.SeguridadTxtNombres.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtNombres.Size = new System.Drawing.Size(318, 30);
             this.SeguridadTxtNombres.TabIndex = 0;
             // 
             // SeguridadLblNombres
@@ -576,10 +588,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlApellidos.Controls.Add(this.SeguridadTxtApellidos);
             this.SeguridadPnlApellidos.Controls.Add(this.SeguridadLblApellidos);
             this.SeguridadPnlApellidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlApellidos.Location = new System.Drawing.Point(869, 6);
+            this.SeguridadPnlApellidos.Location = new System.Drawing.Point(870, 6);
             this.SeguridadPnlApellidos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlApellidos.Name = "SeguridadPnlApellidos";
-            this.SeguridadPnlApellidos.Size = new System.Drawing.Size(281, 45);
+            this.SeguridadPnlApellidos.Size = new System.Drawing.Size(280, 48);
             this.SeguridadPnlApellidos.TabIndex = 3;
             // 
             // SeguridadTxtApellidos
@@ -590,7 +602,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtApellidos.Location = new System.Drawing.Point(3, 22);
             this.SeguridadTxtApellidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtApellidos.Name = "SeguridadTxtApellidos";
-            this.SeguridadTxtApellidos.Size = new System.Drawing.Size(320, 30);
+            this.SeguridadTxtApellidos.Size = new System.Drawing.Size(319, 30);
             this.SeguridadTxtApellidos.TabIndex = 0;
             // 
             // SeguridadLblApellidos
@@ -609,10 +621,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlDpi.Controls.Add(this.SeguridadTxtDpi);
             this.SeguridadPnlDpi.Controls.Add(this.SeguridadLblDpi);
             this.SeguridadPnlDpi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlDpi.Location = new System.Drawing.Point(5, 63);
+            this.SeguridadPnlDpi.Location = new System.Drawing.Point(5, 66);
             this.SeguridadPnlDpi.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlDpi.Name = "SeguridadPnlDpi";
-            this.SeguridadPnlDpi.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlDpi.Size = new System.Drawing.Size(280, 53);
             this.SeguridadPnlDpi.TabIndex = 4;
             // 
             // SeguridadTxtDpi
@@ -624,7 +636,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtDpi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtDpi.MaxLength = 13;
             this.SeguridadTxtDpi.Name = "SeguridadTxtDpi";
-            this.SeguridadTxtDpi.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtDpi.Size = new System.Drawing.Size(319, 30);
             this.SeguridadTxtDpi.TabIndex = 0;
             this.SeguridadTxtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SeguridadTxtDpi_KeyPress);
             // 
@@ -644,10 +656,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlNit.Controls.Add(this.SeguridadTxtNit);
             this.SeguridadPnlNit.Controls.Add(this.SeguridadLblNit);
             this.SeguridadPnlNit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlNit.Location = new System.Drawing.Point(293, 63);
+            this.SeguridadPnlNit.Location = new System.Drawing.Point(295, 66);
             this.SeguridadPnlNit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlNit.Name = "SeguridadPnlNit";
-            this.SeguridadPnlNit.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlNit.Size = new System.Drawing.Size(276, 53);
             this.SeguridadPnlNit.TabIndex = 5;
             // 
             // SeguridadTxtNit
@@ -659,7 +671,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtNit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtNit.MaxLength = 9;
             this.SeguridadTxtNit.Name = "SeguridadTxtNit";
-            this.SeguridadTxtNit.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtNit.Size = new System.Drawing.Size(315, 30);
             this.SeguridadTxtNit.TabIndex = 0;
             this.SeguridadTxtNit.TextChanged += new System.EventHandler(this.SeguridadTxtNit_TextChanged);
             this.SeguridadTxtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SeguridadTxtNit_KeyPress);
@@ -680,10 +692,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlPuesto.Controls.Add(this.SeguridadTxtPuesto);
             this.SeguridadPnlPuesto.Controls.Add(this.SeguridadLblPuesto);
             this.SeguridadPnlPuesto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlPuesto.Location = new System.Drawing.Point(581, 63);
+            this.SeguridadPnlPuesto.Location = new System.Drawing.Point(581, 66);
             this.SeguridadPnlPuesto.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlPuesto.Name = "SeguridadPnlPuesto";
-            this.SeguridadPnlPuesto.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlPuesto.Size = new System.Drawing.Size(279, 53);
             this.SeguridadPnlPuesto.TabIndex = 6;
             // 
             // SeguridadTxtPuesto
@@ -694,7 +706,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtPuesto.Location = new System.Drawing.Point(3, 22);
             this.SeguridadTxtPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtPuesto.Name = "SeguridadTxtPuesto";
-            this.SeguridadTxtPuesto.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtPuesto.Size = new System.Drawing.Size(318, 30);
             this.SeguridadTxtPuesto.TabIndex = 0;
             // 
             // SeguridadLblPuesto
@@ -713,10 +725,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlCorreo.Controls.Add(this.SeguridadTxtCorreo);
             this.SeguridadPnlCorreo.Controls.Add(this.SeguridadLblCorreo);
             this.SeguridadPnlCorreo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlCorreo.Location = new System.Drawing.Point(869, 63);
+            this.SeguridadPnlCorreo.Location = new System.Drawing.Point(870, 66);
             this.SeguridadPnlCorreo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlCorreo.Name = "SeguridadPnlCorreo";
-            this.SeguridadPnlCorreo.Size = new System.Drawing.Size(281, 45);
+            this.SeguridadPnlCorreo.Size = new System.Drawing.Size(280, 53);
             this.SeguridadPnlCorreo.TabIndex = 7;
             // 
             // SeguridadTxtCorreo
@@ -727,7 +739,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtCorreo.Location = new System.Drawing.Point(3, 22);
             this.SeguridadTxtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtCorreo.Name = "SeguridadTxtCorreo";
-            this.SeguridadTxtCorreo.Size = new System.Drawing.Size(320, 30);
+            this.SeguridadTxtCorreo.Size = new System.Drawing.Size(319, 30);
             this.SeguridadTxtCorreo.TabIndex = 0;
             // 
             // SeguridadLblCorreo
@@ -746,10 +758,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlTelefono.Controls.Add(this.SeguridadTxtTelefono);
             this.SeguridadPnlTelefono.Controls.Add(this.SeguridadLblTelefono);
             this.SeguridadPnlTelefono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlTelefono.Location = new System.Drawing.Point(5, 120);
+            this.SeguridadPnlTelefono.Location = new System.Drawing.Point(5, 131);
             this.SeguridadPnlTelefono.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlTelefono.Name = "SeguridadPnlTelefono";
-            this.SeguridadPnlTelefono.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlTelefono.Size = new System.Drawing.Size(280, 56);
             this.SeguridadPnlTelefono.TabIndex = 8;
             // 
             // SeguridadTxtTelefono
@@ -761,7 +773,7 @@ namespace CapaVista_Seguridad
             this.SeguridadTxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadTxtTelefono.MaxLength = 8;
             this.SeguridadTxtTelefono.Name = "SeguridadTxtTelefono";
-            this.SeguridadTxtTelefono.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadTxtTelefono.Size = new System.Drawing.Size(319, 30);
             this.SeguridadTxtTelefono.TabIndex = 0;
             this.SeguridadTxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SeguridadTxtTelefono_KeyPress);
             // 
@@ -781,10 +793,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlGenero.Controls.Add(this.SeguridadCboGenero);
             this.SeguridadPnlGenero.Controls.Add(this.SeguridadLblGenero);
             this.SeguridadPnlGenero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlGenero.Location = new System.Drawing.Point(293, 120);
+            this.SeguridadPnlGenero.Location = new System.Drawing.Point(295, 131);
             this.SeguridadPnlGenero.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlGenero.Name = "SeguridadPnlGenero";
-            this.SeguridadPnlGenero.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlGenero.Size = new System.Drawing.Size(276, 56);
             this.SeguridadPnlGenero.TabIndex = 9;
             // 
             // SeguridadCboGenero
@@ -796,10 +808,10 @@ namespace CapaVista_Seguridad
             this.SeguridadCboGenero.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.SeguridadCboGenero.Location = new System.Drawing.Point(3, 22);
+            this.SeguridadCboGenero.Location = new System.Drawing.Point(-2, 22);
             this.SeguridadCboGenero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadCboGenero.Name = "SeguridadCboGenero";
-            this.SeguridadCboGenero.Size = new System.Drawing.Size(276, 31);
+            this.SeguridadCboGenero.Size = new System.Drawing.Size(280, 31);
             this.SeguridadCboGenero.TabIndex = 0;
             // 
             // SeguridadLblGenero
@@ -818,10 +830,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlFechaNacimiento.Controls.Add(this.SeguridadDtpFechaNacimiento);
             this.SeguridadPnlFechaNacimiento.Controls.Add(this.SeguridadLblFechaNacimiento);
             this.SeguridadPnlFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlFechaNacimiento.Location = new System.Drawing.Point(581, 120);
+            this.SeguridadPnlFechaNacimiento.Location = new System.Drawing.Point(581, 131);
             this.SeguridadPnlFechaNacimiento.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlFechaNacimiento.Name = "SeguridadPnlFechaNacimiento";
-            this.SeguridadPnlFechaNacimiento.Size = new System.Drawing.Size(278, 45);
+            this.SeguridadPnlFechaNacimiento.Size = new System.Drawing.Size(279, 56);
             this.SeguridadPnlFechaNacimiento.TabIndex = 10;
             // 
             // SeguridadDtpFechaNacimiento
@@ -834,7 +846,7 @@ namespace CapaVista_Seguridad
             this.SeguridadDtpFechaNacimiento.Location = new System.Drawing.Point(3, 22);
             this.SeguridadDtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadDtpFechaNacimiento.Name = "SeguridadDtpFechaNacimiento";
-            this.SeguridadDtpFechaNacimiento.Size = new System.Drawing.Size(317, 30);
+            this.SeguridadDtpFechaNacimiento.Size = new System.Drawing.Size(318, 30);
             this.SeguridadDtpFechaNacimiento.TabIndex = 0;
             // 
             // SeguridadLblFechaNacimiento
@@ -853,10 +865,10 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlFechaContratacion.Controls.Add(this.SeguridadDtpFechaContratacion);
             this.SeguridadPnlFechaContratacion.Controls.Add(this.SeguridadLblFechaContratacion);
             this.SeguridadPnlFechaContratacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlFechaContratacion.Location = new System.Drawing.Point(869, 120);
+            this.SeguridadPnlFechaContratacion.Location = new System.Drawing.Point(870, 131);
             this.SeguridadPnlFechaContratacion.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SeguridadPnlFechaContratacion.Name = "SeguridadPnlFechaContratacion";
-            this.SeguridadPnlFechaContratacion.Size = new System.Drawing.Size(281, 45);
+            this.SeguridadPnlFechaContratacion.Size = new System.Drawing.Size(280, 56);
             this.SeguridadPnlFechaContratacion.TabIndex = 11;
             // 
             // SeguridadDtpFechaContratacion
@@ -869,7 +881,7 @@ namespace CapaVista_Seguridad
             this.SeguridadDtpFechaContratacion.Location = new System.Drawing.Point(3, 22);
             this.SeguridadDtpFechaContratacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadDtpFechaContratacion.Name = "SeguridadDtpFechaContratacion";
-            this.SeguridadDtpFechaContratacion.Size = new System.Drawing.Size(320, 30);
+            this.SeguridadDtpFechaContratacion.Size = new System.Drawing.Size(319, 30);
             this.SeguridadDtpFechaContratacion.TabIndex = 0;
             // 
             // SeguridadLblFechaContratacion
@@ -890,7 +902,7 @@ namespace CapaVista_Seguridad
             this.SeguridadChkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SeguridadChkActivo.Font = new System.Drawing.Font("Tahoma", 10F);
             this.SeguridadChkActivo.ForeColor = System.Drawing.Color.DimGray;
-            this.SeguridadChkActivo.Location = new System.Drawing.Point(3, 173);
+            this.SeguridadChkActivo.Location = new System.Drawing.Point(3, 195);
             this.SeguridadChkActivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadChkActivo.Name = "SeguridadChkActivo";
             this.SeguridadChkActivo.Size = new System.Drawing.Size(78, 25);
@@ -899,14 +911,26 @@ namespace CapaVista_Seguridad
             // 
             // SeguridadPnlAcciones
             // 
+            this.SeguridadPnlAcciones.Controls.Add(this.LblSeguridadBusqueda);
             this.SeguridadPnlAcciones.Controls.Add(this.SeguridadBtnBuscar);
             this.SeguridadPnlAcciones.Controls.Add(this.SeguridadBtnLimpiar);
             this.SeguridadPnlAcciones.Dock = System.Windows.Forms.DockStyle.Right;
             this.SeguridadPnlAcciones.Location = new System.Drawing.Point(1171, 16);
             this.SeguridadPnlAcciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPnlAcciones.Name = "SeguridadPnlAcciones";
-            this.SeguridadPnlAcciones.Size = new System.Drawing.Size(184, 228);
+            this.SeguridadPnlAcciones.Size = new System.Drawing.Size(184, 240);
             this.SeguridadPnlAcciones.TabIndex = 1;
+            // 
+            // LblSeguridadBusqueda
+            // 
+            this.LblSeguridadBusqueda.AutoSize = true;
+            this.LblSeguridadBusqueda.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadBusqueda.ForeColor = System.Drawing.Color.DimGray;
+            this.LblSeguridadBusqueda.Location = new System.Drawing.Point(6, 64);
+            this.LblSeguridadBusqueda.Name = "LblSeguridadBusqueda";
+            this.LblSeguridadBusqueda.Size = new System.Drawing.Size(164, 50);
+            this.LblSeguridadBusqueda.TabIndex = 19;
+            this.LblSeguridadBusqueda.Text = " Escribe el Codigo\r\n que deseas buscar ";
             // 
             // SeguridadBtnBuscar
             // 
@@ -918,7 +942,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnBuscar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnBuscar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.SeguridadBtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
-            this.SeguridadBtnBuscar.Location = new System.Drawing.Point(49, 21);
+            this.SeguridadBtnBuscar.Location = new System.Drawing.Point(69, 133);
             this.SeguridadBtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadBtnBuscar.Name = "SeguridadBtnBuscar";
             this.SeguridadBtnBuscar.Size = new System.Drawing.Size(83, 76);
@@ -934,7 +958,7 @@ namespace CapaVista_Seguridad
             this.SeguridadBtnLimpiar.FlatAppearance.BorderSize = 0;
             this.SeguridadBtnLimpiar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.SeguridadBtnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnLimpiar.Location = new System.Drawing.Point(4, 108);
+            this.SeguridadBtnLimpiar.Location = new System.Drawing.Point(3, 6);
             this.SeguridadBtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadBtnLimpiar.Name = "SeguridadBtnLimpiar";
             this.SeguridadBtnLimpiar.Size = new System.Drawing.Size(176, 44);
@@ -948,11 +972,11 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlGrid.BackColor = System.Drawing.Color.White;
             this.SeguridadPnlGrid.Controls.Add(this.SeguridadDgvEmpleados);
             this.SeguridadPnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SeguridadPnlGrid.Location = new System.Drawing.Point(0, 496);
+            this.SeguridadPnlGrid.Location = new System.Drawing.Point(0, 508);
             this.SeguridadPnlGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadPnlGrid.Name = "SeguridadPnlGrid";
-            this.SeguridadPnlGrid.Padding = new System.Windows.Forms.Padding(16, 16, 16, 16);
-            this.SeguridadPnlGrid.Size = new System.Drawing.Size(1371, 254);
+            this.SeguridadPnlGrid.Padding = new System.Windows.Forms.Padding(16);
+            this.SeguridadPnlGrid.Size = new System.Drawing.Size(1371, 273);
             this.SeguridadPnlGrid.TabIndex = 3;
             // 
             // SeguridadDgvEmpleados
@@ -989,7 +1013,7 @@ namespace CapaVista_Seguridad
             this.SeguridadDgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.SeguridadDgvEmpleados.RowTemplate.Height = 26;
             this.SeguridadDgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SeguridadDgvEmpleados.Size = new System.Drawing.Size(1339, 222);
+            this.SeguridadDgvEmpleados.Size = new System.Drawing.Size(1339, 241);
             this.SeguridadDgvEmpleados.TabIndex = 0;
             this.SeguridadDgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeguridadDgvEmpleados_CellContentClick);
             // 
@@ -998,7 +1022,7 @@ namespace CapaVista_Seguridad
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1371, 750);
+            this.ClientSize = new System.Drawing.Size(1371, 781);
             this.Controls.Add(this.SeguridadPnlGrid);
             this.Controls.Add(this.SeguridadPnlFiltros);
             this.Controls.Add(this.SeguridadPnlToolbar);
@@ -1018,6 +1042,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlToolbar.ResumeLayout(false);
             this.SeguridadFlpToolbar.ResumeLayout(false);
             this.SeguridadPnlFiltros.ResumeLayout(false);
+            this.SeguridadPnlFiltros.PerformLayout();
             this.SeguridadTlpFiltros.ResumeLayout(false);
             this.SeguridadTlpFiltros.PerformLayout();
             this.SeguridadPnlIdEmpleado.ResumeLayout(false);
@@ -1045,6 +1070,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlFechaContratacion.ResumeLayout(false);
             this.SeguridadPnlFechaContratacion.PerformLayout();
             this.SeguridadPnlAcciones.ResumeLayout(false);
+            this.SeguridadPnlAcciones.PerformLayout();
             this.SeguridadPnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvEmpleados)).EndInit();
             this.ResumeLayout(false);
@@ -1067,7 +1093,6 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Button SeguridadBtnGuardar;
         private System.Windows.Forms.Button SeguridadBtnCancelar;
         private System.Windows.Forms.Button SeguridadBtnEliminar;
-        private System.Windows.Forms.Button SeguridadBtnConsultar;
         private System.Windows.Forms.Button SeguridadBtnImprimir;
         private System.Windows.Forms.Button SeguridadBtnRefrescar;
         private System.Windows.Forms.Button SeguridadBtnInicio;
@@ -1126,5 +1151,8 @@ namespace CapaVista_Seguridad
 
         private System.Windows.Forms.Panel SeguridadPnlGrid;
         private System.Windows.Forms.DataGridView SeguridadDgvEmpleados;
+        private System.Windows.Forms.Label LblSeguridadBusqueda;
+        private System.Windows.Forms.Label LblSeguridadContadorEmpleados;
+        private System.Windows.Forms.Panel panel1;
     }
 }
