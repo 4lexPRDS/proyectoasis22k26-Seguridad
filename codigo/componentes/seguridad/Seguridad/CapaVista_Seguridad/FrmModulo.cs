@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CapaVista_Seguridad
 {
-    public partial class FrmModulo : Form
+    public partial class SeguridadFrmModulo : Form
     {
         private ClsModeloModulo _ControladorModulo = new ClsModeloModulo();
         private BindingSource bindingSource = new BindingSource();
@@ -18,11 +18,13 @@ namespace CapaVista_Seguridad
         private const int ID_MODULO = 4;      
         private const int ID_APLICACION = 6;
 
-        public FrmModulo()
+        public SeguridadFrmModulo()
         {
             InitializeComponent();
+            bindingSource.CurrentChanged += BindingSource_CurrentChanged;
             CargarDatos();
             EstadoInicial();
+            SeguridadMetActualizarContador();
 
             var MapaBotones = new Dictionary<Control, TipoPermiso>
                 {
@@ -44,6 +46,7 @@ namespace CapaVista_Seguridad
             {
                 esCargando = true;
 
+                bindingSource.RemoveFilter();
                 DataTable dtModulos = _ControladorModulo.SeguridadMetObtenerModulosTabla();
                 bindingSource.DataSource = dtModulos;
                 SeguridadDgvModulos.DataSource = bindingSource;
@@ -106,6 +109,19 @@ namespace CapaVista_Seguridad
             }
         }
 
+        private void SeguridadMetActualizarContador()
+        {
+            int Total = bindingSource.Count;
+
+            if (Total == 0)
+            {
+                SeguridadLbl3Contador.Text = "Mostrando 0 de 0 registros";
+                return;
+            }
+
+            SeguridadLbl3Contador.Text = $"Mostrando {bindingSource.Position + 1} de {Total} registros";
+        }
+
         #endregion
 
         #region Estados del Formulario
@@ -125,7 +141,7 @@ namespace CapaVista_Seguridad
             SeguridadBtnConsultar.Enabled = true;
             SeguridadBtnRefrescar.Enabled = true;
             SeguridadBtnGuardar.Enabled = false;
-            SeguridadBtnCancelar.Enabled = false;
+            SeguridadBtnCancelar.Enabled = true;
         }
 
         private void EstadoEdicion()
@@ -137,7 +153,7 @@ namespace CapaVista_Seguridad
             SeguridadBtnIngresar.Enabled = false;
             SeguridadBtnModificar.Enabled = false;
             SeguridadBtnEliminar.Enabled = false;
-            SeguridadBtnConsultar.Enabled = false;
+            SeguridadBtnConsultar.Enabled = true;
             SeguridadBtnRefrescar.Enabled = false;
             SeguridadBtnGuardar.Enabled = true;
             SeguridadBtnCancelar.Enabled = true;
@@ -245,7 +261,35 @@ namespace CapaVista_Seguridad
 
         #region Eventos Navegación y Otros
 
-        private void SeguridadBtnConsultar_Click(object sender, EventArgs e) { CargarDatos(); EstadoInicial(); }
+        private void SeguridadBtnConsultar_Click(object sender, EventArgs e) 
+        {
+            if (!SeguridadTxtNombreModulo.Enabled || !string.IsNullOrEmpty(SeguridadTxtIdModulo.Text))
+            {
+                MessageBox.Show("Presione Ingresar, escriba el nombre o letras de coincidencia y luego Consultar.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string texto = SeguridadTxtNombreModulo.Text.Trim().Replace("'", "''");
+            if (texto.Length == 0)
+            {
+                bindingSource.RemoveFilter();
+            }
+            else
+            {
+                bindingSource.Filter = $"nombreModulo LIKE '{texto}%'";
+
+                if (bindingSource.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron módulos que coincidan con la búsqueda.",
+                        "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bindingSource.RemoveFilter();
+                }
+            }
+
+            EstadoInicial();                 
+            SeguridadMetActualizarContador();
+        }
         private void SeguridadBtnRefrescar_Click(object sender, EventArgs e) { CargarDatos(); EstadoInicial(); }
 
         private void SeguridadBtnImprimir_Click(object sender, EventArgs e)
@@ -267,7 +311,12 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnSalir_Click(object sender, EventArgs e) => this.Close();
 
-        private void BindingSource_CurrentChanged(object sender, EventArgs e) => CargarRegistroActual();
+        private void BindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (esCargando) return;
+            CargarRegistroActual();
+            SeguridadMetActualizarContador();
+        }
 
         private void SeguridadDgvModulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
