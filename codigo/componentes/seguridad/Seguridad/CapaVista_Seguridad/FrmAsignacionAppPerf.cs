@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista_Seguridad.frmReportes;
 
 namespace CapaVista_Seguridad
 {
@@ -392,6 +393,13 @@ namespace CapaVista_Seguridad
                 DgvSeguridadListaUsuarios.CurrentCell = DgvSeguridadListaUsuarios.Rows[UltimaFila].Cells["NombreRol"];
                 SeguridadMetActualizarContador();
             }
+        }
+
+
+        private void BtnSeguridadReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteAsigAppPerf reporte = new FrmReporteAsigAppPerf();
+            reporte.Show();
         }
     }
 }
