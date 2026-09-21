@@ -2,6 +2,7 @@ using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad;
 using CapaVista_Seguridad.Ayudas;
+using CapaVista_Seguridad.frmReportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -513,6 +514,12 @@ namespace CapaVista_Seguridad
             {
                 e.Handled = true;
             }
+        }
+
+        private void SeguridadBtnImprimir_Click(object sender, EventArgs e)
+        {
+            FrmReporteMantenimientoEmpleado reporte = new FrmReporteMantenimientoEmpleado();
+            reporte.Show();
         }
     }
 }
