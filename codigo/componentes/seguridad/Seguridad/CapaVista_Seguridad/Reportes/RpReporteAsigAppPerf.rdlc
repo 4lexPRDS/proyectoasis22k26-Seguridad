@@ -699,7 +699,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image2">
+        <Image Name="SeguridadImageRpAsigAppPerf">
           <Source>Embedded</Source>
           <Value>ID3</Value>
           <Sizing>FitProportional</Sizing>
@@ -714,7 +714,7 @@
             </Border>
           </Style>
         </Image>
-        <Image Name="Image4">
+        <Image Name="SeguridadImageRpAsigAppPerfIcono">
           <Source>Embedded</Source>
           <Value>Btn_prf_apl</Value>
           <Sizing>FitProportional</Sizing>
@@ -775,7 +775,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image5">
+        <Image Name="SeguridadImageRpAsigAppPerfLogo">
           <Source>Embedded</Source>
           <Value>logo11</Value>
           <Sizing>FitProportional</Sizing>
