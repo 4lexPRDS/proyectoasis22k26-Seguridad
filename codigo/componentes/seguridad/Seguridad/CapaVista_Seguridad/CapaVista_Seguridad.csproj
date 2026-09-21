@@ -128,6 +128,10 @@
     <Compile Include="frmReportes\FrmReporteAsigAppPerf.Designer.cs">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes\FrmReporteMantenimientoAplicacioncs.cs" />
+    <Compile Include="frmReportes\FrmReporteMantenimientoAplicacioncs.Designer.cs">
+      <DependentUpon>FrmReporteMantenimientoAplicacioncs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteModulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +201,9 @@
     <EmbeddedResource Include="frmReportes\FrmReporteAsigAppPerf.resx">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoAplicacioncs.resx">
+      <DependentUpon>FrmReporteMantenimientoAplicacioncs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteModulo.resx">
       <DependentUpon>FrmReporteModulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +225,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RpReporteAsigAppPerf.rdlc" />
+    <EmbeddedResource Include="Reportes\RpReporteMantenimientoAplicacion.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteModulo.rdlc" />
   </ItemGroup>
   <ItemGroup>
