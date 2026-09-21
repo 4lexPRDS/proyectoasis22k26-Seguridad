@@ -44,85 +44,100 @@
 
         <br><br><br>
 
-        <h2>¿Cómo ingresar una aplicación?</h2>
+        <h2>Ingresar y Guardar una Aplicación</h2>
         <br>
-        <p> A continuación se detallan los pasos:
-                1. Presionar el botón Ingresar para habilitar el formulario. 
-                2. Se selecciona el módulo al que pertenece la aplicación desde el combo desplegable.
-                3. Ingresar el nombre, la descripción y marque el checkbox de Estado, 
-                    si la aplicación estará activa. 
-                4. Una vez que se termine de llenar los campos, presionar Guardar para almacenar el registro.
+        <p> El botón Ingresar habilita el formulario para registrar una nueva aplicación. 
+            Los pasos para seguir son los siguientes:
+                1. Si se desea ingresar un registro se debe presionar el botón "Ingresar".
+                2. Se desbloquea la sección de datos y se rellenan los campos.
+                3. Se presiona el botón Guardar y mostrará un mensaje "Grabación exitosa".
         </p>
-        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/IngresarAplicacion.png">
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/IngresaryGuardarAplicacion.png">
 
         <br><br><br>
 
-        <h2>¿Cómo modificar una aplicación?</h2>
+        <h2>Modificar Aplicación</h2>
         <br>
-        <p> A continuación se detallan los pasos:
-                1. Seleccionar la fila correspondiente en la tabla.
-                2. Los datos se cargarán automáticamente en el formulario. 
-                3. Realice los cambios necesarios y presione el botón Modificar para guardarlos. 
-                4. Si no selecciona ninguna fila, el sistema mostrará un aviso indicando que debe seleccionar un registro primero.
-        </p>
-        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/ModificacionAplicacion.png">
+        <p> El botón Modificar permite actualizar un registro de la base de datos. 
+            Los pasos para modificar un registro son los siguientes:
+                1. Seleccionar una fila de la tabla, automáticamente se rellenan los campos del formulario.
+                2. Se cambia el campo que se desea modificar.
+                3. Se presiona el botón Modificar, mostrando un mensaje de confirmación.
+                    </p>
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/ModificarAplicacion.png">
 
         <br><br><br>
 
-        <h2>¿Cómo eliminar una aplicación?</h2>
+        <h2>Cancelar Aplicación</h2>
         <br>
-        <p> A continuación se detallan los pasos:
-                1. Seleccionar la fila que desea remover de la tabla.
-                2. Presionar el botón Eliminar. 
-                3. Se solicitará confirmación antes de proceder. 
-                4. Al confirmarse, el registro será removido del sistema.
+        <p> El botón Cancelar cancela la operación en curso y restablece el formulario a su estado inicial.
+            Los pasos para utilizarlo son los siguientes:
+                1. Presionar el botón Cancelar durante cualquier operación de ingreso o modificación.
+                2. Los campos del formulario se limpiarán y la sección de datos volverá a bloquearse.
         </p>
-        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/EliminacionAplicacion.png">
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/CancelarAplicacion.png">
+
+        <br><br><br>
+
+        <h2>Eliminar Aplicación</h2>
+        <br>
+        <p> El botón Eliminar permite remover un registro de la tabla. 
+            Los pasos para utilizarlo son los siguientes:
+                1. Seleccionar el registro dentro de la tabla.
+                2. Presionar el botón Eliminar, aparecerá un mensaje de confirmación para eliminar el registro.
+        </p>
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/EliminarAplicacion.png">
 
         <br><br><br>
         
-        <h2>¿Cómo filtrar datos de una aplicación?</h2>
+        <h2>Filtrar Datos (Consultar)</h2>
         <br>
-        <p> A continuación se detallan los pasos: 
-                1. Seleccionar el criterio de búsqueda en el combo Buscar. 
-                2. Presionar el botón Consultar. 
-                3. Se mostrará en la tabla todos los registros que coincidan con el criterio ingresado. 
+        <p> Para filtrar los datos, a continuación se detallan los pasos:
+                1. Seleccionar el criterio de búsqueda en el combo Buscar.
+                2. Presionar el botón Consultar.
+                3. Se mostrará en la tabla todos los registros que coincidan con el criterio ingresado.
                 4. También se incluye un contador de registros para mejor control del listado mostrado.
         </p>
         <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/FiltrarAplicacion.png">
 
         <br><br><br>
 
+        <h2>Reportes</h2>
+        <br>
+        <p> Este botón abre una ventana con el listado completo de aplicaciones registradas. Los pasos para utilizarlo son los siguientes:
+                1. Presionar el botón Reporte.
+                2. Se abrirá una ventana con el listado completo de aplicaciones, desde la barra superior es posible desplazarse entre páginas, imprimir o exportar el reporte.
+        </p>
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/ReporteAPlicacion.png">
+
+        <br><br><br>
+
+        <h2>Refrescar</h2>
+        <p> Este botón recarga todos los datos desde la base de datos y restablece el formulario 
+            a su estado inicial. Los pasos para utilizarlo son los siguientes:
+                1. Presionar el botón Refrescar.
+                2. La tabla se actualizará mostrando la información más reciente registrada en el sistema.
+        </p>
+        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/RefrescarAplicacion.png">
+
+        <br><br><br>
+
         <h2>Botones de navegación</h2>
         <br>
-        <p> El formulario proporciona el botón Refrescar que se encarga de recargar todos los datos desde la base de datos y 
-            botones de navegación que permiten desplazarse entre los registros de la tabla: 
-                1. Inicio va al primer registro.
-                2. Anterior retrocede uno. 
-                3. Siguiente avanza uno.  
-                4. Fin va al último registro. 
+        <p> El formulario proporciona 4 botones que permiten desplazarse entre los registros de la tabla. Los pasos para utilizarlos son los siguientes:
+                1. Presionar el botón Inicio para ir al primer registro.
+                2. Presionar el botón Anterior para retroceder al registro anterior.
+                3. Presionar el botón Siguiente para avanzar al registro posterior.
+                4. Presionar el botón Fin para ir al último registro.
             
         </p>
         <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/BotonesAplicacion.png">
 
-                <br><br><br>
-
-        <h2>Reportes</h2>
-        <br>
-        <p> El sistema permite obtener un reporte de todas las aplicaciones registradas y para poder observarlo se debe seguir 
-            los siguientes pasos:
-                1. Presionar el botón Reporte.
-                2. Se abrirá una ventana con el listado completo donde se muestra el ID, nombre, descripción, módulo al que pertenece,
-                    estado y fechas de creación y última actualización. 
-                3.  Desde la barra superior del reporte es posible desplazarse entre páginas, actualizar la información, ajustar el zoom, 
-                    buscar un texto, imprimirlo o exportarlo. 
-        </p>
-        <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/ReporteAPlicacion.png">
 
         <h2>Salir del sistema</h2>
         <br>
-        <p> Para salir de la ventana de aplicación, se deberá presionar el botón de salir o dar click en la X que se encuentra en la parte
-            superior derecha.
+        <p> El botón de salir cierra la ventana de Mantenimiento de Aplicación, se debe de seguir el siguiente paso:
+                1. Presionar el botón Salir o dar click en la X de la parte superior derecha. La ventana se cerrará y regresará al menú principal.
         </p>
         <img class="imgVentana" src="Imagenes/MantenimientoAplicacion/SalirAplicacion.png">
     </div>
