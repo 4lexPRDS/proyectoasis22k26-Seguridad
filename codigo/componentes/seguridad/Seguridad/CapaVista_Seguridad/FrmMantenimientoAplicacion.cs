@@ -128,6 +128,7 @@ namespace CapaVista_Seguridad
                 {
                     string Resultado = _ModeloMantenimientoApp.SeguridadMetGrabarCambios();
                     MessageBox.Show(Resultado);
+                    SeguridadMetCargarCombos();
                     SeguridadMetListaAplicaciones();
                     SeguridadMetReinicio();
                 }
@@ -167,6 +168,7 @@ namespace CapaVista_Seguridad
                 {
                     string Resultado = _ModeloMantenimientoApp.SeguridadMetGrabarCambios();
                     MessageBox.Show(Resultado);
+                    SeguridadMetCargarCombos();
                     SeguridadMetListaAplicaciones();
                     SeguridadMetReinicio();
                 }
@@ -234,6 +236,7 @@ namespace CapaVista_Seguridad
 
                         string Resultado = _ModeloMantenimientoApp.SeguridadMetGrabarCambios();
                         MessageBox.Show(Resultado);
+                        SeguridadMetCargarCombos();
                         SeguridadMetListaAplicaciones();
                         SeguridadMetReinicio();
                     }
@@ -299,6 +302,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnRefrescar_Click(object sender, EventArgs e)
         {
+            SeguridadMetCargarCombos();
             SeguridadCboBuscar.SelectedIndex = 0;
             SeguridadMetListaAplicaciones();
             SeguridadMetReinicio();
