@@ -6,6 +6,7 @@ namespace CapaModelo_Seguridad.Entidades
     {
         public int IdBitacora { get; set; }
         public int? IdUsuario { get; set; }
+        public string NombreUsuario { get; set; }
         public string AccionBitacora { get; set; }
         public string TablaBitacora { get; set; }
         public int IdRegistroBitacora { get; set; }

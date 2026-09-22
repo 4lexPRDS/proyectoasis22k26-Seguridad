@@ -14,6 +14,7 @@ namespace CapaControlador_Seguridad
     {
         private int _IdBitacora;
         private int? _IdUsuario;
+        private string _NombreUsuario;
         private string _AccionBitacora;
         private string _TablaBitacora;
         private int _IdRegistroBitacora;
@@ -26,6 +27,7 @@ namespace CapaControlador_Seguridad
 
         public int IdBitacora { get => _IdBitacora; set => _IdBitacora = value; }
         public int? IdUsuario { get => _IdUsuario; set => _IdUsuario = value; }
+        public string NombreUsuario { get => _NombreUsuario; set => _NombreUsuario = value; }
         public string AccionBitacora { get => _AccionBitacora; set => _AccionBitacora = value; }
         public string TablaBitacora { get => _TablaBitacora; set => _TablaBitacora = value; }
         public int IdRegistroBitacora { get => _IdRegistroBitacora; set => _IdRegistroBitacora = value; }
@@ -96,6 +98,7 @@ namespace CapaControlador_Seguridad
                 {
                     _IdBitacora = Item.IdBitacora,
                     _IdUsuario = Item.IdUsuario,
+                    _NombreUsuario = Item.NombreUsuario,
                     _AccionBitacora = Item.AccionBitacora,
                     _TablaBitacora = Item.TablaBitacora,
                     _IdRegistroBitacora = Item.IdRegistroBitacora,

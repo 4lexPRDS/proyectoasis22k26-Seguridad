@@ -128,6 +128,12 @@
     <Compile Include="frmReportes\FrmReporteAsigAppPerf.Designer.cs">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes\FrmReporteBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes\FrmReporteBitacora.Designer.cs">
+      <DependentUpon>FrmReporteBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteMantenimientoAplicacioncs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     <EmbeddedResource Include="frmReportes\FrmReporteAsigAppPerf.resx">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes\FrmReporteBitacora.resx">
+      <DependentUpon>FrmReporteBitacora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoAplicacioncs.resx">
       <DependentUpon>FrmReporteMantenimientoAplicacioncs.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +253,7 @@
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RpReporteBitacora.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoEmpleado.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteAsigAppPerf.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoAplicacion.rdlc" />
