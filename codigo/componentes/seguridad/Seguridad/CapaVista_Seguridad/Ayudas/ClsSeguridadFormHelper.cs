@@ -20,13 +20,10 @@ namespace CapaVista_Seguridad.Ayudas
 
             if (!Permisos.TieneAcceso)
             {
-                SeguridadMetDeshabilitarFormulario(FormActual);
-                MessageBox.Show("No tienes acceso a este módulo.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return Permisos;
+                SeguridadMetAplicarPermisosEnBotones(Permisos, MapaBotones);
             }
 
-            SeguridadMetAplicarPermisosEnBotones(Permisos, MapaBotones);
+            
             return Permisos;
         }
 
@@ -67,6 +64,15 @@ namespace CapaVista_Seguridad.Ayudas
             Ctrl.Enabled = false;
             foreach (Control Hijo in Ctrl.Controls)
                 SeguridadMetDeshabilitarRecursivo(Hijo);
+        }
+
+        public static bool SeguridadMetTieneAcceso(int IdModulo, int IdAplicacion)
+        {
+            var ModeloPermisos = new ClsModeloAsigAppPerf();
+            ModeloPermisos.SeguridadMetObtenerTodos();
+
+            var Permisos = ModeloPermisos.SeguridadMetObtenerPermisosSesion(IdModulo, IdAplicacion);
+            return Permisos.TieneAcceso;
         }
     }
 }

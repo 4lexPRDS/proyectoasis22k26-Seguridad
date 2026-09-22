@@ -1,6 +1,6 @@
-﻿namespace CapaVista_Seguridad.frmReportes
+namespace CapaVista_Seguridad.frmReportes
 {
-    partial class FrmReporteAsigAppPerf
+    partial class FrmReporteAsignacionPerfiles
     {
         /// <summary>
         /// Required designer variable.
@@ -33,23 +33,21 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(36, 23);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1405, 802);
+            this.reportViewer1.Size = new System.Drawing.Size(1423, 849);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // FrmReporteAsigAppPerf
+            // FrmReporteAsignacionPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1405, 802);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmReporteAsigAppPerf";
-            this.Text = "FrmReporteAsigAppPerf";
-            this.Load += new System.EventHandler(this.FrmReporteAsigAppPerf_Load);
+            this.Name = "FrmReporteAsignacionPerfiles";
+            this.Text = "FrmReporteAsignacionPerfiles";
+            this.Load += new System.EventHandler(this.FrmReporteAsignacionPerfiles_Load);
             this.ResumeLayout(false);
 
         }
