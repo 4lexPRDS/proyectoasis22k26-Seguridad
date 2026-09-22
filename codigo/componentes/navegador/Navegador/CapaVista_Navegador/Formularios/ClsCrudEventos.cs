@@ -89,6 +89,11 @@ namespace CapaVista_Navegador.formularios
             _Coordinador.NavegadorMetFin();
         }
 
+        public void NavegadorMetImprimir()
+        {
+            _Coordinador.NavegadorMetImprimir();
+        }
+
         public void NavegadorMetPosicionar()
         {
             _Coordinador.NavegadorMetPosicionar();

@@ -43,7 +43,6 @@
             this.NavegadorBtnInicio = new System.Windows.Forms.Button();
             this.NavegadorBtnImprimir = new System.Windows.Forms.Button();
             this.NavegadorBtnAyuda = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.NavegadorBtnSalir = new System.Windows.Forms.Button();
             this.NavegadorBtnRefrescar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,6 +52,9 @@
             this.NavegadorBtnIngresar.ImageIndex = 11;
             this.NavegadorBtnIngresar.ImageList = this.NavegadorIlImagenes;
             this.NavegadorBtnIngresar.Location = new System.Drawing.Point(12, 15);
+            // Botones "pegados" (sin espacio entre ellos): cada uno inicia justo donde termina el
+            // anterior (ancho 101) para que la cinta ocupe menos pantalla, según lo pedido por el
+            // catedrático. No se redujo el tamaño de los botones, solo el espacio entre ellos.
             this.NavegadorBtnIngresar.Name = "NavegadorBtnIngresar";
             this.NavegadorBtnIngresar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnIngresar.TabIndex = 1;
@@ -62,7 +64,7 @@
             // 
             this.NavegadorBtnConsultar.ImageIndex = 2;
             this.NavegadorBtnConsultar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnConsultar.Location = new System.Drawing.Point(118, 15);
+            this.NavegadorBtnConsultar.Location = new System.Drawing.Point(113, 15);
             this.NavegadorBtnConsultar.Name = "NavegadorBtnConsultar";
             this.NavegadorBtnConsultar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnConsultar.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             this.NavegadorBtnModificar.ImageIndex = 15;
             this.NavegadorBtnModificar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnModificar.Location = new System.Drawing.Point(224, 15);
+            this.NavegadorBtnModificar.Location = new System.Drawing.Point(214, 15);
             this.NavegadorBtnModificar.Name = "NavegadorBtnModificar";
             this.NavegadorBtnModificar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnModificar.TabIndex = 3;
@@ -82,7 +84,7 @@
             // 
             this.NavegadorBtnEliminar.ImageIndex = 3;
             this.NavegadorBtnEliminar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnEliminar.Location = new System.Drawing.Point(330, 15);
+            this.NavegadorBtnEliminar.Location = new System.Drawing.Point(315, 15);
             this.NavegadorBtnEliminar.Name = "NavegadorBtnEliminar";
             this.NavegadorBtnEliminar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnEliminar.TabIndex = 4;
@@ -116,7 +118,7 @@
             // 
             this.NavegadorBtnCancelar.ImageIndex = 1;
             this.NavegadorBtnCancelar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnCancelar.Location = new System.Drawing.Point(542, 15);
+            this.NavegadorBtnCancelar.Location = new System.Drawing.Point(517, 15);
             this.NavegadorBtnCancelar.Name = "NavegadorBtnCancelar";
             this.NavegadorBtnCancelar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnCancelar.TabIndex = 6;
@@ -126,7 +128,7 @@
             // 
             this.NavegadorBtnGuardar.ImageIndex = 5;
             this.NavegadorBtnGuardar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnGuardar.Location = new System.Drawing.Point(436, 15);
+            this.NavegadorBtnGuardar.Location = new System.Drawing.Point(416, 15);
             this.NavegadorBtnGuardar.Name = "NavegadorBtnGuardar";
             this.NavegadorBtnGuardar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnGuardar.TabIndex = 5;
@@ -136,7 +138,7 @@
             // 
             this.NavegadorBtnAnterior.ImageIndex = 6;
             this.NavegadorBtnAnterior.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnAnterior.Location = new System.Drawing.Point(1072, 15);
+            this.NavegadorBtnAnterior.Location = new System.Drawing.Point(1022, 15);
             this.NavegadorBtnAnterior.Name = "NavegadorBtnAnterior";
             this.NavegadorBtnAnterior.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnAnterior.TabIndex = 11;
@@ -146,7 +148,7 @@
             // 
             this.NavegadorBtnSiguiente.ImageIndex = 18;
             this.NavegadorBtnSiguiente.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnSiguiente.Location = new System.Drawing.Point(1178, 15);
+            this.NavegadorBtnSiguiente.Location = new System.Drawing.Point(1123, 15);
             this.NavegadorBtnSiguiente.Name = "NavegadorBtnSiguiente";
             this.NavegadorBtnSiguiente.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnSiguiente.TabIndex = 12;
@@ -156,7 +158,7 @@
             // 
             this.NavegadorBtnFin.ImageIndex = 4;
             this.NavegadorBtnFin.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnFin.Location = new System.Drawing.Point(1284, 15);
+            this.NavegadorBtnFin.Location = new System.Drawing.Point(1224, 15);
             this.NavegadorBtnFin.Name = "NavegadorBtnFin";
             this.NavegadorBtnFin.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnFin.TabIndex = 13;
@@ -166,7 +168,7 @@
             // 
             this.NavegadorBtnInicio.ImageIndex = 12;
             this.NavegadorBtnInicio.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnInicio.Location = new System.Drawing.Point(966, 15);
+            this.NavegadorBtnInicio.Location = new System.Drawing.Point(921, 15);
             this.NavegadorBtnInicio.Name = "NavegadorBtnInicio";
             this.NavegadorBtnInicio.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnInicio.TabIndex = 10;
@@ -176,7 +178,7 @@
             // 
             this.NavegadorBtnImprimir.ImageIndex = 10;
             this.NavegadorBtnImprimir.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnImprimir.Location = new System.Drawing.Point(754, 15);
+            this.NavegadorBtnImprimir.Location = new System.Drawing.Point(719, 15);
             this.NavegadorBtnImprimir.Name = "NavegadorBtnImprimir";
             this.NavegadorBtnImprimir.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnImprimir.TabIndex = 8;
@@ -186,37 +188,27 @@
             // 
             this.NavegadorBtnAyuda.ImageIndex = 0;
             this.NavegadorBtnAyuda.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnAyuda.Location = new System.Drawing.Point(860, 15);
+            this.NavegadorBtnAyuda.Location = new System.Drawing.Point(820, 15);
             this.NavegadorBtnAyuda.Name = "NavegadorBtnAyuda";
             this.NavegadorBtnAyuda.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnAyuda.TabIndex = 9;
             this.NavegadorBtnAyuda.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.ImageIndex = 4;
-            this.button6.ImageList = this.NavegadorIlImagenes;
-            this.button6.Location = new System.Drawing.Point(627, 70);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(0, 0);
-            this.button6.TabIndex = 23;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
+            //
             // NavegadorBtnSalir
-            // 
+            //
             this.NavegadorBtnSalir.ImageIndex = 17;
             this.NavegadorBtnSalir.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnSalir.Location = new System.Drawing.Point(1390, 15);
+            this.NavegadorBtnSalir.Location = new System.Drawing.Point(1325, 15);
             this.NavegadorBtnSalir.Name = "NavegadorBtnSalir";
             this.NavegadorBtnSalir.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnSalir.TabIndex = 14;
             this.NavegadorBtnSalir.UseVisualStyleBackColor = true;
-            // 
+            //
             // NavegadorBtnRefrescar
-            // 
+            //
             this.NavegadorBtnRefrescar.ImageIndex = 16;
             this.NavegadorBtnRefrescar.ImageList = this.NavegadorIlImagenes;
-            this.NavegadorBtnRefrescar.Location = new System.Drawing.Point(648, 15);
+            this.NavegadorBtnRefrescar.Location = new System.Drawing.Point(618, 15);
             this.NavegadorBtnRefrescar.Name = "NavegadorBtnRefrescar";
             this.NavegadorBtnRefrescar.Size = new System.Drawing.Size(101, 81);
             this.NavegadorBtnRefrescar.TabIndex = 7;
@@ -228,7 +220,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.NavegadorBtnRefrescar);
             this.Controls.Add(this.NavegadorBtnSalir);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.NavegadorBtnAyuda);
             this.Controls.Add(this.NavegadorBtnImprimir);
             this.Controls.Add(this.NavegadorBtnInicio);
@@ -242,7 +233,7 @@
             this.Controls.Add(this.NavegadorBtnConsultar);
             this.Controls.Add(this.NavegadorBtnIngresar);
             this.Name = "Navegador";
-            this.Size = new System.Drawing.Size(1503, 111);
+            this.Size = new System.Drawing.Size(1438, 111);
             this.ResumeLayout(false);
 
         }
@@ -262,7 +253,6 @@
         private System.Windows.Forms.Button NavegadorBtnInicio;
         private System.Windows.Forms.Button NavegadorBtnImprimir;
         private System.Windows.Forms.Button NavegadorBtnAyuda;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button NavegadorBtnSalir;
         private System.Windows.Forms.Button NavegadorBtnRefrescar;
     }

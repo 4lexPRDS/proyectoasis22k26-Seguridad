@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using CapaControlador_Navegador;
 // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
 using CapaVista_Navegador;
-namespace Ejecutable_Naveg
+namespace Ejecucion_Navegador
 {
     internal static class Program
     {
@@ -27,7 +27,7 @@ namespace Ejecutable_Naveg
             ClsSesionPrueba.NavegadorMetIniciarSesionPrueba();
             // Fin cambio - Mario Alberto Taracena Pérez - 0901-23-9335
 
-            Application.Run(new FrmCrud());
+            Application.Run(new Form1());
         }
     }
 }

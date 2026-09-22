@@ -1,7 +1,7 @@
 ﻿// Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
 namespace CapaVista_Navegador
 {
-    partial class NavegadorCrud
+    partial class FrmNavegadorCrud
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -25,17 +25,17 @@ namespace CapaVista_Navegador
             //
             this.navegador1.Location = new System.Drawing.Point(0, 0);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1503, 111);
+            this.navegador1.Size = new System.Drawing.Size(1438, 111);
             this.navegador1.TabIndex = 0;
             //
-            // NavegadorCrud
+            // FrmNavegadorCrud
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1545, 653);
+            this.ClientSize = new System.Drawing.Size(1480, 653);
             this.Controls.Add(this.navegador1);
-            this.Name = "NavegadorCrud";
+            this.Name = "FrmNavegadorCrud";
             this.Text = "1001 – Crud";
             this.ResumeLayout(false);
 

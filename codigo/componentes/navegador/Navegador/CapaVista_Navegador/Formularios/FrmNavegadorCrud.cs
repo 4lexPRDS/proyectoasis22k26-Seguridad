@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Navegador.formularios;
 
 // Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998
@@ -8,23 +9,43 @@ namespace CapaVista_Navegador
 {
     // Formulario base del CRUD. Ya trae insertado el control Navegador (la barra de botones, arrastrado
     // desde la caja de herramientas como cualquier botón) y arma la tabla (grid), el panel de
-    // ingreso/modificación, los permisos por rol y la bitácora. El formulario que lo usa hereda de este
-    // y solo cambia sus propiedades (NombreTabla, IdModulo, IdAplicacion...) sin escribir código.
-    public partial class NavegadorCrud : Form
+    // ingreso/modificación, los permisos por rol y la bitácora.
+    //
+    // El programador que consume el navegador solo llama a NavegadorMetConfigurar con 3 datos:
+    //   1) Tabla ............ sobre la que se hace el CRUD.
+    //   2) CodigoAplicacion . con el que Seguridad valida al usuario y le da/quita permisos.
+    //   3) RutaAyuda ........ archivo .chm que abre el botón Ayuda para esa tabla.
+    // El usuario NO se parametriza: se obtiene automáticamente de la sesión activa
+    // (ClsSesionSeguridad, del componente Seguridad), que es quien realmente sabe quién inició sesión.
+    public partial class FrmNavegadorCrud : Form
     {
         private ClsCrudEventos _Eventos;
 
-        private string _NombreTabla = "tblempleado";
-        private string _Usuario = "USUARIO_PRUEBA";
-        private string _Modulo = "EMPLEADOS";
-        private int _IdModulo = 4;
-        private int _IdAplicacion = 4;
+        private string _NombreTabla = "tblaplicacion";
+        private int _CodigoAplicacion = 4;
+        private string _RutaAyuda = "";
 
-        public NavegadorCrud()
+        public FrmNavegadorCrud()
         {
             InitializeComponent();
 
             navegador1.NavegadorAccionSolicitada += NavegadorMetEjecutarAccion;
+        }
+
+        // Único método de configuración: tabla, código de aplicación (Seguridad) y ruta de ayuda.
+        public void NavegadorMetConfigurar(string Tabla, int CodigoAplicacion, string RutaAyuda)
+        {
+            _CodigoAplicacion = CodigoAplicacion;
+            this.RutaAyuda = RutaAyuda;
+            NombreTabla = Tabla;
+        }
+
+        [Category("Navegador")]
+        [Description("Ruta del archivo de ayuda (.chm) que abre el botón Ayuda para esta tabla.")]
+        public string RutaAyuda
+        {
+            get { return _RutaAyuda; }
+            set { _RutaAyuda = value; }
         }
 
         [Category("Navegador")]
@@ -50,38 +71,6 @@ namespace CapaVista_Navegador
             }
         }
 
-        [Category("Navegador")]
-        [Description("Usuario que usa el navegador.")]
-        public string Usuario
-        {
-            get { return _Usuario; }
-            set { _Usuario = value; }
-        }
-
-        [Category("Navegador")]
-        [Description("Código del módulo que usa el navegador.")]
-        public string Modulo
-        {
-            get { return _Modulo; }
-            set { _Modulo = value; }
-        }
-
-        [Category("Navegador")]
-        [Description("IdModulo de Seguridad con el que se buscan los permisos. 0 = sin seguridad.")]
-        public int IdModulo
-        {
-            get { return _IdModulo; }
-            set { _IdModulo = value; }
-        }
-
-        [Category("Navegador")]
-        [Description("IdAplicacion de Seguridad con la que se buscan los permisos. 0 = sin seguridad.")]
-        public int IdAplicacion
-        {
-            get { return _IdAplicacion; }
-            set { _IdAplicacion = value; }
-        }
-
         // Cuando el formulario se abre en ejecución se arma el CRUD.
         // En el diseñador de Visual Studio no se hace nada (no debe tocar la base de datos).
         protected override void OnLoad(EventArgs e)
@@ -93,9 +82,15 @@ namespace CapaVista_Navegador
                 return;
             }
 
-            _Eventos = new ClsCrudEventos(this, _NombreTabla, _Usuario, _Modulo);
+            // El usuario no lo parametriza quien usa el navegador: se lee de la sesión activa que dejó
+            // Seguridad al iniciar sesión (ver ClsSesionSeguridad / ClsSesionPrueba mientras no hay login real).
+            string UsuarioActual = ClsSesionSeguridad.NombreUsuario;
 
-            navegador1.NavegadorMetConfigurar(_NombreTabla, _Usuario, _Modulo, _IdModulo, _IdAplicacion);
+            _Eventos = new ClsCrudEventos(this, _NombreTabla, UsuarioActual, _NombreTabla);
+
+            // CodigoAplicacion se usa como Módulo e IdAplicacion de Seguridad: un único código por
+            // tabla es suficiente para validar al usuario y aplicar sus permisos (ver ClsCrudSeguridad).
+            navegador1.NavegadorMetConfigurar(_NombreTabla, UsuarioActual, _NombreTabla, _CodigoAplicacion, _CodigoAplicacion);
 
             _Eventos.NavegadorMetCargar();
         }
@@ -158,6 +153,12 @@ namespace CapaVista_Navegador
                 case "FIN":
                     _Eventos.NavegadorMetFin();
                     break;
+                case "IMPRIMIR":
+                    _Eventos.NavegadorMetImprimir();
+                    break;
+                case "AYUDA":
+                    NavegadorMetMostrarAyuda();
+                    break;
                 case "SALIR":
                     Form Padre = FindForm();
 
@@ -166,6 +167,35 @@ namespace CapaVista_Navegador
                         Padre.Close();
                     }
                     break;
+            }
+        }
+
+        // AYUDA: abre el archivo .chm (HTML Help) parametrizado en RutaAyuda. Cada programador que use
+        // el navegador coloca aquí la ruta de su propio archivo de ayuda (ver capacitación de Ayudas).
+        private void NavegadorMetMostrarAyuda()
+        {
+            if (string.IsNullOrWhiteSpace(RutaAyuda))
+            {
+                MessageBox.Show(
+                    "No se configuró la ruta del archivo de ayuda (propiedad RutaAyuda) para este formulario.",
+                    "Ayuda",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                return;
+            }
+
+            try
+            {
+                Help.ShowHelp(this, RutaAyuda);
+            }
+            catch (Exception Excepcion)
+            {
+                MessageBox.Show(
+                    "No se pudo abrir el archivo de ayuda '" + RutaAyuda + "'.\n\n" + Excepcion.Message,
+                    "Ayuda",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }

@@ -183,7 +183,7 @@ namespace CapaVista_Navegador
         {
             _Formulario.NavegadorMetCerrar();
 
-            _Grid.NavegadorMetOcultar();
+            NavegadorFuncConsultarTabla();
         }
 
         // MODIFICAR
@@ -396,6 +396,19 @@ namespace CapaVista_Navegador
         public void NavegadorMetFin()
         {
             _Grid.NavegadorMetFin();
+        }
+
+        // IMPRIMIR
+        // Pendiente de integración con el componente Reporteador (ver reunión del 21/09/2026: falta
+        // acordar con ellos qué parámetro exacto reciben además del código de aplicación). Por ahora
+        // solo se avisa que la función no está disponible en vez de no hacer nada al oprimir el botón.
+        public void NavegadorMetImprimir()
+        {
+            MessageBox.Show(
+                "La impresión de reportes está pendiente de integración con el componente Reporteador.",
+                "Imprimir",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }

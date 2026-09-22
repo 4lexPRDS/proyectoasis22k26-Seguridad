@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FC97A513-F2C1-49DF-AD14-FD917950F055}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejecutable_Naveg</RootNamespace>
-    <AssemblyName>Ejecutable_Naveg</AssemblyName>
+    <RootNamespace>Ejecucion_Navegador</RootNamespace>
+    <AssemblyName>Ejecucion_Navegador</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,20 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <!-- El control de usuario (Navegador) y toda la parametrización de seguridad/bitácora ya viven
+         adentro de esta única DLL: la solución "Navegador" (antes repartida entre "Modelo_MVC" y
+         "Navegador") es la única que este ejecutor referencia. -->
     <Reference Include="CapaVista_Navegador">
-      <HintPath>..\..\Modelo_MVC\CapaVista_Navegador\bin\Debug\CapaVista_Navegador.dll</HintPath>
+      <HintPath>..\..\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador.dll</HintPath>
     </Reference>
     <!-- Inicio cambio - Mario Alberto Taracena Pérez - 0901-23-9335 -->
     <!-- Se agrega esta referencia porque Program.cs ahora llama a ClsSesionPrueba, que vive aquí. -->
-    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
-    <!-- El navegador (control de usuario) ahora es un componente aparte: este proyecto lo consume. -->
-    <Reference Include="CapaVista_Navegador_Controles">
-      <HintPath>..\..\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador_Controles.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
     <Reference Include="CapaControlador_Navegador">
-      <HintPath>..\..\Modelo_MVC\CapaControlador_Navegador\bin\Debug\CapaControlador_Navegador.dll</HintPath>
+      <HintPath>..\..\Navegador\CapaControlador_Navegador\bin\Debug\CapaControlador_Navegador.dll</HintPath>
     </Reference>
     <!-- Componente Seguridad: necesario para inicializar la sesión de prueba (ver ClsSesionPrueba) y para
          que sus dependencias (BCrypt.Net-Next, MailKit, etc.) terminen en la carpeta de salida. -->
@@ -78,20 +74,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <!-- Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
-    <Compile Include="FrmCrud.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCrud.Designer.cs">
-      <DependentUpon>FrmCrud.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="ClsSesionPrueba.cs" />
-    <EmbeddedResource Include="FrmCrud.resx">
-      <DependentUpon>FrmCrud.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <!-- Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998 -->
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
