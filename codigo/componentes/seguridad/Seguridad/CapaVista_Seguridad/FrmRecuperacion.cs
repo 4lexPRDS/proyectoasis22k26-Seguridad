@@ -14,6 +14,7 @@ namespace CapaVista_Seguridad
 
             SeguridadBtnEnviarCodigo.Click += SeguridadBtnEnviarCodigo_Click;
             SeguridadBtnCambiarContrasena.Click += SeguridadBtnCambiarContrasena_Click;
+            SeguridadChkVerContrasena.CheckedChanged += SeguridadChkVerContrasena_CheckedChanged;  
         }
 
         private void SeguridadMetIrAPasoUno()
@@ -81,9 +82,18 @@ namespace CapaVista_Seguridad
             }
         }
 
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void SeguridadChkVerContrasena_CheckedChanged(object sender, EventArgs e)
+        {
+            char Caracter = SeguridadChkVerContrasena.Checked ? '\0' : '?';
+            SeguridadTxtNuevaContrasena.PasswordChar = Caracter;
+            SeguridadTxtConfirmarContrasena.PasswordChar = Caracter;
+
         }
     }
 }
