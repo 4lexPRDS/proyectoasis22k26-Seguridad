@@ -11,11 +11,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista_Seguridad.frmReportes;
 
 namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionPerfiles : Form
     {
+        private DataGridView TablaActiva;
+        private FrmReporteAsignacionPerfiles reporteAsignacionPerfiles;
         private const int ID_MODULO = 4;
         private const int ID_APLICACION = 9;
 
@@ -25,6 +28,9 @@ namespace CapaVista_Seguridad
         public FrmAsignacionPerfiles()
         {
             InitializeComponent();
+
+            dataGridViewPerfilesUsuario.Enter += (s, e) => TablaActiva = dataGridViewPerfilesUsuario;
+            dataGridViewAsignacion.Enter += (s, e) => TablaActiva = dataGridViewAsignacion;
 
             SeguridadMetConfigurarColumnasConsulta();
             SeguridadMetConfigurarColumnasAsignacion();
@@ -109,7 +115,7 @@ namespace CapaVista_Seguridad
             });
             dataGridViewPerfilesUsuario.Columns.Add(new DataGridViewButtonColumn
             {
-                Name = "ColQuitarConsulta",
+                Name = "Accion",
                 Text = "Quitar",
                 UseColumnTextForButtonValue = true,
                 Width = 90
@@ -148,7 +154,7 @@ namespace CapaVista_Seguridad
             });
             dataGridViewAsignacion.Columns.Add(new DataGridViewButtonColumn
             {
-                Name = "ColQuitarPend",
+                Name = "Accion",
                 Text = "Quitar",
                 UseColumnTextForButtonValue = true,
                 Width = 90
@@ -352,5 +358,151 @@ namespace CapaVista_Seguridad
         }
 
         #endregion
+
+        private DataGridView ObtenerDataGridViewActivo()
+        {
+            if (TablaActiva != null)
+                return TablaActiva;
+
+            if (dataGridViewPerfilesUsuario.Rows.Count > 0)
+                return dataGridViewPerfilesUsuario;
+
+            return dataGridViewAsignacion;
+        }
+
+        private int ObtenerPrimeraColumnaVisible(DataGridView Tabla)
+        {
+            for (int i = 0; i < Tabla.Columns.Count; i++)
+            {
+                if (Tabla.Columns[i].Visible)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        private void BtnSeguridadInicio_Click(object sender, EventArgs e)
+        {
+            DataGridView Tabla = ObtenerDataGridViewActivo();
+
+            if (Tabla.Rows.Count > 0)
+            {
+                int ColumnaVisible = ObtenerPrimeraColumnaVisible(Tabla);
+
+                if (ColumnaVisible >= 0)
+                {
+                    Tabla.ClearSelection();
+                    Tabla.Rows[0].Selected = true;
+                    Tabla.CurrentCell = Tabla.Rows[0].Cells[ColumnaVisible];
+                    Tabla.Focus();
+                }
+            }
+        }
+
+        private void BtnSeguridadAnterior_Click(object sender, EventArgs e)
+        {
+            DataGridView Tabla = ObtenerDataGridViewActivo();
+
+            if (Tabla.Rows.Count > 0 && Tabla.CurrentCell != null)
+            {
+                int FilaActual = Tabla.CurrentCell.RowIndex;
+
+                if (FilaActual > 0)
+                {
+                    int ColumnaVisible = ObtenerPrimeraColumnaVisible(Tabla);
+
+                    if (ColumnaVisible >= 0)
+                    {
+                        Tabla.ClearSelection();
+                        Tabla.Rows[FilaActual - 1].Selected = true;
+                        Tabla.CurrentCell =
+                            Tabla.Rows[FilaActual - 1].Cells[ColumnaVisible];
+                        Tabla.Focus();
+                    }
+                }
+            }
+        }
+
+        private void BtnSeguridadSiguiente_Click(object sender, EventArgs e)
+        {
+            DataGridView Tabla = ObtenerDataGridViewActivo();
+
+            if (Tabla.Rows.Count > 0 && Tabla.CurrentCell != null)
+            {
+                int FilaActual = Tabla.CurrentCell.RowIndex;
+
+                if (FilaActual < Tabla.Rows.Count - 1)
+                {
+                    int ColumnaVisible = ObtenerPrimeraColumnaVisible(Tabla);
+
+                    if (ColumnaVisible >= 0)
+                    {
+                        Tabla.ClearSelection();
+                        Tabla.Rows[FilaActual + 1].Selected = true;
+                        Tabla.CurrentCell =
+                            Tabla.Rows[FilaActual + 1].Cells[ColumnaVisible];
+                        Tabla.Focus();
+                    }
+                }
+            }
+        }
+
+        private void BtnSeguridadFin_Click(object sender, EventArgs e)
+        {
+            DataGridView Tabla = ObtenerDataGridViewActivo();
+
+            if (Tabla.Rows.Count > 0)
+            {
+                int UltimaFila = Tabla.Rows.Count - 1;
+                int ColumnaVisible = ObtenerPrimeraColumnaVisible(Tabla);
+
+                if (ColumnaVisible >= 0)
+                {
+                    Tabla.ClearSelection();
+                    Tabla.Rows[UltimaFila].Selected = true;
+                    Tabla.CurrentCell =
+                        Tabla.Rows[UltimaFila].Cells[ColumnaVisible];
+                    Tabla.Focus();
+                }
+            }
+        }
+
+        private void BtnSeguridadSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Si desea consultar, en la tabla izquierda, seleccione el usuario. " +
+                "Si desea Asignar, seleccione Usuario y perfil en la tabla derecha, luego puede dar click en Agregar y Asignar",
+                "Ayuda Asignacion",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void BtnSeguridadReporte_Click(object sender, EventArgs e)
+        {
+            if (reporteAsignacionPerfiles == null ||
+                reporteAsignacionPerfiles.IsDisposed)
+            {
+                reporteAsignacionPerfiles =
+                    new FrmReporteAsignacionPerfiles();
+
+                reporteAsignacionPerfiles.FormClosed +=
+                    (s, args) => reporteAsignacionPerfiles = null;
+
+                reporteAsignacionPerfiles.Show();
+            }
+            else
+            {
+                reporteAsignacionPerfiles.BringToFront();
+                reporteAsignacionPerfiles.Activate();
+            }
+        }
     }
-}
+    }
+
