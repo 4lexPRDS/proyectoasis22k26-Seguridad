@@ -1,6 +1,7 @@
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;
+using CapaVista_Seguridad.frmReportes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,8 @@ namespace CapaVista_Seguridad
                 {
                     { SeguridadBtnGuardar,   TipoPermiso.Insertar },
                     { SeguridadBtnModificar, TipoPermiso.Editar },
-                    { SeguridadBtnReporte,   TipoPermiso.Imprimir }
+                    { SeguridadBtnReporte,   TipoPermiso.Imprimir },
+                    { SeguridadBtnLimpiar,   TipoPermiso.Eliminar }
                 };
 
                 _MisPermisos = ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(
@@ -258,7 +260,7 @@ namespace CapaVista_Seguridad
                 _Usuario.IdEmpleado                 = Convert.ToInt32(SeguridadTxtIdEmpleado.Text);
                 _Usuario.NombreUsuario              = SeguridadTxtUsuario.Text;
                 _Usuario.ContrasenaUsuario          = SeguridadTxtContrasena.Text;
-                _Usuario.ConfirmarContrasenaUsuario = SeguridadTxtContrasena.Text;
+                _Usuario.ConfirmarContrasenaUsuario = SeguridadTxtConfirmarContrasena.Text;
                 _Usuario.UltimoAccesoUsuario        = DateTime.Now;
                 _Usuario.IsActive                   = SeguridadChkActivo.Checked ? 1 : 0;
                 _Usuario.Estado                     = EstadoEntidad.Modified;
@@ -288,12 +290,39 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnLimpiar_Click(object sender, EventArgs e)
         {
-            SeguridadTxtIdEmpleado.Clear();
-            SeguridadTxtUsuario.Clear();
-            SeguridadTxtContrasena.Clear();
-            SeguridadTxtConfirmarContrasena.Clear();
-            SeguridadCboEmpleado.SelectedIndex = -1;
-            SeguridadChkActivo.Checked = false;
+            if (!_MisPermisos.PuedeEliminar)
+            {
+                MessageBox.Show("No tienes permiso para eliminar usuarios.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                if (SeguridadDgvUsuarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Seleccione una fila del listado para eliminar.",
+                        "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult Confirmacion = MessageBox.Show(
+                    "¿Está seguro de que desea eliminar el usuario seleccionado?",
+                    "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (Confirmacion == DialogResult.Yes)
+                {
+                    _Usuario.IdUsuario = Convert.ToInt32(SeguridadDgvUsuarios.CurrentRow.Cells[0].Value);
+                    _Usuario.Estado    = EstadoEntidad.Deleted;
+
+                    string Resultado = _Usuario.SeguridadMetGrabarCambios();
+                    MessageBox.Show(Resultado);
+                    SeguridadMetListarUsuarios();
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
         }
 
         private void SeguridadBtnSalir_Click(object sender, EventArgs e)
@@ -309,6 +338,8 @@ namespace CapaVista_Seguridad
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            FrmReporteUsuario reporte = new FrmReporteUsuario();
+            reporte.Show();
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -319,15 +350,6 @@ namespace CapaVista_Seguridad
                 "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            if (!_MisPermisos.PuedeImprimir)
-            {
-                MessageBox.Show("No tienes permiso para generar reportes.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-        }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
