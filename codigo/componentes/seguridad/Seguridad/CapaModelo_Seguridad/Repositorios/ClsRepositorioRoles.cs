@@ -70,5 +70,12 @@ namespace CapaModelo_Seguridad.Repositorios
             TablaDatos = null;
             return ListaRoles;
         }
+
+        public int SeguridadMetContarAsignaciones(int IdRol)
+        {
+            string sql = "SELECT COUNT(*) FROM tblUsuarioRol WHERE idRol = " + IdRol;
+            var Tabla = SeguridadMetEjecucionConsulta(sql, CommandType.Text);
+            return Convert.ToInt32(Tabla.Rows[0][0]);
+        }
     }
 }
