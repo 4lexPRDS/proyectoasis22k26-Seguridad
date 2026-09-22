@@ -43,7 +43,7 @@ namespace CapaVista_Seguridad
                 this, ID_MODULO, ID_APLICACION, MapaBotones);
 
             if (!_MisPermisos.TieneAcceso)
-                return;
+               return;
 
             SeguridadMetListarEmpleados();
             SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
