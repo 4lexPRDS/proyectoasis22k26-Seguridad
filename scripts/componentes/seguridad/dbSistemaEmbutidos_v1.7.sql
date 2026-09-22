@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS dbSistemaEmbutidos
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
-
+/*final*/
 USE dbSistemaEmbutidos;
 
 CREATE TABLE tblEmpleado (
@@ -65,7 +65,7 @@ CREATE TABLE tblAplicacion (
 CREATE TABLE tblUsuario (
     idUsuario INT AUTO_INCREMENT,
     idEmpleado INT NOT NULL,
-    nombreUsuario VARCHAR(30) NOT NULL, /*cambiarlo a nombreUsuario*/    
+    nombreUsuario VARCHAR(30) NOT NULL,
     contrasenaUsuario VARCHAR(255) NOT NULL,
     ultimoAccesoUsuario DATETIME NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
@@ -170,72 +170,66 @@ CREATE INDEX idxBitacoraIdUsuario ON tblBitacora (idUsuario);
 CREATE INDEX idxBitacoraFechaHora ON tblBitacora (fechaHoraBitacora);
 CREATE INDEX idxBitacoraTabla ON tblBitacora (tablaBitacora);
 
-
-
--- INSERTS
-
 USE dbSistemaEmbutidos;
 
--- 1. tblEmpleado 
-
+-- 1. tblEmpleado
 INSERT INTO tblEmpleado (
     codigoEmpleado, dpiEmpleado, nitEmpleado, nombresEmpleado, apellidosEmpleado,
     puestoEmpleado, generoEmpleado, fechaNacimientoEmpleado, fechaContratacionEmpleado,
     telefonoEmpleado, correoEmpleado
 ) VALUES
-('EMP-001', '1234567890123', '1234567K', 'Isabel', 'Meléndez', 'Coordinadora de Implementación', 'F', '2000-05-14', '2026-01-10', '55512345', 'isabel.melendez@terminus.com'),
+('EMP-001', '1234567890123', '1234567K', 'Isabel', 'Meléndez', 'Coordinadora de Implementación', 'F', '2000-05-14', '2026-01-10', '55512345', 'terminus.seguridad22026@gmail.com'),
 ('EMP-002', '2345678901234', '2345678K', 'Carlos', 'Ramírez', 'Analista de Sistemas', 'M', '1998-03-22', '2025-11-05', '55523456', 'carlos.ramirez@terminus.com'),
 ('EMP-003', '3456789012345', '3456789K', 'María', 'López', 'Administradora de Base de Datos', 'F', '1995-09-30', '2025-08-19', '55534567', 'maria.lopez@terminus.com');
 
-
--- 2. tblRol 
-
+-- 2. tblRol
 INSERT INTO tblRol (nombreRol, descripcionRol) VALUES
 ('Administrador', 'Rol con acceso total al sistema'),
 ('Supervisor', 'Rol con acceso a reportes y aprobaciones'),
 ('Operativo', 'Rol con acceso limitado a registro de datos');
 
-
--- 3. tblModulo 
-
+-- 3. tblModulo (módulos de negocio + Seguridad restaurado)
 INSERT INTO tblModulo (nombreModulo, descripcionModulo) VALUES
 ('Producción', 'Módulo de control de producción de embutidos'),
 ('Inventario', 'Módulo de control de materia prima y producto terminado'),
-('Ventas', 'Módulo de gestión de pedidos y clientes');
+('Ventas', 'Módulo de gestión de pedidos y clientes'),
+('Seguridad', 'Módulo de administración y seguridad del sistema');
 
-
--- 4. tblAplicacion
-
+-- 4. tblAplicacion - Aplicaciones de negocio
 INSERT INTO tblAplicacion (idModulo, nombreAplicacion, descripcionAplicacion) VALUES
 ((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Producción'), 'Registro de Lotes', 'Registro y seguimiento de lotes de producción'),
 ((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Inventario'), 'Control de Existencias', 'Control de entradas y salidas de inventario'),
 ((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Ventas'), 'Gestión de Pedidos', 'Registro y seguimiento de pedidos de clientes');
 
+-- 4b. tblAplicacion - Aplicaciones del módulo Seguridad (restauradas)
+INSERT INTO tblAplicacion (idModulo, nombreAplicacion, descripcionAplicacion) VALUES
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Empleados', 'Gestión de empleados del sistema'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Usuarios', 'Gestión de usuarios del sistema'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Módulos', 'Administración de módulos del sistema'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Aplicaciones', 'Administración de aplicaciones del sistema'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Perfiles', 'Administración de roles/perfiles'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Asignación de Perfiles', 'Asignación de roles a usuarios'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Asignación Aplicación Perfiles', 'Asignación de permisos por rol/módulo/aplicación'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Asignación Aplicación Usuario', 'Asignación de permisos por usuario/módulo/aplicación'),
+((SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'), 'Bitácora', 'Consulta de bitácora del sistema');
 
--- 5. tblUsuario 
-
+-- 5. tblUsuario (contraseñas hasheadas con BCrypt)
 INSERT INTO tblUsuario (idEmpleado, nombreUsuario, contrasenaUsuario, ultimoAccesoUsuario) VALUES
-((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-001'), 'imelendez', '$2y$10$HASHDEPRUEBA0000000001', NOW()),
-((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-002'), 'cramirez', '$2y$10$HASHDEPRUEBA0000000002', NOW()),
-((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-003'), 'mlopez', '$2y$10$HASHDEPRUEBA0000000003', NOW());
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-001'), 'imelendez', '$2b$10$e9CQKArQRmpf.IUtqpxYmOoO9vyh2./7ped56qEokwfgn7DkcacPC', NOW()),
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-002'), 'cramirez', '$2b$10$ojN1MyPkUaylOuupBEGmhemdx5tQi4BdbbJrpSF2ZJjD0ZWM/lbe2', NOW()),
+((SELECT idEmpleado FROM tblEmpleado WHERE codigoEmpleado = 'EMP-003'), 'mlopez', '$2b$10$Bo9RDmJRGKKLxm1tSmRO1ODP0CiGmuqy/wcnJ6bs2MkOVe1OQml5i', NOW());
 
--- 6. tblRecuperacionContrasena 
-
+-- 6. tblRecuperacionContrasena
 INSERT INTO tblRecuperacionContrasena (idUsuario, tokenRecuperacionContrasena, fechaExpiracionRecuperacionContrasena, usadoRecuperacionContrasena) VALUES
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), 'TOKEN-A1B2C3D4', DATE_ADD(NOW(), INTERVAL 1 DAY), FALSE),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), 'TOKEN-E5F6G7H8', DATE_ADD(NOW(), INTERVAL 1 DAY), FALSE),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), 'TOKEN-I9J0K1L2', DATE_ADD(NOW(), INTERVAL 1 DAY), TRUE);
 
-
--- 7. tblUsuarioRol 
-
+-- 7. tblUsuarioRol
 INSERT INTO tblUsuarioRol (idUsuario, idRol, fechaAsignacionUsuarioRol) VALUES
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Administrador'), CURDATE()),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Supervisor'), CURDATE()),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), (SELECT idRol FROM tblRol WHERE nombreRol = 'Operativo'), CURDATE());
-
-
--- 8. tblRolModuloAplicacion 
 
 INSERT INTO tblRolModuloAplicacion (idRol, idModulo, idAplicacion, derInsertarRolModuloAplicacion, derEditarRolModuloAplicacion, derEliminarRolModuloAplicacion, derImprimirRolModuloAplicacion) VALUES
 (
@@ -257,7 +251,32 @@ INSERT INTO tblRolModuloAplicacion (idRol, idModulo, idAplicacion, derInsertarRo
     TRUE, FALSE, FALSE, FALSE
 );
 
---  9. tblUsuarioModuloAplicacion
+-- Administrador: acceso TOTAL a las 9 aplicaciones de Seguridad
+INSERT INTO tblRolModuloAplicacion (idRol, idModulo, idAplicacion, derInsertarRolModuloAplicacion, derEditarRolModuloAplicacion, derEliminarRolModuloAplicacion, derImprimirRolModuloAplicacion)
+SELECT
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Administrador'),
+    a.idModulo,
+    a.idAplicacion,
+    TRUE, TRUE, TRUE, TRUE
+FROM tblAplicacion a
+WHERE a.idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad');
+
+-- Supervisor: acceso PARCIAL solo a Empleados y Usuarios
+INSERT INTO tblRolModuloAplicacion (idRol, idModulo, idAplicacion, derInsertarRolModuloAplicacion, derEditarRolModuloAplicacion, derEliminarRolModuloAplicacion, derImprimirRolModuloAplicacion) VALUES
+(
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Supervisor'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Empleados' AND idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad')),
+    TRUE, TRUE, FALSE, FALSE
+),
+(
+    (SELECT idRol FROM tblRol WHERE nombreRol = 'Supervisor'),
+    (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad'),
+    (SELECT idAplicacion FROM tblAplicacion WHERE nombreAplicacion = 'Usuarios' AND idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad')),
+    FALSE, FALSE, FALSE, TRUE
+);
+
+-- Operativo: SIN acceso al módulo Seguridad (a propósito, no se inserta ninguna fila)
 
 INSERT INTO tblUsuarioModuloAplicacion (idUsuario, idModulo, idAplicacion, derInsertarUsuarioModuloAplicacion, derEditarUsuarioModuloAplicacion, derEliminarUsuarioModuloAplicacion, derImprimirUsuarioModuloAplicacion) VALUES
 (
@@ -279,10 +298,26 @@ INSERT INTO tblUsuarioModuloAplicacion (idUsuario, idModulo, idAplicacion, derIn
     TRUE, FALSE, FALSE, FALSE
 );
 
-
--- 10. tblBitacora 
-
+-- 10. tblBitacora
 INSERT INTO tblBitacora (idUsuario, accionBitacora, tablaBitacora, idRegistroBitacora, detallesBitacora, ipBitacora) VALUES
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'imelendez'), 'INSERT', 'tblEmpleado', 1, 'Alta de empleado de prueba', '192.168.1.10'),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'cramirez'), 'UPDATE', 'tblAplicacion', 2, 'Actualización de datos de aplicación', '192.168.1.11'),
 ((SELECT idUsuario FROM tblUsuario WHERE nombreUsuario = 'mlopez'), 'DELETE', 'tblUsuarioRol', 3, 'Eliminación de asignación de rol', '192.168.1.12');
+
+SELECT a.idModulo, a.idAplicacion, a.nombreAplicacion, r.nombreRol,
+       rma.derInsertarRolModuloAplicacion AS Insertar,
+       rma.derEditarRolModuloAplicacion AS Editar,
+       rma.derEliminarRolModuloAplicacion AS Eliminar,
+       rma.derImprimirRolModuloAplicacion AS Imprimir
+FROM tblAplicacion a
+LEFT JOIN tblRolModuloAplicacion rma ON rma.idAplicacion = a.idAplicacion AND rma.idModulo = a.idModulo
+LEFT JOIN tblRol r ON r.idRol = rma.idRol
+WHERE a.idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad')
+ORDER BY a.idAplicacion, r.nombreRol;
+
+SELECT idAplicacion, nombreAplicacion
+FROM tblAplicacion
+WHERE idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad')
+ORDER BY idAplicacion;
+
+SELECT * FROM dbSistemaEmbutidos.tblBitacora ORDER BY idBitacora DESC LIMIT 5;
