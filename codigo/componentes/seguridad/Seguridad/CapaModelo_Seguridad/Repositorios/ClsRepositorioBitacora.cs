@@ -14,7 +14,10 @@ namespace CapaModelo_Seguridad.Repositorios
 
         public ClsRepositorioBitacora()
         {
-            _SelectAll = "SELECT idBitacora, idUsuario, accionBitacora, tablaBitacora, idRegistroBitacora, detallesBitacora, ipBitacora, fechaHoraBitacora FROM tblBitacora";
+            _SelectAll = "SELECT b.idBitacora, b.idUsuario, u.nombreUsuario, b.accionBitacora, b.tablaBitacora, b.idRegistroBitacora, b.detallesBitacora, b.ipBitacora, b.fechaHoraBitacora " +
+                         "FROM tblBitacora b " +
+                         "LEFT JOIN tblUsuario u ON b.idUsuario = u.idUsuario " +
+                         "ORDER BY b.idBitacora DESC";
             _Insert = "INSERT INTO tblBitacora (idUsuario, accionBitacora, tablaBitacora, idRegistroBitacora, detallesBitacora, ipBitacora, fechaHoraBitacora) VALUES (?, ?, ?, ?, ?, ?, ?)";
         }
 
@@ -51,12 +54,13 @@ namespace CapaModelo_Seguridad.Repositorios
                 var Bitacora = new ClsBitacora();
                 Bitacora.IdBitacora = Convert.ToInt32(Fila[0]);
                 Bitacora.IdUsuario = Fila[1] == DBNull.Value ? (int?)null : Convert.ToInt32(Fila[1]);
-                Bitacora.AccionBitacora = Fila[2].ToString();
-                Bitacora.TablaBitacora = Fila[3].ToString();
-                Bitacora.IdRegistroBitacora = Convert.ToInt32(Fila[4]);
-                Bitacora.DetallesBitacora = Fila[5].ToString();
-                Bitacora.IpBitacora = Fila[6].ToString();
-                Bitacora.FechaHoraBitacora = Convert.ToDateTime(Fila[7]);
+                Bitacora.NombreUsuario = Fila[2] == DBNull.Value ? (Bitacora.IdUsuario.HasValue ? "Usuario " + Bitacora.IdUsuario : "Sistema") : Fila[2].ToString();
+                Bitacora.AccionBitacora = Fila[3].ToString();
+                Bitacora.TablaBitacora = Fila[4].ToString();
+                Bitacora.IdRegistroBitacora = Convert.ToInt32(Fila[5]);
+                Bitacora.DetallesBitacora = Fila[6].ToString();
+                Bitacora.IpBitacora = Fila[7].ToString();
+                Bitacora.FechaHoraBitacora = Convert.ToDateTime(Fila[8]);
                 ListaBitacora.Add(Bitacora);
             }
             return ListaBitacora;
