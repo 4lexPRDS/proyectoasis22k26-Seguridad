@@ -140,6 +140,12 @@
     <Compile Include="frmReportes\FrmReporteMantenimientoEmpleado.Designer.cs">
       <DependentUpon>FrmReporteMantenimientoEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes\FrmReporteMantenimientoPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes\FrmReporteMantenimientoPerfiles.Designer.cs">
+      <DependentUpon>FrmReporteMantenimientoPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteModulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoEmpleado.resx">
       <DependentUpon>FrmReporteMantenimientoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoPerfiles.resx">
+      <DependentUpon>FrmReporteMantenimientoPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteModulo.resx">
       <DependentUpon>FrmReporteModulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +256,7 @@
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoEmpleado.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteAsigAppPerf.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoAplicacion.rdlc" />
+    <EmbeddedResource Include="Reportes\RpReporteMantenimientoPerfil.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteModulo.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteUsuario.rdlc" />
   </ItemGroup>
@@ -254,6 +264,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloEmpleado.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloModulo.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloRoles.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloUsuario.datasource" />
     <None Include="Resources\fondo2.png" />
   </ItemGroup>

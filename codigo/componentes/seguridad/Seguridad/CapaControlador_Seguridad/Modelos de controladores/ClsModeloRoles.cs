@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaControlador_Seguridad.Modelos_de_controladores
+namespace CapaControlador_Seguridad
 {
     public class ClsModeloRoles
     {
@@ -59,6 +59,12 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
                 {
                     if (_IdRol <= 0)
                         return "Debe indicar un Rol válido para esta operación";
+                }
+                if (Estado == EstadoEntidad.Deleted)
+                {
+                    int Asignaciones = _RepositorioRoles.SeguridadMetContarAsignaciones(_IdRol);
+                    if (Asignaciones > 0)
+                        return "No se puede eliminar el perfil: está asignado a " + Asignaciones + " usuario(s).";
                 }
 
                 var ModeloDatosRoles = new ClsRoles();
@@ -112,9 +118,22 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
             return _ListaRoles;
         }
 
-        public IEnumerable<ClsModeloRoles> SeguridadMetBuscarPorId(int IdRol)
+        
+
+        public IEnumerable<ClsModeloRoles> SeguridadMetBuscarPorNombre(string NombreRol)
         {
-            return _ListaRoles.FindAll(e => e._IdRol == IdRol);
+            if (_ListaRoles == null)
+                SeguridadMetObtenerTodos();
+
+            return _ListaRoles.FindAll(e =>
+                e._NombreRol.ToUpper().Contains(NombreRol.ToUpper()));
         }
+
+
+
+
+
+
+
     }
 }
