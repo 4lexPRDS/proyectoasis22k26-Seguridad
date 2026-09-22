@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ejecutable_Naveg.Properties
+namespace Ejecucion_Navegador.Properties
 {
 
 

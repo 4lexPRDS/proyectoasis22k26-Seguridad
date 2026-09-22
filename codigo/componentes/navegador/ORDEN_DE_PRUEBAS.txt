@@ -7,37 +7,45 @@ Autores: Gabriel Andre Guillen Pocon (0901-23-1998)
 
 Ruta base de todo lo de esta guia:  codigo/componentes/navegador/
 
+NOTA (21/09/2026): Segun revision PRB-F-001 v1.2 (RECHAZADO) y reunion con
+el catedratico del mismo dia, se unifico "Navegador" y "Modelo_MVC" en UNA
+sola solucion "Navegador.sln" (ya no puede haber una 4ta capa aparte que se
+conecte con las otras 3), y "Ejecutable_Navegador" se renombro a
+"Ejecucion_Navegador" por estandarizacion de nomenclatura. Esta guia ya
+refleja esa estructura.
+
 
 ----------------------------------------------------------------------------
  0. QUE HAY EN EL REPOSITORIO (mapa rapido)
 ----------------------------------------------------------------------------
-Hay 4 soluciones (.sln). Cada una es una capa de la arquitectura y se
-compilan en este orden, porque unas usan las DLL que produce la anterior:
+Hay 3 soluciones (.sln). Cada una se compila en este orden, porque unas usan
+las DLL que produce la anterior:
 
   1) codigo/componentes/seguridad/Seguridad/Seguridad.sln
      Componente Seguridad (NO se modifica). Aporta: permisos por rol,
      sesion (ClsSesionSeguridad) y bitacora (ClsModeloBitacora).
 
-  2) navegador/Navegador/Navegador.sln            (el "control de usuario")
-     Contiene el control Navegador (la barra de 14 botones) y ADENTRO la
-     seguridad y la bitacora:
-       - CapaVista_Navegador/Navegador.cs ................ barra de botones
-       - CapaVista_Navegador/Seguridad/ClsCrudSeguridad.cs . aplica permisos
-       - CapaVista_Navegador/Seguridad/ClsNavegadorBitacora.cs . escribe bitacora
-     Genera CapaVista_Navegador_Controles.dll.
-
-  3) navegador/Modelo_MVC/Modelo_MVC.sln           (el CRUD, modelo MVC)
+  2) navegador/Navegador/Navegador.sln          (el CRUD + control de usuario)
+     Solucion unica en modelo MVC. Contiene TODO el componente Navegador:
        - CapaModelo_Navegador ...... acceso a datos (ODBC) y ClsColumnaInfo
        - CapaControlador_Navegador . logica entre vista y modelo
-       - CapaVista_Navegador ....... formulario base NavegadorCrud (trae el
-                                     control Navegador insertado, la tabla,
-                                     el panel de ingreso, etc.)
+       - CapaVista_Navegador ....... el control Navegador (la barra de 14
+                                     botones), el formulario base
+                                     FrmNavegadorCrud (trae el control
+                                     Navegador insertado, la tabla, el panel
+                                     de ingreso, etc.) y, adentro:
+         - CapaVista_Navegador/Seguridad/ClsCrudSeguridad.cs . aplica permisos
+         - CapaVista_Navegador/Seguridad/ClsNavegadorBitacora.cs . bitacora
+     Genera una unica CapaVista_Navegador.dll (ya no hay una
+     CapaVista_Navegador_Controles.dll aparte).
 
-  4) navegador/Ejecutable_Navegador/Ejecutable_Navegador.sln  (consumidor)
-       - FrmCrud ........... formulario SIN codigo: hereda de NavegadorCrud y
-                             solo cambia propiedades (tabla, IdModulo, ...)
+  3) navegador/Ejecucion_Navegador/Ejecucion_Navegador.sln  (consumidor)
+       - Form1 ............. formulario casi sin codigo: hereda de
+                             FrmNavegadorCrud y en el constructor hace UNA
+                             sola llamada para configurarse:
+             NavegadorMetConfigurar(tabla, codigoAplicacion, rutaAyuda);
        - ClsSesionPrueba ... simula el login (elige el usuario de prueba)
-       - Program.cs ........ inicia la sesion de prueba y abre FrmCrud
+       - Program.cs ........ inicia la sesion de prueba y abre Form1
 
 Por que hay que compilar varias veces: las soluciones se referencian entre
 si por DLL (no por proyecto), asi que Visual Studio no conoce el orden entre
@@ -70,7 +78,7 @@ ellas. Por eso se compila en el orden de arriba y, dentro de cada solucion,
       cramirez              Supervisor      2 / 2
       mlopez                Operativo       3 / 3
       Modulo "Seguridad" = idModulo 4 ; Aplicacion "Empleados" = idAplicacion 4
-      Tabla de prueba del CRUD: tblEmpleado (5 registros de ejemplo)
+      Tabla de prueba del CRUD: tblAplicacion
 
     El script en scripts/componentes/seguridad/ del repositorio puede ser una
     version anterior (V1.5) SIN estos usuarios/permisos: en ese caso los
@@ -94,6 +102,10 @@ ellas. Por eso se compila en el orden de arriba y, dentro de cada solucion,
     Tanto el CRUD (CapaModelo_Navegador/Conexion/ClsConexionBD.cs) como
     Seguridad usan ese mismo DSN: "Dsn=EmbutidosS.A".
 
+    Si no hay conexion (DSN mal configurado, MySQL apagado, etc.) el
+    navegador ya NO revienta: muestra el dialogo estandar de Error (icono de
+    X roja, boton Aceptar) explicando que no se pudo conectar.
+
 
 ----------------------------------------------------------------------------
  3. COMPILAR (en este orden, siempre en configuracion Debug)
@@ -104,12 +116,11 @@ diga 0 errores.
 
   Orden:  1) Seguridad.sln
           2) Navegador.sln
-          3) Modelo_MVC.sln
-          4) Ejecutable_Navegador.sln
+          3) Ejecucion_Navegador.sln
 
 Ejemplo de lo que pasa y NO es un problema real:
-  - Primera compilacion de Navegador.sln, Modelo_MVC.sln o del ejecutable:
-    error "no se encontro CapaControlador_Navegador" (o CapaModelo_...).
+  - Primera compilacion de Navegador.sln o del ejecutable: error
+    "no se encontro CapaControlador_Navegador" (o CapaModelo_...).
     Causa: el proyecto que lo necesita compilo antes que el que lo genera y
     dentro de la misma solucion no lo sabe. Solucion: volver a compilar la
     misma solucion (2 o 3 veces). Al final debe quedar en 0 errores.
@@ -117,17 +128,18 @@ Ejemplo de lo que pasa y NO es un problema real:
     DLL quedan bloqueadas y la compilacion falla.
 
 Comprobar al terminar que existe:
-  navegador/Ejecutable_Navegador/Ejecutable_Naveg/bin/Debug/Ejecutable_Naveg.exe
+  navegador/Ejecucion_Navegador/Ejecucion_Navegador/bin/Debug/Ejecucion_Navegador.exe
   y junto a el las DLL: Seguridad (CapaControlador_Seguridad, etc.),
-  BCrypt-Net-Next.dll y CapaVista_Navegador_Controles.dll.
+  BCrypt-Net-Next.dll y CapaVista_Navegador.dll.
 
 
 ----------------------------------------------------------------------------
  4. EJECUTAR
 ----------------------------------------------------------------------------
-En Ejecutable_Navegador.sln dejar "Ejecutable_Naveg" como proyecto de inicio
-y presionar F5 (o abrir bin/Debug/Ejecutable_Naveg.exe).
-Se abre el formulario "1001 - Crud" con los 14 botones en UNA sola fila:
+En Ejecucion_Navegador.sln dejar "Ejecucion_Navegador" como proyecto de
+inicio y presionar F5 (o abrir bin/Debug/Ejecucion_Navegador.exe).
+Se abre el formulario "1001 - Crud" con los 14 botones en UNA sola fila,
+pegados unos con otros (sin espacio de sobra entre ellos):
 
   Ingresar, Consultar, Modificar, Eliminar, Guardar, Cancelar, Refrescar,
   Imprimir, Ayuda, Inicio, Anterior, Siguiente, Fin, Salir
@@ -139,11 +151,11 @@ Al abrir, el usuario de prueba por defecto es Supervisor.
  5. ORDEN DE PRUEBAS
 ----------------------------------------------------------------------------
 Como cambiar de usuario (para las pruebas B, C y D):
-  Abrir  Ejecutable_Naveg/ClsSesionPrueba.cs  y cambiar la constante
+  Abrir  Ejecucion_Navegador/ClsSesionPrueba.cs  y cambiar la constante
       private const UsuarioDemo UsuarioPrueba = UsuarioDemo.Supervisor;
   por  UsuarioDemo.Administrador  o  UsuarioDemo.Operativo.
-  Luego recompilar SOLO Ejecutable_Navegador.sln y ejecutar de nuevo.
-  (No hay que tocar las otras 3 soluciones.)
+  Luego recompilar SOLO Ejecucion_Navegador.sln y ejecutar de nuevo.
+  (No hay que tocar las otras 2 soluciones.)
 
 --- PRUEBA A: Supervisor (usuario cramirez, rol 2) -----------------------
   1. Ejecutar con UsuarioDemo.Supervisor.
@@ -154,8 +166,8 @@ Como cambiar de usuario (para las pruebas B, C y D):
 
 --- PRUEBA B: Consultar (con Supervisor) ---------------------------------
   1. Clic en "Consultar".
-  2. Esperado: el titulo cambia a "1001 - Crud tblempleado" y aparece la
-     tabla con los 5 empleados de ejemplo.
+  2. Esperado: el titulo cambia a "1001 - Crud tblaplicacion" y aparece la
+     tabla con los registros de ejemplo.
   Que demuestra: la conexion ODBC (DSN EmbutidosS.A) y la lectura del
   esquema funcionan.
 
@@ -171,52 +183,81 @@ Como cambiar de usuario (para las pruebas B, C y D):
 
 --- PRUEBA E: Bitacora (usar Administrador para poder probar Eliminar) ---
   1. Con Administrador: Consultar -> Ingresar -> llenar los datos de un
-     empleado nuevo -> Guardar.            (accion INSERT)
+     registro nuevo -> Guardar.            (accion INSERT)
   2. Seleccionar ese registro -> Modificar -> cambiar un dato -> Guardar.
                                            (accion UPDATE)
   3. Seleccionar ese registro -> Eliminar -> confirmar.
                                            (accion DELETE)
      Consejo: eliminar solo el registro de prueba que se acaba de crear
-     (los empleados originales pueden tener relaciones con otras tablas).
+     (los registros originales pueden tener relaciones con otras tablas).
   4. En MySQL Workbench revisar las ultimas 5 filas:
        SELECT * FROM dbSistemaEmbutidos.tblBitacora
        ORDER BY idBitacora DESC LIMIT 5;
   5. Esperado: 3 filas nuevas (INSERT, UPDATE, DELETE) con:
        - idUsuario = 1 (el del rol/usuario que esta en sesion),
-       - la tabla tblEmpleado y el id del registro afectado,
+       - la tabla y el id del registro afectado,
        - en el INSERT el idRegistro es 0 cuando la llave es autoincremental
          (el id lo genera MySQL despues de insertar).
   Repetir la prueba con Supervisor (solo puede Ingresar y Modificar): las
   filas de bitacora deben salir con idUsuario = 2.
   Que demuestra: ClsCrudAcciones -> ClsNavegadorBitacora ->
   ClsModeloBitacora.SeguridadMetRegistrarBitacora (Seguridad) con el
-  IdUsuario tomado de ClsSesionSeguridad.
+  IdUsuario tomado de ClsSesionSeguridad. El usuario YA NO se parametriza a
+  mano: FrmNavegadorCrud lo toma de ClsSesionSeguridad.NombreUsuario.
 
---- PRUEBA F: Navegacion y salir -----------------------------------------
+--- PRUEBA F: Navegacion, refrescar y salir -------------------------------
   Con la tabla cargada: Inicio, Anterior, Siguiente y Fin mueven la
-  seleccion de la tabla; Refrescar recarga; Cancelar cierra el panel de
-  ingreso; Salir cierra el formulario.
+  seleccion de la tabla; Refrescar vuelve a consultar la tabla y muestra los
+  datos actualizados en el Grid (antes solo ocultaba el grid sin recargar,
+  ver PRB-F-001 hallazgo 3); Cancelar cierra el panel de ingreso; Salir
+  cierra el formulario.
 
---- PRUEBA G: Disenador de Visual Studio ---------------------------------
-  En Ejecutable_Navegador.sln abrir FrmCrud.cs en modo Diseno (doble clic).
-  Esperado: se ve la barra de botones dentro del formulario y en la ventana
-  Propiedades aparecen (categoria "Navegador"): NombreTabla, Usuario,
-  Modulo, IdModulo, IdAplicacion. Sin errores de "tipo no encontrado".
-  Requisito: haber compilado antes las 4 soluciones (seccion 3).
+--- PRUEBA G: Ayuda --------------------------------------------------------
+  1. En el formulario consumidor (Form1), la ruta del archivo .chm se pasa
+     como 3er parametro de NavegadorMetConfigurar (ver seccion 6).
+  2. Clic en "Ayuda". Esperado: se abre ese archivo de ayuda (HTML Help).
+     Si no se configuro ninguna ruta, se avisa con un mensaje en vez de no
+     hacer nada.
+
+--- PRUEBA H: Imprimir ------------------------------------------------------
+  Clic en "Imprimir". Esperado: mensaje indicando que la impresion esta
+  pendiente de integracion con el componente Reporteador (todavia no hay
+  acuerdo de que parametros exactos necesita, ver reunion 21/09/2026).
+
+--- PRUEBA I: Disenador de Visual Studio ---------------------------------
+  En Ejecucion_Navegador.sln abrir Form1.cs en modo Diseno (doble clic).
+  Esperado: se ve la barra de botones (pegados) dentro del formulario. Ya NO
+  hay propiedades sueltas en la ventana Propiedades (Modulo, IdModulo,
+  IdAplicacion, RutaAyuda, Usuario): todo se configura con la unica llamada
+  a NavegadorMetConfigurar en el constructor de Form1.cs. Sin errores de
+  "tipo no encontrado". Requisito: haber compilado antes las 3 soluciones
+  (seccion 3).
 
 
 ----------------------------------------------------------------------------
  6. USAR EL NAVEGADOR EN OTRO FORMULARIO / OTRA TABLA
 ----------------------------------------------------------------------------
   Opcion 1 (formulario completo del CRUD): crear un formulario que herede de
-  NavegadorCrud (igual que FrmCrud) y cambiar en Propiedades:
-      NombreTabla, IdModulo, IdAplicacion, Modulo, Usuario.
-  No se escribe codigo.
+  FrmNavegadorCrud (igual que Form1) y en el constructor, despues de
+  InitializeComponent(), llamar UNA sola vez:
+
+      NavegadorMetConfigurar(
+          "tblMiTabla",                    // 1) tabla
+          7,                                // 2) codigo de aplicacion (Seguridad)
+          @"Ayudas\tblMiTabla.chm");        // 3) ruta del archivo de ayuda
+
+  No hace falta escribir mas codigo. El usuario NO se parametriza:
+  FrmNavegadorCrud lo toma solo de la sesion activa (ClsSesionSeguridad).
+  El codigo de aplicacion se usa como Modulo e IdAplicacion de Seguridad: un
+  unico numero por tabla alcanza para validar al usuario y darle/quitarle
+  permisos (Insertar/Editar/Eliminar/Imprimir).
 
   Opcion 2 (solo la barra de botones): arrastrar "Navegador" desde la caja
   de herramientas a cualquier formulario (aparece tras compilar
   Navegador.sln). Para que aplique permisos hay que llamar
-  NavegadorMetConfigurar(tabla, usuario, modulo, idModulo, idAplicacion).
+  NavegadorMetConfigurar(tabla, usuario, modulo, idModulo, idAplicacion)
+  (este es el metodo del CONTROL, con 5 parametros; el del FORMULARIO
+  FrmNavegadorCrud, mas simple, es el de la Opcion 1).
   Con idModulo = 0 e idAplicacion = 0 no se aplica seguridad.
 
 
@@ -226,11 +267,9 @@ Como cambiar de usuario (para las pruebas B, C y D):
   * "No se encontro CapaControlador_Navegador / CapaModelo_Navegador"
     -> normal en la primera compilacion. Recompilar la misma solucion.
 
-  * El disenador dice que no encuentra el tipo NavegadorCrud o
-    "navegadorCrud1 no esta declarado" / no carga FrmCrud.
-    -> Compilar en orden las 4 soluciones y cerrar/abrir Visual Studio (el
-       disenador es de 64 bits: las DLL de Modelo_MVC ahora son AnyCPU para
-       que puedan cargarse; con DLL antiguas x86 fallaba).
+  * El disenador dice que no encuentra el tipo FrmNavegadorCrud o
+    "form1 no esta declarado" / no carga Form1.
+    -> Compilar en orden las 3 soluciones y cerrar/abrir Visual Studio.
 
   * "ERROR [IM014] ... architecture mismatch" o "Data source name not found"
     -> el DSN se creo en el administrador ODBC de 64 bits. Crearlo de nuevo
@@ -238,14 +277,15 @@ Como cambiar de usuario (para las pruebas B, C y D):
        nombre exacto EmbutidosS.A.
 
   * "Access denied" o no conecta -> revisar usuario/clave del DSN y pulsar
-    "Test" en el administrador ODBC.
+    "Test" en el administrador ODBC. Ya no deberia verse un crash: debe
+    aparecer el dialogo estandar de Error.
 
   * Todos los botones habilitados aunque uses Supervisor (o ninguno se
     deshabilita) -> la base no tiene los datos de v1.7 (seccion 2.1) o el
-    IdModulo/IdAplicacion del FrmCrud no son 4 y 4.
+    codigo de aplicacion que Form1 le pasa a NavegadorMetConfigurar no es 4.
 
   * El exe funciona pero los cambios de ClsSesionPrueba no se notan ->
-    recompilar Ejecutable_Navegador.sln (la constante se compila dentro).
+    recompilar Ejecucion_Navegador.sln (la constante se compila dentro).
 
   * Error de compilacion "archivo en uso / bloqueado" -> cerrar otras
     instancias de Visual Studio y el ejecutable que siga abierto.

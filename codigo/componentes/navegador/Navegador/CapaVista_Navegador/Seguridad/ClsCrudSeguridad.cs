@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;
@@ -31,9 +32,25 @@ namespace CapaVista_Navegador
         // Habilita/deshabilita los controles del mapa según los permisos del usuario en sesión
         // (ClsSesionSeguridad) para este Módulo/Aplicación. Si no tiene acceso, deshabilita todo el formulario.
         // MapaBotones dice qué botón corresponde a qué permiso (Insertar, Editar, Eliminar, Imprimir).
+        //
+        // La consulta de permisos se hace contra la base de datos de Seguridad. El estándar exige que
+        // toda falla de conexión muestre el diálogo estándar de Error (ícono de X roja y botón Aceptar)
+        // en vez de dejar que la excepción se propague y la aplicación reviente.
         public void NavegadorMetAplicarPermisos(Form Formulario, Dictionary<Control, TipoPermiso> MapaBotones)
         {
-            ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(Formulario, _IdModulo, _IdAplicacion, MapaBotones);
+            try
+            {
+                ClsSeguridadFormHelper.SeguridadMetInicializarSeguridad(Formulario, _IdModulo, _IdAplicacion, MapaBotones);
+            }
+            catch (Exception Excepcion)
+            {
+                MessageBox.Show(
+                    "No fue posible verificar los permisos de seguridad porque no hay conexión con la base de datos.\n\n" +
+                    Excepcion.Message,
+                    "Error de conexión",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
     // Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
