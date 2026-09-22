@@ -101,7 +101,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnUsuarios_Click(object sender, EventArgs e)
         {
-            FrmUsuarios Usuarios = new FrmUsuarios();
+            FrmMantenimientoUsuarios Usuarios = new FrmMantenimientoUsuarios();
             Usuarios.ShowDialog();
         }
 

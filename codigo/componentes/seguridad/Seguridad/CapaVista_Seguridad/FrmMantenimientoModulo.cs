@@ -295,7 +295,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnImprimir_Click(object sender, EventArgs e)
         {
-            FrmReporteModulo reporte = new FrmReporteModulo();
+            FrmReporteMantenimientoModulo reporte = new FrmReporteMantenimientoModulo();
             reporte.Show();
         }
 

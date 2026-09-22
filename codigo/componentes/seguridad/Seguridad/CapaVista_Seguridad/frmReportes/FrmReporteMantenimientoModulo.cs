@@ -13,18 +13,18 @@ using CapaControlador_Seguridad;
 
 namespace CapaVista_Seguridad.frmReportes
 {
-    public partial class FrmReporteModulo : Form
+    public partial class FrmReporteMantenimientoModulo : Form
     {
         private ClsModeloModulo modulo = new ClsModeloModulo();
-        public FrmReporteModulo()
+        public FrmReporteMantenimientoModulo()
         {
             InitializeComponent();
         }
 
-        private void FrmReporteModulo_Load(object sender, EventArgs e)
+        private void FrmReporteMantenimientoModulo_Load(object sender, EventArgs e)
         {
-            ReportDataSource reportDataSource = new ReportDataSource("RpReporteModulos", modulo.SeguridadMetObtenerModulosReporte());
-            reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista_Seguridad.Reportes.RpReporteModulo.rdlc";
+            ReportDataSource reportDataSource = new ReportDataSource("RpReporteMantenimientoModulo", modulo.SeguridadMetObtenerModulosReporte());
+            reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista_Seguridad.Reportes.RpReporteMantenimientoModulo.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSource);
             this.reportViewer1.RefreshReport();
