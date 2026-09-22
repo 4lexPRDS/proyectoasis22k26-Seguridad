@@ -1,5 +1,6 @@
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaVista_Seguridad.Ayudas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,36 +72,73 @@ namespace CapaVista_Seguridad
 
         private void button10_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 10))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmAsignacionAppPerf Perfil = new FrmAsignacionAppPerf();
             Perfil.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 12))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmBitacora Bitacora = new FrmBitacora();
             Bitacora.ShowDialog();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 11))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmAsignacionAplicacionUsuario AsigAplicacionUsuario = new FrmAsignacionAplicacionUsuario();
             AsigAplicacionUsuario.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 9))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FrmAsignacionPerfiles AsignacionPerfiles = new FrmAsignacionPerfiles();
             AsignacionPerfiles.ShowDialog();
         }
 
         private void SeguridadBtnPerfiles_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 8))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmMantenimientoPerfiles MantenimientoPerfiles = new FrmMantenimientoPerfiles();
             MantenimientoPerfiles.ShowDialog();
         }
 
         private void SeguridadBtnUsuarios_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 5))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmUsuarios Usuarios = new FrmUsuarios();
             Usuarios.ShowDialog();
         }
@@ -127,18 +165,37 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnModulos_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 6))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             SeguridadFrmModulo Modulo = new SeguridadFrmModulo();
             Modulo.ShowDialog();
         }
 
         private void SeguridadBtnEmpleados_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 4))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FrmMantenimientoEmpleado Empleados = new FrmMantenimientoEmpleado();
             Empleados.ShowDialog();
         }
 
         private void SeguridadBtnAplicaciones_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 7))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmMantenimientoAplicacion Aplicaciones = new FrmMantenimientoAplicacion();
             Aplicaciones.ShowDialog();
         }
