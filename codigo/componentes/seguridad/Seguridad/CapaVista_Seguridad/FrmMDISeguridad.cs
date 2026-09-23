@@ -140,7 +140,6 @@ namespace CapaVista_Seguridad
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            FrmUsuarios Usuarios = new FrmUsuarios();
             Usuarios.ShowDialog();
         }
 
