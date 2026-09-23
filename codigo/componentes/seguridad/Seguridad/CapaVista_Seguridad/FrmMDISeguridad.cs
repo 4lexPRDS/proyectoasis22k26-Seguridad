@@ -70,6 +70,19 @@ namespace CapaVista_Seguridad
             return RutaGrafica;
         }
 
+        /*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ * Aqui realice la accion de que si el usuario tiene acceso se 
+ * realizara el llamado a la ventana de lo contrario se mostrara
+ * el mensaje.
+ * ===================================================================
+*/
         private void button10_Click(object sender, EventArgs e)
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 10))
@@ -143,26 +156,6 @@ namespace CapaVista_Seguridad
             Usuarios.ShowDialog();
         }
 
-        private void SeguridadBtnBurger_Click(object sender, EventArgs e)
-        {
-            if (SeguridadPnlNavegador.Width == 270)
-            {
-                SeguridadPnlNavegador.Width = 64;
-                SeguridadPnlDashboard.Location = new Point(200, 52);
-                SeguridadBtnBurger.Location = new Point(220, 13);
-                SeguridadLblUsuario.Location = new Point(285, 19);
-                SeguridadLblUsuarioRol.Location = new Point(285, 39);
-            }
-            else
-            {
-                SeguridadPnlNavegador.Width = 270;
-                SeguridadPnlDashboard.Location = new Point(307, 52);
-                SeguridadBtnBurger.Location = new Point(323, 13);
-                SeguridadLblUsuario.Location = new Point(390, 19);
-                SeguridadLblUsuarioRol.Location = new Point(390, 39);
-            }
-        }
-
         private void SeguridadBtnModulos_Click(object sender, EventArgs e)
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 6))
@@ -199,6 +192,31 @@ namespace CapaVista_Seguridad
             FrmMantenimientoAplicacion Aplicaciones = new FrmMantenimientoAplicacion();
             Aplicaciones.ShowDialog();
         }
+        /*
+         * Fin de codigo de Carlos David Calderón Ramirez
+        */
+
+        private void SeguridadBtnBurger_Click(object sender, EventArgs e)
+        {
+            if (SeguridadPnlNavegador.Width == 270)
+            {
+                SeguridadPnlNavegador.Width = 64;
+                SeguridadPnlDashboard.Location = new Point(200, 52);
+                SeguridadBtnBurger.Location = new Point(220, 13);
+                SeguridadLblUsuario.Location = new Point(285, 19);
+                SeguridadLblUsuarioRol.Location = new Point(285, 39);
+            }
+            else
+            {
+                SeguridadPnlNavegador.Width = 270;
+                SeguridadPnlDashboard.Location = new Point(307, 52);
+                SeguridadBtnBurger.Location = new Point(323, 13);
+                SeguridadLblUsuario.Location = new Point(390, 19);
+                SeguridadLblUsuarioRol.Location = new Point(390, 39);
+            }
+        }
+
+
 
         private void SeguridadBtnCerrarSesion_Click(object sender, EventArgs e)
         {
