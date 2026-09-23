@@ -41,8 +41,10 @@
             this.SeguridadLblEstado = new System.Windows.Forms.Label();
             this.SeguridadChkEstado = new System.Windows.Forms.CheckBox();
             this.SeguridadDgvModulos = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlBarraHerramientas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraHerramientas
@@ -64,7 +66,7 @@
             this.pnlBarraHerramientas.Controls.Add(this.SeguridadBtnSalir);
             this.pnlBarraHerramientas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBarraHerramientas.Location = new System.Drawing.Point(0, 0);
-            this.pnlBarraHerramientas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlBarraHerramientas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBarraHerramientas.Name = "pnlBarraHerramientas";
             this.pnlBarraHerramientas.Padding = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.pnlBarraHerramientas.Size = new System.Drawing.Size(813, 69);
@@ -80,7 +82,6 @@
             this.SeguridadBtnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnIngresar.Location = new System.Drawing.Point(10, 6);
             this.SeguridadBtnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnIngresar.Name = "SeguridadBtnIngresar";
@@ -98,7 +99,6 @@
             this.SeguridadBtnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnModificar.Location = new System.Drawing.Point(66, 6);
             this.SeguridadBtnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnModificar.Name = "SeguridadBtnModificar";
@@ -116,7 +116,6 @@
             this.SeguridadBtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnGuardar.Location = new System.Drawing.Point(122, 6);
             this.SeguridadBtnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnGuardar.Name = "SeguridadBtnGuardar";
@@ -134,7 +133,6 @@
             this.SeguridadBtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnCancelar.Location = new System.Drawing.Point(178, 6);
             this.SeguridadBtnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnCancelar.Name = "SeguridadBtnCancelar";
@@ -152,7 +150,6 @@
             this.SeguridadBtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnEliminar.Location = new System.Drawing.Point(234, 6);
             this.SeguridadBtnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnEliminar.Name = "SeguridadBtnEliminar";
@@ -170,7 +167,6 @@
             this.SeguridadBtnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnConsultar.Location = new System.Drawing.Point(290, 6);
             this.SeguridadBtnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnConsultar.Name = "SeguridadBtnConsultar";
@@ -188,7 +184,6 @@
             this.SeguridadBtnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnImprimir.Location = new System.Drawing.Point(346, 6);
             this.SeguridadBtnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnImprimir.Name = "SeguridadBtnImprimir";
@@ -206,7 +201,6 @@
             this.SeguridadBtnRefrescar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnRefrescar.Location = new System.Drawing.Point(402, 6);
             this.SeguridadBtnRefrescar.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnRefrescar.Name = "SeguridadBtnRefrescar";
@@ -224,7 +218,6 @@
             this.SeguridadBtnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnInicio.Location = new System.Drawing.Point(458, 6);
             this.SeguridadBtnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnInicio.Name = "SeguridadBtnInicio";
@@ -242,7 +235,6 @@
             this.SeguridadBtnAnterior.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAnterior.Location = new System.Drawing.Point(514, 6);
             this.SeguridadBtnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnAnterior.Name = "SeguridadBtnAnterior";
@@ -260,7 +252,6 @@
             this.SeguridadBtnSiguiente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSiguiente.Location = new System.Drawing.Point(570, 6);
             this.SeguridadBtnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnSiguiente.Name = "SeguridadBtnSiguiente";
@@ -278,7 +269,6 @@
             this.SeguridadBtnFin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnFin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnFin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnFin.Location = new System.Drawing.Point(626, 6);
             this.SeguridadBtnFin.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnFin.Name = "SeguridadBtnFin";
@@ -296,7 +286,6 @@
             this.SeguridadBtnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnAyuda.Location = new System.Drawing.Point(682, 6);
             this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
@@ -314,7 +303,6 @@
             this.SeguridadBtnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(197)))), ((int)(((byte)(190)))));
             this.SeguridadBtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(138)))));
             this.SeguridadBtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnSalir.Location = new System.Drawing.Point(738, 6);
             this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";
@@ -326,18 +314,20 @@
             // SeguridadLblIdModulo
             // 
             this.SeguridadLblIdModulo.AutoSize = true;
+            this.SeguridadLblIdModulo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblIdModulo.Location = new System.Drawing.Point(15, 83);
             this.SeguridadLblIdModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblIdModulo.Name = "SeguridadLblIdModulo";
-            this.SeguridadLblIdModulo.Size = new System.Drawing.Size(60, 13);
+            this.SeguridadLblIdModulo.Size = new System.Drawing.Size(61, 13);
             this.SeguridadLblIdModulo.TabIndex = 14;
             this.SeguridadLblIdModulo.Text = "Id Módulo :";
             // 
             // SeguridadTxtIdModulo
             // 
             this.SeguridadTxtIdModulo.BackColor = System.Drawing.Color.White;
+            this.SeguridadTxtIdModulo.Enabled = false;
             this.SeguridadTxtIdModulo.Location = new System.Drawing.Point(81, 80);
-            this.SeguridadTxtIdModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtIdModulo.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtIdModulo.Name = "SeguridadTxtIdModulo";
             this.SeguridadTxtIdModulo.ReadOnly = true;
             this.SeguridadTxtIdModulo.Size = new System.Drawing.Size(68, 20);
@@ -346,6 +336,7 @@
             // SeguridadLblNombreModulo
             // 
             this.SeguridadLblNombreModulo.AutoSize = true;
+            this.SeguridadLblNombreModulo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblNombreModulo.Location = new System.Drawing.Point(165, 83);
             this.SeguridadLblNombreModulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblNombreModulo.Name = "SeguridadLblNombreModulo";
@@ -356,7 +347,7 @@
             // SeguridadTxtNombreModulo
             // 
             this.SeguridadTxtNombreModulo.Location = new System.Drawing.Point(254, 80);
-            this.SeguridadTxtNombreModulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtNombreModulo.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtNombreModulo.Name = "SeguridadTxtNombreModulo";
             this.SeguridadTxtNombreModulo.Size = new System.Drawing.Size(151, 20);
             this.SeguridadTxtNombreModulo.TabIndex = 17;
@@ -364,17 +355,18 @@
             // SeguridadLblDescripcion
             // 
             this.SeguridadLblDescripcion.AutoSize = true;
+            this.SeguridadLblDescripcion.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblDescripcion.Location = new System.Drawing.Point(418, 83);
             this.SeguridadLblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
-            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(69, 13);
+            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(68, 13);
             this.SeguridadLblDescripcion.TabIndex = 18;
             this.SeguridadLblDescripcion.Text = "Descripción :";
             // 
             // SeguridadTxtDescripcion
             // 
             this.SeguridadTxtDescripcion.Location = new System.Drawing.Point(488, 80);
-            this.SeguridadTxtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadTxtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadTxtDescripcion.Name = "SeguridadTxtDescripcion";
             this.SeguridadTxtDescripcion.Size = new System.Drawing.Size(211, 20);
             this.SeguridadTxtDescripcion.TabIndex = 19;
@@ -382,18 +374,19 @@
             // SeguridadLblEstado
             // 
             this.SeguridadLblEstado.AutoSize = true;
+            this.SeguridadLblEstado.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblEstado.Location = new System.Drawing.Point(712, 83);
             this.SeguridadLblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SeguridadLblEstado.Name = "SeguridadLblEstado";
-            this.SeguridadLblEstado.Size = new System.Drawing.Size(46, 13);
+            this.SeguridadLblEstado.Size = new System.Drawing.Size(47, 13);
             this.SeguridadLblEstado.TabIndex = 20;
             this.SeguridadLblEstado.Text = "Estado :";
             // 
             // SeguridadChkEstado
             // 
             this.SeguridadChkEstado.AutoSize = true;
-            this.SeguridadChkEstado.Location = new System.Drawing.Point(758, 81);
-            this.SeguridadChkEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadChkEstado.Location = new System.Drawing.Point(765, 84);
+            this.SeguridadChkEstado.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadChkEstado.Name = "SeguridadChkEstado";
             this.SeguridadChkEstado.Size = new System.Drawing.Size(15, 14);
             this.SeguridadChkEstado.TabIndex = 21;
@@ -413,14 +406,24 @@
             this.SeguridadDgvModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.SeguridadDgvModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SeguridadDgvModulos.EnableHeadersVisualStyles = false;
-            this.SeguridadDgvModulos.Location = new System.Drawing.Point(15, 114);
-            this.SeguridadDgvModulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SeguridadDgvModulos.Location = new System.Drawing.Point(8, 116);
+            this.SeguridadDgvModulos.Margin = new System.Windows.Forms.Padding(2);
             this.SeguridadDgvModulos.Name = "SeguridadDgvModulos";
             this.SeguridadDgvModulos.ReadOnly = true;
             this.SeguridadDgvModulos.RowHeadersWidth = 30;
-            this.SeguridadDgvModulos.Size = new System.Drawing.Size(783, 276);
+            this.SeguridadDgvModulos.Size = new System.Drawing.Size(743, 276);
             this.SeguridadDgvModulos.TabIndex = 22;
             this.SeguridadDgvModulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SeguridadDgvModulos_CellClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources._3;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(754, 348);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 63);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmModulo
             // 
@@ -428,6 +431,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(201)))), ((int)(((byte)(161)))));
             this.ClientSize = new System.Drawing.Size(813, 414);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnlBarraHerramientas);
             this.Controls.Add(this.SeguridadLblIdModulo);
             this.Controls.Add(this.SeguridadTxtIdModulo);
@@ -439,13 +443,14 @@
             this.Controls.Add(this.SeguridadChkEstado);
             this.Controls.Add(this.SeguridadDgvModulos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmModulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2006 - MantenimientoModulo";
             this.pnlBarraHerramientas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvModulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +483,6 @@
         private System.Windows.Forms.Label SeguridadLblEstado;
         private System.Windows.Forms.CheckBox SeguridadChkEstado;
         private System.Windows.Forms.DataGridView SeguridadDgvModulos;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

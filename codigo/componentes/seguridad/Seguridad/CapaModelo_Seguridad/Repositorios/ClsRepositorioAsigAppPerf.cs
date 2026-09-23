@@ -18,12 +18,25 @@ namespace CapaModelo_Seguridad.Repositorios
         private string _Delete;
 
         public ClsRepositorioAsigAppPerf()
-        {
-            //esto debe estar igual a la base para que haga match tambein 
-            _SelectAll = "SELECT * FROM tblRolModuloAplicacion";
-            _Insert = "INSERT INTO tblRolModuloAplicacion VALUES (?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT)";
-            _Update = "UPDATE tblRolModuloAplicacion SET derInsertarRolModuloAplicacion=?, derEditarRolModuloAplicacion=?, derEliminarRolModuloAplicacion=?, derImprimirRolModuloAplicacion=? WHERE idRol=? AND idModulo=? AND idAplicacion=?";
-            _Delete = "DELETE FROM tblRolModuloAplicacion WHERE idRol=? AND idModulo=? AND idAplicacion=?";
+        { 
+                _SelectAll = @"
+        SELECT 
+            p.idRol, r.nombreRol,
+            p.idModulo, m.nombreModulo,
+            p.idAplicacion, a.nombreAplicacion,
+            p.derInsertarRolModuloAplicacion,
+            p.derEditarRolModuloAplicacion,
+            p.derEliminarRolModuloAplicacion,
+            p.derImprimirRolModuloAplicacion,
+            p.created_at,
+            p.updated_at
+        FROM tblRolModuloAplicacion p
+        INNER JOIN tblRol r ON p.idRol = r.idRol
+        INNER JOIN tblModulo m ON p.idModulo = m.idModulo
+        INNER JOIN tblAplicacion a ON p.idAplicacion = a.idAplicacion";
+        _Insert = "INSERT INTO tblRolModuloAplicacion VALUES (?, ?, ?, ?, ?, ?, ?, DEFAULT, DEFAULT)";
+        _Update = "UPDATE tblRolModuloAplicacion SET derInsertarRolModuloAplicacion=?, derEditarRolModuloAplicacion=?, derEliminarRolModuloAplicacion=?, derImprimirRolModuloAplicacion=? WHERE idRol=? AND idModulo=? AND idAplicacion=?";
+        _Delete = "DELETE FROM tblRolModuloAplicacion WHERE idRol=? AND idModulo=? AND idAplicacion=?";
         }
 
         public int SeguridadMetAgregar(ClsAsigAppPerf Entidad)
@@ -72,14 +85,17 @@ namespace CapaModelo_Seguridad.Repositorios
             {
                 var AsigPerf = new ClsAsigAppPerf();
                 AsigPerf.IdRol = Convert.ToInt32(Fila[0]);
-                AsigPerf.IdModulo = Convert.ToInt32(Fila[1]);
-                AsigPerf.IdAplicacion = Convert.ToInt32(Fila[2]);
-                AsigPerf.DerInsertarRolModuloAplicacion = Convert.ToBoolean(Fila[3]);
-                AsigPerf.DerEditarRolModuloAplicacion = Convert.ToBoolean(Fila[4]);
-                AsigPerf.DerEliminarRolModuloAplicacion = Convert.ToBoolean(Fila[5]);
-                AsigPerf.DerImprimirRolModuloAplicacion = Convert.ToBoolean(Fila[6]);
-                AsigPerf.CreatedAt = Convert.ToDateTime(Fila[7]);
-                AsigPerf.UpdatedAt = Convert.ToDateTime(Fila[8]);
+                AsigPerf.NombreRol = Fila[1].ToString();
+                AsigPerf.IdModulo = Convert.ToInt32(Fila[2]);
+                AsigPerf.NombreModulo = Fila[3].ToString();
+                AsigPerf.IdAplicacion = Convert.ToInt32(Fila[4]);
+                AsigPerf.NombreAplicacion = Fila[5].ToString();
+                AsigPerf.DerInsertarRolModuloAplicacion = Convert.ToBoolean(Fila[6]);
+                AsigPerf.DerEditarRolModuloAplicacion = Convert.ToBoolean(Fila[7]);
+                AsigPerf.DerEliminarRolModuloAplicacion = Convert.ToBoolean(Fila[8]);
+                AsigPerf.DerImprimirRolModuloAplicacion = Convert.ToBoolean(Fila[9]);
+                AsigPerf.CreatedAt = Convert.ToDateTime(Fila[10]);
+                AsigPerf.UpdatedAt = Convert.ToDateTime(Fila[11]);
                 ListaAsigAppPerf.Add(AsigPerf);
             }
             TablaDatos.Clear();

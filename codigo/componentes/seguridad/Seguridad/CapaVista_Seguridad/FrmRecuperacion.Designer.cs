@@ -51,6 +51,7 @@
             this.SeguridadPbIconoVerificar = new System.Windows.Forms.PictureBox();
             this.SeguridadLblSeparadorPasos = new System.Windows.Forms.Label();
             this.SeguridadPnlEnviarCodigo = new System.Windows.Forms.Panel();
+            this.SeguridadTxtUsuario = new System.Windows.Forms.TextBox();
             this.SeguridadBtnEnviarCodigo = new System.Windows.Forms.Button();
             this.SeguridadLblCorreoElectronico = new System.Windows.Forms.Label();
             this.SeguridadTxtCorreo = new System.Windows.Forms.TextBox();
@@ -232,7 +233,7 @@
             this.SeguridadLblConfirmarContrasena.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblConfirmarContrasena.Location = new System.Drawing.Point(8, 270);
             this.SeguridadLblConfirmarContrasena.Name = "SeguridadLblConfirmarContrasena";
-            this.SeguridadLblConfirmarContrasena.Size = new System.Drawing.Size(144, 14);
+            this.SeguridadLblConfirmarContrasena.Size = new System.Drawing.Size(142, 14);
             this.SeguridadLblConfirmarContrasena.TabIndex = 9;
             this.SeguridadLblConfirmarContrasena.Text = "🔒  Confirmar contraseña";
             // 
@@ -251,7 +252,6 @@
             // SeguridadBtnCambiarContrasena
             // 
             this.SeguridadBtnCambiarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(95)))), ((int)(((byte)(102)))));
-            this.SeguridadBtnCambiarContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnCambiarContrasena.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadBtnCambiarContrasena.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnCambiarContrasena.Location = new System.Drawing.Point(12, 333);
@@ -267,7 +267,7 @@
             this.SeguridadLblNuevaContrasena.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblNuevaContrasena.Location = new System.Drawing.Point(8, 205);
             this.SeguridadLblNuevaContrasena.Name = "SeguridadLblNuevaContrasena";
-            this.SeguridadLblNuevaContrasena.Size = new System.Drawing.Size(127, 14);
+            this.SeguridadLblNuevaContrasena.Size = new System.Drawing.Size(125, 14);
             this.SeguridadLblNuevaContrasena.TabIndex = 6;
             this.SeguridadLblNuevaContrasena.Text = "🔒  Nueva contraseña";
             // 
@@ -289,7 +289,7 @@
             this.SeguridadLblCodigoVerificacion.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblCodigoVerificacion.Location = new System.Drawing.Point(8, 144);
             this.SeguridadLblCodigoVerificacion.Name = "SeguridadLblCodigoVerificacion";
-            this.SeguridadLblCodigoVerificacion.Size = new System.Drawing.Size(147, 14);
+            this.SeguridadLblCodigoVerificacion.Size = new System.Drawing.Size(144, 14);
             this.SeguridadLblCodigoVerificacion.TabIndex = 4;
             this.SeguridadLblCodigoVerificacion.Text = "🛡  Código de verificación";
             // 
@@ -355,6 +355,7 @@
             // SeguridadPnlEnviarCodigo
             // 
             this.SeguridadPnlEnviarCodigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadTxtUsuario);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadBtnEnviarCodigo);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadLblCorreoElectronico);
             this.SeguridadPnlEnviarCodigo.Controls.Add(this.SeguridadTxtCorreo);
@@ -368,10 +369,20 @@
             this.SeguridadPnlEnviarCodigo.Size = new System.Drawing.Size(284, 377);
             this.SeguridadPnlEnviarCodigo.TabIndex = 0;
             // 
+            // SeguridadTxtUsuario
+            // 
+            this.SeguridadTxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.SeguridadTxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SeguridadTxtUsuario.ForeColor = System.Drawing.Color.Black;
+            this.SeguridadTxtUsuario.Location = new System.Drawing.Point(12, 217);
+            this.SeguridadTxtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SeguridadTxtUsuario.Name = "SeguridadTxtUsuario";
+            this.SeguridadTxtUsuario.Size = new System.Drawing.Size(240, 23);
+            this.SeguridadTxtUsuario.TabIndex = 8;
+            // 
             // SeguridadBtnEnviarCodigo
             // 
             this.SeguridadBtnEnviarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(95)))), ((int)(((byte)(102)))));
-            this.SeguridadBtnEnviarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SeguridadBtnEnviarCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadBtnEnviarCodigo.ForeColor = System.Drawing.Color.White;
             this.SeguridadBtnEnviarCodigo.Location = new System.Drawing.Point(12, 337);
@@ -408,7 +419,7 @@
             this.SeguridadLblUsuario.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadLblUsuario.Location = new System.Drawing.Point(8, 191);
             this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
-            this.SeguridadLblUsuario.Size = new System.Drawing.Size(68, 14);
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(66, 14);
             this.SeguridadLblUsuario.TabIndex = 4;
             this.SeguridadLblUsuario.Text = "👤  Usuario";
             // 
@@ -419,7 +430,7 @@
             this.SeguridadLblDescripcionEnviarCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.SeguridadLblDescripcionEnviarCodigo.Location = new System.Drawing.Point(3, 124);
             this.SeguridadLblDescripcionEnviarCodigo.Name = "SeguridadLblDescripcionEnviarCodigo";
-            this.SeguridadLblDescripcionEnviarCodigo.Size = new System.Drawing.Size(223, 30);
+            this.SeguridadLblDescripcionEnviarCodigo.Size = new System.Drawing.Size(222, 30);
             this.SeguridadLblDescripcionEnviarCodigo.TabIndex = 2;
             this.SeguridadLblDescripcionEnviarCodigo.Text = "Ingresa tu usuario y correo electrónico. \r\nTe enviaremos un código de verificació" +
     "n.";
@@ -574,7 +585,7 @@
             this.SeguridadLblInformacionProtegida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.SeguridadLblInformacionProtegida.Location = new System.Drawing.Point(74, 8);
             this.SeguridadLblInformacionProtegida.Name = "SeguridadLblInformacionProtegida";
-            this.SeguridadLblInformacionProtegida.Size = new System.Drawing.Size(92, 30);
+            this.SeguridadLblInformacionProtegida.Size = new System.Drawing.Size(91, 30);
             this.SeguridadLblInformacionProtegida.TabIndex = 1;
             this.SeguridadLblInformacionProtegida.Text = "Tu información \r\nestá protegida";
             // 
@@ -747,6 +758,7 @@
         private System.Windows.Forms.LinkLabel SeguridadLnkRegresarInicioSesion;
         private System.Windows.Forms.PictureBox SeguridadPbIconoVigenciaCodigo;
         private System.Windows.Forms.Label SeguridadLblAvisoCodigo;
+        private System.Windows.Forms.TextBox SeguridadTxtUsuario;
     }
 }
 

@@ -63,16 +63,19 @@ namespace CapaControlador_Seguridad.Modelos_de_controladores
                 {
                     case EstadoEntidad.Added:
                         _RepositorioMantenimientoApp.SeguridadMetAgregar(DatosAplicacion);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("INSERT", "tblAplicacion", DatosAplicacion.IdAplicacion, "Se agregó la aplicación: " + _NombreAplicacion);
                         Mensaje = "Grabacion exitosa";
                         break;
 
                     case EstadoEntidad.Modified:
                         _RepositorioMantenimientoApp.SeguridadMetEditar(DatosAplicacion);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("UPDATE", "tblAplicacion", DatosAplicacion.IdAplicacion, "Se actualizó la aplicación: " + _NombreAplicacion);
                         Mensaje = "Actualizacion exitosa";
                         break;
 
                     case EstadoEntidad.Deleted:
                         _RepositorioMantenimientoApp.SeguridadMetRemover(DatosAplicacion);
+                        ClsModeloBitacora.SeguridadMetRegistrarAccion("DELETE", "tblAplicacion", DatosAplicacion.IdAplicacion, "Se eliminó la aplicación ID: " + DatosAplicacion.IdAplicacion);
                         Mensaje = "Eliminacion exitosa";
                         break;
                 }

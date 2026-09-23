@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMDISeguridad));
             this.SeguridadPnlFondo = new System.Windows.Forms.Panel();
+            this.SeguridadLblUsuarioRol = new System.Windows.Forms.Label();
             this.SeguridadBtnBurger = new System.Windows.Forms.Button();
-            this.SeguridadLblUsuariosRol = new System.Windows.Forms.Label();
+            this.SeguridadLblUsuario = new System.Windows.Forms.Label();
             this.SeguridadPnlNavegador = new System.Windows.Forms.Panel();
             this.SeguridadBtnBitacora = new System.Windows.Forms.Button();
             this.SeguridadBtnAplicaUsuario = new System.Windows.Forms.Button();
@@ -83,14 +84,27 @@
             // SeguridadPnlFondo
             // 
             this.SeguridadPnlFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(238)))), ((int)(((byte)(225)))));
+            this.SeguridadPnlFondo.Controls.Add(this.SeguridadLblUsuarioRol);
             this.SeguridadPnlFondo.Controls.Add(this.SeguridadBtnBurger);
-            this.SeguridadPnlFondo.Controls.Add(this.SeguridadLblUsuariosRol);
+            this.SeguridadPnlFondo.Controls.Add(this.SeguridadLblUsuario);
             this.SeguridadPnlFondo.Controls.Add(this.SeguridadPnlNavegador);
             this.SeguridadPnlFondo.Controls.Add(this.SeguridadPnlDashboard);
             this.SeguridadPnlFondo.Location = new System.Drawing.Point(0, 0);
             this.SeguridadPnlFondo.Name = "SeguridadPnlFondo";
             this.SeguridadPnlFondo.Size = new System.Drawing.Size(1540, 1028);
             this.SeguridadPnlFondo.TabIndex = 0;
+            // 
+            // SeguridadLblUsuarioRol
+            // 
+            this.SeguridadLblUsuarioRol.AutoSize = true;
+            this.SeguridadLblUsuarioRol.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblUsuarioRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLblUsuarioRol.Location = new System.Drawing.Point(624, 14);
+            this.SeguridadLblUsuarioRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SeguridadLblUsuarioRol.Name = "SeguridadLblUsuarioRol";
+            this.SeguridadLblUsuarioRol.Size = new System.Drawing.Size(120, 18);
+            this.SeguridadLblUsuarioRol.TabIndex = 13;
+            this.SeguridadLblUsuarioRol.Text = "Rol:                ";
             // 
             // SeguridadBtnBurger
             // 
@@ -104,17 +118,17 @@
             this.SeguridadBtnBurger.UseVisualStyleBackColor = false;
             this.SeguridadBtnBurger.Click += new System.EventHandler(this.SeguridadBtnBurger_Click);
             // 
-            // SeguridadLblUsuariosRol
+            // SeguridadLblUsuario
             // 
-            this.SeguridadLblUsuariosRol.AutoSize = true;
-            this.SeguridadLblUsuariosRol.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadLblUsuariosRol.Font = new System.Drawing.Font("Lucida Fax", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeguridadLblUsuariosRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.SeguridadLblUsuariosRol.Location = new System.Drawing.Point(385, 14);
-            this.SeguridadLblUsuariosRol.Name = "SeguridadLblUsuariosRol";
-            this.SeguridadLblUsuariosRol.Size = new System.Drawing.Size(312, 20);
-            this.SeguridadLblUsuariosRol.TabIndex = 4;
-            this.SeguridadLblUsuariosRol.Text = "Usuario:                                Rol:\r\n";
+            this.SeguridadLblUsuario.AutoSize = true;
+            this.SeguridadLblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblUsuario.Font = new System.Drawing.Font("Lucida Fax", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadLblUsuario.Location = new System.Drawing.Point(385, 14);
+            this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(223, 20);
+            this.SeguridadLblUsuario.TabIndex = 4;
+            this.SeguridadLblUsuario.Text = "Usuario:                       ";
             // 
             // SeguridadPnlNavegador
             // 
@@ -290,7 +304,7 @@
             // SeguridadBtnAyudas
             // 
             this.SeguridadBtnAyudas.BackColor = System.Drawing.Color.Transparent;
-            this.SeguridadBtnAyudas.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayuda2;
+            this.SeguridadBtnAyudas.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
             this.SeguridadBtnAyudas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SeguridadBtnAyudas.Location = new System.Drawing.Point(52, 261);
             this.SeguridadBtnAyudas.Name = "SeguridadBtnAyudas";
@@ -566,7 +580,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 690);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.SeguridadPnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMDISeguridad";
@@ -604,7 +618,6 @@
         private System.Windows.Forms.PictureBox SeguridadPbButti;
         private System.Windows.Forms.Label SeguridadLblParrafo;
         private System.Windows.Forms.Label SeguridadLblResumen;
-        private System.Windows.Forms.Label SeguridadLblUsuariosRol;
         private System.Windows.Forms.Panel SeguridadPnlKPI1;
         private System.Windows.Forms.Panel SeguridadPnlKPI6;
         private System.Windows.Forms.Panel SeguridadPnlKPI5;
@@ -634,5 +647,7 @@
         private System.Windows.Forms.Label SeguridadLblKPIResp4;
         private System.Windows.Forms.Label SeguridadLblKPIResp3;
         private System.Windows.Forms.Label SeguridadLblKPIResp2;
+        private System.Windows.Forms.Label SeguridadLblUsuarioRol;
+        private System.Windows.Forms.Label SeguridadLblUsuario;
     }
 }

@@ -34,8 +34,8 @@
             this.btnAyuda = new System.Windows.Forms.Button();
             this.SeguridadGbxDatos = new System.Windows.Forms.GroupBox();
             this.SeguridadCboAplicacion = new System.Windows.Forms.ComboBox();
-            this.CboSeguridadModulo = new System.Windows.Forms.ComboBox();
-            this.CboSeguridadUsuario = new System.Windows.Forms.ComboBox();
+            this.SeguridadCboModulo = new System.Windows.Forms.ComboBox();
+            this.SeguridadCboUsuario = new System.Windows.Forms.ComboBox();
             this.SeguridadLblUsuario = new System.Windows.Forms.Label();
             this.SeguridadLblModulo = new System.Windows.Forms.Label();
             this.SeguridadLblAplicacion = new System.Windows.Forms.Label();
@@ -44,16 +44,16 @@
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeguridadDgvAsignaciones = new System.Windows.Forms.DataGridView();
             this.SeguridadGbxAsignaciones = new System.Windows.Forms.GroupBox();
-            this.BtnSeguridadInsertar = new System.Windows.Forms.Button();
-            this.BtnSeguridadSalir = new System.Windows.Forms.Button();
-            this.BtnSeguridadQuitar = new System.Windows.Forms.Button();
-            this.BtnSeguridadBuscar = new System.Windows.Forms.Button();
+            this.SeguridadBtnInsertar = new System.Windows.Forms.Button();
+            this.SeguridadBtnSalir = new System.Windows.Forms.Button();
+            this.SeguridadBtnQuitar = new System.Windows.Forms.Button();
+            this.SeguridadBtnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.SeguridadPnlEncabezado = new System.Windows.Forms.Panel();
             this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
             this.SeguridadLblDescripcion = new System.Windows.Forms.Label();
-            this.LblSeguridadDescripcion = new System.Windows.Forms.Label();
+            this.SeguridadLblTitulo = new System.Windows.Forms.Label();
             this.SeguridadPbIconoAsignacion = new System.Windows.Forms.PictureBox();
             this.SeguridadGbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvAsignaciones)).BeginInit();
@@ -76,8 +76,8 @@
             // SeguridadGbxDatos
             // 
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadCboAplicacion);
-            this.SeguridadGbxDatos.Controls.Add(this.CboSeguridadModulo);
-            this.SeguridadGbxDatos.Controls.Add(this.CboSeguridadUsuario);
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadCboModulo);
+            this.SeguridadGbxDatos.Controls.Add(this.SeguridadCboUsuario);
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblUsuario);
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblModulo);
             this.SeguridadGbxDatos.Controls.Add(this.SeguridadLblAplicacion);
@@ -99,30 +99,30 @@
             this.SeguridadCboAplicacion.Location = new System.Drawing.Point(513, 81);
             this.SeguridadCboAplicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeguridadCboAplicacion.Name = "SeguridadCboAplicacion";
-            this.SeguridadCboAplicacion.Size = new System.Drawing.Size(216, 33);
+            this.SeguridadCboAplicacion.Size = new System.Drawing.Size(216, 40);
             this.SeguridadCboAplicacion.TabIndex = 10;
             // 
-            // CboSeguridadModulo
+            // SeguridadCboModulo
             // 
-            this.CboSeguridadModulo.DropDownWidth = 180;
-            this.CboSeguridadModulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboSeguridadModulo.FormattingEnabled = true;
-            this.CboSeguridadModulo.Location = new System.Drawing.Point(252, 81);
-            this.CboSeguridadModulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CboSeguridadModulo.Name = "CboSeguridadModulo";
-            this.CboSeguridadModulo.Size = new System.Drawing.Size(216, 33);
-            this.CboSeguridadModulo.TabIndex = 9;
+            this.SeguridadCboModulo.DropDownWidth = 180;
+            this.SeguridadCboModulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadCboModulo.FormattingEnabled = true;
+            this.SeguridadCboModulo.Location = new System.Drawing.Point(252, 81);
+            this.SeguridadCboModulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadCboModulo.Name = "SeguridadCboModulo";
+            this.SeguridadCboModulo.Size = new System.Drawing.Size(216, 40);
+            this.SeguridadCboModulo.TabIndex = 9;
             // 
-            // CboSeguridadUsuario
+            // SeguridadCboUsuario
             // 
-            this.CboSeguridadUsuario.DropDownWidth = 180;
-            this.CboSeguridadUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CboSeguridadUsuario.FormattingEnabled = true;
-            this.CboSeguridadUsuario.Location = new System.Drawing.Point(7, 81);
-            this.CboSeguridadUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CboSeguridadUsuario.Name = "CboSeguridadUsuario";
-            this.CboSeguridadUsuario.Size = new System.Drawing.Size(216, 33);
-            this.CboSeguridadUsuario.TabIndex = 8;
+            this.SeguridadCboUsuario.DropDownWidth = 180;
+            this.SeguridadCboUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadCboUsuario.FormattingEnabled = true;
+            this.SeguridadCboUsuario.Location = new System.Drawing.Point(7, 81);
+            this.SeguridadCboUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadCboUsuario.Name = "SeguridadCboUsuario";
+            this.SeguridadCboUsuario.Size = new System.Drawing.Size(216, 40);
+            this.SeguridadCboUsuario.TabIndex = 8;
             // 
             // SeguridadLblUsuario
             // 
@@ -131,7 +131,7 @@
             this.SeguridadLblUsuario.Location = new System.Drawing.Point(8, 50);
             this.SeguridadLblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblUsuario.Name = "SeguridadLblUsuario";
-            this.SeguridadLblUsuario.Size = new System.Drawing.Size(66, 21);
+            this.SeguridadLblUsuario.Size = new System.Drawing.Size(85, 27);
             this.SeguridadLblUsuario.TabIndex = 1;
             this.SeguridadLblUsuario.Text = "Usuario";
             // 
@@ -142,7 +142,7 @@
             this.SeguridadLblModulo.Location = new System.Drawing.Point(263, 50);
             this.SeguridadLblModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblModulo.Name = "SeguridadLblModulo";
-            this.SeguridadLblModulo.Size = new System.Drawing.Size(63, 21);
+            this.SeguridadLblModulo.Size = new System.Drawing.Size(82, 27);
             this.SeguridadLblModulo.TabIndex = 3;
             this.SeguridadLblModulo.Text = "Módulo";
             // 
@@ -153,7 +153,7 @@
             this.SeguridadLblAplicacion.Location = new System.Drawing.Point(532, 50);
             this.SeguridadLblAplicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblAplicacion.Name = "SeguridadLblAplicacion";
-            this.SeguridadLblAplicacion.Size = new System.Drawing.Size(85, 21);
+            this.SeguridadLblAplicacion.Size = new System.Drawing.Size(108, 27);
             this.SeguridadLblAplicacion.TabIndex = 5;
             this.SeguridadLblAplicacion.Text = "Aplicación";
             // 
@@ -213,10 +213,10 @@
             // 
             // SeguridadGbxAsignaciones
             // 
-            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadInsertar);
-            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadSalir);
-            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadQuitar);
-            this.SeguridadGbxAsignaciones.Controls.Add(this.BtnSeguridadBuscar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadBtnInsertar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadBtnSalir);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadBtnQuitar);
+            this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadBtnBuscar);
             this.SeguridadGbxAsignaciones.Controls.Add(this.SeguridadDgvAsignaciones);
             this.SeguridadGbxAsignaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SeguridadGbxAsignaciones.Location = new System.Drawing.Point(16, 405);
@@ -228,61 +228,61 @@
             this.SeguridadGbxAsignaciones.TabStop = false;
             this.SeguridadGbxAsignaciones.Text = "Asignaciones";
             // 
-            // BtnSeguridadInsertar
+            // SeguridadBtnInsertar
             // 
-            this.BtnSeguridadInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.BtnSeguridadInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguridadInsertar.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.BtnSeguridadInsertar.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadInsertar.Location = new System.Drawing.Point(988, 174);
-            this.BtnSeguridadInsertar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnSeguridadInsertar.Name = "BtnSeguridadInsertar";
-            this.BtnSeguridadInsertar.Size = new System.Drawing.Size(213, 48);
-            this.BtnSeguridadInsertar.TabIndex = 17;
-            this.BtnSeguridadInsertar.Text = "Insertar 🧾";
-            this.BtnSeguridadInsertar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadBtnInsertar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_guardarN;
+            this.SeguridadBtnInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnInsertar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.SeguridadBtnInsertar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnInsertar.Location = new System.Drawing.Point(988, 175);
+            this.SeguridadBtnInsertar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnInsertar.Name = "SeguridadBtnInsertar";
+            this.SeguridadBtnInsertar.Size = new System.Drawing.Size(99, 91);
+            this.SeguridadBtnInsertar.TabIndex = 17;
+            this.SeguridadBtnInsertar.UseVisualStyleBackColor = false;
             // 
-            // BtnSeguridadSalir
+            // SeguridadBtnSalir
             // 
-            this.BtnSeguridadSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.BtnSeguridadSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguridadSalir.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.BtnSeguridadSalir.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadSalir.Location = new System.Drawing.Point(988, 252);
-            this.BtnSeguridadSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnSeguridadSalir.Name = "BtnSeguridadSalir";
-            this.BtnSeguridadSalir.Size = new System.Drawing.Size(213, 46);
-            this.BtnSeguridadSalir.TabIndex = 16;
-            this.BtnSeguridadSalir.Text = "Salir 🚪";
-            this.BtnSeguridadSalir.UseVisualStyleBackColor = false;
+            this.SeguridadBtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadBtnSalir.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_salirN;
+            this.SeguridadBtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnSalir.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.SeguridadBtnSalir.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnSalir.Location = new System.Drawing.Point(1104, 175);
+            this.SeguridadBtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnSalir.Name = "SeguridadBtnSalir";
+            this.SeguridadBtnSalir.Size = new System.Drawing.Size(99, 91);
+            this.SeguridadBtnSalir.TabIndex = 16;
+            this.SeguridadBtnSalir.UseVisualStyleBackColor = false;
             // 
-            // BtnSeguridadQuitar
+            // SeguridadBtnQuitar
             // 
-            this.BtnSeguridadQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.BtnSeguridadQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguridadQuitar.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.BtnSeguridadQuitar.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadQuitar.Location = new System.Drawing.Point(988, 96);
-            this.BtnSeguridadQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnSeguridadQuitar.Name = "BtnSeguridadQuitar";
-            this.BtnSeguridadQuitar.Size = new System.Drawing.Size(213, 46);
-            this.BtnSeguridadQuitar.TabIndex = 15;
-            this.BtnSeguridadQuitar.Text = "Quitar ❌";
-            this.BtnSeguridadQuitar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadBtnQuitar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_eliminarN;
+            this.SeguridadBtnQuitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnQuitar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.SeguridadBtnQuitar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnQuitar.Location = new System.Drawing.Point(1104, 52);
+            this.SeguridadBtnQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnQuitar.Name = "SeguridadBtnQuitar";
+            this.SeguridadBtnQuitar.Size = new System.Drawing.Size(99, 91);
+            this.SeguridadBtnQuitar.TabIndex = 15;
+            this.SeguridadBtnQuitar.UseVisualStyleBackColor = false;
             // 
-            // BtnSeguridadBuscar
+            // SeguridadBtnBuscar
             // 
-            this.BtnSeguridadBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            this.BtnSeguridadBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSeguridadBuscar.Font = new System.Drawing.Font("Tahoma", 13.8F);
-            this.BtnSeguridadBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnSeguridadBuscar.Location = new System.Drawing.Point(988, 25);
-            this.BtnSeguridadBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnSeguridadBuscar.Name = "BtnSeguridadBuscar";
-            this.BtnSeguridadBuscar.Size = new System.Drawing.Size(213, 49);
-            this.BtnSeguridadBuscar.TabIndex = 14;
-            this.BtnSeguridadBuscar.Text = "Buscar 🔍";
-            this.BtnSeguridadBuscar.UseVisualStyleBackColor = false;
+            this.SeguridadBtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
+            this.SeguridadBtnBuscar.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.Buscar;
+            this.SeguridadBtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnBuscar.Font = new System.Drawing.Font("Tahoma", 13.8F);
+            this.SeguridadBtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.SeguridadBtnBuscar.Location = new System.Drawing.Point(988, 52);
+            this.SeguridadBtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SeguridadBtnBuscar.Name = "SeguridadBtnBuscar";
+            this.SeguridadBtnBuscar.Size = new System.Drawing.Size(99, 91);
+            this.SeguridadBtnBuscar.TabIndex = 14;
+            this.SeguridadBtnBuscar.UseVisualStyleBackColor = false;
             // 
             // lblTitulo
             // 
@@ -291,7 +291,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(-80, -82);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(342, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(424, 29);
             this.lblTitulo.TabIndex = 18;
             this.lblTitulo.Text = "Asignación de Aplicación a Usuario";
             // 
@@ -301,7 +301,7 @@
             this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadBtnAyuda);
             this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadPbMascota);
             this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadLblDescripcion);
-            this.SeguridadPnlEncabezado.Controls.Add(this.LblSeguridadDescripcion);
+            this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadLblTitulo);
             this.SeguridadPnlEncabezado.Controls.Add(this.SeguridadPbIconoAsignacion);
             this.SeguridadPnlEncabezado.Location = new System.Drawing.Point(3, 14);
             this.SeguridadPnlEncabezado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -339,21 +339,21 @@
             this.SeguridadLblDescripcion.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.SeguridadLblDescripcion.Location = new System.Drawing.Point(237, 112);
             this.SeguridadLblDescripcion.Name = "SeguridadLblDescripcion";
-            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(338, 18);
+            this.SeguridadLblDescripcion.Size = new System.Drawing.Size(415, 22);
             this.SeguridadLblDescripcion.TabIndex = 2;
             this.SeguridadLblDescripcion.Text = "Administra la asignación de aplicaciones a usuarios.";
             // 
-            // LblSeguridadDescripcion
+            // SeguridadLblTitulo
             // 
-            this.LblSeguridadDescripcion.AutoSize = true;
-            this.LblSeguridadDescripcion.BackColor = System.Drawing.Color.Transparent;
-            this.LblSeguridadDescripcion.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeguridadDescripcion.ForeColor = System.Drawing.Color.Teal;
-            this.LblSeguridadDescripcion.Location = new System.Drawing.Point(235, 70);
-            this.LblSeguridadDescripcion.Name = "LblSeguridadDescripcion";
-            this.LblSeguridadDescripcion.Size = new System.Drawing.Size(410, 25);
-            this.LblSeguridadDescripcion.TabIndex = 1;
-            this.LblSeguridadDescripcion.Text = "Asignación de Aplicación a Usuario";
+            this.SeguridadLblTitulo.AutoSize = true;
+            this.SeguridadLblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.SeguridadLblTitulo.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLblTitulo.ForeColor = System.Drawing.Color.Teal;
+            this.SeguridadLblTitulo.Location = new System.Drawing.Point(235, 70);
+            this.SeguridadLblTitulo.Name = "SeguridadLblTitulo";
+            this.SeguridadLblTitulo.Size = new System.Drawing.Size(506, 31);
+            this.SeguridadLblTitulo.TabIndex = 1;
+            this.SeguridadLblTitulo.Text = "Asignación de Aplicación a Usuario";
             // 
             // SeguridadPbIconoAsignacion
             // 
@@ -415,14 +415,14 @@
         private System.Windows.Forms.Button SeguridadBtnAyuda;
         private System.Windows.Forms.PictureBox SeguridadPbMascota;
         private System.Windows.Forms.Label SeguridadLblDescripcion;
-        private System.Windows.Forms.Label LblSeguridadDescripcion;
+        private System.Windows.Forms.Label SeguridadLblTitulo;
         private System.Windows.Forms.PictureBox SeguridadPbIconoAsignacion;
-        private System.Windows.Forms.Button BtnSeguridadBuscar;
-        private System.Windows.Forms.Button BtnSeguridadQuitar;
-        private System.Windows.Forms.Button BtnSeguridadSalir;
-        private System.Windows.Forms.Button BtnSeguridadInsertar;
+        private System.Windows.Forms.Button SeguridadBtnBuscar;
+        private System.Windows.Forms.Button SeguridadBtnQuitar;
+        private System.Windows.Forms.Button SeguridadBtnSalir;
+        private System.Windows.Forms.Button SeguridadBtnInsertar;
         private System.Windows.Forms.ComboBox SeguridadCboAplicacion;
-        private System.Windows.Forms.ComboBox CboSeguridadModulo;
-        private System.Windows.Forms.ComboBox CboSeguridadUsuario;
+        private System.Windows.Forms.ComboBox SeguridadCboModulo;
+        private System.Windows.Forms.ComboBox SeguridadCboUsuario;
     }
 }
