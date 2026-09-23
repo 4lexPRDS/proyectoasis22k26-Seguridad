@@ -23,11 +23,42 @@ namespace CapaVista_Seguridad
             this.Load += FrmMDISeguridad_Load;
         }
 
+        //---------------------------------------------------------------------**INICIO ANDRE Y EVELYN
+        /*
+ * ==================================================================
+ * Área : Seguridad
+ * Autores : André De Jesús Gonzalez Camey
+ *           Evelyn Sofia Andrade Luna
+ * Fecha : 23/09/2026
+ * ==================================================================
+ * Propósito :
+ * Se agregó la lógica para que al cargar el formulario MDI,
+ * los botones del menú lateral que corresponden a módulos
+ * a los que el usuario no tiene acceso se muestren en escala
+ * de grises, utilizando el método
+ * SeguridadMetAplicarPermisosEnBotonesMDI del helper.
+ * ===================================================================
+*/
         private void FrmMDISeguridad_Load(object sender, EventArgs e)
         {
             SeguridadMetActualizarInfoUsuario();
             SeguridadMetCargarKPIs();
+
+            var MapaBotonesMDI = new Dictionary<Control, (int, int)>
+            {
+                { SeguridadBtnEmpleados,(4, 4)},
+                { SeguridadBtnUsuarios,(4, 5)},
+                { SeguridadBtnModulos,(4, 6)},
+                { SeguridadBtnAplicaciones,(4, 7)},
+                { SeguridadBtnPerfiles,(4, 8)},
+                { SeguridadBtnAsignaPerfiles,(4, 9)},
+                { SeguridadBtnAplicaPerfiles,(4, 10)},
+                { SeguridadBtnAplicaUsuario,(4, 11)},
+                { SeguridadBtnBitacora,(4, 12)}
+            };
+            ClsSeguridadFormHelper.SeguridadMetAplicarPermisosEnBotonesMDI(MapaBotonesMDI);
         }
+        //----------------------------------------------------------**FIN CODIGO ANDRE Y EVELYN
 
         private void SeguridadMetActualizarInfoUsuario()
         {
@@ -216,8 +247,6 @@ namespace CapaVista_Seguridad
             }
         }
 
-
-
         private void SeguridadBtnCerrarSesion_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show(
@@ -228,9 +257,8 @@ namespace CapaVista_Seguridad
 
             if (resultado == DialogResult.Yes)
             {
-                this.Close(); 
+                this.Close();
             }
-
         }
     }
 }
