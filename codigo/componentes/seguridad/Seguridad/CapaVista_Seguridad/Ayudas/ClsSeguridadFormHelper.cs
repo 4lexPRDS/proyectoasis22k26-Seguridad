@@ -5,6 +5,21 @@ using System.Windows.Forms;
 using System.Drawing; // para que se pyeda hacer la matriz de color de grises
 using System.Drawing.Imaging; // libreria sirve para trabajar las clases con graficos e imagenes
 
+
+/*
+ * ==================================================================
+ * Área: Seguridad
+ * Autores: Lourdes Isabel Melendez Pineda
+ * Fecha: 15/09/2026
+ * ==================================================================
+ * Propósito : Clase auxiliar de la capa Vista para el control de
+ * seguridad por formulario. Consulta los permisos del
+ * usuario en sesión (Insertar/Editar/Eliminar/Imprimir)
+ * y los aplica sobre los botones y controles del formulario,
+ * habilitándolos o deshabilitándolos según el acceso.
+ * ===================================================================
+ */
+
 namespace CapaVista_Seguridad.Ayudas
 {
     public static class ClsSeguridadFormHelper

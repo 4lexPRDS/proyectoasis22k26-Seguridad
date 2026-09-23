@@ -11,6 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ==================================================================
+ * Área: Seguridad
+ * Autores: Lourdes Isabel Melendez Pineda
+ * Fecha: 23/09/2026
+ * ==================================================================
+ * Propósito : Formulario de la capa Vista que muestra el reporte
+ * de las Asignaciones Aplicación-Perfil, cargando
+ * los datos desde el controlador y renderizándolos con
+ * ReportViewer.
+ * ===================================================================
+ */
+
 namespace CapaVista_Seguridad.frmReportes
 {
     public partial class FrmReporteAsigAppPerf : Form
