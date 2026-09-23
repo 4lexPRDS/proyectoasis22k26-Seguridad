@@ -15,6 +15,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Andy Alfonso Garcia Lopez
+ * Carné : 9959-23-1494
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El formulario del módulo de Mantenimiento de Aplicación nos 
+ *  permite registrar, consultar, modificar y eliminar las 
+ *  aplicaciones del sistema, administrando el catálogo referenciado 
+ *  por el módulo de Asignación de Aplicaciones a Perfiles para el 
+ *  control de accesos de cada usuario.
+ * ===================================================================
+*/
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmMantenimientoAplicacion : Form
