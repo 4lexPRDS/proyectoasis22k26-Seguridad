@@ -11,6 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ===================================================================
+ * Área : Seguridad
+ * Autor : Andy Alfonso Garcia Lopez
+ * Carné : 9959-23-1494
+ * Fecha : 23/09/2026
+ * ===================================================================
+ * Propósito :
+ *  El formulario de Reporte del módulo de Mantenimiento de Aplicación
+ *  obtiene el listado de las aplicaciones registradas mediante el 
+ *  modelo de controlador y las vincula al ReportViewer como fuente de
+ *  datos del reporte RDLC embebido RpReportMantenimientoAplicacion
+ * ===================================================================
+*/
+
 namespace CapaVista_Seguridad.frmReportes
 {
     public partial class FrmReporteMantenimientoAplicacioncs : Form
