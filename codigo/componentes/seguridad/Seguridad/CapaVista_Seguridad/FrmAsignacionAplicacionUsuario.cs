@@ -298,5 +298,10 @@ namespace CapaVista_Seguridad
             SeguridadCboModulo.SelectedIndex = -1;
             SeguridadCboAplicacion.SelectedIndex = -1;
         }
+
+        private void SeguridadBtnAyuda_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "AsigAplUsarios_Seguridad.html");
+        }
     }
 }

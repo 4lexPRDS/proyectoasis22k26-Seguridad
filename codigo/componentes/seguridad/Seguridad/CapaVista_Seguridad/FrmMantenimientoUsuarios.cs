@@ -344,10 +344,7 @@ namespace CapaVista_Seguridad
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Para agregar un usuario: seleccione un empleado, ingrese nombre de usuario, contraseña y confirmación, luego presione Guardar.\n\n" +
-                "Para modificar un usuario: haga clic en un registro del listado, edite los campos necesarios y presione Modificar.",
-                "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Usuarios_Seguridad.html");
         }
 
 

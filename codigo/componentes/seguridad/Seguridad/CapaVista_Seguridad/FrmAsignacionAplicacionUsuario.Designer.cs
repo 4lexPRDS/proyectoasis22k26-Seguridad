@@ -45,23 +45,23 @@
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeguridadDgvAsignaciones = new System.Windows.Forms.DataGridView();
             this.SeguridadGbxAsignaciones = new System.Windows.Forms.GroupBox();
+            this.SeguridadLblContador = new System.Windows.Forms.Label();
             this.SeguridadBtnInsertar = new System.Windows.Forms.Button();
             this.SeguridadBtnSalir = new System.Windows.Forms.Button();
             this.SeguridadBtnQuitar = new System.Windows.Forms.Button();
             this.SeguridadBtnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.SeguridadPnlEncabezado = new System.Windows.Forms.Panel();
-            this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadPbMascota = new System.Windows.Forms.PictureBox();
             this.SeguridadLblDescripcion = new System.Windows.Forms.Label();
             this.SeguridadLblTitulo = new System.Windows.Forms.Label();
             this.SeguridadPbIconoAsignacion = new System.Windows.Forms.PictureBox();
+            this.SeguridadBtnAyuda = new System.Windows.Forms.Button();
             this.SeguridadBtnReporte = new System.Windows.Forms.Button();
             this.SeguridadBtnInicio = new System.Windows.Forms.Button();
             this.SeguridadBtnAnterior = new System.Windows.Forms.Button();
             this.SeguridadBtnSiguiente = new System.Windows.Forms.Button();
             this.SeguridadBtnFin = new System.Windows.Forms.Button();
-            this.SeguridadLblContador = new System.Windows.Forms.Label();
             this.SeguridadBtnRefrescar = new System.Windows.Forms.Button();
             this.SeguridadGbxDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadDgvAsignaciones)).BeginInit();
@@ -190,7 +190,7 @@
             this.SeguridadDgvAsignaciones.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
@@ -208,7 +208,7 @@
             this.SeguridadDgvAsignaciones.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(119)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -231,6 +231,16 @@
             this.SeguridadGbxAsignaciones.TabIndex = 20;
             this.SeguridadGbxAsignaciones.TabStop = false;
             this.SeguridadGbxAsignaciones.Text = "Asignaciones";
+            // 
+            // SeguridadLblContador
+            // 
+            this.SeguridadLblContador.AutoSize = true;
+            this.SeguridadLblContador.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SeguridadLblContador.Location = new System.Drawing.Point(770, 17);
+            this.SeguridadLblContador.Name = "SeguridadLblContador";
+            this.SeguridadLblContador.Size = new System.Drawing.Size(165, 21);
+            this.SeguridadLblContador.TabIndex = 27;
+            this.SeguridadLblContador.Text = "Registro 0 de 0 totales";
             // 
             // SeguridadBtnInsertar
             // 
@@ -311,17 +321,6 @@
             this.SeguridadPnlEncabezado.Size = new System.Drawing.Size(1017, 127);
             this.SeguridadPnlEncabezado.TabIndex = 24;
             // 
-            // SeguridadBtnAyuda
-            // 
-            this.SeguridadBtnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
-            this.SeguridadBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SeguridadBtnAyuda.Location = new System.Drawing.Point(732, 146);
-            this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(2);
-            this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
-            this.SeguridadBtnAyuda.Size = new System.Drawing.Size(65, 65);
-            this.SeguridadBtnAyuda.TabIndex = 4;
-            this.SeguridadBtnAyuda.UseVisualStyleBackColor = true;
-            // 
             // SeguridadPbMascota
             // 
             this.SeguridadPbMascota.BackColor = System.Drawing.Color.Transparent;
@@ -371,6 +370,18 @@
             this.SeguridadPbIconoAsignacion.Size = new System.Drawing.Size(78, 86);
             this.SeguridadPbIconoAsignacion.TabIndex = 0;
             this.SeguridadPbIconoAsignacion.TabStop = false;
+            // 
+            // SeguridadBtnAyuda
+            // 
+            this.SeguridadBtnAyuda.BackgroundImage = global::CapaVista_Seguridad.Properties.Resources.btn_ayudaN;
+            this.SeguridadBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeguridadBtnAyuda.Location = new System.Drawing.Point(732, 146);
+            this.SeguridadBtnAyuda.Margin = new System.Windows.Forms.Padding(2);
+            this.SeguridadBtnAyuda.Name = "SeguridadBtnAyuda";
+            this.SeguridadBtnAyuda.Size = new System.Drawing.Size(65, 65);
+            this.SeguridadBtnAyuda.TabIndex = 4;
+            this.SeguridadBtnAyuda.UseVisualStyleBackColor = true;
+            this.SeguridadBtnAyuda.Click += new System.EventHandler(this.SeguridadBtnAyuda_Click_1);
             // 
             // SeguridadBtnReporte
             // 
@@ -449,16 +460,6 @@
             this.SeguridadBtnFin.Size = new System.Drawing.Size(65, 65);
             this.SeguridadBtnFin.TabIndex = 29;
             this.SeguridadBtnFin.UseVisualStyleBackColor = false;
-            // 
-            // SeguridadLblContador
-            // 
-            this.SeguridadLblContador.AutoSize = true;
-            this.SeguridadLblContador.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.SeguridadLblContador.Location = new System.Drawing.Point(770, 17);
-            this.SeguridadLblContador.Name = "SeguridadLblContador";
-            this.SeguridadLblContador.Size = new System.Drawing.Size(165, 21);
-            this.SeguridadLblContador.TabIndex = 27;
-            this.SeguridadLblContador.Text = "Registro 0 de 0 totales";
             // 
             // SeguridadBtnRefrescar
             // 

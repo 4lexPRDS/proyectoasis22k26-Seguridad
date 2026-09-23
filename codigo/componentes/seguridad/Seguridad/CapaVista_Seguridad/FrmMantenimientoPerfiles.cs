@@ -210,7 +210,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Complete los datos del perfil y presione Guardar.");
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Perfiles_Seguridad.html");
         }
 
         private void SeguridadBtnSiguiente_Click(object sender, EventArgs e)

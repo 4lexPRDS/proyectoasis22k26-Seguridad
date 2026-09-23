@@ -147,7 +147,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Complete los datos del empleado y presione Guardar.");
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Empleados_Seguridad.html");
         }
 
         private void SeguridadBtnAgregar_Click(object sender, EventArgs e)

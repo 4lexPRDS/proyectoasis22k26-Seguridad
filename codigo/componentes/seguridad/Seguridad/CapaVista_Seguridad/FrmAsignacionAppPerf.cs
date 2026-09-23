@@ -188,7 +188,7 @@ namespace CapaVista_Seguridad
 
         private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seleccione un Perfil, Módulo y Aplicación, marque los permisos deseados y presione Agregar.");
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "AsigAplPerfiles_Seguridad.html");
         }
 
         private void BtnSeguridadAgregar_Click(object sender, EventArgs e)
