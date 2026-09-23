@@ -208,6 +208,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Bitacora_Seguridad.html");
         }
     }
 }

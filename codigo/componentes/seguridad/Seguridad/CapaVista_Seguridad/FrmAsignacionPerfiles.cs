@@ -476,12 +476,7 @@ namespace CapaVista_Seguridad
 
         private void BtnSeguridadAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Si desea consultar, en la tabla izquierda, seleccione el usuario. " +
-                "Si desea Asignar, seleccione Usuario y perfil en la tabla derecha, luego puede dar click en Agregar y Asignar",
-                "Ayuda Asignacion",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "AsigPerfiles_Seguridad.html");
         }
 
         private void BtnSeguridadReporte_Click(object sender, EventArgs e)

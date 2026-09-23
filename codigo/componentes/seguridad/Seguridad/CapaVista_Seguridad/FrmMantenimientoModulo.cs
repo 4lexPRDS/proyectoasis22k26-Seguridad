@@ -306,8 +306,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Formulario para mantenimiento de módulos del sistema.",
-                "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Módulos_Seguridad.html");
         }
 
         private void SeguridadBtnSalir_Click(object sender, EventArgs e) => this.Close();
