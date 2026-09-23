@@ -13,6 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El formulario del módulo de Mantenimiento de Empleados nos 
+ *  permite registrar, consultar, modificar y eliminar los 
+ *  datos ingresados al sistema, tambien cuenta con Reportes y Ayudas.
+ * ===================================================================
+*/
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmMantenimientoEmpleado : Form
