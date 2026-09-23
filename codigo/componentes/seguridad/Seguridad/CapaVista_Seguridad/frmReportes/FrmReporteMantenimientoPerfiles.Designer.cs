@@ -36,14 +36,14 @@
             this.reportViewer1.Location = new System.Drawing.Point(2, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(949, 531);
+            this.reportViewer1.Size = new System.Drawing.Size(1105, 531);
             this.reportViewer1.TabIndex = 0;
             // 
             // FrmReporteMantenimientoPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 555);
+            this.ClientSize = new System.Drawing.Size(1110, 555);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmReporteMantenimientoPerfiles";
             this.Text = "FrmReporteMantenimientoPerfiles";

@@ -45,7 +45,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlListado = new System.Windows.Forms.Panel();
             this.SeguridadLblIconoListado = new System.Windows.Forms.Button();
             this.SeguridadLblListado = new System.Windows.Forms.Label();
-            this.SeguridadLblTotalRegistros = new System.Windows.Forms.Label();
+            this.LblSeguridadContador = new System.Windows.Forms.Label();
             this.SeguridadDgvListaRoles = new System.Windows.Forms.DataGridView();
             this.SeguridadLblSubtitulo = new System.Windows.Forms.Label();
             this.SeguridadLblTitulo = new System.Windows.Forms.Label();
@@ -207,7 +207,7 @@ namespace CapaVista_Seguridad
             this.SeguridadPnlListado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SeguridadPnlListado.Controls.Add(this.SeguridadLblIconoListado);
             this.SeguridadPnlListado.Controls.Add(this.SeguridadLblListado);
-            this.SeguridadPnlListado.Controls.Add(this.SeguridadLblTotalRegistros);
+            this.SeguridadPnlListado.Controls.Add(this.LblSeguridadContador);
             this.SeguridadPnlListado.Controls.Add(this.SeguridadDgvListaRoles);
             this.SeguridadPnlListado.Location = new System.Drawing.Point(5, 431);
             this.SeguridadPnlListado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -240,17 +240,17 @@ namespace CapaVista_Seguridad
             this.SeguridadLblListado.TabIndex = 1;
             this.SeguridadLblListado.Text = "Listado de Perfiles";
             // 
-            // SeguridadLblTotalRegistros
+            // LblSeguridadContador
             // 
-            this.SeguridadLblTotalRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SeguridadLblTotalRegistros.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SeguridadLblTotalRegistros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.SeguridadLblTotalRegistros.Location = new System.Drawing.Point(1137, 16);
-            this.SeguridadLblTotalRegistros.Name = "SeguridadLblTotalRegistros";
-            this.SeguridadLblTotalRegistros.Size = new System.Drawing.Size(205, 20);
-            this.SeguridadLblTotalRegistros.TabIndex = 2;
-            this.SeguridadLblTotalRegistros.Text = "Total de registros: 0";
-            this.SeguridadLblTotalRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblSeguridadContador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblSeguridadContador.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSeguridadContador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.LblSeguridadContador.Location = new System.Drawing.Point(1137, 16);
+            this.LblSeguridadContador.Name = "LblSeguridadContador";
+            this.LblSeguridadContador.Size = new System.Drawing.Size(205, 20);
+            this.LblSeguridadContador.TabIndex = 2;
+            this.LblSeguridadContador.Text = "Mostrando 0 de 0 registros";
+            this.LblSeguridadContador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // SeguridadDgvListaRoles
             // 
@@ -651,7 +651,7 @@ namespace CapaVista_Seguridad
         private System.Windows.Forms.Label SeguridadLblEstadoPerfil;
         private System.Windows.Forms.Panel SeguridadPnlListado;
         private System.Windows.Forms.Label SeguridadLblListado;
-        private System.Windows.Forms.Label SeguridadLblTotalRegistros;
+        private System.Windows.Forms.Label LblSeguridadContador;
         private System.Windows.Forms.DataGridView SeguridadDgvListaRoles;
         private System.Windows.Forms.PictureBox SeguridadPbMascota;
         private System.Windows.Forms.Label SeguridadLblSubtitulo;
