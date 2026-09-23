@@ -13,6 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El formulario del módulo de Mantenimiento de Empleados nos 
+ *  permite registrar, consultar, modificar y eliminar los 
+ *  datos ingresados al sistema, tambien cuenta con Reportes y Ayudas.
+ * ===================================================================
+*/
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmMantenimientoEmpleado : Form
@@ -43,7 +57,7 @@ namespace CapaVista_Seguridad
                 this, ID_MODULO, ID_APLICACION, MapaBotones);
 
             if (!_MisPermisos.TieneAcceso)
-                return;
+               return;
 
             SeguridadMetListarEmpleados();
             SeguridadTxtCodigo.Text = PrefijoCodigoEmpleado;
@@ -133,7 +147,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Complete los datos del empleado y presione Guardar.");
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Empleados_Seguridad.html");
         }
 
         private void SeguridadBtnAgregar_Click(object sender, EventArgs e)

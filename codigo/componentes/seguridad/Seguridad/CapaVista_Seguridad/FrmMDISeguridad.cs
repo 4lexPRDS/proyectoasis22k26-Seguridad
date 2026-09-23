@@ -1,5 +1,6 @@
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
+using CapaVista_Seguridad.Ayudas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +23,42 @@ namespace CapaVista_Seguridad
             this.Load += FrmMDISeguridad_Load;
         }
 
+        //---------------------------------------------------------------------**INICIO ANDRE Y EVELYN
+        /*
+ * ==================================================================
+ * 脕rea : Seguridad
+ * Autores : Andr茅 De Jes煤s Gonzalez Camey
+ *           Evelyn Sofia Andrade Luna
+ * Fecha : 23/09/2026
+ * ==================================================================
+ * Prop贸sito :
+ * Se agreg贸 la l贸gica para que al cargar el formulario MDI,
+ * los botones del men煤 lateral que corresponden a m贸dulos
+ * a los que el usuario no tiene acceso se muestren en escala
+ * de grises, utilizando el m茅todo
+ * SeguridadMetAplicarPermisosEnBotonesMDI del helper.
+ * ===================================================================
+*/
         private void FrmMDISeguridad_Load(object sender, EventArgs e)
         {
             SeguridadMetActualizarInfoUsuario();
             SeguridadMetCargarKPIs();
+
+            var MapaBotonesMDI = new Dictionary<Control, (int, int)>
+            {
+                { SeguridadBtnEmpleados,(4, 4)},
+                { SeguridadBtnUsuarios,(4, 5)},
+                { SeguridadBtnModulos,(4, 6)},
+                { SeguridadBtnAplicaciones,(4, 7)},
+                { SeguridadBtnPerfiles,(4, 8)},
+                { SeguridadBtnAsignaPerfiles,(4, 9)},
+                { SeguridadBtnAplicaPerfiles,(4, 10)},
+                { SeguridadBtnAplicaUsuario,(4, 11)},
+                { SeguridadBtnBitacora,(4, 12)}
+            };
+            ClsSeguridadFormHelper.SeguridadMetAplicarPermisosEnBotonesMDI(MapaBotonesMDI);
         }
+        //----------------------------------------------------------**FIN CODIGO ANDRE Y EVELYN
 
         private void SeguridadMetActualizarInfoUsuario()
         {
@@ -69,41 +101,131 @@ namespace CapaVista_Seguridad
             return RutaGrafica;
         }
 
+        /*
+ * ==================================================================
+ * 脕rea : Seguridad
+ * Autor : Carlos David Calder贸n Ramirez
+ * Carn茅 : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Prop贸sito :
+ * Aqui realice la accion de que si el usuario tiene acceso se 
+ * realizara el llamado a la ventana de lo contrario se mostrara
+ * el mensaje.
+ * ===================================================================
+*/
         private void button10_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 10))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmAsignacionAppPerf Perfil = new FrmAsignacionAppPerf();
             Perfil.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 12))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmBitacora Bitacora = new FrmBitacora();
             Bitacora.ShowDialog();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 11))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmAsignacionAplicacionUsuario AsigAplicacionUsuario = new FrmAsignacionAplicacionUsuario();
             AsigAplicacionUsuario.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 9))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FrmAsignacionPerfiles AsignacionPerfiles = new FrmAsignacionPerfiles();
             AsignacionPerfiles.ShowDialog();
         }
 
         private void SeguridadBtnPerfiles_Click(object sender, EventArgs e)
         {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 8))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             FrmMantenimientoPerfiles MantenimientoPerfiles = new FrmMantenimientoPerfiles();
             MantenimientoPerfiles.ShowDialog();
         }
 
         private void SeguridadBtnUsuarios_Click(object sender, EventArgs e)
         {
-            FrmUsuarios Usuarios = new FrmUsuarios();
+            FrmMantenimientoUsuarios Usuarios = new FrmMantenimientoUsuarios();
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 5))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             Usuarios.ShowDialog();
         }
+
+        private void SeguridadBtnModulos_Click(object sender, EventArgs e)
+        {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 6))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            SeguridadFrmModulo Modulo = new SeguridadFrmModulo();
+            Modulo.ShowDialog();
+        }
+
+        private void SeguridadBtnEmpleados_Click(object sender, EventArgs e)
+        {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 4))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            FrmMantenimientoEmpleado Empleados = new FrmMantenimientoEmpleado();
+            Empleados.ShowDialog();
+        }
+
+        private void SeguridadBtnAplicaciones_Click(object sender, EventArgs e)
+        {
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 7))
+            {
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            FrmMantenimientoAplicacion Aplicaciones = new FrmMantenimientoAplicacion();
+            Aplicaciones.ShowDialog();
+        }
+        /*
+         * Fin de codigo de Carlos David Calder贸n Ramirez
+        */
 
         private void SeguridadBtnBurger_Click(object sender, EventArgs e)
         {
@@ -125,37 +247,23 @@ namespace CapaVista_Seguridad
             }
         }
 
-        private void SeguridadBtnModulos_Click(object sender, EventArgs e)
-        {
-            SeguridadFrmModulo Modulo = new SeguridadFrmModulo();
-            Modulo.ShowDialog();
-        }
-
-        private void SeguridadBtnEmpleados_Click(object sender, EventArgs e)
-        {
-            FrmMantenimientoEmpleado Empleados = new FrmMantenimientoEmpleado();
-            Empleados.ShowDialog();
-        }
-
-        private void SeguridadBtnAplicaciones_Click(object sender, EventArgs e)
-        {
-            FrmMantenimientoAplicacion Aplicaciones = new FrmMantenimientoAplicacion();
-            Aplicaciones.ShowDialog();
-        }
-
         private void SeguridadBtnCerrarSesion_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show(
-                 "縎eguro que deseas cerrar sesi髇?",
-                 "Cerrar sesi髇",
+                 "驴Seguro que deseas cerrar sesi贸n?",
+                 "Cerrar sesi贸n",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
-                this.Close(); 
+                this.Close();
             }
+        }
 
+        private void SeguridadBtnAyudas_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "MDI_Seguridad.html");
         }
     }
 }

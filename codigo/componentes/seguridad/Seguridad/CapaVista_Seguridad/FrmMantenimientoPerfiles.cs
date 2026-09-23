@@ -1,3 +1,19 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 9959-23-1567
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El FrmMantenimientoPerfiles es el formulario donde el usuario
+ *  gestiona los perfiles del sistema: puede agregar, modificar,
+ *  eliminar, consultar por nombre y navegar entre los registros
+ *  listados en el grid, controlando el acceso según los permisos
+ *  asignados al usuario.
+ * ===================================================================
+*/
+
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Modelos_de_controladores;
 using CapaControlador_Seguridad.Objetos_de_valor;
@@ -49,7 +65,9 @@ namespace CapaVista_Seguridad
             try
             {
                 SeguridadDgvListaRoles.DataSource = _SeguridadRoles.SeguridadMetObtenerTodos();
+                SeguridadMetActualizarContador();
                 SeguridadMetConfigurarEncabezadosGrid();
+                
             }
             catch (Exception Ex)
             {
@@ -76,6 +94,23 @@ namespace CapaVista_Seguridad
 
             if (SeguridadDgvListaRoles.Columns["UpdatedAt"] != null)
                 SeguridadDgvListaRoles.Columns["UpdatedAt"].HeaderText = "Última Actualización";
+        }
+
+        private void SeguridadMetActualizarContador()
+        {
+            int Total = SeguridadDgvListaRoles.Rows.Count;
+
+            if (Total == 0)
+            {
+                LblSeguridadContador.Text = "Mostrando 0 de 0 registros";
+                return;
+            }
+
+            int FilaActual = (SeguridadDgvListaRoles.CurrentCell != null)
+                ? SeguridadDgvListaRoles.CurrentCell.RowIndex + 1
+                : 1;
+
+            LblSeguridadContador.Text = $"Mostrando {FilaActual} de {Total} registros";
         }
 
         private void SeguridadMetReinicio()
@@ -175,7 +210,7 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Complete los datos del perfil y presione Guardar.");
+            Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "Perfiles_Seguridad.html");
         }
 
         private void SeguridadBtnSiguiente_Click(object sender, EventArgs e)
@@ -191,6 +226,7 @@ namespace CapaVista_Seguridad
                 }
             }
             SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
 
         }
 
@@ -207,6 +243,7 @@ namespace CapaVista_Seguridad
                 }
             }
             SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
         }
 
         private void SeguridadBtnFin_Click(object sender, EventArgs e)
@@ -219,6 +256,7 @@ namespace CapaVista_Seguridad
                 SeguridadDgvListaRoles.CurrentCell = SeguridadDgvListaRoles.Rows[UltimaFila].Cells[0];
             }
             SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
 
         }
 
@@ -230,6 +268,8 @@ namespace CapaVista_Seguridad
                 SeguridadDgvListaRoles.Rows[0].Selected = true;
                 SeguridadDgvListaRoles.CurrentCell = SeguridadDgvListaRoles.Rows[0].Cells[0];
             }
+            SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
         }
 
         private void SeguridadDgvListaRoles_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -243,6 +283,7 @@ namespace CapaVista_Seguridad
                 SeguridadChkActivo.Checked = Convert.ToBoolean(SeguridadDgvListaRoles.CurrentRow.Cells[3].Value);
             }
             SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
 
         }
 
@@ -260,6 +301,7 @@ namespace CapaVista_Seguridad
                 });
             }
             SeguridadBtnGuardar.Enabled = false;
+            SeguridadMetActualizarContador();
 
         }
 
