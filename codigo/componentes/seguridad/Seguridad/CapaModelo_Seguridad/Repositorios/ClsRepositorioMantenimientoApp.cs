@@ -8,6 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Andy Alfonso Garcia Lopez
+ * Carné : 9959-23-1494
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  La clase Repositorio de Mantenimiento de Aplicación se encarga de 
+ *  implementar las operaciones CRUD sobre la tabla tblAplicacion 
+ *  mediante ODBC, ejecutando las sentencias SQL de inserción, 
+ *  actualización, eliminación y consulta heredando de la clase 
+ *  ClsSentencias para la ejecución de comandos e implementa la  
+ *  interfaz IRepositorioMantenimientoApp como contrato de la capa 
+ *  modelo.
+ * ===================================================================
+*/
+
 namespace CapaModelo_Seguridad.Repositorios
 {
     public class ClsRepositorioMantenimientoApp : ClsSentencias, IRepositorioMantenimientoApp
