@@ -8,6 +8,24 @@ using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
 
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Andy Alfonso Garcia Lopez
+ * Carné : 9959-23-1494
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  La clase de Modelo De Controlador del módulo de Mantenimiento
+ *  de Aplicación actúa como un intermediario entre la vista y el
+ *  repositorio de datos (_RepositorioMantenimientoApp) gestionando el
+ *  estado CRUD de cada registro: agregar, modificar y eliminar, 
+ *  mediante el EstadoEntidad, aplicando validaciones con Data 
+ *  Annotations y registrando cada operación en la bitácora del 
+ *  sistema de seguridad.
+ * ===================================================================
+*/
+
 namespace CapaControlador_Seguridad.Modelos_de_controladores
 {
     public class ClsModeloMantenimientoApp
