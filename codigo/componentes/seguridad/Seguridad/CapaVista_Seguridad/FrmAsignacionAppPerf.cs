@@ -13,6 +13,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaVista_Seguridad.frmReportes;
 
+/*
+ * ==================================================================
+ * Área: Seguridad
+ * Autores: Lourdes Isabel Melendez Pineda
+ * Fecha o ultima edicion: 23/09/2026
+ * ==================================================================
+ * Propósito : Ventana que administra la asignación de aplicaciones
+ * a perfiles, definiendo para cada Rol Módulo y aplicación
+ * los permisos de Insertar, Editar, Eliminar e Imprimir,
+ * con listado, filtrado, seguridad por botón, registro
+ * en bitácora y generación de reporte y ayudas.
+ * ===================================================================
+ */
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionAppPerf : Form

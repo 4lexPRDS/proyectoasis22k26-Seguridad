@@ -166,14 +166,27 @@ namespace CapaControlador_Seguridad
                 });
             }
 
+                        /*
+             * ==================================================================
+             * Área      : Seguridad
+             * Autores   : Lourdes Isabel Melendez Pineda
+             * Fecha o ultima edicion: 23/09/2026
+             * ==================================================================
+             * Propósito : Guarda en la sesión los datos del usuario que acaba de
+             * iniciar sesión como usuario, empleado y sus roles, para
+             * que estén disponibles mientras el sistema esté abierto, esto es parte
+             * de usuario conectado.
+             * ===================================================================
+             */
+
             ClsSesionSeguridad.SeguridadMetIniciarSesion(
                _IdUsuario,
                _NombreUsuario,
                _NombreEmpleado,
                _Roles
             );
-           
-                
+            //Fin del Codigo de Isabel Melendez Pineda        
+
             ClsModeloBitacora.SeguridadMetRegistrarAccion("LOGIN", "tblUsuario", resultado.IdUsuario, "Inicio de sesión exitoso del usuario: " + resultado.NombreUsuario);
             return true;
         }
