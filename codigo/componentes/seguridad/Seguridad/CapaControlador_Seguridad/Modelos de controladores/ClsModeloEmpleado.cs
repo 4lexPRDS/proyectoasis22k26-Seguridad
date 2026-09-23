@@ -10,6 +10,24 @@ using System.Data.Odbc;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;
 
+
+
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  La clase de Modelo Controlador del módulo de Mantenimiento
+ *  de Empleados en esta clase se encuentran las validaciones necesarias
+ *  para un buen funsionamiento del sistema tambien se encunetra los campos
+ *  requeridos y en general se encuentra el manejo de errores
+ * ===================================================================
+*/
+
+
 namespace CapaControlador_Seguridad
 {
     public class ClsModeloEmpleado

@@ -66,6 +66,20 @@ namespace CapaVista_Seguridad.Ayudas
                 SeguridadMetDeshabilitarRecursivo(Hijo);
         }
 
+
+
+        /*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ * Aqui unicamente agrege la funcion que permite el manejo de acceso
+ * a los distintos form es decir si puede acceder o no.
+ * ===================================================================
+*/
         public static bool SeguridadMetTieneAcceso(int IdModulo, int IdAplicacion)
         {
             var ModeloPermisos = new ClsModeloAsigAppPerf();
