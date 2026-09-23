@@ -1,6 +1,6 @@
 namespace CapaVista_Seguridad
 {
-    partial class FrmUsuarios
+    partial class FrmMantenimientoUsuarios
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,7 +17,7 @@ namespace CapaVista_Seguridad
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMantenimientoUsuarios));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.SeguridadCboEmpleado = new System.Windows.Forms.ComboBox();

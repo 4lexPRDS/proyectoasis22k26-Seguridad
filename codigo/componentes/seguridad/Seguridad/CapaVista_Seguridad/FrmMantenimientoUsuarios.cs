@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CapaVista_Seguridad
 {
-    public partial class FrmUsuarios : Form
+    public partial class FrmMantenimientoUsuarios : Form
     {
         private ClsModeloUsuario _Usuario = new ClsModeloUsuario();
         private ClsPermisoAplicacion _MisPermisos;
@@ -19,7 +19,7 @@ namespace CapaVista_Seguridad
         private const int ID_MODULO = 4;
         private const int ID_APLICACION = 5;
 
-        public FrmUsuarios()
+        public FrmMantenimientoUsuarios()
         {
             InitializeComponent();
         }
@@ -338,7 +338,7 @@ namespace CapaVista_Seguridad
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            FrmReporteUsuario reporte = new FrmReporteUsuario();
+            FrmReporteMantenimientoUsuario reporte = new FrmReporteMantenimientoUsuario();
             reporte.Show();
         }
 

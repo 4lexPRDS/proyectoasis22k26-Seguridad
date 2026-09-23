@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace CapaVista_Seguridad.frmReportes
 {
-    public partial class FrmReporteUsuario : Form
+    public partial class FrmReporteMantenimientoUsuario : Form
     {
         private ClsModeloUsuario Usuario = new ClsModeloUsuario();
-        public FrmReporteUsuario()
+        public FrmReporteMantenimientoUsuario()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace CapaVista_Seguridad.frmReportes
         private void FrmReporteUsuario_Load(object sender, EventArgs e)
         {
             ReportDataSource reportDataSourceUsuario = new ReportDataSource("DsMantenimientoUsuario", Usuario.SeguridadMetObtenerTodos());
-            reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista_Seguridad.Reportes.RpReporteUsuario.rdlc";
+            reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista_Seguridad.Reportes.RpReporteMantenimientoUsuario.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(reportDataSourceUsuario);
             this.reportViewer1.RefreshReport();

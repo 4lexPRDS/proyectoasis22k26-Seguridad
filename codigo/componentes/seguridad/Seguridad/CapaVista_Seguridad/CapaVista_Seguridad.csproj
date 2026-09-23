@@ -110,11 +110,11 @@
     <Compile Include="FrmMantenimientoPerfiles.Designer.cs">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModulo.cs">
+    <Compile Include="FrmMantenimientoModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModulo.Designer.cs">
-      <DependentUpon>FrmModulo.cs</DependentUpon>
+    <Compile Include="FrmMantenimientoModulo.Designer.cs">
+      <DependentUpon>FrmMantenimientoModulo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRecuperacion.cs">
       <SubType>Form</SubType>
@@ -158,17 +158,17 @@
     <Compile Include="frmReportes\FrmReporteMantenimientoPerfiles.Designer.cs">
       <DependentUpon>FrmReporteMantenimientoPerfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportes\FrmReporteModulo.cs">
+    <Compile Include="frmReportes\FrmReporteMantenimientoModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportes\FrmReporteModulo.Designer.cs">
-      <DependentUpon>FrmReporteModulo.cs</DependentUpon>
+    <Compile Include="frmReportes\FrmReporteMantenimientoModulo.Designer.cs">
+      <DependentUpon>FrmReporteMantenimientoModulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportes\FrmReporteUsuario.cs">
+    <Compile Include="frmReportes\FrmReporteMantenimientoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportes\FrmReporteUsuario.Designer.cs">
-      <DependentUpon>FrmReporteUsuario.cs</DependentUpon>
+    <Compile Include="frmReportes\FrmReporteMantenimientoUsuario.Designer.cs">
+      <DependentUpon>FrmReporteMantenimientoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSplash.cs">
       <SubType>Form</SubType>
@@ -176,11 +176,11 @@
     <Compile Include="FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios.cs">
+    <Compile Include="FrmMantenimientoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios.Designer.cs">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <Compile Include="FrmMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -224,8 +224,8 @@
     <EmbeddedResource Include="FrmMantenimientoPerfiles.resx">
       <DependentUpon>FrmMantenimientoPerfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModulo.resx">
-      <DependentUpon>FrmModulo.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMantenimientoModulo.resx">
+      <DependentUpon>FrmMantenimientoModulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRecuperacion.resx">
       <DependentUpon>FrmRecuperacion.cs</DependentUpon>
@@ -248,17 +248,17 @@
     <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoPerfiles.resx">
       <DependentUpon>FrmReporteMantenimientoPerfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportes\FrmReporteModulo.resx">
-      <DependentUpon>FrmReporteModulo.cs</DependentUpon>
+    <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoModulo.resx">
+      <DependentUpon>FrmReporteMantenimientoModulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportes\FrmReporteUsuario.resx">
-      <DependentUpon>FrmReporteUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="frmReportes\FrmReporteMantenimientoUsuario.resx">
+      <DependentUpon>FrmReporteMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios.resx">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMantenimientoUsuarios.resx">
+      <DependentUpon>FrmMantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -276,8 +276,8 @@
     <EmbeddedResource Include="Reportes\RpReporteAsigAppPerf.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoAplicacion.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoPerfil.rdlc" />
-    <EmbeddedResource Include="Reportes\RpReporteModulo.rdlc" />
-    <EmbeddedResource Include="Reportes\RpReporteUsuario.rdlc" />
+    <EmbeddedResource Include="Reportes\RpReporteMantenimientoModulo.rdlc" />
+    <EmbeddedResource Include="Reportes\RpReporteMantenimientoUsuario.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

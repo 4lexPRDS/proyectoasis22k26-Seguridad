@@ -74,7 +74,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 10))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -86,7 +86,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 12))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -98,7 +98,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 11))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -110,7 +110,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 9))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -123,7 +123,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 8))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -133,13 +133,13 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnUsuarios_Click(object sender, EventArgs e)
         {
+            FrmMantenimientoUsuarios Usuarios = new FrmMantenimientoUsuarios();
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 5))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            FrmUsuarios Usuarios = new FrmUsuarios();
             Usuarios.ShowDialog();
         }
 
@@ -167,7 +167,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 6))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -179,7 +179,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 4))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -192,7 +192,7 @@ namespace CapaVista_Seguridad
         {
             if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 7))
             {
-                MessageBox.Show("No tienes acceso a este m骴ulo.",
+                MessageBox.Show("No tienes acceso a este m贸dulo.",
                     "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -203,8 +203,8 @@ namespace CapaVista_Seguridad
         private void SeguridadBtnCerrarSesion_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show(
-                 "縎eguro que deseas cerrar sesi髇?",
-                 "Cerrar sesi髇",
+                 "驴Seguro que deseas cerrar sesi贸n?",
+                 "Cerrar sesi贸n",
                  MessageBoxButtons.YesNo,
                  MessageBoxIcon.Question);
 
