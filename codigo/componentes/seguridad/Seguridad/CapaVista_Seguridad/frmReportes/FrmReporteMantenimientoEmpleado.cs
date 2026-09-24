@@ -11,6 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Carlos David Calderón Ramirez
+ * Carné : 9959-23-848
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ * Aqui se realiza la vista del reporte para ser llamado en el form
+ * y se pueda visualizar 
+ * ===================================================================
+*/
+
+
 namespace CapaVista_Seguridad.frmReportes
 {
     public partial class FrmReporteMantenimientoEmpleado : Form
