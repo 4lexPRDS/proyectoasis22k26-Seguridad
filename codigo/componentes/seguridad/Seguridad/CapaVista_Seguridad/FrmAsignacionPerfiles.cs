@@ -135,7 +135,8 @@ namespace CapaVista_Seguridad
             });
             dataGridViewPerfilesUsuario.Columns.Add(new DataGridViewButtonColumn
             {
-                Name = "Accion",
+                Name = "ColQuitarConsulta",
+                HeaderText = "Accion",
                 Text = "Quitar",
                 UseColumnTextForButtonValue = true,
                 Width = 90
@@ -174,7 +175,8 @@ namespace CapaVista_Seguridad
             });
             dataGridViewAsignacion.Columns.Add(new DataGridViewButtonColumn
             {
-                Name = "Accion",
+                Name = "ColQuitarPend",
+                HeaderText = "Accion",
                 Text = "Quitar",
                 UseColumnTextForButtonValue = true,
                 Width = 90
