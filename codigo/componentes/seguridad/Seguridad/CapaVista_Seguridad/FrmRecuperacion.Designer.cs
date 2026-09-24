@@ -1,4 +1,19 @@
-﻿namespace CapaVista_Seguridad
+﻿/*
+ * ==============================
+ * Área : Seguridad
+ * Autor : Byron Alexander Chiquito Paredes
+ * Carné : 0901-23-3747
+ * Fecha : 24/09/2026
+ * ==============================
+ * Propósito :
+ * Diseño de controles del formulario de recuperación de
+ * contraseña: campos de usuario y correo, campo de código
+ * de verificación, nueva contraseña, confirmación y la
+ * casilla para mostrar u ocultar la contraseña
+ * ==============================
+ */
+
+namespace CapaVista_Seguridad
 {
     partial class FrmRecuperacion
     {
@@ -78,6 +93,7 @@
             this.SeguridadPbLogoEmpresa = new System.Windows.Forms.PictureBox();
             this.SeguridadPnlContenedorPrincipal = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.SeguridadLnkAyuda = new System.Windows.Forms.LinkLabel();
             this.SeguridadPnlContenidoFormulario.SuspendLayout();
             this.SeguridadPnlAvisoImportante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SeguridadPbIconoVigenciaCodigo)).BeginInit();
@@ -98,6 +114,7 @@
             // SeguridadPnlContenidoFormulario
             // 
             this.SeguridadPnlContenidoFormulario.BackColor = System.Drawing.Color.White;
+            this.SeguridadPnlContenidoFormulario.Controls.Add(this.SeguridadLnkAyuda);
             this.SeguridadPnlContenidoFormulario.Controls.Add(this.SeguridadPnlAvisoImportante);
             this.SeguridadPnlContenidoFormulario.Controls.Add(this.SeguridadLnkRegresarInicioSesion);
             this.SeguridadPnlContenidoFormulario.Controls.Add(this.SeguridadPnlAcentoTitulo);
@@ -148,8 +165,8 @@
             this.SeguridadLblAvisoCodigo.Name = "SeguridadLblAvisoCodigo";
             this.SeguridadLblAvisoCodigo.Size = new System.Drawing.Size(563, 50);
             this.SeguridadLblAvisoCodigo.TabIndex = 8;
-            this.SeguridadLblAvisoCodigo.Text = "El código tiene una vigencia de 10 minutos.\nSi no lo recibes, revisa tu carpeta d" +
-    "e spam o solicita un nuevo código.";
+            this.SeguridadLblAvisoCodigo.Text = "El código tiene una vigencia de 5 minutos.\nSi no lo recibes, revisa tu carpeta de" +
+    " spam o solicita un nuevo código.";
             // 
             // SeguridadLblImportante
             // 
@@ -683,6 +700,19 @@
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
+            // SeguridadLnkAyuda
+            // 
+            this.SeguridadLnkAyuda.AutoSize = true;
+            this.SeguridadLnkAyuda.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeguridadLnkAyuda.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(95)))), ((int)(((byte)(102)))));
+            this.SeguridadLnkAyuda.Location = new System.Drawing.Point(575, 550);
+            this.SeguridadLnkAyuda.Name = "SeguridadLnkAyuda";
+            this.SeguridadLnkAyuda.Size = new System.Drawing.Size(64, 25);
+            this.SeguridadLnkAyuda.TabIndex = 12;
+            this.SeguridadLnkAyuda.TabStop = true;
+            this.SeguridadLnkAyuda.Text = "Ayuda";
+            this.SeguridadLnkAyuda.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SeguridadLnkAyuda_LinkClicked);
+            // 
             // FrmRecuperacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -775,6 +805,7 @@
         private System.Windows.Forms.Label SeguridadLblAvisoCodigo;
         private System.Windows.Forms.TextBox SeguridadTxtUsuario;
         private System.Windows.Forms.CheckBox SeguridadChkVerContrasena;
+        private System.Windows.Forms.LinkLabel SeguridadLnkAyuda;
     }
 }
 
