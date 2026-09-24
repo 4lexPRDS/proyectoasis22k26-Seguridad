@@ -1,4 +1,25 @@
 namespace CapaVista_Seguridad
+
+
+
+ /* ============================================================
+ * Área : Seguridad
+ * Autor : Daniella Jurado
+ * Carné : 0901-23-3679
+ * Fecha : 23/09/2026
+ * ============================================================
+ * Propósito :
+ * Este archivo contiene la configuración visual de la ventana
+ * de asignación de perfiles. Aquí se definen los paneles,
+ * botones, listas, campos de selección, tablas e imágenes que
+ * forman parte de la interfaz. La ventana se divide en una
+ * sección para consultar los perfiles de un usuario y otra para
+ * realizar nuevas asignaciones, incluyendo los controles para
+ * agregar, cancelar y guardar los cambios. También se configura
+ * la apariencia, tamaño, ubicación y distribución de los elementos
+ * que forman parte del formulario.
+ * ============================================================
+ */
 {
     partial class FrmAsignacionPerfiles
     {
