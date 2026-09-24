@@ -41,6 +41,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
             // FrmReporteMantenimientoUsuario
             // 
@@ -53,7 +54,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmReporteMantenimientoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmReporteMantenimientoUsuario";
+            this.Text = "2105 - FrmReporteMantenimientoUsuario";
             this.Load += new System.EventHandler(this.FrmReporteUsuario_Load);
             this.ResumeLayout(false);
 
