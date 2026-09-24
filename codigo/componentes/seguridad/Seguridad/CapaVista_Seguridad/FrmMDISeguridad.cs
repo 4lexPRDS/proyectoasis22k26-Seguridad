@@ -65,7 +65,22 @@ namespace CapaVista_Seguridad
             SeguridadLblUsuario.Text = $"Usuario: {ClsSesionSeguridad.NombreEmpleado}";
             SeguridadLblUsuarioRol.Text = $"Rol: {ClsSesionSeguridad.SeguridadMetRolesComoTexto()}";
         }
-
+        /*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : André De Jesús Gonzalez Camey
+ * Fecha : 23/09/2026
+ * ==================================================================
+ * Propósito :
+ * Se implementó el método SeguridadMetCargarKPIs en el formulario
+ * MDI principal del módulo de Seguridad. Dicho método consulta,
+ * a través de ClsModeloDashboard, el conteo de registros activos
+ * de las seis entidades principales del sistema (usuarios, perfiles,
+ * módulos, aplicaciones, asignaciones y bitácora), y los muestra
+ * en las etiquetas de indicadores clave (KPIs) dispuestas en el
+ * panel superior del formulario.
+ * ===================================================================
+*/
         private void SeguridadMetCargarKPIs()
         {
             try
