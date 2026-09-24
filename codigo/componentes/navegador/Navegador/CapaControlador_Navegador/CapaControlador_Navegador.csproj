@@ -100,7 +100,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaModelo_Seguridad\CapaModelo_Seguridad.csproj">
+    <ProjectReference Include="..\CapaModelo_Navegador\CapaModelo_Navegador.csproj">
       <Project>{3fdc5838-1ec3-42c3-b7ca-b396c03b239f}</Project>
       <Name>CapaModelo_Seguridad</Name>
     </ProjectReference>
