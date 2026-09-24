@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS dbSistemaEmbutidos
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
-/*final*/
+
 USE dbSistemaEmbutidos;
 
 CREATE TABLE tblEmpleado (
@@ -319,5 +319,3 @@ SELECT idAplicacion, nombreAplicacion
 FROM tblAplicacion
 WHERE idModulo = (SELECT idModulo FROM tblModulo WHERE nombreModulo = 'Seguridad')
 ORDER BY idAplicacion;
-
-SELECT * FROM dbSistemaEmbutidos.tblBitacora ORDER BY idBitacora DESC LIMIT 5;
