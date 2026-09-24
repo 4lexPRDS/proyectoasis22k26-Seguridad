@@ -13,6 +13,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaVista_Seguridad.frmReportes;
 
+
+ /* ============================================================
+ * Área : Seguridad
+ * Autor : Daniella Jurado
+ * Carné : 0901-23-3679
+ * Fecha : 23/09/2026
+ * ============================================================
+ * Propósito :
+ * Esta ventana permite administrar los perfiles asignados a los
+ * usuarios del sistema. Cuenta con una sección para consultar los
+ * perfiles que ya tiene asignado un usuario y otra para agregar
+ * nuevas asignaciones, permitiendo seleccionar usuarios y perfiles,
+ * revisar las asignaciones pendientes y quitarlas antes de guardarlas.
+ * También permite eliminar perfiles ya asignados, navegar entre los
+ * registros de las tablas, consultar la ayuda y generar el reporte
+ * de las asignaciones. Además, controla los permisos de los botones
+ * según el usuario que tenga acceso al módulo.
+ * ============================================================
+ */
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionPerfiles : Form
