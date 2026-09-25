@@ -1,3 +1,19 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Omar Gomez y Andre de jesus Gonales
+ * Carné : 9959-23-10733 y 9959-23-3117
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  Propósito :
+ *  El FrmMantenimientoUsuarios es el formulario donde se
+ *  gestiona los usuarios del sistema: puede agregar, modificar,
+ *  eliminar, consultar por nombre y navegar entre los registros
+ *  listados en el grid, controlando el acceso según los permisos
+ *  asignados al usuario.
+ * ===================================================================
+*/
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;

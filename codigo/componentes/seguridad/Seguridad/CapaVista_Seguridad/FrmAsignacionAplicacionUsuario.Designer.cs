@@ -396,6 +396,7 @@
             this.SeguridadBtnReporte.Size = new System.Drawing.Size(65, 65);
             this.SeguridadBtnReporte.TabIndex = 25;
             this.SeguridadBtnReporte.UseVisualStyleBackColor = false;
+            this.SeguridadBtnReporte.Click += new System.EventHandler(this.SeguridadBtnReporte_Click);
             // 
             // SeguridadBtnInicio
             // 

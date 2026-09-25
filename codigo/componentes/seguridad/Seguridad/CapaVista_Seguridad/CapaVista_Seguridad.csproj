@@ -128,6 +128,12 @@
     <Compile Include="frmReportes\FrmReporteAsigAppPerf.Designer.cs">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportes\FrmReporteAsignacionAplicacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes\FrmReporteAsignacionAplicacionUsuario.Designer.cs">
+      <DependentUpon>FrmReporteAsignacionAplicacionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportes\FrmReporteAsignacionPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     <EmbeddedResource Include="frmReportes\FrmReporteAsigAppPerf.resx">
       <DependentUpon>FrmReporteAsigAppPerf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes\FrmReporteAsignacionAplicacionUsuario.resx">
+      <DependentUpon>FrmReporteAsignacionAplicacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportes\FrmReporteAsignacionPerfiles.resx">
       <DependentUpon>FrmReporteAsignacionPerfiles.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +280,7 @@
       <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RpReporteAsignacionAplicacionUsuario.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteBitacora.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteMantenimientoEmpleado.rdlc" />
     <EmbeddedResource Include="Reportes\RpReporteAsigAppPerf.rdlc" />
@@ -281,11 +291,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloAsigAppPerf1.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloAsigAppUsuario.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloAsignacionPerfiles.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloBitacora.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloCambiarContrasena.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloDashboard.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloEmpleado.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloModulo.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloRoles.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloSolicitarCodigo.datasource" />
     <None Include="Properties\DataSources\CapaControlador_Seguridad.ClsModeloUsuario.datasource" />
     <EmbeddedResource Include="Reportes\RpReporteAsignacionPerfiles.rdlc" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Correo.ClsEnvioCorreo.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Correo.ClsPlantillaCorreoRecuperacion.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Modelos_de_controladores.ClsModeloAsigUsuPerf.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Modelos_de_controladores.ClsModeloMantenimientoApp.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Objetos_de_valor.ClsPermisoAplicacion.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Objetos_de_valor.ClsRolInfo.datasource" />
+    <None Include="Properties\DataSources\CapaControlador_Seguridad.Objetos_de_valor.ClsSesionSeguridad.datasource" />
     <None Include="Resources\fondo2.png" />
   </ItemGroup>
   <ItemGroup>

@@ -1,3 +1,20 @@
+/*
+ * ==================================================================
+  Área : Seguridad
+ * Autor : Victor Omar Gomez y Andre de jesus 
+ * Carné : 9959-23-10733 y 9959-23-3117
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El ClsModeloUsuarios es el controlador que valida y prepara los
+ *  datos de un usuario antes de enviarlos al repositorio, aplica
+ *  reglas especificas: no permitir que un empleado tenga 2 usuarios, no
+ *  permitir espacios en la contraseña ni que sea menor a 6 caracteres y no permite numeros en el nombre de usuarios
+ *  registrar cada operación (Agregar, Editar, Eliminar) en la
+ *  bitácora del sistema.
+ * ===================================================================
+*/
+
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;

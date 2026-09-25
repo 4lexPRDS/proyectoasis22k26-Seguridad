@@ -1,11 +1,31 @@
-﻿using CapaControlador_Seguridad.Objetos_de_valor;
-using CapaControlador_Seguridad;
+﻿using CapaControlador_Seguridad;
+using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;
+using CapaVista_Seguridad.frmReportes;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+
+/*
+ * ============================================================
+ * Área         : Seguridad
+ * Autor        : Evelyn Sofía Andrade Luna
+ * Carné        : 9959-23-1224
+ * Autor        : Guillermo Daniel Morales Mendizabal
+ * Carné        : 0901-23-3329
+ * Fecha        : 24/09/2026
+ * ============================================================
+ * Propósito    :
+ *   Formulario principal del módulo de Asignación de
+ *   Aplicación a Usuario. Permite asignar y quitar
+ *   aplicaciones a usuarios por módulo, con validación
+ *   de permisos de acceso. Incluye navegación entre
+ *   registros, búsqueda por usuario, refresco de datos
+ *   y acceso al reporte de asignaciones.
+ * ============================================================
+ */
 
 namespace CapaVista_Seguridad
 {
@@ -302,6 +322,12 @@ namespace CapaVista_Seguridad
         private void SeguridadBtnAyuda_Click_1(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "C:/SeguridadAyudas/SeguridadAyudas.chm", "AsigAplUsarios_Seguridad.html");
+        }
+
+        private void SeguridadBtnReporte_Click(object sender, EventArgs e)
+        {
+            FrmReporteAsignacionAplicacionUsuario reporte = new FrmReporteAsignacionAplicacionUsuario();
+            reporte.Show();
         }
     }
 }
