@@ -1,3 +1,17 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Omar Gomez Carrascosa y Andre de jesus Gonales
+ * Carné : 9959-23-10733  9959-23-3117
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El ClsRepositorioUsuarios se encarga de la comunicación directa
+ *  con la tabla tblUsuario en la base de datos: agrega, edita, elimina
+ *  y consulta los Usuarios
+ * ===================================================================
+*/
+
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Repositorios;
 using CapaModelo_Seguridad.Entidades;

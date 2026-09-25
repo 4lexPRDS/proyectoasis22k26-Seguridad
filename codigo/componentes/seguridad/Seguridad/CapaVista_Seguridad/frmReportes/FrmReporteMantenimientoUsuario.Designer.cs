@@ -1,4 +1,16 @@
-﻿namespace CapaVista_Seguridad.frmReportes
+﻿/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Omar Gomez Carrascosa 
+ * Carné : 9959-23-10733
+ * Fecha : 22/09/2026
+ * ==================================================================
+ * Propósito :
+ *  Crear un reporte de mantenimiento de usuarios,
+ *  mostrando información relevante de los usuarios registrados en el sistema.
+ * ===================================================================
+*/
+namespace CapaVista_Seguridad.frmReportes
 {
     partial class FrmReporteMantenimientoUsuario
     {
