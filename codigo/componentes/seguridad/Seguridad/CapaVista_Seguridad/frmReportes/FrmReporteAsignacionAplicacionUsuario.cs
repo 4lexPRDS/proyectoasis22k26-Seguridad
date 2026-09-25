@@ -10,6 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * ============================================================
+ * Área         : Seguridad
+ * Autor        : Evelyn Sofía Andrade Luna
+ * Carné        : 9959-23-1224
+ * Fecha        : 24/09/2026
+ * ============================================================
+ * Propósito    :
+ *   Formulario de reporte del módulo de Asignación de
+ *   Aplicación a Usuario. Carga y muestra el reporte RDLC
+ *   con el listado completo de asignaciones de aplicaciones
+ *   a usuarios por módulo, incluyendo los permisos otorgados
+ *   a cada uno.
+ * ============================================================
+ */
+
 namespace CapaVista_Seguridad.frmReportes
 {
     public partial class FrmReporteAsignacionAplicacionUsuario : Form
