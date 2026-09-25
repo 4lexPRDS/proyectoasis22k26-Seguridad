@@ -1,4 +1,26 @@
-﻿using CapaControlador_Seguridad;
+﻿/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Omar Gomez Carrascosa
+ * Carné : 9959-23-10733
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El FrmLogin es el formulario de inicio de sesión: valida las
+ *  credenciales a través de ClsModeloUsuario, inicia la sesión
+ *  del usuario en ClsSesionSeguridad y abre el FrmSplash; también
+ *  da acceso a la recuperación de contraseña y a mostrar/ocultar
+ *  la contraseña ingresada.
+ * Reglas especificas:
+ *  Si las credenciales son incorrectas, se limpia el campo de
+ *  contraseña y se devuelve el foco a él, mostrando el mensaje
+ *  "Usuario o contraseña incorrectos"; la contraseña se oculta
+ *  por defecto y solo se muestra en texto plano si el usuario
+ *  activa el checkbox correspondiente.
+ * ===================================================================
+*/
+
+using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using System;
 using System.Collections.Generic;

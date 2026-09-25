@@ -1,3 +1,23 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Samayoa y Oscar Morales
+ * Carné : 9959-23-3424 y 9959-23-3070
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El ClsModeloBitacora es el controlador encargado de registrar
+ *  en la bitácora del sistema cada acción relevante (Insertar,
+ *  Actualizar, Eliminar) realizada sobre las demás entidades,
+ *  guardando quién la ejecutó, sobre qué tabla y registro, el
+ *  detalle de la acción y la IP de origen.
+ * Reglas especificas:
+ *  Si no se recibe un usuario explícito, se toma el usuario de
+ *  la sesión activa (ClsSesionSeguridad); si no se recibe una IP,
+ *  se obtiene automáticamente la IP local del equipo.
+ * ===================================================================
+*/
+
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using CapaModelo_Seguridad.Repositorios;

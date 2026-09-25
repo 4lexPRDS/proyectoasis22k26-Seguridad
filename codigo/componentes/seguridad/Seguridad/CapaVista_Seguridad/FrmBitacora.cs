@@ -1,3 +1,26 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Samayoa y Oscar Morales
+ * Carné : 9959-23-3424 y 9959-23-3070
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El FrmBitacora es el formulario de consulta de la bitácora
+ *  del sistema: carga el historial completo a través de
+ *  ClsModeloBitacora, lo muestra en el grid con encabezados y
+ *  formato propios, permite filtrar por texto y abrir el reporte
+ *  correspondiente.
+ * Reglas especificas:
+ *  Es una pantalla de solo lectura (el grid no permite agregar,
+ *  eliminar ni editar filas); la búsqueda filtra sobre todos los
+ *  campos visibles a la vez (usuario, acción, tabla, detalles,
+ *  IP y fecha en varios formatos) y no distingue mayúsculas de
+ *  minúsculas; y el acceso a los botones se restringe según los
+ *  permisos del usuario para el módulo y la aplicación.
+ * ===================================================================
+*/
+
 using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;

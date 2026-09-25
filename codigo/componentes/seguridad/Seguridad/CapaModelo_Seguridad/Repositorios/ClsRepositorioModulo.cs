@@ -1,4 +1,24 @@
-﻿using CapaModelo_Seguridad.Contratos;
+﻿/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Samayoa y Oscar Morales
+ * Carné : 9959-23-3424 y 9959-23-3070
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El ClsRepositorioModulo es el repositorio encargado del
+ *  acceso a datos de los módulos: agrega, edita y elimina
+ *  registros en tblModulo, y provee consultas para poblar la
+ *  tabla en pantalla y generar el reporte correspondiente.
+ * Reglas especificas:
+ *  No aplica ninguna regla de negocio propia (validaciones,
+ *  duplicados, etc.); esa lógica se delega al controlador
+ *  ClsModeloModulo, y este repositorio solo ejecuta las
+ *  sentencias SQL recibidas.
+ * ===================================================================
+*/
+
+using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using System;
 using System.Collections.Generic;
