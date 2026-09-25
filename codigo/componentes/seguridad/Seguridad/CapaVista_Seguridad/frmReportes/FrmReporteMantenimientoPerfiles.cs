@@ -1,4 +1,19 @@
-﻿using CapaControlador_Seguridad;
+﻿/*
+ * ===================================================================
+ * Área : Seguridad
+ * Autor : Cristian David Sipac Ispache
+ * Carné : 0901-23-1494
+ * Fecha : 23/09/2026
+ * ===================================================================
+ * Propósito :
+ *  El formulario de Reporte del módulo de Mantenimiento de Perfiles
+ *  obtiene el listado de las acciones registradas mediante el 
+ *  modelo de controlador y las vincula al ReportViewer como fuente de
+ *  datos del reporte RDLC embebido RpReporteMantenimientoPerfil.
+ * ===================================================================
+*/
+
+using CapaControlador_Seguridad;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,19 @@
-﻿using CapaControlador_Seguridad;
+﻿/*
+ * ===================================================================
+ * Área : Seguridad
+ * Autor : Victor Omar Gomez Carrascosa
+ * Carné : 0901-23-1494
+ * Fecha : 23/09/2026
+ * ===================================================================
+ * Propósito :
+ *  El formulario de Reporte del módulo de Mantenimiento de Usuario
+ *  obtiene el listado de las acciones registradas mediante el 
+ *  modelo de controlador y las vincula al ReportViewer como fuente de
+ *  datos del reporte RDLC embebido RpReporteMantenimientoUsuario.
+ * ===================================================================
+*/
+
+using CapaControlador_Seguridad;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;

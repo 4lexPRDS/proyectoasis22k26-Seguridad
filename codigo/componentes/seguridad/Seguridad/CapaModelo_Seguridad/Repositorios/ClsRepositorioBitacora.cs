@@ -1,3 +1,23 @@
+/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Samayoa y Oscar Morales
+ * Carné : 9959-23-3424 y 9959-23-3070
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El ClsRepositorioBitacora es el repositorio encargado del
+ *  acceso a datos de la bitácora del sistema: inserta cada
+ *  registro en tblBitacora y consulta el historial completo
+ *  incluyendo el nombre del usuario que ejecutó cada acción.
+ * Reglas especificas:
+ *  No se permite editar ni eliminar registros de la bitácora
+ *  una vez creados (se lanza NotImplementedException); si el
+ *  registro no tiene usuario asociado o no se encuentra su
+ *  nombre, se muestra "Sistema" o "Usuario {id}" como respaldo.
+ * ===================================================================
+*/
+
 using CapaModelo_Seguridad.Contratos;
 using CapaModelo_Seguridad.Entidades;
 using System;

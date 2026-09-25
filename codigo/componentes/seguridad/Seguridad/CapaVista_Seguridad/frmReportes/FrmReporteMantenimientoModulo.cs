@@ -1,4 +1,19 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿/*
+ * ===================================================================
+ * Área : Seguridad
+ * Autor : Oscar Emilio Morales Lemus
+ * Carné : 9959-23-3070
+ * Fecha : 23/09/2026
+ * ===================================================================
+ * Propósito :
+ *  El formulario de Reporte del módulo de Mantenimiento de Modulo
+ *  obtiene el listado de las acciones registradas mediante el 
+ *  modelo de controlador y las vincula al ReportViewer como fuente de
+ *  datos del reporte RDLC embebido RpReporteMantenimientoModulo.
+ * ===================================================================
+*/
+
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

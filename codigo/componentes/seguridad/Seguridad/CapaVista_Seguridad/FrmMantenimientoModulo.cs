@@ -1,4 +1,27 @@
-﻿using CapaControlador_Seguridad;
+﻿/*
+ * ==================================================================
+ * Área : Seguridad
+ * Autor : Victor Samayoa y Oscar Morales
+ * Carné : 9959-23-3424 y 9959-23-3070
+ * Fecha : 24/09/2026
+ * ==================================================================
+ * Propósito :
+ *  El SeguridadFrmModulo es el formulario de mantenimiento de
+ *  módulos: carga y muestra el listado en el grid, permite
+ *  Ingresar, Modificar y Eliminar registros, filtrar por nombre,
+ *  navegar entre resultados y generar el reporte correspondiente,
+ *  delegando toda la lógica de negocio al controlador
+ *  ClsModeloModulo.
+ * Reglas especificas:
+ *  No permite guardar sin capturar Nombre y Descripción; exige
+ *  confirmación antes de eliminar un registro; y restringe el
+ *  acceso a los botones según los permisos del usuario
+ *  (ClsSeguridadFormHelper) para el módulo y la aplicación.
+ * ===================================================================
+*/
+
+
+using CapaControlador_Seguridad;
 using CapaControlador_Seguridad.Objetos_de_valor;
 using CapaVista_Seguridad.Ayudas;
 using CapaVista_Seguridad.frmReportes;

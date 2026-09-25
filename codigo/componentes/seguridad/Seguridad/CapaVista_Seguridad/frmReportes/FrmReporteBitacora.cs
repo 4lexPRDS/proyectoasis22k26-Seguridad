@@ -1,3 +1,18 @@
+/*
+ * ===================================================================
+ * Área : Seguridad
+ * Autor : Victor Josue Samayoa Ortiz
+ * Carné : 0901-23-1494
+ * Fecha : 23/09/2026
+ * ===================================================================
+ * Propósito :
+ *  El formulario de Reporte de la bitácora del módulo de Seguridad
+ *  obtiene el listado de las acciones registradas mediante el 
+ *  modelo de controlador y las vincula al ReportViewer como fuente de
+ *  datos del reporte RDLC embebido RpReporteBitacora.
+ * ===================================================================
+*/
+
 using CapaControlador_Seguridad;
 using Microsoft.Reporting.WinForms;
 using System;
