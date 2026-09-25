@@ -8,6 +8,25 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
+/*
+ * ============================================================
+ * Área         : Seguridad
+ * Autor        : Evelyn Sofía Andrade Luna
+ * Carné        : 9959-23-1224
+ * Autor        : Guillermo Daniel Morales Mendizabal
+ * Carné        : 0901-23-3329
+ * Fecha        : 24/09/2026
+ * ============================================================
+ * Propósito    :
+ *   Formulario principal del módulo de Asignación de
+ *   Aplicación a Usuario. Permite asignar y quitar
+ *   aplicaciones a usuarios por módulo, con validación
+ *   de permisos de acceso. Incluye navegación entre
+ *   registros, búsqueda por usuario, refresco de datos
+ *   y acceso al reporte de asignaciones.
+ * ============================================================
+ */
+
 namespace CapaVista_Seguridad
 {
     public partial class FrmAsignacionAplicacionUsuario : Form

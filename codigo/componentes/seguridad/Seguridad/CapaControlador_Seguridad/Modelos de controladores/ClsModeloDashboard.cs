@@ -6,13 +6,11 @@ using CapaModelo_Seguridad.Repositorios;
  * Fecha : 23/09/2026
  * ==================================================================
  * Propósito :
- * Repositorio de datos encargado de ejecutar las consultas SQL
- * necesarias para obtener el conteo de registros de las tablas
- * principales del módulo de Seguridad: tblUsuario (usuarios
- * activos), tblRol (perfiles activos), tblModulo, tblAplicacion,
- * tblBitacora y tblUsuarioRol (asignaciones). Cada método retorna
- * un entero con el total obtenido directamente desde la base de
- * datos, siguiendo el patrón de herencia de ClsSentencias.
+ * Modelo de controlador que actúa como intermediario entre la capa
+ * de vista y el repositorio ClsRepositorioDashboard. Expone seis
+ * métodos que delegan la consulta de conteos al repositorio,
+ * permitiendo que el formulario MDI obtenga los datos de los KPIs
+ * sin acoplarse directamente a la capa de acceso a datos.
  * ===================================================================
 */
 namespace CapaControlador_Seguridad
