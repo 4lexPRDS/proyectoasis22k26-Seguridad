@@ -1,7 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
-
+/*
+ * ==================================================================
+ * Área: Seguridad
+ * Autores: Lourdes Isabel Melendez Pineda
+ * Fecha o ultima edicion: 23/09/2026
+ * ==================================================================
+ * Propósito : Clase base que hereda de la conexión y ejecuta las
+ * sentencias SQL del sistema, ya sea para insertar,
+ * editar o eliminar o para hacer
+ * consultas que devuelven una tabla de resultados, con
+ * o sin parámetros.
+ * ===================================================================
+ */
 namespace CapaModelo_Seguridad
 {
     public abstract class ClsSentencias : ClsConexion
