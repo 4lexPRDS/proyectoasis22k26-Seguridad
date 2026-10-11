@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B819CF10-A1FE-4E5F-9C6D-3DEA99C8D7FF}</ProjectGuid>
+    <ProjectGuid>{D083E366-064B-4AE9-A69E-93C901BD76BC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaModelo_Consultas</RootNamespace>
@@ -32,9 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Repositorios\ClsLectorConsultaAntigua.cs" />
+    <Compile Include="Repositorios\ClsConsultaPreparada.cs" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositorios\ClsSentenciasFiltroSimple.cs" />
-    <Compile Include="Repositorios\ClsSentenciasTablas.cs" />
+    <Compile Include="Contratos\IRepositorioConsultasGuardadas.cs" />
+    <Compile Include="Contratos\IRepositorioEjecucionConsultas.cs" />
+    <Compile Include="Contratos\IRepositorioMetadatos.cs" />
+    <Compile Include="Entidades\ClsCampoConsulta.cs" />
+    <Compile Include="Entidades\ClsCondicion.cs" />
+    <Compile Include="Entidades\ClsConsultaGuardada.cs" />
+    <Compile Include="Entidades\ClsDefinicionConsulta.cs" />
+    <Compile Include="Entidades\ClsResultadoPaginado.cs" />
     <Compile Include="Repositorios\ClsConexion.cs" />
+    <Compile Include="Repositorios\ClsConstructorConsulta.cs" />
+    <Compile Include="Repositorios\ClsFormatoDefinicion.cs" />
+    <Compile Include="Repositorios\ClsRepositorio.cs" />
+    <Compile Include="Repositorios\ClsRepositorioConsultasGuardadas.cs" />
+    <Compile Include="Repositorios\ClsRepositorioEjecucionConsultas.cs" />
+    <Compile Include="Repositorios\ClsRepositorioMetadatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

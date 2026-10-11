@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{169C8CF8-DACB-4582-B579-7ACE8163CFB3}</ProjectGuid>
+    <ProjectGuid>{2AE33348-99ED-4607-934F-80C90AD80928}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Ejecucion_Consultas</RootNamespace>
     <AssemblyName>Ejecucion_Consultas</AssemblyName>
@@ -33,11 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaVista_Componentes">
-      <HintPath>..\..\Consultas_Componentes\CapaVista_Componentes\bin\Debug\CapaVista_Componentes.dll</HintPath>
-    </Reference>
     <Reference Include="CapaVista_Consultas">
-      <HintPath>..\..\Consultas\CapaVista_Consultas\bin\Debug\CapaVista_Consultas.dll</HintPath>
+      <HintPath>..\..\Consultas\CapaVista_Consultas\bin\$(Configuration)\CapaVista_Consultas.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
