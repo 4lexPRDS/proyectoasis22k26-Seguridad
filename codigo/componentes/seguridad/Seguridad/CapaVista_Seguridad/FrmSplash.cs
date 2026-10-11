@@ -72,7 +72,11 @@ namespace CapaVista_Seguridad
                 switch (_Destino)
                 {
                     case "Bancos":
-                        principal = new FrmMDIBancos();
+                        var MdiBancos = new FrmMDIBancos();
+                        MdiBancos.BancosMetActualizarInfoUsuario(
+                            ClsSesionSeguridad.NombreEmpleado,
+                            ClsSesionSeguridad.SeguridadMetRolesComoTexto());
+                        principal = MdiBancos;
                         break;
                     case "RRHH":
                         var MdiRrhh = new FrmMDIRrhh();

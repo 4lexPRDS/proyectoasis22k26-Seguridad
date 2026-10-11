@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaControlador_Seguridad">
+      <HintPath>..\..\..\..\..\..\Repositorios GitHub\Embutidos S.A\proyectoasis22k26-Seguridad\codigo\componentes\seguridad\Seguridad\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="CapaModelo_Bancos">
       <HintPath>..\CapaModelo_Bancos\bin\Debug\CapaModelo_Bancos.dll</HintPath>
     </Reference>

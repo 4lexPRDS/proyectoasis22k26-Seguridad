@@ -37,11 +37,16 @@ namespace CapaVista_Bancos.Formularios
                 BancosLblUsuarioRol.Location = new Point(624, 14);
             }
         }
-
         private void BancosBtnMovBan_Click(object sender, EventArgs e)
         {
             FrmMovimientosBancarios MovimientosBancarios = new FrmMovimientosBancarios();
             MovimientosBancarios.ShowDialog();
+        }
+        public void BancosMetActualizarInfoUsuario(string Nombre, string Rol)
+        {
+            BancosLblUsuario.Text = $"Usuario: {Nombre}";
+            BancosLblUsuarioRol.Text = $"Rol: {Rol}";
+            BancosLblUsuarioRol.Left = BancosLblUsuario.Right + 30;
         }
     }
 }
