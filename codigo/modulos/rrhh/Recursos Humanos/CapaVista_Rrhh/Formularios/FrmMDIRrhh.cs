@@ -98,9 +98,9 @@ namespace CapaVista_Rrhh.Formularios
 
         // Lo llama quien abre el MDI despues del login, con los datos de la sesion
         // (ClsSesionSeguridad.NombreEmpleado y SeguridadMetRolesComoTexto()).
-        public void RrhhMetActualizarInfoUsuario(string NombreEmpleado, string Rol)
+        public void RrhhMetActualizarInfoUsuario(string Nombre, string Rol)
         {
-            RrhhLblUsuario.Text = $"Usuario: {NombreEmpleado}";
+            RrhhLblUsuario.Text = $"Usuario: {Nombre}";
             RrhhLblUsuarioRol.Text = $"Rol: {Rol}";
             RrhhLblUsuarioRol.Left = RrhhLblUsuario.Right + 30;
         }
