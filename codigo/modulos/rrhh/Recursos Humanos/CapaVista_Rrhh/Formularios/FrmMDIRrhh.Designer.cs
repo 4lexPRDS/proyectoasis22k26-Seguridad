@@ -50,6 +50,13 @@
             this.RrhhBtnAyuda = new System.Windows.Forms.Button();
             this.RrhhPbMascota = new System.Windows.Forms.PictureBox();
             this.RrhhLblResumen = new System.Windows.Forms.Label();
+            this.RrhhPnlInfo = new System.Windows.Forms.Panel();
+            this.RrhhLblInfoTitulo = new System.Windows.Forms.Label();
+            this.RrhhLblInfo = new System.Windows.Forms.Label();
+            this.RrhhPnlSeparador = new System.Windows.Forms.Panel();
+            this.RrhhLblIconoNota = new System.Windows.Forms.Label();
+            this.RrhhLblNotaTitulo = new System.Windows.Forms.Label();
+            this.RrhhLblNota = new System.Windows.Forms.Label();
             this.RrhhPnlKPI1 = new System.Windows.Forms.Panel();
             this.RrhhPnlKPIIcono1 = new System.Windows.Forms.Panel();
             this.RrhhLblKPIResp1 = new System.Windows.Forms.Label();
@@ -80,6 +87,8 @@
             this.RrhhPnlContenedor.SuspendLayout();
             this.RrhhPnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbMascota)).BeginInit();
+            this.RrhhPnlInfo.SuspendLayout();
+            this.RrhhPnlSeparador.SuspendLayout();
             this.RrhhPnlKPI1.SuspendLayout();
             this.RrhhPnlKPIIcono1.SuspendLayout();
             this.RrhhPnlKPI2.SuspendLayout();
@@ -421,6 +430,7 @@
             this.RrhhPnlDashboard.BackColor = System.Drawing.Color.White;
             this.RrhhPnlDashboard.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.fondo_dashboard;
             this.RrhhPnlDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RrhhPnlDashboard.Controls.Add(this.RrhhPnlInfo);
             this.RrhhPnlDashboard.Controls.Add(this.RrhhPnlKPI6);
             this.RrhhPnlDashboard.Controls.Add(this.RrhhPnlKPI5);
             this.RrhhPnlDashboard.Controls.Add(this.RrhhPnlKPI4);
@@ -762,6 +772,85 @@
             this.RrhhLblKPI6.TabIndex = 2;
             this.RrhhLblKPI6.Text = "Empleados en\r\nLiquidación";
             // 
+            // RrhhPnlInfo
+            // 
+            this.RrhhPnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.RrhhPnlInfo.Controls.Add(this.RrhhLblNota);
+            this.RrhhPnlInfo.Controls.Add(this.RrhhLblNotaTitulo);
+            this.RrhhPnlInfo.Controls.Add(this.RrhhLblIconoNota);
+            this.RrhhPnlInfo.Controls.Add(this.RrhhPnlSeparador);
+            this.RrhhPnlInfo.Controls.Add(this.RrhhLblInfo);
+            this.RrhhPnlInfo.Controls.Add(this.RrhhLblInfoTitulo);
+            this.RrhhPnlInfo.Location = new System.Drawing.Point(40, 650);
+            this.RrhhPnlInfo.Name = "RrhhPnlInfo";
+            this.RrhhPnlInfo.Size = new System.Drawing.Size(1122, 100);
+            this.RrhhPnlInfo.TabIndex = 10;
+            this.RrhhPnlInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.RrhhPnlKPI_Paint);
+            // 
+            // RrhhLblInfoTitulo
+            // 
+            this.RrhhLblInfoTitulo.AutoSize = true;
+            this.RrhhLblInfoTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblInfoTitulo.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblInfoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblInfoTitulo.Location = new System.Drawing.Point(20, 14);
+            this.RrhhLblInfoTitulo.Name = "RrhhLblInfoTitulo";
+            this.RrhhLblInfoTitulo.TabIndex = 0;
+            this.RrhhLblInfoTitulo.Text = "Información relevante del módulo";
+            // 
+            // RrhhLblInfo
+            // 
+            this.RrhhLblInfo.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblInfo.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblInfo.Location = new System.Drawing.Point(20, 42);
+            this.RrhhLblInfo.Name = "RrhhLblInfo";
+            this.RrhhLblInfo.Size = new System.Drawing.Size(650, 48);
+            this.RrhhLblInfo.TabIndex = 1;
+            this.RrhhLblInfo.Text = "Desde aquí se administra al personal de la empresa: empleados, asistencia, permisos y vacaciones, capacitaciones, evaluaciones de desempeño, nómina y liquidaciones.";
+            // 
+            // RrhhPnlSeparador
+            // 
+            this.RrhhPnlSeparador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlSeparador.Location = new System.Drawing.Point(700, 16);
+            this.RrhhPnlSeparador.Name = "RrhhPnlSeparador";
+            this.RrhhPnlSeparador.Size = new System.Drawing.Size(2, 68);
+            this.RrhhPnlSeparador.TabIndex = 2;
+            // 
+            // RrhhLblIconoNota
+            // 
+            this.RrhhLblIconoNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblIconoNota.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblIconoNota.ForeColor = System.Drawing.Color.White;
+            this.RrhhLblIconoNota.Location = new System.Drawing.Point(724, 28);
+            this.RrhhLblIconoNota.Name = "RrhhLblIconoNota";
+            this.RrhhLblIconoNota.Size = new System.Drawing.Size(44, 44);
+            this.RrhhLblIconoNota.TabIndex = 3;
+            this.RrhhLblIconoNota.Text = "i";
+            this.RrhhLblIconoNota.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RrhhLblNotaTitulo
+            // 
+            this.RrhhLblNotaTitulo.AutoSize = true;
+            this.RrhhLblNotaTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblNotaTitulo.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblNotaTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblNotaTitulo.Location = new System.Drawing.Point(784, 14);
+            this.RrhhLblNotaTitulo.Name = "RrhhLblNotaTitulo";
+            this.RrhhLblNotaTitulo.TabIndex = 4;
+            this.RrhhLblNotaTitulo.Text = "Nota de integración";
+            // 
+            // RrhhLblNota
+            // 
+            this.RrhhLblNota.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblNota.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblNota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblNota.Location = new System.Drawing.Point(784, 40);
+            this.RrhhLblNota.Name = "RrhhLblNota";
+            this.RrhhLblNota.Size = new System.Drawing.Size(326, 52);
+            this.RrhhLblNota.TabIndex = 5;
+            this.RrhhLblNota.Text = "Al integrarse con Seguridad, el usuario, el rol y los permisos de cada opción se cargarán desde el inicio de sesión.";
+            // 
             // FrmMDIRrhh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -775,7 +864,7 @@
             this.Controls.Add(this.RrhhPnlNavegador);
             this.Name = "FrmMDIRrhh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0000 - MDI Principal de Recursos Humanos";
+            this.Text = "9000 - MDI Principal de Recursos Humanos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbMascota)).EndInit();
@@ -785,6 +874,8 @@
             this.RrhhPnlContenedor.ResumeLayout(false);
             this.RrhhPnlDashboard.ResumeLayout(false);
             this.RrhhPnlDashboard.PerformLayout();
+            this.RrhhPnlInfo.ResumeLayout(false);
+            this.RrhhPnlSeparador.ResumeLayout(false);
             this.RrhhPnlKPI1.ResumeLayout(false);
             this.RrhhPnlKPI1.PerformLayout();
             this.RrhhPnlKPIIcono1.ResumeLayout(false);
@@ -831,6 +922,13 @@
         private System.Windows.Forms.Button RrhhBtnAyuda;
         private System.Windows.Forms.PictureBox RrhhPbMascota;
         private System.Windows.Forms.Label RrhhLblResumen;
+        private System.Windows.Forms.Panel RrhhPnlInfo;
+        private System.Windows.Forms.Label RrhhLblInfoTitulo;
+        private System.Windows.Forms.Label RrhhLblInfo;
+        private System.Windows.Forms.Panel RrhhPnlSeparador;
+        private System.Windows.Forms.Label RrhhLblIconoNota;
+        private System.Windows.Forms.Label RrhhLblNotaTitulo;
+        private System.Windows.Forms.Label RrhhLblNota;
         private System.Windows.Forms.Panel RrhhPnlKPI1;
         private System.Windows.Forms.Panel RrhhPnlKPIIcono1;
         private System.Windows.Forms.Label RrhhLblKPIResp1;
