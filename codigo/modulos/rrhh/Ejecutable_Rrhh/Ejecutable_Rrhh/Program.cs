@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+ * ==================================================================
+ * Área : Recursos Humanos
+ * Autor : Byron Alexander
+ * Carné : 0901-23-3747
+ * Fecha : 11/10/2026
+ * ==================================================================
+ * Propósito :
+ *  Punto de entrada del ejecutable de Recursos Humanos, abre el
+ *  formulario MDI del módulo.
+ * ===================================================================
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,8 +21,8 @@ namespace Ejecutable_Rrhh
 {
     internal static class Program
     {
-        // Marca la aplicación como compatible con DPI para que Windows no estire
-        // (y deje borrosas) las imágenes cuando la pantalla tiene escalado.
+        // sin esto Windows estira la ventana cuando la pantalla tiene escala
+        // y las imagenes se ven borrosas
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
 
