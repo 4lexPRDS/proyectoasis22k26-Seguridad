@@ -241,15 +241,18 @@ namespace CapaVista_Seguridad
 
         private void SeguridadBtnEmpleados_Click(object sender, EventArgs e)
         {
-         //   if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 4))
-         //   {
-          //      MessageBox.Show("No tienes acceso a este módulo.",
-          //          "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-           //     return;
-         //   }
+            if (!ClsSeguridadFormHelper.SeguridadMetTieneAcceso(IdModulo: 4, IdAplicacion: 4))
+            {
+                MessageBox.Show("No tienes acceso a este módulo.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            FrmNavegador Empleados = new FrmNavegador();
+            FrmMantenimientoEmpleado Empleados = new FrmMantenimientoEmpleado();
             Empleados.ShowDialog();
+
+           // FrmNavegador Empleados = new FrmNavegador();
+           // Empleados.ShowDialog();
         }
 
         private void SeguridadBtnAplicaciones_Click(object sender, EventArgs e)
