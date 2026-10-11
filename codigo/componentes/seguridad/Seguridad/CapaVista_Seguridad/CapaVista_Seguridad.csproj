@@ -35,6 +35,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaControlador_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Bancos">
+      <HintPath>..\..\..\..\..\..\Repositorios GitHub\Embutidos S.A\proyectoasis22k26-Seguridad\codigo\modulos\bancos\Bancos\CapaVista_Bancos\bin\Debug\CapaVista_Bancos.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_Navegador">
       <HintPath>..\..\..\navegador\Navegador\CapaVista_Navegador\bin\Debug\CapaVista_Navegador.dll</HintPath>
     </Reference>

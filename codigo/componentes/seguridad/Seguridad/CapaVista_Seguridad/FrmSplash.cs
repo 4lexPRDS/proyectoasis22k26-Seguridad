@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista_Bancos.Formularios;
 
 /*
  * ============================================================
@@ -31,10 +32,12 @@ namespace CapaVista_Seguridad
         static extern int SetWindowTheme(IntPtr hwnd, string pszSubAppName, string pszSubIdList);
 
         private int _Progreso;
+        private readonly string _Destino;
 
-        public FrmSplash()
+        public FrmSplash(string destino)
         {
             InitializeComponent();
+            _Destino = destino;
             SeguridadMetAplicarColorBarra();
             SeguridadMetIniciarCarga();
         }
@@ -62,8 +65,19 @@ namespace CapaVista_Seguridad
             {
                 _TimerCarga.Stop();
                 this.Hide();
-                FrmMDISeguridad Principal = new FrmMDISeguridad();
-                Principal.ShowDialog();
+
+                Form principal;
+                switch (_Destino)
+                {
+                    case "Bancos":
+                        principal = new FrmMDIBancos();
+                        break;
+                    default:
+                        principal = new FrmMDISeguridad();
+                        break;
+                }
+
+                principal.ShowDialog();
                 this.Close();
             }
         }
