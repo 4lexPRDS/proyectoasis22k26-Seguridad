@@ -104,7 +104,7 @@
     <Folder Include="Ayudas\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Asistencia\CapaVista_Asistencia\CapaVista_Asistencia.csproj">
+    <ProjectReference Include="..\..\Asistencia\CapaVista_Asistencia\CapaVista_Asistencia.csproj">
       <Project>{cc16e22e-8e90-485e-b4a0-140164b70f54}</Project>
       <Name>CapaVista_Asistencia</Name>
     </ProjectReference>
