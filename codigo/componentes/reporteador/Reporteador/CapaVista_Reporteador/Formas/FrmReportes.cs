@@ -5,7 +5,6 @@
 using CapaControlador_Reporteador;
 using CapaModelo_Reporteador.Entidades;
 using CapaVista_Reporteador.Formas;
-using CapaVista_BtnVerReporte_Reporteador;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -381,38 +380,6 @@ namespace CapaVista_Reporteador
         }
 
         // ================================================================
-        // VER REPORTE
-        // ================================================================
-        private void ReporteadorMetVerReporte(object Sender, EventArgs ArgumentosEvento)
-        {
-            try
-            {
-                if (ReporteadorDgvReportes.CurrentRow == null)
-                {
-                    ReporteadorMetMostrarError("Debe seleccionar un reporte para verlo.");
-                    return;
-                }
-
-                object NumeroReporte = ReporteadorDgvReportes
-                    .CurrentRow
-                    .Cells["NumeroReporte"]
-                    .Value;
-
-                if (NumeroReporte == null || NumeroReporte == DBNull.Value)
-                {
-                    ReporteadorMetMostrarError("No se pudo obtener el número del reporte.");
-                    return;
-                }
-
-                ReporteadorBtnVerReporte.ReporteadorMetMostrarReporte(Convert.ToInt32(NumeroReporte), _FuentesDeDatosReporteador);
-            }
-            catch (Exception Excepcion)
-            {
-                ReporteadorMetMostrarError("No se pudo abrir el reporte.\n\n" + Excepcion.Message);
-            }
-        }
-
-        // ================================================================
         // CARGAR TABLA
         // ================================================================
 
@@ -679,13 +646,33 @@ namespace CapaVista_Reporteador
             MessageBox.Show(Mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        // ================================================================
+        // CARGAR AYUDA DEL REPORTEADOR
+        // ================================================================
         private void ReporteadorMetMostrarAyuda(object Sender, EventArgs E)
         {
-            Help.ShowHelp(
-                this,
-                "C:proyectoasis22k26/ayuda/componentes/reporteador/AyudaReporteador.chm",
-                "Ayuda_General_Reporteador.html"
-            );
+            DirectoryInfo DirectorioActual = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory);
+
+            while (DirectorioActual != null)
+            {
+                string RutaAyuda = Path.Combine(
+                    DirectorioActual.FullName,
+                    "ayuda",
+                    "componentes",
+                    "reporteador",
+                    "AyudaReporteador.chm"
+                );
+
+                if (File.Exists(RutaAyuda))
+                {
+                    Help.ShowHelp(this, RutaAyuda, "Ayuda_General_Reporteador.html");
+                    return;
+                }
+
+                DirectorioActual = DirectorioActual.Parent;
+            }
+
+            ReporteadorMetMostrarError("No se encontró el archivo de ayuda del Reporteador.");
         }
 
         // ================================================================
