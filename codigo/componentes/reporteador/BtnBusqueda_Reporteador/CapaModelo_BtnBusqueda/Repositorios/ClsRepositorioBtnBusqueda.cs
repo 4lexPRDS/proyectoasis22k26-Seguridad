@@ -81,9 +81,10 @@ namespace CapaModelo_BtnBusqueda_Reporteador.Repositorios
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-                throw;
+                throw new Exception(
+                    "No se pudieron buscar los reportes.", Ex);
             }
 
             return Tabla;
