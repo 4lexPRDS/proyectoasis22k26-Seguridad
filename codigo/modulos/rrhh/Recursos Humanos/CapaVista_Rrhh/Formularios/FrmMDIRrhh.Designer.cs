@@ -113,7 +113,7 @@
             this.RrhhPnlNavegador.Controls.Add(this.RrhhPbLogo);
             this.RrhhPnlNavegador.Dock = System.Windows.Forms.DockStyle.Left;
             this.RrhhPnlNavegador.Location = new System.Drawing.Point(19, 17);
-            this.RrhhPnlNavegador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlNavegador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlNavegador.Name = "RrhhPnlNavegador";
             this.RrhhPnlNavegador.Size = new System.Drawing.Size(360, 1021);
             this.RrhhPnlNavegador.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.RrhhBtnCerrarSesion.Image = global::CapaVista_Rrhh.Properties.Resources.btn_cerrarsesion_diseno;
             this.RrhhBtnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnCerrarSesion.Location = new System.Drawing.Point(13, 726);
-            this.RrhhBtnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnCerrarSesion.Name = "RrhhBtnCerrarSesion";
             this.RrhhBtnCerrarSesion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnCerrarSesion.Size = new System.Drawing.Size(333, 62);
@@ -160,7 +160,7 @@
             this.RrhhBtnLiquidacion.Image = global::CapaVista_Rrhh.Properties.Resources.btn_liquidacion_diseno;
             this.RrhhBtnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnLiquidacion.Location = new System.Drawing.Point(13, 633);
-            this.RrhhBtnLiquidacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnLiquidacion.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnLiquidacion.Name = "RrhhBtnLiquidacion";
             this.RrhhBtnLiquidacion.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnLiquidacion.Size = new System.Drawing.Size(333, 57);
@@ -186,7 +186,7 @@
             this.RrhhBtnCierresNomina.Image = global::CapaVista_Rrhh.Properties.Resources.btn_cierres_diseno;
             this.RrhhBtnCierresNomina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnCierresNomina.Location = new System.Drawing.Point(13, 569);
-            this.RrhhBtnCierresNomina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnCierresNomina.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnCierresNomina.Name = "RrhhBtnCierresNomina";
             this.RrhhBtnCierresNomina.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnCierresNomina.Size = new System.Drawing.Size(333, 57);
@@ -213,7 +213,7 @@
             this.RrhhBtnNomina.Image = global::CapaVista_Rrhh.Properties.Resources.btn_nomina_diseno;
             this.RrhhBtnNomina.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnNomina.Location = new System.Drawing.Point(13, 505);
-            this.RrhhBtnNomina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnNomina.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnNomina.Name = "RrhhBtnNomina";
             this.RrhhBtnNomina.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnNomina.Size = new System.Drawing.Size(333, 57);
@@ -223,6 +223,7 @@
             this.RrhhBtnNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnNomina.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnNomina.UseVisualStyleBackColor = false;
+            this.RrhhBtnNomina.Click += new System.EventHandler(this.RrhhBtnNomina_Click);
             this.RrhhBtnNomina.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnNomina.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
@@ -239,7 +240,7 @@
             this.RrhhBtnEvaluacionDesempeno.Image = global::CapaVista_Rrhh.Properties.Resources.btn_evaluacion_diseno;
             this.RrhhBtnEvaluacionDesempeno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnEvaluacionDesempeno.Location = new System.Drawing.Point(13, 441);
-            this.RrhhBtnEvaluacionDesempeno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnEvaluacionDesempeno.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnEvaluacionDesempeno.Name = "RrhhBtnEvaluacionDesempeno";
             this.RrhhBtnEvaluacionDesempeno.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnEvaluacionDesempeno.Size = new System.Drawing.Size(333, 57);
@@ -265,7 +266,7 @@
             this.RrhhBtnCapacitaciones.Image = global::CapaVista_Rrhh.Properties.Resources.btn_capacitaciones_diseno;
             this.RrhhBtnCapacitaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnCapacitaciones.Location = new System.Drawing.Point(13, 377);
-            this.RrhhBtnCapacitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnCapacitaciones.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnCapacitaciones.Name = "RrhhBtnCapacitaciones";
             this.RrhhBtnCapacitaciones.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnCapacitaciones.Size = new System.Drawing.Size(333, 57);
@@ -291,7 +292,7 @@
             this.RrhhBtnPermisosVacaciones.Image = global::CapaVista_Rrhh.Properties.Resources.btn_permisos_diseno;
             this.RrhhBtnPermisosVacaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnPermisosVacaciones.Location = new System.Drawing.Point(13, 313);
-            this.RrhhBtnPermisosVacaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnPermisosVacaciones.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnPermisosVacaciones.Name = "RrhhBtnPermisosVacaciones";
             this.RrhhBtnPermisosVacaciones.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnPermisosVacaciones.Size = new System.Drawing.Size(333, 57);
@@ -317,7 +318,7 @@
             this.RrhhBtnAsistencia.Image = global::CapaVista_Rrhh.Properties.Resources.btn_asistencia_diseno;
             this.RrhhBtnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnAsistencia.Location = new System.Drawing.Point(13, 249);
-            this.RrhhBtnAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnAsistencia.Name = "RrhhBtnAsistencia";
             this.RrhhBtnAsistencia.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnAsistencia.Size = new System.Drawing.Size(333, 57);
@@ -343,7 +344,7 @@
             this.RrhhBtnEmpleados.Image = global::CapaVista_Rrhh.Properties.Resources.btn_empleados_diseno;
             this.RrhhBtnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnEmpleados.Location = new System.Drawing.Point(13, 185);
-            this.RrhhBtnEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnEmpleados.Name = "RrhhBtnEmpleados";
             this.RrhhBtnEmpleados.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.RrhhBtnEmpleados.Size = new System.Drawing.Size(333, 57);
@@ -362,7 +363,7 @@
             this.RrhhPbLogo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbLogo.Image = global::CapaVista_Rrhh.Properties.Resources.logo;
             this.RrhhPbLogo.Location = new System.Drawing.Point(91, 15);
-            this.RrhhPbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPbLogo.Name = "RrhhPbLogo";
             this.RrhhPbLogo.Size = new System.Drawing.Size(177, 156);
             this.RrhhPbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -377,7 +378,7 @@
             this.RrhhPnlBarraSuperior.Controls.Add(this.RrhhBtnBurger);
             this.RrhhPnlBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.RrhhPnlBarraSuperior.Location = new System.Drawing.Point(379, 17);
-            this.RrhhPnlBarraSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlBarraSuperior.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlBarraSuperior.Name = "RrhhPnlBarraSuperior";
             this.RrhhPnlBarraSuperior.Size = new System.Drawing.Size(1526, 69);
             this.RrhhPnlBarraSuperior.TabIndex = 1;
@@ -418,7 +419,7 @@
             this.RrhhBtnBurger.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnBurger.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnBurger.Location = new System.Drawing.Point(21, 10);
-            this.RrhhBtnBurger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnBurger.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnBurger.Name = "RrhhBtnBurger";
             this.RrhhBtnBurger.Size = new System.Drawing.Size(60, 49);
             this.RrhhBtnBurger.TabIndex = 0;
@@ -432,7 +433,7 @@
             this.RrhhPnlContenedor.Controls.Add(this.RrhhPnlDashboard);
             this.RrhhPnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RrhhPnlContenedor.Location = new System.Drawing.Point(379, 86);
-            this.RrhhPnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlContenedor.Name = "RrhhPnlContenedor";
             this.RrhhPnlContenedor.Padding = new System.Windows.Forms.Padding(21, 5, 21, 20);
             this.RrhhPnlContenedor.Size = new System.Drawing.Size(1526, 952);
@@ -458,7 +459,7 @@
             this.RrhhPnlDashboard.Controls.Add(this.RrhhPbMascota);
             this.RrhhPnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RrhhPnlDashboard.Location = new System.Drawing.Point(21, 5);
-            this.RrhhPnlDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlDashboard.Name = "RrhhPnlDashboard";
             this.RrhhPnlDashboard.Size = new System.Drawing.Size(1484, 927);
             this.RrhhPnlDashboard.TabIndex = 0;
@@ -474,7 +475,7 @@
             this.RrhhPnlInfo.Controls.Add(this.RrhhLblInfo);
             this.RrhhPnlInfo.Controls.Add(this.RrhhLblInfoTitulo);
             this.RrhhPnlInfo.Location = new System.Drawing.Point(53, 800);
-            this.RrhhPnlInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlInfo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlInfo.Name = "RrhhPnlInfo";
             this.RrhhPnlInfo.Size = new System.Drawing.Size(1496, 123);
             this.RrhhPnlInfo.TabIndex = 10;
@@ -523,7 +524,7 @@
             // 
             this.RrhhPnlSeparador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
             this.RrhhPnlSeparador.Location = new System.Drawing.Point(933, 20);
-            this.RrhhPnlSeparador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlSeparador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlSeparador.Name = "RrhhPnlSeparador";
             this.RrhhPnlSeparador.Size = new System.Drawing.Size(3, 84);
             this.RrhhPnlSeparador.TabIndex = 2;
@@ -562,7 +563,7 @@
             this.RrhhPnlKPI6.Controls.Add(this.RrhhLblKPIResp6);
             this.RrhhPnlKPI6.Controls.Add(this.RrhhPnlKPIIcono6);
             this.RrhhPnlKPI6.Location = new System.Drawing.Point(1320, 548);
-            this.RrhhPnlKPI6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI6.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI6.Name = "RrhhPnlKPI6";
             this.RrhhPnlKPI6.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI6.TabIndex = 9;
@@ -599,7 +600,7 @@
             this.RrhhPnlKPIIcono6.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_liquidacion;
             this.RrhhPnlKPIIcono6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono6.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono6.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono6.Name = "RrhhPnlKPIIcono6";
             this.RrhhPnlKPIIcono6.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono6.TabIndex = 0;
@@ -611,7 +612,7 @@
             this.RrhhPnlKPI5.Controls.Add(this.RrhhLblKPIResp5);
             this.RrhhPnlKPI5.Controls.Add(this.RrhhPnlKPIIcono5);
             this.RrhhPnlKPI5.Location = new System.Drawing.Point(1067, 548);
-            this.RrhhPnlKPI5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI5.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI5.Name = "RrhhPnlKPI5";
             this.RrhhPnlKPI5.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI5.TabIndex = 8;
@@ -648,7 +649,7 @@
             this.RrhhPnlKPIIcono5.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_nomina;
             this.RrhhPnlKPIIcono5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono5.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono5.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono5.Name = "RrhhPnlKPIIcono5";
             this.RrhhPnlKPIIcono5.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono5.TabIndex = 0;
@@ -660,7 +661,7 @@
             this.RrhhPnlKPI4.Controls.Add(this.RrhhLblKPIResp4);
             this.RrhhPnlKPI4.Controls.Add(this.RrhhPnlKPIIcono4);
             this.RrhhPnlKPI4.Location = new System.Drawing.Point(813, 548);
-            this.RrhhPnlKPI4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI4.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI4.Name = "RrhhPnlKPI4";
             this.RrhhPnlKPI4.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI4.TabIndex = 7;
@@ -697,7 +698,7 @@
             this.RrhhPnlKPIIcono4.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_evaluaciones;
             this.RrhhPnlKPIIcono4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono4.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono4.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono4.Name = "RrhhPnlKPIIcono4";
             this.RrhhPnlKPIIcono4.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono4.TabIndex = 0;
@@ -709,7 +710,7 @@
             this.RrhhPnlKPI3.Controls.Add(this.RrhhLblKPIResp3);
             this.RrhhPnlKPI3.Controls.Add(this.RrhhPnlKPIIcono3);
             this.RrhhPnlKPI3.Location = new System.Drawing.Point(560, 548);
-            this.RrhhPnlKPI3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI3.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI3.Name = "RrhhPnlKPI3";
             this.RrhhPnlKPI3.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI3.TabIndex = 6;
@@ -746,7 +747,7 @@
             this.RrhhPnlKPIIcono3.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_capacitaciones;
             this.RrhhPnlKPIIcono3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono3.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono3.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono3.Name = "RrhhPnlKPIIcono3";
             this.RrhhPnlKPIIcono3.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono3.TabIndex = 0;
@@ -758,7 +759,7 @@
             this.RrhhPnlKPI2.Controls.Add(this.RrhhLblKPIResp2);
             this.RrhhPnlKPI2.Controls.Add(this.RrhhPnlKPIIcono2);
             this.RrhhPnlKPI2.Location = new System.Drawing.Point(307, 548);
-            this.RrhhPnlKPI2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI2.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI2.Name = "RrhhPnlKPI2";
             this.RrhhPnlKPI2.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI2.TabIndex = 5;
@@ -795,7 +796,7 @@
             this.RrhhPnlKPIIcono2.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_permisos;
             this.RrhhPnlKPIIcono2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono2.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono2.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono2.Name = "RrhhPnlKPIIcono2";
             this.RrhhPnlKPIIcono2.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono2.TabIndex = 0;
@@ -807,7 +808,7 @@
             this.RrhhPnlKPI1.Controls.Add(this.RrhhLblKPIResp1);
             this.RrhhPnlKPI1.Controls.Add(this.RrhhPnlKPIIcono1);
             this.RrhhPnlKPI1.Location = new System.Drawing.Point(53, 548);
-            this.RrhhPnlKPI1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPI1.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPI1.Name = "RrhhPnlKPI1";
             this.RrhhPnlKPI1.Size = new System.Drawing.Size(229, 233);
             this.RrhhPnlKPI1.TabIndex = 4;
@@ -844,7 +845,7 @@
             this.RrhhPnlKPIIcono1.BackgroundImage = global::CapaVista_Rrhh.Properties.Resources.kpi_colaboradores;
             this.RrhhPnlKPIIcono1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RrhhPnlKPIIcono1.Location = new System.Drawing.Point(19, 15);
-            this.RrhhPnlKPIIcono1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlKPIIcono1.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlKPIIcono1.Name = "RrhhPnlKPIIcono1";
             this.RrhhPnlKPIIcono1.Size = new System.Drawing.Size(93, 86);
             this.RrhhPnlKPIIcono1.TabIndex = 0;
@@ -873,7 +874,7 @@
             this.RrhhBtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.RrhhBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnAyuda.Location = new System.Drawing.Point(69, 308);
-            this.RrhhBtnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnAyuda.Name = "RrhhBtnAyuda";
             this.RrhhBtnAyuda.Size = new System.Drawing.Size(112, 97);
             this.RrhhBtnAyuda.TabIndex = 2;
@@ -911,7 +912,7 @@
             this.RrhhPbMascota.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbMascota.Image = global::CapaVista_Rrhh.Properties.Resources.mascota;
             this.RrhhPbMascota.Location = new System.Drawing.Point(1013, 12);
-            this.RrhhPbMascota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPbMascota.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPbMascota.Name = "RrhhPbMascota";
             this.RrhhPbMascota.Size = new System.Drawing.Size(417, 511);
             this.RrhhPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -928,12 +929,13 @@
             this.Controls.Add(this.RrhhPnlBarraSuperior);
             this.Controls.Add(this.RrhhPnlNavegador);
             this.Icon = global::CapaVista_Rrhh.Properties.Resources.icono_rrhh;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMDIRrhh";
             this.Padding = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "9000 - MDI Principal de Recursos Humanos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMDIRrhh_Load_1);
             this.RrhhPnlNavegador.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbLogo)).EndInit();
             this.RrhhPnlBarraSuperior.ResumeLayout(false);

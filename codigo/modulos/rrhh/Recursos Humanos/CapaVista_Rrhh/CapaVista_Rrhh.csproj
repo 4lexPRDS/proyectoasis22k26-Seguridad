@@ -40,6 +40,9 @@
     <Reference Include="CapaVista_CierreNominas">
       <HintPath>..\..\Cierre de Nominas\CapaVista_CierreNominas\bin\Debug\CapaVista_CierreNominas.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Nomina">
+      <HintPath>..\..\NominasEmpleados\CapaVista_Nomina\bin\Debug\CapaVista_Nomina.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
