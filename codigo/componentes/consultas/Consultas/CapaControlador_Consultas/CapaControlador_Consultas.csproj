@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D20A558-400E-412B-A004-7C6E9947FC58}</ProjectGuid>
+    <ProjectGuid>{55BABC25-0423-4FFC-8EE5-F7BD177DEA86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaControlador_Consultas</RootNamespace>
@@ -33,11 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CapaModelo_Consultas">
-      <HintPath>..\CapaModelo_Consultas\bin\Debug\CapaModelo_Consultas.dll</HintPath>
+      <HintPath>..\CapaModelo_Consultas\bin\$(Configuration)\CapaModelo_Consultas.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConsultaSeleccionada.cs" />
-    <Compile Include="ClsControladorFiltroSimple.cs" />
-    <Compile Include="ClsTablaSeleccionada.cs" />
-    <Compile Include="ClsTablas.cs" />
+    <Compile Include="ClsServicioConsultasCompartidas.cs" />
+    <Compile Include="ClsServicioConsultasGuardadas.cs" />
+    <Compile Include="ClsControladorConsultasSimples.cs" />
+    <Compile Include="ClsControladorConsultasComplejas.cs" />
+    <Compile Include="ClsPaginaConsulta.cs" />
+    <Compile Include="ClsValidadorConsultas.cs" />
+    <Compile Include="IContextoConsulta.cs" />
+    <Compile Include="ClsControladorConsultas.cs" />
+    <Compile Include="ClsMetadatosDisenadorConsultas.cs" />
+    <Compile Include="ClsErrorValidacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

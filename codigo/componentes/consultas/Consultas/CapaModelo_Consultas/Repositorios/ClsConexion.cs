@@ -1,34 +1,38 @@
-﻿using System;
+using System;
 using System.Data.Odbc;
 
-namespace CapaModelo_Consultas
+namespace CapaModelo_Consultas.Repositorios
 {
-    internal class ClsConexion
+    /*Inicio de código de Miguel David Contreras Jacinto 0901-21-3878 el 8/10/2026*/
+    public sealed class ClsConexion
     {
-        public OdbcConnection ConsultasFuncConexion()
+        private readonly string _CadenaConexion;
+
+        public ClsConexion(string CadenaConexion = "Dsn=EmbutidosS.A")
         {
-            OdbcConnection Conn = new OdbcConnection("Dsn=EmbutidosS.A");
-            try
-            {
-                Conn.Open();
-            }
-            catch (OdbcException Ex)
-            {
-                Console.WriteLine("Conexion fallida. Error: " + Ex.Message);
-            }
-            return Conn;
+            _CadenaConexion = CadenaConexion ?? "Dsn=EmbutidosS.A";
         }
 
-        public void ConsultasProcDesconexion(OdbcConnection conn)
+        public OdbcConnection ConsultasFuncConexion()
         {
+            OdbcConnection Conexion = new OdbcConnection(_CadenaConexion);
             try
             {
-                conn.Close();
+                Conexion.Open();
+                return Conexion;
             }
-            catch (OdbcException Ex)
+            catch (OdbcException Excepcion)
             {
-                Console.WriteLine("Error al cerrar la conexión. Error: " + Ex.Message);
+                Conexion.Dispose();
+                throw new InvalidOperationException("No fue posible abrir la conexión de Consultas. Revise el DSN EmbutidosS.A y la arquitectura del controlador instalado.", Excepcion);
             }
+            catch
+            {
+                Conexion.Dispose();
+                throw;
+            }
+     
         }
+        /* fin de código de Miguel David Contreras Jacinto 0901-21-3878 el 8/10/2026*/
     }
 }
