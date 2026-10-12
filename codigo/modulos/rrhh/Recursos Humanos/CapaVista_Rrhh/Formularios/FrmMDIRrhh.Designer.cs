@@ -119,9 +119,9 @@
             this.RrhhPnlNavegador.Controls.Add(this.RrhhBtnEmpleados);
             this.RrhhPnlNavegador.Controls.Add(this.RrhhPbLogo);
             this.RrhhPnlNavegador.Dock = System.Windows.Forms.DockStyle.Left;
-            this.RrhhPnlNavegador.Location = new System.Drawing.Point(0, 0);
+            this.RrhhPnlNavegador.Location = new System.Drawing.Point(4, 4);
             this.RrhhPnlNavegador.Name = "RrhhPnlNavegador";
-            this.RrhhPnlNavegador.Size = new System.Drawing.Size(270, 1022);
+            this.RrhhPnlNavegador.Size = new System.Drawing.Size(270, 1014);
             this.RrhhPnlNavegador.TabIndex = 0;
             this.RrhhPnlNavegador.Resize += new System.EventHandler(this.RrhhPnlNavegador_Resize);
             this.RrhhPnlNavegador.Paint += new System.Windows.Forms.PaintEventHandler(this.RrhhPnlNavegador_Paint);
@@ -183,6 +183,7 @@
             this.RrhhBtnAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnAsistencia.UseVisualStyleBackColor = false;
+            this.RrhhBtnAsistencia.Click += new System.EventHandler(this.RrhhBtnAsistencia_Click);
             this.RrhhBtnAsistencia.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnAsistencia.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
@@ -369,9 +370,9 @@
             this.RrhhPnlBarraSuperior.Controls.Add(this.RrhhLblUsuario);
             this.RrhhPnlBarraSuperior.Controls.Add(this.RrhhBtnBurger);
             this.RrhhPnlBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RrhhPnlBarraSuperior.Location = new System.Drawing.Point(270, 0);
+            this.RrhhPnlBarraSuperior.Location = new System.Drawing.Point(274, 4);
             this.RrhhPnlBarraSuperior.Name = "RrhhPnlBarraSuperior";
-            this.RrhhPnlBarraSuperior.Size = new System.Drawing.Size(1268, 56);
+            this.RrhhPnlBarraSuperior.Size = new System.Drawing.Size(1260, 56);
             this.RrhhPnlBarraSuperior.TabIndex = 1;
             // 
             // RrhhBtnBurger
@@ -415,13 +416,13 @@
             // 
             // RrhhPnlContenedor
             // 
-            this.RrhhPnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.RrhhPnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(247)))), ((int)(((byte)(242)))));
             this.RrhhPnlContenedor.Controls.Add(this.RrhhPnlDashboard);
             this.RrhhPnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RrhhPnlContenedor.Location = new System.Drawing.Point(270, 56);
+            this.RrhhPnlContenedor.Location = new System.Drawing.Point(274, 60);
             this.RrhhPnlContenedor.Name = "RrhhPnlContenedor";
             this.RrhhPnlContenedor.Padding = new System.Windows.Forms.Padding(16, 4, 16, 16);
-            this.RrhhPnlContenedor.Size = new System.Drawing.Size(1268, 966);
+            this.RrhhPnlContenedor.Size = new System.Drawing.Size(1260, 958);
             this.RrhhPnlContenedor.TabIndex = 2;
             // 
             // RrhhPnlDashboard
@@ -445,7 +446,7 @@
             this.RrhhPnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RrhhPnlDashboard.Location = new System.Drawing.Point(16, 4);
             this.RrhhPnlDashboard.Name = "RrhhPnlDashboard";
-            this.RrhhPnlDashboard.Size = new System.Drawing.Size(1236, 946);
+            this.RrhhPnlDashboard.Size = new System.Drawing.Size(1228, 938);
             this.RrhhPnlDashboard.TabIndex = 0;
             this.RrhhPnlDashboard.Resize += new System.EventHandler(this.RrhhPnlDashboard_Resize);
             // 
@@ -858,7 +859,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1538, 1022);
             this.Icon = global::CapaVista_Rrhh.Properties.Resources.icono_rrhh;
-            this.Padding = new System.Windows.Forms.Padding(14);
+            this.Padding = new System.Windows.Forms.Padding(4);
             this.Controls.Add(this.RrhhPnlContenedor);
             this.Controls.Add(this.RrhhPnlBarraSuperior);
             this.Controls.Add(this.RrhhPnlNavegador);

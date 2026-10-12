@@ -5,9 +5,17 @@ VisualStudioVersion = 17.14.37516.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaVista_Rrhh", "CapaVista_Rrhh\CapaVista_Rrhh.csproj", "{334872A7-435C-4321-8846-EF652F433CA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaVista_Asistencia", "Asistencia\CapaVista_Asistencia\CapaVista_Asistencia.csproj", "{CC16E22E-8E90-485E-B4A0-140164B70F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaControlador_Asistencia", "Asistencia\CapaControlador_Asistencia\CapaControlador_Asistencia.csproj", "{FBE38E88-94DC-4889-A0DB-DC1E662B38ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo_Asistencia", "Asistencia\CapaModelo_Asistencia\CapaModelo_Asistencia.csproj", "{84F86291-4AC3-4383-833E-EFA583258C44}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaControlador_Rrhh", "CapaControlador_Rrhh\CapaControlador_Rrhh.csproj", "{D42D0615-8098-45A0-A9E4-7615174EEDA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaModelo_Rrhh", "CapaModelo_Rrhh\CapaModelo_Rrhh.csproj", "{A090A618-B7C1-4E30-B6F5-A73482B8B52F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Asistencia", "Asistencia", "{21E01C25-F88F-418D-8A99-041008911044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +35,26 @@ Global
 		{A090A618-B7C1-4E30-B6F5-A73482B8B52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A090A618-B7C1-4E30-B6F5-A73482B8B52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A090A618-B7C1-4E30-B6F5-A73482B8B52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC16E22E-8E90-485E-B4A0-140164B70F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC16E22E-8E90-485E-B4A0-140164B70F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC16E22E-8E90-485E-B4A0-140164B70F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC16E22E-8E90-485E-B4A0-140164B70F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE38E88-94DC-4889-A0DB-DC1E662B38ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE38E88-94DC-4889-A0DB-DC1E662B38ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE38E88-94DC-4889-A0DB-DC1E662B38ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE38E88-94DC-4889-A0DB-DC1E662B38ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F86291-4AC3-4383-833E-EFA583258C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F86291-4AC3-4383-833E-EFA583258C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F86291-4AC3-4383-833E-EFA583258C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F86291-4AC3-4383-833E-EFA583258C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC16E22E-8E90-485E-B4A0-140164B70F54} = {21E01C25-F88F-418D-8A99-041008911044}
+		{FBE38E88-94DC-4889-A0DB-DC1E662B38ED} = {21E01C25-F88F-418D-8A99-041008911044}
+		{84F86291-4AC3-4383-833E-EFA583258C44} = {21E01C25-F88F-418D-8A99-041008911044}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6FB60BB9-55D8-4C7B-AE72-1FE3D33FB29A}
