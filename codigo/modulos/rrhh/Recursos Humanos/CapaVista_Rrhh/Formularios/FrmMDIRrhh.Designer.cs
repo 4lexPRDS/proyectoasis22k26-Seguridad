@@ -158,6 +158,7 @@
             this.RrhhBtnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnEmpleados.UseVisualStyleBackColor = false;
+            this.RrhhBtnEmpleados.Click += new System.EventHandler(this.RrhhBtnEmpleados_Click);
             this.RrhhBtnEmpleados.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnEmpleados.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
@@ -309,6 +310,7 @@
             this.RrhhBtnCierresNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnCierresNomina.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnCierresNomina.UseVisualStyleBackColor = false;
+            this.RrhhBtnCierresNomina.Click += new System.EventHandler(this.RrhhBtnCierresNomina_Click);
             this.RrhhBtnCierresNomina.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnCierresNomina.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
