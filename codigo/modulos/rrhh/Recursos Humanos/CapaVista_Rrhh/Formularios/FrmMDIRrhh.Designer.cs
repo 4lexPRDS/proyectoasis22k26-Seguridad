@@ -276,6 +276,7 @@
             this.RrhhBtnCapacitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnCapacitaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnCapacitaciones.UseVisualStyleBackColor = false;
+            this.RrhhBtnCapacitaciones.Click += new System.EventHandler(this.RrhhBtnCapacitaciones_Click);
             this.RrhhBtnCapacitaciones.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnCapacitaciones.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
