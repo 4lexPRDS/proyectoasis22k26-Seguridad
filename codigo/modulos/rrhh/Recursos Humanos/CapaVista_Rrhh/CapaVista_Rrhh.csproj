@@ -49,6 +49,9 @@
     <Reference Include="CapaVista_Empleado">
       <HintPath>..\..\Empleados\CapaVista_Empleado\bin\Debug\CapaVista_Empleado.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Liquidacion_Rrhh">
+      <HintPath>..\..\Liquidacion_Empleados_Rrhh\CapaVista_Liquidacion_Rrhh\bin\Debug\CapaVista_Liquidacion_Rrhh.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_Nomina">
       <HintPath>..\..\NominasEmpleados\CapaVista_Nomina\bin\Debug\CapaVista_Nomina.dll</HintPath>
     </Reference>
