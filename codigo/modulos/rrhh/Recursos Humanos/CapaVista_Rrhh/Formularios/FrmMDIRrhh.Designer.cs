@@ -210,6 +210,7 @@
             this.RrhhBtnPermisosVacaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnPermisosVacaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnPermisosVacaciones.UseVisualStyleBackColor = false;
+            this.RrhhBtnPermisosVacaciones.Click += new System.EventHandler(this.RrhhBtnPermisosVacaciones_Click);
             this.RrhhBtnPermisosVacaciones.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnPermisosVacaciones.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
@@ -261,6 +262,7 @@
             this.RrhhBtnEvaluacionDesempeno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnEvaluacionDesempeno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnEvaluacionDesempeno.UseVisualStyleBackColor = false;
+            this.RrhhBtnEvaluacionDesempeno.Click += new System.EventHandler(this.RrhhBtnEvaluacionDesempeno_Click);
             this.RrhhBtnEvaluacionDesempeno.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnEvaluacionDesempeno.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 
