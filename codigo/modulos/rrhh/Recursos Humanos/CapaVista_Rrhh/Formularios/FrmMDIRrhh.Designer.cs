@@ -285,6 +285,7 @@
             this.RrhhBtnNomina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnNomina.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnNomina.UseVisualStyleBackColor = false;
+            this.RrhhBtnNomina.Click += new System.EventHandler(this.RrhhBtnNomina_Click);
             this.RrhhBtnNomina.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnNomina.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 

@@ -29,49 +29,116 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCierreNominas));
+            this.RrhhDgvVistaCierreNomina = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deducciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RrhhPnlInicio = new System.Windows.Forms.Panel();
             this.RrhhPbIconoMascota = new System.Windows.Forms.PictureBox();
             this.RrhhPbIconoCierreNominas = new System.Windows.Forms.PictureBox();
             this.RrhhLblSubTituloCierreNominas = new System.Windows.Forms.Label();
             this.RrhhLblTituloCierreNominas = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RrhhBtnGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RrhhPnlCierreNominas = new System.Windows.Forms.Panel();
+            this.RrhhPbCalendario = new System.Windows.Forms.PictureBox();
+            this.RrhhLblMensajeInformativo = new System.Windows.Forms.Label();
+            this.RrhhLblAdvertencia = new System.Windows.Forms.Label();
+            this.RrhhCboPeriodo = new System.Windows.Forms.ComboBox();
+            this.RrhhLblMesAño = new System.Windows.Forms.Label();
+            this.RrhhLblTituloCierre = new System.Windows.Forms.Label();
+            this.RrhhPnlResumen = new System.Windows.Forms.Panel();
+            this.RrhhPbResumen = new System.Windows.Forms.PictureBox();
+            this.RrhhLblResumenPeriodo = new System.Windows.Forms.Label();
+            this.RrhhBtnCerrarNomina = new System.Windows.Forms.Button();
+            this.RrhhPnlDecorativo1 = new System.Windows.Forms.Panel();
+            this.RrhhPbIEmpleadoNomina = new System.Windows.Forms.PictureBox();
+            this.RrhhLblValorResumen = new System.Windows.Forms.Label();
+            this.RrhhLblEmpleadosNomina = new System.Windows.Forms.Label();
+            this.RrhhPnlDecorativo3 = new System.Windows.Forms.Panel();
+            this.RrhhPbTotalPercepciones = new System.Windows.Forms.PictureBox();
+            this.RrhhLblValorResumen2 = new System.Windows.Forms.Label();
+            this.RrhhLblTotalPercepciones = new System.Windows.Forms.Label();
+            this.RrhhPnlDecorativo5 = new System.Windows.Forms.Panel();
+            this.RrhhPbVerificacionCierre = new System.Windows.Forms.PictureBox();
+            this.RrhhLblVerificacionCuadre = new System.Windows.Forms.Label();
+            this.RrhhPnlDecorativo4 = new System.Windows.Forms.Panel();
+            this.RrhhPbSalarioLiquido = new System.Windows.Forms.PictureBox();
+            this.RrhhLblValorResumen4 = new System.Windows.Forms.Label();
+            this.RrhhLblSalarioLiquido = new System.Windows.Forms.Label();
+            this.RrhhPnlDecorativo2 = new System.Windows.Forms.Panel();
+            this.RrhhPbTotalDeducciones = new System.Windows.Forms.PictureBox();
+            this.RrhhLblValorResumen3 = new System.Windows.Forms.Label();
+            this.RrhhLblTotalDeducciones = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvVistaCierreNomina)).BeginInit();
             this.RrhhPnlInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIconoMascota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIconoCierreNominas)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.RrhhPnlCierreNominas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbCalendario)).BeginInit();
+            this.RrhhPnlResumen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbResumen)).BeginInit();
+            this.RrhhPnlDecorativo1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIEmpleadoNomina)).BeginInit();
+            this.RrhhPnlDecorativo3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbTotalPercepciones)).BeginInit();
+            this.RrhhPnlDecorativo5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbVerificacionCierre)).BeginInit();
+            this.RrhhPnlDecorativo4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbSalarioLiquido)).BeginInit();
+            this.RrhhPnlDecorativo2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbTotalDeducciones)).BeginInit();
             this.SuspendLayout();
+            // 
+            // RrhhDgvVistaCierreNomina
+            // 
+            this.RrhhDgvVistaCierreNomina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RrhhDgvVistaCierreNomina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RrhhDgvVistaCierreNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RrhhDgvVistaCierreNomina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Empleado,
+            this.Column2,
+            this.Deducciones,
+            this.Column3});
+            this.RrhhDgvVistaCierreNomina.Location = new System.Drawing.Point(55, 541);
+            this.RrhhDgvVistaCierreNomina.Name = "RrhhDgvVistaCierreNomina";
+            this.RrhhDgvVistaCierreNomina.RowHeadersWidth = 51;
+            this.RrhhDgvVistaCierreNomina.RowTemplate.Height = 24;
+            this.RrhhDgvVistaCierreNomina.Size = new System.Drawing.Size(1296, 211);
+            this.RrhhDgvVistaCierreNomina.TabIndex = 33;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Empleado
+            // 
+            this.Empleado.HeaderText = "Empleado";
+            this.Empleado.MinimumWidth = 6;
+            this.Empleado.Name = "Empleado";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Percepciones";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Deducciones
+            // 
+            this.Deducciones.HeaderText = "Deducciones";
+            this.Deducciones.MinimumWidth = 6;
+            this.Deducciones.Name = "Deducciones";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Verificacion";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // RrhhPnlInicio
             // 
@@ -90,7 +157,7 @@
             // 
             this.RrhhPbIconoMascota.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbIconoMascota.Image = global::CapaVista_CierreNominas.Properties.Resources._8;
-            this.RrhhPbIconoMascota.Location = new System.Drawing.Point(1164, 4);
+            this.RrhhPbIconoMascota.Location = new System.Drawing.Point(1158, 17);
             this.RrhhPbIconoMascota.Name = "RrhhPbIconoMascota";
             this.RrhhPbIconoMascota.Size = new System.Drawing.Size(100, 133);
             this.RrhhPbIconoMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,302 +197,354 @@
             this.RrhhLblTituloCierreNominas.TabIndex = 0;
             this.RrhhLblTituloCierreNominas.Text = "Cierre De Nóminas";
             // 
-            // label4
+            // RrhhPnlCierreNominas
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(111, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 22);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Mes y Año de la nomina ";
+            this.RrhhPnlCierreNominas.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.Pnl_fondo;
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhPbCalendario);
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhLblMensajeInformativo);
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhLblAdvertencia);
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhCboPeriodo);
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhLblMesAño);
+            this.RrhhPnlCierreNominas.Controls.Add(this.RrhhLblTituloCierre);
+            this.RrhhPnlCierreNominas.Location = new System.Drawing.Point(55, 200);
+            this.RrhhPnlCierreNominas.Name = "RrhhPnlCierreNominas";
+            this.RrhhPnlCierreNominas.Size = new System.Drawing.Size(564, 299);
+            this.RrhhPnlCierreNominas.TabIndex = 31;
             // 
-            // RrhhBtnGuardar
+            // RrhhPbCalendario
             // 
-            this.RrhhBtnGuardar.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.btn_guardar;
-            this.RrhhBtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhBtnGuardar.Location = new System.Drawing.Point(22, 149);
-            this.RrhhBtnGuardar.Name = "RrhhBtnGuardar";
-            this.RrhhBtnGuardar.Size = new System.Drawing.Size(73, 65);
-            this.RrhhBtnGuardar.TabIndex = 1;
-            this.RrhhBtnGuardar.UseVisualStyleBackColor = true;
+            this.RrhhPbCalendario.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbCalendario.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_Calendario;
+            this.RrhhPbCalendario.Location = new System.Drawing.Point(3, 100);
+            this.RrhhPbCalendario.Name = "RrhhPbCalendario";
+            this.RrhhPbCalendario.Size = new System.Drawing.Size(135, 107);
+            this.RrhhPbCalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbCalendario.TabIndex = 18;
+            this.RrhhPbCalendario.TabStop = false;
             // 
-            // label1
+            // RrhhLblMensajeInformativo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(110, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 26);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Cierre De Nóminas";
+            this.RrhhLblMensajeInformativo.AutoSize = true;
+            this.RrhhLblMensajeInformativo.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblMensajeInformativo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblMensajeInformativo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblMensajeInformativo.Location = new System.Drawing.Point(18, 244);
+            this.RrhhLblMensajeInformativo.Name = "RrhhLblMensajeInformativo";
+            this.RrhhLblMensajeInformativo.Size = new System.Drawing.Size(389, 21);
+            this.RrhhLblMensajeInformativo.TabIndex = 17;
+            this.RrhhLblMensajeInformativo.Text = "Solo aparecen las nóminas que aun siguen abiertas";
             // 
-            // comboBox1
+            // RrhhLblAdvertencia
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(327, 36);
-            this.comboBox1.TabIndex = 16;
+            this.RrhhLblAdvertencia.AutoSize = true;
+            this.RrhhLblAdvertencia.Font = new System.Drawing.Font("Lucida Bright", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblAdvertencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblAdvertencia.Location = new System.Drawing.Point(18, 37);
+            this.RrhhLblAdvertencia.Name = "RrhhLblAdvertencia";
+            this.RrhhLblAdvertencia.Size = new System.Drawing.Size(191, 20);
+            this.RrhhLblAdvertencia.TabIndex = 8;
+            this.RrhhLblAdvertencia.Text = "Proceso Irreversible";
             // 
-            // label2
+            // RrhhCboPeriodo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(111, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(389, 21);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Solo aparecen las nóminas que aun siguen abiertas";
+            this.RrhhCboPeriodo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhCboPeriodo.FormattingEnabled = true;
+            this.RrhhCboPeriodo.Location = new System.Drawing.Point(148, 171);
+            this.RrhhCboPeriodo.Name = "RrhhCboPeriodo";
+            this.RrhhCboPeriodo.Size = new System.Drawing.Size(327, 36);
+            this.RrhhCboPeriodo.TabIndex = 16;
             // 
-            // button1
+            // RrhhLblMesAño
             // 
-            this.button1.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.btn_guardar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(43, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 78);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
+            this.RrhhLblMesAño.AutoSize = true;
+            this.RrhhLblMesAño.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblMesAño.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblMesAño.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblMesAño.Location = new System.Drawing.Point(144, 143);
+            this.RrhhLblMesAño.Name = "RrhhLblMesAño";
+            this.RrhhLblMesAño.Size = new System.Drawing.Size(207, 22);
+            this.RrhhLblMesAño.TabIndex = 5;
+            this.RrhhLblMesAño.Text = "Mes y Año de la nomina ";
             // 
-            // label5
+            // RrhhLblTituloCierre
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.label5.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label5.Location = new System.Drawing.Point(133, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(259, 26);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Resumen del período";
+            this.RrhhLblTituloCierre.AutoSize = true;
+            this.RrhhLblTituloCierre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhLblTituloCierre.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTituloCierre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTituloCierre.Location = new System.Drawing.Point(143, 104);
+            this.RrhhLblTituloCierre.Name = "RrhhLblTituloCierre";
+            this.RrhhLblTituloCierre.Size = new System.Drawing.Size(232, 26);
+            this.RrhhLblTituloCierre.TabIndex = 15;
+            this.RrhhLblTituloCierre.Text = "Cierre De Nóminas";
             // 
-            // panel1
+            // RrhhPnlResumen
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(31, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 56);
-            this.panel1.TabIndex = 20;
+            this.RrhhPnlResumen.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.Pnl_fondo;
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPbResumen);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhLblResumenPeriodo);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhBtnCerrarNomina);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPnlDecorativo1);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPnlDecorativo3);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPnlDecorativo5);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPnlDecorativo4);
+            this.RrhhPnlResumen.Controls.Add(this.RrhhPnlDecorativo2);
+            this.RrhhPnlResumen.Location = new System.Drawing.Point(649, 200);
+            this.RrhhPnlResumen.Name = "RrhhPnlResumen";
+            this.RrhhPnlResumen.Size = new System.Drawing.Size(702, 299);
+            this.RrhhPnlResumen.TabIndex = 32;
             // 
-            // label6
+            // RrhhPbResumen
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label6.Location = new System.Drawing.Point(93, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(186, 22);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Empleados en Nómina";
+            this.RrhhPbResumen.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbResumen.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_Resumen;
+            this.RrhhPbResumen.Location = new System.Drawing.Point(48, 17);
+            this.RrhhPbResumen.Name = "RrhhPbResumen";
+            this.RrhhPbResumen.Size = new System.Drawing.Size(79, 62);
+            this.RrhhPbResumen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbResumen.TabIndex = 30;
+            this.RrhhPbResumen.TabStop = false;
             // 
-            // label7
+            // RrhhLblResumenPeriodo
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(93, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 22);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "0";
+            this.RrhhLblResumenPeriodo.AutoSize = true;
+            this.RrhhLblResumenPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhLblResumenPeriodo.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblResumenPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblResumenPeriodo.Location = new System.Drawing.Point(133, 41);
+            this.RrhhLblResumenPeriodo.Name = "RrhhLblResumenPeriodo";
+            this.RrhhLblResumenPeriodo.Size = new System.Drawing.Size(259, 26);
+            this.RrhhLblResumenPeriodo.TabIndex = 19;
+            this.RrhhLblResumenPeriodo.Text = "Resumen del período";
             // 
-            // panel5
+            // RrhhBtnCerrarNomina
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Location = new System.Drawing.Point(31, 244);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(655, 43);
-            this.panel5.TabIndex = 24;
+            this.RrhhBtnCerrarNomina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhBtnCerrarNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhBtnCerrarNomina.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RrhhBtnCerrarNomina.Location = new System.Drawing.Point(522, 34);
+            this.RrhhBtnCerrarNomina.Name = "RrhhBtnCerrarNomina";
+            this.RrhhBtnCerrarNomina.Size = new System.Drawing.Size(164, 45);
+            this.RrhhBtnCerrarNomina.TabIndex = 29;
+            this.RrhhBtnCerrarNomina.Text = "Cerrar Nómina";
+            this.RrhhBtnCerrarNomina.UseVisualStyleBackColor = false;
             // 
-            // label15
+            // RrhhPnlDecorativo1
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label15.Location = new System.Drawing.Point(93, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(182, 22);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Verificación de cuadre";
+            this.RrhhPnlDecorativo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlDecorativo1.Controls.Add(this.RrhhPbIEmpleadoNomina);
+            this.RrhhPnlDecorativo1.Controls.Add(this.RrhhLblValorResumen);
+            this.RrhhPnlDecorativo1.Controls.Add(this.RrhhLblEmpleadosNomina);
+            this.RrhhPnlDecorativo1.Location = new System.Drawing.Point(31, 96);
+            this.RrhhPnlDecorativo1.Name = "RrhhPnlDecorativo1";
+            this.RrhhPnlDecorativo1.Size = new System.Drawing.Size(315, 56);
+            this.RrhhPnlDecorativo1.TabIndex = 20;
             // 
-            // panel2
+            // RrhhPbIEmpleadoNomina
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(371, 92);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 56);
-            this.panel2.TabIndex = 25;
+            this.RrhhPbIEmpleadoNomina.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbIEmpleadoNomina.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_Empleados;
+            this.RrhhPbIEmpleadoNomina.Location = new System.Drawing.Point(17, 3);
+            this.RrhhPbIEmpleadoNomina.Name = "RrhhPbIEmpleadoNomina";
+            this.RrhhPbIEmpleadoNomina.Size = new System.Drawing.Size(65, 53);
+            this.RrhhPbIEmpleadoNomina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbIEmpleadoNomina.TabIndex = 31;
+            this.RrhhPbIEmpleadoNomina.TabStop = false;
             // 
-            // label8
+            // RrhhLblValorResumen
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label8.Location = new System.Drawing.Point(93, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 22);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "0";
+            this.RrhhLblValorResumen.AutoSize = true;
+            this.RrhhLblValorResumen.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblValorResumen.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblValorResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblValorResumen.Location = new System.Drawing.Point(93, 30);
+            this.RrhhLblValorResumen.Name = "RrhhLblValorResumen";
+            this.RrhhLblValorResumen.Size = new System.Drawing.Size(20, 22);
+            this.RrhhLblValorResumen.TabIndex = 7;
+            this.RrhhLblValorResumen.Text = "0";
             // 
-            // label9
+            // RrhhLblEmpleadosNomina
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label9.Location = new System.Drawing.Point(93, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 22);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Total Percepciones";
+            this.RrhhLblEmpleadosNomina.AutoSize = true;
+            this.RrhhLblEmpleadosNomina.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblEmpleadosNomina.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblEmpleadosNomina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblEmpleadosNomina.Location = new System.Drawing.Point(93, 8);
+            this.RrhhLblEmpleadosNomina.Name = "RrhhLblEmpleadosNomina";
+            this.RrhhLblEmpleadosNomina.Size = new System.Drawing.Size(186, 22);
+            this.RrhhLblEmpleadosNomina.TabIndex = 6;
+            this.RrhhLblEmpleadosNomina.Text = "Empleados en Nómina";
             // 
-            // panel3
+            // RrhhPnlDecorativo3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Location = new System.Drawing.Point(31, 171);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 56);
-            this.panel3.TabIndex = 26;
+            this.RrhhPnlDecorativo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlDecorativo3.Controls.Add(this.RrhhPbTotalPercepciones);
+            this.RrhhPnlDecorativo3.Controls.Add(this.RrhhLblValorResumen2);
+            this.RrhhPnlDecorativo3.Controls.Add(this.RrhhLblTotalPercepciones);
+            this.RrhhPnlDecorativo3.Location = new System.Drawing.Point(371, 92);
+            this.RrhhPnlDecorativo3.Name = "RrhhPnlDecorativo3";
+            this.RrhhPnlDecorativo3.Size = new System.Drawing.Size(315, 56);
+            this.RrhhPnlDecorativo3.TabIndex = 25;
             // 
-            // label10
+            // RrhhPbTotalPercepciones
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label10.Location = new System.Drawing.Point(93, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 22);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "0";
+            this.RrhhPbTotalPercepciones.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbTotalPercepciones.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_Percepciones;
+            this.RrhhPbTotalPercepciones.Location = new System.Drawing.Point(18, 4);
+            this.RrhhPbTotalPercepciones.Name = "RrhhPbTotalPercepciones";
+            this.RrhhPbTotalPercepciones.Size = new System.Drawing.Size(61, 48);
+            this.RrhhPbTotalPercepciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbTotalPercepciones.TabIndex = 31;
+            this.RrhhPbTotalPercepciones.TabStop = false;
             // 
-            // label11
+            // RrhhLblValorResumen2
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label11.Location = new System.Drawing.Point(93, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(154, 22);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Total Deducciones";
+            this.RrhhLblValorResumen2.AutoSize = true;
+            this.RrhhLblValorResumen2.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblValorResumen2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblValorResumen2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblValorResumen2.Location = new System.Drawing.Point(93, 30);
+            this.RrhhLblValorResumen2.Name = "RrhhLblValorResumen2";
+            this.RrhhLblValorResumen2.Size = new System.Drawing.Size(20, 22);
+            this.RrhhLblValorResumen2.TabIndex = 7;
+            this.RrhhLblValorResumen2.Text = "0";
             // 
-            // panel4
+            // RrhhLblTotalPercepciones
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(371, 171);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(315, 56);
-            this.panel4.TabIndex = 27;
+            this.RrhhLblTotalPercepciones.AutoSize = true;
+            this.RrhhLblTotalPercepciones.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblTotalPercepciones.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTotalPercepciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTotalPercepciones.Location = new System.Drawing.Point(93, 8);
+            this.RrhhLblTotalPercepciones.Name = "RrhhLblTotalPercepciones";
+            this.RrhhLblTotalPercepciones.Size = new System.Drawing.Size(157, 22);
+            this.RrhhLblTotalPercepciones.TabIndex = 6;
+            this.RrhhLblTotalPercepciones.Text = "Total Percepciones";
             // 
-            // label12
+            // RrhhPnlDecorativo5
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label12.Location = new System.Drawing.Point(93, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(20, 22);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "0";
+            this.RrhhPnlDecorativo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlDecorativo5.Controls.Add(this.RrhhPbVerificacionCierre);
+            this.RrhhPnlDecorativo5.Controls.Add(this.RrhhLblVerificacionCuadre);
+            this.RrhhPnlDecorativo5.Location = new System.Drawing.Point(31, 244);
+            this.RrhhPnlDecorativo5.Name = "RrhhPnlDecorativo5";
+            this.RrhhPnlDecorativo5.Size = new System.Drawing.Size(655, 43);
+            this.RrhhPnlDecorativo5.TabIndex = 24;
             // 
-            // label13
+            // RrhhPbVerificacionCierre
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label13.Location = new System.Drawing.Point(93, 8);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 22);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Salario Líquido";
+            this.RrhhPbVerificacionCierre.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbVerificacionCierre.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_Verificacion;
+            this.RrhhPbVerificacionCierre.Location = new System.Drawing.Point(43, 3);
+            this.RrhhPbVerificacionCierre.Name = "RrhhPbVerificacionCierre";
+            this.RrhhPbVerificacionCierre.Size = new System.Drawing.Size(44, 37);
+            this.RrhhPbVerificacionCierre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbVerificacionCierre.TabIndex = 31;
+            this.RrhhPbVerificacionCierre.TabStop = false;
             // 
-            // label17
+            // RrhhLblVerificacionCuadre
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Lucida Bright", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label17.Location = new System.Drawing.Point(18, 37);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(191, 20);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Proceso Irreversible";
+            this.RrhhLblVerificacionCuadre.AutoSize = true;
+            this.RrhhLblVerificacionCuadre.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblVerificacionCuadre.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblVerificacionCuadre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblVerificacionCuadre.Location = new System.Drawing.Point(93, 11);
+            this.RrhhLblVerificacionCuadre.Name = "RrhhLblVerificacionCuadre";
+            this.RrhhLblVerificacionCuadre.Size = new System.Drawing.Size(182, 22);
+            this.RrhhLblVerificacionCuadre.TabIndex = 6;
+            this.RrhhLblVerificacionCuadre.Text = "Verificación de cuadre";
             // 
-            // button2
+            // RrhhPnlDecorativo4
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(522, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 45);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Cerrar Nómina";
-            this.button2.UseVisualStyleBackColor = false;
+            this.RrhhPnlDecorativo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlDecorativo4.Controls.Add(this.RrhhPbSalarioLiquido);
+            this.RrhhPnlDecorativo4.Controls.Add(this.RrhhLblValorResumen4);
+            this.RrhhPnlDecorativo4.Controls.Add(this.RrhhLblSalarioLiquido);
+            this.RrhhPnlDecorativo4.Location = new System.Drawing.Point(371, 171);
+            this.RrhhPnlDecorativo4.Name = "RrhhPnlDecorativo4";
+            this.RrhhPnlDecorativo4.Size = new System.Drawing.Size(315, 56);
+            this.RrhhPnlDecorativo4.TabIndex = 27;
             // 
-            // panel7
+            // RrhhPbSalarioLiquido
             // 
-            this.panel7.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.Pnl_fondo;
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.comboBox1);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.RrhhBtnGuardar);
-            this.panel7.Location = new System.Drawing.Point(55, 200);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(564, 299);
-            this.panel7.TabIndex = 31;
+            this.RrhhPbSalarioLiquido.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbSalarioLiquido.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_salario;
+            this.RrhhPbSalarioLiquido.Location = new System.Drawing.Point(18, 1);
+            this.RrhhPbSalarioLiquido.Name = "RrhhPbSalarioLiquido";
+            this.RrhhPbSalarioLiquido.Size = new System.Drawing.Size(61, 52);
+            this.RrhhPbSalarioLiquido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbSalarioLiquido.TabIndex = 31;
+            this.RrhhPbSalarioLiquido.TabStop = false;
             // 
-            // panel8
+            // RrhhLblValorResumen4
             // 
-            this.panel8.BackgroundImage = global::CapaVista_CierreNominas.Properties.Resources.Pnl_fondo;
-            this.panel8.Controls.Add(this.label5);
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.panel1);
-            this.panel8.Controls.Add(this.panel2);
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Controls.Add(this.panel5);
-            this.panel8.Controls.Add(this.panel4);
-            this.panel8.Controls.Add(this.panel3);
-            this.panel8.Location = new System.Drawing.Point(649, 200);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(702, 299);
-            this.panel8.TabIndex = 32;
+            this.RrhhLblValorResumen4.AutoSize = true;
+            this.RrhhLblValorResumen4.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblValorResumen4.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblValorResumen4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblValorResumen4.Location = new System.Drawing.Point(93, 30);
+            this.RrhhLblValorResumen4.Name = "RrhhLblValorResumen4";
+            this.RrhhLblValorResumen4.Size = new System.Drawing.Size(20, 22);
+            this.RrhhLblValorResumen4.TabIndex = 7;
+            this.RrhhLblValorResumen4.Text = "0";
             // 
-            // dataGridView1
+            // RrhhLblSalarioLiquido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 541);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1296, 211);
-            this.dataGridView1.TabIndex = 33;
+            this.RrhhLblSalarioLiquido.AutoSize = true;
+            this.RrhhLblSalarioLiquido.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblSalarioLiquido.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblSalarioLiquido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblSalarioLiquido.Location = new System.Drawing.Point(93, 8);
+            this.RrhhLblSalarioLiquido.Name = "RrhhLblSalarioLiquido";
+            this.RrhhLblSalarioLiquido.Size = new System.Drawing.Size(125, 22);
+            this.RrhhLblSalarioLiquido.TabIndex = 6;
+            this.RrhhLblSalarioLiquido.Text = "Salario Líquido";
+            // 
+            // RrhhPnlDecorativo2
+            // 
+            this.RrhhPnlDecorativo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(228)))), ((int)(((byte)(225)))));
+            this.RrhhPnlDecorativo2.Controls.Add(this.RrhhPbTotalDeducciones);
+            this.RrhhPnlDecorativo2.Controls.Add(this.RrhhLblValorResumen3);
+            this.RrhhPnlDecorativo2.Controls.Add(this.RrhhLblTotalDeducciones);
+            this.RrhhPnlDecorativo2.Location = new System.Drawing.Point(31, 171);
+            this.RrhhPnlDecorativo2.Name = "RrhhPnlDecorativo2";
+            this.RrhhPnlDecorativo2.Size = new System.Drawing.Size(315, 56);
+            this.RrhhPnlDecorativo2.TabIndex = 26;
+            // 
+            // RrhhPbTotalDeducciones
+            // 
+            this.RrhhPbTotalDeducciones.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbTotalDeducciones.Image = global::CapaVista_CierreNominas.Properties.Resources.Icn_TotalDeducciones;
+            this.RrhhPbTotalDeducciones.Location = new System.Drawing.Point(17, 0);
+            this.RrhhPbTotalDeducciones.Name = "RrhhPbTotalDeducciones";
+            this.RrhhPbTotalDeducciones.Size = new System.Drawing.Size(65, 56);
+            this.RrhhPbTotalDeducciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbTotalDeducciones.TabIndex = 31;
+            this.RrhhPbTotalDeducciones.TabStop = false;
+            // 
+            // RrhhLblValorResumen3
+            // 
+            this.RrhhLblValorResumen3.AutoSize = true;
+            this.RrhhLblValorResumen3.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblValorResumen3.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblValorResumen3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblValorResumen3.Location = new System.Drawing.Point(93, 30);
+            this.RrhhLblValorResumen3.Name = "RrhhLblValorResumen3";
+            this.RrhhLblValorResumen3.Size = new System.Drawing.Size(20, 22);
+            this.RrhhLblValorResumen3.TabIndex = 7;
+            this.RrhhLblValorResumen3.Text = "0";
+            // 
+            // RrhhLblTotalDeducciones
+            // 
+            this.RrhhLblTotalDeducciones.AutoSize = true;
+            this.RrhhLblTotalDeducciones.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblTotalDeducciones.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTotalDeducciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTotalDeducciones.Location = new System.Drawing.Point(93, 8);
+            this.RrhhLblTotalDeducciones.Name = "RrhhLblTotalDeducciones";
+            this.RrhhLblTotalDeducciones.Size = new System.Drawing.Size(154, 22);
+            this.RrhhLblTotalDeducciones.TabIndex = 6;
+            this.RrhhLblTotalDeducciones.Text = "Total Deducciones";
             // 
             // FrmCierreNominas
             // 
@@ -433,33 +552,40 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1387, 782);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RrhhDgvVistaCierreNomina);
             this.Controls.Add(this.RrhhPnlInicio);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.RrhhPnlCierreNominas);
+            this.Controls.Add(this.RrhhPnlResumen);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmCierreNominas";
             this.Text = "9701 - Cierre de Nominas";
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvVistaCierreNomina)).EndInit();
             this.RrhhPnlInicio.ResumeLayout(false);
             this.RrhhPnlInicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIconoMascota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIconoCierreNominas)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.RrhhPnlCierreNominas.ResumeLayout(false);
+            this.RrhhPnlCierreNominas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbCalendario)).EndInit();
+            this.RrhhPnlResumen.ResumeLayout(false);
+            this.RrhhPnlResumen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbResumen)).EndInit();
+            this.RrhhPnlDecorativo1.ResumeLayout(false);
+            this.RrhhPnlDecorativo1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIEmpleadoNomina)).EndInit();
+            this.RrhhPnlDecorativo3.ResumeLayout(false);
+            this.RrhhPnlDecorativo3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbTotalPercepciones)).EndInit();
+            this.RrhhPnlDecorativo5.ResumeLayout(false);
+            this.RrhhPnlDecorativo5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbVerificacionCierre)).EndInit();
+            this.RrhhPnlDecorativo4.ResumeLayout(false);
+            this.RrhhPnlDecorativo4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbSalarioLiquido)).EndInit();
+            this.RrhhPnlDecorativo2.ResumeLayout(false);
+            this.RrhhPnlDecorativo2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RrhhPbTotalDeducciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -471,31 +597,41 @@
         private System.Windows.Forms.Label RrhhLblSubTituloCierreNominas;
         private System.Windows.Forms.PictureBox RrhhPbIconoMascota;
         private System.Windows.Forms.PictureBox RrhhPbIconoCierreNominas;
-        private System.Windows.Forms.Button RrhhBtnGuardar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label RrhhLblMesAño;
+        private System.Windows.Forms.Label RrhhLblTituloCierre;
+        private System.Windows.Forms.ComboBox RrhhCboPeriodo;
+        private System.Windows.Forms.Label RrhhLblMensajeInformativo;
+        private System.Windows.Forms.Label RrhhLblResumenPeriodo;
+        private System.Windows.Forms.Panel RrhhPnlDecorativo1;
+        private System.Windows.Forms.Label RrhhLblValorResumen;
+        private System.Windows.Forms.Label RrhhLblEmpleadosNomina;
+        private System.Windows.Forms.Panel RrhhPnlDecorativo5;
+        private System.Windows.Forms.Label RrhhLblVerificacionCuadre;
+        private System.Windows.Forms.Panel RrhhPnlDecorativo3;
+        private System.Windows.Forms.Label RrhhLblValorResumen2;
+        private System.Windows.Forms.Label RrhhLblTotalPercepciones;
+        private System.Windows.Forms.Panel RrhhPnlDecorativo2;
+        private System.Windows.Forms.Label RrhhLblValorResumen3;
+        private System.Windows.Forms.Label RrhhLblTotalDeducciones;
+        private System.Windows.Forms.Panel RrhhPnlDecorativo4;
+        private System.Windows.Forms.Label RrhhLblValorResumen4;
+        private System.Windows.Forms.Label RrhhLblSalarioLiquido;
+        private System.Windows.Forms.Label RrhhLblAdvertencia;
+        private System.Windows.Forms.Button RrhhBtnCerrarNomina;
+        private System.Windows.Forms.Panel RrhhPnlCierreNominas;
+        private System.Windows.Forms.Panel RrhhPnlResumen;
+        private System.Windows.Forms.DataGridView RrhhDgvVistaCierreNomina;
+        private System.Windows.Forms.PictureBox RrhhPbCalendario;
+        private System.Windows.Forms.PictureBox RrhhPbResumen;
+        private System.Windows.Forms.PictureBox RrhhPbIEmpleadoNomina;
+        private System.Windows.Forms.PictureBox RrhhPbTotalPercepciones;
+        private System.Windows.Forms.PictureBox RrhhPbTotalDeducciones;
+        private System.Windows.Forms.PictureBox RrhhPbVerificacionCierre;
+        private System.Windows.Forms.PictureBox RrhhPbSalarioLiquido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Deducciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
