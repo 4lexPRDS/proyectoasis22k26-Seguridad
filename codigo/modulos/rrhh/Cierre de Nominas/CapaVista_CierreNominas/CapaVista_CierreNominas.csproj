@@ -75,5 +75,26 @@
   <ItemGroup>
     <None Include="Resources\Pnl_fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Resumen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Percepciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_salario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_TotalDeducciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icn_Empleados.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
