@@ -283,16 +283,6 @@ namespace CapaVista_Bancos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FondoEnlaceotrosModulo {
-            get {
-                object obj = ResourceManager.GetObject("FondoEnlaceotrosModulo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap kpi {
             get {
                 object obj = ResourceManager.GetObject("kpi", resourceCulture);
