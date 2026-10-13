@@ -242,10 +242,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPestañaPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPestañaPermisos.Font = new System.Drawing.Font("Tahoma", 6.62F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPestañaPermisos.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnPestañaPermisos.Location = new System.Drawing.Point(20, 257);
-            this.RrhhBtnPestañaPermisos.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPestañaPermisos.Location = new System.Drawing.Point(17, 214);
             this.RrhhBtnPestañaPermisos.Name = "RrhhBtnPestañaPermisos";
-            this.RrhhBtnPestañaPermisos.Size = new System.Drawing.Size(196, 32);
+            this.RrhhBtnPestañaPermisos.Size = new System.Drawing.Size(163, 27);
             this.RrhhBtnPestañaPermisos.TabIndex = 15;
             this.RrhhBtnPestañaPermisos.Text = "Permisos";
             this.RrhhBtnPestañaPermisos.UseVisualStyleBackColor = false;
@@ -259,10 +258,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPestañaVacaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPestañaVacaciones.Font = new System.Drawing.Font("Tahoma", 6.62F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPestañaVacaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhBtnPestañaVacaciones.Location = new System.Drawing.Point(220, 259);
-            this.RrhhBtnPestañaVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPestañaVacaciones.Location = new System.Drawing.Point(183, 216);
             this.RrhhBtnPestañaVacaciones.Name = "RrhhBtnPestañaVacaciones";
-            this.RrhhBtnPestañaVacaciones.Size = new System.Drawing.Size(196, 30);
+            this.RrhhBtnPestañaVacaciones.Size = new System.Drawing.Size(163, 25);
             this.RrhhBtnPestañaVacaciones.TabIndex = 16;
             this.RrhhBtnPestañaVacaciones.Text = "Vacaciones";
             this.RrhhBtnPestañaVacaciones.UseVisualStyleBackColor = false;
@@ -271,10 +269,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             // RrhhPnlLineaPestañas
             // 
             this.RrhhPnlLineaPestañas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhPnlLineaPestañas.Location = new System.Drawing.Point(20, 289);
-            this.RrhhPnlLineaPestañas.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlLineaPestañas.Location = new System.Drawing.Point(17, 241);
             this.RrhhPnlLineaPestañas.Name = "RrhhPnlLineaPestañas";
-            this.RrhhPnlLineaPestañas.Size = new System.Drawing.Size(1484, 3);
+            this.RrhhPnlLineaPestañas.Size = new System.Drawing.Size(1237, 2);
             this.RrhhPnlLineaPestañas.TabIndex = 17;
             // 
             // RrhhTabPermisosVacaciones
@@ -283,11 +280,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTabPermisosVacaciones.Controls.Add(this.RrhhTabPagPermisos);
             this.RrhhTabPermisosVacaciones.Controls.Add(this.RrhhTabPagVacaciones);
             this.RrhhTabPermisosVacaciones.ItemSize = new System.Drawing.Size(0, 1);
-            this.RrhhTabPermisosVacaciones.Location = new System.Drawing.Point(16, 290);
-            this.RrhhTabPermisosVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTabPermisosVacaciones.Location = new System.Drawing.Point(13, 242);
             this.RrhhTabPermisosVacaciones.Name = "RrhhTabPermisosVacaciones";
             this.RrhhTabPermisosVacaciones.SelectedIndex = 0;
-            this.RrhhTabPermisosVacaciones.Size = new System.Drawing.Size(1484, 663);
+            this.RrhhTabPermisosVacaciones.Size = new System.Drawing.Size(1237, 552);
             this.RrhhTabPermisosVacaciones.TabIndex = 18;
             // 
             // RrhhTabPagPermisos
@@ -296,9 +292,8 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTabPagPermisos.Controls.Add(this.RrhhPnlDetallePermiso);
             this.RrhhTabPagPermisos.Controls.Add(this.RrhhPnlRegistrosPermiso);
             this.RrhhTabPagPermisos.Location = new System.Drawing.Point(4, 5);
-            this.RrhhTabPagPermisos.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTabPagPermisos.Name = "RrhhTabPagPermisos";
-            this.RrhhTabPagPermisos.Size = new System.Drawing.Size(1476, 654);
+            this.RrhhTabPagPermisos.Size = new System.Drawing.Size(1229, 543);
             this.RrhhTabPagPermisos.TabIndex = 0;
             this.RrhhTabPagPermisos.Text = "Permisos";
             // 
@@ -310,10 +305,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlDetallePermiso.Controls.Add(this.RrhhGbxDatosPermiso);
             this.RrhhPnlDetallePermiso.Controls.Add(this.RrhhGbxPeriodoPermiso);
             this.RrhhPnlDetallePermiso.Controls.Add(this.RrhhGbxMotivoPermiso);
-            this.RrhhPnlDetallePermiso.Location = new System.Drawing.Point(4, -4);
-            this.RrhhPnlDetallePermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlDetallePermiso.Location = new System.Drawing.Point(3, -3);
             this.RrhhPnlDetallePermiso.Name = "RrhhPnlDetallePermiso";
-            this.RrhhPnlDetallePermiso.Size = new System.Drawing.Size(1460, 358);
+            this.RrhhPnlDetallePermiso.Size = new System.Drawing.Size(1217, 299);
             this.RrhhPnlDetallePermiso.TabIndex = 0;
             // 
             // RrhhLblTituloDetallePermiso
@@ -322,10 +316,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTituloDetallePermiso.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTituloDetallePermiso.Font = new System.Drawing.Font("Lucida Bright", 8.82F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTituloDetallePermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloDetallePermiso.Location = new System.Drawing.Point(14, 10);
-            this.RrhhLblTituloDetallePermiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTituloDetallePermiso.Location = new System.Drawing.Point(12, 8);
             this.RrhhLblTituloDetallePermiso.Name = "RrhhLblTituloDetallePermiso";
-            this.RrhhLblTituloDetallePermiso.Size = new System.Drawing.Size(187, 20);
+            this.RrhhLblTituloDetallePermiso.Size = new System.Drawing.Size(154, 18);
             this.RrhhLblTituloDetallePermiso.TabIndex = 0;
             this.RrhhLblTituloDetallePermiso.Text = "Detalle del permiso";
             // 
@@ -347,11 +340,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxDatosPermiso.Controls.Add(this.RrhhLblNotaDatosPermiso);
             this.RrhhGbxDatosPermiso.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxDatosPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxDatosPermiso.Location = new System.Drawing.Point(14, 44);
-            this.RrhhGbxDatosPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxDatosPermiso.Location = new System.Drawing.Point(12, 37);
             this.RrhhGbxDatosPermiso.Name = "RrhhGbxDatosPermiso";
-            this.RrhhGbxDatosPermiso.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxDatosPermiso.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxDatosPermiso.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxDatosPermiso.TabIndex = 1;
             this.RrhhGbxDatosPermiso.TabStop = false;
             this.RrhhGbxDatosPermiso.Text = "Datos del permiso";
@@ -362,10 +353,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoEmpleado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoEmpleado.Location = new System.Drawing.Point(15, 38);
-            this.RrhhLblPermisoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoEmpleado.Location = new System.Drawing.Point(12, 32);
             this.RrhhLblPermisoEmpleado.Name = "RrhhLblPermisoEmpleado";
-            this.RrhhLblPermisoEmpleado.Size = new System.Drawing.Size(68, 16);
+            this.RrhhLblPermisoEmpleado.Size = new System.Drawing.Size(57, 13);
             this.RrhhLblPermisoEmpleado.TabIndex = 0;
             this.RrhhLblPermisoEmpleado.Text = "Empleado:";
             // 
@@ -375,10 +365,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoPermisoEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoPermisoEmpleado.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoPermisoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoPermisoEmpleado.Location = new System.Drawing.Point(148, 38);
-            this.RrhhLblAsteriscoPermisoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoPermisoEmpleado.Location = new System.Drawing.Point(123, 32);
             this.RrhhLblAsteriscoPermisoEmpleado.Name = "RrhhLblAsteriscoPermisoEmpleado";
-            this.RrhhLblAsteriscoPermisoEmpleado.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoPermisoEmpleado.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoPermisoEmpleado.TabIndex = 1;
             this.RrhhLblAsteriscoPermisoEmpleado.Text = "*";
             // 
@@ -390,10 +379,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboPermisoEmpleado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboPermisoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboPermisoEmpleado.FormattingEnabled = true;
-            this.RrhhCboPermisoEmpleado.Location = new System.Drawing.Point(168, 34);
-            this.RrhhCboPermisoEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboPermisoEmpleado.Location = new System.Drawing.Point(140, 28);
             this.RrhhCboPermisoEmpleado.Name = "RrhhCboPermisoEmpleado";
-            this.RrhhCboPermisoEmpleado.Size = new System.Drawing.Size(284, 25);
+            this.RrhhCboPermisoEmpleado.Size = new System.Drawing.Size(237, 21);
             this.RrhhCboPermisoEmpleado.TabIndex = 2;
             // 
             // RrhhLblPermisoDepartamento
@@ -402,10 +390,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoDepartamento.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoDepartamento.Location = new System.Drawing.Point(15, 81);
-            this.RrhhLblPermisoDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoDepartamento.Location = new System.Drawing.Point(12, 68);
             this.RrhhLblPermisoDepartamento.Name = "RrhhLblPermisoDepartamento";
-            this.RrhhLblPermisoDepartamento.Size = new System.Drawing.Size(93, 16);
+            this.RrhhLblPermisoDepartamento.Size = new System.Drawing.Size(80, 13);
             this.RrhhLblPermisoDepartamento.TabIndex = 3;
             this.RrhhLblPermisoDepartamento.Text = "Departamento:";
             // 
@@ -415,11 +402,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtPermisoDepartamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtPermisoDepartamento.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtPermisoDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtPermisoDepartamento.Location = new System.Drawing.Point(168, 78);
-            this.RrhhTxtPermisoDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtPermisoDepartamento.Location = new System.Drawing.Point(140, 65);
             this.RrhhTxtPermisoDepartamento.Name = "RrhhTxtPermisoDepartamento";
             this.RrhhTxtPermisoDepartamento.ReadOnly = true;
-            this.RrhhTxtPermisoDepartamento.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtPermisoDepartamento.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtPermisoDepartamento.TabIndex = 4;
             this.RrhhTxtPermisoDepartamento.TabStop = false;
             // 
@@ -429,10 +415,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoPuesto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoPuesto.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoPuesto.Location = new System.Drawing.Point(15, 124);
-            this.RrhhLblPermisoPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoPuesto.Location = new System.Drawing.Point(12, 103);
             this.RrhhLblPermisoPuesto.Name = "RrhhLblPermisoPuesto";
-            this.RrhhLblPermisoPuesto.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblPermisoPuesto.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblPermisoPuesto.TabIndex = 5;
             this.RrhhLblPermisoPuesto.Text = "Puesto:";
             // 
@@ -442,11 +427,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtPermisoPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtPermisoPuesto.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtPermisoPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtPermisoPuesto.Location = new System.Drawing.Point(168, 122);
-            this.RrhhTxtPermisoPuesto.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtPermisoPuesto.Location = new System.Drawing.Point(140, 102);
             this.RrhhTxtPermisoPuesto.Name = "RrhhTxtPermisoPuesto";
             this.RrhhTxtPermisoPuesto.ReadOnly = true;
-            this.RrhhTxtPermisoPuesto.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtPermisoPuesto.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtPermisoPuesto.TabIndex = 6;
             this.RrhhTxtPermisoPuesto.TabStop = false;
             // 
@@ -456,10 +440,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoTipo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoTipo.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoTipo.Location = new System.Drawing.Point(15, 168);
-            this.RrhhLblPermisoTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoTipo.Location = new System.Drawing.Point(12, 140);
             this.RrhhLblPermisoTipo.Name = "RrhhLblPermisoTipo";
-            this.RrhhLblPermisoTipo.Size = new System.Drawing.Size(105, 16);
+            this.RrhhLblPermisoTipo.Size = new System.Drawing.Size(86, 13);
             this.RrhhLblPermisoTipo.TabIndex = 7;
             this.RrhhLblPermisoTipo.Text = "Tipo de permiso:";
             // 
@@ -469,10 +452,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoPermisoTipo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoPermisoTipo.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoPermisoTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoPermisoTipo.Location = new System.Drawing.Point(148, 168);
-            this.RrhhLblAsteriscoPermisoTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoPermisoTipo.Location = new System.Drawing.Point(123, 140);
             this.RrhhLblAsteriscoPermisoTipo.Name = "RrhhLblAsteriscoPermisoTipo";
-            this.RrhhLblAsteriscoPermisoTipo.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoPermisoTipo.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoPermisoTipo.TabIndex = 8;
             this.RrhhLblAsteriscoPermisoTipo.Text = "*";
             // 
@@ -484,10 +466,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboPermisoTipo.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboPermisoTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboPermisoTipo.FormattingEnabled = true;
-            this.RrhhCboPermisoTipo.Location = new System.Drawing.Point(168, 165);
-            this.RrhhCboPermisoTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboPermisoTipo.Location = new System.Drawing.Point(140, 138);
             this.RrhhCboPermisoTipo.Name = "RrhhCboPermisoTipo";
-            this.RrhhCboPermisoTipo.Size = new System.Drawing.Size(284, 25);
+            this.RrhhCboPermisoTipo.Size = new System.Drawing.Size(237, 21);
             this.RrhhCboPermisoTipo.TabIndex = 9;
             // 
             // RrhhLblPermisoEstado
@@ -496,10 +477,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoEstado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoEstado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoEstado.Location = new System.Drawing.Point(15, 212);
-            this.RrhhLblPermisoEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoEstado.Location = new System.Drawing.Point(12, 177);
             this.RrhhLblPermisoEstado.Name = "RrhhLblPermisoEstado";
-            this.RrhhLblPermisoEstado.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblPermisoEstado.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblPermisoEstado.TabIndex = 10;
             this.RrhhLblPermisoEstado.Text = "Estado:";
             // 
@@ -511,10 +491,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboPermisoEstado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboPermisoEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboPermisoEstado.FormattingEnabled = true;
-            this.RrhhCboPermisoEstado.Location = new System.Drawing.Point(168, 208);
-            this.RrhhCboPermisoEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboPermisoEstado.Location = new System.Drawing.Point(140, 173);
             this.RrhhCboPermisoEstado.Name = "RrhhCboPermisoEstado";
-            this.RrhhCboPermisoEstado.Size = new System.Drawing.Size(284, 25);
+            this.RrhhCboPermisoEstado.Size = new System.Drawing.Size(237, 21);
             this.RrhhCboPermisoEstado.TabIndex = 11;
             // 
             // RrhhLblNotaDatosPermiso
@@ -522,10 +501,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblNotaDatosPermiso.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblNotaDatosPermiso.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblNotaDatosPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblNotaDatosPermiso.Location = new System.Drawing.Point(15, 256);
-            this.RrhhLblNotaDatosPermiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblNotaDatosPermiso.Location = new System.Drawing.Point(12, 213);
             this.RrhhLblNotaDatosPermiso.Name = "RrhhLblNotaDatosPermiso";
-            this.RrhhLblNotaDatosPermiso.Size = new System.Drawing.Size(440, 16);
+            this.RrhhLblNotaDatosPermiso.Size = new System.Drawing.Size(367, 13);
             this.RrhhLblNotaDatosPermiso.TabIndex = 12;
             this.RrhhLblNotaDatosPermiso.Text = "Departamento y puesto se cargan al elegir al empleado.";
             this.RrhhLblNotaDatosPermiso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -548,11 +526,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxPeriodoPermiso.Controls.Add(this.RrhhPnlTotalPermiso);
             this.RrhhGbxPeriodoPermiso.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxPeriodoPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxPeriodoPermiso.Location = new System.Drawing.Point(496, 44);
-            this.RrhhGbxPeriodoPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxPeriodoPermiso.Location = new System.Drawing.Point(413, 37);
             this.RrhhGbxPeriodoPermiso.Name = "RrhhGbxPeriodoPermiso";
-            this.RrhhGbxPeriodoPermiso.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxPeriodoPermiso.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxPeriodoPermiso.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxPeriodoPermiso.TabIndex = 2;
             this.RrhhGbxPeriodoPermiso.TabStop = false;
             this.RrhhGbxPeriodoPermiso.Text = "Período del permiso";
@@ -563,10 +539,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoFechaInicio.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoFechaInicio.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoFechaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoFechaInicio.Location = new System.Drawing.Point(15, 38);
-            this.RrhhLblPermisoFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoFechaInicio.Location = new System.Drawing.Point(12, 32);
             this.RrhhLblPermisoFechaInicio.Name = "RrhhLblPermisoFechaInicio";
-            this.RrhhLblPermisoFechaInicio.Size = new System.Drawing.Size(97, 16);
+            this.RrhhLblPermisoFechaInicio.Size = new System.Drawing.Size(81, 13);
             this.RrhhLblPermisoFechaInicio.TabIndex = 0;
             this.RrhhLblPermisoFechaInicio.Text = "Fecha de inicio:";
             // 
@@ -576,10 +551,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoPermisoFechaInicio.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoPermisoFechaInicio.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoPermisoFechaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoPermisoFechaInicio.Location = new System.Drawing.Point(148, 38);
-            this.RrhhLblAsteriscoPermisoFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoPermisoFechaInicio.Location = new System.Drawing.Point(123, 32);
             this.RrhhLblAsteriscoPermisoFechaInicio.Name = "RrhhLblAsteriscoPermisoFechaInicio";
-            this.RrhhLblAsteriscoPermisoFechaInicio.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoPermisoFechaInicio.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoPermisoFechaInicio.TabIndex = 1;
             this.RrhhLblAsteriscoPermisoFechaInicio.Text = "*";
             // 
@@ -590,10 +564,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpPermisoFechaInicio.CalendarTitleForeColor = System.Drawing.Color.White;
             this.RrhhDtpPermisoFechaInicio.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpPermisoFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpPermisoFechaInicio.Location = new System.Drawing.Point(168, 34);
-            this.RrhhDtpPermisoFechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpPermisoFechaInicio.Location = new System.Drawing.Point(140, 28);
             this.RrhhDtpPermisoFechaInicio.Name = "RrhhDtpPermisoFechaInicio";
-            this.RrhhDtpPermisoFechaInicio.Size = new System.Drawing.Size(284, 24);
+            this.RrhhDtpPermisoFechaInicio.Size = new System.Drawing.Size(237, 21);
             this.RrhhDtpPermisoFechaInicio.TabIndex = 2;
             this.RrhhDtpPermisoFechaInicio.ValueChanged += new System.EventHandler(this.RrhhDtpPermisoFechaInicio_ValueChanged);
             // 
@@ -603,10 +576,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoFechaFin.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoFechaFin.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoFechaFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoFechaFin.Location = new System.Drawing.Point(15, 81);
-            this.RrhhLblPermisoFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoFechaFin.Location = new System.Drawing.Point(12, 68);
             this.RrhhLblPermisoFechaFin.Name = "RrhhLblPermisoFechaFin";
-            this.RrhhLblPermisoFechaFin.Size = new System.Drawing.Size(82, 16);
+            this.RrhhLblPermisoFechaFin.Size = new System.Drawing.Size(70, 13);
             this.RrhhLblPermisoFechaFin.TabIndex = 3;
             this.RrhhLblPermisoFechaFin.Text = "Fecha de fin:";
             // 
@@ -616,10 +588,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoPermisoFechaFin.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoPermisoFechaFin.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoPermisoFechaFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoPermisoFechaFin.Location = new System.Drawing.Point(148, 81);
-            this.RrhhLblAsteriscoPermisoFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoPermisoFechaFin.Location = new System.Drawing.Point(123, 68);
             this.RrhhLblAsteriscoPermisoFechaFin.Name = "RrhhLblAsteriscoPermisoFechaFin";
-            this.RrhhLblAsteriscoPermisoFechaFin.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoPermisoFechaFin.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoPermisoFechaFin.TabIndex = 4;
             this.RrhhLblAsteriscoPermisoFechaFin.Text = "*";
             // 
@@ -630,10 +601,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpPermisoFechaFin.CalendarTitleForeColor = System.Drawing.Color.White;
             this.RrhhDtpPermisoFechaFin.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpPermisoFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpPermisoFechaFin.Location = new System.Drawing.Point(168, 78);
-            this.RrhhDtpPermisoFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpPermisoFechaFin.Location = new System.Drawing.Point(140, 65);
             this.RrhhDtpPermisoFechaFin.Name = "RrhhDtpPermisoFechaFin";
-            this.RrhhDtpPermisoFechaFin.Size = new System.Drawing.Size(284, 24);
+            this.RrhhDtpPermisoFechaFin.Size = new System.Drawing.Size(237, 21);
             this.RrhhDtpPermisoFechaFin.TabIndex = 5;
             // 
             // RrhhLblPermisoCalcularEn
@@ -642,10 +612,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoCalcularEn.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoCalcularEn.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoCalcularEn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoCalcularEn.Location = new System.Drawing.Point(15, 124);
-            this.RrhhLblPermisoCalcularEn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoCalcularEn.Location = new System.Drawing.Point(12, 103);
             this.RrhhLblPermisoCalcularEn.Name = "RrhhLblPermisoCalcularEn";
-            this.RrhhLblPermisoCalcularEn.Size = new System.Drawing.Size(76, 16);
+            this.RrhhLblPermisoCalcularEn.Size = new System.Drawing.Size(64, 13);
             this.RrhhLblPermisoCalcularEn.TabIndex = 6;
             this.RrhhLblPermisoCalcularEn.Text = "Calcular en:";
             // 
@@ -657,10 +626,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhRdbPermisoDias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RrhhRdbPermisoDias.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhRdbPermisoDias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhRdbPermisoDias.Location = new System.Drawing.Point(168, 123);
-            this.RrhhRdbPermisoDias.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhRdbPermisoDias.Location = new System.Drawing.Point(140, 102);
             this.RrhhRdbPermisoDias.Name = "RrhhRdbPermisoDias";
-            this.RrhhRdbPermisoDias.Size = new System.Drawing.Size(56, 20);
+            this.RrhhRdbPermisoDias.Size = new System.Drawing.Size(48, 17);
             this.RrhhRdbPermisoDias.TabIndex = 7;
             this.RrhhRdbPermisoDias.TabStop = true;
             this.RrhhRdbPermisoDias.Text = "Días";
@@ -673,10 +641,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhRdbPermisoHoras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RrhhRdbPermisoHoras.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhRdbPermisoHoras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhRdbPermisoHoras.Location = new System.Drawing.Point(258, 123);
-            this.RrhhRdbPermisoHoras.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhRdbPermisoHoras.Location = new System.Drawing.Point(215, 102);
             this.RrhhRdbPermisoHoras.Name = "RrhhRdbPermisoHoras";
-            this.RrhhRdbPermisoHoras.Size = new System.Drawing.Size(65, 20);
+            this.RrhhRdbPermisoHoras.Size = new System.Drawing.Size(56, 17);
             this.RrhhRdbPermisoHoras.TabIndex = 8;
             this.RrhhRdbPermisoHoras.Text = "Horas";
             this.RrhhRdbPermisoHoras.UseVisualStyleBackColor = false;
@@ -687,10 +654,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoHorario.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoHorario.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoHorario.Location = new System.Drawing.Point(15, 168);
-            this.RrhhLblPermisoHorario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoHorario.Location = new System.Drawing.Point(12, 140);
             this.RrhhLblPermisoHorario.Name = "RrhhLblPermisoHorario";
-            this.RrhhLblPermisoHorario.Size = new System.Drawing.Size(54, 16);
+            this.RrhhLblPermisoHorario.Size = new System.Drawing.Size(46, 13);
             this.RrhhLblPermisoHorario.TabIndex = 9;
             this.RrhhLblPermisoHorario.Text = "Horario:";
             // 
@@ -702,11 +668,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpPermisoHoraInicio.Enabled = false;
             this.RrhhDtpPermisoHoraInicio.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpPermisoHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.RrhhDtpPermisoHoraInicio.Location = new System.Drawing.Point(168, 165);
-            this.RrhhDtpPermisoHoraInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpPermisoHoraInicio.Location = new System.Drawing.Point(140, 138);
             this.RrhhDtpPermisoHoraInicio.Name = "RrhhDtpPermisoHoraInicio";
             this.RrhhDtpPermisoHoraInicio.ShowUpDown = true;
-            this.RrhhDtpPermisoHoraInicio.Size = new System.Drawing.Size(132, 24);
+            this.RrhhDtpPermisoHoraInicio.Size = new System.Drawing.Size(111, 21);
             this.RrhhDtpPermisoHoraInicio.TabIndex = 10;
             // 
             // RrhhDtpPermisoHoraFin
@@ -717,11 +682,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpPermisoHoraFin.Enabled = false;
             this.RrhhDtpPermisoHoraFin.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpPermisoHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.RrhhDtpPermisoHoraFin.Location = new System.Drawing.Point(321, 165);
-            this.RrhhDtpPermisoHoraFin.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpPermisoHoraFin.Location = new System.Drawing.Point(268, 138);
             this.RrhhDtpPermisoHoraFin.Name = "RrhhDtpPermisoHoraFin";
             this.RrhhDtpPermisoHoraFin.ShowUpDown = true;
-            this.RrhhDtpPermisoHoraFin.Size = new System.Drawing.Size(132, 24);
+            this.RrhhDtpPermisoHoraFin.Size = new System.Drawing.Size(111, 21);
             this.RrhhDtpPermisoHoraFin.TabIndex = 11;
             // 
             // RrhhPnlTotalPermiso
@@ -730,10 +694,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlTotalPermiso.Controls.Add(this.RrhhLblTotalPermisoTexto);
             this.RrhhPnlTotalPermiso.Controls.Add(this.RrhhLblNotaTotalPermiso);
             this.RrhhPnlTotalPermiso.Controls.Add(this.RrhhLblTotalPermisoValor);
-            this.RrhhPnlTotalPermiso.Location = new System.Drawing.Point(15, 208);
-            this.RrhhPnlTotalPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlTotalPermiso.Location = new System.Drawing.Point(12, 173);
             this.RrhhPnlTotalPermiso.Name = "RrhhPnlTotalPermiso";
-            this.RrhhPnlTotalPermiso.Size = new System.Drawing.Size(440, 72);
+            this.RrhhPnlTotalPermiso.Size = new System.Drawing.Size(367, 60);
             this.RrhhPnlTotalPermiso.TabIndex = 12;
             // 
             // RrhhLblTotalPermisoTexto
@@ -742,10 +705,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTotalPermisoTexto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTotalPermisoTexto.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTotalPermisoTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTotalPermisoTexto.Location = new System.Drawing.Point(14, 14);
-            this.RrhhLblTotalPermisoTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTotalPermisoTexto.Location = new System.Drawing.Point(12, 12);
             this.RrhhLblTotalPermisoTexto.Name = "RrhhLblTotalPermisoTexto";
-            this.RrhhLblTotalPermisoTexto.Size = new System.Drawing.Size(126, 17);
+            this.RrhhLblTotalPermisoTexto.Size = new System.Drawing.Size(112, 14);
             this.RrhhLblTotalPermisoTexto.TabIndex = 0;
             this.RrhhLblTotalPermisoTexto.Text = "Total del permiso";
             // 
@@ -754,10 +716,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblNotaTotalPermiso.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblNotaTotalPermiso.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblNotaTotalPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblNotaTotalPermiso.Location = new System.Drawing.Point(14, 42);
-            this.RrhhLblNotaTotalPermiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblNotaTotalPermiso.Location = new System.Drawing.Point(12, 35);
             this.RrhhLblNotaTotalPermiso.Name = "RrhhLblNotaTotalPermiso";
-            this.RrhhLblNotaTotalPermiso.Size = new System.Drawing.Size(226, 16);
+            this.RrhhLblNotaTotalPermiso.Size = new System.Drawing.Size(188, 13);
             this.RrhhLblNotaTotalPermiso.TabIndex = 1;
             this.RrhhLblNotaTotalPermiso.Text = "Se calcula solo a partir de las fechas";
             this.RrhhLblNotaTotalPermiso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -767,10 +728,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTotalPermisoValor.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTotalPermisoValor.Font = new System.Drawing.Font("Segoe UI", 11.34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTotalPermisoValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTotalPermisoValor.Location = new System.Drawing.Point(246, 16);
-            this.RrhhLblTotalPermisoValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTotalPermisoValor.Location = new System.Drawing.Point(205, 13);
             this.RrhhLblTotalPermisoValor.Name = "RrhhLblTotalPermisoValor";
-            this.RrhhLblTotalPermisoValor.Size = new System.Drawing.Size(180, 38);
+            this.RrhhLblTotalPermisoValor.Size = new System.Drawing.Size(150, 32);
             this.RrhhLblTotalPermisoValor.TabIndex = 2;
             this.RrhhLblTotalPermisoValor.Text = "0 días";
             this.RrhhLblTotalPermisoValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -784,11 +744,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxMotivoPermiso.Controls.Add(this.RrhhLblContadorMotivo);
             this.RrhhGbxMotivoPermiso.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxMotivoPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxMotivoPermiso.Location = new System.Drawing.Point(978, 44);
-            this.RrhhGbxMotivoPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxMotivoPermiso.Location = new System.Drawing.Point(815, 37);
             this.RrhhGbxMotivoPermiso.Name = "RrhhGbxMotivoPermiso";
-            this.RrhhGbxMotivoPermiso.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxMotivoPermiso.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxMotivoPermiso.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxMotivoPermiso.TabIndex = 3;
             this.RrhhGbxMotivoPermiso.TabStop = false;
             this.RrhhGbxMotivoPermiso.Text = "Motivo del permiso";
@@ -799,10 +757,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPermisoMotivo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPermisoMotivo.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPermisoMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblPermisoMotivo.Location = new System.Drawing.Point(15, 38);
-            this.RrhhLblPermisoMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPermisoMotivo.Location = new System.Drawing.Point(12, 32);
             this.RrhhLblPermisoMotivo.Name = "RrhhLblPermisoMotivo";
-            this.RrhhLblPermisoMotivo.Size = new System.Drawing.Size(49, 16);
+            this.RrhhLblPermisoMotivo.Size = new System.Drawing.Size(43, 13);
             this.RrhhLblPermisoMotivo.TabIndex = 0;
             this.RrhhLblPermisoMotivo.Text = "Motivo:";
             // 
@@ -812,10 +769,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoPermisoMotivo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoPermisoMotivo.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoPermisoMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoPermisoMotivo.Location = new System.Drawing.Point(148, 38);
-            this.RrhhLblAsteriscoPermisoMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoPermisoMotivo.Location = new System.Drawing.Point(123, 32);
             this.RrhhLblAsteriscoPermisoMotivo.Name = "RrhhLblAsteriscoPermisoMotivo";
-            this.RrhhLblAsteriscoPermisoMotivo.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoPermisoMotivo.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoPermisoMotivo.TabIndex = 1;
             this.RrhhLblAsteriscoPermisoMotivo.Text = "*";
             // 
@@ -825,13 +781,12 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtPermisoMotivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtPermisoMotivo.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtPermisoMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtPermisoMotivo.Location = new System.Drawing.Point(15, 63);
-            this.RrhhTxtPermisoMotivo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtPermisoMotivo.Location = new System.Drawing.Point(12, 52);
             this.RrhhTxtPermisoMotivo.MaxLength = 250;
             this.RrhhTxtPermisoMotivo.Multiline = true;
             this.RrhhTxtPermisoMotivo.Name = "RrhhTxtPermisoMotivo";
             this.RrhhTxtPermisoMotivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.RrhhTxtPermisoMotivo.Size = new System.Drawing.Size(438, 185);
+            this.RrhhTxtPermisoMotivo.Size = new System.Drawing.Size(365, 154);
             this.RrhhTxtPermisoMotivo.TabIndex = 2;
             // 
             // RrhhLblContadorMotivo
@@ -839,10 +794,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblContadorMotivo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblContadorMotivo.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblContadorMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblContadorMotivo.Location = new System.Drawing.Point(258, 256);
-            this.RrhhLblContadorMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblContadorMotivo.Location = new System.Drawing.Point(215, 213);
             this.RrhhLblContadorMotivo.Name = "RrhhLblContadorMotivo";
-            this.RrhhLblContadorMotivo.Size = new System.Drawing.Size(196, 16);
+            this.RrhhLblContadorMotivo.Size = new System.Drawing.Size(163, 13);
             this.RrhhLblContadorMotivo.TabIndex = 3;
             this.RrhhLblContadorMotivo.Text = "0 / 250 caracteres";
             this.RrhhLblContadorMotivo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -860,10 +814,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlRegistrosPermiso.Controls.Add(this.RrhhCboFiltroPermisoEstado);
             this.RrhhPnlRegistrosPermiso.Controls.Add(this.RrhhBtnFiltrarPermiso);
             this.RrhhPnlRegistrosPermiso.Controls.Add(this.RrhhDgvPermisos);
-            this.RrhhPnlRegistrosPermiso.Location = new System.Drawing.Point(6, 362);
-            this.RrhhPnlRegistrosPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlRegistrosPermiso.Location = new System.Drawing.Point(5, 302);
             this.RrhhPnlRegistrosPermiso.Name = "RrhhPnlRegistrosPermiso";
-            this.RrhhPnlRegistrosPermiso.Size = new System.Drawing.Size(1466, 296);
+            this.RrhhPnlRegistrosPermiso.Size = new System.Drawing.Size(1222, 247);
             this.RrhhPnlRegistrosPermiso.TabIndex = 1;
             // 
             // RrhhLblTituloRegistrosPermiso
@@ -872,10 +825,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTituloRegistrosPermiso.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTituloRegistrosPermiso.Font = new System.Drawing.Font("Lucida Bright", 8.82F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTituloRegistrosPermiso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloRegistrosPermiso.Location = new System.Drawing.Point(14, 10);
-            this.RrhhLblTituloRegistrosPermiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTituloRegistrosPermiso.Location = new System.Drawing.Point(12, 8);
             this.RrhhLblTituloRegistrosPermiso.Name = "RrhhLblTituloRegistrosPermiso";
-            this.RrhhLblTituloRegistrosPermiso.Size = new System.Drawing.Size(201, 20);
+            this.RrhhLblTituloRegistrosPermiso.Size = new System.Drawing.Size(163, 18);
             this.RrhhLblTituloRegistrosPermiso.TabIndex = 0;
             this.RrhhLblTituloRegistrosPermiso.Text = "Permisos registrados";
             // 
@@ -885,10 +837,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblFiltroPermisoEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblFiltroPermisoEmpleado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFiltroPermisoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblFiltroPermisoEmpleado.Location = new System.Drawing.Point(15, 51);
-            this.RrhhLblFiltroPermisoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblFiltroPermisoEmpleado.Location = new System.Drawing.Point(12, 42);
             this.RrhhLblFiltroPermisoEmpleado.Name = "RrhhLblFiltroPermisoEmpleado";
-            this.RrhhLblFiltroPermisoEmpleado.Size = new System.Drawing.Size(68, 16);
+            this.RrhhLblFiltroPermisoEmpleado.Size = new System.Drawing.Size(57, 13);
             this.RrhhLblFiltroPermisoEmpleado.TabIndex = 1;
             this.RrhhLblFiltroPermisoEmpleado.Text = "Empleado:";
             // 
@@ -898,10 +849,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtFiltroPermisoEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtFiltroPermisoEmpleado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtFiltroPermisoEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtFiltroPermisoEmpleado.Location = new System.Drawing.Point(93, 48);
-            this.RrhhTxtFiltroPermisoEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtFiltroPermisoEmpleado.Location = new System.Drawing.Point(78, 40);
             this.RrhhTxtFiltroPermisoEmpleado.Name = "RrhhTxtFiltroPermisoEmpleado";
-            this.RrhhTxtFiltroPermisoEmpleado.Size = new System.Drawing.Size(245, 24);
+            this.RrhhTxtFiltroPermisoEmpleado.Size = new System.Drawing.Size(204, 21);
             this.RrhhTxtFiltroPermisoEmpleado.TabIndex = 2;
             // 
             // RrhhLblFiltroPermisoTipo
@@ -910,10 +860,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblFiltroPermisoTipo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblFiltroPermisoTipo.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFiltroPermisoTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblFiltroPermisoTipo.Location = new System.Drawing.Point(370, 51);
-            this.RrhhLblFiltroPermisoTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblFiltroPermisoTipo.Location = new System.Drawing.Point(308, 42);
             this.RrhhLblFiltroPermisoTipo.Name = "RrhhLblFiltroPermisoTipo";
-            this.RrhhLblFiltroPermisoTipo.Size = new System.Drawing.Size(37, 16);
+            this.RrhhLblFiltroPermisoTipo.Size = new System.Drawing.Size(31, 13);
             this.RrhhLblFiltroPermisoTipo.TabIndex = 3;
             this.RrhhLblFiltroPermisoTipo.Text = "Tipo:";
             // 
@@ -925,10 +874,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboFiltroPermisoTipo.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboFiltroPermisoTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroPermisoTipo.FormattingEnabled = true;
-            this.RrhhCboFiltroPermisoTipo.Location = new System.Drawing.Point(414, 48);
-            this.RrhhCboFiltroPermisoTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboFiltroPermisoTipo.Location = new System.Drawing.Point(345, 40);
             this.RrhhCboFiltroPermisoTipo.Name = "RrhhCboFiltroPermisoTipo";
-            this.RrhhCboFiltroPermisoTipo.Size = new System.Drawing.Size(216, 25);
+            this.RrhhCboFiltroPermisoTipo.Size = new System.Drawing.Size(181, 21);
             this.RrhhCboFiltroPermisoTipo.TabIndex = 4;
             // 
             // RrhhLblFiltroPermisoEstado
@@ -937,10 +885,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblFiltroPermisoEstado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblFiltroPermisoEstado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFiltroPermisoEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblFiltroPermisoEstado.Location = new System.Drawing.Point(660, 51);
-            this.RrhhLblFiltroPermisoEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblFiltroPermisoEstado.Location = new System.Drawing.Point(550, 42);
             this.RrhhLblFiltroPermisoEstado.Name = "RrhhLblFiltroPermisoEstado";
-            this.RrhhLblFiltroPermisoEstado.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblFiltroPermisoEstado.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblFiltroPermisoEstado.TabIndex = 5;
             this.RrhhLblFiltroPermisoEstado.Text = "Estado:";
             // 
@@ -952,10 +899,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboFiltroPermisoEstado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboFiltroPermisoEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroPermisoEstado.FormattingEnabled = true;
-            this.RrhhCboFiltroPermisoEstado.Location = new System.Drawing.Point(720, 48);
-            this.RrhhCboFiltroPermisoEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboFiltroPermisoEstado.Location = new System.Drawing.Point(600, 40);
             this.RrhhCboFiltroPermisoEstado.Name = "RrhhCboFiltroPermisoEstado";
-            this.RrhhCboFiltroPermisoEstado.Size = new System.Drawing.Size(194, 25);
+            this.RrhhCboFiltroPermisoEstado.Size = new System.Drawing.Size(162, 21);
             this.RrhhCboFiltroPermisoEstado.TabIndex = 6;
             // 
             // RrhhBtnFiltrarPermiso
@@ -966,10 +912,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnFiltrarPermiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnFiltrarPermiso.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnFiltrarPermiso.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnFiltrarPermiso.Location = new System.Drawing.Point(1299, 45);
-            this.RrhhBtnFiltrarPermiso.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnFiltrarPermiso.Location = new System.Drawing.Point(1082, 38);
             this.RrhhBtnFiltrarPermiso.Name = "RrhhBtnFiltrarPermiso";
-            this.RrhhBtnFiltrarPermiso.Size = new System.Drawing.Size(148, 28);
+            this.RrhhBtnFiltrarPermiso.Size = new System.Drawing.Size(123, 23);
             this.RrhhBtnFiltrarPermiso.TabIndex = 7;
             this.RrhhBtnFiltrarPermiso.Text = "Filtrar";
             this.RrhhBtnFiltrarPermiso.UseVisualStyleBackColor = false;
@@ -1016,8 +961,7 @@ namespace CapaVista_PermisosVacaciones.Formularios
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.RrhhDgvPermisos.DefaultCellStyle = dataGridViewCellStyle6;
             this.RrhhDgvPermisos.EnableHeadersVisualStyles = false;
-            this.RrhhDgvPermisos.Location = new System.Drawing.Point(15, 82);
-            this.RrhhDgvPermisos.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDgvPermisos.Location = new System.Drawing.Point(12, 68);
             this.RrhhDgvPermisos.MultiSelect = false;
             this.RrhhDgvPermisos.Name = "RrhhDgvPermisos";
             this.RrhhDgvPermisos.ReadOnly = true;
@@ -1026,7 +970,7 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDgvPermisos.RowTemplate.Height = 16;
             this.RrhhDgvPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RrhhDgvPermisos.ShowCellToolTips = false;
-            this.RrhhDgvPermisos.Size = new System.Drawing.Size(1431, 203);
+            this.RrhhDgvPermisos.Size = new System.Drawing.Size(1192, 169);
             this.RrhhDgvPermisos.TabIndex = 8;
             // 
             // RrhhColPermisoId
@@ -1121,9 +1065,8 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTabPagVacaciones.Controls.Add(this.RrhhPnlDetalleVacacion);
             this.RrhhTabPagVacaciones.Controls.Add(this.RrhhPnlRegistrosVacacion);
             this.RrhhTabPagVacaciones.Location = new System.Drawing.Point(4, 5);
-            this.RrhhTabPagVacaciones.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTabPagVacaciones.Name = "RrhhTabPagVacaciones";
-            this.RrhhTabPagVacaciones.Size = new System.Drawing.Size(1476, 654);
+            this.RrhhTabPagVacaciones.Size = new System.Drawing.Size(1229, 543);
             this.RrhhTabPagVacaciones.TabIndex = 1;
             this.RrhhTabPagVacaciones.Text = "Vacaciones";
             // 
@@ -1135,10 +1078,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlDetalleVacacion.Controls.Add(this.RrhhGbxDatosColaborador);
             this.RrhhPnlDetalleVacacion.Controls.Add(this.RrhhGbxDerechoVacaciones);
             this.RrhhPnlDetalleVacacion.Controls.Add(this.RrhhGbxSolicitudVacaciones);
-            this.RrhhPnlDetalleVacacion.Location = new System.Drawing.Point(6, 4);
-            this.RrhhPnlDetalleVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlDetalleVacacion.Location = new System.Drawing.Point(5, 3);
             this.RrhhPnlDetalleVacacion.Name = "RrhhPnlDetalleVacacion";
-            this.RrhhPnlDetalleVacacion.Size = new System.Drawing.Size(1460, 358);
+            this.RrhhPnlDetalleVacacion.Size = new System.Drawing.Size(1217, 299);
             this.RrhhPnlDetalleVacacion.TabIndex = 0;
             // 
             // RrhhLblTituloDetalleVacacion
@@ -1147,10 +1089,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTituloDetalleVacacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTituloDetalleVacacion.Font = new System.Drawing.Font("Lucida Bright", 8.82F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTituloDetalleVacacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloDetalleVacacion.Location = new System.Drawing.Point(14, 10);
-            this.RrhhLblTituloDetalleVacacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTituloDetalleVacacion.Location = new System.Drawing.Point(12, 8);
             this.RrhhLblTituloDetalleVacacion.Name = "RrhhLblTituloDetalleVacacion";
-            this.RrhhLblTituloDetalleVacacion.Size = new System.Drawing.Size(205, 20);
+            this.RrhhLblTituloDetalleVacacion.Size = new System.Drawing.Size(171, 18);
             this.RrhhLblTituloDetalleVacacion.TabIndex = 0;
             this.RrhhLblTituloDetalleVacacion.Text = "Detalle de vacaciones";
             // 
@@ -1171,11 +1112,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxDatosColaborador.Controls.Add(this.RrhhLblNotaDatosColaborador);
             this.RrhhGbxDatosColaborador.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxDatosColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxDatosColaborador.Location = new System.Drawing.Point(14, 44);
-            this.RrhhGbxDatosColaborador.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxDatosColaborador.Location = new System.Drawing.Point(12, 37);
             this.RrhhGbxDatosColaborador.Name = "RrhhGbxDatosColaborador";
-            this.RrhhGbxDatosColaborador.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxDatosColaborador.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxDatosColaborador.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxDatosColaborador.TabIndex = 1;
             this.RrhhGbxDatosColaborador.TabStop = false;
             this.RrhhGbxDatosColaborador.Text = "Datos del colaborador";
@@ -1186,10 +1125,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionEmpleado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionEmpleado.Location = new System.Drawing.Point(15, 38);
-            this.RrhhLblVacacionEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionEmpleado.Location = new System.Drawing.Point(12, 32);
             this.RrhhLblVacacionEmpleado.Name = "RrhhLblVacacionEmpleado";
-            this.RrhhLblVacacionEmpleado.Size = new System.Drawing.Size(68, 16);
+            this.RrhhLblVacacionEmpleado.Size = new System.Drawing.Size(57, 13);
             this.RrhhLblVacacionEmpleado.TabIndex = 0;
             this.RrhhLblVacacionEmpleado.Text = "Empleado:";
             // 
@@ -1199,10 +1137,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoVacacionEmpleado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoVacacionEmpleado.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoVacacionEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoVacacionEmpleado.Location = new System.Drawing.Point(148, 38);
-            this.RrhhLblAsteriscoVacacionEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoVacacionEmpleado.Location = new System.Drawing.Point(123, 32);
             this.RrhhLblAsteriscoVacacionEmpleado.Name = "RrhhLblAsteriscoVacacionEmpleado";
-            this.RrhhLblAsteriscoVacacionEmpleado.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoVacacionEmpleado.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoVacacionEmpleado.TabIndex = 1;
             this.RrhhLblAsteriscoVacacionEmpleado.Text = "*";
             // 
@@ -1214,10 +1151,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboVacacionEmpleado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboVacacionEmpleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboVacacionEmpleado.FormattingEnabled = true;
-            this.RrhhCboVacacionEmpleado.Location = new System.Drawing.Point(168, 34);
-            this.RrhhCboVacacionEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboVacacionEmpleado.Location = new System.Drawing.Point(140, 28);
             this.RrhhCboVacacionEmpleado.Name = "RrhhCboVacacionEmpleado";
-            this.RrhhCboVacacionEmpleado.Size = new System.Drawing.Size(284, 25);
+            this.RrhhCboVacacionEmpleado.Size = new System.Drawing.Size(237, 21);
             this.RrhhCboVacacionEmpleado.TabIndex = 2;
             // 
             // RrhhLblVacacionDepartamento
@@ -1226,10 +1162,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionDepartamento.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionDepartamento.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionDepartamento.Location = new System.Drawing.Point(15, 81);
-            this.RrhhLblVacacionDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionDepartamento.Location = new System.Drawing.Point(12, 68);
             this.RrhhLblVacacionDepartamento.Name = "RrhhLblVacacionDepartamento";
-            this.RrhhLblVacacionDepartamento.Size = new System.Drawing.Size(93, 16);
+            this.RrhhLblVacacionDepartamento.Size = new System.Drawing.Size(80, 13);
             this.RrhhLblVacacionDepartamento.TabIndex = 3;
             this.RrhhLblVacacionDepartamento.Text = "Departamento:";
             // 
@@ -1239,11 +1174,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionDepartamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionDepartamento.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionDepartamento.Location = new System.Drawing.Point(168, 78);
-            this.RrhhTxtVacacionDepartamento.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionDepartamento.Location = new System.Drawing.Point(140, 65);
             this.RrhhTxtVacacionDepartamento.Name = "RrhhTxtVacacionDepartamento";
             this.RrhhTxtVacacionDepartamento.ReadOnly = true;
-            this.RrhhTxtVacacionDepartamento.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtVacacionDepartamento.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtVacacionDepartamento.TabIndex = 4;
             this.RrhhTxtVacacionDepartamento.TabStop = false;
             // 
@@ -1253,10 +1187,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionPuesto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionPuesto.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionPuesto.Location = new System.Drawing.Point(15, 124);
-            this.RrhhLblVacacionPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionPuesto.Location = new System.Drawing.Point(12, 103);
             this.RrhhLblVacacionPuesto.Name = "RrhhLblVacacionPuesto";
-            this.RrhhLblVacacionPuesto.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblVacacionPuesto.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblVacacionPuesto.TabIndex = 5;
             this.RrhhLblVacacionPuesto.Text = "Puesto:";
             // 
@@ -1266,11 +1199,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionPuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionPuesto.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionPuesto.Location = new System.Drawing.Point(168, 122);
-            this.RrhhTxtVacacionPuesto.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionPuesto.Location = new System.Drawing.Point(140, 102);
             this.RrhhTxtVacacionPuesto.Name = "RrhhTxtVacacionPuesto";
             this.RrhhTxtVacacionPuesto.ReadOnly = true;
-            this.RrhhTxtVacacionPuesto.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtVacacionPuesto.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtVacacionPuesto.TabIndex = 6;
             this.RrhhTxtVacacionPuesto.TabStop = false;
             // 
@@ -1280,10 +1212,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionFechaContratacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionFechaContratacion.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionFechaContratacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionFechaContratacion.Location = new System.Drawing.Point(15, 168);
-            this.RrhhLblVacacionFechaContratacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionFechaContratacion.Location = new System.Drawing.Point(12, 140);
             this.RrhhLblVacacionFechaContratacion.Name = "RrhhLblVacacionFechaContratacion";
-            this.RrhhLblVacacionFechaContratacion.Size = new System.Drawing.Size(120, 16);
+            this.RrhhLblVacacionFechaContratacion.Size = new System.Drawing.Size(103, 13);
             this.RrhhLblVacacionFechaContratacion.TabIndex = 7;
             this.RrhhLblVacacionFechaContratacion.Text = "Fecha contratación:";
             // 
@@ -1293,11 +1224,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionFechaContratacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionFechaContratacion.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionFechaContratacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionFechaContratacion.Location = new System.Drawing.Point(168, 165);
-            this.RrhhTxtVacacionFechaContratacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionFechaContratacion.Location = new System.Drawing.Point(140, 138);
             this.RrhhTxtVacacionFechaContratacion.Name = "RrhhTxtVacacionFechaContratacion";
             this.RrhhTxtVacacionFechaContratacion.ReadOnly = true;
-            this.RrhhTxtVacacionFechaContratacion.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtVacacionFechaContratacion.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtVacacionFechaContratacion.TabIndex = 8;
             this.RrhhTxtVacacionFechaContratacion.TabStop = false;
             // 
@@ -1307,10 +1237,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionTiempoLaborado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionTiempoLaborado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionTiempoLaborado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionTiempoLaborado.Location = new System.Drawing.Point(15, 212);
-            this.RrhhLblVacacionTiempoLaborado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionTiempoLaborado.Location = new System.Drawing.Point(12, 177);
             this.RrhhLblVacacionTiempoLaborado.Name = "RrhhLblVacacionTiempoLaborado";
-            this.RrhhLblVacacionTiempoLaborado.Size = new System.Drawing.Size(109, 16);
+            this.RrhhLblVacacionTiempoLaborado.Size = new System.Drawing.Size(90, 13);
             this.RrhhLblVacacionTiempoLaborado.TabIndex = 9;
             this.RrhhLblVacacionTiempoLaborado.Text = "Tiempo laborado:";
             // 
@@ -1320,11 +1249,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionTiempoLaborado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionTiempoLaborado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionTiempoLaborado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionTiempoLaborado.Location = new System.Drawing.Point(168, 208);
-            this.RrhhTxtVacacionTiempoLaborado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionTiempoLaborado.Location = new System.Drawing.Point(140, 173);
             this.RrhhTxtVacacionTiempoLaborado.Name = "RrhhTxtVacacionTiempoLaborado";
             this.RrhhTxtVacacionTiempoLaborado.ReadOnly = true;
-            this.RrhhTxtVacacionTiempoLaborado.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtVacacionTiempoLaborado.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtVacacionTiempoLaborado.TabIndex = 10;
             this.RrhhTxtVacacionTiempoLaborado.TabStop = false;
             // 
@@ -1333,10 +1261,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblNotaDatosColaborador.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblNotaDatosColaborador.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblNotaDatosColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblNotaDatosColaborador.Location = new System.Drawing.Point(15, 256);
-            this.RrhhLblNotaDatosColaborador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblNotaDatosColaborador.Location = new System.Drawing.Point(12, 213);
             this.RrhhLblNotaDatosColaborador.Name = "RrhhLblNotaDatosColaborador";
-            this.RrhhLblNotaDatosColaborador.Size = new System.Drawing.Size(440, 16);
+            this.RrhhLblNotaDatosColaborador.Size = new System.Drawing.Size(367, 13);
             this.RrhhLblNotaDatosColaborador.TabIndex = 11;
             this.RrhhLblNotaDatosColaborador.Text = "Estos datos se cargan solos y no se pueden editar.";
             this.RrhhLblNotaDatosColaborador.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1355,11 +1282,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxDerechoVacaciones.Controls.Add(this.RrhhLblNotaUsoPeriodo);
             this.RrhhGbxDerechoVacaciones.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxDerechoVacaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxDerechoVacaciones.Location = new System.Drawing.Point(496, 44);
-            this.RrhhGbxDerechoVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxDerechoVacaciones.Location = new System.Drawing.Point(413, 37);
             this.RrhhGbxDerechoVacaciones.Name = "RrhhGbxDerechoVacaciones";
-            this.RrhhGbxDerechoVacaciones.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxDerechoVacaciones.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxDerechoVacaciones.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxDerechoVacaciones.TabIndex = 2;
             this.RrhhGbxDerechoVacaciones.TabStop = false;
             this.RrhhGbxDerechoVacaciones.Text = "Derecho a vacaciones";
@@ -1370,10 +1295,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblIndicadorDerecho.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhLblIndicadorDerecho.Font = new System.Drawing.Font("Tahoma", 7.56F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblIndicadorDerecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(96)))), ((int)(((byte)(100)))));
-            this.RrhhLblIndicadorDerecho.Location = new System.Drawing.Point(15, 32);
-            this.RrhhLblIndicadorDerecho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblIndicadorDerecho.Location = new System.Drawing.Point(12, 27);
             this.RrhhLblIndicadorDerecho.Name = "RrhhLblIndicadorDerecho";
-            this.RrhhLblIndicadorDerecho.Size = new System.Drawing.Size(438, 41);
+            this.RrhhLblIndicadorDerecho.Size = new System.Drawing.Size(365, 34);
             this.RrhhLblIndicadorDerecho.TabIndex = 0;
             this.RrhhLblIndicadorDerecho.Text = "Seleccione un empleado";
             this.RrhhLblIndicadorDerecho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1383,10 +1307,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblLeyendaDerecho.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblLeyendaDerecho.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblLeyendaDerecho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblLeyendaDerecho.Location = new System.Drawing.Point(15, 81);
-            this.RrhhLblLeyendaDerecho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblLeyendaDerecho.Location = new System.Drawing.Point(12, 68);
             this.RrhhLblLeyendaDerecho.Name = "RrhhLblLeyendaDerecho";
-            this.RrhhLblLeyendaDerecho.Size = new System.Drawing.Size(440, 16);
+            this.RrhhLblLeyendaDerecho.Size = new System.Drawing.Size(367, 13);
             this.RrhhLblLeyendaDerecho.TabIndex = 1;
             this.RrhhLblLeyendaDerecho.Text = "Verde: tiene derecho (1 año o más)  ·  Rojo: aún no tiene derecho";
             this.RrhhLblLeyendaDerecho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1396,10 +1319,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlDiasPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.RrhhPnlDiasPeriodo.Controls.Add(this.RrhhLblDiasPeriodoValor);
             this.RrhhPnlDiasPeriodo.Controls.Add(this.RrhhLblDiasPeriodoTexto);
-            this.RrhhPnlDiasPeriodo.Location = new System.Drawing.Point(15, 106);
-            this.RrhhPnlDiasPeriodo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlDiasPeriodo.Location = new System.Drawing.Point(12, 88);
             this.RrhhPnlDiasPeriodo.Name = "RrhhPnlDiasPeriodo";
-            this.RrhhPnlDiasPeriodo.Size = new System.Drawing.Size(140, 80);
+            this.RrhhPnlDiasPeriodo.Size = new System.Drawing.Size(117, 67);
             this.RrhhPnlDiasPeriodo.TabIndex = 2;
             // 
             // RrhhLblDiasPeriodoValor
@@ -1407,10 +1329,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasPeriodoValor.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasPeriodoValor.Font = new System.Drawing.Font("Segoe UI", 12.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasPeriodoValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblDiasPeriodoValor.Location = new System.Drawing.Point(0, 9);
-            this.RrhhLblDiasPeriodoValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasPeriodoValor.Location = new System.Drawing.Point(0, 8);
             this.RrhhLblDiasPeriodoValor.Name = "RrhhLblDiasPeriodoValor";
-            this.RrhhLblDiasPeriodoValor.Size = new System.Drawing.Size(140, 39);
+            this.RrhhLblDiasPeriodoValor.Size = new System.Drawing.Size(117, 32);
             this.RrhhLblDiasPeriodoValor.TabIndex = 0;
             this.RrhhLblDiasPeriodoValor.Text = "0";
             this.RrhhLblDiasPeriodoValor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1420,10 +1341,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasPeriodoTexto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasPeriodoTexto.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasPeriodoTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(106)))), ((int)(((byte)(108)))));
-            this.RrhhLblDiasPeriodoTexto.Location = new System.Drawing.Point(0, 51);
-            this.RrhhLblDiasPeriodoTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasPeriodoTexto.Location = new System.Drawing.Point(0, 42);
             this.RrhhLblDiasPeriodoTexto.Name = "RrhhLblDiasPeriodoTexto";
-            this.RrhhLblDiasPeriodoTexto.Size = new System.Drawing.Size(140, 20);
+            this.RrhhLblDiasPeriodoTexto.Size = new System.Drawing.Size(117, 17);
             this.RrhhLblDiasPeriodoTexto.TabIndex = 1;
             this.RrhhLblDiasPeriodoTexto.Text = "Días por período";
             this.RrhhLblDiasPeriodoTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1433,10 +1353,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlDiasTomados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.RrhhPnlDiasTomados.Controls.Add(this.RrhhLblDiasTomadosValor);
             this.RrhhPnlDiasTomados.Controls.Add(this.RrhhLblDiasTomadosTexto);
-            this.RrhhPnlDiasTomados.Location = new System.Drawing.Point(165, 106);
-            this.RrhhPnlDiasTomados.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlDiasTomados.Location = new System.Drawing.Point(138, 88);
             this.RrhhPnlDiasTomados.Name = "RrhhPnlDiasTomados";
-            this.RrhhPnlDiasTomados.Size = new System.Drawing.Size(140, 80);
+            this.RrhhPnlDiasTomados.Size = new System.Drawing.Size(117, 67);
             this.RrhhPnlDiasTomados.TabIndex = 3;
             // 
             // RrhhLblDiasTomadosValor
@@ -1444,10 +1363,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasTomadosValor.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasTomadosValor.Font = new System.Drawing.Font("Segoe UI", 12.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasTomadosValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblDiasTomadosValor.Location = new System.Drawing.Point(0, 9);
-            this.RrhhLblDiasTomadosValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasTomadosValor.Location = new System.Drawing.Point(0, 8);
             this.RrhhLblDiasTomadosValor.Name = "RrhhLblDiasTomadosValor";
-            this.RrhhLblDiasTomadosValor.Size = new System.Drawing.Size(140, 39);
+            this.RrhhLblDiasTomadosValor.Size = new System.Drawing.Size(117, 32);
             this.RrhhLblDiasTomadosValor.TabIndex = 0;
             this.RrhhLblDiasTomadosValor.Text = "0";
             this.RrhhLblDiasTomadosValor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1457,10 +1375,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasTomadosTexto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasTomadosTexto.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasTomadosTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(106)))), ((int)(((byte)(108)))));
-            this.RrhhLblDiasTomadosTexto.Location = new System.Drawing.Point(0, 51);
-            this.RrhhLblDiasTomadosTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasTomadosTexto.Location = new System.Drawing.Point(0, 42);
             this.RrhhLblDiasTomadosTexto.Name = "RrhhLblDiasTomadosTexto";
-            this.RrhhLblDiasTomadosTexto.Size = new System.Drawing.Size(140, 20);
+            this.RrhhLblDiasTomadosTexto.Size = new System.Drawing.Size(117, 17);
             this.RrhhLblDiasTomadosTexto.TabIndex = 1;
             this.RrhhLblDiasTomadosTexto.Text = "Días tomados";
             this.RrhhLblDiasTomadosTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1470,10 +1387,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlDiasDisponibles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
             this.RrhhPnlDiasDisponibles.Controls.Add(this.RrhhLblDiasDisponiblesValor);
             this.RrhhPnlDiasDisponibles.Controls.Add(this.RrhhLblDiasDisponiblesTexto);
-            this.RrhhPnlDiasDisponibles.Location = new System.Drawing.Point(315, 106);
-            this.RrhhPnlDiasDisponibles.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlDiasDisponibles.Location = new System.Drawing.Point(262, 88);
             this.RrhhPnlDiasDisponibles.Name = "RrhhPnlDiasDisponibles";
-            this.RrhhPnlDiasDisponibles.Size = new System.Drawing.Size(140, 80);
+            this.RrhhPnlDiasDisponibles.Size = new System.Drawing.Size(117, 67);
             this.RrhhPnlDiasDisponibles.TabIndex = 4;
             // 
             // RrhhLblDiasDisponiblesValor
@@ -1481,10 +1397,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasDisponiblesValor.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasDisponiblesValor.Font = new System.Drawing.Font("Segoe UI", 12.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasDisponiblesValor.ForeColor = System.Drawing.Color.White;
-            this.RrhhLblDiasDisponiblesValor.Location = new System.Drawing.Point(0, 9);
-            this.RrhhLblDiasDisponiblesValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasDisponiblesValor.Location = new System.Drawing.Point(0, 8);
             this.RrhhLblDiasDisponiblesValor.Name = "RrhhLblDiasDisponiblesValor";
-            this.RrhhLblDiasDisponiblesValor.Size = new System.Drawing.Size(140, 39);
+            this.RrhhLblDiasDisponiblesValor.Size = new System.Drawing.Size(117, 32);
             this.RrhhLblDiasDisponiblesValor.TabIndex = 0;
             this.RrhhLblDiasDisponiblesValor.Text = "0";
             this.RrhhLblDiasDisponiblesValor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1494,10 +1409,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblDiasDisponiblesTexto.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblDiasDisponiblesTexto.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblDiasDisponiblesTexto.ForeColor = System.Drawing.Color.White;
-            this.RrhhLblDiasDisponiblesTexto.Location = new System.Drawing.Point(0, 51);
-            this.RrhhLblDiasDisponiblesTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblDiasDisponiblesTexto.Location = new System.Drawing.Point(0, 42);
             this.RrhhLblDiasDisponiblesTexto.Name = "RrhhLblDiasDisponiblesTexto";
-            this.RrhhLblDiasDisponiblesTexto.Size = new System.Drawing.Size(140, 20);
+            this.RrhhLblDiasDisponiblesTexto.Size = new System.Drawing.Size(117, 17);
             this.RrhhLblDiasDisponiblesTexto.TabIndex = 1;
             this.RrhhLblDiasDisponiblesTexto.Text = "Días disponibles";
             this.RrhhLblDiasDisponiblesTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1508,10 +1422,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblUsoPeriodo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblUsoPeriodo.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblUsoPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblUsoPeriodo.Location = new System.Drawing.Point(15, 206);
-            this.RrhhLblUsoPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblUsoPeriodo.Location = new System.Drawing.Point(12, 172);
             this.RrhhLblUsoPeriodo.Name = "RrhhLblUsoPeriodo";
-            this.RrhhLblUsoPeriodo.Size = new System.Drawing.Size(96, 16);
+            this.RrhhLblUsoPeriodo.Size = new System.Drawing.Size(81, 13);
             this.RrhhLblUsoPeriodo.TabIndex = 5;
             this.RrhhLblUsoPeriodo.Text = "Uso del período";
             // 
@@ -1520,10 +1433,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblUsoPeriodoValor.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblUsoPeriodoValor.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblUsoPeriodoValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblUsoPeriodoValor.Location = new System.Drawing.Point(326, 206);
-            this.RrhhLblUsoPeriodoValor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblUsoPeriodoValor.Location = new System.Drawing.Point(272, 172);
             this.RrhhLblUsoPeriodoValor.Name = "RrhhLblUsoPeriodoValor";
-            this.RrhhLblUsoPeriodoValor.Size = new System.Drawing.Size(129, 20);
+            this.RrhhLblUsoPeriodoValor.Size = new System.Drawing.Size(108, 17);
             this.RrhhLblUsoPeriodoValor.TabIndex = 6;
             this.RrhhLblUsoPeriodoValor.Text = "0 %";
             this.RrhhLblUsoPeriodoValor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1532,19 +1444,17 @@ namespace CapaVista_PermisosVacaciones.Formularios
             // 
             this.RrhhPnlUsoPista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
             this.RrhhPnlUsoPista.Controls.Add(this.RrhhPnlUsoRelleno);
-            this.RrhhPnlUsoPista.Location = new System.Drawing.Point(15, 231);
-            this.RrhhPnlUsoPista.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlUsoPista.Location = new System.Drawing.Point(12, 192);
             this.RrhhPnlUsoPista.Name = "RrhhPnlUsoPista";
-            this.RrhhPnlUsoPista.Size = new System.Drawing.Size(440, 12);
+            this.RrhhPnlUsoPista.Size = new System.Drawing.Size(367, 10);
             this.RrhhPnlUsoPista.TabIndex = 7;
             // 
             // RrhhPnlUsoRelleno
             // 
             this.RrhhPnlUsoRelleno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(145)))));
             this.RrhhPnlUsoRelleno.Location = new System.Drawing.Point(0, 0);
-            this.RrhhPnlUsoRelleno.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlUsoRelleno.Name = "RrhhPnlUsoRelleno";
-            this.RrhhPnlUsoRelleno.Size = new System.Drawing.Size(10, 12);
+            this.RrhhPnlUsoRelleno.Size = new System.Drawing.Size(8, 10);
             this.RrhhPnlUsoRelleno.TabIndex = 0;
             // 
             // RrhhLblNotaUsoPeriodo
@@ -1552,10 +1462,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblNotaUsoPeriodo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblNotaUsoPeriodo.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblNotaUsoPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(131)))), ((int)(((byte)(133)))));
-            this.RrhhLblNotaUsoPeriodo.Location = new System.Drawing.Point(15, 252);
-            this.RrhhLblNotaUsoPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblNotaUsoPeriodo.Location = new System.Drawing.Point(12, 210);
             this.RrhhLblNotaUsoPeriodo.Name = "RrhhLblNotaUsoPeriodo";
-            this.RrhhLblNotaUsoPeriodo.Size = new System.Drawing.Size(440, 16);
+            this.RrhhLblNotaUsoPeriodo.Size = new System.Drawing.Size(367, 13);
             this.RrhhLblNotaUsoPeriodo.TabIndex = 8;
             this.RrhhLblNotaUsoPeriodo.Text = "0 de 0 días utilizados";
             this.RrhhLblNotaUsoPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1578,11 +1487,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhGbxSolicitudVacaciones.Controls.Add(this.RrhhLblRegistroBloqueado);
             this.RrhhGbxSolicitudVacaciones.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxSolicitudVacaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
-            this.RrhhGbxSolicitudVacaciones.Location = new System.Drawing.Point(978, 44);
-            this.RrhhGbxSolicitudVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhGbxSolicitudVacaciones.Location = new System.Drawing.Point(815, 37);
             this.RrhhGbxSolicitudVacaciones.Name = "RrhhGbxSolicitudVacaciones";
-            this.RrhhGbxSolicitudVacaciones.Padding = new System.Windows.Forms.Padding(4);
-            this.RrhhGbxSolicitudVacaciones.Size = new System.Drawing.Size(470, 303);
+            this.RrhhGbxSolicitudVacaciones.Size = new System.Drawing.Size(392, 252);
             this.RrhhGbxSolicitudVacaciones.TabIndex = 3;
             this.RrhhGbxSolicitudVacaciones.TabStop = false;
             this.RrhhGbxSolicitudVacaciones.Text = "Solicitud de vacaciones";
@@ -1593,10 +1500,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionFechaInicio.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionFechaInicio.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionFechaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionFechaInicio.Location = new System.Drawing.Point(15, 38);
-            this.RrhhLblVacacionFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionFechaInicio.Location = new System.Drawing.Point(12, 32);
             this.RrhhLblVacacionFechaInicio.Name = "RrhhLblVacacionFechaInicio";
-            this.RrhhLblVacacionFechaInicio.Size = new System.Drawing.Size(97, 16);
+            this.RrhhLblVacacionFechaInicio.Size = new System.Drawing.Size(81, 13);
             this.RrhhLblVacacionFechaInicio.TabIndex = 0;
             this.RrhhLblVacacionFechaInicio.Text = "Fecha de inicio:";
             // 
@@ -1606,10 +1512,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoVacacionFechaInicio.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoVacacionFechaInicio.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoVacacionFechaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoVacacionFechaInicio.Location = new System.Drawing.Point(148, 38);
-            this.RrhhLblAsteriscoVacacionFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoVacacionFechaInicio.Location = new System.Drawing.Point(123, 32);
             this.RrhhLblAsteriscoVacacionFechaInicio.Name = "RrhhLblAsteriscoVacacionFechaInicio";
-            this.RrhhLblAsteriscoVacacionFechaInicio.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoVacacionFechaInicio.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoVacacionFechaInicio.TabIndex = 1;
             this.RrhhLblAsteriscoVacacionFechaInicio.Text = "*";
             // 
@@ -1620,10 +1525,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpVacacionFechaInicio.CalendarTitleForeColor = System.Drawing.Color.White;
             this.RrhhDtpVacacionFechaInicio.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpVacacionFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpVacacionFechaInicio.Location = new System.Drawing.Point(168, 34);
-            this.RrhhDtpVacacionFechaInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpVacacionFechaInicio.Location = new System.Drawing.Point(140, 28);
             this.RrhhDtpVacacionFechaInicio.Name = "RrhhDtpVacacionFechaInicio";
-            this.RrhhDtpVacacionFechaInicio.Size = new System.Drawing.Size(284, 24);
+            this.RrhhDtpVacacionFechaInicio.Size = new System.Drawing.Size(237, 21);
             this.RrhhDtpVacacionFechaInicio.TabIndex = 2;
             // 
             // RrhhLblVacacionFechaFin
@@ -1632,10 +1536,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionFechaFin.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionFechaFin.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionFechaFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionFechaFin.Location = new System.Drawing.Point(15, 81);
-            this.RrhhLblVacacionFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionFechaFin.Location = new System.Drawing.Point(12, 68);
             this.RrhhLblVacacionFechaFin.Name = "RrhhLblVacacionFechaFin";
-            this.RrhhLblVacacionFechaFin.Size = new System.Drawing.Size(82, 16);
+            this.RrhhLblVacacionFechaFin.Size = new System.Drawing.Size(70, 13);
             this.RrhhLblVacacionFechaFin.TabIndex = 3;
             this.RrhhLblVacacionFechaFin.Text = "Fecha de fin:";
             // 
@@ -1645,10 +1548,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblAsteriscoVacacionFechaFin.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblAsteriscoVacacionFechaFin.Font = new System.Drawing.Font("Tahoma", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblAsteriscoVacacionFechaFin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblAsteriscoVacacionFechaFin.Location = new System.Drawing.Point(148, 81);
-            this.RrhhLblAsteriscoVacacionFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblAsteriscoVacacionFechaFin.Location = new System.Drawing.Point(123, 68);
             this.RrhhLblAsteriscoVacacionFechaFin.Name = "RrhhLblAsteriscoVacacionFechaFin";
-            this.RrhhLblAsteriscoVacacionFechaFin.Size = new System.Drawing.Size(17, 17);
+            this.RrhhLblAsteriscoVacacionFechaFin.Size = new System.Drawing.Size(15, 14);
             this.RrhhLblAsteriscoVacacionFechaFin.TabIndex = 4;
             this.RrhhLblAsteriscoVacacionFechaFin.Text = "*";
             // 
@@ -1659,10 +1561,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDtpVacacionFechaFin.CalendarTitleForeColor = System.Drawing.Color.White;
             this.RrhhDtpVacacionFechaFin.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhDtpVacacionFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RrhhDtpVacacionFechaFin.Location = new System.Drawing.Point(168, 78);
-            this.RrhhDtpVacacionFechaFin.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDtpVacacionFechaFin.Location = new System.Drawing.Point(140, 65);
             this.RrhhDtpVacacionFechaFin.Name = "RrhhDtpVacacionFechaFin";
-            this.RrhhDtpVacacionFechaFin.Size = new System.Drawing.Size(284, 24);
+            this.RrhhDtpVacacionFechaFin.Size = new System.Drawing.Size(237, 21);
             this.RrhhDtpVacacionFechaFin.TabIndex = 5;
             // 
             // RrhhLblVacacionDiasTomar
@@ -1671,10 +1572,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionDiasTomar.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionDiasTomar.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionDiasTomar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionDiasTomar.Location = new System.Drawing.Point(15, 124);
-            this.RrhhLblVacacionDiasTomar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionDiasTomar.Location = new System.Drawing.Point(12, 103);
             this.RrhhLblVacacionDiasTomar.Name = "RrhhLblVacacionDiasTomar";
-            this.RrhhLblVacacionDiasTomar.Size = new System.Drawing.Size(85, 16);
+            this.RrhhLblVacacionDiasTomar.Size = new System.Drawing.Size(71, 13);
             this.RrhhLblVacacionDiasTomar.TabIndex = 6;
             this.RrhhLblVacacionDiasTomar.Text = "Días a tomar:";
             // 
@@ -1684,11 +1584,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionDiasTomar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionDiasTomar.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionDiasTomar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionDiasTomar.Location = new System.Drawing.Point(168, 122);
-            this.RrhhTxtVacacionDiasTomar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionDiasTomar.Location = new System.Drawing.Point(140, 102);
             this.RrhhTxtVacacionDiasTomar.Name = "RrhhTxtVacacionDiasTomar";
             this.RrhhTxtVacacionDiasTomar.ReadOnly = true;
-            this.RrhhTxtVacacionDiasTomar.Size = new System.Drawing.Size(286, 24);
+            this.RrhhTxtVacacionDiasTomar.Size = new System.Drawing.Size(239, 21);
             this.RrhhTxtVacacionDiasTomar.TabIndex = 7;
             this.RrhhTxtVacacionDiasTomar.TabStop = false;
             // 
@@ -1698,10 +1597,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionEstado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionEstado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionEstado.Location = new System.Drawing.Point(15, 168);
-            this.RrhhLblVacacionEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionEstado.Location = new System.Drawing.Point(12, 140);
             this.RrhhLblVacacionEstado.Name = "RrhhLblVacacionEstado";
-            this.RrhhLblVacacionEstado.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblVacacionEstado.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblVacacionEstado.TabIndex = 8;
             this.RrhhLblVacacionEstado.Text = "Estado:";
             // 
@@ -1713,10 +1611,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboVacacionEstado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboVacacionEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboVacacionEstado.FormattingEnabled = true;
-            this.RrhhCboVacacionEstado.Location = new System.Drawing.Point(168, 165);
-            this.RrhhCboVacacionEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboVacacionEstado.Location = new System.Drawing.Point(140, 138);
             this.RrhhCboVacacionEstado.Name = "RrhhCboVacacionEstado";
-            this.RrhhCboVacacionEstado.Size = new System.Drawing.Size(284, 25);
+            this.RrhhCboVacacionEstado.Size = new System.Drawing.Size(237, 21);
             this.RrhhCboVacacionEstado.TabIndex = 9;
             // 
             // RrhhLblVacacionObservacion
@@ -1725,10 +1622,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblVacacionObservacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblVacacionObservacion.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblVacacionObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblVacacionObservacion.Location = new System.Drawing.Point(15, 212);
-            this.RrhhLblVacacionObservacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblVacacionObservacion.Location = new System.Drawing.Point(12, 177);
             this.RrhhLblVacacionObservacion.Name = "RrhhLblVacacionObservacion";
-            this.RrhhLblVacacionObservacion.Size = new System.Drawing.Size(82, 16);
+            this.RrhhLblVacacionObservacion.Size = new System.Drawing.Size(71, 13);
             this.RrhhLblVacacionObservacion.TabIndex = 10;
             this.RrhhLblVacacionObservacion.Text = "Observación:";
             // 
@@ -1738,12 +1634,11 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhTxtVacacionObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhTxtVacacionObservacion.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtVacacionObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhTxtVacacionObservacion.Location = new System.Drawing.Point(168, 204);
-            this.RrhhTxtVacacionObservacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhTxtVacacionObservacion.Location = new System.Drawing.Point(140, 170);
             this.RrhhTxtVacacionObservacion.Multiline = true;
             this.RrhhTxtVacacionObservacion.Name = "RrhhTxtVacacionObservacion";
             this.RrhhTxtVacacionObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.RrhhTxtVacacionObservacion.Size = new System.Drawing.Size(286, 48);
+            this.RrhhTxtVacacionObservacion.Size = new System.Drawing.Size(239, 40);
             this.RrhhTxtVacacionObservacion.TabIndex = 11;
             // 
             // RrhhLblRegistroBloqueado
@@ -1752,10 +1647,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblRegistroBloqueado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RrhhLblRegistroBloqueado.Font = new System.Drawing.Font("Tahoma", 5.67F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblRegistroBloqueado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RrhhLblRegistroBloqueado.Location = new System.Drawing.Point(15, 261);
-            this.RrhhLblRegistroBloqueado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblRegistroBloqueado.Location = new System.Drawing.Point(12, 218);
             this.RrhhLblRegistroBloqueado.Name = "RrhhLblRegistroBloqueado";
-            this.RrhhLblRegistroBloqueado.Size = new System.Drawing.Size(438, 29);
+            this.RrhhLblRegistroBloqueado.Size = new System.Drawing.Size(365, 24);
             this.RrhhLblRegistroBloqueado.TabIndex = 12;
             this.RrhhLblRegistroBloqueado.Text = "Registro bloqueado: aún no cumple un año de servicio.";
             this.RrhhLblRegistroBloqueado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1778,10 +1672,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlRegistrosVacacion.Controls.Add(this.RrhhLblPaginaVacacion);
             this.RrhhPnlRegistrosVacacion.Controls.Add(this.RrhhBtnPaginaSiguienteVacacion);
             this.RrhhPnlRegistrosVacacion.Controls.Add(this.RrhhBtnPaginaUltimaVacacion);
-            this.RrhhPnlRegistrosVacacion.Location = new System.Drawing.Point(6, 370);
-            this.RrhhPnlRegistrosVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlRegistrosVacacion.Location = new System.Drawing.Point(5, 308);
             this.RrhhPnlRegistrosVacacion.Name = "RrhhPnlRegistrosVacacion";
-            this.RrhhPnlRegistrosVacacion.Size = new System.Drawing.Size(1460, 364);
+            this.RrhhPnlRegistrosVacacion.Size = new System.Drawing.Size(1217, 304);
             this.RrhhPnlRegistrosVacacion.TabIndex = 1;
             // 
             // RrhhLblTituloRegistrosVacacion
@@ -1790,10 +1683,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTituloRegistrosVacacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblTituloRegistrosVacacion.Font = new System.Drawing.Font("Lucida Bright", 8.82F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTituloRegistrosVacacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloRegistrosVacacion.Location = new System.Drawing.Point(14, 10);
-            this.RrhhLblTituloRegistrosVacacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblTituloRegistrosVacacion.Location = new System.Drawing.Point(12, 8);
             this.RrhhLblTituloRegistrosVacacion.Name = "RrhhLblTituloRegistrosVacacion";
-            this.RrhhLblTituloRegistrosVacacion.Size = new System.Drawing.Size(220, 20);
+            this.RrhhLblTituloRegistrosVacacion.Size = new System.Drawing.Size(183, 18);
             this.RrhhLblTituloRegistrosVacacion.TabIndex = 0;
             this.RrhhLblTituloRegistrosVacacion.Text = "Historial de vacaciones";
             // 
@@ -1803,10 +1695,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblFiltroVacacionPeriodo.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblFiltroVacacionPeriodo.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFiltroVacacionPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblFiltroVacacionPeriodo.Location = new System.Drawing.Point(15, 51);
-            this.RrhhLblFiltroVacacionPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblFiltroVacacionPeriodo.Location = new System.Drawing.Point(12, 42);
             this.RrhhLblFiltroVacacionPeriodo.Name = "RrhhLblFiltroVacacionPeriodo";
-            this.RrhhLblFiltroVacacionPeriodo.Size = new System.Drawing.Size(55, 16);
+            this.RrhhLblFiltroVacacionPeriodo.Size = new System.Drawing.Size(47, 13);
             this.RrhhLblFiltroVacacionPeriodo.TabIndex = 1;
             this.RrhhLblFiltroVacacionPeriodo.Text = "Período:";
             // 
@@ -1818,10 +1709,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboFiltroVacacionPeriodo.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboFiltroVacacionPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroVacacionPeriodo.FormattingEnabled = true;
-            this.RrhhCboFiltroVacacionPeriodo.Location = new System.Drawing.Point(84, 48);
-            this.RrhhCboFiltroVacacionPeriodo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboFiltroVacacionPeriodo.Location = new System.Drawing.Point(70, 40);
             this.RrhhCboFiltroVacacionPeriodo.Name = "RrhhCboFiltroVacacionPeriodo";
-            this.RrhhCboFiltroVacacionPeriodo.Size = new System.Drawing.Size(216, 25);
+            this.RrhhCboFiltroVacacionPeriodo.Size = new System.Drawing.Size(181, 21);
             this.RrhhCboFiltroVacacionPeriodo.TabIndex = 2;
             // 
             // RrhhLblFiltroVacacionEstado
@@ -1830,10 +1720,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblFiltroVacacionEstado.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblFiltroVacacionEstado.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblFiltroVacacionEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
-            this.RrhhLblFiltroVacacionEstado.Location = new System.Drawing.Point(330, 51);
-            this.RrhhLblFiltroVacacionEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblFiltroVacacionEstado.Location = new System.Drawing.Point(275, 42);
             this.RrhhLblFiltroVacacionEstado.Name = "RrhhLblFiltroVacacionEstado";
-            this.RrhhLblFiltroVacacionEstado.Size = new System.Drawing.Size(50, 16);
+            this.RrhhLblFiltroVacacionEstado.Size = new System.Drawing.Size(44, 13);
             this.RrhhLblFiltroVacacionEstado.TabIndex = 3;
             this.RrhhLblFiltroVacacionEstado.Text = "Estado:";
             // 
@@ -1845,10 +1734,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhCboFiltroVacacionEstado.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhCboFiltroVacacionEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroVacacionEstado.FormattingEnabled = true;
-            this.RrhhCboFiltroVacacionEstado.Location = new System.Drawing.Point(390, 48);
-            this.RrhhCboFiltroVacacionEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhCboFiltroVacacionEstado.Location = new System.Drawing.Point(325, 40);
             this.RrhhCboFiltroVacacionEstado.Name = "RrhhCboFiltroVacacionEstado";
-            this.RrhhCboFiltroVacacionEstado.Size = new System.Drawing.Size(194, 25);
+            this.RrhhCboFiltroVacacionEstado.Size = new System.Drawing.Size(162, 21);
             this.RrhhCboFiltroVacacionEstado.TabIndex = 4;
             // 
             // RrhhBtnFiltrarVacacion
@@ -1859,10 +1747,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnFiltrarVacacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnFiltrarVacacion.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnFiltrarVacacion.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnFiltrarVacacion.Location = new System.Drawing.Point(1299, 45);
-            this.RrhhBtnFiltrarVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnFiltrarVacacion.Location = new System.Drawing.Point(1082, 38);
             this.RrhhBtnFiltrarVacacion.Name = "RrhhBtnFiltrarVacacion";
-            this.RrhhBtnFiltrarVacacion.Size = new System.Drawing.Size(148, 28);
+            this.RrhhBtnFiltrarVacacion.Size = new System.Drawing.Size(123, 23);
             this.RrhhBtnFiltrarVacacion.TabIndex = 5;
             this.RrhhBtnFiltrarVacacion.Text = "Filtrar";
             this.RrhhBtnFiltrarVacacion.UseVisualStyleBackColor = false;
@@ -1909,8 +1796,7 @@ namespace CapaVista_PermisosVacaciones.Formularios
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.RrhhDgvVacaciones.DefaultCellStyle = dataGridViewCellStyle13;
             this.RrhhDgvVacaciones.EnableHeadersVisualStyles = false;
-            this.RrhhDgvVacaciones.Location = new System.Drawing.Point(15, 82);
-            this.RrhhDgvVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhDgvVacaciones.Location = new System.Drawing.Point(12, 68);
             this.RrhhDgvVacaciones.MultiSelect = false;
             this.RrhhDgvVacaciones.Name = "RrhhDgvVacaciones";
             this.RrhhDgvVacaciones.ReadOnly = true;
@@ -1919,7 +1805,7 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhDgvVacaciones.RowTemplate.Height = 16;
             this.RrhhDgvVacaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RrhhDgvVacaciones.ShowCellToolTips = false;
-            this.RrhhDgvVacaciones.Size = new System.Drawing.Size(1431, 240);
+            this.RrhhDgvVacaciones.Size = new System.Drawing.Size(1192, 200);
             this.RrhhDgvVacaciones.TabIndex = 6;
             // 
             // RrhhColVacacionId
@@ -2016,10 +1902,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblMostrandoVacacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblMostrandoVacacion.Font = new System.Drawing.Font("Tahoma", 6.05F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblMostrandoVacacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(106)))), ((int)(((byte)(108)))));
-            this.RrhhLblMostrandoVacacion.Location = new System.Drawing.Point(15, 336);
-            this.RrhhLblMostrandoVacacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblMostrandoVacacion.Location = new System.Drawing.Point(12, 280);
             this.RrhhLblMostrandoVacacion.Name = "RrhhLblMostrandoVacacion";
-            this.RrhhLblMostrandoVacacion.Size = new System.Drawing.Size(181, 16);
+            this.RrhhLblMostrandoVacacion.Size = new System.Drawing.Size(152, 13);
             this.RrhhLblMostrandoVacacion.TabIndex = 7;
             this.RrhhLblMostrandoVacacion.Text = "Mostrando 0 - 0 de 0 registros";
             // 
@@ -2031,10 +1916,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPaginaPrimeraVacacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPaginaPrimeraVacacion.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaPrimeraVacacion.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnPaginaPrimeraVacacion.Location = new System.Drawing.Point(1233, 332);
-            this.RrhhBtnPaginaPrimeraVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPaginaPrimeraVacacion.Location = new System.Drawing.Point(1028, 277);
             this.RrhhBtnPaginaPrimeraVacacion.Name = "RrhhBtnPaginaPrimeraVacacion";
-            this.RrhhBtnPaginaPrimeraVacacion.Size = new System.Drawing.Size(32, 27);
+            this.RrhhBtnPaginaPrimeraVacacion.Size = new System.Drawing.Size(27, 22);
             this.RrhhBtnPaginaPrimeraVacacion.TabIndex = 8;
             this.RrhhBtnPaginaPrimeraVacacion.Text = "«";
             this.RrhhBtnPaginaPrimeraVacacion.UseVisualStyleBackColor = false;
@@ -2047,10 +1931,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPaginaAnteriorVacacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPaginaAnteriorVacacion.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaAnteriorVacacion.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnPaginaAnteriorVacacion.Location = new System.Drawing.Point(1270, 332);
-            this.RrhhBtnPaginaAnteriorVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPaginaAnteriorVacacion.Location = new System.Drawing.Point(1058, 277);
             this.RrhhBtnPaginaAnteriorVacacion.Name = "RrhhBtnPaginaAnteriorVacacion";
-            this.RrhhBtnPaginaAnteriorVacacion.Size = new System.Drawing.Size(32, 27);
+            this.RrhhBtnPaginaAnteriorVacacion.Size = new System.Drawing.Size(27, 22);
             this.RrhhBtnPaginaAnteriorVacacion.TabIndex = 9;
             this.RrhhBtnPaginaAnteriorVacacion.Text = "‹";
             this.RrhhBtnPaginaAnteriorVacacion.UseVisualStyleBackColor = false;
@@ -2060,10 +1943,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblPaginaVacacion.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblPaginaVacacion.Font = new System.Drawing.Font("Tahoma", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblPaginaVacacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblPaginaVacacion.Location = new System.Drawing.Point(1306, 334);
-            this.RrhhLblPaginaVacacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RrhhLblPaginaVacacion.Location = new System.Drawing.Point(1088, 278);
             this.RrhhLblPaginaVacacion.Name = "RrhhLblPaginaVacacion";
-            this.RrhhLblPaginaVacacion.Size = new System.Drawing.Size(75, 20);
+            this.RrhhLblPaginaVacacion.Size = new System.Drawing.Size(62, 17);
             this.RrhhLblPaginaVacacion.TabIndex = 10;
             this.RrhhLblPaginaVacacion.Text = "0 de 0";
             this.RrhhLblPaginaVacacion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2076,10 +1958,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPaginaSiguienteVacacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPaginaSiguienteVacacion.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaSiguienteVacacion.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnPaginaSiguienteVacacion.Location = new System.Drawing.Point(1386, 332);
-            this.RrhhBtnPaginaSiguienteVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPaginaSiguienteVacacion.Location = new System.Drawing.Point(1155, 277);
             this.RrhhBtnPaginaSiguienteVacacion.Name = "RrhhBtnPaginaSiguienteVacacion";
-            this.RrhhBtnPaginaSiguienteVacacion.Size = new System.Drawing.Size(32, 27);
+            this.RrhhBtnPaginaSiguienteVacacion.Size = new System.Drawing.Size(27, 22);
             this.RrhhBtnPaginaSiguienteVacacion.TabIndex = 11;
             this.RrhhBtnPaginaSiguienteVacacion.Text = "›";
             this.RrhhBtnPaginaSiguienteVacacion.UseVisualStyleBackColor = false;
@@ -2092,10 +1973,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnPaginaUltimaVacacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnPaginaUltimaVacacion.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaUltimaVacacion.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnPaginaUltimaVacacion.Location = new System.Drawing.Point(1422, 332);
-            this.RrhhBtnPaginaUltimaVacacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnPaginaUltimaVacacion.Location = new System.Drawing.Point(1185, 277);
             this.RrhhBtnPaginaUltimaVacacion.Name = "RrhhBtnPaginaUltimaVacacion";
-            this.RrhhBtnPaginaUltimaVacacion.Size = new System.Drawing.Size(32, 27);
+            this.RrhhBtnPaginaUltimaVacacion.Size = new System.Drawing.Size(27, 22);
             this.RrhhBtnPaginaUltimaVacacion.TabIndex = 12;
             this.RrhhBtnPaginaUltimaVacacion.Text = "»";
             this.RrhhBtnPaginaUltimaVacacion.UseVisualStyleBackColor = false;
@@ -2108,10 +1988,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPnlEncabezado.Controls.Add(this.RrhhLblTituloPermisosVacaciones);
             this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbIconoPermisosVacaciones);
             this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbMascota);
-            this.RrhhPnlEncabezado.Location = new System.Drawing.Point(12, 12);
-            this.RrhhPnlEncabezado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlEncabezado.Location = new System.Drawing.Point(10, 10);
             this.RrhhPnlEncabezado.Name = "RrhhPnlEncabezado";
-            this.RrhhPnlEncabezado.Size = new System.Drawing.Size(1492, 145);
+            this.RrhhPnlEncabezado.Size = new System.Drawing.Size(1243, 121);
             this.RrhhPnlEncabezado.TabIndex = 0;
             // 
             // RrhhLblSubTituloPermisosVacaciones
@@ -2120,9 +1999,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblSubTituloPermisosVacaciones.BackColor = System.Drawing.Color.Transparent;
             this.RrhhLblSubTituloPermisosVacaciones.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblSubTituloPermisosVacaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblSubTituloPermisosVacaciones.Location = new System.Drawing.Point(144, 88);
+            this.RrhhLblSubTituloPermisosVacaciones.Location = new System.Drawing.Point(120, 73);
+            this.RrhhLblSubTituloPermisosVacaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblSubTituloPermisosVacaciones.Name = "RrhhLblSubTituloPermisosVacaciones";
-            this.RrhhLblSubTituloPermisosVacaciones.Size = new System.Drawing.Size(716, 29);
+            this.RrhhLblSubTituloPermisosVacaciones.Size = new System.Drawing.Size(597, 24);
             this.RrhhLblSubTituloPermisosVacaciones.TabIndex = 7;
             this.RrhhLblSubTituloPermisosVacaciones.Text = "Registro y Control de Permisos y Vacaciones de los Colaboradores";
             // 
@@ -2131,9 +2011,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhLblTituloPermisosVacaciones.AutoSize = true;
             this.RrhhLblTituloPermisosVacaciones.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhLblTituloPermisosVacaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloPermisosVacaciones.Location = new System.Drawing.Point(142, 35);
+            this.RrhhLblTituloPermisosVacaciones.Location = new System.Drawing.Point(118, 29);
+            this.RrhhLblTituloPermisosVacaciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RrhhLblTituloPermisosVacaciones.Name = "RrhhLblTituloPermisosVacaciones";
-            this.RrhhLblTituloPermisosVacaciones.Size = new System.Drawing.Size(398, 37);
+            this.RrhhLblTituloPermisosVacaciones.Size = new System.Drawing.Size(333, 31);
             this.RrhhLblTituloPermisosVacaciones.TabIndex = 6;
             this.RrhhLblTituloPermisosVacaciones.Text = "Permisos y Vacaciones";
             // 
@@ -2142,10 +2023,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhPbIconoPermisosVacaciones.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbIconoPermisosVacaciones.BackgroundImage = global::CapaVista_PermisosVacaciones.Properties.Resources.btn_permisos;
             this.RrhhPbIconoPermisosVacaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhPbIconoPermisosVacaciones.Location = new System.Drawing.Point(16, 12);
-            this.RrhhPbIconoPermisosVacaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPbIconoPermisosVacaciones.Location = new System.Drawing.Point(13, 10);
             this.RrhhPbIconoPermisosVacaciones.Name = "RrhhPbIconoPermisosVacaciones";
-            this.RrhhPbIconoPermisosVacaciones.Size = new System.Drawing.Size(119, 118);
+            this.RrhhPbIconoPermisosVacaciones.Size = new System.Drawing.Size(99, 98);
             this.RrhhPbIconoPermisosVacaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RrhhPbIconoPermisosVacaciones.TabIndex = 0;
             this.RrhhPbIconoPermisosVacaciones.TabStop = false;
@@ -2154,10 +2034,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             // 
             this.RrhhPbMascota.BackColor = System.Drawing.Color.Transparent;
             this.RrhhPbMascota.Image = global::CapaVista_PermisosVacaciones.Properties.Resources._5;
-            this.RrhhPbMascota.Location = new System.Drawing.Point(808, 4);
-            this.RrhhPbMascota.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPbMascota.Location = new System.Drawing.Point(673, 3);
             this.RrhhPbMascota.Name = "RrhhPbMascota";
-            this.RrhhPbMascota.Size = new System.Drawing.Size(153, 137);
+            this.RrhhPbMascota.Size = new System.Drawing.Size(128, 114);
             this.RrhhPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.RrhhPbMascota.TabIndex = 3;
             this.RrhhPbMascota.TabStop = false;
@@ -2172,10 +2051,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnNuevo.Font = new System.Drawing.Font("Segoe UI", 5.67F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnNuevo.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnNuevo.Location = new System.Drawing.Point(12, 165);
-            this.RrhhBtnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnNuevo.Location = new System.Drawing.Point(10, 138);
             this.RrhhBtnNuevo.Name = "RrhhBtnNuevo";
-            this.RrhhBtnNuevo.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnNuevo.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnNuevo.TabIndex = 1;
             this.RrhhBtnNuevo.UseVisualStyleBackColor = false;
             // 
@@ -2189,10 +2067,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnGuardar.Location = new System.Drawing.Point(118, 165);
-            this.RrhhBtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnGuardar.Location = new System.Drawing.Point(98, 138);
             this.RrhhBtnGuardar.Name = "RrhhBtnGuardar";
-            this.RrhhBtnGuardar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnGuardar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnGuardar.TabIndex = 2;
             this.RrhhBtnGuardar.UseVisualStyleBackColor = false;
             // 
@@ -2206,10 +2083,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnModificar.Location = new System.Drawing.Point(224, 165);
-            this.RrhhBtnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnModificar.Location = new System.Drawing.Point(187, 138);
             this.RrhhBtnModificar.Name = "RrhhBtnModificar";
-            this.RrhhBtnModificar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnModificar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnModificar.TabIndex = 3;
             this.RrhhBtnModificar.UseVisualStyleBackColor = false;
             // 
@@ -2223,10 +2099,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnEliminar.Location = new System.Drawing.Point(329, 165);
-            this.RrhhBtnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnEliminar.Location = new System.Drawing.Point(274, 138);
             this.RrhhBtnEliminar.Name = "RrhhBtnEliminar";
-            this.RrhhBtnEliminar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnEliminar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnEliminar.TabIndex = 4;
             this.RrhhBtnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -2240,10 +2115,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnCancelar.Font = new System.Drawing.Font("Segoe UI", 5.67F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnCancelar.Location = new System.Drawing.Point(434, 165);
-            this.RrhhBtnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnCancelar.Location = new System.Drawing.Point(362, 138);
             this.RrhhBtnCancelar.Name = "RrhhBtnCancelar";
-            this.RrhhBtnCancelar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnCancelar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnCancelar.TabIndex = 5;
             this.RrhhBtnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -2257,10 +2131,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnRefrescar.Location = new System.Drawing.Point(539, 165);
-            this.RrhhBtnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnRefrescar.Location = new System.Drawing.Point(449, 138);
             this.RrhhBtnRefrescar.Name = "RrhhBtnRefrescar";
-            this.RrhhBtnRefrescar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnRefrescar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnRefrescar.TabIndex = 6;
             this.RrhhBtnRefrescar.UseVisualStyleBackColor = false;
             // 
@@ -2274,10 +2147,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnImprimir.Location = new System.Drawing.Point(645, 165);
-            this.RrhhBtnImprimir.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnImprimir.Location = new System.Drawing.Point(538, 138);
             this.RrhhBtnImprimir.Name = "RrhhBtnImprimir";
-            this.RrhhBtnImprimir.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnImprimir.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnImprimir.TabIndex = 7;
             this.RrhhBtnImprimir.UseVisualStyleBackColor = false;
             // 
@@ -2291,10 +2163,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnInicio.Location = new System.Drawing.Point(750, 165);
-            this.RrhhBtnInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnInicio.Location = new System.Drawing.Point(625, 138);
             this.RrhhBtnInicio.Name = "RrhhBtnInicio";
-            this.RrhhBtnInicio.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnInicio.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnInicio.TabIndex = 8;
             this.RrhhBtnInicio.UseVisualStyleBackColor = false;
             // 
@@ -2308,10 +2179,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnAnterior.Location = new System.Drawing.Point(855, 165);
-            this.RrhhBtnAnterior.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnAnterior.Location = new System.Drawing.Point(712, 138);
             this.RrhhBtnAnterior.Name = "RrhhBtnAnterior";
-            this.RrhhBtnAnterior.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnAnterior.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnAnterior.TabIndex = 9;
             this.RrhhBtnAnterior.UseVisualStyleBackColor = false;
             // 
@@ -2325,10 +2195,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnSiguiente.Location = new System.Drawing.Point(961, 165);
-            this.RrhhBtnSiguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnSiguiente.Location = new System.Drawing.Point(801, 138);
             this.RrhhBtnSiguiente.Name = "RrhhBtnSiguiente";
-            this.RrhhBtnSiguiente.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnSiguiente.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnSiguiente.TabIndex = 10;
             this.RrhhBtnSiguiente.UseVisualStyleBackColor = false;
             // 
@@ -2342,10 +2211,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnFin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnFin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnFin.Location = new System.Drawing.Point(1067, 165);
-            this.RrhhBtnFin.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnFin.Location = new System.Drawing.Point(889, 138);
             this.RrhhBtnFin.Name = "RrhhBtnFin";
-            this.RrhhBtnFin.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnFin.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnFin.TabIndex = 11;
             this.RrhhBtnFin.UseVisualStyleBackColor = false;
             // 
@@ -2359,10 +2227,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnConsultar.Location = new System.Drawing.Point(1176, 165);
-            this.RrhhBtnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnConsultar.Location = new System.Drawing.Point(980, 138);
             this.RrhhBtnConsultar.Name = "RrhhBtnConsultar";
-            this.RrhhBtnConsultar.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnConsultar.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnConsultar.TabIndex = 12;
             this.RrhhBtnConsultar.UseVisualStyleBackColor = false;
             // 
@@ -2376,10 +2243,9 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RrhhBtnAyuda.Font = new System.Drawing.Font("Segoe UI", 5.67F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnAyuda.ForeColor = System.Drawing.Color.White;
-            this.RrhhBtnAyuda.Location = new System.Drawing.Point(1285, 165);
-            this.RrhhBtnAyuda.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnAyuda.Location = new System.Drawing.Point(1071, 138);
             this.RrhhBtnAyuda.Name = "RrhhBtnAyuda";
-            this.RrhhBtnAyuda.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnAyuda.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnAyuda.TabIndex = 13;
             this.RrhhBtnAyuda.UseVisualStyleBackColor = false;
             // 
@@ -2393,19 +2259,18 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.RrhhBtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnSalir.Location = new System.Drawing.Point(1395, 165);
-            this.RrhhBtnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnSalir.Location = new System.Drawing.Point(1162, 138);
             this.RrhhBtnSalir.Name = "RrhhBtnSalir";
-            this.RrhhBtnSalir.Size = new System.Drawing.Size(95, 82);
+            this.RrhhBtnSalir.Size = new System.Drawing.Size(79, 68);
             this.RrhhBtnSalir.TabIndex = 14;
             this.RrhhBtnSalir.UseVisualStyleBackColor = false;
             // 
             // FrmPermisosVacaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(1516, 966);
+            this.ClientSize = new System.Drawing.Size(1263, 805);
             this.Controls.Add(this.RrhhPnlEncabezado);
             this.Controls.Add(this.RrhhBtnNuevo);
             this.Controls.Add(this.RrhhBtnPestañaVacaciones);
@@ -2427,11 +2292,10 @@ namespace CapaVista_PermisosVacaciones.Formularios
             this.Controls.Add(this.RrhhTabPermisosVacaciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmPermisosVacaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "9301 - Permisos y Vacaciones";
+            this.Text = "9201 - Permisos y Vacaciones";
             this.RrhhTabPermisosVacaciones.ResumeLayout(false);
             this.RrhhTabPagPermisos.ResumeLayout(false);
             this.RrhhPnlDetallePermiso.ResumeLayout(false);

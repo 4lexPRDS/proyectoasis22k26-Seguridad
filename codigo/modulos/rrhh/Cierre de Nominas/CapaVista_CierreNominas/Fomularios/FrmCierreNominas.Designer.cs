@@ -559,7 +559,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmCierreNominas";
-            this.Text = "9701 - Cierre de Nominas";
+            this.Text = "9601 - Cierre de Nominas";
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvVistaCierreNomina)).EndInit();
             this.RrhhPnlInicio.ResumeLayout(false);
             this.RrhhPnlInicio.PerformLayout();

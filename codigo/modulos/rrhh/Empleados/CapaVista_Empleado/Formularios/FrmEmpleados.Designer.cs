@@ -516,7 +516,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmEmpleados";
-            this.Text = "9000 - FrmEmpleados";
+            this.Text = "9001 - FrmEmpleados";
             this.RrhhPnlAsigP.ResumeLayout(false);
             this.RrhhPnlAsigP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbAsigP)).EndInit();

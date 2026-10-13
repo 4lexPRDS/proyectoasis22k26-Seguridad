@@ -491,7 +491,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLiquidacionEmpleados";
-            this.Text = "9801 - Liquidacion de Empleados";
+            this.Text = "9701 - Liquidacion de Empleados";
             this.RrhhPnlPrincipal.ResumeLayout(false);
             this.RrhhPnlPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
