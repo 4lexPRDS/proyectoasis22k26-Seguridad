@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaVista_MovimientosBancarios.Formularios;
+using CapaVista_AutorizacionOrdenes;
+using CapaVista_AutorizacionOrdenes.Formularios;
 
 namespace CapaVista_Bancos.Formularios
 {
@@ -47,6 +49,12 @@ namespace CapaVista_Bancos.Formularios
             BancosLblUsuario.Text = $"Usuario: {Nombre}";
             BancosLblUsuarioRol.Text = $"Rol: {Rol}";
             BancosLblUsuarioRol.Left = BancosLblUsuario.Right + 30;
+        }
+
+        private void BancosBtnAutoCompra_Click(object sender, EventArgs e)
+        {
+            FrmAutorizacionOrdenes AutorizacionOrdenes = new FrmAutorizacionOrdenes();
+            AutorizacionOrdenes.ShowDialog();
         }
     }
 }
