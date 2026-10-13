@@ -340,6 +340,7 @@
             this.RrhhBtnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RrhhBtnLiquidacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RrhhBtnLiquidacion.UseVisualStyleBackColor = false;
+            this.RrhhBtnLiquidacion.Click += new System.EventHandler(this.RrhhBtnLiquidacion_Click);
             this.RrhhBtnLiquidacion.MouseEnter += new System.EventHandler(this.RrhhBtnMenu_MouseEnter);
             this.RrhhBtnLiquidacion.MouseLeave += new System.EventHandler(this.RrhhBtnMenu_MouseLeave);
             // 

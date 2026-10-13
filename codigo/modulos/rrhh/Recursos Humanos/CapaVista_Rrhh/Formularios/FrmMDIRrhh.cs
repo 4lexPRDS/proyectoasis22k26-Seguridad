@@ -594,5 +594,13 @@ namespace CapaVista_Rrhh.Formularios
                 Evaluacion.ShowDialog(this);
             }
         }
+
+        private void RrhhBtnLiquidacion_Click(object sender, EventArgs e)
+        {
+            using (var Liquidacion = new CapaVista_Liquidacion_Rrhh.Formularios.FrmLiquidacionEmpleados())
+            {
+                Liquidacion.ShowDialog(this);
+            }
+        }
     }
 }
