@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVista_EnlaceB.Formularios;
 using CapaVista_MovimientosBancarios.Formularios;
 using CapaVista_AutorizacionOrdenes;
 using CapaVista_AutorizacionOrdenes.Formularios;
@@ -55,6 +56,12 @@ namespace CapaVista_Bancos.Formularios
         {
             FrmAutorizacionOrdenes AutorizacionOrdenes = new FrmAutorizacionOrdenes();
             AutorizacionOrdenes.ShowDialog();
+        }
+
+        private void BancosBtnEnlace_Click(object sender, EventArgs e)
+        {
+            FrmEnlaceOtrosModulos Enlace = new FrmEnlaceOtrosModulos();
+            Enlace.ShowDialog();
         }
     }
 }
