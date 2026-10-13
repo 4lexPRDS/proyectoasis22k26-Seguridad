@@ -38,5 +38,15 @@ namespace CapaVista_PermisosVacaciones.Formularios
         {
 
         }
+
+        private void RrhhBtnPestañaVacaciones_Click(object sender, EventArgs e)
+        {
+            RrhhTabPermisosVacaciones.SelectedTab = RrhhTabPagVacaciones;
+        }
+
+        private void RrhhBtnPestañaPermisos_Click(object sender, EventArgs e)
+        {
+            RrhhTabPermisosVacaciones.SelectedTab = RrhhTabPagPermisos;
+        }
     }
 }

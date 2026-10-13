@@ -36,5 +36,15 @@ namespace CapaVista_EvaluacionDesempeño.Formularios
         {
 
         }
+
+        private void RrhhLblTituloCierreNominas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RrhhPbMascota_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

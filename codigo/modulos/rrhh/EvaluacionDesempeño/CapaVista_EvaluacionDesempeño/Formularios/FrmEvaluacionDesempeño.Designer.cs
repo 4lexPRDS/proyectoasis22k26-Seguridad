@@ -35,6 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEvaluacionDesempeño));
+            this.RrhhBtnNuevo = new System.Windows.Forms.Button();
+            this.RrhhPnlEncabezado = new System.Windows.Forms.Panel();
+            this.RrhhLblSubTituloCierreNominas = new System.Windows.Forms.Label();
+            this.RrhhLblTituloEvauacionDesempeño = new System.Windows.Forms.Label();
+            this.RrhhPbIconoEvaluacion = new System.Windows.Forms.PictureBox();
+            this.RrhhPbMascota = new System.Windows.Forms.PictureBox();
             this.RrhhBtnGuardar = new System.Windows.Forms.Button();
             this.RrhhBtnModificar = new System.Windows.Forms.Button();
             this.RrhhBtnEliminar = new System.Windows.Forms.Button();
@@ -49,11 +55,6 @@
             this.RrhhBtnConsultar = new System.Windows.Forms.Button();
             this.RrhhBtnAyuda = new System.Windows.Forms.Button();
             this.RrhhBtnSalir = new System.Windows.Forms.Button();
-            this.RrhhPnlEncabezado = new System.Windows.Forms.Panel();
-            this.RrhhPbIconoEvaluacion = new System.Windows.Forms.PictureBox();
-            this.RrhhLblTituloEvaluacion = new System.Windows.Forms.Label();
-            this.RrhhLblSubtituloEvaluacion = new System.Windows.Forms.Label();
-            this.RrhhPbMascota = new System.Windows.Forms.PictureBox();
             this.RrhhPnlDetalle = new System.Windows.Forms.Panel();
             this.RrhhLblTituloDetalle = new System.Windows.Forms.Label();
             this.RrhhBtnCompartir = new System.Windows.Forms.Button();
@@ -168,6 +169,86 @@
             ((System.ComponentModel.ISupportInitialize)(this.RrhhDgvEvaluaciones)).BeginInit();
             this.SuspendLayout();
             // 
+            // RrhhBtnNuevo
+            // 
+            this.RrhhBtnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.RrhhBtnNuevo.BackgroundImage = global::CapaVista_EvaluacionDesempeño.Properties.Resources.btn_nuevo;
+            this.RrhhBtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RrhhBtnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RrhhBtnNuevo.FlatAppearance.BorderSize = 0;
+            this.RrhhBtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.RrhhBtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.RrhhBtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RrhhBtnNuevo.Location = new System.Drawing.Point(61, 151);
+            this.RrhhBtnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhBtnNuevo.Name = "RrhhBtnNuevo";
+            this.RrhhBtnNuevo.Size = new System.Drawing.Size(71, 63);
+            this.RrhhBtnNuevo.TabIndex = 17;
+            this.RrhhBtnNuevo.UseVisualStyleBackColor = false;
+            // 
+            // RrhhPnlEncabezado
+            // 
+            this.RrhhPnlEncabezado.BackgroundImage = global::CapaVista_EvaluacionDesempeño.Properties.Resources.Pnl_fondo;
+            this.RrhhPnlEncabezado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RrhhPnlEncabezado.Controls.Add(this.RrhhLblSubTituloCierreNominas);
+            this.RrhhPnlEncabezado.Controls.Add(this.RrhhLblTituloEvauacionDesempeño);
+            this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbIconoEvaluacion);
+            this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbMascota);
+            this.RrhhPnlEncabezado.Location = new System.Drawing.Point(12, 12);
+            this.RrhhPnlEncabezado.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPnlEncabezado.Name = "RrhhPnlEncabezado";
+            this.RrhhPnlEncabezado.Size = new System.Drawing.Size(1492, 132);
+            this.RrhhPnlEncabezado.TabIndex = 0;
+            // 
+            // RrhhLblSubTituloCierreNominas
+            // 
+            this.RrhhLblSubTituloCierreNominas.AutoSize = true;
+            this.RrhhLblSubTituloCierreNominas.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhLblSubTituloCierreNominas.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblSubTituloCierreNominas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblSubTituloCierreNominas.Location = new System.Drawing.Point(169, 80);
+            this.RrhhLblSubTituloCierreNominas.Name = "RrhhLblSubTituloCierreNominas";
+            this.RrhhLblSubTituloCierreNominas.Size = new System.Drawing.Size(679, 29);
+            this.RrhhLblSubTituloCierreNominas.TabIndex = 5;
+            this.RrhhLblSubTituloCierreNominas.Text = "Calificaion y Seguimiento del desempeño de los colaboradores.";
+            // 
+            // RrhhLblTituloEvauacionDesempeño
+            // 
+            this.RrhhLblTituloEvauacionDesempeño.AutoSize = true;
+            this.RrhhLblTituloEvauacionDesempeño.Font = new System.Drawing.Font("Lucida Bright", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RrhhLblTituloEvauacionDesempeño.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.RrhhLblTituloEvauacionDesempeño.Location = new System.Drawing.Point(167, 27);
+            this.RrhhLblTituloEvauacionDesempeño.Name = "RrhhLblTituloEvauacionDesempeño";
+            this.RrhhLblTituloEvauacionDesempeño.Size = new System.Drawing.Size(645, 37);
+            this.RrhhLblTituloEvauacionDesempeño.TabIndex = 4;
+            this.RrhhLblTituloEvauacionDesempeño.Text = "Evaluacion Desempeño de Empleados";
+            this.RrhhLblTituloEvauacionDesempeño.Click += new System.EventHandler(this.RrhhLblTituloCierreNominas_Click);
+            // 
+            // RrhhPbIconoEvaluacion
+            // 
+            this.RrhhPbIconoEvaluacion.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbIconoEvaluacion.Image = global::CapaVista_EvaluacionDesempeño.Properties.Resources.Icn_EvaluacionDesempeño;
+            this.RrhhPbIconoEvaluacion.Location = new System.Drawing.Point(16, 12);
+            this.RrhhPbIconoEvaluacion.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPbIconoEvaluacion.Name = "RrhhPbIconoEvaluacion";
+            this.RrhhPbIconoEvaluacion.Size = new System.Drawing.Size(123, 101);
+            this.RrhhPbIconoEvaluacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbIconoEvaluacion.TabIndex = 0;
+            this.RrhhPbIconoEvaluacion.TabStop = false;
+            // 
+            // RrhhPbMascota
+            // 
+            this.RrhhPbMascota.BackColor = System.Drawing.Color.Transparent;
+            this.RrhhPbMascota.Image = global::CapaVista_EvaluacionDesempeño.Properties.Resources.mascota;
+            this.RrhhPbMascota.Location = new System.Drawing.Point(950, 0);
+            this.RrhhPbMascota.Margin = new System.Windows.Forms.Padding(4);
+            this.RrhhPbMascota.Name = "RrhhPbMascota";
+            this.RrhhPbMascota.Size = new System.Drawing.Size(132, 143);
+            this.RrhhPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RrhhPbMascota.TabIndex = 3;
+            this.RrhhPbMascota.TabStop = false;
+            this.RrhhPbMascota.Click += new System.EventHandler(this.RrhhPbMascota_Click);
+            // 
             // RrhhBtnGuardar
             // 
             this.RrhhBtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
@@ -178,10 +259,10 @@
             this.RrhhBtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnGuardar.Location = new System.Drawing.Point(17, 152);
-            this.RrhhBtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnGuardar.Location = new System.Drawing.Point(147, 152);
+            this.RrhhBtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnGuardar.Name = "RrhhBtnGuardar";
-            this.RrhhBtnGuardar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnGuardar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnGuardar.TabIndex = 1;
             this.RrhhBtnGuardar.UseVisualStyleBackColor = false;
             // 
@@ -195,10 +276,10 @@
             this.RrhhBtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnModificar.Location = new System.Drawing.Point(127, 152);
-            this.RrhhBtnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnModificar.Location = new System.Drawing.Point(240, 152);
+            this.RrhhBtnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnModificar.Name = "RrhhBtnModificar";
-            this.RrhhBtnModificar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnModificar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnModificar.TabIndex = 2;
             this.RrhhBtnModificar.UseVisualStyleBackColor = false;
             // 
@@ -212,10 +293,10 @@
             this.RrhhBtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnEliminar.Location = new System.Drawing.Point(237, 152);
-            this.RrhhBtnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnEliminar.Location = new System.Drawing.Point(336, 152);
+            this.RrhhBtnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnEliminar.Name = "RrhhBtnEliminar";
-            this.RrhhBtnEliminar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnEliminar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnEliminar.TabIndex = 3;
             this.RrhhBtnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -229,10 +310,10 @@
             this.RrhhBtnGenerar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGenerar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnGenerar.Location = new System.Drawing.Point(346, 152);
-            this.RrhhBtnGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnGenerar.Location = new System.Drawing.Point(434, 152);
+            this.RrhhBtnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnGenerar.Name = "RrhhBtnGenerar";
-            this.RrhhBtnGenerar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnGenerar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnGenerar.TabIndex = 4;
             this.RrhhBtnGenerar.UseVisualStyleBackColor = false;
             // 
@@ -246,10 +327,10 @@
             this.RrhhBtnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnRefrescar.Location = new System.Drawing.Point(455, 152);
-            this.RrhhBtnRefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnRefrescar.Location = new System.Drawing.Point(531, 152);
+            this.RrhhBtnRefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnRefrescar.Name = "RrhhBtnRefrescar";
-            this.RrhhBtnRefrescar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnRefrescar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnRefrescar.TabIndex = 5;
             this.RrhhBtnRefrescar.UseVisualStyleBackColor = false;
             // 
@@ -263,10 +344,10 @@
             this.RrhhBtnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnImprimir.Location = new System.Drawing.Point(565, 152);
-            this.RrhhBtnImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnImprimir.Location = new System.Drawing.Point(624, 152);
+            this.RrhhBtnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnImprimir.Name = "RrhhBtnImprimir";
-            this.RrhhBtnImprimir.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnImprimir.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnImprimir.TabIndex = 6;
             this.RrhhBtnImprimir.UseVisualStyleBackColor = false;
             // 
@@ -280,10 +361,10 @@
             this.RrhhBtnReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnReporte.Location = new System.Drawing.Point(675, 152);
-            this.RrhhBtnReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnReporte.Location = new System.Drawing.Point(720, 152);
+            this.RrhhBtnReporte.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnReporte.Name = "RrhhBtnReporte";
-            this.RrhhBtnReporte.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnReporte.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnReporte.TabIndex = 7;
             this.RrhhBtnReporte.UseVisualStyleBackColor = false;
             // 
@@ -297,10 +378,10 @@
             this.RrhhBtnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnInicio.Location = new System.Drawing.Point(784, 152);
-            this.RrhhBtnInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnInicio.Location = new System.Drawing.Point(814, 152);
+            this.RrhhBtnInicio.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnInicio.Name = "RrhhBtnInicio";
-            this.RrhhBtnInicio.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnInicio.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnInicio.TabIndex = 8;
             this.RrhhBtnInicio.UseVisualStyleBackColor = false;
             // 
@@ -314,10 +395,10 @@
             this.RrhhBtnAnterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAnterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnAnterior.Location = new System.Drawing.Point(893, 152);
-            this.RrhhBtnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnAnterior.Location = new System.Drawing.Point(906, 152);
+            this.RrhhBtnAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnAnterior.Name = "RrhhBtnAnterior";
-            this.RrhhBtnAnterior.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnAnterior.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnAnterior.TabIndex = 9;
             this.RrhhBtnAnterior.UseVisualStyleBackColor = false;
             // 
@@ -331,10 +412,10 @@
             this.RrhhBtnSiguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSiguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnSiguiente.Location = new System.Drawing.Point(1003, 152);
-            this.RrhhBtnSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnSiguiente.Location = new System.Drawing.Point(1007, 152);
+            this.RrhhBtnSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnSiguiente.Name = "RrhhBtnSiguiente";
-            this.RrhhBtnSiguiente.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnSiguiente.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnSiguiente.TabIndex = 10;
             this.RrhhBtnSiguiente.UseVisualStyleBackColor = false;
             // 
@@ -348,10 +429,10 @@
             this.RrhhBtnFin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnFin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnFin.Location = new System.Drawing.Point(1113, 152);
-            this.RrhhBtnFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnFin.Location = new System.Drawing.Point(1102, 152);
+            this.RrhhBtnFin.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnFin.Name = "RrhhBtnFin";
-            this.RrhhBtnFin.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnFin.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnFin.TabIndex = 11;
             this.RrhhBtnFin.UseVisualStyleBackColor = false;
             // 
@@ -365,10 +446,10 @@
             this.RrhhBtnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnConsultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnConsultar.Location = new System.Drawing.Point(1222, 152);
-            this.RrhhBtnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnConsultar.Location = new System.Drawing.Point(1190, 152);
+            this.RrhhBtnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnConsultar.Name = "RrhhBtnConsultar";
-            this.RrhhBtnConsultar.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnConsultar.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnConsultar.TabIndex = 12;
             this.RrhhBtnConsultar.UseVisualStyleBackColor = false;
             // 
@@ -382,10 +463,10 @@
             this.RrhhBtnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnAyuda.Location = new System.Drawing.Point(1331, 152);
-            this.RrhhBtnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnAyuda.Location = new System.Drawing.Point(1288, 152);
+            this.RrhhBtnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnAyuda.Name = "RrhhBtnAyuda";
-            this.RrhhBtnAyuda.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnAyuda.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnAyuda.TabIndex = 13;
             this.RrhhBtnAyuda.UseVisualStyleBackColor = false;
             // 
@@ -399,76 +480,12 @@
             this.RrhhBtnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.RrhhBtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RrhhBtnSalir.Location = new System.Drawing.Point(1441, 152);
-            this.RrhhBtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnSalir.Location = new System.Drawing.Point(1379, 152);
+            this.RrhhBtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnSalir.Name = "RrhhBtnSalir";
-            this.RrhhBtnSalir.Size = new System.Drawing.Size(62, 57);
+            this.RrhhBtnSalir.Size = new System.Drawing.Size(71, 63);
             this.RrhhBtnSalir.TabIndex = 14;
             this.RrhhBtnSalir.UseVisualStyleBackColor = false;
-            // 
-            // RrhhPnlEncabezado
-            // 
-            this.RrhhPnlEncabezado.BackgroundImage = global::CapaVista_EvaluacionDesempeño.Properties.Resources.Pnl_fondo;
-            this.RrhhPnlEncabezado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbIconoEvaluacion);
-            this.RrhhPnlEncabezado.Controls.Add(this.RrhhLblTituloEvaluacion);
-            this.RrhhPnlEncabezado.Controls.Add(this.RrhhLblSubtituloEvaluacion);
-            this.RrhhPnlEncabezado.Controls.Add(this.RrhhPbMascota);
-            this.RrhhPnlEncabezado.Location = new System.Drawing.Point(12, 12);
-            this.RrhhPnlEncabezado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.RrhhPnlEncabezado.Name = "RrhhPnlEncabezado";
-            this.RrhhPnlEncabezado.Size = new System.Drawing.Size(1492, 132);
-            this.RrhhPnlEncabezado.TabIndex = 0;
-            // 
-            // RrhhPbIconoEvaluacion
-            // 
-            this.RrhhPbIconoEvaluacion.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhPbIconoEvaluacion.Image = global::CapaVista_EvaluacionDesempeño.Properties.Resources.Icn_EvaluacionDesempeño;
-            this.RrhhPbIconoEvaluacion.Location = new System.Drawing.Point(16, 12);
-            this.RrhhPbIconoEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.RrhhPbIconoEvaluacion.Name = "RrhhPbIconoEvaluacion";
-            this.RrhhPbIconoEvaluacion.Size = new System.Drawing.Size(123, 101);
-            this.RrhhPbIconoEvaluacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RrhhPbIconoEvaluacion.TabIndex = 0;
-            this.RrhhPbIconoEvaluacion.TabStop = false;
-            // 
-            // RrhhLblTituloEvaluacion
-            // 
-            this.RrhhLblTituloEvaluacion.AutoSize = true;
-            this.RrhhLblTituloEvaluacion.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblTituloEvaluacion.Font = new System.Drawing.Font("Lucida Bright", 12.6F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblTituloEvaluacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblTituloEvaluacion.Location = new System.Drawing.Point(147, 41);
-            this.RrhhLblTituloEvaluacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.RrhhLblTituloEvaluacion.Name = "RrhhLblTituloEvaluacion";
-            this.RrhhLblTituloEvaluacion.Size = new System.Drawing.Size(358, 31);
-            this.RrhhLblTituloEvaluacion.TabIndex = 1;
-            this.RrhhLblTituloEvaluacion.Text = "Evaluación de Desempeño";
-            // 
-            // RrhhLblSubtituloEvaluacion
-            // 
-            this.RrhhLblSubtituloEvaluacion.AutoSize = true;
-            this.RrhhLblSubtituloEvaluacion.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhLblSubtituloEvaluacion.Font = new System.Drawing.Font("Tahoma", 7.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RrhhLblSubtituloEvaluacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.RrhhLblSubtituloEvaluacion.Location = new System.Drawing.Point(151, 83);
-            this.RrhhLblSubtituloEvaluacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.RrhhLblSubtituloEvaluacion.Name = "RrhhLblSubtituloEvaluacion";
-            this.RrhhLblSubtituloEvaluacion.Size = new System.Drawing.Size(418, 18);
-            this.RrhhLblSubtituloEvaluacion.TabIndex = 2;
-            this.RrhhLblSubtituloEvaluacion.Text = "Calificación y seguimiento del desempeño de los colaboradores.";
-            // 
-            // RrhhPbMascota
-            // 
-            this.RrhhPbMascota.BackColor = System.Drawing.Color.Transparent;
-            this.RrhhPbMascota.Image = global::CapaVista_EvaluacionDesempeño.Properties.Resources.mascota;
-            this.RrhhPbMascota.Location = new System.Drawing.Point(808, 4);
-            this.RrhhPbMascota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.RrhhPbMascota.Name = "RrhhPbMascota";
-            this.RrhhPbMascota.Size = new System.Drawing.Size(132, 143);
-            this.RrhhPbMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RrhhPbMascota.TabIndex = 3;
-            this.RrhhPbMascota.TabStop = false;
             // 
             // RrhhPnlDetalle
             // 
@@ -481,10 +498,10 @@
             this.RrhhPnlDetalle.Controls.Add(this.RrhhGbxInformacionColaborador);
             this.RrhhPnlDetalle.Controls.Add(this.RrhhGbxCalificacionCriterios);
             this.RrhhPnlDetalle.Controls.Add(this.RrhhGbxResultado);
-            this.RrhhPnlDetalle.Location = new System.Drawing.Point(20, 233);
-            this.RrhhPnlDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlDetalle.Location = new System.Drawing.Point(20, 223);
+            this.RrhhPnlDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlDetalle.Name = "RrhhPnlDetalle";
-            this.RrhhPnlDetalle.Size = new System.Drawing.Size(1484, 382);
+            this.RrhhPnlDetalle.Size = new System.Drawing.Size(1484, 392);
             this.RrhhPnlDetalle.TabIndex = 15;
             // 
             // RrhhLblTituloDetalle
@@ -509,7 +526,7 @@
             this.RrhhBtnCompartir.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnCompartir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
             this.RrhhBtnCompartir.Location = new System.Drawing.Point(1035, 9);
-            this.RrhhBtnCompartir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnCompartir.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnCompartir.Name = "RrhhBtnCompartir";
             this.RrhhBtnCompartir.Size = new System.Drawing.Size(226, 28);
             this.RrhhBtnCompartir.TabIndex = 1;
@@ -525,7 +542,7 @@
             this.RrhhBtnAprobar.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnAprobar.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnAprobar.Location = new System.Drawing.Point(1270, 9);
-            this.RrhhBtnAprobar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnAprobar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnAprobar.Name = "RrhhBtnAprobar";
             this.RrhhBtnAprobar.Size = new System.Drawing.Size(196, 28);
             this.RrhhBtnAprobar.TabIndex = 2;
@@ -552,9 +569,9 @@
             this.RrhhGbxInformacionColaborador.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxInformacionColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
             this.RrhhGbxInformacionColaborador.Location = new System.Drawing.Point(15, 45);
-            this.RrhhGbxInformacionColaborador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxInformacionColaborador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhGbxInformacionColaborador.Name = "RrhhGbxInformacionColaborador";
-            this.RrhhGbxInformacionColaborador.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxInformacionColaborador.Padding = new System.Windows.Forms.Padding(4);
             this.RrhhGbxInformacionColaborador.Size = new System.Drawing.Size(474, 326);
             this.RrhhGbxInformacionColaborador.TabIndex = 3;
             this.RrhhGbxInformacionColaborador.TabStop = false;
@@ -580,7 +597,7 @@
             this.RrhhTxtCodigo.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtCodigo.Location = new System.Drawing.Point(168, 34);
-            this.RrhhTxtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtCodigo.Name = "RrhhTxtCodigo";
             this.RrhhTxtCodigo.ReadOnly = true;
             this.RrhhTxtCodigo.Size = new System.Drawing.Size(290, 24);
@@ -619,7 +636,7 @@
             this.RrhhTxtColaborador.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtColaborador.Location = new System.Drawing.Point(168, 80);
-            this.RrhhTxtColaborador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtColaborador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtColaborador.Name = "RrhhTxtColaborador";
             this.RrhhTxtColaborador.ReadOnly = true;
             this.RrhhTxtColaborador.Size = new System.Drawing.Size(290, 24);
@@ -645,7 +662,7 @@
             this.RrhhTxtDepartamento.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtDepartamento.Location = new System.Drawing.Point(168, 124);
-            this.RrhhTxtDepartamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtDepartamento.Name = "RrhhTxtDepartamento";
             this.RrhhTxtDepartamento.ReadOnly = true;
             this.RrhhTxtDepartamento.Size = new System.Drawing.Size(290, 24);
@@ -671,7 +688,7 @@
             this.RrhhTxtPuesto.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtPuesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtPuesto.Location = new System.Drawing.Point(168, 170);
-            this.RrhhTxtPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtPuesto.Name = "RrhhTxtPuesto";
             this.RrhhTxtPuesto.ReadOnly = true;
             this.RrhhTxtPuesto.Size = new System.Drawing.Size(290, 24);
@@ -697,7 +714,7 @@
             this.RrhhTxtEvaluador.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtEvaluador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtEvaluador.Location = new System.Drawing.Point(168, 216);
-            this.RrhhTxtEvaluador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtEvaluador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtEvaluador.Name = "RrhhTxtEvaluador";
             this.RrhhTxtEvaluador.ReadOnly = true;
             this.RrhhTxtEvaluador.Size = new System.Drawing.Size(290, 24);
@@ -738,7 +755,7 @@
             this.RrhhCboCiclo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboCiclo.FormattingEnabled = true;
             this.RrhhCboCiclo.Location = new System.Drawing.Point(168, 261);
-            this.RrhhCboCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboCiclo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboCiclo.Name = "RrhhCboCiclo";
             this.RrhhCboCiclo.Size = new System.Drawing.Size(289, 25);
             this.RrhhCboCiclo.TabIndex = 13;
@@ -757,9 +774,9 @@
             this.RrhhGbxCalificacionCriterios.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxCalificacionCriterios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
             this.RrhhGbxCalificacionCriterios.Location = new System.Drawing.Point(504, 45);
-            this.RrhhGbxCalificacionCriterios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxCalificacionCriterios.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhGbxCalificacionCriterios.Name = "RrhhGbxCalificacionCriterios";
-            this.RrhhGbxCalificacionCriterios.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxCalificacionCriterios.Padding = new System.Windows.Forms.Padding(4);
             this.RrhhGbxCalificacionCriterios.Size = new System.Drawing.Size(474, 326);
             this.RrhhGbxCalificacionCriterios.TabIndex = 4;
             this.RrhhGbxCalificacionCriterios.TabStop = false;
@@ -773,7 +790,7 @@
             this.RrhhPnlEncabezadoCriterios.Controls.Add(this.RrhhLblEncabezadoNota);
             this.RrhhPnlEncabezadoCriterios.Controls.Add(this.RrhhLblEncabezadoPonderado);
             this.RrhhPnlEncabezadoCriterios.Location = new System.Drawing.Point(12, 30);
-            this.RrhhPnlEncabezadoCriterios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlEncabezadoCriterios.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlEncabezadoCriterios.Name = "RrhhPnlEncabezadoCriterios";
             this.RrhhPnlEncabezadoCriterios.Size = new System.Drawing.Size(450, 27);
             this.RrhhPnlEncabezadoCriterios.TabIndex = 0;
@@ -838,7 +855,7 @@
             this.RrhhPnlFilaCalidadTrabajo.Controls.Add(this.RrhhCboNotaCalidadTrabajo);
             this.RrhhPnlFilaCalidadTrabajo.Controls.Add(this.RrhhLblPonderadoCalidadTrabajo);
             this.RrhhPnlFilaCalidadTrabajo.Location = new System.Drawing.Point(12, 58);
-            this.RrhhPnlFilaCalidadTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlFilaCalidadTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlFilaCalidadTrabajo.Name = "RrhhPnlFilaCalidadTrabajo";
             this.RrhhPnlFilaCalidadTrabajo.Size = new System.Drawing.Size(450, 30);
             this.RrhhPnlFilaCalidadTrabajo.TabIndex = 1;
@@ -884,7 +901,7 @@
             "4",
             "5"});
             this.RrhhCboNotaCalidadTrabajo.Location = new System.Drawing.Point(296, 3);
-            this.RrhhCboNotaCalidadTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboNotaCalidadTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboNotaCalidadTrabajo.Name = "RrhhCboNotaCalidadTrabajo";
             this.RrhhCboNotaCalidadTrabajo.Size = new System.Drawing.Size(56, 25);
             this.RrhhCboNotaCalidadTrabajo.TabIndex = 2;
@@ -910,7 +927,7 @@
             this.RrhhPnlFilaProductividad.Controls.Add(this.RrhhCboNotaProductividad);
             this.RrhhPnlFilaProductividad.Controls.Add(this.RrhhLblPonderadoProductividad);
             this.RrhhPnlFilaProductividad.Location = new System.Drawing.Point(12, 88);
-            this.RrhhPnlFilaProductividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlFilaProductividad.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlFilaProductividad.Name = "RrhhPnlFilaProductividad";
             this.RrhhPnlFilaProductividad.Size = new System.Drawing.Size(450, 30);
             this.RrhhPnlFilaProductividad.TabIndex = 2;
@@ -956,7 +973,7 @@
             "4",
             "5"});
             this.RrhhCboNotaProductividad.Location = new System.Drawing.Point(296, 3);
-            this.RrhhCboNotaProductividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboNotaProductividad.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboNotaProductividad.Name = "RrhhCboNotaProductividad";
             this.RrhhCboNotaProductividad.Size = new System.Drawing.Size(56, 25);
             this.RrhhCboNotaProductividad.TabIndex = 2;
@@ -982,7 +999,7 @@
             this.RrhhPnlFilaTrabajoEquipo.Controls.Add(this.RrhhCboNotaTrabajoEquipo);
             this.RrhhPnlFilaTrabajoEquipo.Controls.Add(this.RrhhLblPonderadoTrabajoEquipo);
             this.RrhhPnlFilaTrabajoEquipo.Location = new System.Drawing.Point(12, 118);
-            this.RrhhPnlFilaTrabajoEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlFilaTrabajoEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlFilaTrabajoEquipo.Name = "RrhhPnlFilaTrabajoEquipo";
             this.RrhhPnlFilaTrabajoEquipo.Size = new System.Drawing.Size(450, 30);
             this.RrhhPnlFilaTrabajoEquipo.TabIndex = 3;
@@ -1028,7 +1045,7 @@
             "4",
             "5"});
             this.RrhhCboNotaTrabajoEquipo.Location = new System.Drawing.Point(296, 3);
-            this.RrhhCboNotaTrabajoEquipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboNotaTrabajoEquipo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboNotaTrabajoEquipo.Name = "RrhhCboNotaTrabajoEquipo";
             this.RrhhCboNotaTrabajoEquipo.Size = new System.Drawing.Size(56, 25);
             this.RrhhCboNotaTrabajoEquipo.TabIndex = 2;
@@ -1054,7 +1071,7 @@
             this.RrhhPnlFilaPuntualidad.Controls.Add(this.RrhhCboNotaPuntualidad);
             this.RrhhPnlFilaPuntualidad.Controls.Add(this.RrhhLblPonderadoPuntualidad);
             this.RrhhPnlFilaPuntualidad.Location = new System.Drawing.Point(12, 150);
-            this.RrhhPnlFilaPuntualidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlFilaPuntualidad.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlFilaPuntualidad.Name = "RrhhPnlFilaPuntualidad";
             this.RrhhPnlFilaPuntualidad.Size = new System.Drawing.Size(450, 30);
             this.RrhhPnlFilaPuntualidad.TabIndex = 4;
@@ -1100,7 +1117,7 @@
             "4",
             "5"});
             this.RrhhCboNotaPuntualidad.Location = new System.Drawing.Point(296, 3);
-            this.RrhhCboNotaPuntualidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboNotaPuntualidad.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboNotaPuntualidad.Name = "RrhhCboNotaPuntualidad";
             this.RrhhCboNotaPuntualidad.Size = new System.Drawing.Size(56, 25);
             this.RrhhCboNotaPuntualidad.TabIndex = 2;
@@ -1126,7 +1143,7 @@
             this.RrhhPnlFilaIniciativa.Controls.Add(this.RrhhCboNotaIniciativa);
             this.RrhhPnlFilaIniciativa.Controls.Add(this.RrhhLblPonderadoIniciativa);
             this.RrhhPnlFilaIniciativa.Location = new System.Drawing.Point(12, 180);
-            this.RrhhPnlFilaIniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlFilaIniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlFilaIniciativa.Name = "RrhhPnlFilaIniciativa";
             this.RrhhPnlFilaIniciativa.Size = new System.Drawing.Size(450, 30);
             this.RrhhPnlFilaIniciativa.TabIndex = 5;
@@ -1172,7 +1189,7 @@
             "4",
             "5"});
             this.RrhhCboNotaIniciativa.Location = new System.Drawing.Point(296, 3);
-            this.RrhhCboNotaIniciativa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboNotaIniciativa.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboNotaIniciativa.Name = "RrhhCboNotaIniciativa";
             this.RrhhCboNotaIniciativa.Size = new System.Drawing.Size(56, 25);
             this.RrhhCboNotaIniciativa.TabIndex = 2;
@@ -1209,7 +1226,7 @@
             this.RrhhPnlTotal.Controls.Add(this.RrhhLblTotalTexto);
             this.RrhhPnlTotal.Controls.Add(this.RrhhLblTotalValor);
             this.RrhhPnlTotal.Location = new System.Drawing.Point(12, 249);
-            this.RrhhPnlTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlTotal.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlTotal.Name = "RrhhPnlTotal";
             this.RrhhPnlTotal.Size = new System.Drawing.Size(450, 32);
             this.RrhhPnlTotal.TabIndex = 7;
@@ -1259,9 +1276,9 @@
             this.RrhhGbxResultado.Font = new System.Drawing.Font("Tahoma", 6.81F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhGbxResultado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(138)))), ((int)(((byte)(143)))));
             this.RrhhGbxResultado.Location = new System.Drawing.Point(993, 45);
-            this.RrhhGbxResultado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxResultado.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhGbxResultado.Name = "RrhhGbxResultado";
-            this.RrhhGbxResultado.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhGbxResultado.Padding = new System.Windows.Forms.Padding(4);
             this.RrhhGbxResultado.Size = new System.Drawing.Size(474, 326);
             this.RrhhGbxResultado.TabIndex = 5;
             this.RrhhGbxResultado.TabStop = false;
@@ -1298,7 +1315,7 @@
             this.RrhhPnlProgresoPista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
             this.RrhhPnlProgresoPista.Controls.Add(this.RrhhPnlProgresoRelleno);
             this.RrhhPnlProgresoPista.Location = new System.Drawing.Point(261, 44);
-            this.RrhhPnlProgresoPista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlProgresoPista.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlProgresoPista.Name = "RrhhPnlProgresoPista";
             this.RrhhPnlProgresoPista.Size = new System.Drawing.Size(196, 9);
             this.RrhhPnlProgresoPista.TabIndex = 2;
@@ -1307,7 +1324,7 @@
             // 
             this.RrhhPnlProgresoRelleno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(145)))));
             this.RrhhPnlProgresoRelleno.Location = new System.Drawing.Point(0, 0);
-            this.RrhhPnlProgresoRelleno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlProgresoRelleno.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlProgresoRelleno.Name = "RrhhPnlProgresoRelleno";
             this.RrhhPnlProgresoRelleno.Size = new System.Drawing.Size(10, 9);
             this.RrhhPnlProgresoRelleno.TabIndex = 0;
@@ -1371,7 +1388,7 @@
             this.RrhhTxtRetroalimentacion.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtRetroalimentacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtRetroalimentacion.Location = new System.Drawing.Point(168, 117);
-            this.RrhhTxtRetroalimentacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtRetroalimentacion.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtRetroalimentacion.Multiline = true;
             this.RrhhTxtRetroalimentacion.Name = "RrhhTxtRetroalimentacion";
             this.RrhhTxtRetroalimentacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1400,7 +1417,7 @@
             this.RrhhCboPlanMejora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboPlanMejora.FormattingEnabled = true;
             this.RrhhCboPlanMejora.Location = new System.Drawing.Point(168, 212);
-            this.RrhhCboPlanMejora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboPlanMejora.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboPlanMejora.Name = "RrhhCboPlanMejora";
             this.RrhhCboPlanMejora.Size = new System.Drawing.Size(289, 25);
             this.RrhhCboPlanMejora.TabIndex = 9;
@@ -1465,7 +1482,7 @@
             this.RrhhPnlRegistros.Controls.Add(this.RrhhBtnPaginaSiguiente);
             this.RrhhPnlRegistros.Controls.Add(this.RrhhBtnPaginaUltima);
             this.RrhhPnlRegistros.Location = new System.Drawing.Point(16, 623);
-            this.RrhhPnlRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhPnlRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhPnlRegistros.Name = "RrhhPnlRegistros";
             this.RrhhPnlRegistros.Size = new System.Drawing.Size(1484, 329);
             this.RrhhPnlRegistros.TabIndex = 16;
@@ -1505,7 +1522,7 @@
             this.RrhhCboFiltroCiclo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroCiclo.FormattingEnabled = true;
             this.RrhhCboFiltroCiclo.Location = new System.Drawing.Point(69, 48);
-            this.RrhhCboFiltroCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboFiltroCiclo.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboFiltroCiclo.Name = "RrhhCboFiltroCiclo";
             this.RrhhCboFiltroCiclo.Size = new System.Drawing.Size(235, 25);
             this.RrhhCboFiltroCiclo.TabIndex = 2;
@@ -1530,7 +1547,7 @@
             this.RrhhTxtFiltroColaborador.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhTxtFiltroColaborador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhTxtFiltroColaborador.Location = new System.Drawing.Point(434, 48);
-            this.RrhhTxtFiltroColaborador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhTxtFiltroColaborador.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhTxtFiltroColaborador.Name = "RrhhTxtFiltroColaborador";
             this.RrhhTxtFiltroColaborador.Size = new System.Drawing.Size(256, 24);
             this.RrhhTxtFiltroColaborador.TabIndex = 4;
@@ -1557,7 +1574,7 @@
             this.RrhhCboFiltroEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(54)))));
             this.RrhhCboFiltroEstado.FormattingEnabled = true;
             this.RrhhCboFiltroEstado.Location = new System.Drawing.Point(778, 48);
-            this.RrhhCboFiltroEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhCboFiltroEstado.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhCboFiltroEstado.Name = "RrhhCboFiltroEstado";
             this.RrhhCboFiltroEstado.Size = new System.Drawing.Size(194, 25);
             this.RrhhCboFiltroEstado.TabIndex = 6;
@@ -1571,7 +1588,7 @@
             this.RrhhBtnFiltrar.Font = new System.Drawing.Font("Segoe UI", 6.3F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnFiltrar.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnFiltrar.Location = new System.Drawing.Point(1320, 45);
-            this.RrhhBtnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnFiltrar.Name = "RrhhBtnFiltrar";
             this.RrhhBtnFiltrar.Size = new System.Drawing.Size(148, 28);
             this.RrhhBtnFiltrar.TabIndex = 7;
@@ -1621,7 +1638,7 @@
             this.RrhhDgvEvaluaciones.DefaultCellStyle = dataGridViewCellStyle6;
             this.RrhhDgvEvaluaciones.EnableHeadersVisualStyles = false;
             this.RrhhDgvEvaluaciones.Location = new System.Drawing.Point(15, 86);
-            this.RrhhDgvEvaluaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhDgvEvaluaciones.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhDgvEvaluaciones.MultiSelect = false;
             this.RrhhDgvEvaluaciones.Name = "RrhhDgvEvaluaciones";
             this.RrhhDgvEvaluaciones.ReadOnly = true;
@@ -1741,7 +1758,7 @@
             this.RrhhBtnPaginaPrimera.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaPrimera.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnPaginaPrimera.Location = new System.Drawing.Point(1248, 354);
-            this.RrhhBtnPaginaPrimera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnPaginaPrimera.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnPaginaPrimera.Name = "RrhhBtnPaginaPrimera";
             this.RrhhBtnPaginaPrimera.Size = new System.Drawing.Size(32, 27);
             this.RrhhBtnPaginaPrimera.TabIndex = 10;
@@ -1757,7 +1774,7 @@
             this.RrhhBtnPaginaAnterior.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaAnterior.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnPaginaAnterior.Location = new System.Drawing.Point(1286, 354);
-            this.RrhhBtnPaginaAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnPaginaAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnPaginaAnterior.Name = "RrhhBtnPaginaAnterior";
             this.RrhhBtnPaginaAnterior.Size = new System.Drawing.Size(32, 27);
             this.RrhhBtnPaginaAnterior.TabIndex = 11;
@@ -1786,7 +1803,7 @@
             this.RrhhBtnPaginaSiguiente.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaSiguiente.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnPaginaSiguiente.Location = new System.Drawing.Point(1400, 354);
-            this.RrhhBtnPaginaSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnPaginaSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnPaginaSiguiente.Name = "RrhhBtnPaginaSiguiente";
             this.RrhhBtnPaginaSiguiente.Size = new System.Drawing.Size(32, 27);
             this.RrhhBtnPaginaSiguiente.TabIndex = 13;
@@ -1802,7 +1819,7 @@
             this.RrhhBtnPaginaUltima.Font = new System.Drawing.Font("Segoe UI", 6.93F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RrhhBtnPaginaUltima.ForeColor = System.Drawing.Color.White;
             this.RrhhBtnPaginaUltima.Location = new System.Drawing.Point(1437, 354);
-            this.RrhhBtnPaginaUltima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RrhhBtnPaginaUltima.Margin = new System.Windows.Forms.Padding(4);
             this.RrhhBtnPaginaUltima.Name = "RrhhBtnPaginaUltima";
             this.RrhhBtnPaginaUltima.Size = new System.Drawing.Size(32, 27);
             this.RrhhBtnPaginaUltima.TabIndex = 14;
@@ -1815,6 +1832,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1516, 966);
+            this.Controls.Add(this.RrhhBtnNuevo);
             this.Controls.Add(this.RrhhPnlEncabezado);
             this.Controls.Add(this.RrhhBtnGuardar);
             this.Controls.Add(this.RrhhBtnModificar);
@@ -1834,11 +1852,11 @@
             this.Controls.Add(this.RrhhPnlRegistros);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmEvaluacionDesempeño";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "9801 - EvaluacionDesempeño";
+            this.Text = "9501 - EvaluacionDesempeño";
             this.RrhhPnlEncabezado.ResumeLayout(false);
             this.RrhhPnlEncabezado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RrhhPbIconoEvaluacion)).EndInit();
@@ -1891,8 +1909,6 @@
         private System.Windows.Forms.Button RrhhBtnSalir;
         private System.Windows.Forms.Panel RrhhPnlEncabezado;
         private System.Windows.Forms.PictureBox RrhhPbIconoEvaluacion;
-        private System.Windows.Forms.Label RrhhLblTituloEvaluacion;
-        private System.Windows.Forms.Label RrhhLblSubtituloEvaluacion;
         private System.Windows.Forms.PictureBox RrhhPbMascota;
         private System.Windows.Forms.Panel RrhhPnlDetalle;
         private System.Windows.Forms.Label RrhhLblTituloDetalle;
@@ -1989,5 +2005,8 @@
         private System.Windows.Forms.Label RrhhLblPagina;
         private System.Windows.Forms.Button RrhhBtnPaginaSiguiente;
         private System.Windows.Forms.Button RrhhBtnPaginaUltima;
+        private System.Windows.Forms.Button RrhhBtnNuevo;
+        private System.Windows.Forms.Label RrhhLblSubTituloCierreNominas;
+        private System.Windows.Forms.Label RrhhLblTituloEvauacionDesempeño;
     }
 }
