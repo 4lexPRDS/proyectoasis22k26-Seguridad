@@ -166,8 +166,8 @@ namespace CapaVista_Navegador
             // 3. Abrir el formulario de Consultas Simples del componente Consultas
             try
             {
-                using (FrmConsultasSimples FormularioConsultas =
-                    new FrmConsultasSimples(NombreTabla, ColumnaPK.Nombre))
+                using (FrmConsultas FormularioConsultas =
+                    new FrmConsultas(NombreTabla, ColumnaPK.Nombre))
                 {
                     // Se pasa el formulario padre como owner para que el diálogo
                     // aparezca al frente y no detrás de la ventana principal.
@@ -178,10 +178,11 @@ namespace CapaVista_Navegador
                     {
                         _Grid.NavegadorMetFiltrarPorLlave(
                             ColumnaPK.Nombre,
-                            FormularioConsultas.IdSeleccionado);
+                            FormularioConsultas.CampoSeleccionado);
                     }
                 }
             }
+
             catch (Exception Excepcion)
             {
                 MessageBox.Show(

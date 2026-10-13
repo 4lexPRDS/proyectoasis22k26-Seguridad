@@ -6,12 +6,12 @@ namespace CapaModelo_BtnRuta_Reporteador.Repositorios
     {
         // Cadena utilizada para conectarse mediante el DSN
         // configurado para el componente Reporteador.
-        protected readonly string _CadenaConexion;
+        private readonly string _CadenaConexion;
 
         protected ClsRepositorioReporteador()
         {
             _CadenaConexion =
-                "Dsn=dbreporteador";
+                "Dsn=EmbutidosS.A";
         }
 
         // Crea la conexión ODBC para las operaciones

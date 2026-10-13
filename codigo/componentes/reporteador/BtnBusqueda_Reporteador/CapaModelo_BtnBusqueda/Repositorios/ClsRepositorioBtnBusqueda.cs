@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.Odbc;
 
-namespace CapaModelo_BtnBusqueda.Repositorios
+namespace CapaModelo_BtnBusqueda_Reporteador.Repositorios
 {
     public class ClsRepositorioBtnBusqueda
         : ClsRepositorio
@@ -81,9 +81,10 @@ namespace CapaModelo_BtnBusqueda.Repositorios
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception Ex)
             {
-                throw;
+                throw new Exception(
+                    "No se pudieron buscar los reportes.", Ex);
             }
 
             return Tabla;

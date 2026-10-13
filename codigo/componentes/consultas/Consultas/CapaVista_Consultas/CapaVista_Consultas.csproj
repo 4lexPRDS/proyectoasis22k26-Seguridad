@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{214838A8-BCC6-40FC-AA84-66C0A95E2640}</ProjectGuid>
+    <ProjectGuid>{F6CA6337-19FB-4E82-8FAC-8D77FFA082DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaVista_Consultas</RootNamespace>
@@ -32,15 +32,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaControlador_Consultas, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CapaControlador_Consultas\bin\Debug\CapaControlador_Consultas.dll</HintPath>
-    </Reference>
-    <Reference Include="CapaVista_Componentes">
-      <HintPath>..\..\Consultas_Componentes\CapaVista_Componentes\bin\Debug\CapaVista_Componentes.dll</HintPath>
-    </Reference>
-    <Reference Include="CapaVista_Mantenimiento">
-      <HintPath>..\..\Consultas_Mantenimiento\CapaVista_Mantenimiento\bin\Debug\CapaVista_Mantenimiento.dll</HintPath>
+    <Compile Include="Componentes\ClsEtiquetaConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClsSeleccionConsulta.cs" />
+    <Compile Include="Componentes\ClsPanelConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsActualizacionDisenoConsultas.cs" />
+    <Reference Include="CapaControlador_Consultas">
+      <HintPath>..\CapaControlador_Consultas\bin\$(Configuration)\CapaControlador_Consultas.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,64 +55,136 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\ClsTableLayoutPanelConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsButtonConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsButtonConsultas.Designer.cs">
+      <DependentUpon>ClsButtonConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\ClsComboBoxConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsComboBoxConsultas.Designer.cs">
+      <DependentUpon>ClsComboBoxConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\ClsGroupBoxConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsGroupBoxConsultas.Designer.cs">
+      <DependentUpon>ClsGroupBoxConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\ClsRadioButtonConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ClsTableButtonConsultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\UsrBaseConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\UsrBaseConsultas.Designer.cs">
+      <DependentUpon>UsrBaseConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\UsrDataGridViewConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\UsrDataGridViewConsultas.Designer.cs">
+      <DependentUpon>UsrDataGridViewConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\UsrLabelConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\UsrLabelConsultas.Designer.cs">
+      <DependentUpon>UsrLabelConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\UsrTextBoxConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\UsrTextBoxConsultas.Designer.cs">
+      <DependentUpon>UsrTextBoxConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultas.Designer.cs">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEstadoVistaConsultas.cs" />
+    <Compile Include="ClsInteraccionConsultas.cs" />
+    <Compile Include="ClsConvertidorControlRetornoConsultas.cs" />
+    <Compile Include="ClsConvertidorTablaConsultas.cs" />
+    <Compile Include="ClsConvertidorCampoRetornoConsultas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Controles\ClsAgregarFiltro.cs">
+    <Compile Include="UsrConsultasComplejas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\ClsAgregarFiltro.Designer.cs">
-      <DependentUpon>ClsAgregarFiltro.cs</DependentUpon>
+    <Compile Include="UsrConsultasComplejas.Designer.cs">
+      <DependentUpon>UsrConsultasComplejas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultasComplejas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsultasComplejas.Designer.cs">
-      <DependentUpon>FrmConsultasComplejas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmConsultasSimples.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsultasSimples.Designer.cs">
-      <DependentUpon>FrmConsultasSimples.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\ClsSeleccioneUnaConsulta.cs">
+    <Compile Include="UsrConsultasSimples.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\ClsSeleccioneUnaConsulta.Designer.cs">
-      <DependentUpon>ClsSeleccioneUnaConsulta.cs</DependentUpon>
+    <Compile Include="UsrConsultasSimples.Designer.cs">
+      <DependentUpon>UsrConsultasSimples.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controles\ClsTabla.cs">
+    <Compile Include="UsrTabla.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\ClsTabla.Designer.cs">
-      <DependentUpon>ClsTabla.cs</DependentUpon>
+    <Compile Include="UsrTabla.Designer.cs">
+      <DependentUpon>UsrTabla.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Componentes\ClsComboBoxConsultas.resx">
+      <DependentUpon>ClsComboBoxConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.Componentes.ClsComboBoxConsultas.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\UsrBaseConsultas.resx">
+      <DependentUpon>UsrBaseConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.Componentes.UsrBaseConsultas.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\UsrDataGridViewConsultas.resx">
+      <DependentUpon>UsrDataGridViewConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.Componentes.UsrDataGridViewConsultas.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\UsrLabelConsultas.resx">
+      <DependentUpon>UsrLabelConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.Componentes.ClsEtiquetaConsultas.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\UsrTextBoxConsultas.resx">
+      <DependentUpon>UsrTextBoxConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.Componentes.UsrTextBoxConsultas.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultas.resx">
+      <DependentUpon>FrmConsultas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.FrmConsultas.resources</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ClsAgregarFiltro.resx">
-      <DependentUpon>ClsAgregarFiltro.cs</DependentUpon>
+    <EmbeddedResource Include="UsrConsultasComplejas.resx">
+      <DependentUpon>UsrConsultasComplejas.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.UsrConsultasComplejas.resources</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultasComplejas.resx">
-      <DependentUpon>FrmConsultasComplejas.cs</DependentUpon>
+    <EmbeddedResource Include="UsrConsultasSimples.resx">
+      <DependentUpon>UsrConsultasSimples.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.UsrConsultasSimples.resources</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultasSimples.resx">
-      <DependentUpon>FrmConsultasSimples.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ClsSeleccioneUnaConsulta.resx">
-      <DependentUpon>ClsSeleccioneUnaConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\UcTabla.resx">
-      <DependentUpon>ClsTabla.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="UsrTabla.resx">
+      <DependentUpon>UsrTabla.cs</DependentUpon>
+      <LogicalName>CapaVista_Consultas.UsrTabla.resources</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using System.Data.Odbc;
 
-namespace CapaModelo_BtnBusqueda.Repositorios
+namespace CapaModelo_BtnBusqueda_Reporteador.Repositorios
 {
     public abstract class ClsRepositorio
     {
@@ -9,7 +9,7 @@ namespace CapaModelo_BtnBusqueda.Repositorios
         protected ClsRepositorio()
         {
             _CadenaConexion =
-                "Dsn=dbreporteador";
+                "Dsn=EmbutidosS.A";
         }
 
         protected OdbcConnection

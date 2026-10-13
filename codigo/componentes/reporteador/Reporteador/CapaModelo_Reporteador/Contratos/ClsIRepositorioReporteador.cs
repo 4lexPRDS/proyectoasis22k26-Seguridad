@@ -1,32 +1,31 @@
-﻿using CapaModelo_Reporteador.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using CapaModelo_Reporteador.Entidades;
 
 namespace CapaModelo_Reporteador.Contratos
 {
     public interface ClsIRepositorioReporteador
     {
-        void ReporteadorMetAgregar(
-            ClsReporteador Reporte);
+        IEnumerable<ClsAplicacionReporteador> ReporteadorMetObtenerAplicaciones();
 
-        void ReporteadorMetEditar(
-            ClsReporteador Reporte);
+        bool ReporteadorMetExisteAplicacionReporte(int IdAplicacion);
 
-        void ReporteadorMetRemover(
-            ClsReporteador Reporte);
+        void ReporteadorMetAgregar(ClsReporteador Reporte, int IdAplicacion);
 
-        IEnumerable<ClsReporteador>
-            ReporteadorMetObtenerTodos();
+        void ReporteadorMetEditar(ClsReporteador Reporte);
 
-        IEnumerable<ClsReporteador>
-            ReporteadorMetBuscarPorNombre(
-                string Filtro);
+        void ReporteadorMetRemover(ClsReporteador Reporte);
 
-        IEnumerable<ClsReporteador>
-            ReporteadorMetBuscarPorFecha(
-                DateTime Fecha);
+        IEnumerable<ClsReporteador> ReporteadorMetObtenerTodos(int IdAplicacion);
 
-        int ReporteadorMetObtenerMaximoNumeroReporte(
-            int CodigoModulo);
+        string ReporteadorMetObtenerRutaPrimerReporte(int IdAplicacion);
+
+        IEnumerable<ClsReporteador> ReporteadorMetBuscarPorNombre(string Filtro);
+
+        IEnumerable<ClsReporteador> ReporteadorMetBuscarPorFecha(DateTime Fecha);
+
+        int ReporteadorMetObtenerMaximoNumeroReporte(int CodigoModulo);
+
+        int ReporteadorMetObtenerMaximoNumeroReporteGlobal();
     }
 }

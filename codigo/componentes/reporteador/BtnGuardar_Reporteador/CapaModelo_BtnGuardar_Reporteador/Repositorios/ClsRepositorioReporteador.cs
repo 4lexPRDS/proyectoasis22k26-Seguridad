@@ -4,12 +4,12 @@ namespace CapaModelo_BtnGuardar_Reporteador.Repositorios
 {
     public abstract class ClsRepositorioReporteador
     {
-        protected readonly string _CadenaConexion;
+        private readonly string _CadenaConexion;
 
         protected ClsRepositorioReporteador()
         {
             _CadenaConexion =
-                "Dsn=dbreporteador";
+                "Dsn=EmbutidosS.A";
         }
 
         protected OdbcConnection ReporteadorMetObtenerConexion()

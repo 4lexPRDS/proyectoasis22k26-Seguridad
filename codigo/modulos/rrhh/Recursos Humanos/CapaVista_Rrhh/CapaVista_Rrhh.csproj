@@ -37,8 +37,11 @@
     <Reference Include="CapaControlador_Seguridad">
       <HintPath>..\..\..\..\componentes\seguridad\Seguridad\CapaVista_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
     </Reference>
-    <Reference Include="CapaVista_Empleado">
-      <HintPath>..\..\Empleados\CapaVista_Empleado\bin\Debug\CapaVista_Empleado.dll</HintPath>
+    <Reference Include="CapaVista_CierreNominas">
+      <HintPath>..\..\Cierre de Nominas\CapaVista_CierreNominas\bin\Debug\CapaVista_CierreNominas.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVista_Nomina">
+      <HintPath>..\..\NominasEmpleados\CapaVista_Nomina\bin\Debug\CapaVista_Nomina.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
