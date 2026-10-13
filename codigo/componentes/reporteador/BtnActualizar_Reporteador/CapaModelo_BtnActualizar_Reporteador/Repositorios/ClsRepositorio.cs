@@ -1,6 +1,6 @@
 ﻿using System.Data.Odbc;
 
-namespace CapaModelo_BtnActualizar.Repositorios
+namespace CapaModelo_BtnActualizar_Reporteador.Repositorios
 {
     public abstract class ClsRepositorio
     {
@@ -8,7 +8,7 @@ namespace CapaModelo_BtnActualizar.Repositorios
 
         protected ClsRepositorio()
         {
-            _CadenaConexion = "Dsn=dbReporteador";
+            _CadenaConexion = "Dsn=EmbutidosS.A";
         }
 
         protected OdbcConnection ReporteadorMetObtenerConexion()
