@@ -26,6 +26,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using CapaVista_Empleado.Formularios;
 
 namespace CapaVista_Rrhh.Formularios
 {
@@ -330,6 +331,12 @@ namespace CapaVista_Rrhh.Formularios
             {
                 this.Close();
             }
+        }
+
+        private void RrhhBtnEmpleados_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados Empleados = new FrmEmpleados();
+            Empleados.ShowDialog();
         }
     }
 }
