@@ -34,6 +34,9 @@
     <Reference Include="CapaControlador_Bancos">
       <HintPath>..\CapaControlador_Bancos\bin\Debug\CapaControlador_Bancos.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_AutorizacionOrdenes">
+      <HintPath>..\..\Autorizacion_OrdenesCompra\CapaVista_AutorizacionOrdenes\bin\Debug\CapaVista_AutorizacionOrdenes.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_MovimientosBancarios">
       <HintPath>..\..\Movimientos_Bancarios\CapaVista_MovimientosBancarios\bin\Debug\CapaVista_MovimientosBancarios.dll</HintPath>
     </Reference>

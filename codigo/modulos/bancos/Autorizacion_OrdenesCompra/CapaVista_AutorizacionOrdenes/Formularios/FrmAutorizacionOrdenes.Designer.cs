@@ -176,7 +176,7 @@
             this.BancosLblMontoAsterisco.AutoSize = true;
             this.BancosLblMontoAsterisco.Font = new System.Drawing.Font("Tahoma", 13F);
             this.BancosLblMontoAsterisco.ForeColor = System.Drawing.Color.Red;
-            this.BancosLblMontoAsterisco.Location = new System.Drawing.Point(182, 249);
+            this.BancosLblMontoAsterisco.Location = new System.Drawing.Point(195, 249);
             this.BancosLblMontoAsterisco.Name = "BancosLblMontoAsterisco";
             this.BancosLblMontoAsterisco.Size = new System.Drawing.Size(24, 27);
             this.BancosLblMontoAsterisco.TabIndex = 12;
@@ -187,7 +187,7 @@
             this.BancosLblBancoAsterisco.AutoSize = true;
             this.BancosLblBancoAsterisco.Font = new System.Drawing.Font("Tahoma", 13F);
             this.BancosLblBancoAsterisco.ForeColor = System.Drawing.Color.Red;
-            this.BancosLblBancoAsterisco.Location = new System.Drawing.Point(167, 27);
+            this.BancosLblBancoAsterisco.Location = new System.Drawing.Point(177, 27);
             this.BancosLblBancoAsterisco.Name = "BancosLblBancoAsterisco";
             this.BancosLblBancoAsterisco.Size = new System.Drawing.Size(24, 27);
             this.BancosLblBancoAsterisco.TabIndex = 11;
@@ -377,7 +377,7 @@
             this.BancosLblTitulo.AutoSize = true;
             this.BancosLblTitulo.Font = new System.Drawing.Font("Lucida Fax", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BancosLblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.BancosLblTitulo.Location = new System.Drawing.Point(140, 13);
+            this.BancosLblTitulo.Location = new System.Drawing.Point(175, 12);
             this.BancosLblTitulo.Name = "BancosLblTitulo";
             this.BancosLblTitulo.Size = new System.Drawing.Size(657, 40);
             this.BancosLblTitulo.TabIndex = 10;
@@ -388,7 +388,7 @@
             this.BancosLblSubtitulo.AutoSize = true;
             this.BancosLblSubtitulo.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BancosLblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.BancosLblSubtitulo.Location = new System.Drawing.Point(144, 65);
+            this.BancosLblSubtitulo.Location = new System.Drawing.Point(179, 64);
             this.BancosLblSubtitulo.Name = "BancosLblSubtitulo";
             this.BancosLblSubtitulo.Size = new System.Drawing.Size(281, 27);
             this.BancosLblSubtitulo.TabIndex = 11;
@@ -397,9 +397,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaVista_AutorizacionOrdenes.Properties.Resources.bancos_butti;
-            this.pictureBox1.Location = new System.Drawing.Point(1049, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(1049, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(105, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -407,9 +407,9 @@
             // BancosPbLogo
             // 
             this.BancosPbLogo.Image = global::CapaVista_AutorizacionOrdenes.Properties.Resources.bancos_logo;
-            this.BancosPbLogo.Location = new System.Drawing.Point(19, 13);
+            this.BancosPbLogo.Location = new System.Drawing.Point(49, 12);
             this.BancosPbLogo.Name = "BancosPbLogo";
-            this.BancosPbLogo.Size = new System.Drawing.Size(90, 90);
+            this.BancosPbLogo.Size = new System.Drawing.Size(109, 108);
             this.BancosPbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BancosPbLogo.TabIndex = 12;
             this.BancosPbLogo.TabStop = false;
