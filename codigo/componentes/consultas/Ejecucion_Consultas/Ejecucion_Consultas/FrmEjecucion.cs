@@ -1,34 +1,31 @@
 ﻿using CapaVista_Consultas;
-using CapaVista_Consultas.Componentes;
-using System;
+using System.Windows.Forms;
 
 namespace Ejecucion_Consultas
 {
-    public partial class FrmEjecucion :
-        ClsBaseTerminus
+    public partial class FrmEjecucion : Form
     {
         public FrmEjecucion()
         {
             InitializeComponent();
+            ConsultasUsrCampoRetornado.ConsultasProcLimpiarError();
+            ConsultasUsrPkRetornado.ConsultasProcLimpiarError();
+            consultas1.ConsultasEvtSeleccion += ConsultasMetSeleccionar;
         }
 
-        private void ConsultasMetBtnConsultarClick(
-            object sender,
-            EventArgs e)
+        private void ConsultasMetSeleccionar(object Sender, ClsSeleccionConsulta Evento)
         {
-            using (FrmConsultasSimples FormularioConsultasSimples =
-                new FrmConsultasSimples(
-                    "tblConsulta",
-                    "Pk_Consulta"))
-            {
-                FormularioConsultasSimples.ShowDialog();
+            //Obtener llave primaria del registro seleccionado y mostrarla en el control de usuario
+            string Pk = consultas1.ConsultasFuncObtenerLlavePrimaria(); 
+            ConsultasUsrPkRetornado.Text = Pk;
+            
+            //Obtener un campo del registro seleccionado y mostrarlo en el control de usuario
+            string Campo = consultas1.ConsultasFuncObtenerCampoSeleccionado("tablaConsulta");
+            // ↓ Descomentar para probar esta función ↓
+            //ConsultasUsrCampoRetornado.Text = Campo;
 
-                if (FormularioConsultasSimples.SeleccionRealizada)
-                {
-                    ConsultasTxtId.Text =
-                        FormularioConsultasSimples.IdSeleccionado;
-                }
-            }
+            ConsultasUsrPkRetornado.ConsultasProcMostrarError("Esta es la llave primaria del registro");
+            ConsultasUsrCampoRetornado.ConsultasProcMostrarError("Este es el campo deseado del registro");
         }
     }
 }
