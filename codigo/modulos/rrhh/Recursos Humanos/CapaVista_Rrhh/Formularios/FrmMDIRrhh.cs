@@ -27,7 +27,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 using CapaVista_CierreNominas.Fomularios;
-
+using CapaVista_Nomina.Formularios;
 
 
 namespace CapaVista_Rrhh.Formularios
@@ -343,6 +343,17 @@ namespace CapaVista_Rrhh.Formularios
         private void RrhhBtnCierresNomina_Click(object sender, EventArgs e)
         {
             FrmCierreNominas CierreNominas = new FrmCierreNominas();
+            CierreNominas.ShowDialog();
+        }
+
+        private void FrmMDIRrhh_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RrhhBtnNomina_Click(object sender, EventArgs e)
+        {
+            FrmPercepcionesDeducciones CierreNominas = new FrmPercepcionesDeducciones();
             CierreNominas.ShowDialog();
         }
     }
