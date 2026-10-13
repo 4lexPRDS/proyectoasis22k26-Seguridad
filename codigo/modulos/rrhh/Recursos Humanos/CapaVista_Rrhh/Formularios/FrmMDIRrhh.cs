@@ -578,5 +578,21 @@ namespace CapaVista_Rrhh.Formularios
             FrmCapacitacion Capacitacion = new FrmCapacitacion();
             Capacitacion.ShowDialog();
         }
+
+        private void RrhhBtnPermisosVacaciones_Click(object sender, EventArgs e)
+        {
+            using (var Permisos = new CapaVista_PermisosVacaciones.Formularios.FrmPermisosVacaciones())
+            {
+                Permisos.ShowDialog(this);
+            }
+        }
+
+        private void RrhhBtnEvaluacionDesempeno_Click(object sender, EventArgs e)
+        {
+            using (var Evaluacion = new CapaVista_EvaluacionDesempeño.Formularios.FrmEvaluacionDesempeño())
+            {
+                Evaluacion.ShowDialog(this);
+            }
+        }
     }
 }
