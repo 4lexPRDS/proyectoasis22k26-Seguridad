@@ -132,5 +132,8 @@
   <ItemGroup>
     <None Include="Resources\icono_rrhh.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_nuevo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
