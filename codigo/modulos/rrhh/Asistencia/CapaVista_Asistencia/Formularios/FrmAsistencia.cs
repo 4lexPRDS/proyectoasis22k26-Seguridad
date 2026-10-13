@@ -11,9 +11,9 @@
  *  lista de asistencias registradas con sus filtros. El empleado se
  *  busca por código o por nombre y sus datos se llenan solos.
  * Reglas especificas:
- *  Por ahora es un prototipo con datos de ejemplo, lo que se guarda,
- *  modifica o elimina solo queda en memoria mientras la ventana está
- *  abierta. Si el empleado tiene un permiso aprobado para la fecha, el
+ *  Por ahora es un prototipo no funcional, inicia sin datos y lo que
+ *  se ingresa solo queda en memoria mientras la ventana está abierta.
+ *  Si el empleado tiene un permiso aprobado para la fecha, el
  *  estado queda en Permiso y no se puede cambiar. Las horas trabajadas
  *  y las incidencias se calculan con la jornada del empleado. Es
  *  ventana secundaria, no se puede maximizar.
@@ -87,11 +87,11 @@ namespace CapaVista_Asistencia.Formularios
                 { RrhhCboEstado, RrhhLblErrorEstado }
             };
 
-            RrhhMetCargarDatosEjemplo();
+            RrhhMetCrearTablas();
             RrhhMetLlenarEmpleados();
 
-            RrhhDtpDesde.Value = new DateTime(2026, 10, 1);
-            RrhhDtpHasta.Value = new DateTime(2026, 10, 31);
+            RrhhDtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            RrhhDtpHasta.Value = RrhhDtpDesde.Value.AddMonths(1).AddDays(-1);
             RrhhCboFiltroEstado.SelectedIndex = 0;
 
             _Vista = new DataView(_Asistencias);
@@ -99,9 +99,10 @@ namespace CapaVista_Asistencia.Formularios
             RrhhMetActualizarTotal();
         }
 
-        // ---------------- datos de ejemplo ----------------
+        // ---------------- tablas ----------------
 
-        private void RrhhMetCargarDatosEjemplo()
+        // tienen las columnas que traera la base de datos, por ahora quedan vacias
+        private void RrhhMetCrearTablas()
         {
             _Empleados = new DataTable();
             _Empleados.Columns.Add("idEmpleado", typeof(int));
@@ -114,16 +115,7 @@ namespace CapaVista_Asistencia.Formularios
             _Empleados.Columns.Add("horaInicioJornada", typeof(TimeSpan));
             _Empleados.Columns.Add("horaFinJornada", typeof(TimeSpan));
 
-            RrhhMetAgregarEmpleado(1, "EMP-001", "Juan Pérez", "Administración", "Asistente Administrativo", "Administrativo", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(2, "EMP-002", "María López", "Producción", "Operario", "Operativo", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(3, "EMP-003", "Carlos Gómez", "Ventas", "Vendedor", "Comercial", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(4, "EMP-004", "Ana Martínez", "Recursos Humanos", "Asistente de RRHH", "Administrativo", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(5, "EMP-005", "Luis Rodríguez", "Producción", "Operario", "Operativo", "07:30", "16:30");
-            RrhhMetAgregarEmpleado(6, "EMP-006", "Sofía Ramírez", "Administración", "Auxiliar Administrativo", "Administrativo", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(7, "EMP-007", "Jorge Castillo", "Ventas", "Vendedor", "Comercial", "08:00", "17:00");
-            RrhhMetAgregarEmpleado(8, "EMP-008", "Daniela Torres", "Contabilidad", "Analista Contable", "Administrativo", "08:00", "17:00");
-
-            // lo que vendria del modulo de Permisos y Vacaciones
+            // los permisos vendran del modulo de Permisos y Vacaciones
             _Permisos = new DataTable();
             _Permisos.Columns.Add("idPermiso", typeof(int));
             _Permisos.Columns.Add("idEmpleado", typeof(int));
@@ -132,9 +124,6 @@ namespace CapaVista_Asistencia.Formularios
             _Permisos.Columns.Add("fechaFinPermiso", typeof(DateTime));
             _Permisos.Columns.Add("motivoPermiso", typeof(string));
             _Permisos.Columns.Add("estadoPermiso", typeof(string));
-            _Permisos.Rows.Add(1, 4, "Permiso", new DateTime(2026, 10, 6), new DateTime(2026, 10, 6), "Cita médica", "APROBADO");
-            _Permisos.Rows.Add(2, 7, "Vacaciones", new DateTime(2026, 10, 12), new DateTime(2026, 10, 16), "Vacaciones anuales", "APROBADO");
-            _Permisos.Rows.Add(3, 2, "Permiso", new DateTime(2026, 10, 13), new DateTime(2026, 10, 13), "Trámite personal", "PENDIENTE");
 
             _Asistencias = new DataTable();
             _Asistencias.Columns.Add("idAsistencia", typeof(int));
@@ -151,38 +140,6 @@ namespace CapaVista_Asistencia.Formularios
             _Asistencias.Columns.Add("created_at", typeof(DateTime));
             _Asistencias.Columns.Add("updated_at", typeof(DateTime));
             _Asistencias.Columns.Add("horasTrabajadas", typeof(string));
-
-            RrhhMetAgregarAsistencia(1, 1, 1, "08:00", "17:00", "Presente", "");
-            RrhhMetAgregarAsistencia(2, 2, 2, "07:55", "16:45", "Presente", "Salió antes con permiso del jefe");
-            RrhhMetAgregarAsistencia(3, 3, 3, "08:10", "17:05", "Tardanza", "Tráfico en la entrada a la ciudad");
-            RrhhMetAgregarAsistencia(4, 4, 6, "08:00", "16:30", "Permiso", "Cita médica (salió 16:30)");
-            RrhhMetAgregarAsistencia(5, 5, 7, "07:50", "16:50", "Tardanza", "Llegó a las 07:50");
-            RrhhMetAgregarAsistencia(6, 6, 8, null, null, "Ausente", "Sin justificación");
-            RrhhMetAgregarAsistencia(7, 7, 9, "08:00", "17:00", "Presente", "");
-            RrhhMetAgregarAsistencia(8, 8, 10, "08:05", null, "Presente", "");
-        }
-
-        private void RrhhMetAgregarEmpleado(int Id, string Codigo, string Nombre, string Departamento,
-                                            string Puesto, string TipoPuesto, string Inicio, string Fin)
-        {
-            _Empleados.Rows.Add(Id, Codigo, Nombre, Departamento, Puesto, TipoPuesto,
-                                $"Diurna ({Inicio} - {Fin})", TimeSpan.Parse(Inicio), TimeSpan.Parse(Fin));
-        }
-
-        private void RrhhMetAgregarAsistencia(int IdAsistencia, int IdEmpleado, int Dia, string Entrada,
-                                              string Salida, string Estado, string Observaciones)
-        {
-            DateTime Fecha = new DateTime(2026, 10, Dia);
-            object HoraEntrada = Entrada == null ? (object)DBNull.Value : TimeSpan.Parse(Entrada);
-            object HoraSalida = Salida == null ? (object)DBNull.Value : TimeSpan.Parse(Salida);
-            TimeSpan Registro = Entrada == null ? new TimeSpan(18, 0, 0) : TimeSpan.Parse(Entrada);
-
-            DataRow Fila = _Asistencias.NewRow();
-            Fila["idAsistencia"] = IdAsistencia;
-            Fila["created_at"] = Fecha.Add(Registro);
-            Fila["updated_at"] = Fecha.Add(Salida == null ? Registro : TimeSpan.Parse(Salida));
-            RrhhMetLlenarFila(Fila, IdEmpleado, Fecha, HoraEntrada, HoraSalida, Estado, Observaciones);
-            _Asistencias.Rows.Add(Fila);
         }
 
         private void RrhhMetLlenarFila(DataRow Fila, int IdEmpleado, DateTime Fecha, object Entrada,

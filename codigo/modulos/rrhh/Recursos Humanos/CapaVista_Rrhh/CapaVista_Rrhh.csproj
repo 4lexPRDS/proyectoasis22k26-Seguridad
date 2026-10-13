@@ -37,6 +37,9 @@
     <Reference Include="CapaControlador_Seguridad">
       <HintPath>..\..\..\..\componentes\seguridad\Seguridad\CapaVista_Seguridad\bin\Debug\CapaControlador_Seguridad.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_Asistencia">
+      <HintPath>..\..\Asistencia\CapaVista_Asistencia\bin\Debug\CapaVista_Asistencia.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_CierreNominas">
       <HintPath>..\..\Cierre de Nominas\CapaVista_CierreNominas\bin\Debug\CapaVista_CierreNominas.dll</HintPath>
     </Reference>
@@ -108,12 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Ayudas\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Asistencia\CapaVista_Asistencia\CapaVista_Asistencia.csproj">
-      <Project>{cc16e22e-8e90-485e-b4a0-140164b70f54}</Project>
-      <Name>CapaVista_Asistencia</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
