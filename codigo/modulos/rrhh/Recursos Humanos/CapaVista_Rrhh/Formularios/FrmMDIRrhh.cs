@@ -10,10 +10,11 @@
  *  Tiene el menú lateral con las opciones del módulo, la barra de
  *  arriba con el usuario y el rol, y el panel de bienvenida con el
  *  resumen de indicadores (KPIs), la información del módulo y la
- *  nota de integración.
+ *  nota de integración. Es la única ventana del módulo que se puede
+ *  maximizar, por eso el contenido se acomoda al tamaño que tenga.
  * Reglas especificas:
- *  Por ahora es un prototipo, los botones del menú todavía no abren
- *  ventanas y los números de los KPIs son de ejemplo. El usuario, el
+ *  Por ahora es un prototipo no funcional, los KPIs quedan en 0 y
+ *  solo algunos botones del menú abren su ventana. El usuario, el
  *  rol y los permisos se reciben desde afuera con los métodos
  *  RrhhMetActualizarInfoUsuario y RrhhMetAplicarPermisos, para no
  *  depender de las DLL de Seguridad.
@@ -43,6 +44,15 @@ namespace CapaVista_Rrhh.Formularios
         private Image _FondoNavegador;
         private Bitmap _FondoNavegadorEscalado;
 
+        // medidas del diseño (ya con la escala de la pantalla) para acomodar el dashboard
+        private bool _MedidasListas;
+        private float _Zoom = 1f;
+        private int _Margen, _Separacion, _AnchoKpiBase, _AltoKpiBase, _TopResumen, _OffsetKpi, _OffsetInfo;
+        private int _AltoHeroMin, _MascotaAbajo, _AltoInfoBase, _InfoPad, _DxIcono, _DxNota;
+        private Size _MascotaBase;
+        private readonly Dictionary<Control, KeyValuePair<Rectangle, Font>> _Originales =
+            new Dictionary<Control, KeyValuePair<Rectangle, Font>>();
+
         public FrmMDIRrhh()
         {
             InitializeComponent();
@@ -63,9 +73,202 @@ namespace CapaVista_Rrhh.Formularios
 
         private void FrmMDIRrhh_Load(object sender, EventArgs e)
         {
+            RrhhMetGuardarMedidas();
             RrhhMetPrepararImagenes();
             RrhhMetCargarIconos();
             RrhhMetDarFormaTarjetas();
+            RrhhMetAcomodarDashboard();
+
+            // mas pequeño que esto ya no caben las tarjetas, pero nunca mas grande que la pantalla
+            float Escala;
+            using (Graphics G = CreateGraphics()) Escala = G.DpiX / 96f;
+            Rectangle Area = Screen.FromControl(this).WorkingArea;
+            this.MinimumSize = new Size(Math.Min((int)(1024 * Escala), Area.Width),
+                                        Math.Min((int)(720 * Escala), Area.Height));
+        }
+
+        // se guarda como quedo cada control en el diseño, de ahi se calcula todo al cambiar el tamaño
+        private void RrhhMetGuardarMedidas()
+        {
+            _Margen = RrhhPnlKPI1.Left;
+            _Separacion = RrhhPnlKPI2.Left - RrhhPnlKPI1.Right;
+            _AnchoKpiBase = RrhhPnlKPI1.Width;
+            _AltoKpiBase = RrhhPnlKPI1.Height;
+            _TopResumen = RrhhLblResumen.Top;
+            _OffsetKpi = RrhhPnlKPI1.Top - RrhhLblResumen.Top;
+            _OffsetInfo = RrhhPnlInfo.Top - RrhhPnlKPI1.Bottom;
+            _AltoHeroMin = RrhhBtnAyuda.Bottom + _Separacion;
+            _MascotaBase = RrhhPbMascota.Size;
+            _MascotaAbajo = RrhhPbMascota.Bottom - RrhhLblResumen.Top;
+            _AltoInfoBase = RrhhPnlInfo.Height;
+            _InfoPad = RrhhLblInfo.Left;
+            _DxIcono = RrhhLblIconoNota.Left - RrhhPnlSeparador.Left;
+            _DxNota = RrhhLblNota.Left - RrhhPnlSeparador.Left;
+
+            RrhhMetGuardarControles(RrhhPnlDashboard);
+            _MedidasListas = true;
+        }
+
+        private void RrhhMetGuardarControles(Control Padre)
+        {
+            foreach (Control Hijo in Padre.Controls)
+            {
+                _Originales[Hijo] = new KeyValuePair<Rectangle, Font>(Hijo.Bounds, Hijo.Font);
+                RrhhMetGuardarControles(Hijo);
+            }
+        }
+
+        // con pantallas bajas como 1366 x 768 todo se reduce un poco para que quepa,
+        // en pantallas grandes se queda del tamaño del diseño y solo se estira a lo ancho
+        private void RrhhMetAcomodarDashboard()
+        {
+            if (!_MedidasListas) return;
+
+            int Ancho = RrhhPnlDashboard.Width;
+            int Alto = RrhhPnlDashboard.Height;
+            int AltoBase = _AltoHeroMin + _OffsetKpi + _AltoKpiBase + _OffsetInfo + _AltoInfoBase + _Margen / 2;
+            int AnchoBase = 2 * _Margen + 5 * _Separacion + 6 * (_AnchoKpiBase * 85 / 100);
+
+            float Zoom = Math.Min(1f, Math.Min((float)Alto / AltoBase, (float)Ancho / AnchoBase));
+            Zoom = Math.Max(0.6f, (float)Math.Floor(Zoom * 20) / 20); // de 5 en 5 % para no recalcular a cada rato
+
+            RrhhPnlDashboard.SuspendLayout();
+            RrhhMetAplicarZoom(Zoom);
+            if (RrhhMetAcomodarContenido(Ancho) > Alto)
+                RrhhMetAcomodarContenido(Ancho - SystemInformation.VerticalScrollBarWidth);
+            RrhhPnlDashboard.ResumeLayout();
+        }
+
+        private void RrhhMetAplicarZoom(float Zoom)
+        {
+            if (Zoom == _Zoom) return;
+            _Zoom = Zoom;
+            int Dy = RrhhPnlDashboard.AutoScrollPosition.Y;
+
+            foreach (var Par in _Originales)
+            {
+                Control Control = Par.Key;
+                Rectangle Original = Par.Value.Key;
+                Font FuenteOriginal = Par.Value.Value;
+                int Desplazamiento = Control.Parent == RrhhPnlDashboard ? Dy : 0;
+
+                Control.SetBounds(RrhhMetZ(Original.X), RrhhMetZ(Original.Y) + Desplazamiento,
+                                  RrhhMetZ(Original.Width), RrhhMetZ(Original.Height));
+
+                Font Anterior = Control.Font;
+                Control.Font = Zoom == 1f ? FuenteOriginal
+                    : new Font(FuenteOriginal.FontFamily, FuenteOriginal.Size * Zoom, FuenteOriginal.Style);
+                if (Anterior != FuenteOriginal && Anterior != Control.Font) Anterior.Dispose();
+            }
+
+            // los circulos se vuelven a recortar con el tamaño nuevo
+            foreach (Control Icono in new Control[] { RrhhPnlKPIIcono1, RrhhPnlKPIIcono2, RrhhPnlKPIIcono3,
+                                                      RrhhPnlKPIIcono4, RrhhPnlKPIIcono5, RrhhPnlKPIIcono6, RrhhLblIconoNota })
+            {
+                Region Anterior = Icono.Region;
+                using (GraphicsPath Circulo = new GraphicsPath())
+                {
+                    Circulo.AddEllipse(Icono.ClientRectangle);
+                    Icono.Region = new Region(Circulo);
+                }
+                Anterior?.Dispose();
+            }
+        }
+
+        private int RrhhMetZ(int Valor)
+        {
+            return (int)Math.Round(Valor * _Zoom);
+        }
+
+        // devuelve el alto que ocupa todo el contenido
+        private int RrhhMetAcomodarContenido(int Ancho)
+        {
+            Panel[] Kpis = { RrhhPnlKPI1, RrhhPnlKPI2, RrhhPnlKPI3, RrhhPnlKPI4, RrhhPnlKPI5, RrhhPnlKPI6 };
+            Label[] Textos = { RrhhLblKPI1, RrhhLblKPI2, RrhhLblKPI3, RrhhLblKPI4, RrhhLblKPI5, RrhhLblKPI6 };
+            int Dy = RrhhPnlDashboard.AutoScrollPosition.Y;
+            int Margen = RrhhMetZ(_Margen), Separacion = RrhhMetZ(_Separacion);
+
+            // las 6 tarjetas en una fila, y si ya no caben en dos filas de 3
+            int Columnas = 6;
+            int AnchoKpi = (Ancho - 2 * Margen - 5 * Separacion) / 6;
+            if (AnchoKpi < RrhhMetZ(_AnchoKpiBase) * 4 / 5)
+            {
+                Columnas = 3;
+                AnchoKpi = (Ancho - 2 * Margen - 2 * Separacion) / 3;
+            }
+            int Filas = Kpis.Length / Columnas;
+            int AltoKpi = RrhhMetZ(_AltoKpiBase);
+            int AltoFilas = Filas * AltoKpi + (Filas - 1) * Separacion;
+
+            int AltoInfo = RrhhMetAcomodarInfo(Ancho - 2 * Margen);
+            int AltoAbajo = RrhhMetZ(_OffsetKpi) + AltoFilas + RrhhMetZ(_OffsetInfo) + AltoInfo + Margen / 2;
+
+            // si falta alto se sube el resumen, pero sin tapar el boton de ayuda
+            int YResumen = Math.Max(RrhhMetZ(_AltoHeroMin),
+                Math.Min(RrhhMetZ(_TopResumen), RrhhPnlDashboard.Height - AltoAbajo));
+            int YKpi = YResumen + RrhhMetZ(_OffsetKpi);
+            RrhhLblResumen.Top = YResumen + Dy;
+
+            for (int i = 0; i < Kpis.Length; i++)
+            {
+                int Col = i % Columnas, Fila = i / Columnas;
+                Kpis[i].SetBounds(Margen + Col * (AnchoKpi + Separacion),
+                                  YKpi + Fila * (AltoKpi + Separacion) + Dy, AnchoKpi, AltoKpi);
+                Textos[i].Width = AnchoKpi - Textos[i].Left - 4;
+                RrhhMetRedondear(Kpis[i], 18);
+            }
+
+            int YInfo = YKpi + AltoFilas + RrhhMetZ(_OffsetInfo);
+            RrhhPnlInfo.SetBounds(Margen, YInfo + Dy, Ancho - 2 * Margen, AltoInfo);
+            RrhhMetRedondear(RrhhPnlInfo, 18);
+
+            // la mascota usa el espacio que queda a la derecha del texto
+            int Izq = Math.Max(RrhhLblBienvenido.Right, RrhhLblParrafo.Right) + Margen / 2;
+            int EspacioAncho = Ancho - Margen - Izq;
+            int Piso = YResumen + RrhhMetZ(_MascotaAbajo);
+            float Escala = Math.Min(_Zoom, Math.Min((float)EspacioAncho / _MascotaBase.Width,
+                                                    (float)(Piso - Margen / 4) / _MascotaBase.Height));
+            RrhhPbMascota.Visible = Escala > 0.35f;
+            int AnchoMascota = (int)(_MascotaBase.Width * Escala);
+            int AltoMascota = (int)(_MascotaBase.Height * Escala);
+            RrhhPbMascota.SetBounds(Izq + (EspacioAncho - AnchoMascota) / 2, Piso - AltoMascota + Dy,
+                                    AnchoMascota, AltoMascota);
+
+            return YInfo + AltoInfo + Margen / 2;
+        }
+
+        // reparte el panel de informacion: el texto del modulo a la izquierda y la nota a la derecha
+        private int RrhhMetAcomodarInfo(int AnchoPanel)
+        {
+            int Pad = RrhhMetZ(_InfoPad);
+            int Separador = AnchoPanel * 62 / 100;
+            RrhhPnlSeparador.Left = Separador;
+            RrhhLblIconoNota.Left = Separador + RrhhMetZ(_DxIcono);
+            RrhhLblNotaTitulo.Left = Separador + RrhhMetZ(_DxNota);
+            RrhhLblNota.Left = Separador + RrhhMetZ(_DxNota);
+
+            RrhhLblInfo.Width = Separador - RrhhLblInfo.Left - Pad;
+            RrhhLblNota.Width = AnchoPanel - RrhhLblNota.Left - Pad;
+            RrhhLblInfo.Height = RrhhMetAltoTexto(RrhhLblInfo);
+            RrhhLblNota.Height = RrhhMetAltoTexto(RrhhLblNota);
+
+            int Alto = Math.Max(RrhhMetZ(_AltoInfoBase), Math.Max(RrhhLblInfo.Bottom, RrhhLblNota.Bottom) + Pad / 2);
+            RrhhPnlSeparador.Height = Alto - 2 * RrhhPnlSeparador.Top;
+            return Alto;
+        }
+
+        private static int RrhhMetAltoTexto(Label Etiqueta)
+        {
+            return TextRenderer.MeasureText(Etiqueta.Text, Etiqueta.Font,
+                new Size(Etiqueta.Width, 0), TextFormatFlags.WordBreak).Height + 4;
+        }
+
+        private void RrhhMetRedondear(Control Control, int Radio)
+        {
+            Region Anterior = Control.Region;
+            using (GraphicsPath Ruta = RrhhMetRedondearEsquinas(Control.ClientRectangle, Radio))
+                Control.Region = new Region(Ruta);
+            Anterior?.Dispose();
         }
 
         // los fondos, el logo y la mascota se escalan una sola vez al cargar,
@@ -81,6 +284,7 @@ namespace CapaVista_Rrhh.Formularios
 
             RrhhMetAjustarImagen(RrhhPbLogo);
             RrhhMetAjustarImagen(RrhhPbMascota);
+            RrhhPbMascota.SizeMode = PictureBoxSizeMode.Zoom; // se hace mas pequeña si no cabe
         }
 
         private void RrhhMetEscalarFondoDashboard()
@@ -205,7 +409,7 @@ namespace CapaVista_Rrhh.Formularios
             foreach (Control Tarjeta in RrhhPnlDashboard.Controls)
             {
                 if (!(Tarjeta is Panel) || !Tarjeta.Name.StartsWith("RrhhPnlKPI")) continue;
-                Tarjeta.Region = new Region(RrhhMetRedondearEsquinas(Tarjeta.ClientRectangle, 18));
+                RrhhMetRedondear(Tarjeta, 18);
 
                 foreach (Control Icono in Tarjeta.Controls)
                 {
@@ -215,7 +419,7 @@ namespace CapaVista_Rrhh.Formularios
                     {
                         Image Original = Icono.BackgroundImage;
                         Icono.BackgroundImage = RrhhMetEscalarImagen(Original, Icono.Width, Icono.Height, true);
-                        Icono.BackgroundImageLayout = ImageLayout.None;
+                        Icono.BackgroundImageLayout = ImageLayout.Zoom;
                         Original.Dispose();
                     }
 
@@ -225,7 +429,7 @@ namespace CapaVista_Rrhh.Formularios
                 }
             }
 
-            RrhhPnlInfo.Region = new Region(RrhhMetRedondearEsquinas(RrhhPnlInfo.ClientRectangle, 18));
+            RrhhMetRedondear(RrhhPnlInfo, 18);
             GraphicsPath CirculoNota = new GraphicsPath();
             CirculoNota.AddEllipse(RrhhLblIconoNota.ClientRectangle);
             RrhhLblIconoNota.Region = new Region(CirculoNota);
@@ -241,6 +445,7 @@ namespace CapaVista_Rrhh.Formularios
         {
             RrhhPnlDashboard.Region = new Region(RrhhMetRedondearEsquinas(RrhhPnlDashboard.ClientRectangle, 20));
             RrhhMetEscalarFondoDashboard();
+            RrhhMetAcomodarDashboard();
         }
 
         private void RrhhPnlNavegador_Resize(object sender, EventArgs e)
@@ -320,6 +525,15 @@ namespace CapaVista_Rrhh.Formularios
 
             RrhhPnlNavegador.ResumeLayout();
             this.ResumeLayout();
+        }
+
+        // la ventana de asistencia esta en su propia DLL (CapaVista_Asistencia)
+        private void RrhhBtnAsistencia_Click(object sender, EventArgs e)
+        {
+            using (var Asistencia = new CapaVista_Asistencia.Formularios.FrmAsistencia())
+            {
+                Asistencia.ShowDialog(this);
+            }
         }
 
         private void RrhhBtnCerrarSesion_Click(object sender, EventArgs e)
