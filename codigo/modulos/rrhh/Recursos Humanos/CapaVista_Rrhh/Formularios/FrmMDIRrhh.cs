@@ -28,6 +28,7 @@ using System.Drawing.Imaging;
 using System.Windows.Forms;
 using CapaVista_CierreNominas.Fomularios;
 using CapaVista_Nomina.Formularios;
+using CapaVista_Empleado.Formularios;
 
 
 namespace CapaVista_Rrhh.Formularios
@@ -337,7 +338,8 @@ namespace CapaVista_Rrhh.Formularios
 
         private void RrhhBtnEmpleados_Click(object sender, EventArgs e)
         {
-            
+            FrmEmpleados empleados = new FrmEmpleados();
+            empleados.ShowDialog();
         }
 
         private void RrhhBtnCierresNomina_Click(object sender, EventArgs e)
@@ -355,6 +357,12 @@ namespace CapaVista_Rrhh.Formularios
         {
             FrmPercepcionesDeducciones CierreNominas = new FrmPercepcionesDeducciones();
             CierreNominas.ShowDialog();
+        }
+
+        private void RrhhBtnCapacitaciones_Click(object sender, EventArgs e)
+        {
+            FrmCapacitacion Capacitacion = new FrmCapacitacion();
+            Capacitacion.ShowDialog();
         }
     }
 }
