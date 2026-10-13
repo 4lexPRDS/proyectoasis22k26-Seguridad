@@ -542,7 +542,7 @@
             this.RrhhLblKPIResp1.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp1.Name = "RrhhLblKPIResp1";
             this.RrhhLblKPIResp1.TabIndex = 1;
-            this.RrhhLblKPIResp1.Text = "48";
+            this.RrhhLblKPIResp1.Text = "0";
             // 
             // RrhhLblKPI1
             // 
@@ -586,7 +586,7 @@
             this.RrhhLblKPIResp2.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp2.Name = "RrhhLblKPIResp2";
             this.RrhhLblKPIResp2.TabIndex = 1;
-            this.RrhhLblKPIResp2.Text = "3";
+            this.RrhhLblKPIResp2.Text = "0";
             // 
             // RrhhLblKPI2
             // 
@@ -630,7 +630,7 @@
             this.RrhhLblKPIResp3.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp3.Name = "RrhhLblKPIResp3";
             this.RrhhLblKPIResp3.TabIndex = 1;
-            this.RrhhLblKPIResp3.Text = "12";
+            this.RrhhLblKPIResp3.Text = "0";
             // 
             // RrhhLblKPI3
             // 
@@ -674,7 +674,7 @@
             this.RrhhLblKPIResp4.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp4.Name = "RrhhLblKPIResp4";
             this.RrhhLblKPIResp4.TabIndex = 1;
-            this.RrhhLblKPIResp4.Text = "8";
+            this.RrhhLblKPIResp4.Text = "0";
             // 
             // RrhhLblKPI4
             // 
@@ -718,7 +718,7 @@
             this.RrhhLblKPIResp5.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp5.Name = "RrhhLblKPIResp5";
             this.RrhhLblKPIResp5.TabIndex = 1;
-            this.RrhhLblKPIResp5.Text = "2";
+            this.RrhhLblKPIResp5.Text = "0";
             // 
             // RrhhLblKPI5
             // 
@@ -762,7 +762,7 @@
             this.RrhhLblKPIResp6.Location = new System.Drawing.Point(10, 88);
             this.RrhhLblKPIResp6.Name = "RrhhLblKPIResp6";
             this.RrhhLblKPIResp6.TabIndex = 1;
-            this.RrhhLblKPIResp6.Text = "5";
+            this.RrhhLblKPIResp6.Text = "0";
             // 
             // RrhhLblKPI6
             // 

@@ -13,8 +13,8 @@
  *  nota de integración. Es la única ventana del módulo que se puede
  *  maximizar, por eso el contenido se acomoda al tamaño que tenga.
  * Reglas especificas:
- *  Por ahora es un prototipo, los botones del menú todavía no abren
- *  ventanas y los números de los KPIs son de ejemplo. El usuario, el
+ *  Por ahora es un prototipo no funcional, los KPIs quedan en 0 y
+ *  solo algunos botones del menú abren su ventana. El usuario, el
  *  rol y los permisos se reciben desde afuera con los métodos
  *  RrhhMetActualizarInfoUsuario y RrhhMetAplicarPermisos, para no
  *  depender de las DLL de Seguridad.
