@@ -48,6 +48,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.RecDedBtnExcepciones = new System.Windows.Forms.Button();
             this.RecDedBtnNomina = new System.Windows.Forms.Button();
             this.PerDedDgvLista = new System.Windows.Forms.DataGridView();
@@ -81,8 +83,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PerDedPbIconoPerDed = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -310,6 +310,30 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(500, 283);
             this.panel3.TabIndex = 13;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Lucida Fax", 13F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.label17.Location = new System.Drawing.Point(84, 177);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(291, 25);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Asignación Excepciones";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Lucida Fax", 13F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.label16.Location = new System.Drawing.Point(84, 79);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(356, 25);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Accede al calculo de nominas";
             // 
             // RecDedBtnExcepciones
             // 
@@ -677,30 +701,6 @@
             this.PerDedPbIconoPerDed.TabIndex = 0;
             this.PerDedPbIconoPerDed.TabStop = false;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Lucida Fax", 13F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label16.Location = new System.Drawing.Point(84, 79);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(356, 25);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Accede al calculo de nominas";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Lucida Fax", 13F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.label17.Location = new System.Drawing.Point(84, 177);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(291, 25);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Asignación Excepciones";
-            // 
             // FrmPercepcionesDeducciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -732,7 +732,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmPercepcionesDeducciones";
-            this.Text = "9601 - Percepciones y Deducciones";
+            this.Text = "9501 - Percepciones y Deducciones";
             this.Load += new System.EventHandler(this.FrmNominas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
