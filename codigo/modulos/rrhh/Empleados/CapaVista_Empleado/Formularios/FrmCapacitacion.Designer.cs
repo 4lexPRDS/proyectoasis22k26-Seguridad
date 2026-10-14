@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCapacitacion));
             this.RrhhLblSubInformacionCapacitacion = new System.Windows.Forms.Label();
             this.RrhhLblSubTituloInfoCapacitacion = new System.Windows.Forms.Label();
             this.RrhhLblSubTituloCapacitacion = new System.Windows.Forms.Label();
@@ -459,6 +460,7 @@
             this.Controls.Add(this.RrhhLblSubTituloCapacitacion);
             this.Controls.Add(this.RrhhPnlEncabezadoCapacitacion);
             this.Controls.Add(this.RrhhPnlSubEncabezadoCapacitacion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCapacitacion";
             this.Text = "9301 - FrmCapacitacion";
             this.RrhhPnlInstCapacitacion.ResumeLayout(false);
