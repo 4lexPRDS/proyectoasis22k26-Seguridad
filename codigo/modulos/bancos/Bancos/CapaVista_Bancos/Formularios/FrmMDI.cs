@@ -11,6 +11,9 @@ using CapaVista_EnlaceB.Formularios;
 using CapaVista_MovimientosBancarios.Formularios;
 using CapaVista_AutorizacionOrdenes;
 using CapaVista_AutorizacionOrdenes.Formularios;
+using CapaVista_DisponibilidadDiaria.Formularios;
+using CapaVista_TipoCambio.Formularios;
+
 
 namespace CapaVista_Bancos.Formularios
 {
@@ -61,6 +64,18 @@ namespace CapaVista_Bancos.Formularios
         private void BancosBtnEnlace_Click(object sender, EventArgs e)
         {
             FrmEnlaceOtrosModulos Enlace = new FrmEnlaceOtrosModulos();
+            Enlace.ShowDialog();
+        }
+
+        private void BancosBtnDisp_Click(object sender, EventArgs e)
+        {
+            FrmDisponibilidadDiaria Enlace = new FrmDisponibilidadDiaria();
+            Enlace.ShowDialog();
+        }
+
+        private void BancosBtnCambio_Click(object sender, EventArgs e)
+        {
+            FrmTipoCambio Enlace = new FrmTipoCambio();
             Enlace.ShowDialog();
         }
     }

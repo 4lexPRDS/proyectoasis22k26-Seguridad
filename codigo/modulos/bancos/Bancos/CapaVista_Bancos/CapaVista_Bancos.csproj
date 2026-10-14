@@ -37,11 +37,17 @@
     <Reference Include="CapaVista_AutorizacionOrdenes">
       <HintPath>..\..\Autorizacion_OrdenesCompra\CapaVista_AutorizacionOrdenes\bin\Debug\CapaVista_AutorizacionOrdenes.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVista_DisponibilidadDiaria">
+      <HintPath>..\..\DisponibilidadDiaria\CapaVista_DisponibilidadDiaria\bin\Debug\CapaVista_DisponibilidadDiaria.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVista_EnlaceB">
       <HintPath>..\..\Enlace_Otros_Modulos\CapaVista_EnlaceB\bin\Debug\CapaVista_EnlaceB.dll</HintPath>
     </Reference>
     <Reference Include="CapaVista_MovimientosBancarios">
       <HintPath>..\..\Movimientos_Bancarios\CapaVista_MovimientosBancarios\bin\Debug\CapaVista_MovimientosBancarios.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVista_TipoCambio">
+      <HintPath>..\..\TipoCambio\CapaVista_TipoCambio\bin\Debug\CapaVista_TipoCambio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
