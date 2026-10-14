@@ -104,5 +104,11 @@
   <ItemGroup>
     <None Include="Resources\Pnl_fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_liquidacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
