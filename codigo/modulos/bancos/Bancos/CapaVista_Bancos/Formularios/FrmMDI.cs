@@ -13,6 +13,7 @@ using CapaVista_AutorizacionOrdenes;
 using CapaVista_AutorizacionOrdenes.Formularios;
 using CapaVista_DisponibilidadDiaria.Formularios;
 using CapaVista_TipoCambio.Formularios;
+using CapaVista_ConciliacionBancaria.Formularios;
 
 
 namespace CapaVista_Bancos.Formularios
@@ -77,6 +78,12 @@ namespace CapaVista_Bancos.Formularios
         {
             FrmTipoCambio Enlace = new FrmTipoCambio();
             Enlace.ShowDialog();
+        }
+
+        private void BancosBtnConBan_Click(object sender, EventArgs e)
+        {
+            FrmConciliacion Conciliacion = new FrmConciliacion();
+            Conciliacion.ShowDialog();
         }
     }
 }

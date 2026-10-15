@@ -95,7 +95,7 @@
             this.BancosPnlFondo.Controls.Add(this.BancosPnlDashboard);
             this.BancosPnlFondo.Controls.Add(this.BancosPnlNavegador);
             this.BancosPnlFondo.Location = new System.Drawing.Point(0, 0);
-            this.BancosPnlFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlFondo.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlFondo.Name = "BancosPnlFondo";
             this.BancosPnlFondo.Size = new System.Drawing.Size(2053, 1265);
             this.BancosPnlFondo.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.BancosLblUsuarioRol.Location = new System.Drawing.Point(832, 17);
             this.BancosLblUsuarioRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblUsuarioRol.Name = "BancosLblUsuarioRol";
-            this.BancosLblUsuarioRol.Size = new System.Drawing.Size(169, 25);
+            this.BancosLblUsuarioRol.Size = new System.Drawing.Size(140, 20);
             this.BancosLblUsuarioRol.TabIndex = 12;
             this.BancosLblUsuarioRol.Text = "Rol:                ";
             // 
@@ -122,7 +122,7 @@
             this.BancosLblUsuario.Location = new System.Drawing.Point(513, 17);
             this.BancosLblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblUsuario.Name = "BancosLblUsuario";
-            this.BancosLblUsuario.Size = new System.Drawing.Size(269, 25);
+            this.BancosLblUsuario.Size = new System.Drawing.Size(223, 20);
             this.BancosLblUsuario.TabIndex = 11;
             this.BancosLblUsuario.Text = "Usuario:                       ";
             // 
@@ -132,7 +132,7 @@
             this.BancosBtnBurger.BackgroundImage = global::CapaVista_Bancos.Properties.Resources.burger;
             this.BancosBtnBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnBurger.Location = new System.Drawing.Point(428, 10);
-            this.BancosBtnBurger.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnBurger.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnBurger.Name = "BancosBtnBurger";
             this.BancosBtnBurger.Size = new System.Drawing.Size(60, 42);
             this.BancosBtnBurger.TabIndex = 2;
@@ -157,7 +157,7 @@
             this.BancosPnlDashboard.Controls.Add(this.BancosBtnAyuda);
             this.BancosPnlDashboard.Controls.Add(this.BancosPbButti);
             this.BancosPnlDashboard.Location = new System.Drawing.Point(412, 59);
-            this.BancosPnlDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlDashboard.Name = "BancosPnlDashboard";
             this.BancosPnlDashboard.Size = new System.Drawing.Size(1611, 875);
             this.BancosPnlDashboard.TabIndex = 1;
@@ -171,7 +171,7 @@
             this.BancosLblResumen.Location = new System.Drawing.Point(92, 453);
             this.BancosLblResumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblResumen.Name = "BancosLblResumen";
-            this.BancosLblResumen.Size = new System.Drawing.Size(494, 48);
+            this.BancosLblResumen.Size = new System.Drawing.Size(395, 40);
             this.BancosLblResumen.TabIndex = 10;
             this.BancosLblResumen.Text = "Resumen del Sistema";
             // 
@@ -184,7 +184,7 @@
             this.BancosLblParrafo.Location = new System.Drawing.Point(92, 255);
             this.BancosLblParrafo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblParrafo.Name = "BancosLblParrafo";
-            this.BancosLblParrafo.Size = new System.Drawing.Size(553, 50);
+            this.BancosLblParrafo.Size = new System.Drawing.Size(433, 40);
             this.BancosLblParrafo.TabIndex = 9;
             this.BancosLblParrafo.Text = "Gestión integral de los movimientos bancarios\r\ny el flujo monetario de la empresa" +
     ".";
@@ -198,7 +198,7 @@
             this.BancosLblModulo.Location = new System.Drawing.Point(92, 190);
             this.BancosLblModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblModulo.Name = "BancosLblModulo";
-            this.BancosLblModulo.Size = new System.Drawing.Size(424, 48);
+            this.BancosLblModulo.Size = new System.Drawing.Size(340, 40);
             this.BancosLblModulo.TabIndex = 8;
             this.BancosLblModulo.Text = "Módulo de Bancos";
             // 
@@ -211,7 +211,7 @@
             this.BancosLblBienvenido.Location = new System.Drawing.Point(92, 95);
             this.BancosLblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblBienvenido.Name = "BancosLblBienvenido";
-            this.BancosLblBienvenido.Size = new System.Drawing.Size(524, 85);
+            this.BancosLblBienvenido.Size = new System.Drawing.Size(418, 68);
             this.BancosLblBienvenido.TabIndex = 7;
             this.BancosLblBienvenido.Text = "¡Bienvenido!";
             // 
@@ -223,7 +223,7 @@
             this.BancosPnlContexto.Controls.Add(this.BancosLblContexto);
             this.BancosPnlContexto.Controls.Add(this.BancosLblNota);
             this.BancosPnlContexto.Location = new System.Drawing.Point(92, 757);
-            this.BancosPnlContexto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlContexto.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlContexto.Name = "BancosPnlContexto";
             this.BancosPnlContexto.Size = new System.Drawing.Size(1427, 96);
             this.BancosPnlContexto.TabIndex = 6;
@@ -237,7 +237,7 @@
             this.BancosLblContexto.Location = new System.Drawing.Point(45, 11);
             this.BancosLblContexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblContexto.Name = "BancosLblContexto";
-            this.BancosLblContexto.Size = new System.Drawing.Size(769, 75);
+            this.BancosLblContexto.Size = new System.Drawing.Size(602, 60);
             this.BancosLblContexto.TabIndex = 11;
             this.BancosLblContexto.Text = "Módulo encargado de permitir y generar movimientos bancarios;\r\ncomparando y asegu" +
     "randose de verificar los resultados por cada\r\nmes, disponiendo de accesibilidad " +
@@ -252,7 +252,7 @@
             this.BancosLblNota.Location = new System.Drawing.Point(1039, 7);
             this.BancosLblNota.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblNota.Name = "BancosLblNota";
-            this.BancosLblNota.Size = new System.Drawing.Size(240, 25);
+            this.BancosLblNota.Size = new System.Drawing.Size(187, 20);
             this.BancosLblNota.TabIndex = 11;
             this.BancosLblNota.Text = "Nota de Integración";
             // 
@@ -264,7 +264,7 @@
             this.BancosPnlKPI3.Controls.Add(this.SeguridadLblKPILbl3);
             this.BancosPnlKPI3.Controls.Add(this.BancosLblKPIResp3);
             this.BancosPnlKPI3.Location = new System.Drawing.Point(575, 534);
-            this.BancosPnlKPI3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI3.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI3.Name = "BancosPnlKPI3";
             this.BancosPnlKPI3.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI3.TabIndex = 5;
@@ -278,7 +278,7 @@
             this.SeguridadLblKPILbl3.Location = new System.Drawing.Point(41, 146);
             this.SeguridadLblKPILbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPILbl3.Name = "SeguridadLblKPILbl3";
-            this.SeguridadLblKPILbl3.Size = new System.Drawing.Size(135, 50);
+            this.SeguridadLblKPILbl3.Size = new System.Drawing.Size(105, 40);
             this.SeguridadLblKPILbl3.TabIndex = 14;
             this.SeguridadLblKPILbl3.Text = "    Pagos\r\nGenerados";
             // 
@@ -291,7 +291,7 @@
             this.BancosLblKPIResp3.Location = new System.Drawing.Point(89, 107);
             this.BancosLblKPIResp3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp3.Name = "BancosLblKPIResp3";
-            this.BancosLblKPIResp3.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp3.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp3.TabIndex = 14;
             this.BancosLblKPIResp3.Text = "0";
             // 
@@ -303,7 +303,7 @@
             this.BancosPnlKPI4.Controls.Add(this.SeguridadLblKPILbl4);
             this.BancosPnlKPI4.Controls.Add(this.BancosLblKPIResp4);
             this.BancosPnlKPI4.Location = new System.Drawing.Point(816, 533);
-            this.BancosPnlKPI4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI4.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI4.Name = "BancosPnlKPI4";
             this.BancosPnlKPI4.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI4.TabIndex = 4;
@@ -317,7 +317,7 @@
             this.SeguridadLblKPILbl4.Location = new System.Drawing.Point(57, 148);
             this.SeguridadLblKPILbl4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPILbl4.Name = "SeguridadLblKPILbl4";
-            this.SeguridadLblKPILbl4.Size = new System.Drawing.Size(105, 50);
+            this.SeguridadLblKPILbl4.Size = new System.Drawing.Size(82, 40);
             this.SeguridadLblKPILbl4.TabIndex = 13;
             this.SeguridadLblKPILbl4.Text = "Cuentas\r\n Activas";
             // 
@@ -330,7 +330,7 @@
             this.BancosLblKPIResp4.Location = new System.Drawing.Point(92, 108);
             this.BancosLblKPIResp4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp4.Name = "BancosLblKPIResp4";
-            this.BancosLblKPIResp4.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp4.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp4.TabIndex = 15;
             this.BancosLblKPIResp4.Text = "0";
             // 
@@ -342,7 +342,7 @@
             this.BancosPnlKPI6.Controls.Add(this.label1);
             this.BancosPnlKPI6.Controls.Add(this.BancosLblKPIResp6);
             this.BancosPnlKPI6.Location = new System.Drawing.Point(1299, 533);
-            this.BancosPnlKPI6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI6.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI6.Name = "BancosPnlKPI6";
             this.BancosPnlKPI6.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI6.TabIndex = 4;
@@ -356,7 +356,7 @@
             this.label1.Location = new System.Drawing.Point(75, 148);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 50);
+            this.label1.Size = new System.Drawing.Size(58, 40);
             this.label1.TabIndex = 13;
             this.label1.Text = "Saldo\r\nTotal";
             // 
@@ -369,7 +369,7 @@
             this.BancosLblKPIResp6.Location = new System.Drawing.Point(92, 108);
             this.BancosLblKPIResp6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp6.Name = "BancosLblKPIResp6";
-            this.BancosLblKPIResp6.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp6.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp6.TabIndex = 12;
             this.BancosLblKPIResp6.Text = "0";
             // 
@@ -381,7 +381,7 @@
             this.BancosPnlKPI5.Controls.Add(this.label2);
             this.BancosPnlKPI5.Controls.Add(this.BancosLblKPIResp5);
             this.BancosPnlKPI5.Location = new System.Drawing.Point(1057, 533);
-            this.BancosPnlKPI5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI5.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI5.Name = "BancosPnlKPI5";
             this.BancosPnlKPI5.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI5.TabIndex = 4;
@@ -395,7 +395,7 @@
             this.label2.Location = new System.Drawing.Point(35, 148);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 50);
+            this.label2.Size = new System.Drawing.Size(121, 40);
             this.label2.TabIndex = 16;
             this.label2.Text = "Proveedores\r\n    Activos";
             // 
@@ -408,7 +408,7 @@
             this.BancosLblKPIResp5.Location = new System.Drawing.Point(92, 108);
             this.BancosLblKPIResp5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp5.Name = "BancosLblKPIResp5";
-            this.BancosLblKPIResp5.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp5.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp5.TabIndex = 12;
             this.BancosLblKPIResp5.Text = "0";
             // 
@@ -420,7 +420,7 @@
             this.BancosPnlKPI2.Controls.Add(this.SeguridadLblKPILbl2);
             this.BancosPnlKPI2.Controls.Add(this.BancosLblKPIResp2);
             this.BancosPnlKPI2.Location = new System.Drawing.Point(333, 534);
-            this.BancosPnlKPI2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI2.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI2.Name = "BancosPnlKPI2";
             this.BancosPnlKPI2.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI2.TabIndex = 3;
@@ -434,7 +434,7 @@
             this.SeguridadLblKPILbl2.Location = new System.Drawing.Point(8, 151);
             this.SeguridadLblKPILbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPILbl2.Name = "SeguridadLblKPILbl2";
-            this.SeguridadLblKPILbl2.Size = new System.Drawing.Size(189, 40);
+            this.SeguridadLblKPILbl2.Size = new System.Drawing.Size(154, 32);
             this.SeguridadLblKPILbl2.TabIndex = 13;
             this.SeguridadLblKPILbl2.Text = "Ordenes de Compra\r\n      Autorizadas";
             // 
@@ -447,7 +447,7 @@
             this.BancosLblKPIResp2.Location = new System.Drawing.Point(91, 107);
             this.BancosLblKPIResp2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp2.Name = "BancosLblKPIResp2";
-            this.BancosLblKPIResp2.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp2.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp2.TabIndex = 13;
             this.BancosLblKPIResp2.Text = "0";
             // 
@@ -459,7 +459,7 @@
             this.BancosPnlKPI1.Controls.Add(this.SeguridadLblKPILbl1);
             this.BancosPnlKPI1.Controls.Add(this.BancosLblKPIResp1);
             this.BancosPnlKPI1.Location = new System.Drawing.Point(92, 534);
-            this.BancosPnlKPI1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlKPI1.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlKPI1.Name = "BancosPnlKPI1";
             this.BancosPnlKPI1.Size = new System.Drawing.Size(220, 203);
             this.BancosPnlKPI1.TabIndex = 2;
@@ -473,7 +473,7 @@
             this.SeguridadLblKPILbl1.Location = new System.Drawing.Point(28, 146);
             this.SeguridadLblKPILbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SeguridadLblKPILbl1.Name = "SeguridadLblKPILbl1";
-            this.SeguridadLblKPILbl1.Size = new System.Drawing.Size(161, 50);
+            this.SeguridadLblKPILbl1.Size = new System.Drawing.Size(126, 40);
             this.SeguridadLblKPILbl1.TabIndex = 12;
             this.SeguridadLblKPILbl1.Text = "Movimientos\r\n   Bancarios";
             // 
@@ -486,7 +486,7 @@
             this.BancosLblKPIResp1.Location = new System.Drawing.Point(91, 107);
             this.BancosLblKPIResp1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BancosLblKPIResp1.Name = "BancosLblKPIResp1";
-            this.BancosLblKPIResp1.Size = new System.Drawing.Size(40, 40);
+            this.BancosLblKPIResp1.Size = new System.Drawing.Size(32, 32);
             this.BancosLblKPIResp1.TabIndex = 11;
             this.BancosLblKPIResp1.Text = "0";
             // 
@@ -496,7 +496,7 @@
             this.BancosBtnAyuda.BackgroundImage = global::CapaVista_Bancos.Properties.Resources.bancos_ayudas;
             this.BancosBtnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnAyuda.Location = new System.Drawing.Point(92, 321);
-            this.BancosBtnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnAyuda.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnAyuda.Name = "BancosBtnAyuda";
             this.BancosBtnAyuda.Size = new System.Drawing.Size(112, 97);
             this.BancosBtnAyuda.TabIndex = 0;
@@ -508,7 +508,7 @@
             this.BancosPbButti.BackgroundImage = global::CapaVista_Bancos.Properties.Resources.bancos_butti;
             this.BancosPbButti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosPbButti.Location = new System.Drawing.Point(699, 16);
-            this.BancosPbButti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPbButti.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPbButti.Name = "BancosPbButti";
             this.BancosPbButti.Size = new System.Drawing.Size(417, 511);
             this.BancosPbButti.TabIndex = 1;
@@ -529,7 +529,7 @@
             this.BancosPnlNavegador.Controls.Add(this.BancosBtnMovBan);
             this.BancosPnlNavegador.Controls.Add(this.BancosPbLogo);
             this.BancosPnlNavegador.Location = new System.Drawing.Point(28, 17);
-            this.BancosPnlNavegador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPnlNavegador.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPnlNavegador.Name = "BancosPnlNavegador";
             this.BancosPnlNavegador.Size = new System.Drawing.Size(360, 917);
             this.BancosPnlNavegador.TabIndex = 0;
@@ -541,7 +541,7 @@
             this.BancosBtnCerrarSes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnCerrarSes.Location = new System.Drawing.Point(13, 688);
-            this.BancosBtnCerrarSes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnCerrarSes.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnCerrarSes.Name = "BancosBtnCerrarSes";
             this.BancosBtnCerrarSes.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnCerrarSes.TabIndex = 10;
@@ -554,7 +554,7 @@
             this.BancosBtnGenPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnGenPagos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnGenPagos.Location = new System.Drawing.Point(12, 559);
-            this.BancosBtnGenPagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnGenPagos.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnGenPagos.Name = "BancosBtnGenPagos";
             this.BancosBtnGenPagos.Size = new System.Drawing.Size(340, 52);
             this.BancosBtnGenPagos.TabIndex = 7;
@@ -567,7 +567,7 @@
             this.BancosBtnCierreBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnCierreBan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnCierreBan.Location = new System.Drawing.Point(13, 623);
-            this.BancosBtnCierreBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnCierreBan.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnCierreBan.Name = "BancosBtnCierreBan";
             this.BancosBtnCierreBan.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnCierreBan.TabIndex = 9;
@@ -580,7 +580,7 @@
             this.BancosBtnAutoCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnAutoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnAutoCompra.Location = new System.Drawing.Point(12, 492);
-            this.BancosBtnAutoCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnAutoCompra.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnAutoCompra.Name = "BancosBtnAutoCompra";
             this.BancosBtnAutoCompra.Size = new System.Drawing.Size(340, 52);
             this.BancosBtnAutoCompra.TabIndex = 6;
@@ -594,7 +594,7 @@
             this.BancosBtnCambio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnCambio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnCambio.Location = new System.Drawing.Point(13, 427);
-            this.BancosBtnCambio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnCambio.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnCambio.Name = "BancosBtnCambio";
             this.BancosBtnCambio.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnCambio.TabIndex = 5;
@@ -608,7 +608,7 @@
             this.BancosBtnDisp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnDisp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnDisp.Location = new System.Drawing.Point(13, 362);
-            this.BancosBtnDisp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnDisp.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnDisp.Name = "BancosBtnDisp";
             this.BancosBtnDisp.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnDisp.TabIndex = 4;
@@ -622,7 +622,7 @@
             this.BancosBtnEnlace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnEnlace.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnEnlace.Location = new System.Drawing.Point(13, 297);
-            this.BancosBtnEnlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnEnlace.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnEnlace.Name = "BancosBtnEnlace";
             this.BancosBtnEnlace.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnEnlace.TabIndex = 3;
@@ -636,11 +636,12 @@
             this.BancosBtnConBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnConBan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnConBan.Location = new System.Drawing.Point(13, 231);
-            this.BancosBtnConBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnConBan.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnConBan.Name = "BancosBtnConBan";
             this.BancosBtnConBan.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnConBan.TabIndex = 2;
             this.BancosBtnConBan.UseVisualStyleBackColor = false;
+            this.BancosBtnConBan.Click += new System.EventHandler(this.BancosBtnConBan_Click);
             // 
             // BancosBtnMovBan
             // 
@@ -649,7 +650,7 @@
             this.BancosBtnMovBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnMovBan.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BancosBtnMovBan.Location = new System.Drawing.Point(13, 166);
-            this.BancosBtnMovBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosBtnMovBan.Margin = new System.Windows.Forms.Padding(4);
             this.BancosBtnMovBan.Name = "BancosBtnMovBan";
             this.BancosBtnMovBan.Size = new System.Drawing.Size(352, 52);
             this.BancosBtnMovBan.TabIndex = 1;
@@ -662,7 +663,7 @@
             this.BancosPbLogo.BackgroundImage = global::CapaVista_Bancos.Properties.Resources.bancos_logo;
             this.BancosPbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosPbLogo.Location = new System.Drawing.Point(93, 11);
-            this.BancosPbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BancosPbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BancosPbLogo.Name = "BancosPbLogo";
             this.BancosPbLogo.Size = new System.Drawing.Size(177, 156);
             this.BancosPbLogo.TabIndex = 0;
@@ -676,7 +677,7 @@
             this.Controls.Add(this.BancosPnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMDIBancos";
             this.Text = "8000 - MDI Principal de Bancos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

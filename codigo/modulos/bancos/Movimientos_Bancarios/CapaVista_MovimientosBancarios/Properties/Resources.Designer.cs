@@ -103,6 +103,16 @@ namespace CapaVista_MovimientosBancarios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap movbac_butti3 {
+            get {
+                object obj = ResourceManager.GetObject("movbac_butti3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap movbac_contenedor {
             get {
                 object obj = ResourceManager.GetObject("movbac_contenedor", resourceCulture);
@@ -123,9 +133,29 @@ namespace CapaVista_MovimientosBancarios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap movbac_movbac {
+            get {
+                object obj = ResourceManager.GetObject("movbac_movbac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap movbac_navegador {
             get {
                 object obj = ResourceManager.GetObject("movbac_navegador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movbac_titulo {
+            get {
+                object obj = ResourceManager.GetObject("movbac_titulo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

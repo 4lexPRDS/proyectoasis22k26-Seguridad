@@ -118,5 +118,14 @@
   <ItemGroup>
     <None Include="Resouces\bancos_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouces\movbac_titulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouces\movbac_movbac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouces\movbac_butti3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
