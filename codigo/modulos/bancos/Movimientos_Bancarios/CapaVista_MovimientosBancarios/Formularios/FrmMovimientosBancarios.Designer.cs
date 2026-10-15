@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovimientosBancarios));
             this.BancosPnlFondo = new System.Windows.Forms.Panel();
             this.BancosScContenedor = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BancosPbLogo = new System.Windows.Forms.PictureBox();
             this.BancosBtnMovimientos = new System.Windows.Forms.Button();
             this.BancosBtnLista = new System.Windows.Forms.Button();
             this.BancosBtnCheques = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BancosPnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BancosScContenedor)).BeginInit();
             this.BancosScContenedor.Panel1.SuspendLayout();
@@ -48,13 +48,15 @@
             this.BancosPnlFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
             this.BancosPnlFondo.Controls.Add(this.BancosScContenedor);
             this.BancosPnlFondo.Location = new System.Drawing.Point(0, 0);
+            this.BancosPnlFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosPnlFondo.Name = "BancosPnlFondo";
-            this.BancosPnlFondo.Size = new System.Drawing.Size(1039, 635);
+            this.BancosPnlFondo.Size = new System.Drawing.Size(1385, 782);
             this.BancosPnlFondo.TabIndex = 0;
             // 
             // BancosScContenedor
             // 
-            this.BancosScContenedor.Location = new System.Drawing.Point(12, 12);
+            this.BancosScContenedor.Location = new System.Drawing.Point(16, 15);
+            this.BancosScContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosScContenedor.Name = "BancosScContenedor";
             // 
             // BancosScContenedor.Panel1
@@ -70,25 +72,20 @@
             // 
             this.BancosScContenedor.Panel2.BackgroundImage = global::CapaVista_MovimientosBancarios.Properties.Resources.movbac_contenedor;
             this.BancosScContenedor.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BancosScContenedor.Size = new System.Drawing.Size(1016, 611);
-            this.BancosScContenedor.SplitterDistance = 271;
+            this.BancosScContenedor.Size = new System.Drawing.Size(1355, 752);
+            this.BancosScContenedor.SplitterDistance = 361;
+            this.BancosScContenedor.SplitterWidth = 5;
             this.BancosScContenedor.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(212, 31);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // BancosPbLogo
             // 
             this.BancosPbLogo.BackColor = System.Drawing.Color.Transparent;
             this.BancosPbLogo.BackgroundImage = global::CapaVista_MovimientosBancarios.Properties.Resources.bancos_logo;
             this.BancosPbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BancosPbLogo.Location = new System.Drawing.Point(67, 3);
+            this.BancosPbLogo.Location = new System.Drawing.Point(89, 4);
+            this.BancosPbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosPbLogo.Name = "BancosPbLogo";
-            this.BancosPbLogo.Size = new System.Drawing.Size(133, 127);
+            this.BancosPbLogo.Size = new System.Drawing.Size(177, 156);
             this.BancosPbLogo.TabIndex = 3;
             this.BancosPbLogo.TabStop = false;
             // 
@@ -99,9 +96,10 @@
             this.BancosBtnMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnMovimientos.FlatAppearance.BorderSize = 0;
             this.BancosBtnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BancosBtnMovimientos.Location = new System.Drawing.Point(10, 184);
+            this.BancosBtnMovimientos.Location = new System.Drawing.Point(13, 226);
+            this.BancosBtnMovimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosBtnMovimientos.Name = "BancosBtnMovimientos";
-            this.BancosBtnMovimientos.Size = new System.Drawing.Size(264, 49);
+            this.BancosBtnMovimientos.Size = new System.Drawing.Size(352, 60);
             this.BancosBtnMovimientos.TabIndex = 1;
             this.BancosBtnMovimientos.UseVisualStyleBackColor = false;
             this.BancosBtnMovimientos.Click += new System.EventHandler(this.BancosBtnMovimientos_Click);
@@ -113,9 +111,10 @@
             this.BancosBtnLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnLista.FlatAppearance.BorderSize = 0;
             this.BancosBtnLista.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BancosBtnLista.Location = new System.Drawing.Point(10, 129);
+            this.BancosBtnLista.Location = new System.Drawing.Point(13, 159);
+            this.BancosBtnLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosBtnLista.Name = "BancosBtnLista";
-            this.BancosBtnLista.Size = new System.Drawing.Size(264, 49);
+            this.BancosBtnLista.Size = new System.Drawing.Size(352, 60);
             this.BancosBtnLista.TabIndex = 0;
             this.BancosBtnLista.UseVisualStyleBackColor = false;
             this.BancosBtnLista.Click += new System.EventHandler(this.BancosBtnLista_Click);
@@ -127,24 +126,35 @@
             this.BancosBtnCheques.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BancosBtnCheques.FlatAppearance.BorderSize = 0;
             this.BancosBtnCheques.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BancosBtnCheques.Location = new System.Drawing.Point(10, 239);
+            this.BancosBtnCheques.Location = new System.Drawing.Point(13, 294);
+            this.BancosBtnCheques.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BancosBtnCheques.Name = "BancosBtnCheques";
-            this.BancosBtnCheques.Size = new System.Drawing.Size(264, 49);
+            this.BancosBtnCheques.Size = new System.Drawing.Size(352, 60);
             this.BancosBtnCheques.TabIndex = 2;
             this.BancosBtnCheques.UseVisualStyleBackColor = false;
             this.BancosBtnCheques.Click += new System.EventHandler(this.BancosBtnCheques_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(283, 38);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // FrmMovimientosBancarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 635);
+            this.ClientSize = new System.Drawing.Size(1387, 782);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.BancosPnlFondo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FrmMovimientosBancarios";
             this.Text = "8001 - Movimientos Bancarios";
+            this.Load += new System.EventHandler(this.FrmMovimientosBancarios_Load);
             this.BancosPnlFondo.ResumeLayout(false);
             this.BancosScContenedor.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BancosScContenedor)).EndInit();
